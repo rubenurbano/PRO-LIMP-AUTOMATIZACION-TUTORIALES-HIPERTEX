@@ -1,0 +1,75 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "7 casos de uso sorprendentes de los MCP de Claude\nWEB ORIGINAL:",
+      "contenido": "7 casos de uso sorprendentes de los MCP de Claude:\nWeb Original:\n7 casos de uso sorprendentes de los MCP de Claude:\nhttps://www.youtube.com/watch?v=8vBRCdryrJg\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Qué son los MCP de Claude y por qué usarlos",
+      "contenido": "Qué son los MCP de Claude y por qué usarlos:\nMuchos dueños de negocios evitan usar los MCP porque creen que es algo demasiado técnico, pero es más simple de lo que parece. Piensa en un MCP como un traductor universal para la Inteligencia Artificial.\n\nUn MCP permite que un modelo de IA, como Claude, se conecte con otras herramientas de tu negocio para que hablen un idioma común. A diferencia de una API simple que conecta una herramienta con otra, el MCP entiende el contexto de lo que sucede en la herramienta que conectas.\n\nBásicamente, la IA hace una solicitud, el MCP la traduce a un formato que la herramienta entiende, y luego traduce la respuesta de la herramienta para que la IA la entienda. Esto convierte tus 8 o 10 plataformas diarias (correo, Slack, herramientas de proyectos, etc.) en una sola interfaz de conversación, ahorrándote mucho tiempo."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Herramienta recomendada para productividad",
+      "contenido": "Herramienta recomendada para productividad:\nAntes de empezar con los casos de uso, el documento menciona una herramienta llamada Recall para mejorar los flujos de trabajo diarios.\n\nRecall permite resumir artículos largos, podcasts o videos con un solo clic usando una extensión del navegador. Crea un resumen, te permite chatear con el contenido y lo guarda en una biblioteca inteligente organizada sin que tengas que hacer nada más.\n\nPuedes obtener un descuento usando el código promocional mencionado en el video: recall Rick."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Configuración básica con Zapier MCP",
+      "contenido": "Configuración básica con Zapier MCP:\nPara conectar Claude a la mayoría de las herramientas que veremos, la forma más fácil es usar las conexiones MCP de Zapier.[1][2][3][4][5][6]\n\nVe a la siguiente web:\nLINK= https://mcp.zapier.com[[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEyyWT9x5Rf3JI1YeeFKbFC2qWl3cWVM3hiZVYdOWE1Nd4kNUQwq3svijj0uycEMHqE-m88pLO2qyx4FxgKGp-kSCDNiEJhVDp4Rwi-YN2uQUl5uq12Go7xk-06eLilGakjiemzYzQ%3D)][[7](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQG2W97HVu3xwp1gz9T0_BSPxyhMGdoEwDcgGSEp7USQ0aVRQv6n1osAxdCCccR9Vm1y3Dx78-I7SMNVxP6tYXCZGtrBZlkjEfx0PRWCmUJLdYZOwcvGaIZj4LFrrL0rK9P90KKU6A%3D%3D)]\n\nZapier ofrece acceso MCP a todas las herramientas que conecta y es gratuito hasta 300 acciones MCP por mes. Los pasos son:\n\nVe a \"New MCP Server\".\n\nSelecciona el cliente \"Anthropic Claude\".[5]\n\nEsta opción es mucho más económica que otras alternativas como OpenAI que requieren planes de equipo costosos.\n\nAunque existen otras librerías como Composio o Glamma.ai, Zapier es la más rápida y sencilla para empezar."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Caso 1: Gestión de correo personal con Gmail",
+      "contenido": "Caso 1: Gestión de correo personal con Gmail:\nNormalmente, la conexión de Gmail en Claude es de solo lectura. Para poder enviar correos o crear borradores, necesitamos conectar el servidor MCP de Gmail.\n\nPasos:\n\nEn mcp.zapier.com, haz clic en \"Add tool\" y selecciona Gmail.\n\nPuedes elegir agregar todas las herramientas de Gmail (\"Add all Gmail tools\").\n\nEsto te permitirá acciones como: encontrar correos, añadir etiquetas, archivar, crear borradores y enviar correos.\n\nUna vez conectado, en Claude verás Zapier disponible.[3][5] Puedes pedirle cosas como: \"En mi Gmail prioriza los correos no leídos, redacta respuestas y etiqueta lo urgente frente a lo que puede esperar\".\n\nClaude procesará tus correos, creará las etiquetas y dejará los borradores de respuesta listos en tu carpeta de borradores de Gmail para que los revises y envíes."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Caso 2: Gestión de correos de servicio al cliente",
+      "contenido": "Caso 2: Gestión de correos de servicio al cliente:\nPara manejar correos de clientes usando la información de tu negocio, lo mejor es crear un \"Claude Project\".[3]\n\nPasos:\n\nConfigura un nuevo proyecto en Claude.\n\nEn las instrucciones del proyecto, indica qué herramientas MCP quieres usar.\n\nAñade el conocimiento del proyecto (\"Project Knowledge\"), por ejemplo, un Google Doc con las preguntas frecuentes y datos de tu negocio.\n\nConecta el proyecto a las herramientas MCP.[7]\n\nAhora puedes pedirle que redacte respuestas automatizadas a correos de clientes basándose en tus archivos de conocimiento y con el contexto completo de tu negocio."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Caso 3: Reutilización de contenido para LinkedIn",
+      "contenido": "Caso 3: Reutilización de contenido para LinkedIn:\nEste caso sirve para convertir un contenido, como la transcripción de un video, en una publicación de LinkedIn.\n\nPasos:\n\nAsegúrate de conectar LinkedIn desde Zapier MCP (selecciona acciones como \"Create company update\" o \"Create share update\").\n\nEn Claude, pega la transcripción de tu video.\n\nEscribe: \"Reutiliza esta transcripción de video en una publicación de LinkedIn con tres borradores para elegir\".\n\nClaude generará las opciones.\n\nSi te gusta una opción (por ejemplo, la opción 1), escribe: \"Actualiza mi página de LinkedIn con la opción 1\".\n\nClaude publicará directamente en tu perfil y te dará el enlace para verlo. Esto también se puede automatizar dentro de un proyecto de Claude si es una tarea repetitiva."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Caso 4: Centro de comando del calendario",
+      "contenido": "Caso 4: Centro de comando del calendario:\nPuedes controlar tu Google Calendar directamente desde Claude para proteger tu tiempo.\n\nPasos:\n\nEn Zapier MCP, agrega la herramienta Google Calendar (la conexión nativa de Claude es solo de lectura, necesitas la de Zapier para editar).\n\nElige \"Add all Google Calendar tools\".\n\nEn Claude, escribe: \"En mi Google Calendar, quiero que protejas dos horas de trabajo profundo diariamente de lunes a viernes\".\n\nClaude analizará tu agenda actual, te propondrá horarios (por ejemplo, 8 am a 10 am) y, si confirmas, programará esos bloques directamente en tu calendario. También puedes agregar a otras personas a los eventos desde ahí."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Caso 5: Integración con Slack",
+      "contenido": "Caso 5: Integración con Slack:\nIdeal si tienes un equipo grande o una comunidad en Slack y recibes muchos mensajes.\n\nPasos:\n\nConecta Slack mediante Zapier MCP agregando las acciones necesarias.\n\nEn Claude, puedes pedir: \"Dame un resumen de toda la actividad de Slack en el canal X de la última semana\".\n\nClaude leerá los mensajes y te dará un resumen de la actividad, enlaces a las conversaciones y un análisis (por ejemplo, si hubo poca actividad). También puedes usar esta integración para enviar mensajes a canales o personas específicas directamente desde Claude, por ejemplo, enviando detalles de un correo importante a un compañero de equipo."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Caso 6: Facturación y pagos",
+      "contenido": "Caso 6: Facturación y pagos:\nSi eres coach o consultor, puedes gestionar cobros desde una conversación.\n\nPasos:\n\nUsa la integración MCP de PayPal (o Stripe). PayPal es una de las integraciones preconstruidas en Claude, solo necesitas pegar la URL de integración.\n\nEscribe en Claude: \"Usa PayPal para crear una factura de 500 dólares para esta persona\".\n\nClaude te pedirá los detalles (nombre del negocio, correo del cliente, concepto).\n\nUna vez generada la factura, Claude te dará el enlace de pago.\n\nLuego, puedes decir: \"Redacta un correo en Gmail para esta persona con el enlace de la factura y ponlo en mis borradores\".\n\nClaude creará el correo con el enlace y lo dejará listo para enviar en tu Gmail."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Caso 7: Actualizaciones de proyectos en Notion",
+      "contenido": "Caso 7: Actualizaciones de proyectos en Notion:\nPara obtener actualizaciones de herramientas de gestión como Notion, Asana o ClickUp. Notion no tenía URL de integración directa al momento del video, así que se hace vía desarrollador.\n\nPasos:\n\nVe a la siguiente web para configurar tu cliente MCP:\nLINK= https://developers.notion.com\n\nSigue los pasos para configurar el cliente y probar la conexión.[7]\n\nUna vez conectado en Claude (verás \"Notion API\"), puedes pedir: \"Dame una actualización de dónde estamos y qué videos son los siguientes en el calendario\".\n\nClaude analizará tu base de datos y te dará un reporte con próximos pasos, pipeline activo, ideas clave y problemas potenciales. Además, como tienes permisos de escritura, puedes pedirle que cambie fechas de entrega o actualice tareas directamente desde el chat."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Caso 8: Preparación de reuniones de clientes",
+      "contenido": "Caso 8: Preparación de reuniones de clientes:\nEste caso usa la conexión con tu CRM (por ejemplo, Notion) y Google Calendar para prepararte para llamadas.[1]\n\nPasos:\n\nTeniendo Notion y Google Calendar conectados.[1][7]\n\nEscribe: \"Tengo una reunión con [Nombre del Cliente]. Dame un informe breve de todas mis notas de Notion sobre dónde estamos en nuestro coaching y qué podrían ser los próximos 60-90 días para [Cliente]\".\n\nClaude buscará en tu CRM, sintetizará la información de llamadas pasadas y te dará un análisis del estado actual, áreas de progreso, desafíos y puntos clave para la reunión en cuestión de minutos."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Ideas de casos de uso adicionales",
+      "contenido": "Ideas de casos de uso adicionales:\nEl documento menciona tres ideas extra que puedes construir:\n\nInforme diario de KPIs:\nConecta Stripe, Google Analytics y Slack. Claude puede buscar tus números diarios, crear un gráfico de ingresos y enviarte un mensaje de \"Buenos días\" en Slack con todos tus datos clave.\n\nRadar de tendencias en Redes Sociales:\nConecta la API de X (Twitter) y Google Sheets. Claude puede etiquetar los top 20 tweets de tu nicho, determinar el sentimiento y darte ideas de contenido basadas en lo que se está hablando, guardando todo en una hoja de cálculo.\n\nConsolidación de cursos (Google Drive):\nUn usuario conectó el MCP de Google Drive para consolidar un curso de 12 sesiones que estaba disperso en muchos archivos. Claude creó un esquema coherente del curso con enlaces a los documentos fuente en minutos."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nPara validar la información técnica presentada en este tutorial, se han consultado las siguientes fuentes oficiales sobre el protocolo MCP y las integraciones mencionadas:\n\nDocumentación Oficial del Protocolo:\nEl Model Context Protocol (MCP) es un estándar de código abierto desarrollado por Anthropic.[8][9]\nLINK= https://modelcontextprotocol.io\n\nRepositorio Oficial en GitHub:\nEl código y las especificaciones técnicas se encuentran disponibles públicamente.\nLINK= https://github.com/modelcontextprotocol\n\nIntegración de Zapier MCP:\nZapier ofrece una integración oficial que permite conectar Claude con miles de aplicaciones sin necesidad de código complejo.\nLINK= https://zapier.com/mcp[[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEyyWT9x5Rf3JI1YeeFKbFC2qWl3cWVM3hiZVYdOWE1Nd4kNUQwq3svijj0uycEMHqE-m88pLO2qyx4FxgKGp-kSCDNiEJhVDp4Rwi-YN2uQUl5uq12Go7xk-06eLilGakjiemzYzQ%3D)]\n\nDocumentación de Desarrolladores de Notion:\nPara las integraciones personalizadas mencionadas (como la de Notion), se utiliza la API oficial para desarrolladores.\nLINK= https://developers.notion.com\n\n\nTITULO_VIDEO\nURL_WEB_YOUTUBE\nAUTOR\nTELEFONO"
+    }
+  ]
+}

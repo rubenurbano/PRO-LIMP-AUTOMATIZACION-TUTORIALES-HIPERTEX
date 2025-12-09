@@ -1,7 +1,7 @@
-Escribe un tutorial paso a paso completo con el siguiente título y estructura, usando ÚNICAMENTE toda la información contenida en el documento adjunto, sin agregar conocimiento externo y no te olvides de escribir la seccion de preguntas y respuestas:
+Escribe un tutorial paso a paso completo en castellano con el siguiente título y estructura, usando ÚNICAMENTE toda la información contenida en el documento adjunto, sin agregar conocimiento externo y no te olvides de escribir la seccion de preguntas y respuestas:
 
-[TITULO_VIDEO] =    Así funcionan los NUEVOS MCP en Claude
-[URL_WEB_YOUTUBE] = https://www.youtube.com/watch?v=O-ptFSdZXrs
+[TITULO_VIDEO] =    7 casos de uso sorprendentes de los MCP de Claude
+[URL_WEB_YOUTUBE] = https://www.youtube.com/watch?v=8vBRCdryrJg
 [AUTOR] = PRO-LIMP AUTOMATIZACION
 [TELEFONO] = +34 636832005
 
@@ -101,6 +101,9 @@ Esta es la ÚNICA sección donde puedes usar información externa (mediante bús
     - NO uses listas con viñetas o guiones
     - NO agregues emojis
     - Solo texto plano con los tags especificados
+
+12. Ignora por completo las marcas de tiempo del tipo (00:20) si las hubiera en la transcripcion	
+	
 
 ### PROCESO DE TRABAJO:
 
