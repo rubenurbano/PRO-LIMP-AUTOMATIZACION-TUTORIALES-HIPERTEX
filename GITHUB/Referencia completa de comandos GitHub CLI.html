@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub CLI - Cheat Sheet Completo</title>
+    
+    <!-- Fuentes: Outfit (UI) y JetBrains Mono (Código) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --glass-bg: rgba(30, 41, 59, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --primary-gradient: linear-gradient(to right, #38bdf8, #818cf8, #c084fc);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --code-color: #4ade80; /* Verde terminal */
+            --code-bg: rgba(0, 0, 0, 0.3);
+            --accent: #38bdf8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(56, 189, 248, 0.15), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(192, 132, 252, 0.15), transparent 25%);
+            color: var(--text-main);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Masonry Grid Layout */
+        .masonry {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) { .masonry { column-count: 2; } }
+        @media (min-width: 1200px) { .masonry { column-count: 3; } }
+
+        /* Card Styles */
+        .card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem; /* Espacio vertical para Masonry */
+            break-inside: avoid; /* Evita que la tarjeta se parta entre columnas */
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.4);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .emoji { font-size: 1.5rem; }
+        h2 { font-size: 1.3rem; color: #fff; font-weight: 600; }
+
+        /* Command List */
+        .cmd-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .cmd-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .code-line {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--code-color);
+            background: var(--code-bg);
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 4px;
+            word-break: break-all;
+        }
+
+        .desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-left: 4px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>gh cheat sheet</h1>
+        <p class="subtitle">Referencia completa de comandos GitHub CLI</p>
+    </header>
+
+    <div class="masonry">
+        
+        <!-- AUTENTICACIÓN -->
+        <div class="card">
+            <div class="card-header">
+                <span class="emoji">🔐</span>
+                <h2>Autenticación</h2>
+            </div>
+            <div class="cmd-list">
+                <div class="cmd-item"><div class="code-line">gh auth status</div><span class="desc">Ver estado de autenticación</span></div>
+                <div class="cmd-item"><div class="code-line">gh auth login</div><span class="desc">Iniciar sesión</span></div>
+                <div class="cmd-item"><div class="code-line">gh auth logout</div><span class="desc">Cerrar sesión</span></div>
+                <div class="cmd-item"><div class="code-line">gh auth refresh</div><span class="desc">Refrescar token</span></div>
+            </div>
+        </div>
+
+        <!-- REPOSITORIOS -->
+        <div class="card">
+            <div class="card-header">
+                <span class="emoji">📂</span>
+                <h2>Repositorios</h2>
+            </div>
+            <div class="cmd-list">
+                <div class="cmd-item"><div class="code-line">gh repo list</div><span class="desc">Listar tus repositorios</span></div>
+                <div class="cmd-item"><div class="code-line">gh repo list usuario</div><span class="desc">Listar repos de un usuario</span></div>
+                <div class="cmd-item"><div class="code-line">gh repo list org</div><span class="desc">Listar repos de organización</span></div>
+                <div class="cmd-item"><div class="code-line">gh repo view user/repo</div><span class="desc">Ver detalles</span></div>
+                <div class="cmd-item"><div class="code-line">gh repo view user/repo --web</div><span class="desc">Abrir en navegador</span></div>
+                <div class="cmd-item"><div class="code-line">gh repo clone user/repo</div><span class="desc">Clonar repositorio</span></div>
+                <div class="cmd-item"><div class="code-line">gh repo create</div><span class="desc">Crear repo (interactivo)</span></div>
+                <div class="cmd-item"><div class="code-line">gh repo create proy --public</div><span class="desc">Crear público</span></div>
+                <div class="cmd-item"><div class="code-line">gh repo create proy --private</div><span class="desc">Crear privado</span></div>
+                <div class="cmd-item"><div class="code-line">gh repo create proy --public --clone</div><span class="desc">Crear y clonar</span></div>
+                <div class="cmd-item"><div class="code-line">gh repo fork user/repo</div><span class="desc">Hacer fork</span></div>
+                <div class="cmd-item"><div class="code-line">gh repo fork user/repo --clone</div><span class="desc">Fork y clonar</span></div>
+                <div class="cmd-item"><div class="code-line">gh repo delete user/repo</div><span class="desc">Eliminar repositorio</span></div>
+                <div class="cmd-item"><div class="code-line">gh repo sync</div><span class="desc">Sincronizar fork con upstream</span></div>
+                <div class="cmd-item"><div class="code-line">gh browse</div><span class="desc">Abrir repo actual en web</span></div>
+            </div>
+        </div>
+
+        <!-- ISSUES -->
+        <div class="card">
+            <div class="card-header">
+                <span class="emoji">🐛</span>
+                <h2>Issues</h2>
+            </div>
+            <div class="cmd-list">
+                <div class="cmd-item"><div class="code-line">gh issue list</div><span class="desc">Listar issues actuales</span></div>
+                <div class="cmd-item"><div class="code-line">gh issue list --repo user/repo</div><span class="desc">Listar de otro repo</span></div>
+                <div class="cmd-item"><div class="code-line">gh issue list --state open</div><span class="desc">Solo abiertos</span></div>
+                <div class="cmd-item"><div class="code-line">gh issue list --state closed</div><span class="desc">Solo cerrados</span></div>
+                <div class="cmd-item"><div class="code-line">gh issue list --assignee @me</div><span class="desc">Asignados a ti</span></div>
+                <div class="cmd-item"><div class="code-line">gh issue list --label bug</div><span class="desc">Filtrar por etiqueta</span></div>
+                <div class="cmd-item"><div class="code-line">gh issue view 123</div><span class="desc">Ver detalles</span></div>
+                <div class="cmd-item"><div class="code-line">gh issue view 123 --web</div><span class="desc">Ver en web</span></div>
+                <div class="cmd-item"><div class="code-line">gh issue create</div><span class="desc">Crear (interactivo)</span></div>
+                <div class="cmd-item"><div class="code-line">gh issue create --title "X" --body "Y"</div><span class="desc">Crear directo</span></div>
+                <div class="cmd-item"><div class="code-line">gh issue close 123</div><span class="desc">Cerrar issue</span></div>
+                <div class="cmd-item"><div class="code-line">gh issue reopen 123</div><span class="desc">Reabrir issue</span></div>
+                <div class="cmd-item"><div class="code-line">gh issue comment 123 --body "txt"</div><span class="desc">Comentar</span></div>
+                <div class="cmd-item"><div class="code-line">gh issue edit 123 --add-label bug</div><span class="desc">Editar etiquetas</span></div>
+                <div class="cmd-item"><div class="code-line">gh issue status</div><span class="desc">Resumen de tus issues</span></div>
+            </div>
+        </div>
+
+        <!-- PULL REQUESTS -->
+        <div class="card">
+            <div class="card-header">
+                <span class="emoji">🔀</span>
+                <h2>Pull Requests</h2>
+            </div>
+            <div class="cmd-list">
+                <div class="cmd-item"><div class="code-line">gh pr list</div><span class="desc">Listar PRs</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr list --state open</div><span class="desc">Solo abiertos</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr list --author @me</div><span class="desc">Creados por ti</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr view 456</div><span class="desc">Ver detalles</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr view 456 --web</div><span class="desc">Ver en web</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr create</div><span class="desc">Crear PR (interactivo)</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr create --title "T" --body "B"</div><span class="desc">Crear directo</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr checkout 456</div><span class="desc">Cambiar a rama del PR</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr checkout 456 --force</div><span class="desc">Forzar checkout</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr merge 456</div><span class="desc">Mergear PR</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr merge 456 --squash</div><span class="desc">Merge con squash</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr merge 456 --rebase</div><span class="desc">Merge con rebase</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr close 456</div><span class="desc">Cerrar sin mergear</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr reopen 456</div><span class="desc">Reabrir PR</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr comment 456 --body "txt"</div><span class="desc">Comentar</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr review 456 --approve</div><span class="desc">Aprobar PR</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr review 456 --request-changes</div><span class="desc">Solicitar cambios</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr diff 456</div><span class="desc">Ver diferencias</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr checks</div><span class="desc">Estado de checks (CI)</span></div>
+                <div class="cmd-item"><div class="code-line">gh pr status</div><span class="desc">Resumen de tus PRs</span></div>
+            </div>
+        </div>
+
+        <!-- ACTIONS & WORKFLOWS -->
+        <div class="card">
+            <div class="card-header">
+                <span class="emoji">⚡</span>
+                <h2>Actions</h2>
+            </div>
+            <div class="cmd-list">
+                <div class="cmd-item"><div class="code-line">gh workflow list</div><span class="desc">Listar workflows</span></div>
+                <div class="cmd-item"><div class="code-line">gh workflow view name</div><span class="desc">Ver detalles</span></div>
+                <div class="cmd-item"><div class="code-line">gh workflow run name</div><span class="desc">Ejecutar manual</span></div>
+                <div class="cmd-item"><div class="code-line">gh workflow enable name</div><span class="desc">Habilitar</span></div>
+                <div class="cmd-item"><div class="code-line">gh workflow disable name</div><span class="desc">Deshabilitar</span></div>
+                <div class="cmd-item"><div class="code-line">gh run list</div><span class="desc">Historial de ejecuciones</span></div>
+                <div class="cmd-item"><div class="code-line">gh run view ID</div><span class="desc">Ver detalle ejecución</span></div>
+                <div class="cmd-item"><div class="code-line">gh run watch ID</div><span class="desc">Ver en tiempo real</span></div>
+                <div class="cmd-item"><div class="code-line">gh run rerun ID</div><span class="desc">Re-ejecutar</span></div>
+                <div class="cmd-item"><div class="code-line">gh run download ID</div><span class="desc">Descargar artifacts</span></div>
+            </div>
+        </div>
+
+        <!-- GISTS -->
+        <div class="card">
+            <div class="card-header">
+                <span class="emoji">📝</span>
+                <h2>Gists</h2>
+            </div>
+            <div class="cmd-list">
+                <div class="cmd-item"><div class="code-line">gh gist list</div><span class="desc">Listar tus gists</span></div>
+                <div class="cmd-item"><div class="code-line">gh gist view ID</div><span class="desc">Ver un gist</span></div>
+                <div class="cmd-item"><div class="code-line">gh gist create file.txt</div><span class="desc">Crear desde archivo</span></div>
+                <div class="cmd-item"><div class="code-line">gh gist create f.txt --public</div><span class="desc">Crear público</span></div>
+                <div class="cmd-item"><div class="code-line">gh gist create f.txt --desc "D"</div><span class="desc">Con descripción</span></div>
+                <div class="cmd-item"><div class="code-line">gh gist edit ID</div><span class="desc">Editar</span></div>
+                <div class="cmd-item"><div class="code-line">gh gist delete ID</div><span class="desc">Eliminar</span></div>
+                <div class="cmd-item"><div class="code-line">gh gist clone ID</div><span class="desc">Clonar</span></div>
+            </div>
+        </div>
+
+        <!-- RELEASES -->
+        <div class="card">
+            <div class="card-header">
+                <span class="emoji">🏷️</span>
+                <h2>Releases</h2>
+            </div>
+            <div class="cmd-list">
+                <div class="cmd-item"><div class="code-line">gh release list</div><span class="desc">Listar releases</span></div>
+                <div class="cmd-item"><div class="code-line">gh release view v1.0.0</div><span class="desc">Ver detalles</span></div>
+                <div class="cmd-item"><div class="code-line">gh release view --web</div><span class="desc">Ver última en web</span></div>
+                <div class="cmd-item"><div class="code-line">gh release create v1.0.0</div><span class="desc">Crear release</span></div>
+                <div class="cmd-item"><div class="code-line">gh release create v1.0 f.zip</div><span class="desc">Crear con archivo</span></div>
+                <div class="cmd-item"><div class="code-line">gh release download v1.0</div><span class="desc">Descargar assets</span></div>
+                <div class="cmd-item"><div class="code-line">gh release delete v1.0</div><span class="desc">Eliminar release</span></div>
+            </div>
+        </div>
+
+        <!-- CONFIG & EXTENSIONS -->
+        <div class="card">
+            <div class="card-header">
+                <span class="emoji">⚙️</span>
+                <h2>Configuración y Ext.</h2>
+            </div>
+            <div class="cmd-list">
+                <div class="cmd-item"><div class="code-line">gh config get editor</div><span class="desc">Ver editor actual</span></div>
+                <div class="cmd-item"><div class="code-line">gh config set editor "code -w"</div><span class="desc">Configurar VS Code</span></div>
+                <div class="cmd-item"><div class="code-line">gh config set git_protocol ssh</div><span class="desc">Usar SSH</span></div>
+                <div class="cmd-item"><div class="code-line">gh config list</div><span class="desc">Listar config</span></div>
+                <div class="cmd-item"><div class="code-line">gh extension list</div><span class="desc">Listar extensiones</span></div>
+                <div class="cmd-item"><div class="code-line">gh extension install user/ext</div><span class="desc">Instalar extensión</span></div>
+                <div class="cmd-item"><div class="code-line">gh extension upgrade ext</div><span class="desc">Actualizar extensión</span></div>
+                <div class="cmd-item"><div class="code-line">gh extension remove ext</div><span class="desc">Eliminar extensión</span></div>
+            </div>
+        </div>
+
+        <!-- BÚSQUEDA Y ALIAS -->
+        <div class="card">
+            <div class="card-header">
+                <span class="emoji">🔍</span>
+                <h2>Búsqueda y Otros</h2>
+            </div>
+            <div class="cmd-list">
+                <div class="cmd-item"><div class="code-line">gh search repos "query"</div><span class="desc">Buscar repos</span></div>
+                <div class="cmd-item"><div class="code-line">gh search issues "query"</div><span class="desc">Buscar issues</span></div>
+                <div class="cmd-item"><div class="code-line">gh search prs "query"</div><span class="desc">Buscar PRs</span></div>
+                <div class="cmd-item"><div class="code-line">gh search code "query"</div><span class="desc">Buscar código</span></div>
+                <div class="cmd-item"><div class="code-line">gh alias set name 'cmd'</div><span class="desc">Crear alias</span></div>
+                <div class="cmd-item"><div class="code-line">gh alias list</div><span class="desc">Listar alias</span></div>
+                <div class="cmd-item"><div class="code-line">gh status</div><span class="desc">Ver actividad</span></div>
+                <div class="cmd-item"><div class="code-line">gh help</div><span class="desc">Ver ayuda general</span></div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        2024 • Glassmorphism HTML Template
+    </footer>
+</div>
+
+</body>
+</html>

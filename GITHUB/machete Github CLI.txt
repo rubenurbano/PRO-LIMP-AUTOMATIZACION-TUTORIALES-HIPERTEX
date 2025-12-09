@@ -82,3 +82,7 @@ API keys:
 https://platform.claude.com/settings/keys
 
 
+cd C:\Users\rubenurbano\HIPERTEX\GITHUB
+git add .
+git commit -m "Se crea una nueva cheat file"
+git push
