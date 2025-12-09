@@ -56,6 +56,7 @@ git remote add origin https://github.com/rubenurbano/PRO-LIMP-AUTOMATIZACION-TUT
 
 
 cd C:\Users\rubenurbano\HIPERTEX\CLAUDE
+C:\Users\rubenurbano\HIPERTEX\PRO-LIMP-AUTOMATIZACION-TUTORIALES-HIPERTEX\CLAUDE
 git add .
 git commit -m "Se crea nuevo tutorial con un .hptx y un .json"
 git push
@@ -80,3 +81,6 @@ https://claude.ai/upgrade/pro?interval=monthly
 
 API keys:
 https://platform.claude.com/settings/keys
+
+
+git push --set-upstream origin main
