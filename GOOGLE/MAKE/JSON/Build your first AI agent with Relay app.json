@@ -1,0 +1,51 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Build your first AI agent with Relay app\nWEB ORIGINAL:",
+      "contenido": "Build your first AI agent with Relay app:\nWeb Original:\nBuild your first AI agent with Relay app:\nhttps://youtu.be/GFCKSkrHiZ4?si=gtSkv1rgTiXenQtt\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introduccion y objetivo del robot",
+      "contenido": "Introduccion y objetivo del robot:\nBienvenido a relayapp. En este video de tres minutos vas a aprender como crear tu primer robot de inteligencia artificial.\n\nEl robot que vamos a construir es simple: va a revisar automaticamente una pagina de LinkedIn cada semana. Luego, vera las publicaciones que esa persona hizo y te enviara un informe con un analisis. Esto es muy util si creas contenido y quieres mejorar tus publicaciones, si eres un mercadologo que observa a tu competencia, o si quieres estar atento a gente interesante para contratar."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Configurar el Despertador - El Disparador",
+      "contenido": "Configurar el Despertador - El Disparador:\nLo primero que necesitamos es crear un disparador (o trigger). El disparador es lo que va a despertar a nuestro robot de IA y le dira que empiece a hacer el trabajo por nosotros.\n\nComo queremos revisar las publicaciones de LinkedIn cada semana, vamos a configurar un disparador programado.\n\nPresiona el boton que dice \"anadir disparador\".\n\nEscoge la tercera opcion, que dice \"programado\".\n\nSelecciona la primera opcion, que dice \"comenzar a ejecutarse en un horario\".\n\nEn la configuracion, elige con que frecuencia quieres que el robot se despierte y trabaje para ti. Nosotros elegiremos \"semanalmente\" (cada semana); el miercoles parece un buen dia."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Conseguir las Publicaciones de LinkedIn",
+      "contenido": "Conseguir las Publicaciones de LinkedIn:\nEl siguiente paso es decirle a nuestro robot de IA que vaya a buscar las publicaciones recientes de esa pagina de LinkedIn.\n\nPresiona el boton que dice \"anadir paso\".\n\nEscribe \"LinkedIn\".\n\nVeras una opcion que dice \"obtener publicaciones de persona de LinkedIn\" (es la quinta o sexta opcion).\n\nTienes que poner la direccion web (URL) de la pagina de LinkedIn que quieres seguir.\n\nComo esto se hara cada semana, con 5 publicaciones recientes es suficiente.\n\nSi no se encuentran publicaciones, dile que continue sin un resultado."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "El Analisis de la Inteligencia Artificial",
+      "contenido": "El Analisis de la Inteligencia Artificial:\nUna vez que el robot tiene las publicaciones, el paso mas importante es el paso de la IA, que tomara esas publicaciones y creara un analisis util para nosotros.\n\nPresiona el boton de sumar (+) de nuevo.\n\nEsta vez, escoge la opcion de \"IA\" (Inteligencia Artificial), que es la tercera opcion hacia abajo.\n\nDentro de IA, selecciona la primera opcion: \"pedir a cualquier modelo\" (prompt any model).\n\nAhora debes escribir el prompt. Este es el conjunto de instrucciones que le daras a la IA para que sepa que hacer.\n\nEscribe un prompt como: \"Dada una serie de publicaciones recientes de LinkedIn, por favor escribe un buen informe con analisis sobre de que esta hablando la persona y cual de su contenido esta teniendo mas exito\".\n\nNecesitas darle a la IA los datos que necesita para escribir ese informe. Selecciona \"datos de pasos anteriores\" y adjunta las publicaciones que encontramos antes.\n\nPara tareas de escritura como esta, se recomienda usar el modelo llamado Claude 3.7 Sonnet, el cual genera texto bien formateado (texto enriquecido)."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Enviar el Informe por Correo Electronico",
+      "contenido": "Enviar el Informe por Correo Electronico:\nPor ultimo, queremos que este informe se envie a tu correo electronico para que lo puedas leer sin tener que recordar ir a revisarlo.\n\nPresiona el boton de sumar (+) de nuevo.\n\nEscribe \"enviar correo\".\n\nElige la primera opcion que dice \"enviarte un correo electronico a ti mismo\".\n\nEl Asunto del correo sera \"Informe de LinkedIn\".\n\nEn el cuerpo (el mensaje) del correo, solo tienes que elegir el resultado del Paso 3 de la IA. Este es el analisis que el robot acaba de generar.\n\nPresiona \"listo\" (hit done)."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Probar el Robot",
+      "contenido": "Probar el Robot:\nY eso es todo. Hemos construido nuestro primer robot.\n\nSe despertara cada miercoles, ira a buscar las publicaciones de LinkedIn de esa pagina, usara la IA para analizarlas, y te enviara un informe por correo electronico.\n\nPara demostrarte que funciona, vamos a iniciar una prueba.\n\nHaz clic en \"iniciar una prueba\" (start a test run).\n\nHaz clic en \"iniciar ejecucion\" (start run).\n\nPodemos ver paso a paso lo que hace el robot:\n\nPrimero, esta buscando las publicaciones de LinkedIn.\n\nLuego, esta usando la IA (especificamente Claude 3.7 Sonnet) para escribir el analisis.\n\nFinalmente, te esta enviando un correo electronico con los resultados.\n\nAl hacer clic en el correo, podemos ver el resultado: un analisis del contenido de LinkedIn que incluye un resumen, los temas de contenido y cuales fueron las publicaciones mas exitosas. Es un muy buen informe.\n\nTomate tres minutos para configurarlo tu mismo."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:VALIDACION CON FUENTES TECNICAS OFICIALES:\n\nRelay.app es una herramienta flexible ideal para casos de uso que ocurren varias veces e interactuan con una o mas de tus herramientas. La plataforma es especialmente adecuada para tareas como redactar correos de seguimiento, escribir informes previos a reuniones, reutilizar contenido de email a LinkedIn, revisar regularmente contenido de competidores y escribir informes, y calificar nuevos leads actualizando tu CRM.\n\nPuntos tecnicos validados:\n\nDISPARADORES PROGRAMADOS: Los disparadores programados te permiten definir una frecuencia personalizada de cuanto se debe activar un workflow. Ejemplos incluyen cada dia laboral a las 5pm, cada primer lunes del mes a las 9am, o cada 15 minutos.\n\nINTEGRACION CON LINKEDIN: Relay.app ofrece integraciones profundas con LinkedIn incluyendo la capacidad de obtener publicaciones de personas de LinkedIn. La plataforma soporta automatizaciones como analizar estrategias de competidores en LinkedIn, generar analisis competitivos mensuales, y crear contenido multi-formato para LinkedIn.\n\nPASOS DE IA CON MODELOS DE ANTHROPIC: Relay.app tiene tres tipos de acciones de IA: acciones integradas para tareas comunes, \"pedir a cualquier modelo\" para pasos flexibles, y uso agente de herramientas. Puedes usar varios modelos de OpenAI, Google y Anthropic mediante los creditos de IA incluidos con tu plan, sin necesidad de conectar claves API separadas.\n\nENVIO DE CORREO ELECTRONICO: La plataforma incluye acciones nativas para enviar correos electronicos directamente desde workflows automatizados.\n\nEnlaces a documentacion oficial:\n\nDocumentacion principal de Relay.app: https://docs.relay.app\nPasos de IA: https://docs.relay.app/ai/ai-steps\nDisparadores programados: https://docs.relay.app/triggers/scheduled-trigger\nIntegraciones de LinkedIn: https://www.relay.app/apps/linkedin/integrations\nPreguntas frecuentes: https://docs.relay.app/getting-started/faq\nPagina de seguridad (SOC2 Type 2): https://www.relay.app/security\n\n\nBuild your first AI agent with Relay app\nhttps://youtu.be/GFCKSkrHiZ4?si=gtSkv1rgTiXenQtt\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+
+    {
+      "itemID": "008",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Videos%20TUTORIALES/Como%20construir%20un%20agente%20de%20IA%20con%20Relay%20app.jpeg]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

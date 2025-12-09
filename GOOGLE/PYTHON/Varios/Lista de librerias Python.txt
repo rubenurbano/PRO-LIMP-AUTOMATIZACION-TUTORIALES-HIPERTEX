@@ -1,0 +1,29 @@
+
+Aquí tienes una lista de algunas de las librerías de Python más populares y útiles en diferentes áreas:
+
+### Desarrollo Web
+*   **Flask**: Un "micro-framework" muy ligero y flexible, ideal para proyectos pequeños o para aprender los conceptos básicos del desarrollo web.
+*   **Django**: Un framework "con todo incluido" (baterías incluidas). Es más robusto y opinado que Flask, ideal para proyectos grandes y complejos, ya que viene con un ORM, panel de administración, y mucho más.
+*   **SQLAlchemy**: La librería por excelencia para trabajar con bases de datos SQL. Te permite escribir consultas en Python en lugar de SQL puro (es un ORM - Object-Relational Mapper).
+
+### Ciencia de Datos y Machine Learning
+*   **Pandas**: Fundamental para la manipulación y análisis de datos. Te permite trabajar con tablas de datos (llamadas DataFrames) de una manera muy intuitiva.
+*   **NumPy**: La base para la computación científica en Python. Ofrece potentes arrays y matrices, junto con una gran colección de funciones matemáticas de alto nivel para operar sobre ellos.
+*   **Matplotlib** y **Seaborn**: Las librerías más comunes para crear visualizaciones y gráficos de datos.
+*   **Scikit-learn**: La librería de referencia para el machine learning tradicional. Contiene herramientas para clasificación, regresión, clustering, y más.
+*   **TensorFlow** y **PyTorch**: Los dos frameworks más importantes para el deep learning (redes neuronales).
+
+### Automatización y Web Scraping
+*   **Requests**: Simplifica enormemente el trabajo de hacer peticiones HTTP a APIs o sitios web. Es casi un estándar de facto.
+*   **Beautiful Soup (bs4)**: Una librería fantástica para extraer información de archivos HTML y XML (web scraping).
+*   **Selenium**: Para automatizar la interacción con navegadores web. Es útil para scraping de sitios dinámicos o para hacer testing de interfaces de usuario.
+
+### Interfaces Gráficas de Usuario (Aplicaciones de Escritorio)
+*   **PyQt** o **PySide**: Bindings para el framework Qt, que te permiten crear interfaces de escritorio muy potentes y de aspecto profesional.
+*   **Tkinter**: La librería de GUI estándar de Python. Es más simple, pero también más limitada. Viene incluida con Python.
+*   **CustomTkinter**: Una versión moderna de Tkinter que facilita la creación de interfaces con un aspecto más actual.
+
+### Calidad de Código y Testing
+*   **Pytest**: Un framework para escribir tests de una manera mucho más simple y legible que el módulo `unittest` incorporado.
+*   **Black**: Un formateador de código "sin concesiones". Automáticamente formatea tu código para que siga un estilo consistente.
+*   **Ruff**: Un "linter" extremadamente rápido que analiza tu código en busca de errores, bugs y problemas de estilo.

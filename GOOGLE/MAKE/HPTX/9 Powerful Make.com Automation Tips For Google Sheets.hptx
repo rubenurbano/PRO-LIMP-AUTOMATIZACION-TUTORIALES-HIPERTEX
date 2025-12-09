@@ -1,0 +1,154 @@
+##itemID:000
+##menu-item BEGIN
+9 Powerful Make.com Automation Tips For Google Sheets 
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+9 Powerful Make.com Automation Tips For Google Sheets:
+Web Original:
+
+9 Powerful Make.com Automation Tips For Google Sheets:
+https://youtu.be/qXwJlJZJ5iU?si=ZhUr38Gzm4TZK2Zd
+
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción a Make.com y Google Sheets
+##menu-item END
+##Contenido BEGIN
+Introducción a Make.com y Google Sheets:
+
+Make.com es una plataforma que permite automatizar tareas conectando diversas aplicaciones, y Google Sheets es muy utilizada como base de datos para estas automatizaciones. Google Sheets se puede pensar como un lugar donde almacenar y recuperar datos dentro de Make.com, lo que permite crear flujos de trabajo automáticos. En este tutorial se explicarán 9 consejos potentes para aprovechar la integración entre Make.com y Google Sheets para usuarios sin experiencia previa.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Uso de disparadores (triggers) en Google Sheets
+##menu-item END
+##Contenido BEGIN
+Uso de disparadores (triggers) en Google Sheets:
+
+Los disparadores en Make.com permiten iniciar un flujo de trabajo automáticamente cuando suceden cambios en Google Sheets. Los más usados son “watch new rows” (observar filas nuevas) y “watch changes” (observar cambios). “Watch changes” se usa el 95% del tiempo porque permite reaccionar a cualquier cambio dentro de una fila, mientras que “watch new rows” es menos práctico. Para configurarlo se necesita conectar la cuenta de Google y elegir la hoja (spreadsheet) indicándole su ID que se encuentra en la URL de Google Sheets.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Configuración de watch changes con webhook
+##menu-item END
+##Contenido BEGIN
+Configuración de watch changes con webhook:
+
+La acción “watch changes” requiere un paso extra: instalar un complemento (add-on) de Make en Google Sheets. Esto se hace buscando “make” en la tienda de complementos de Google Sheets y añadiendo su extensión. Luego, en la extensión de Make para Google Sheets se debe configurar la URL del webhook que proporciona Make.com para que Google Sheets envíe notificaciones en tiempo real sobre los cambios. Así, cada cambio en cualquier fila dispara el flujo automatizado en Make.com.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Acciones básicas: agregar, actualizar y eliminar filas
+##menu-item END
+##Contenido BEGIN
+Acciones básicas: agregar, actualizar y eliminar filas:
+
+En Make.com después del disparador, se pueden agregar módulos para manipular filas en Google Sheets: añadir una fila nueva, actualizar una fila existente o eliminar una fila. Para actualizar o eliminar, es necesario conocer el número de fila. Un ejemplo común es agregar datos de un nuevo cliente o actualizar información como mensajes en una fila específica.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Buscar y manejar registros para evitar duplicados
+##menu-item END
+##Contenido BEGIN
+Buscar y manejar registros para evitar duplicados:
+
+Para evitar agregar información duplicada, se puede usar un paso de búsqueda en Make.com para buscar un registro existente (por ejemplo, usando el correo electrónico como identificador único). Después, se utiliza un router con dos rutas: si el registro existe, se actualiza; si no, se agrega uno nuevo. Esto mantiene la base de datos limpia y evita problemas con registros repetidos.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Crear plantillas de hojas de cálculo personalizadas
+##menu-item END
+##Contenido BEGIN
+Crear plantillas de hojas de cálculo personalizadas:
+
+Make.com permite crear nuevas hojas de cálculo a partir de una plantilla base y rellenarla automáticamente con valores únicos como nombre, correo o mensajes. Esto es útil para crear documentos personalizados para clientes sin crear cada hoja manualmente, usando variables para rellenar los campos en la plantilla.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Uso de inteligencia artificial para clasificar datos
+##menu-item END
+##Contenido BEGIN
+Uso de inteligencia artificial para clasificar datos:
+
+Se puede integrar ChatGPT con Make.com para analizar automáticamente registros nuevos en Google Sheets, clasificando información, por ejemplo, como “cliente” o “prospecto”. Al detectarse un nuevo mensaje en la hoja, Make.com envía el texto a ChatGPT, que responde con una clasificación que luego se guarda automáticamente en Google Sheets, facilitando el procesamiento inteligente de datos.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Mantener formato y estilos al agregar filas nuevas
+##menu-item END
+##Contenido BEGIN
+Mantener formato y estilos al agregar filas nuevas:
+
+Google Sheets copia automáticamente el formato (como casillas de verificación, estilos, dropdowns) de la fila anterior cuando se añade una nueva fila. Es importante asegurarse de que la última fila tenga el formato correcto antes de agregar datos para que el nuevo contenido herede ese diseño, lo que ahorra tiempo y mantiene la hoja ordenada.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Funciones matemáticas y operaciones desde Make.com
+##menu-item END
+##Contenido BEGIN
+Funciones matemáticas y operaciones desde Make.com:
+
+Se pueden realizar operaciones matemáticas directamente dentro de Google Sheets desde Make.com usando fórmulas. Por ejemplo, sumas entre valores de diferentes columnas en una misma fila. Esto permite actualizar automáticamente resultados matemáticos sin hacer cálculos manuales, integrando lógica directamente en la hoja.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Agregar datos en lote y manejo de errores
+##menu-item END
+##Contenido BEGIN
+Agregar datos en lote y manejo de errores:
+
+Para añadir varias filas a la vez sin saturar Google Sheets se usa un iterador en Make.com que procesa la lista de datos uno a uno con una pausa (sleep) entre cada uno. Esto evita el error 429 por exceso de solicitudes en poco tiempo. Además, se puede configurar un manejador de errores para reintentar la acción después de un tiempo si ocurre este error, garantizando la automatización sin interrupciones.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Conclusión y recomendaciones finales
+##menu-item END
+##Contenido BEGIN
+Conclusión y recomendaciones finales:
+
+Make.com junto con Google Sheets es una herramienta poderosa para automatizar flujos de trabajo, manejar bases de datos simples y mejorar procesos con inteligencia artificial. Aplicando los consejos mencionados—disparadores confiables, evitar duplicados, plantillas dinámicas, integración con IA, y manejo de errores—se puede crear un sistema robusto y eficiente sin necesidad de conocimientos técnicos avanzados.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Los puntos presentados en este tutorial están validados con la documentación oficial de Make.com en cuanto a:
+
+- Configuración y uso de disparadores para Google Sheets (watch new rows, watch changes).
+- Uso de la extensión de Make para Google Sheets y configuración del webhook.
+- Acciones para agregar, actualizar y eliminar filas en Google Sheets.
+- Uso de filtros y routers para manejar registros y evitar duplicados.
+- Creación y utilización de plantillas para hojas en Google Sheets.
+- Integración con OpenAI (ChatGPT) para clasificación automática de datos.
+- Uso de operaciones matemáticas dentro de Google Sheets desde Make.com.
+- Manejo de iteradores, pausas (sleep) para evitar errores y estrategias de reintento frente a errores 429.
+
+Fuentes oficiales:
+
+1. Make.com Docs - Google Sheets Integration: https://www.make.com/en/integrations/google-sheets
+2. Make.com Docs - Webhooks and Triggers: https://www.make.com/en/help/trigger-overview
+3. Google Workspace Marketplace - Make add-on: https://workspace.google.com/marketplace/app/make/ 
+4. OpenAI API Documentation: https://platform.openai.com/docs/api-reference
+5. Google Sheets Functions Documentation: https://support.google.com/docs/table/25273
+
+Estas fuentes respaldan la estructura y contenido del tutorial para garantizar que los usuarios puedan seguirlo con total confianza y respaldo técnico.
+##Contenido END
+
+[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/64556067/f5d4658c-197a-414f-848e-db7dca4fb61e/transcripcion-hoy.txt)

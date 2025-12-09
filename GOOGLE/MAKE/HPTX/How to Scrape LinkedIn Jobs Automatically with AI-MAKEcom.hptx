@@ -1,0 +1,303 @@
+##itemID:000
+##menu-item BEGIN
+How to Scrape LinkedIn Jobs Automatically with AI-MAKEcom
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+How to Scrape LinkedIn Jobs Automatically with AI-MAKEcom:
+Web Original:
+How to Scrape LinkedIn Jobs Automatically with AI-MAKEcom:
+https://youtu.be/_PlVs0s3tcc?si=S2HTaw2UP-FG-vEj
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción y visión general del sistema
+##menu-item END
+##Contenido BEGIN
+Introducción y visión general del sistema:
+Imagina esto: estás buscando trabajos en LinkedIn. En lugar de tener que hacer clic en cada oferta a mano para ver si te sirve, tienes todos los trabajos ordenados en una hoja de Google de forma automática. Esta hoja se actualiza sola cada pocas horas.
+
+Lo mejor es que, basándose en tu currículum (que es como tu carta de presentación), el sistema te muestra una puntuación de cuánto encajas en el trabajo. Así puedes saltarte los trabajos que no te sirven y solo concentrarte en las oportunidades que de verdad te importan.
+
+Esa es la automatización que vamos a construir aquí. Esto es importante porque hace que sea mucho más fácil decidir a qué trabajos postular.
+
+Aquí te explicamos lo que vamos a hacer:
+
+Iremos a LinkedIn para conseguir las direcciones web (URLs) de los trabajos que queremos.
+
+Crearemos una fuente RSS para sacar automáticamente los trabajos de esas direcciones.
+
+Construiremos un robot en make.com para conseguir los detalles del trabajo y ponerlos en una hoja de Google.
+
+Subiremos un currículum y usaremos ChatGPT para que compare la descripción del trabajo con el currículum y dé una puntuación de compatibilidad.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Parte 1: Encontrar las direcciones web de los trabajos en LinkedIn
+##menu-item END
+##Contenido BEGIN
+Parte 1: Encontrar las direcciones web de los trabajos en LinkedIn:
+
+ACCIÓN 1: Conseguir la dirección web (URL) de la búsqueda.
+
+Ve a LinkedIn y entra a la sección de "Jobs" (Trabajos).
+
+Busca un tipo de trabajo, como "inteligencia artificial".
+
+Aplica filtros:
+
+Ubicación (City): Por ejemplo, Sídney.
+
+Fecha de publicación (Date Posted): Por ejemplo, que se haya publicado en la última semana.
+
+Nivel de experiencia (Experience Level): Por ejemplo, Director, Ejecutivo o Medio.
+
+La dirección web (URL) que aparece arriba en tu navegador con todos estos filtros es la que vamos a usar.
+
+Si buscas trabajos en diferentes lugares (como Sídney, Melbourne o Brisbane) o de diferentes tipos (como "Product Management"), tienes que repetir estos pasos para obtener una dirección web diferente para cada uno.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Parte 2: Crear una fuente de noticias RSS
+##menu-item END
+##Contenido BEGIN
+Parte 2: Crear una fuente de noticias RSS:
+Ahora que tienes la dirección web de los trabajos, necesitas una forma de sacar esa información de forma continua.
+
+ACCIÓN 2: Crear una fuente RSS (Feed) usando rss.app.
+
+Ve a la página web rss.app.
+
+Esta página toma la dirección web que le das y crea una "fuente de noticias" (feed) con esa información.
+
+Crea una cuenta. Para crear una fuente, probablemente necesites un plan de pago básico, que es económico.
+
+Pega la dirección web de LinkedIn que copiaste en el lugar donde te lo pida.
+
+Haz clic para que genere la fuente. Esto puede tardar unos segundos.
+
+Guarda la fuente en "My Feed" (Mis fuentes).
+
+ACCIÓN 3: Configurar la fuente RSS.
+
+Ve a "Filters" (Filtros).
+
+Aplica filtros para que se oculten los trabajos que no tengan descripción, ni fechas, y que también oculte los duplicados.
+
+Pon un límite de tiempo, como que solo te muestre trabajos que tengan menos de 7 días de antigüedad.
+
+Ve a "Feed Output" (Salida de la Fuente) y personaliza.
+
+Asegúrate de quitar las imágenes, miniaturas y videos, ya que solo quieres el texto del trabajo.
+
+Guarda los cambios.
+
+Puedes cambiar el nombre a esta fuente (por ejemplo, "Trabajos IA Sídney").
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Parte 3: Construir el robot en make.com - Configuración inicial
+##menu-item END
+##Contenido BEGIN
+Parte 3: Construir el robot en make.com - Configuración inicial:
+Ahora vamos a make.com para crear el robot que conectará esta fuente RSS con tu hoja de Google. Make.com es una plataforma de automatización que permite que diferentes aplicaciones (o apps) "hablen" entre sí.
+
+ACCIÓN 4: Crear el robot (escenario) en make.com.
+
+Ve a make.com e inicia sesión.
+
+Ve a la sección "Scenarios" (Escenarios), que es donde se construyen los robots.
+
+Crea un nuevo escenario.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Módulos 1-4: Configurar el reloj, JSON, Iterador y Lector RSS
+##menu-item END
+##Contenido BEGIN
+Módulos 1-4: Configurar el reloj, JSON, Iterador y Lector RSS:
+
+Módulo 1: El Reloj (Timer).
+
+Agrega un reloj (módulo con un ícono de reloj).
+
+Dile al reloj cada cuánto tiempo quieres que revise si hay nuevos trabajos. Por ejemplo, cada 4 horas.
+
+Módulo 2 y 3: JSON e Iterador (Para revisar varias URLs).
+
+Agrega un módulo llamado JSON Parser.
+
+Dentro de él, pega todas las direcciones web (URLs) de tus fuentes RSS en un formato especial llamado array (una lista de direcciones).
+
+Agrega un módulo llamado Iterador (Iterator).
+
+El Iterador revisará cada una de las direcciones web de tu lista una por una.
+
+Módulo 4: El Lector RSS.
+
+Agrega el módulo RSS.
+
+Dile a este módulo que tome la dirección web que le está pasando el Iterador.
+
+Este módulo es el que saca los trabajos de la fuente RSS (hasta unos 25 trabajos por cada dirección).
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Módulo 5 y Filtro: Evitar duplicados en Google Sheets
+##menu-item END
+##Contenido BEGIN
+Módulo 5 y Filtro: Evitar duplicados en Google Sheets:
+
+Agrega un módulo de Google Sheet - Buscar Filas (Search Rows).
+
+Selecciona tu hoja de Google (la que quieres usar para guardar los trabajos).
+
+El módulo revisará si el "Enlace del trabajo" (Job Link), que es único para cada trabajo, ya existe en tu hoja.
+
+Añade un Filtro: Si el enlace ya existe, el filtro bloqueará el trabajo para que no se añada. Solo deja pasar los trabajos cuyo enlace no existe.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Módulos 6-7: Separar título, compañía y arreglar fecha
+##menu-item END
+##Contenido BEGIN
+Módulos 6-7: Separar título, compañía y arreglar fecha:
+
+Módulo 6: Separar el Título y la Compañía (Usando ChatGPT).
+
+Agrega un módulo de ChatGPT - Transformar Texto en Datos Estructurados.
+
+El título que viene de LinkedIn a veces junta el nombre del trabajo, la compañía y la ubicación.
+
+Dile a ChatGPT que rompa esa información y la separe limpiamente en tres columnas diferentes: Título del Trabajo, Compañía y Ubicación.
+
+Módulo 7: Arreglar la Fecha.
+
+Agrega un módulo de Herramientas (Tools) y usa la función interna Format Date (Formato de Fecha).
+
+Esto arregla la fecha de publicación del trabajo para que se vea bien en tu hoja de Google.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Módulos 8-9: Agregar fila inicial y guardar currículum
+##menu-item END
+##Contenido BEGIN
+Módulos 8-9: Agregar fila inicial y guardar currículum:
+
+Módulo 8: Agregar la Fila a Google Sheets.
+
+Agrega un módulo de Google Sheet - Añadir Fila (Add a Row).
+
+Añade los primeros datos limpios que has conseguido: el Título, la Compañía, la Ubicación, la Fecha arreglada y el Enlace del trabajo. (El resto de columnas las llenaremos después).
+
+Módulo 9: Guardar el Currículum (Resume).
+
+Agrega un módulo de Herramientas (Tools) - Establecer una Variable (Set a Variable).
+
+Aquí vas a pegar el texto de tu currículum (puedes copiarlo de tu perfil de LinkedIn).
+
+Esto crea una "caja de texto" temporal para guardar tu currículum, y si lo cambias aquí, el resto del robot lo usará automáticamente.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Módulos 10-11: Limpiar descripción y crear resumen con ChatGPT
+##menu-item END
+##Contenido BEGIN
+Módulos 10-11: Limpiar descripción y crear resumen con ChatGPT:
+
+Módulo 10: Limpiar la Descripción del Trabajo (Usando ChatGPT).
+
+Agrega otro módulo de ChatGPT - Transformar Texto en Datos Estructurados.
+
+La descripción del trabajo viene con códigos raros (etiquetas HTML).
+
+Dile a ChatGPT que tome la descripción que viene de la fuente RSS, la limpie y la deje lista para ser añadida a la hoja de Google.
+
+Módulo 11: Crear un Resumen (Usando ChatGPT).
+
+Agrega un módulo de ChatGPT - Crear una Completación (Create a Completion).
+
+La descripción limpia sigue siendo muy larga.
+
+Dile a ChatGPT que tome esa descripción y genere un resumen corto (de máximo 215 caracteres). Este resumen es más fácil de leer en la hoja de Google.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Módulos 12-13: Generar puntuación de compatibilidad
+##menu-item END
+##Contenido BEGIN
+Módulos 12-13: Generar puntuación de compatibilidad:
+
+Módulo 12: Generar la Puntuación y la Explicación (Usando ChatGPT).
+
+Agrega un tercer módulo de ChatGPT - Crear una Completación (Create a Completion).
+
+Este es el paso clave: dile a ChatGPT que compare la descripción completa del trabajo (no solo el resumen, para no perder detalles) con el currículum que guardaste en el Módulo 9.
+
+Pídele que dé una puntuación de emparejamiento (Match Score) y una explicación de por qué dio esa puntuación (Rationale).
+
+Módulo 13: Separar la Puntuación y la Explicación.
+
+Agrega un cuarto módulo de ChatGPT - Transformar Datos Estructurados.
+
+Como el módulo anterior dio la puntuación y la explicación juntas, este módulo las separa para que vayan a dos columnas distintas.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Módulo 14: Actualizar la fila con información completa
+##menu-item END
+##Contenido BEGIN
+Módulo 14: Actualizar la fila con información completa:
+
+Agrega un módulo de Google Sheet - Actualizar Fila (Update a Row).
+
+IMPORTANTE: Tienes que usar el número de fila que conseguiste al principio (del Módulo 5, Buscar Filas). Esto asegura que la nueva información (Resumen, Puntuación, Explicación) se añada a la fila correcta.
+
+Guarda el escenario.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Parte 4: Resultados y Beneficios del sistema
+##menu-item END
+##Contenido BEGIN
+Parte 4: Resultados y Beneficios del sistema:
+
+Resultado final:
+
+Cuando ejecutas el robot, este revisa todas tus direcciones web y añade los trabajos nuevos.
+
+En la hoja de Google verás el Título, la Compañía, la Ubicación y el Enlace.
+
+Verás la Puntuación de Emparejamiento. Si la puntuación es baja (por ejemplo, 50% o 40%), es porque tu currículum no tiene la experiencia específica que pide ese trabajo (por ejemplo, si pide ser desarrollador de UiPath y tú no lo eres).
+
+Verás la Explicación (Rationale) que te dirá por qué ChatGPT te dio esa puntuación. Por ejemplo, puede decirte que tu experiencia en IA y automatización se alinea, por eso te da un 90% en un rol de Product Manager.
+
+Consejo útil: Puedes usar el formato condicional de Google Sheets para que las puntuaciones altas (por ejemplo, más de 75) se pinten de verde, así las reconoces más rápido.
+
+Beneficios de la Automatización:
+
+El sistema funciona de maravilla para evitar duplicados. Al final, puedes haber extraído más de 140 trabajos. Lo mejor es que no tienes que ir a LinkedIn una y otra vez. Solo dejas que el sistema se actualice solo, y así no te pierdes ninguna oportunidad.
+
+Esto es un sistema básico. Si quieres mejorarlo, podrías hacer que el robot automáticamente genere un currículum personalizado basado en la descripción de cada trabajo.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+Para validar la información técnica de este tutorial, voy a buscar las fuentes oficiales de las plataformas mencionadas.
+##Contenido END

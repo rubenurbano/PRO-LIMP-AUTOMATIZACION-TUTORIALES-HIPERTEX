@@ -1,0 +1,1 @@
+Invoke-RestMethod -Uri 'http://127.0.0.1:8000/items/' -Method Post -ContentType 'application/json' -Body '{"name": "Nuevo Producto desde Script", "description": "Creado con un script de PowerShell", "price": 250.0, "tax": 25.0}'

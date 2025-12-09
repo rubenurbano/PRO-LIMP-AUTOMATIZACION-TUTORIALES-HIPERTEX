@@ -1,0 +1,71 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "How to Automate ALL Lead Research with AI\nWEB ORIGINAL:",
+      "contenido": "How to Automate ALL Lead Research with AI:\nWeb Original:\nHow to Automate ALL Lead Research with AI\nhttps://youtu.be/okVW2-SYcUQ?si=lrsO7VGVlgUqqHXx"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Descripción general del sistema de automatización",
+      "contenido": "Descripción general del sistema de automatización:\nEste es un sistema de automatización que utiliza la Inteligencia Artificial IA para investigar a las personas que llenan un formulario de contacto. Imagina que en lugar de pasar tiempo buscando información sobre un cliente en LinkedIn y en su página web, un robot lo hace automáticamente y te entrega un resumen listo para usar. El propósito principal es que, si tienes una reunión importante, por ejemplo, en 15 minutos, puedas entender rápidamente quién es la persona y si van a tener una comunicación productiva. "
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Herramientas clave utilizadas en el sistema",
+      "contenido": "Herramientas clave utilizadas en el sistema:\nEl sistema completo fue construido en la plataforma make.com. \n1. Tally o Formulario Inicial: Es el punto de partida, donde el cliente potencial ingresa su información como su nombre, email, y enlaces a LinkedIn y su empresa. \n2. Bot de Telegram: Es donde tú el usuario interactúas. Puedes chatear con el bot o solicitarle el resumen de la investigación. Este bot se crea usando Bot Father en Telegram. \n3. Airtable: Se usa como una base de datos para guardar dos cosas, la información original del formulario y el resumen final que la IA crea. \n4. OpenAI: Es el cerebro del sistema. Se encarga de responder en modo conversacional, crear el email de seguimiento personalizado, y generar el resumen completo de la investigación. \n5. Gmail: Se usa para enviar un correo electrónico de seguimiento inmediato al cliente potencial después de que llena el formulario. \n6. Módulos HTTP make request conectados a realms.ai: Estos son los investigadores principales. Son los encargados de ir a buscar la información en la URL de LinkedIn y en el sitio web de la empresa."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Flujo de trabajo paso a paso",
+      "contenido": "Flujo de trabajo paso a paso:\nEl sistema tiene dos caminos que pueden activarse dependiendo de lo que hagas con el bot de Telegram. \n\nI. CAMINO CONVERSACIONAL Para chatear\n1. Tú envías un mensaje de texto al bot de Telegram, por ejemplo, Hola, cómo estás? \n2. Ese mensaje se envía al módulo de IA OpenAI. \n3. La IA piensa en una respuesta adecuada. \n4. El bot te envía la respuesta de vuelta, actuando como un asistente de conversación. \n\nII. CAMINO DE INVESTIGACIÓN Para crear el resumen automático\nEste camino es el más complejo y se activa cuando el cliente llena el formulario o cuando tú le pides el resumen al bot."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Paso 1: Inicio con el formulario",
+      "contenido": "Paso 1: Inicio con el formulario:\nEl cliente potencial llena el formulario con sus datos, incluyendo su email, LinkedIn y el sitio de su empresa."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Paso 2: Guardado de datos en Airtable",
+      "contenido": "Paso 2: Guardado de datos en Airtable:\nToda la información que el cliente llena se guarda inmediatamente en Airtable."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Paso 3: Envío de email de seguimiento inmediato",
+      "contenido": "Paso 3: Envío de email de seguimiento inmediato:\nEn este momento, los módulos de OpenAI y Gmail trabajan juntos en secuencia. \na. OpenAI recibe los datos y crea un correo electrónico de seguimiento. La IA puede crear un email personalizado para cada cliente potencial. \nb. El email se envía inmediatamente a través de Gmail al cliente, agradeciéndole y pidiéndole que agende una llamada, por ejemplo, en Calendarly."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Paso 4: Investigación profunda usando HTTP make request y realms.ai",
+      "contenido": "Paso 4: Investigación profunda usando HTTP make request y realms.ai:\nAquí es donde ocurre la investigación del cliente. Estos módulos actúan como si estuvieran pidiendo información a un lugar llamado realms.ai. \na. Investigación de LinkedIn: Se usa un módulo HTTP make request que toma la URL de LinkedIn que el cliente proporcionó. Este módulo llama a realms.ai, le da la URL, y pide por favor investigar a este cliente. realms.ai hace la investigación y devuelve la información ya resumida y lista. \nb. Investigación del Sitio Web de la Empresa: Se usa otro módulo HTTP make request para hacer exactamente lo mismo, pero con la URL de la compañía."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Paso 5: Creación del resumen final con OpenAI",
+      "contenido": "Paso 5: Creación del resumen final con OpenAI:\nLos resultados de estas dos investigaciones, LinkedIn y sitio web, se envían al módulo de OpenAI. \na. La IA utiliza una instrucción (prompt) para actuar como un asistente profesional y eficiente de investigación de ventas. \nb. La IA combina todos los datos y crea el resumen final. \nc. El resumen contiene información crucial, como el nombre, ubicación, puesto actual, duración en el rol, experiencias previas como ser fundador o CEO e ideas clave para la llamada con el cliente."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Paso 6: Almacenamiento y entrega del resumen",
+      "contenido": "Paso 6: Almacenamiento y entrega del resumen:\na. Almacenamiento: El resumen generado por la IA se guarda una vez más en Airtable para que siempre lo puedas consultar. \nb. Entrega: El resumen se envía de vuelta al bot de Telegram. \nc. Activación del resumen: Para obtener el resultado, tú debes enviar el comando \"recent leads summary\" al bot de Telegram. El bot tarda aproximadamente uno o dos minutos en correr todo este proceso y darte la respuesta."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Nota final sobre la automatización",
+      "contenido": "Nota final sobre la automatización:\nEsta automatización es muy eficiente y fue creada en solo unas pocas horas. El creador planea compartir los detalles técnicos raw build para quienes estén interesados en replicarla."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nLa automatización presentada utiliza herramientas reconocidas y documentadas oficialmente:\n\n1. Make.com: Plataforma líder para la automatización de flujos de trabajo con documentación oficial en https://www.make.com/en/help \n\n2. OpenAI: Proveedor oficial de modelos de IA conversacional y generación de texto, con documentación en https://platform.openai.com/docs \n\n3. Airtable: Plataforma para bases de datos no relacionales, con guías oficiales en https://support.airtable.com/hc/en-us \n\n4. Telegram Bots: Creación de bots con documentación oficial en https://core.telegram.org/bots \n\n5. Gmail API: Para envío automatizado de correos, información oficial en https://developers.google.com/gmail/api \n\n6. HTTP Requests y Realms.ai: La ejecución de llamadas HTTP está documentada en la guía de Make.com, realms.ai funciona como un proveedor externo de datos.\n\nEstos enlaces y plataformas son las fuentes oficiales que validan la arquitectura y funcionamiento descrito en este tutorial.\n\n\n[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/64556067/2c56f429-8543-49ac-8e5d-37aed078ed64/transcripcion-hoy.txt)"
+    },
+
+    {
+      "itemID": "012",
+      "menu_item": "Infografía visual del proceso",
+      "contenido": "[IMAGEN: https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/ChatGPT%20Image%2022%20nov%202025,%2018_41_39.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

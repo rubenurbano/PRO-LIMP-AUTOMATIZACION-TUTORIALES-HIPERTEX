@@ -1,0 +1,70 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Automate LinkedIn Posts in 5 Minutes with Make\nWEB ORIGINAL:",
+      "contenido": "Automate LinkedIn Posts in 5 Minutes with Make:\nWeb Original:\nAutomate LinkedIn Posts in 5 Minutes with Make:\nhttps://youtu.be/VyY9ciZOpW4?si=avd5-ZptW2GujDpG"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introduccion y que vas a aprender",
+      "contenido": "Introduccion y que vas a aprender:\nEste video te muestra como crear un robot automatico para publicar contenido en LinkedIn sin tener que hacerlo tu mismo. Esto te ahorra mucho tiempo que normalmente gastarias pensando en ideas frescas y escribiendo el contenido. Para lograrlo, usamos una herramienta llamada Make.com que conecta diferentes servicios como Google Sheets y ChatGPT y hace que trabajen juntos.\n\nImagina que tu hoja de calculo es una despensa llena de ingredientes que son temas pendientes, y Make.com es un chef robotizado. El chef toma un ingrediente que es el tema, se lo pasa a su libro de recetas avanzado que es ChatGPT siguiendo instrucciones de formato exactas, y luego entrega el plato terminado que es la publicacion directamente al mostrador de servicio que es LinkedIn, todo sin que tu tengas que mover un dedo."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Requisitos basicos para empezar",
+      "contenido": "Requisitos basicos para empezar:\nAntes de comenzar necesitas tener dos cosas preparadas:\n\nPrimero, debes tener una cuenta en Make.com. Esta es la plataforma que va a conectar todos los servicios.\n\nSegundo, necesitas tener una hoja de calculo como Google Sheets donde guardas los temas de tus publicaciones y marcas si ya fueron publicados o no. Esta hoja sera tu despensa de contenido."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Paso 1 Configurar el disparador para buscar el tema",
+      "contenido": "Paso 1 Configurar el disparador para buscar el tema:\nEl disparador es lo que inicia todo el proceso. En este caso, queremos que el sistema busque el proximo tema que debe publicarse.\n\nPrimero, crea el escenario en Make.com. La persona en el video ya tiene un escenario nuevo llamado LinkedIn content generator.\n\nLuego, configura la accion de busqueda. El primer modulo que se configura es search rows que significa buscar filas en tu hoja de calculo de temas.\n\nDespues, selecciona la hoja de calculo. Elige la hoja de calculo y el nombre de la hoja donde tienes tus temas guardados."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Establecer la condicion de busqueda con filtro",
+      "contenido": "Establecer la condicion de busqueda con filtro:\nAqui le dices a Make.com que buscar exactamente.\n\nSelecciona la columna que indica si la publicacion ya se hizo. En el ejemplo del video, es la Columna B llamada posted.\n\nDefine que esta columna debe ser igual a false que significa Falso. Esto significa que el tema aun NO ha sido publicado.\n\nEstablece el limite a uno. Esto asegura que Make solo devuelva el primer tema pendiente de publicacion que encuentre.\n\nAl final, prueba ejecutando el modulo. Debe devolver el tema que esta esperando ser publicado, confirmando que la conexion funciona correctamente."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Paso 2 Conectar con ChatGPT para crear el contenido",
+      "contenido": "Paso 2 Conectar con ChatGPT para crear el contenido:\nUna vez que Make.com tiene el tema, necesita un escritor. Ese escritor es ChatGPT.\n\nAnade el modulo ChatGPT y conectalo al modulo de la hoja de calculo. La accion que se utiliza es create a completion.\n\nSelecciona el modelo de ChatGPT que vas a usar."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Crear las instrucciones para ChatGPT usando dos roles",
+      "contenido": "Crear las instrucciones para ChatGPT usando dos roles:\nLas instrucciones son como una receta que le dice a ChatGPT exactamente como debe escribir la publicacion. Se usan dos roles para las instrucciones:\n\nEl primer rol es el de Desarrollador o Sistema. Aqui se le da contexto a ChatGPT. La instruccion principal es: Eres un escritor creativo de IA inteligente encargado de crear nuevas publicaciones de LinkedIn para tu compania de automatizacion de IA.\n\nEl segundo rol es el de Usuario. Aqui se especifican los detalles del formato de la publicacion."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Instrucciones detalladas de formato para la publicacion",
+      "contenido": "Instrucciones detalladas de formato para la publicacion:\nEn el rol de Usuario debes incluir estas instrucciones especificas:\n\nLa publicacion debe comenzar con un gancho o hook.\n\nDebe contener dos o tres parrafos cortos.\n\nEl tono debe ser positivo y centrarse en soluciones y oportunidades.\n\nSe establece una longitud ideal aunque el numero exacto no se especifica en las fuentes.\n\nFormato de salida crucial: La respuesta de ChatGPT debe comenzar DIRECTAMENTE con el contenido de la publicacion de LinkedIn, sin incluir frases introductorias como Aqui esta el contenido.\n\nEstructura obligatoria: Se solicita explicitamente el gancho o hook, un cuerpo o body y una llamada a la accion o call to action CTA.\n\nInyeccion del Tema: Se le dice a ChatGPT que escriba sobre el tema que se obtuvo en el Paso 1, usando la variable de la hoja de calculo. Un ejemplo de instruccion es: Se te ha encargado escribir una nueva publicacion de LinkedIn sobre el tema de aqui se inserta el tema de Google Sheets."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Probar el modulo de ChatGPT",
+      "contenido": "Probar el modulo de ChatGPT:\nEjecuta el modulo de ChatGPT para verificar el resultado. La salida debe mostrar el gancho, los dos parrafos, la llamada a la accion y los hashtags. Si todo aparece correctamente, significa que ChatGPT esta siguiendo tus instrucciones."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Paso 3 Publicar en LinkedIn",
+      "contenido": "Paso 3 Publicar en LinkedIn:\nAhora que el contenido esta escrito, solo falta publicarlo.\n\nAnade el modulo de LinkedIn y conectalo al modulo de ChatGPT.\n\nSelecciona la accion create a text post que significa crear una publicacion de texto.\n\nConecta tu cuenta. Asegurate de conectar tu organizacion de LinkedIn.\n\nInserta el Contenido. En el campo de contenido, selecciona el resultado que te dio el modulo de ChatGPT en el paso anterior.\n\nElige la Visibilidad. Puedes elegir si la publicacion sera publica o no.\n\nGuarda y Corre. Guarda el escenario. Al correrlo, se crea la nueva publicacion en LinkedIn de forma muy rapida."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Resultado final y opciones adicionales de automatizacion",
+      "contenido": "Resultado final y opciones adicionales de automatizacion:\nTodo el proceso se realiza rapidamente, tomando menos de 5 minutos.\n\nUna vez que el robot esta configurado, puedes programarlo para que se ejecute automaticamente. Por ejemplo, puedes configurarlo para que se ejecute una vez al dia, a la semana o al mes.\n\nIncluso existe una automatizacion avanzada donde podrias pedir a ChatGPT que genere ideas de temas nuevos y que los escriba directamente en la hoja de calculo, para que no tengas que hacer absolutamente nada.\n\nEste metodo funciona con cualquier red social que desees automatizar, no solo LinkedIn."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\nVoy a buscar las fuentes oficiales para validar la informacion tecnica de este tutorial sobre automatizacion con Make.com, LinkedIn y ChatGPT."
+    },
+    {
+      "itemID": "011-2",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\n\nResumen de puntos tecnicos validados:\n\nMake.com es una plataforma de automatizacion potente que permite conectar varias aplicaciones y servicios para automatizar flujos de trabajo y tareas. La plataforma ofrece capacidades de diseño visual de soluciones sin codigo, lo que permite ahorrar tiempo y personalizar automatizaciones conectando aplicaciones de IA para obtener resultados mejores y mas rapidos.\n\nEl Scenario Builder es una caracteristica clave de Make.com que permite crear flujos de trabajo automatizados conectando diferentes aplicaciones y servicios, moviendo datos entre ellos sin necesidad de habilidades de codificacion. Make.com cuenta con mas de 2000 aplicaciones disponibles para integracion, incluyendo Google Sheets, Google Drive, Slack, Trello y muchas mas.\n\nRespecto a la API de LinkedIn para publicar contenido, la Posts API de LinkedIn facilita la creacion y recuperacion de publicaciones organicas y patrocinadas, utilizando el endpoint https://api.linkedin.com/rest/posts para crear publicaciones de texto. Para usar la API de LinkedIn se requieren los permisos w_member_social para crear, modificar y eliminar publicaciones, junto con openid y email para obtener el ID de autor necesario para publicar.\n\nEn cuanto a ChatGPT y OpenAI, la familia de modelos ChatGPT consume una secuencia de mensajes junto con metadatos, a diferencia de los modelos GPT tradicionales que consumen texto no estructurado. Los modelos ChatGPT estan disponibles a traves de la API de OpenAI, permitiendo a los desarrolladores acceso a capacidades avanzadas de lenguaje.\n\nPara Google Sheets, los filtros permiten ordenar y filtrar los datos que se ven al visualizar una hoja de calculo, y se pueden usar especificaciones de filtro para determinar que datos de la hoja de calculo se muestran u ocultan. Los desarrolladores pueden acceder a las filas filtradas o establecer nuevos filtros en los datos de Sheets mediante la API.\n\nEnlaces directos a documentacion oficial:\n\nMake.com Centro de Ayuda Oficial: https://help.make.com/what-is-make\nMake.com Documentacion de Inicio: https://help.make.com/learn-the-basics\nLinkedIn Posts API Documentacion: https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api\nLinkedIn Developer Portal: https://developer.linkedin.com/\nOpenAI Platform Documentacion: https://platform.openai.com/docs\nOpenAI API Guia de Chat: https://platform.openai.com/docs/guides/chat\nGoogle Sheets API Filtros: https://developers.google.com/workspace/sheets/api/guides/filters\nGoogle Sheets API Referencia: https://developers.google.com/sheets/api\n\nEstas fuentes oficiales confirman que la automatizacion descrita en el tutorial es completamente viable y sigue las mejores practicas recomendadas por los proveedores de servicios mencionados."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Build 3 Free AI Apps No Code to Create Stories_Voices_Videos\nWEB ORIGINAL:",
+      "contenido": "Build 3 Free AI Apps No Code to Create Stories_Voices_Videos:\nWeb Original:\nBuild 3 Free AI Apps No Code to Create Stories_Voices_Videos:\nhttps://youtu.be/h6KZWFeurC8?si=VKMLAxBwCXWVffBl\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introduccion al estudio de historias con IA",
+      "contenido": "Introduccion al estudio de historias con IA:\nPuedes construir tu propio estudio de historias con inteligencia artificial (IA). Haras tus propias aplicaciones que crean personajes que siempre se ven iguales, generan voces y hasta los convierten en videos. Todo esto es gratis y no necesitas programar nada. Hoy te mostrare como crear tres aplicaciones de IA conectadas usando Google Gemini y Abacus.ai."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Descripcion de las tres aplicaciones y usos",
+      "contenido": "Descripcion de las tres aplicaciones y usos:\nLas tres aplicaciones son: primero, un generador de imagenes de personajes; segundo, una aplicacion para narrar voces; y tercero, un tablero extra para crear videos. Puedes usar esto para hacer videos de YouTube sin mostrar tu cara, o para crear historias de IA o anuncios de publicidad, totalmente gratis o muy barato."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Llamado a accion inicial",
+      "contenido": "Llamado a accion inicial:\nPara empezar, dale a Me gusta y suscribete para conseguir mis ultimas plantillas gratis y tutoriales de automatizacion de IA."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Primera aplicacion: generador de imagenes de personajes",
+      "contenido": "Primera aplicacion: generador de imagenes de personajes:\nEmpecemos con la primera aplicacion: el generador de imagenes de personajes. Esta aplicacion crea imagenes de personajes que se ven igual en tu historia o anuncio. El problema normal es que cuando usas herramientas como Midjourney, las caras de los personajes cambian. Esta aplicacion arregla eso. Mantiene la misma cara, ropa y estilo de dibujo sin importar cuantas escenas hagas. Ademas, puedes hacer muchas imagenes de una historia a la vez y guardarlas directamente en tu disco duro.\n\nUsaremos Gemini Plus, Gemini Nano y Banana AI para hacer las imagenes. No necesitas claves especiales (API) ni pagar."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Construir la primera aplicacion",
+      "contenido": "Construir la primera aplicacion:\nPara construir la primera aplicacion:\n\nVe al Constructor de Aplicaciones Gemini de Google Studio. Haz clic en Construir (Build). Pega la plantilla de comandos (prompt template)."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Partes de la primera aplicacion",
+      "contenido": "Partes de la primera aplicacion:\nLa aplicacion de generacion de imagenes estara lista. Tendra cinco partes:\nUno, Controles de entrada: Tendras cuatro espacios para subir imagenes de personajes que sirven como ejemplo. Ponles nombres como Personaje 1, Personaje 2, y asi. Cada espacio tiene una casilla para que elijas que personajes usar.\nDos, Relacion de aspecto: Tendras un menu para elegir tamanos de imagen como 16:9.\nTres, Area de comandos: Pones un espacio de texto grande para hasta 10 descripciones de escena. Cada linea de texto que escribas se convierte en una imagen.\nCuatro, Boton Generar todo: Este boton esta conectado a la herramienta de Gemini gratis. Hara las imagenes en grupo usando la misma foto de ejemplo. Gemini hara resultados de alta calidad y los mostrara en una cuadricula.\nCinco, Opciones de salida: Puedes ver y descargar cada imagen. Puedes descargar todas las imagenes a la vez y los archivos se nombraran solos."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Probar la primera aplicacion: crear historia",
+      "contenido": "Probar la primera aplicacion: crear historia:\nAhora vamos a probarla. Usa un ejemplo como \"King Kong Jr\".\n\nPara probar la aplicacion:\n\nAbre el chat de Gemini o ChatGPT o Claw. Escribe: Crea una historia corta para una pelicula con tres personajes, incluyendo un personaje de moda estilo King Kong llamado King Kong Jr. Gemini escribira una historia. Si Gemini no crea las tres imagenes de los personajes, copia las descripciones y usalas en herramientas como Leonardo.ai o OpenArt para crear las imagenes. Descarga esas imagenes de referencia. Vuelve a tu aplicacion y sube las imagenes."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Paso importante: cambiar nombres de etiquetas",
+      "contenido": "Paso importante: cambiar nombres de etiquetas:\nUn paso importante:\n\nEl Constructor de Aplicaciones Gemini no deja cambiar el nombre de los archivos subidos directamente. Pidele a Gemini que te permita cambiar los nombres de las etiquetas de las imagenes subidas. Habla con Gemini de forma natural y lo arreglara por ti. Una vez arreglado, cambia el nombre de cada espacio correctamente. Por ejemplo: Personaje 1 Dr. Lena."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Generar escenas y descargar",
+      "contenido": "Generar escenas y descargar:\nElige el tamano que quieres, como 16:9. Vuelve al chat de Gemini. Pidele: Dame 10 comandos de escena cortos basados en esta historia, incluyendo a estos tres personajes. Copia toda la lista de 10 descripciones de escena. Pegalas en el espacio de comandos de tu aplicacion. La aplicacion unira cada linea a una imagen. Haz clic en Generar todo (Generate all).\n\nVeras como Gemini hace 10 imagenes de cine consistentes con los mismos personajes, luz y estilo. Puedes hacer esto hasta con 50 o 100 imagenes si alargas la lista de comandos. Haz clic en Descargar todo. Tendras cuadros de historia listos para tu proximo video.\n\nYa tienes tu primera aplicacion gratuita de Gemini, un generador de historias visuales de IA."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Segunda aplicacion: narrador de voces",
+      "contenido": "Segunda aplicacion: narrador de voces:\nAhora, vamos a darle voz a tu historia. La voz es clave para los creadores que no muestran la cara. Crearemos tu propia aplicacion de texto a voz usando Gemini Studio de nuevo. Esto te salva de pagar por 11 Labs o Play.ht."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Construir la segunda aplicacion",
+      "contenido": "Construir la segunda aplicacion:\nPara construir la segunda aplicacion:\n\nRepite el proceso. Haz clic en Construir nueva aplicacion (build new app). Pega la plantilla de comandos para la aplicacion de voz."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Partes de la segunda aplicacion",
+      "contenido": "Partes de la segunda aplicacion:\nEsta aplicacion de narrador de historias de texto a voz tendra:\nUno, Entrada de texto de varias lineas: Pega tu historia o dialogo.\nDos, Deteccion automatica de hablantes: La aplicacion detecta al Hablante uno y al Hablante dos y les asigna una voz.\nTres, Menus de seleccion de voz: Para elegir voces diferentes.\nCuatro, Controles de voz: Para cambiar el tono, la velocidad, la emocion y el volumen.\nCinco, Previsualizar y generar: Puedes escuchar a cada hablante antes de crear el archivo MP3 final.\nSeis, Opciones de salida: Descarga cada voz por separado o un solo archivo combinado."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "Probar la segunda aplicacion",
+      "contenido": "Probar la segunda aplicacion:\nPara probar la aplicacion de voz:\n\nPide a ChatGPT: Escribe un dialogo corto entre dos personajes, una chica joven y un hombre sabio, para una escena de podcast. Copia ese guion. Pegalo en tu aplicacion.\n\nVeras que la aplicacion asigna automaticamente las voces.\n\nElige las voces que mejor funcionen. Por ejemplo, elige Zephyr para la chica y Puck para el hombre sabio. Ajusta el tono y la emocion. Haz clic en Generar (generate).\n\nTendras un archivo de conversacion realista, todo gratis y sin suscripcion."
+    },
+    {
+      "itemID": "014",
+      "menu_item": "Tercera aplicacion: creador de videos",
+      "contenido": "Tercera aplicacion: creador de videos:\nAhora viene el extra: convertir tus imagenes fijas en clips animados cortos. Usare Abacus.ai porque Gemini no soporta varios modelos de video todavia.\n\nPara construir la tercera aplicacion, usaremos Abacus AI, con la herramienta llamada \"Agente Profundo Chat LLM\". El proceso es igual: pega tu comando.\n\nEsta herramienta te da acceso a modelos de video de alta calidad como Sora 2, Cling 2.5, VO3.1 o Runway."
+    },
+    {
+      "itemID": "015",
+      "menu_item": "Partes de la tercera aplicacion",
+      "contenido": "Partes de la tercera aplicacion:\nTu aplicacion de video incluira:\nUno, Espacios para subir: 10 casillas para tus imagenes de referencia.\nDos, Espacio de comandos: Un lugar para pegar textos que describen el video, usando formatos como Sora 2 o VO3.\nTres, Detector de errores: Antes de hacer el video, comprueba si cada linea es correcta.\nCuatro, Boton Generar todos los videos.\nCinco, Unir todos los clips.\nSeis, Visualizacion de salida: Puedes descargar todos los clips a la vez."
+    },
+    {
+      "itemID": "016",
+      "menu_item": "Probar la tercera aplicacion",
+      "contenido": "Probar la tercera aplicacion:\nPara probar la aplicacion de video:\n\nRegistrate y entra en Abacus.ai. Sube las 10 imagenes que hiciste con tu primera aplicacion a los espacios de imagen. Pide a Chat GPT que te de una lista de 10 comandos de video. Copialos y pegalos en Abacus. La aplicacion conectara automaticamente cada comando con una imagen. Selecciona el modelo Sora 2. Elige la duracion del video y el tamano."
+    },
+    {
+      "itemID": "017",
+      "menu_item": "Conseguir la clave API",
+      "contenido": "Conseguir la clave API:\nAntes de generar, debes poner una clave especial (API key). Esto es porque esta herramienta se conecta directamente a los modelos Sora 2 o V3.\n\nPara conseguir la clave:\n\nVisita la pagina web de la API de DF. Crea una cuenta. Haz un pequeno deposito de 5 dolares. Genera tu clave.\n\nPega la clave en Abacus. Haz clic en Generar 10 clips."
+    },
+    {
+      "itemID": "018",
+      "menu_item": "Conclusion: las tres partes del estudio",
+      "contenido": "Conclusion: las tres partes del estudio:\nYa tienes las tres partes de tu estudio. Uno, el generador de imagenes para hacer fotos de historias consistentes. Dos, el narrador de voz para poner voz a tu guion. Tres, el creador de videos para animar tus clips de cine.\n\nFinalmente, junta todo usando programas como Cap Cut o Premiier Rush para crear tu video de historia completo.\n\n!Construiste tu propio estudio de historias de IA!. Las aplicaciones de imagen y voz son gratis con Gemini. La aplicacion de video es opcional y cuesta unos 10 dolares usando Abacus. Tienes tu propio estudio, no uno alquilado. No tiene marcas de agua, no tiene limites y tienes control total. Lo construyes una vez y lo usas para siempre. Esto te ahorra mucho dinero, mas del 90% de lo que pagarias por separado."
+    },
+    {
+      "itemID": "019",
+      "menu_item": "Obtener las plantillas completas",
+      "contenido": "Obtener las plantillas completas:\nSi quieres las plantillas completas y el sistema para conectar las tres aplicaciones:\n\nDale a Me gusta y suscribete. Comenta \"plantilla gratis para construir apps de IA\". Te dare las tres plantillas gratis para que las descargues."
+    },
+    {
+      "itemID": "020",
+      "menu_item": "Cierre del tutorial",
+      "contenido": "Cierre del tutorial:\nGracias por mirar y te vere en el proximo tutorial de herramientas de IA."
+    },
+    {
+      "itemID": "021",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nResumen de puntos tecnicos validados:\nGoogle AI Studio permite construir aplicaciones con Gemini para generacion de imagenes y voz, incluyendo modelos como Gemini Nano y Nano Banana para edicion de imagenes. Abacus.ai ofrece herramientas como ChatLLM y Deep Agent para crear apps con acceso a modelos de IA, incluyendo integraciones para generacion de video. Modelos de video mencionados incluyen Sora de OpenAI para generacion de videos con audio sincronizado, Kling AI para creacion de videos e imagenes generativas, Runway ML para generacion de video AI, y Luma AI Dream Machine para animacion y generacion de contenido visual.\n\nEnlaces directos a documentacion oficial:\n- Google AI Studio: https://aistudio.google.com/\n- Gemini API Docs: https://ai.google.dev/gemini-api/docs\n- Nano Banana Pro (parte de Gemini): https://blog.google/technology/ai/nano-banana-pro/\n- Abacus.ai Documentacion: https://abacus.ai/help/\n- Abacus.ai Deep Agent: https://abacus.ai/help/chatllm-ai-super-assistant/deepagent\n- OpenAI Sora: https://openai.com/sora/\n- Sora API: https://platform.openai.com/docs/models/sora-2\n- Kling AI: https://klingai.com/global/\n- Runway ML API: https://runwayml.com/api\n- Luma AI Dream Machine: https://lumalabs.ai/dream-machine\n\nReferencias a paginas de soporte oficiales:\n- Centro de Ayuda de Runway: https://help.runwayml.com/hc/en-us\n- Soporte de OpenAI Sora: https://help.openai.com/en/collections/11106745-sora\n- Ayuda de Abacus.ai: https://abacus.ai/help/\n- Documentacion de Google AI: https://ai.google.dev/gemini-api/docs/ai-studio-quickstart\n\nBuild 3 Free AI Apps No Code to Create Stories_Voices_Videos\nhttps://youtu.be/h6KZWFeurC8?si=VKMLAxBwCXWVffBl \nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+
+    {
+      "itemID": "022",
+      "menu_item": "MAPA MENTAL:",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Build%203%20Free%20AI%20Apps%20No%20Code%20to%20Create%20Stories_Voices_VideosMAPA.png]\n\nEste MAPA MENTAL resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

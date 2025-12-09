@@ -1,0 +1,131 @@
+# ========================================
+# COMANDOS ÚTILES DE GITHUB CLI (gh)
+# ========================================
+
+# --- AUTENTICACIÓN ---
+gh auth status                                    # Ver estado de autenticación
+gh auth login                                     # Iniciar sesión
+gh auth logout                                    # Cerrar sesión
+gh auth refresh                                   # Refrescar token
+
+# --- REPOSITORIOS ---
+gh repo list                                      # Listar tus repositorios
+gh repo list rubenurbano                          # Listar repos de un usuario
+gh repo list nombre-organizacion                  # Listar repos de una organización
+gh repo view usuario/repo                         # Ver detalles de un repo
+gh repo view usuario/repo --web                   # Abrir repo en navegador
+gh repo clone usuario/repo                        # Clonar un repositorio
+gh repo create                                    # Crear repo (interactivo)
+gh repo create mi-proyecto --public               # Crear repo público
+gh repo create mi-proyecto --private              # Crear repo privado
+gh repo create mi-proyecto --public --clone       # Crear y clonar automáticamente
+gh repo fork usuario/repo                         # Hacer fork de un repo
+gh repo fork usuario/repo --clone                 # Fork y clonar
+gh repo delete usuario/repo                       # Eliminar un repositorio
+gh repo sync                                      # Sincronizar fork con upstream
+gh browse                                         # Abrir el repo actual en navegador
+
+# --- ISSUES ---
+gh issue list                                     # Listar issues del repo actual
+gh issue list --repo usuario/repo                 # Listar issues de un repo específico
+gh issue list --state open                        # Solo issues abiertos
+gh issue list --state closed                      # Solo issues cerrados
+gh issue list --assignee @me                      # Issues asignados a ti
+gh issue list --label bug                         # Filtrar por etiqueta
+gh issue view 123                                 # Ver detalles del issue #123
+gh issue view 123 --web                           # Abrir issue en navegador
+gh issue create                                   # Crear issue (interactivo)
+gh issue create --title "Bug" --body "Descripción"  # Crear issue directo
+gh issue close 123                                # Cerrar issue
+gh issue reopen 123                               # Reabrir issue
+gh issue comment 123 --body "Comentario"          # Comentar en issue
+gh issue edit 123 --add-label bug                 # Añadir etiqueta
+gh issue status                                   # Ver resumen de tus issues
+
+# --- PULL REQUESTS ---
+gh pr list                                        # Listar PRs del repo actual
+gh pr list --repo usuario/repo                    # Listar PRs de un repo específico
+gh pr list --state open                           # Solo PRs abiertos
+gh pr list --state closed                         # Solo PRs cerrados
+gh pr list --author @me                           # PRs creados por ti
+gh pr view 456                                    # Ver detalles del PR #456
+gh pr view 456 --web                              # Abrir PR en navegador
+gh pr create                                      # Crear PR (interactivo)
+gh pr create --title "Feature" --body "Descripción"  # Crear PR directo
+gh pr checkout 456                                # Cambiar a la rama del PR
+gh pr checkout 456 --force                        # Forzar checkout descartando cambios
+gh pr merge 456                                   # Mergear PR
+gh pr merge 456 --squash                          # Mergear con squash
+gh pr merge 456 --rebase                          # Mergear con rebase
+gh pr close 456                                   # Cerrar PR sin mergear
+gh pr reopen 456                                  # Reabrir PR
+gh pr comment 456 --body "Comentario"             # Comentar en PR
+gh pr review 456 --approve                        # Aprobar PR
+gh pr review 456 --comment --body "Comentario"    # Comentar en review
+gh pr review 456 --request-changes --body "Cambios necesarios"  # Solicitar cambios
+gh pr diff 456                                    # Ver diferencias del PR
+gh pr checks                                      # Ver estado de los checks
+gh pr status                                      # Ver resumen de tus PRs
+
+# --- GISTS ---
+gh gist list                                      # Listar tus gists
+gh gist view ID_GIST                              # Ver un gist
+gh gist create archivo.txt                        # Crear gist desde archivo
+gh gist create archivo.txt --public               # Crear gist público
+gh gist create archivo.txt --desc "Descripción"   # Crear con descripción
+gh gist edit ID_GIST                              # Editar gist
+gh gist delete ID_GIST                            # Eliminar gist
+gh gist clone ID_GIST                             # Clonar gist
+
+# --- GITHUB ACTIONS (WORKFLOWS) ---
+gh workflow list                                  # Listar workflows
+gh workflow view nombre-workflow                  # Ver detalles de workflow
+gh workflow run nombre-workflow                   # Ejecutar workflow manualmente
+gh workflow enable nombre-workflow                # Habilitar workflow
+gh workflow disable nombre-workflow               # Deshabilitar workflow
+gh run list                                       # Listar ejecuciones de workflows
+gh run view ID_RUN                                # Ver detalles de una ejecución
+gh run watch ID_RUN                               # Ver ejecución en tiempo real
+gh run rerun ID_RUN                               # Re-ejecutar workflow
+gh run download ID_RUN                            # Descargar artifacts
+
+# --- RELEASES ---
+gh release list                                   # Listar releases
+gh release view v1.0.0                            # Ver detalles de un release
+gh release view --web                             # Abrir último release en navegador
+gh release create v1.0.0                          # Crear release
+gh release create v1.0.0 archivo.zip              # Crear release con archivo
+gh release download v1.0.0                        # Descargar assets del release
+gh release delete v1.0.0                          # Eliminar release
+
+# --- BÚSQUEDA ---
+gh search repos término                           # Buscar repositorios
+gh search issues término                          # Buscar issues
+gh search prs término                             # Buscar PRs
+gh search code término                            # Buscar en código
+
+# --- ALIAS (CREAR ATAJOS) ---
+gh alias set bugs 'issue list --label="bug"'      # Crear alias personalizado
+gh alias list                                     # Listar alias
+gh bugs                                           # Usar el alias
+
+# --- CONFIGURACIÓN ---
+gh config get editor                              # Ver editor configurado
+gh config set editor "code --wait"                # Configurar VS Code como editor
+gh config set editor "notepad"                    # Configurar Notepad
+gh config set git_protocol https                  # Usar HTTPS (por defecto)
+gh config set git_protocol ssh                    # Usar SSH
+gh config list                                    # Ver toda la configuración
+
+# --- EXTENSIONES ---
+gh extension list                                 # Listar extensiones instaladas
+gh extension install owner/gh-extension           # Instalar extensión
+gh extension upgrade extensión                    # Actualizar extensión
+gh extension remove extensión                     # Eliminar extensión
+
+# --- OTROS ---
+gh status                                         # Ver resumen de actividad
+gh version                                        # Ver versión de gh
+gh help                                           # Ver ayuda general
+gh issue --help                                   # Ver ayuda de issues
+gh pr --help                                      # Ver ayuda de PRs

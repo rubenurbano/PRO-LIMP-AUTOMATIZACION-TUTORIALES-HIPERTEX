@@ -1,0 +1,231 @@
+##itemID:000
+##menu-item BEGIN
+Cómo crear un blog con IA paso a paso y Monetizarlo-Blogger-Automatización en Make
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Cómo crear un blog con IA paso a paso y Monetizarlo-Blogger-Automatización en Make:
+Web Original:
+
+https://youtu.be/1oKXVC4eGfY?si=4bCzbmQeeOet4r9X
+
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Qué aprenderás en este tutorial
+##menu-item END
+##Contenido BEGIN
+Qué aprenderás en este tutorial:
+En los siguientes pasos vas a descubrir cómo montar un blog en Blogger sin tocar código, generar artículos automáticamente con inteligencia artificial, programar su publicación y colocar anuncios de Google AdSense para que empiece a generar ingresos pasivos.  
+Todo se hará con herramientas gratuitas: Blogger, Make (antes Integromat) y la API de OpenAI.  
+Al finalizar tendrás un flujo que funcione 24 h y que puedes replicar en minutos para nuevos nichos.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Requisitos previos (lo único que necesitas)
+##menu-item END
+##Contenido BEGIN
+Requisitos previos (lo único que necesitas):
+1. Una cuenta de Google (para Blogger y AdSense).  
+2. Una cuenta gratuita de Make (nivel “Free” basta al principio).  
+3. Una cuenta de OpenAI con al menos 5 $ de saldo (puedes añadir 5 $ una sola vez y duran meses si generas pocas palabras).  
+4. Conocimientos básicos de copiar y pegar: no hace falta programar.  
+5. Un tema o nicho para el blog (por ejemplo: “recetas veganas”, “jardinería urbana”, etc.).
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Paso 1: Crear el blog en Blogger en 3 clic
+##menu-item END
+##Contenido BEGIN
+Paso 1: Crear el blog en Blogger en 3 clic:
+1. Entra en blogger.com y pulsa “Crear tu blog”.  
+2. Ponle un nombre y una URL libre (por ejemplo: jardineriaurbana2025.blogspot.com).  
+3. Elige un tema visual cualquiera; luego podrás cambiarlo.  
+4. En Ajustes → Otros → “Permitir robots de indexación” marca Sí para que Google pueda mostrar tus entradas en los resultados de búsqueda.  
+Listo: ya existe tu blog público y gratuito.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 2: Preparar la hoja de cálculo “base de datos”
+##menu-item END
+##Contenido BEGIN
+Paso 2: Preparar la hoja de cálculo “base de datos”:
+1. Abre Google Sheets y crea una hoja nueva.  
+2. En la fila 1 pon estas cabeceras:  
+   A: Título propuesto  
+   B: Palabras clave  
+   C: Estado (Pendiente / Publicado / Error)  
+   D: Fecha de publicación  
+   E: Enlace al post  
+3. Comparte la hoja con “cualquiera con el enlace” y copia ese enlace; lo usarás en Make.  
+Esta hoja será el lugar donde Make leerá los temas y anotará el resultado.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 3: Obtener la clave secreta de OpenAI
+##menu-item END
+##Contenido BEGIN
+Paso 3: Obtener la clave secreta de OpenAI:
+1. Dentro de tu cuenta de OpenAI ve a “API Keys” (https://platform.openai.com/api-keys).  
+2. Pulsa “Create new secret key” y cópiala.  
+3. Guárdala en un archivo temporal; Make la pedirá más adelante.  
+Con esta clave podrás generar artículos de hasta 4 000 tokens (unas 3 000 palabras) por cada llamada.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 4: Conectar Blogger con Make mediante su módulo oficial
+##menu-item END
+##Contenido BEGIN
+Paso 4: Conectar Blogger con Make mediante su módulo oficial:
+1. En Make crea un nuevo escenario y busca el módulo “Blogger”.  
+2. Selecciona “Create a Post” (crear entrada).  
+3. Make te pedirá conectar tu cuenta de Google; autorízalo.  
+4. En el desplegable aparecerán todos tus blogs; elige el que creaste en el Paso 1.  
+Ahora Make tiene permiso para publicar entradas en tu nombre.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Paso 5: Crear el prompt que escribirá los artículos
+##menu-item END
+##Contenido BEGIN
+Paso 5: Crear el prompt que escribirá los artículos:
+1. Abre el módulo “OpenAI > Create a Completion”.  
+2. Modelo: “gpt-3.5-turbo-instruct” (es el más barato para texto largo).  
+3. En “Prompt” pega lo siguiente y ajústalo a tu nicho:  
+
+   “Eres un redactor experto en jardinería urbana.  
+   Escribe un artículo amigable de 800 palabras.  
+   Incluye: introducción, 5 consejos prácticos y conclusión.  
+   Usa párrafos cortos y un estilo cercano.  
+   Título sugerido: {{1.`Título propuesto`}}  
+   Palabras clave: {{1.`Palabras clave`}}”  
+
+4. Max Tokens: 1 200 (garantiza 800-900 palabras).  
+Make almacenará el texto generado para enviarlo luego a Blogger.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Paso 6: Programar la lectura diaria de la hoja
+##menu-item END
+##Contenido BEGIN
+Paso 6: Programar la lectura diaria de la hoja:
+1. Añade el módulo “Google Sheets > Search Rows”.  
+2. Conecta tu cuenta de Google y selecciona la hoja del Paso 2.  
+3. Filtro: solo filas cuya columna “Estado” = “Pendiente”.  
+4. Activa el programador (icono del reloj) para que se ejecute “Cada día a las 08:00”.  
+De esta forma el robot revisará cada mañana si hay nuevos temas que convertir en posts.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Paso 7: Unir los módulos y añadir un pequeño filtro
+##menu-item END
+##Contenido BEGIN
+Paso 7: Unir los módulos y añadir un pequeño filtro:
+1. Conecta la salida de “Search Rows” al módulo de OpenAI.  
+2. Añade un “filter” (haz clic en el engranete) entre ambos: solo continuar si “Título propuesto” existe (no está vacío).  
+3. Conecta la salida de OpenAI al módulo “Blogger > Create a Post”.  
+4. En “Title” mapea el título original; en “Content” mapea el texto generado.  
+5. Marca “Published” = Yes si quieres que salga enseguida, o No si prefieres guardarlo como borrador.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Paso 8: Actualizar el estado y la fecha en la hoja
+##menu-item END
+##Contenido BEGIN
+Paso 8: Actualizar el estado y la fecha en la hoja:
+1. Añade el módulo “Google Sheets > Update a Row”.  
+2. Indica el “Row Number” que obtuviste al principio.  
+3. En “Estado” escribe “Publicado” y en “Fecha de publicación” usa la variable `now` (fecha y hora actual).  
+4. Opcional: guarda también la URL del post usando la salida de Blogger.  
+Así sabrás qué entradas ya están online y cuáles fallaron.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Paso 9: Probar el flujo y ver el primer artículo en vivo
+##menu-item END
+##Contenido BEGIN
+Paso 9: Probar el flujo y ver el primer artículo en vivo:
+1. Pon una fila de prueba en la hoja: título “Cómo cultivar tomates en un balcón”, palabras clave “tomates, balcón, maceta”, estado “Pendiente”.  
+2. Vuelve a Make y pulsa “Run once”.  
+3. Si todo va bien verás los módulos en verde y el post aparecerá en tu blog al instante.  
+4. Revisa que el texto tenga sentido; si hace falta, ajusta el prompt y vuelve a probar.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Paso 10: Solicitar admisión en Google AdSense
+##menu-item END
+##Contenido BEGIN
+Paso 10: Solicitar admisión en Google AdSense:
+1. En Blogger ve a “Ganar dinero” y pulsa “Registrarse en AdSense”.  
+2. Completa los datos (país, nombre, dirección).  
+3. Google revisará tu blog; para aumentar las probabilidades:  
+   – Ten al menos 10 entradas originales.  
+   – Añade páginas obligatorias: “Quién soy”, “Contacto”, “Política de cookies”.  
+   – Usa un dominio propio opcional (tusitio.com) en lugar de .blogspot.com; aunque no es obligatorio, mejora la percepción de profesionalidad.  
+4. Cuando AdSense te acepte, coloca los anuncios automáticos y olvídate: Google se encarga de mostrar banners relevantes.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+Paso 11: Escala: duplicar el escenario para otros nichos
+##menu-item END
+##Contenido BEGIN
+Paso 11: Escala: duplicar el escenario para otros nichos:
+1. En Make selecciona tu escenario y pulsa “Duplicate”.  
+2. Cambia la hoja de cálculo y el blog de destino.  
+3. Modifica el prompt para el nuevo nicho.  
+4. Programa distintos horarios para evitar picos de uso de la API (y así ahorrar créditos).  
+De esta forma puedes gestionar 3-5 blogs simultáneamente sin trabajo extra.
+##Contenido END
+
+##itemID:014
+##menu-item BEGIN
+Costes reales y trucos de ahorro
+##menu-item END
+##Contenido BEGIN
+Costes reales y trucos de ahorro:
+– Blogger: 0 € (alojamiento ilimitado).  
+– Make: 0 € hasta 1 000 operaciones/mes; luego 9 €/mes si escala.  
+– OpenAI: 0,002 $ cada 1 000 tokens; un artículo de 1 000 palabras cuesta ~0,04 $.  
+Trucos:  
+   – Usa GPT-3.5 en lugar de GPT-4.  
+   – Reduce los tokens del prompt.  
+   – Publica 3-4 veces por semana en lugar de diario.
+##Contenido END
+
+##itemID:015
+##menu-item BEGIN
+Errores frecuentes y cómo resolverlos
+##item-item END
+##Contenido BEGIN
+Errores frecuentes y cómo resolverlos:
+1. “403 Forbidden” en Blogger: tu cuenta de Google no es administradora; añádela en Ajustes → Permisos.  
+2. OpenAI devuelve texto vacío: aumenta Max Tokens o revisa que el prompt no tenga saltos de línea extraños.  
+3. Make se queda en “Waiting”: has superado la cuota gratuita; espera a que se resetee o pasa a plan de pago.  
+4. AdSense deniega la solicitud: suele deberse a contenido duplicado; asegúrate de que los posts sean únicos y añade más entradas.
+##Contenido END
+
+##itemID:016
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+– Blogger permite publicar entradas por API tal como se describe: https://developers.google.com/blogger/docs/3.0/reference/posts/insert  
+– Make (Integromat) incluye módulos certificados de Blogger, Google Sheets y OpenAI: https://www.make.com/en/integrations  
+– OpenAI confirma el coste de 0,002 $/1 k tokens para gpt-3.5-turbo-instruct: https://openai.com/pricing  
+– Google AdSense exige contenido original y políticas de privacidad: https://support.google.com/adsense/answer/48182  
+– Uso de la API de Google Sheets sin código, tal como se usa en el tutorial: https://developers.google.com/sheets/api/reference/rest
+##Contenido END

@@ -1,0 +1,80 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "SUPER AI Tool Lets You Build Autonomous AI Workers_Automate Any Task\nWEB ORIGINAL:",
+      "contenido": "SUPER AI Tool Lets You Build Autonomous AI Workers_Automate Any Task:\nWeb Original:\nSUPER AI Tool Lets You Build Autonomous AI Workers_Automate Any Task:\nhttps://youtu.be/yxcfGIEZg1Y?si=IwN6zPovK0hxBvhz\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Que es Cortex y para que sirve",
+      "contenido": "Que es Cortex y para que sirve:\nCortex.com es una herramienta de Inteligencia Artificial que te permite crear tu propio equipo de pequenos robots digitales llamados trabajadores autonomos. Estos robots hacen tareas por ti en internet las 24 horas del dia. Con Cortex tu solo describes la tarea que quieres que se complete y la herramienta automaticamente construye el proceso para hacerlo."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Tareas que pueden hacer los robots",
+      "contenido": "Tareas que pueden hacer los robots:\nLos robots de Cortex pueden buscar clientes llamados leads para un negocio. Pueden responder automaticamente a los correos o mensajes de esos clientes. Pueden revisar tu bandeja de entrada de correos. Pueden vigilar a tu competencia y reaccionar si ellos hacen algo nuevo. Pueden trabajar con imagenes documentos datos y presentaciones."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Ejemplo practico de un robot vigilante",
+      "contenido": "Ejemplo practico de un robot vigilante:\nPuedes pedirle que monitoree un canal de YouTube todos los dias a las 9:00 a.m.. Si detecta un video nuevo el robot puede darte tres a cinco ideas de titulos diferentes y escribir un guion de video para ti basandose en la forma en que tu escribes normalmente si le ensenas como lo haces."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Como entrar y comenzar a usar Cortex",
+      "contenido": "Como entrar y comenzar a usar Cortex:\nPuedes comenzar a usar Cortex.com de forma gratuita. Para iniciar un nuevo trabajo ve a la plataforma y haz clic en New chat que significa Nuevo chat. Debes asegurarte de que tienes seleccionado un agente como Suna. Es recomendable usar Cortex Power en lugar de Cortex Basic porque funciona un poco mejor."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Como darle instrucciones al robot",
+      "contenido": "Como darle instrucciones al robot:\nEscribe exactamente lo que quieres automatizar. Debes indicar que quieres que haga por ejemplo Quiero publicar noticias de IA en X. Tambien debes decir cuando quieres que lo haga por ejemplo Todos los dias a las 5:00 p.m.. Y con que frecuencia quieres que se repita."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Responder preguntas y conectar aplicaciones",
+      "contenido": "Responder preguntas y conectar aplicaciones:\nUna vez que das la instruccion el sistema probablemente te hara algunas preguntas para asegurarse de que construye el proceso correctamente. Por ejemplo que tipo de noticias te interesan o cuantas veces al dia debe publicar. Simplemente debes responder a esas preguntas. Si el robot necesita conectarse a una aplicacion como Twitter o tu correo te guiara para que inicies sesion o le proporciones la informacion necesaria llamadas credenciales. Una vez que respondes y das los accesos Cortex construye la automatizacion y la pone a funcionar."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Disparadores o Triggers",
+      "contenido": "Disparadores o Triggers:\nLos disparadores son lo que hace que la tarea se inicie. Pueden ser de dos tipos. Los Programados o Scheduled se ejecutan a una hora especifica que tu eliges como Cada lunes a las 9:00 a.m.. Los Basados en eventos o Event-based se ejecutan cuando algo sucede en otra aplicacion como Cuando llega un correo nuevo."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Herramientas conocimiento e integraciones",
+      "contenido": "Herramientas conocimiento e integraciones:\nA los trabajadores se les puede dar conocimiento y acceso a herramientas como buscar en internet con web browser editar imagenes o hacer presentaciones. Cortex funciona con muchisimas aplicaciones populares como HubSpot Notion Slack Salesforce Spotify Stripe y docenas mas. Si quieres automatizar algo con una aplicacion que no esta en la lista principal Cortex te ayuda a configurarla manualmente con Conexiones especiales llamadas Custom MCP explicandote donde encontrar las credenciales necesarias."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Robot de redes sociales para publicar en X",
+      "contenido": "Robot de redes sociales para publicar en X:\nLa tarea es buscar en internet noticias de IA Inteligencia Artificial y publicar dos veces al dia a las 5:00 p.m.. El resultado es que el robot busca las noticias por ejemplo de TechCrunch y crea los mensajes de Twitter o X por ti. Recibes un correo de notificacion sobre lo que publico."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Robot de reportes para generar informes de datos",
+      "contenido": "Robot de reportes para generar informes de datos:\nLa tarea es generar un documento de reporte detallado de los datos de tus suscriptores de ConvertKit de los ultimos 7 dias y enviarlo por correo cada lunes a las 9:00 a.m.. El resultado es que el robot genera un reporte con hallazgos clave desgloses de datos metricas importantes como tasa de apertura de correos y cuantos suscriptores ganaste o perdiste y te lo envia al email."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Robot de servicio al cliente con alertas de reembolso",
+      "contenido": "Robot de servicio al cliente con alertas de reembolso:\nLa tarea es revisar el correo y alertar automaticamente en Slack un programa de mensajeria cada vez que alguien mencione la palabra reembolsos en un email. El resultado es que el robot te envia un mensaje diario en Slack con el asunto el remitente una vista previa del correo y el enlace directo al email. Esto hace que el soporte sea mucho mas facil. Como accion avanzada este robot no solo notifica. Si lo configuras podria conectarse a Stripe o Shopify y procesar el reembolso automaticamente."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Gestionar pausar y hacer cambios en tus automatizaciones",
+      "contenido": "Gestionar pausar y hacer cambios en tus automatizaciones:\nSi ya no quieres que un robot siga haciendo una tarea puedes ir a la seccion Triggers o Disparadores y pausar la automatizacion. Si no te gusta el formato de un reporte o de un post solo tienes que volver y decirle a Cortex como quieres que lo cambie y lo actualizara. Seguira funcionando automaticamente hasta que lo detengas. Puedes ver un informe de todas las veces que tu robot ha ejecutado sus tareas. La idea principal es que no necesitas ser un experto. Solo tienes que describir en lenguaje sencillo ingles simple o en este caso espanol simple lo que quieres automatizar y la herramienta lo construye por ti."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\nVoy a buscar información oficial sobre Cortex para validar los puntos técnicos del tutorial."
+    },
+    {
+      "itemID": "013-2",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\n\nLa plataforma Cortex mencionada en el tutorial existe y se trata de withcortex.ai. Esta es una plataforma de automatizacion de IA avanzada que permite construir flujos de trabajo inteligentes y autonomos con capacidades de agentes de IA.\n\nPuntos tecnicos validados:\n\nLa plataforma efectivamente permite crear trabajadores autonomos de IA que pueden razonar planificar e interactuar con diversas herramientas para completar tareas complejas. La plataforma combina diferentes tipos de pasos incluyendo modelos de IA codigo solicitudes de API interacciones del navegador e integraciones.\n\nLos disparadores o triggers estan confirmados en la documentacion oficial. Estos inician flujos de trabajo basados en eventos o condiciones especificas y sirven como punto de partida de los flujos de trabajo activandose cuando ocurren ciertos eventos.\n\nLas integraciones estan confirmadas. La plataforma soporta conexiones con servicios como Google Sheets Google Drive Google Calendar Gmail Slack Notion y muchos otros servicios externos. La documentacion oficial muestra que se expande constantemente el ecosistema de integraciones.\n\nLa arquitectura de seguridad incluye control de acceso basado en roles cifrado de extremo a extremo y arquitectura multi-tenant.\n\nRecursos oficiales:\n\nDocumentacion principal de Cortex: https://docs.withcortex.ai/introduction\nPagina de integraciones oficiales: https://withcortex.ai/integrations\nDocumentacion de triggers y acciones: https://docs.withcortex.ai/workflows/steps/triggers-and-actions/overview\n\nNota importante: El video del tutorial usa el termino Cortex de forma generica. Existen multiples plataformas con este nombre incluyendo Cortex de Palo Alto Networks enfocada en ciberseguridad y Cortex de cortex.io enfocada en portales de desarrolladores. La plataforma de automatizacion de trabajadores autonomos descrita en el tutorial corresponde a withcortex.ai segun las caracteristicas mencionadas.\n\n\nSUPER AI Tool Lets You Build Autonomous AI Workers_Automate Any Task\nhttps://youtu.be/yxcfGIEZg1Y?si=IwN6zPovK0hxBvhz\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    }
+  ]
+}

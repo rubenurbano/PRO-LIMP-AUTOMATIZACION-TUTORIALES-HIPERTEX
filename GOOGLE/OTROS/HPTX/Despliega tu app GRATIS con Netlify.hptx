@@ -1,0 +1,228 @@
+##itemID:000
+##menu-item BEGIN
+Despliega tu app GRATIS con Netlify
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Despliega tu app GRATIS con Netlify:
+Web Original:
+Despliega tu app GRATIS con Netlify:
+https://youtu.be/jgN5mfGJ6cs?si=RvcLfQbMU58yi-kI
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introduccion a la aplicacion creada
+##menu-item END
+##Contenido BEGIN
+Introduccion a la aplicacion creada:
+En el video pasado aprendimos a hacer una aplicacion web completa. Con esa aplicacion podiamos crear imagenes con el estilo y tamano que quisieramos. Tambien podiamos arreglar o editar esas imagenes. Podriamos hacer anuncios para redes sociales, tanto imagenes como videos, para promocionar productos. Para esos anuncios, subiamos una foto de una persona y una foto del producto. Y tambien podiamos hacer un video donde un robot digital decia lo que le pediamos. Ojo: Yo dije mal el nombre y dije Netfly en el video, pero el nombre correcto de la herramienta para subir la aplicacion es Netlify.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+El desafio de poner la aplicacion en internet
+##menu-item END
+##Contenido BEGIN
+El desafio de poner la aplicacion en internet:
+Ahora ya tenemos la aplicacion hecha, pero como hacemos para que todo el mundo la vea en internet?
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Opciones disponibles para subir la aplicacion
+##menu-item END
+##Contenido BEGIN
+Opciones disponibles para subir la aplicacion:
+Hay varias maneras de hacerlo. Una opcion es descargar la aplicacion a nuestra computadora. Otra opcion es subir el codigo a una cuenta de GitHub. Desde GitHub, podriamos luego usar un servicio llamado Vercel para ponerla online. Tambien podriamos usar la opcion deploy (desplegar o subir) de Google AI Studio, que es la herramienta donde creamos la aplicacion.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+La opcion de Google Cloud y sus requisitos
+##menu-item END
+##Contenido BEGIN
+La opcion de Google Cloud y sus requisitos:
+Si usamos la opcion de deploy de Google, la aplicacion se subiria a la nube de Google Cloud. Pero para hacer esto, Google nos pide que configuremos el pago, es decir, que pongamos una tarjeta de credito. Si pones tu tarjeta, si podrias subirla a la nube de Google Cloud. Tambien podrias compartir la aplicacion con alguien mas para que trabajen juntos en el proyecto.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Que es Netlify y por que lo usamos
+##menu-item END
+##Contenido BEGIN
+Que es Netlify y por que lo usamos:
+Nosotros vamos a usar una manera diferente y muy facil. Vamos a usar un servicio que se llama Netlify. Netlify nos ayuda a subir y alojar webs y aplicaciones. Tiene una opcion de pago, pero su opcion gratuita es muy buena y nos sirve para alojar la web.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 1 Registrarse en Netlify
+##menu-item END
+##Contenido BEGIN
+Paso 1 Registrarse en Netlify:
+Ve a la pagina de Netlify y registrate. Puedes entrar usando tu cuenta de Google.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Paso 2 Volver a Google AI Studio
+##menu-item END
+##Contenido BEGIN
+Paso 2 Volver a Google AI Studio:
+Vuelve a Google AI Studio, donde esta tu aplicacion.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Paso 3 Descargar la aplicacion
+##menu-item END
+##Contenido BEGIN
+Paso 3 Descargar la aplicacion:
+Busca la opcion para descargar la aplicacion. Esto descargara un archivo comprimido (que se llama bananitascreative.zip) a tu disco duro.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Paso 4 Acceder a Netlify Drop
+##menu-item END
+##Contenido BEGIN
+Paso 4 Acceder a Netlify Drop:
+Vuelve a Netlify. Busca la opcion que se llama Netlify Drop.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Paso 5 Arrastrar y soltar la carpeta
+##menu-item END
+##Contenido BEGIN
+Paso 5 Arrastrar y soltar la carpeta:
+Arrastra la carpeta que descargaste con todo el codigo de tu proyecto y sueltala en el espacio de Netlify Drop.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Paso 6 Esperar mientras Netlify sube los archivos
+##menu-item END
+##Contenido BEGIN
+Paso 6 Esperar mientras Netlify sube los archivos:
+Netlify comenzara a subir los archivos. Espera mientras sube todo e inicia el proyecto online.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Paso 7 Abrir la aplicacion desplegada
+##menu-item END
+##Contenido BEGIN
+Paso 7 Abrir la aplicacion desplegada:
+Cuando termine, haz clic donde dice Open Production Deploy.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+Tu aplicacion ya esta en internet
+##menu-item END
+##Contenido BEGIN
+Tu aplicacion ya esta en internet:
+Felicidades! Ahora tienes tu aplicacion completa y funcionando en internet con un link de Netlify. Este link que te da Netlify es largo y tiene muchos caracteres.
+##Contenido END
+
+##itemID:014
+##menu-item BEGIN
+Como obtener un link mas profesional
+##menu-item END
+##Contenido BEGIN
+Como obtener un link mas profesional:
+Si quieres que el link se vea mejor y mas profesional (por ejemplo, www.miaplicacion.com), debes comprar un dominio y conectarlo facilmente con Netlify. Pero para que la gente la pruebe, la opcion gratuita que tienes ahora es perfecta.
+##Contenido END
+
+##itemID:015
+##menu-item BEGIN
+Otras formas de subir el codigo
+##menu-item END
+##Contenido BEGIN
+Otras formas de subir el codigo:
+Esta manera de subir el codigo (descargar y arrastrar) es la mas sencilla. Otra forma es enlazar tu proyecto con GitHub y de ahi con Vercel. Con esto terminamos la serie de como crear la aplicacion en Google AI Studio y como subirla online para que todos la usen.
+##Contenido END
+
+##itemID:016
+##menu-item BEGIN
+Preguntas y Respuestas
+##menu-item END
+##Contenido BEGIN
+Preguntas y Respuestas:
+
+Que tipo de aplicacion se creo en el video anterior?
+Se creo una aplicacion web completa que puede crear imagenes, editar imagenes, hacer anuncios de imagen y video para redes sociales, y generar videos con un avatar digital.
+
+Cual fue el error de nombre que se corrigio?
+Se dijo Netfly cuando el nombre correcto del servicio para subir la aplicacion es Netlify.
+
+Cuales son las formas principales para poner la aplicacion online?
+Se puede descargar la aplicacion, subir el codigo a GitHub y usar Vercel, usar la opcion deploy de Google AI Studio, o usar Netlify.
+
+Por que no se elige la opcion directa de Google AI Studio?
+Porque para usar el servicio de Google Cloud se necesita configurar el pago, lo que significa poner una tarjeta de credito.
+
+Que servicio se usa para subir la aplicacion en este video?
+Se usa un servicio llamado Netlify.
+
+Netlify cuesta dinero?
+Netlify tiene una opcion de pago, pero tambien tiene una opcion gratuita (tier gratuito) que es suficiente para alojar webs y aplicaciones.
+
+Cuales son los pasos clave para usar Netlify?
+Primero se debe registrar en Netlify, preferiblemente con la cuenta de Google. Luego, en Google AI Studio, se debe descargar el archivo del proyecto (bananitascreative.zip). Finalmente, se debe arrastrar esa carpeta descargada y soltarla en la seccion Netlify Drop del sitio web de Netlify.
+
+Que pasa despues de subir el archivo a Netlify?
+Netlify sube los archivos, los inicializa, y luego proporciona un link online donde la aplicacion ya esta funcionando. Se debe hacer clic en Open Production Deploy para verla.
+
+Como se puede obtener un link mas profesional para la aplicacion?
+El link que da Netlify es largo. Para tener un link mas profesional (como un dominio personal), se debe comprar un dominio y enlazarlo facilmente con el proyecto en Netlify.
+
+Existe otra opcion sencilla similar a Netlify?
+Si, otra opcion es Vercel, el cual a menudo se utiliza enlazando el proyecto a traves de GitHub.
+##Contenido END
+
+##itemID:017
+##menu-item BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES:Resumen de puntos tecnicos validados:
+
+Netlify es una plataforma integral para construir, desplegar, gestionar y extender aplicaciones web modernas, con arquitectura serverless y capacidades de automatizacion mediante agentes IA, flujos de trabajo de IA, Git, CI/CD y extensiones.
+
+El metodo de arrastrar y soltar mediante Netlify Drop permite crear un nuevo sitio simplemente arrastrando una carpeta de proyecto que contiene los archivos del sitio, como archivos HTML, a Netlify Drop. Esta funcionalidad de arrastrar y soltar tambien se encuentra disponible en la parte inferior de la pagina de Proyectos del equipo.
+
+Los usuarios deben descomprimir primero el archivo zip del proyecto y asegurarse de que los archivos estan en una carpeta antes de arrastrarla a la zona de despliegue.
+
+Los despliegues en Netlify son atomicos, lo que significa que ningun cambio se publica en la URL publica del sitio antes de que todos los cambios se hayan subido completamente, garantizando que el sitio nunca este en un estado inconsistente durante la subida.
+
+El plan gratuito de Netlify es siempre gratuito, con limites mensuales fijos que no pueden excederse ni incurrir en ningun costo. Este plan gratuito incluye 100 GB de ancho de banda, CI/CD, funciones serverless y mas, sin necesidad de tarjeta de credito y sin cargos sorpresa.
+
+Google AI Studio con su modo Build permite desplegar aplicaciones directamente desde AI Studio, con opciones de despliegue que incluyen Google Cloud Run para implementar la aplicacion como un servicio escalable, aunque el precio de Google Cloud Run puede aplicarse segun el uso.
+
+Vercel es una alternativa a Netlify que se integra estrechamente con Git y ofrece despliegues de vista previa automaticos para cada rama o solicitud de extraccion, optimizado especificamente para Next.js con soporte perfecto para renderizado del lado del servidor, renderizado estatico y regeneracion estatica incremental.
+
+Enlaces directos a documentacion oficial:
+
+Documentacion oficial de Netlify: https://docs.netlify.com/
+Guia de creacion de despliegues en Netlify: https://docs.netlify.com/deploy/create-deploys/
+Pagina de Netlify Drop: https://app.netlify.com/drop
+Documentacion de Google AI Studio Build Mode: https://ai.google.dev/gemini-api/docs/aistudio-build-mode
+Pagina de precios de Netlify: https://www.netlify.com/pricing/
+
+Referencias a paginas de soporte oficiales:
+
+Foros de soporte de Netlify: https://answers.netlify.com/
+Documentacion de verificacion de Build en Netlify: https://docs.netlify.com/build/configure-builds/overview/
+CLI de Netlify: https://docs.netlify.com/api-and-cli-guides/cli-guides/get-started-with-cli/
+
+Despliega tu app GRATIS con Netlify
+https://youtu.be/jgN5mfGJ6cs?si=RvcLfQbMU58yi-kI
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END

@@ -1,0 +1,11 @@
+Reglas para los tutoriales paso a paso:
+
+1-Un solo paso a la vez. 
+2-Cada paso debe ser breve y accionable explicado muy claramente "por que" y "para que"
+3-Esta totalmente prohibido que me des mas de un paso a la vez
+4-Esperaras que yo haga el paso y que no tenga mas errores o dificultades
+5-Se trabaja con cada paso hasta lograr que este perfectamente bien.
+Te esta totlamenete prohibido confundirme con mas de una accion a la vex
+Te esta totalmente prohibido salir de sincronia conmigo.
+6-Esperaras a que yo escriba un hj que significa ahora ya puedes pasar al paso siguiente.
+7-Te esta totalmente prohibido darme "parches" siempre tienes que escribir todo el script nuevamente.

@@ -1,0 +1,181 @@
+#Paso a Paso Crear el entorno virtual venv.txt
+
+python -m venv venv
+
+Verificación (opcional):
+Test-Path .\venv\Scripts\python.exe
+
+
+Verificar instalación de Python:
+where python
+
+o, si eso no devuelve nada:
+py --version
+
+Comprobar si Python está instalado:
+Get-Command py.exe -ErrorAction SilentlyContinue
+
+Crear el entorno virtual usando py:
+(PowerShell (estando en C:\Users\rubenurbano\HIPERTEX>):)
+py -m venv venv
+
+Esto creará la carpeta:
+C:\Users\rubenurbano\HIPERTEX\venv\
+
+Activar el entorno virtual en PowerShell:
+.\venv\Scripts\Activate
+
+Si salió bien, tu prompt debería verse así:
+(venv) PS C:\Users\rubenurbano\HIPERTEX>
+
+Verificar versión de Python dentro del entorno:
+python --version
+
+ó, si no responde:
+py --version
+
+Actualizar pip dentro del entorno:
+python -m pip install --upgrade pip
+
+Verificar que el entorno está funcionando con pip interno:
+pip list
+
+Instalar FastAPI y Uvicorn (tu base para APIs):
+pip install fastapi uvicorn
+
+Crea un archivo nuevo dentro de HIPERTEX llamado:
+main.py
+
+Dentro, pon este contenido mínimo (no vamos a probarlo todavía, solo crearlo):
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"status": "ok"}
+
+Ejecutar el servidor local de prueba:
+En PowerShell (todavía dentro del entorno venv):
+
+uvicorn main:app --reload
+
+Si todo sale bien, deberías ver algo como:
+Uvicorn running on http://127.0.0.1:8000
+
+Luego abrí ese enlace en tu navegador:
+👉 http://127.0.0.1:8000
+Vas a ve: {"status":"ok"} en la pantalla
+
+Probar la documentación automática (joya de FastAPI):
+En tu navegador abrí:
+👉 http://127.0.0.1:8000/docs
+
+Comprobar la documentación interactiva
+
+En el navegador entra en:
+👉 http://127.0.0.1:8000/docs
+
+Detener el servidor FastAPI:
+CTRL + C
+
+
+Desactivar el entorno virtual:
+deactivate
+
+Tu prompt volverá a:
+PS C:\Users\rubenurbano\HIPERTEX>
+
+Salir de PowerShell:
+exit
+
+Cuando regreses, solo activás con:
+.\venv\Scripts\Activate
+
+***********************************************************************************
+# MINI GUÍA: Crear entorno virtual y probar FastAPI:
+***********************************************************************************
+
+# 1️ Crear entorno virtual
+py -m venv venv
+
+# 2 Activar entorno (Windows PowerShell)
+.\venv\Scripts\Activate
+
+# 3️ Verificar versión
+python --version
+
+# 4️ Actualizar pip
+python -m pip install --upgrade pip
+
+# 5️ Instalar FastAPI + Uvicorn
+pip install fastapi uvicorn
+
+# 6️ Crear main.py
+echo "from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get('/')
+def read_root():
+    return {'status':'ok'}" > main.py
+
+# 7️ Ejecutar servidor
+uvicorn main:app --reload
+# 👉 http://127.0.0.1:8000  →  {'status':'ok'}
+# 👉 http://127.0.0.1:8000/docs  →  Documentación interactiva
+
+# 8️ Cerrar todo
+CTRL + C
+deactivate
+exit
+
+# 9️ Reanudar sesión
+cd C:\Users\rubenurbano\HIPERTEX
+.\venv\Scripts\Activate
+uvicorn main:app --reload
+***********************************************************************************
+
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+ Cómo Crear y Usar un Entorno Virtual (venv)
+
+  Paso 1: Abrir la Terminal
+  Abre tu terminal de PowerShell y navega hasta la carpeta raíz de tu proyecto (por ejemplo, C:\Users\rubenurbano\HIPERTEX).
+
+  Paso 2: Crear el Entorno Virtual
+  Ejecuta el siguiente comando para crear un entorno virtual. Puedes reemplazar venv con el nombre que prefieras para tu entorno (es
+  un nombre común y recomendado):
+
+   1 python -m venv venv
+  Este comando creará una carpeta llamada venv (o el nombre que hayas elegido) dentro de tu directorio actual, que contendrá los
+  archivos necesarios para el entorno virtual.
+
+  Paso 3: Activar el Entorno Virtual
+  Para empezar a usar el entorno virtual, necesitas activarlo. Ejecuta el siguiente comando:
+
+   1 .\venv\Scripts\Activate.ps1
+  Verás que el nombre de tu entorno virtual (por ejemplo, (venv)) aparecerá al principio de tu línea de comandos, indicando que está
+  activo.
+
+  Paso 4: Instalar Paquetes (Opcional)
+  Una vez activado el entorno, cualquier paquete de Python que instales con pip se instalará dentro de este entorno virtual y no
+  afectará a tu instalación global de Python.
+
+  Por ejemplo, para instalar FastAPI:
+   1 pip install fastapi uvicorn
+
+  Paso 5: Desactivar el Entorno Virtual
+  Cuando hayas terminado de trabajar en tu proyecto y quieras salir del entorno virtual, simplemente ejecuta:
+
+   1 deactivate
+  El prefijo (venv) desaparecerá de tu línea de comandos, indicando que has vuelto a tu entorno Python global o del sistema.
+
+  ¡Y eso es todo! Con estos pasos, puedes gestionar tus dependencias de Python de forma limpia y organizada para cada proyecto.
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+https://youtu.be/aVrgBMQFxsw?si=v3BUjKH9Qs2_0jZi
+
+Create an Android APK App from Google AI Studio and Install It on Your Phone (WITHOUT Coding!).hptx

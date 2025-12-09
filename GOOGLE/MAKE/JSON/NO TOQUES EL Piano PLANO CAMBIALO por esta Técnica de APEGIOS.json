@@ -1,0 +1,85 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "NO TOQUES EL Piano PLANO CAMBIALO por esta Técnica de APEGIOS\nWEB ORIGINAL:",
+      "contenido": "NO TOQUES EL Piano PLANO CAMBIALO por esta Técnica de APEGIOS:\nWeb Original:\nNO TOQUES EL Piano PLANO CAMBIALO por esta Técnica de APEGIOS:\nhttps://youtu.be/EScT7eS0ptE?si=M8OdUIvBLBRw0UyH"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción a la técnica de arpegios con acordes adheridos",
+      "contenido": "Introducción a la técnica de arpegios con acordes adheridos:\nEste tutorial te enseña cómo usar una técnica de arpegios con acordes adheridos para hacer que la música que tocas en el piano suene menos mecánica o plana y más dinámica.\n\nEsta técnica es una combinación entre lo que haces con la mano izquierda y la mano derecha.\n\nLa regla principal es que este arpegio funciona muy bien cuando tienes frases musicales largas, específicamente de cuatro tiempos (un, dos, tres, cuatro). El arpegio cubre todos los tiempos del compás."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Entender los acordes básicos en Do Mayor",
+      "contenido": "Entender los acordes básicos en Do Mayor:\nVamos a trabajar en la escala de Do Mayor (Do, Re, Mi, Fa, Sol, La, Si).\n\nLos acordes básicos de esta tonalidad son: Do Mayor, Re menor, Mi menor, Fa mayor, Sol mayor, La menor y Si disminuido. Todos estos acordes, ya sean mayores o menores, van a ser modificados con la misma técnica."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Cómo crear un acorde adherido",
+      "contenido": "Cómo crear un acorde adherido:\nUn acorde adherido es cuando le añades una nota extra al acorde básico, sin desarmar las notas que ya tenía.\n\nA partir de la nota fundamental del acorde (la raíz o tónica):\nBusca la nota fundamental del acorde.\nSube un tono completo (un tono entero) por encima de esa fundamental.\nAñade esa nueva nota al acorde. Esta nota se llama la segunda o la novena.\n\nEjemplo:\nSi tomas Do Mayor (Do, Mi, Sol), la fundamental es Do.\nSi subes un tono desde Do, llegas a Re.\nEl nuevo acorde es Do Mayor con la novena adherida (o adherida a la segunda): Do, Re, Mi, Sol."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "La posición de trabajo con inversión",
+      "contenido": "La posición de trabajo con inversión:\nSiempre vamos a trabajar con una inversión específica de este nuevo acorde adherido.\n\nToma la quinta nota del acorde adherido (la última nota, por ejemplo, Sol en Do Mayor).\nBaja esa quinta nota una octava por debajo de donde estaba.\nPara Do Mayor, el acorde (Do, Re, Mi, Sol) se transforma en Sol, Do, Re, Mi.\n\nEsta posición (Sol Do Re Mi) es la que usará siempre la mano derecha."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "El patrón de la mano izquierda",
+      "contenido": "El patrón de la mano izquierda:\nLa mano izquierda va a tocar todas las notas del acorde completo en un patrón fijo. Necesitas el pedal presionado para hacer este movimiento.\n\nEl patrón de la mano izquierda siempre es: Raíz (Primera), Quinta, Octava, Novena (o Segunda), y Tercera.\n\nEjemplo (Do Mayor):\nDedo 5: Do (Raíz)\nDedo 2: Sol (Quinta)\nDedo 1: Do (Octava)\nDedo 2: Re (Novena)\nDedo 3: Mi (Tercera)\n\nSecuencia: Do, Sol, Do, Re, Mi."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "El patrón de la mano derecha",
+      "contenido": "El patrón de la mano derecha:\nLa mano derecha toca la posición de inversión que ya aprendiste (Sol Do Re Mi para Do).\n\nToca las notas de la inversión juntas: Sol Do Re Mi.\nRepite exactamente esa misma posición una octava arriba: Sol Do Re Mi."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Combinación y tiempos: los cuatro tiempos",
+      "contenido": "Combinación y tiempos: los cuatro tiempos:\nEl arpegio completo debe cobijar los cuatro tiempos.\n\nEl movimiento se combina así (ejemplo en Do):\nTiempo 1: Empieza la mano izquierda (Do Sol Do Re Mi).\nTiempo 2: Cae en el Mi, la última nota tocada por la mano izquierda.\nTiempo 3: Toca la mano derecha (Sol Do Re Mi). El tiempo 3 cae sobre la última nota (Mi) de la primera posición de la mano derecha.\nTiempo 4: Toca la mano derecha una octava arriba (Sol Do Re Mi). El tiempo 4 cae sobre la última nota (Mi) de la segunda posición.\n\nConsejo: Se recomienda tocar un poco más fuerte las notas que caen en los tiempos uno, dos, tres y cuatro para afianzar el ritmo."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Aplicación al acorde de Re menor",
+      "contenido": "Aplicación al acorde de Re menor:\nPara el acorde de Re menor (Re, Fa, La):\n\nNovena Adherida: Re + un tono = Mi. Acorde adherido: Re Mi Fa La.\nInversión: Baja la quinta (La) una octava. Posición de la mano derecha: La Re Mi Fa.\nMano Izquierda (Patrón fijo): Re (Raíz), La (Quinta), Re (Octava), Mi (Novena), Fa (Tercera).\nMano Derecha (Movimiento): La Re Mi Fa, seguido de La Re Mi Fa (octava arriba)."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Excepción: acorde de Mi menor",
+      "contenido": "Excepción: acorde de Mi menor:\nEl acorde de Mi menor (Mi, Sol, Si) no se usa con esta técnica en la escala de Do Mayor.\n\nSi subes un tono desde Mi, tendrías que usar Fa sostenido (Fa#), pero Fa sostenido no pertenece a la escala de Do Mayor (que tiene Fa natural). Esto provocaría un choque musical."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Aplicación al acorde de Fa Mayor",
+      "contenido": "Aplicación al acorde de Fa Mayor:\nPara el acorde de Fa Mayor (Fa, La, Do):\n\nNovena Adherida: Fa + un tono = Sol. Acorde adherido: Fa Sol La Do.\nInversión: Baja la quinta (Do) una octava. Posición de la mano derecha: Do Fa Sol La.\nMano Izquierda (Patrón fijo): Fa (Raíz), Do (Quinta), Fa (Octava), Sol (Novena), La (Tercera).\nMano Derecha (Movimiento): Do Fa Sol La, seguido de Do Fa Sol La (octava arriba)."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Aplicación al acorde de Sol Mayor",
+      "contenido": "Aplicación al acorde de Sol Mayor:\nPara el acorde de Sol Mayor (Sol, Si, Re):\n\nNovena Adherida: Sol + un tono = La. Acorde adherido: Sol La Si Re.\nInversión: Baja la quinta (Re) una octava. Posición de la mano derecha: Re Sol La Si.\nMano Izquierda (Patrón fijo): Sol (Raíz), Re (Quinta), Sol (Octava), La (Novena), Si (Tercera).\nMano Derecha (Movimiento): Re Sol La Si, seguido de Re Sol La Si (octava arriba)."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Aplicación al acorde de La menor",
+      "contenido": "Aplicación al acorde de La menor:\nPara el acorde de La menor (La, Do, Mi):\n\nNovena Adherida: La + un tono = Si. Acorde adherido: La Si Do Mi.\nInversión: Baja la quinta (Mi) una octava. Posición de la mano derecha: Mi La Si Do.\nMano Izquierda (Patrón fijo): La (Raíz), Mi (Quinta), La (Octava), Si (Novena), Do (Tercera).\nMano Derecha (Movimiento): Mi La Si Do, seguido de Mi La Si Do (octava arriba)."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "Excepción: acorde de Si disminuido",
+      "contenido": "Excepción: acorde de Si disminuido:\nAl acorde de Si disminuido (Si, Re, Fa) tampoco se le aplica la técnica porque no suena muy bien."
+    },
+    {
+      "itemID": "014",
+      "menu_item": "Uso en canciones y aplicaciones prácticas",
+      "contenido": "Uso en canciones y aplicaciones prácticas:\nBusca otras canciones que mantengan un acorde por cuatro tiempos para poder integrar este arpegio dinámico. Además de usarlo en medio de la canción, puedes usarlo para el final de una pieza musical, ya que es muy bonito.\n\nEl arpegio funciona como un motor que da movimiento constante y evita que el piano suene estático. Piensa en el acorde adherido como si fuera un coche: en lugar de que solo tenga las tres ruedas principales (las tres notas), le añades una cuarta rueda (la novena). Luego, lo pones en una marcha especial (la inversión) para que pueda recorrer un tramo largo de la canción (los cuatro tiempos) con mucha fluidez y energía."
+    },
+    {
+      "itemID": "015",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\nResumen de puntos técnicos validados:\n\nLos conceptos presentados en este tutorial están respaldados por teoría musical estándar. Los acordes add9 o con novena añadida son formaciones ampliamente reconocidas que añaden una nota adicional (la novena) a una triada básica, manteniendo todas las notas originales del acorde. Esta técnica se confirma en múltiples fuentes educativas de teoría musical.\n\nLas inversiones de acordes son un concepto fundamental en la técnica pianística que consiste en reordenar las notas de un acorde para facilitar el desplazamiento sobre el teclado y enriquecer la armonía. Cuando se baja la quinta nota una octava, se obtiene lo que se conoce como la segunda inversión del acorde.\n\nLos arpegios son acordes tocados de forma sucesiva (nota por nota) en lugar de simultánea, y son esenciales para crear movimiento y fluidez en la música. La técnica de arpegios combinada con la mano izquierda y derecha es un método reconocido para mejorar la técnica pianística.\n\nEnlaces a documentación oficial y recursos técnicos:\n\nTeoría de acordes add9 (novena añadida):\nhttps://www.aprendepianoonline.com/acordes/de-novena/anadida/\nhttp://elclubdelautodidacta.es/wp/2012/03/construccion-de-acordes-10-novena-anadida/\nhttps://miguitarraelectrica.com/acordes-add9/\n\nTécnica de arpegios en piano:\nhttps://leccionesdepiano.net/clases-de-piano/arpegios-piano/\nhttps://leccionesdepiano.net/nivel-intermedio-piano/arpegios-avanzados-piano/\n\nInversiones de acordes:\nhttps://www.aprendepianoonline.com/acordes/inversiones/\nhttps://blog.fullpartituras.com/Inversiones-de-acordes-en-piano\n\nPáginas de soporte oficiales sobre técnica pianística:\nhttps://insidepiano.com/sp/arpegios-los-bloques-de-nuestra-improvisacion-piano-de-jazz/\nhttps://www.zoecomposer.com/blog-es/aprende-piano-como-practicar-escalas-y-tecnica\n\nEstas fuentes confirman que la técnica de arpegios con acordes adheridos presentada en el tutorial es un método válido dentro de la teoría musical y la práctica pianística contemporánea, especialmente útil para crear movimiento dinámico en frases de cuatro tiempos."
+    }
+  ]
+}

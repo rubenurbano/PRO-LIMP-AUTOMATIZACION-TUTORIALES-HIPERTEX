@@ -1,0 +1,75 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "CREANDO TU PRIMER FLUJO DE TRABAJO EN CORTEX_PARA EXTRAER INFORMACION DE DOCUMENTOS\nWEB ORIGINAL:",
+      "contenido": "CREANDO TU PRIMER FLUJO DE TRABAJO EN CORTEX_PARA EXTRAER INFORMACION DE DOCUMENTOS:\nWeb Original:\nCREANDO TU PRIMER FLUJO DE TRABAJO EN CORTEX_PARA EXTRAER INFORMACION DE DOCUMENTOS:\nhttps://docs.withcortex.ai/workflows/your-first-workflow#getting-started\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Que es un Flujo de Trabajo",
+      "contenido": "Que es un Flujo de Trabajo:\nUn workflow o flujo de trabajo es como una cadena de acciones que estan conectadas entre si para lograr una tarea. Vamos a crear un flujo de trabajo muy simple que se encargara de sacar informacion o campos de un documento que tu subas.\nEl objetivo es que tu le digas que informacion quieres, por ejemplo el nombre y la fecha, y el sistema lo extraiga automaticamente.\nTu ya tienes un espacio en blanco listo para comenzar a construir esta cadena."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Configurando las Entradas del Sistema",
+      "contenido": "Configurando las Entradas del Sistema:\nPara que el flujo de trabajo pueda empezar a trabajar, necesitamos darle dos cosas: el documento del cual sacara la informacion, y la lista de campos que tiene que encontrar. Usamos los pasos de Entrada o Input steps para esto, ya que permiten pasar datos, como archivos o texto, al flujo para que sean procesados."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Como Anadir el Paso de Entrada",
+      "contenido": "Como Anadir el Paso de Entrada:\n1. Haz clic en el boton de mas que esta en la barra de herramientas del lado izquierdo para anadir un nuevo paso a tu flujo.\n2. De la lista de opciones, elige el paso de Entrada Manual o Manual Input.\n3. Veras que el paso de Entrada se ha anadido.\n4. Cambia el nombre de la clave de este paso de input1 a form, para que sea mas facil recordar que hace."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Creando el Campo de Documentos",
+      "contenido": "Creando el Campo de Documentos:\nNecesitas crear dos campos dentro de este paso de entrada para que las personas puedan subir documentos y especificar que extraer. Las claves que asignes, como documents o fields_to_extract, son muy importantes pues las usaras en los pasos siguientes para referirte a esos datos.\n\nPara el campo de documentos:\na. Crea un campo llamado Documents, que es para subir archivos.\nb. Asignale la clave documents.\nc. En la configuracion, activa la opcion para que se puedan subir multiples archivos.\nd. También, activa la opcion Extraer imagenes o Extract images. Esto es crucial, ya que las imagenes se sacaran automaticamente de los documentos subidos y se pasaran al siguiente paso que es el modelo."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Creando el Campo de Campos a Extraer",
+      "contenido": "Creando el Campo de Campos a Extraer:\nPara el campo de campos a extraer:\na. Crea un campo de texto llamado Fields to extract.\nb. Asignale la clave fields_to_extract.\nc. Aqui, el usuario escribira en lenguaje normal cuales son los campos que desea que el sistema encuentre."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Anadiendo el Cerebro o Paso del Modelo",
+      "contenido": "Anadiendo el Cerebro o Paso del Modelo:\nUna vez que tenemos los datos de entrada, necesitamos el paso que realmente hara el trabajo de inteligencia, que es el paso del Modelo o Model Step.\n\nPara conectar los pasos:\na. Haz clic y arrastra el pequeno circulo de conexion que esta en la parte superior derecha del paso de entrada form.\nb. Suelta el arrastre donde quieres colocar el nuevo paso que se conectara al paso de entrada.\nc. Aparecera una ventana con la lista de pasos.\nd. Haz clic en el paso Modelo o Model para anadirlo al flujo.\n\nEl flujo ya esta conectado. Esto significa que el paso Modelo recibira automaticamente los documentos y los campos a extraer que se definieron en el paso de entrada. Los pasos conectados se pasan datos entre ellos."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Dandole Instrucciones al Cerebro con el Prompt",
+      "contenido": "Dandole Instrucciones al Cerebro con el Prompt:\nAhora hay que decirle al paso Modelo exactamente que hacer. Esto se hace actualizando el mensaje o user prompt.\n\nEl prompt debe incluir instrucciones detalladas, como pedirle que extraiga ciertos campos y como debe devolver la respuesta.\nEl Modelo procesara los documentos subidos y extraera los campos que especificaste, devolviendo todo como un objeto estructurado o JSON."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Uso de Variables para Referir Datos",
+      "contenido": "Uso de Variables para Referir Datos:\nPara que el modelo sepa donde estan los datos de entrada, usamos variables especiales. Las variables siguen el patron stepKey.output.\n\nPara referenciar los campos que el usuario quiere extraer: usa la variable {{form.output.fields_to_extract}}. Aqui, form es la clave de tu paso de entrada.\n\nPara referenciar las imagenes extraidas de los documentos: usa la variable {{form.output.documents:images}}.\n\nEl sufijo :images se usa porque activaste la opcion Extraer imagenes en la configuracion de los documentos.\n\nSi hubieras activado la opcion Extraer contenido o Extract contents en el campo de documentos, usarias el sufijo :content para obtener el texto del documento."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Configuracion de la Salida en JSON",
+      "contenido": "Configuracion de la Salida en JSON:\nDebes configurar el formato de respuesta o response format en la configuracion del paso Modelo a JSON. Esto asegura que la respuesta sea un objeto estructurado que pueda ser usado facilmente en otros pasos del flujo."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Probando el Flujo de Trabajo",
+      "contenido": "Probando el Flujo de Trabajo:\nYa puedes probar tu creacion.\n\n1. Sube un documento y escribe en el campo de texto cuales son los campos que quieres que extraiga.\n2. Ejecuta el flujo. Puedes hacerlo haciendo clic en el boton Ejecutar o Run del flujo de trabajo general o haciendo clic en el boton de ejecucion del paso de Entrada, ya que es el paso inicial.\n3. Deberias poder ver el flujo ejecutandose y los campos que ha extraido apareceran en la salida o output del paso Modelo."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Siguientes Pasos y Otras Formas de Usar el Flujo",
+      "contenido": "Siguientes Pasos y Otras Formas de Usar el Flujo:\nAunque puedes usar el flujo de trabajo directamente en la pantalla de construccion o canvas, existen otras maneras de aprovecharlo:\n\n1. Uso de API: Puedes integrar tu flujo de trabajo con otras aplicaciones usando una API o SDKs que son kits de desarrollo.\n2. Compartir: Puedes compartir tu flujo de trabajo con otras personas o integrarlo de diferentes maneras.\n\nAhora tienes una base solida para entender como funcionan los pasos, como se conectan para pasar datos y como acceder a los resultados de cada paso. Hay mas detalles sobre los tipos de pasos y sus configuraciones que puedes explorar mas adelante."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\nPara validar la informacion tecnica presentada en este tutorial, he consultado las fuentes oficiales de Cortex AI."
+    },
+    {
+      "itemID": "012-2",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\nLa informacion presentada en este tutorial ha sido validada con las fuentes oficiales de Cortex AI. A continuacion se resumen los puntos tecnicos confirmados:\n\nPuntos Tecnicos Validados:\n\n1. Cortex Workflows es una herramienta oficial que permite automatizar acciones secuenciales y flujos de trabajo de desarrollo basados en datos contextuales que existen dentro del espacio de trabajo.\n\n2. Los pasos de entrada o Input Steps son componentes fundamentales que permiten pasar datos como archivos y texto al flujo de trabajo para su procesamiento. La documentacion oficial confirma que los Input Steps son el punto de inicio para proporcionar datos al workflow.\n\n3. El uso de claves o keys para los campos de entrada es una practica recomendada oficialmente. Las claves como documents y fields_to_extract permiten referenciar estos campos en pasos posteriores del flujo.\n\n4. La opcion Extract images es una caracteristica real que extrae automaticamente las imagenes de los documentos cargados y las pasa al siguiente paso del workflow.\n\n5. El paso del Modelo o Model Step es el componente oficial que procesa los datos de entrada usando inteligencia artificial para extraer informacion de documentos.\n\n6. El uso de variables con el patron stepKey.output esta documentado oficialmente. Los sufijos como :images y :content son caracteristicas reales del sistema para acceder a diferentes tipos de datos extraidos.\n\n7. La configuracion del formato de respuesta a JSON en el paso del Modelo es una opcion oficial que asegura que la respuesta sea un objeto estructurado utilizable en pasos posteriores.\n\n8. El boton Run o Ejecutar es el metodo oficial para iniciar la ejecucion de un workflow, y puede activarse desde el flujo general o desde el paso inicial.\n\nEnlaces a Documentacion Oficial:\n\nDocumentacion oficial de Cortex Workflows:\nhttps://docs.withcortex.ai/workflows/introduction\n\nTutorial oficial Your First Workflow:\nhttps://docs.withcortex.ai/workflows/your-first-workflow\n\nDocumentacion de Input Steps:\nhttps://docs.withcortex.ai/workflows/steps/input\n\nInformacion sobre tipos de pasos en Workflows:\nhttps://docs.withcortex.ai/workflows/steps\n\nDocumentacion de uso de API y SDKs:\nhttps://docs.withcortex.ai/workflows/api-usage\n\nReferencias a Paginas de Soporte Oficiales:\n\nCortex tambien ofrece recursos adicionales a traves de Cortex Academy con el curso Understanding Workflows disponible para todos los clientes y pruebas de concepto.\n\nLa documentacion oficial confirma que Cortex ofrece diversos tipos de pasos incluyendo pasos de procesamiento como Input, Model, Code, HTTP Request y Browser, asi como pasos de accion para enviar mensajes, correos y notificaciones.\n\nTodas las caracteristicas mencionadas en este tutorial estan respaldadas por la documentacion tecnica oficial de Cortex AI disponible en docs.withcortex.ai.\n\n\nCREANDO TU PRIMER FLUJO DE TRABAJO EN CORTEX_PARA EXTRAER INFORMACION DE DOCUMENTOS\nhttps://docs.withcortex.ai/workflows/your-first-workflow#getting-started\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    }
+  ]
+}

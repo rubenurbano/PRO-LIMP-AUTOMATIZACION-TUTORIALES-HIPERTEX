@@ -1,0 +1,65 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Gemini CLI Update Integration_NEW Mulit AI Coding Agent\nWEB ORIGINAL:",
+      "contenido": "Gemini CLI Update Integration_NEW Mulit AI Coding Agent:\nWeb Original:\nGemini CLI Update Integration_NEW Mulit AI Coding Agent:\nhttps://youtu.be/eVqMkaYjEps?si=_6wKt6o01ApWq4dO\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción y la Gran Actualización",
+      "contenido": "Introducción y la Gran Actualización:\nLa herramienta Gemini CLI ha recibido una actualización enorme que hace que el terminal (la pantalla donde escribes comandos) sea mucho más potente.[1][2][3]\n\nEl cambio más importante es que ahora utiliza el modelo de inteligencia artificial Gemini 3.0 Pro.[4] Este modelo es muy inteligente y ayuda especialmente en tareas de programación."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Instalación de la Nueva Versión",
+      "contenido": "Instalación de la Nueva Versión:\nPara empezar a usar las nuevas funciones, necesitas instalar los paquetes más recientes.\n\nAbre tu terminal.[2][4][5][6][7][8]\n\nCopia y ejecuta el comando de instalación de npm.[4]\n\nEsto instalará automáticamente la versión más nueva de Gemini 3.0 CLI.[4]"
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Crear Proyectos Completos desde Cero",
+      "contenido": "Crear Proyectos Completos desde Cero:\nAhora puedes crear proyectos enteros simplemente describiendo tu idea.[4]\n\nQué haces: Le das a Gemini CLI una descripción sencilla de lo que quieres construir.\n\nQué hace la herramienta: Gemini 3 Pro se encarga de todo.[4] Crea la estructura, los archivos y las optimizaciones necesarias.\n\nResultado: Obtienes un producto que funciona sin tener que programar nada en un servidor de desarrollo.\n\nEjemplo: La herramienta pudo crear una simulación visual 3D del Puente Golden Gate con controles, todo en un solo archivo HTML listo para usarse."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Convertir Dibujos en Aplicaciones",
+      "contenido": "Convertir Dibujos en Aplicaciones:\nGemini 3 Pro puede entender tus bocetos visuales.\n\nAcción: Haz un dibujo o boceto de tu idea (como el diseño de una aplicación) y muéstraselo a Gemini CLI.\n\nResultado: La herramienta genera inmediatamente todo el código necesario (HTML, CSS y JavaScript) para convertir ese dibujo en una aplicación que funciona de verdad."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Comandos de Terminal Sencillos",
+      "contenido": "Comandos de Terminal Sencillos:\nEsta función facilita mucho el trabajo diario en el terminal.[1][2][3][4]\n\nPuedes decir lo que necesitas hacer usando lenguaje normal.\n\nGemini 3 Pro entiende lo que pides y ejecuta tareas complejas con mucha precisión.[4]\n\nConvierte tus palabras en comandos de terminal completos y puede ejecutar flujos de trabajo automáticos.\n\nTambién traduce los mensajes difíciles del terminal a un lenguaje sencillo para que entiendas qué está pasando y puedas resolver problemas."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Documentación y Solución de Problemas",
+      "contenido": "Documentación y Solución de Problemas:\nGeneración de Documentación:\nGemini CLI puede analizar tu código y crear documentación organizada y precisa para los usuarios automáticamente. Esto te ahorra tener que escribirla tú mismo y acelera el trabajo.\n\nSolución de Problemas (Debugging):\nLa herramienta te ayuda a arreglar errores en servicios que están funcionando en la nube.\n\nPídele que investigue un problema de rendimiento.\n\nIdentificará la causa, sugerirá soluciones e incluso puede aplicarlas. Convierte una investigación larga en un proceso simple."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Mejoras Visuales y de Uso",
+      "contenido": "Mejoras Visuales y de Uso:\nSe han hecho varios cambios para que la herramienta sea más fácil de usar:\n\nClaridad: Ahora hay fases de carga claras para que sepas cuándo la herramienta está esperando que escribas algo.\n\nBúsqueda: Puedes usar Control + F o Comando + F para encontrar rápidamente los comandos que necesitan tu atención (como git commit).\n\nPantalla Estable: Se eliminó el parpadeo de la pantalla para una experiencia más agradable.[4]\n\nRatón: Ahora puedes usar el ratón para moverte por las indicaciones, no solo el teclado.\n\nCopiar y Pegar: Es más fácil seleccionar texto con ayudas visuales.[4]\n\nEncabezado Fijo: Una barra superior te muestra siempre las confirmaciones y acciones importantes."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Extensiones y el Asistente Jules",
+      "contenido": "Extensiones y el Asistente Jules:\nSe han añadido extensiones para conectar otras herramientas y personalizar tu terminal.\n\nAsistente Jules:\nEs una extensión especial que actúa como un asistente autónomo.\n\nTrabaja en segundo plano mientras tú haces otras cosas.\n\nPuede clonar código, instalar lo que falta, arreglar errores y subir cambios.\n\nSirve para quitarte de encima las tareas repetitivas."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Code Wiki CLI",
+      "contenido": "Code Wiki CLI:\nEs una nueva herramienta integrada que funciona como una enciclopedia para tu código.\n\nPuedes pedirle que te ayude a entender tu propio código.\n\nEscanea tus archivos y genera documentación actualizada al instante.\n\nTe da respuestas inteligentes sobre cómo funciona tu proyecto."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Preguntas y Respuestas",
+      "contenido": "Preguntas y Respuestas:\n¿Qué es Gemini CLI?\nEs una herramienta de código abierto que te permite interactuar con los modelos de inteligencia artificial de Gemini usando el terminal (la pantalla de comandos).[1][2][3][5][6][8][9][10][11][12][13]\n\n¿Cuál es la actualización más importante?\nLa integración del modelo de inteligencia artificial Gemini 3.0 Pro en Gemini CLI.\n\n¿Cómo hace esta herramienta la programación más fácil?\nPuede tomar una descripción simple o incluso un dibujo (un boceto visual) y convertirlo rápidamente en una aplicación o un proyecto completo que funciona, manejando toda la estructura y el código necesario (HTML, CSS, JavaScript).\n\n¿Cuánto tarda en crear un proyecto?\nPuede generar un juego completo que normalmente tardaría semanas en solo 3 minutos.\n\n¿Qué hace Gemini 3 Pro con el lenguaje normal (natural)?\nToma tus peticiones en lenguaje normal y las convierte en comandos de terminal complejos y precisos, y también traduce las salidas complicadas del terminal a un lenguaje simple.\n\n¿Ayuda Gemini CLI a documentar el código?\nSí. Puede analizar tu código y crear automáticamente documentación precisa y organizada para los usuarios, sin que tengas que escribirla a mano.\n\n¿Qué mejoras tiene en la forma de usar la herramienta (UX)?\nAhora es más claro cuando la herramienta está esperando que escribas algo, la visualización es más estable, puedes usar el ratón para navegar y hay un encabezado fijo que te muestra el contexto de lo que está ocurriendo.\n\n¿Qué es una extensión importante que se incluyó?\nLa extensión Jules, que es un asistente que trabaja en segundo plano para manejar tareas repetitivas de codificación, como arreglar errores e instalar archivos necesarios.\n\n¿Qué otra herramienta nueva de Google se integró?\nCode Wiki CLI, que funciona como una enciclopedia que escanea tu código y genera documentación actualizada para ayudarte a entenderlo mejor.\n\n¿Cómo se puede empezar a usar esta nueva versión?\nDebes copiar y ejecutar el comando de instalación de npm en tu terminal.[4]"
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nSe ha verificado la información técnica utilizando fuentes oficiales de Google Developers y repositorios de código abierto.\n\nPuntos técnicos validados:\n\nExistencia de Gemini CLI: Es una herramienta de código abierto real distribuida a través de npm (paquete @google/gemini-cli).[6] Permite llevar las capacidades de Gemini directamente al terminal.[1][2][4][5][6][8][12]\n\nIntegración de Gemini 3.0 Pro: Fuentes oficiales de Google confirman la disponibilidad del modelo \"Gemini 3.0 Pro\" en Gemini CLI (actualmente en fases de despliegue o preview para ciertos usuarios). Se destaca su capacidad de razonamiento y codificación \"agéntica\".[2][4][7][14]\n\nExtensión Jules: Existe la \"Jules Extension\" para Gemini CLI y entornos como VS Code. Se describe oficialmente como un \"agente de codificación de IA autónomo\" de Google que puede realizar tareas asíncronas (en segundo plano) como crear sesiones de codificación, gestionar tareas y realizar cambios en el código.[15]\n\nCode Wiki: Se valida la existencia de \"Code Wiki\" como una herramienta impulsada por Gemini que genera documentación y diagramas actualizados automáticamente escaneando repositorios, funcionando como una base de conocimientos viva del código.[16]\n\nEnlaces a documentación y fuentes:\n\nGemini CLI en npm (Instalación): https://www.npmjs.com/package/@google/gemini-cli[[17](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGjiPpscL7GjKxQ7rlB_TQs_PjEl-smwWHlm4-4eH5XD9H0ymdGgVw_uOr2BBMHKrQsV0R693SxAWI-sfOan1CAOs8Wm-v-s1YYa5xzV2CJYDcVAQPdv-T5Bl_I_vS_xRuJ4Ug8bB03Uw0cbR1msgk%3D)]\n\nRepositorio GitHub Oficial: https://github.com/google-gemini/gemini-cli[[11](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQFj8Pvs_GtHaXGkw-8dGipf_Ny2IAt9vlPvZcyko87d_zhtMKFecRBbX0L0lZPYWeHf2uM21-q9BjfbPgISgj2wXYeh9H_TWJZd6MYByQxDMCwJotgZ5cE5qgsDE9fYs0mZze94W94M)]\n\nAnuncio de Jules (Google Blog): Blogs oficiales de desarrolladores de Google mencionan a Jules como un agente de codificación colaborativo.\n\n\nGemini CLI Update Integration_NEW Mulit AI Coding Agent\nhttps://youtu.be/eVqMkaYjEps?si=_6wKt6o01ApWq4dO\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    }
+  ]
+}

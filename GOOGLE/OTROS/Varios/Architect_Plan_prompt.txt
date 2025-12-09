@@ -1,0 +1,132 @@
+Plan + Implementación” y dejar que genere primero un Artifact de plan técnico antes de escribir código.[1][2][3][4]
+
+Prompt para Antigravity:
+
+Quiero que actúes como un arquitecto de producto y desarrollador senior usando Gemini 3 en Antigravity. Tu tarea es diseñar y construir una aplicación completa que, todos los días, descubra y me entregue las 10 mejores oportunidades de negocio para crear aplicaciones (apps SaaS, herramientas internas, automatizaciones o micro-servicios IA).
+
+Quiero que trabajes en dos fases: primero PLAN detallado (Artifact), luego IMPLEMENTACIÓN de código.
+
+FASE 1 – PLAN (NO escribas código todavía)
+1. Crea un Artifact llamado “Plan de Oportunidades de Negocio Diarias”.
+2. En ese Artifact, define claramente:
+   - Objetivo principal:
+     Encontrar todos los días 10 oportunidades de negocio de alta calidad donde tenga sentido construir una app (SaaS, automatización, integración o agente IA) que se pueda vender con modelo de suscripción mensual.
+   - Usuario objetivo:
+     Emprendedor / freelancer técnico con experiencia en automatización, Make.com, Apps Script y desarrollo de apps web, que quiere nuevas ideas validadas cada día para construir productos.
+   - Frecuencia:
+     Ejecución diaria automática (cron o tarea programada) con un informe diario de 10 oportunidades priorizadas.
+3. Diseña las FUENTES DE INFORMACIÓN que vas a usar:
+   - Tipos de fuentes:
+     a) Foros de problemas de usuarios (por ejemplo: issues técnicos, dudas frecuentes, workflows manuales).
+     b) Comunidades de automatización y low-code (personas piden “¿cómo automatizar X?”).
+     c) Listados de trabajos repetitivos o tareas manuales en empresas (ej. soporte, ventas, operaciones).
+     d) Noticias o tendencias donde se repiten procesos manuales susceptibles de automatización.
+   - Para cada tipo de fuente, define:
+     - Cómo la app va a consultar o scrapear la información (sin violar términos de uso).
+     - Qué datos concretos se van a extraer (por ejemplo: descripción del problema, sector, tamaño de empresa, herramientas mencionadas).
+4. Define el MODELO DE EVALUACIÓN Y PUNTUACIÓN de cada oportunidad:
+   - Crea una lista clara de criterios de puntuación, por ejemplo:
+     - Dolor y urgencia del problema (0–10).
+     - Frecuencia con la que ocurre el problema (0–10).
+     - Disposición a pagar / impacto económico (0–10).
+     - Nivel de competencia conocido (0–10, invertido: menos competencia = más puntos).
+     - Facilidad técnica de implementación (0–10).
+     - Sinergia con automatización y agentes IA (0–10).
+   - Diseña una fórmula de puntuación total (ejemplo orientativo):
+     Score_total = 0.3 * Dolor + 0.2 * Frecuencia + 0.2 * Disposición_a_pagar + 0.15 * Baja_competencia + 0.1 * Facilidad_técnica + 0.05 * Sinergia_IA
+   - Asegúrate de documentar en el Artifact cómo se calcula cada criterio y cómo se normaliza la puntuación.
+5. Define el FORMATO DE SALIDA DIARIA:
+   - Cada día, la aplicación debe generar una lista de 10 oportunidades, y para cada una incluir:
+     - Título corto de la oportunidad.
+     - Descripción del problema que sufre el usuario.
+     - Sector / nicho (ej. eCommerce, clínicas, inmobiliarias, restaurantes).
+     - Tipo de solución propuesta (app SaaS, automatización Make.com, app móvil, agente IA, etc.).
+     - Usuarios ideales (quién pagaría).
+     - Beneficio económico estimado (rango aproximado o lógica textual).
+     - Puntuación total y desglose por criterio.
+     - Enlaces o referencias a las fuentes donde se detectó el problema.
+   - Elabora una plantilla clara para este informe diario (por ejemplo JSON + resumen en texto).
+6. Diseña la ARQUITECTURA TÉCNICA:
+   - Propón stack tecnológico concreto para:
+     - Backend (por ejemplo: Node.js/TypeScript o Python con framework web).
+     - Programación de tareas diarias (cron jobs, scheduler o similar).
+     - Capa de scraping/consumo de APIs (con buenas prácticas para no violar términos de uso).
+     - Base de datos para almacenar:
+       - Oportunidades históricas.
+       - Puntuaciones.
+       - Fuentes.
+       - Notas manuales del usuario.
+     - Frontend (puede ser una web sencilla tipo dashboard con filtros).
+   - Explica cómo se integrará Gemini 3:
+     - Para análisis de texto de problemas y extracción de entidades (problema, sector, frecuencia).
+     - Para puntuación semántica de las oportunidades según los criterios.
+     - Para generar resúmenes de oportunidad y sugerencias de tipo de app.
+7. Define la EXPERIENCIA DE USUARIO:
+   - Vista principal:
+     - Dashboard con las 10 oportunidades del día, ordenadas por puntuación.
+     - Filtros por sector, tipo de app y rango de puntuación.
+   - Vista de detalle:
+     - Ficha completa de la oportunidad, con descripción extendida, fuentes y propuesta de solución app.
+     - Campo para que el usuario añada notas propias (por ejemplo “ya estoy trabajando en esta idea”).
+   - Funciones extra:
+     - Marcar oportunidad como “seleccionada”, “descartada” o “en seguimiento”.
+     - Ver histórico de días anteriores.
+8. Plan de PRIVACIDAD y LIMITACIONES:
+   - Indica explícitamente que el sistema no debe almacenar datos personales sensibles de usuarios finales de las fuentes.
+   - Añade recomendaciones para respetar términos de uso de cada fuente (usar APIs oficiales cuando existan).
+
+Cuando termines el PLAN, detente y espera mi confirmación antes de escribir código. No generes código en esta fase.
+
+FASE 2 – IMPLEMENTACIÓN (solo después de mi confirmación)
+Cuando te diga que continúes, haz lo siguiente:
+
+1. Crea un nuevo Workspace para el proyecto, con control de versiones (Git) activado.
+2. Genera la estructura del proyecto según el plan:
+   - Inicializa el backend.
+   - Crea el modelo de datos para:
+     - Oportunidades.
+     - Fuentes.
+     - Configuración de criterios y pesos.
+   - Configura el scheduler diario.
+3. Implementa módulos para:
+   - Capturar datos de las fuentes (usando APIs oficiales cuando sea posible).
+   - Normalizar datos (limpieza de texto, detección de idioma, extracción de campos clave).
+   - Llamar a Gemini 3 para:
+     - Analizar el problema.
+     - Estimar nivel de dolor, frecuencia, disposición a pagar, competencia y facilidad técnica.
+     - Calcular la puntuación total.
+4. Implementa el generador del INFORME DIARIO:
+   - Endpoint o script que:
+     - Seleccione las 10 oportunidades con mejor puntuación del día.
+     - Genere un objeto estructurado (por ejemplo JSON) con todos los campos.
+     - Genere también un resumen en texto legible para humanos.
+5. Implementa un FRONTEND sencillo:
+   - Dashboard con tabla o tarjetas que muestren las 10 oportunidades del día.
+   - Filtros básicos.
+   - Página de detalle de cada oportunidad.
+6. Pruebas y validación:
+   - Crea scripts de prueba para simular al menos 3 días de ejecución con datos de ejemplo.
+   - Verifica que:
+     - La puntuación se calcula correctamente según la fórmula del plan.
+     - No se repiten exactamente las mismas oportunidades si aparecen varias veces en fuentes diferentes (agrupar por problema).
+     - Se guarda el histórico de oportunidades.
+7. Artifacts:
+   - Genera un Artifact “Especificación de puntuación y criterios” con la fórmula final implementada.
+   - Genera un Artifact “Guía de uso diario” explicando cómo leer el informe, cómo filtrar y cómo marcar oportunidades como seleccionadas o descartadas.
+
+Muy importante:
+- Usa siempre la planificación de alto nivel en el Artifact antes de escribir código, siguiendo las mejores prácticas de Antigravity para “Planning mode” y Artifacts.[2][3][4]
+- Si falta algún detalle (por ejemplo, elección exacta de stack), propon 2–3 alternativas en el Artifact y elige la que parezca más razonable para un solo desarrollador que trabaja principalmente en Windows 11 y navegador.
+
+Fin del prompt.
+
+[1](https://skywork.ai/blog/agent/antigravity-gemini-3/)
+[2](https://codelabs.developers.google.com/getting-started-google-antigravity)
+[3](https://developers.googleblog.com/en/build-with-google-antigravity-our-new-agentic-development-platform/)
+[4](https://macaron.im/blog/google-antigravity-coding-agent)
+[5](https://aventiq.ai/opportunity-discovery)
+[6](https://www.reddit.com/r/PromptEngineering/comments/1p3s2bi/case_study_vibe_coding_vs_architectural_prompting/)
+[7](https://www.383group.com/ai-discovery-mapping)
+[8](https://www.philschmid.de/gemini-3-prompt-practices)
+[9](https://www.skan.ai/automation-discovery)
+[10](https://www.youtube.com/watch?v=7i6zzVk1V3s)

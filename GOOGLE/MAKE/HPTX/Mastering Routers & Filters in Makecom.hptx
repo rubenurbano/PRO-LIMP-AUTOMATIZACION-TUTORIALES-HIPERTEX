@@ -1,0 +1,203 @@
+Voy a crear el tutorial completo en formato texto plano siguiendo EXACTAMENTE las instrucciones y usando únicamente la información del documento de transcripción.
+
+##itemID:000
+##menu-item BEGIN
+Mastering Routers & Filters in Makecom
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Mastering Routers & Filters in Makecom:
+Web Original:
+Mastering Routers & Filters in Makecom:
+https://youtu.be/KQFjRoIMf40?si=eMYAPsQkQzleiqY6
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introduccion a Routers y Filtros en Make.com
+##menu-item END
+##Contenido BEGIN
+Introduccion a Routers y Filtros en Make.com:
+En este tutorial vamos a revisar los routers y los filtros dentro de Make.com. Estas son herramientas poderosas que nos permiten crear automatizaciones mas complejas. Este contenido continua el video anterior donde aprendimos lo mas basico de Make y como crear nuestra primera automatizacion.
+
+La ultima vez construimos una automatizacion simple que tiene dos pasos o modulos. El primer paso es un modulo del clima que obtiene datos de una ciudad, en este caso Nairobi. Luego, esa informacion del clima como la hora de salida del sol, la temperatura, el estado y la descripcion se agrega a una fila en una hoja de Google o Google Sheets. Nuestra hoja de Google se llama weather spreadsheet y tiene columnas para la hora en que salio el sol, la temperatura promedio, el estado del clima y su descripcion.
+
+Ahora queremos agregar un router para que el flujo de informacion se divida y podamos hacer diferentes tareas basadas en la informacion del clima que obtuvimos.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Que es un Router
+##menu-item END
+##Contenido BEGIN
+Que es un Router:
+Un router es un paso o modulo que nos permite dividir el flujo de datos en caminos o rutas separadas a partir de un solo paso.
+
+Imagina que un cliente hace un pedido en una pagina web. Esto envia un aviso, un disparador o trigger a nuestra automatizacion en Make.com. Luego, queremos guardar los detalles del pedido en nuestro sistema de clientes como Salesforce CRM. Una vez guardados, ese sistema nos devuelve la identificacion del cliente o Customer ID.
+
+Ahora queremos hacer tres cosas diferentes con esa identificacion del cliente:
+
+Agregar la identificacion del cliente y los detalles del pedido a una fila en nuestra hoja de Google.
+
+Obtener los pedidos anteriores del cliente, juntarlos con el pedido actual y enviar todos estos detalles a nuestros empleados para que tengan contexto al preparar el pedido.
+
+Enviar la identificacion del cliente y los detalles del pedido por correo electronico a nuestro equipo de ayuda al cliente.
+
+Para hacer estas tres tareas, necesitamos un router. El router funciona como una interseccion que toma la informacion del paso anterior y la envia a esos tres caminos diferentes.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Como Agregar un Router
+##menu-item END
+##Contenido BEGIN
+Como Agregar un Router:
+Hay tres maneras de agregar un router a tu automatizacion en Make.com.
+
+Haz clic derecho sobre la linea de conexion, el conector entre dos pasos y selecciona anadir un router.
+
+Anadelo desde las herramientas de control de flujo o Flow Control Tools. Lo encontraras al hacer clic en ese menu.
+
+Anade otro modulo, otro paso y en la lista de opciones selecciona router.
+
+Un router te permite tener multiples pasos de destino o modulos de destino. El modulo de origen es de donde vienen los datos y el modulo de destino es a donde van. Para agregar otro camino a tu router: Pasa el raton sobre el router y haz clic en el signo de mas que aparece. Esto agregara otra ruta.
+
+Los pasos de destino se ejecutaran uno despues del otro. Puedes cambiar el orden en que se ejecutan las tareas: Haz clic derecho sobre la ruta y selecciona ordenar rutas u order routes. Luego puedes cambiar cual sucede primero y cual despues.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Que es un Filtro
+##menu-item END
+##Contenido BEGIN
+Que es un Filtro:
+Un filtro es una herramienta en Make.com que permite o restringe, es decir bloquea, que los datos pasen al siguiente paso, y esto se basa en ciertas condiciones.
+
+Por ejemplo, podriamos querer que el primer camino solo reciba datos si la temperatura esta por encima de 20 grados. Y queremos que el segundo camino solo reciba datos si la temperatura esta por debajo de 20 grados. Un filtro funciona como un colador que solo deja pasar cierta informacion si cumple los requisitos.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Como Agregar un Filtro
+##menu-item END
+##Contenido BEGIN
+Como Agregar un Filtro:
+Para agregar un filtro: Haz clic derecho sobre el camino, la linea donde quieres poner el filtro y selecciona configurar un filtro o set up a filter.
+
+Ponle un nombre, una etiqueta al filtro. Por ejemplo, si solo queremos pasar datos si la temperatura es mayor a 20 grados, puedes nombrarlo Arriba de 20 grados.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Entendiendo los Operadores
+##menu-item END
+##Contenido BEGIN
+Entendiendo los Operadores:
+El operador es lo que compara los datos con la condicion que tu pones. Por ejemplo, si queremos verificar si la temperatura es mayor que 20 grados, el mayor que es el operador.
+
+Hay diferentes tipos de operadores:
+
+Basicos que verifican si un valor existe o no.
+
+De texto para datos de texto, como nombres o descripciones. Por ejemplo, si el nombre es igual a Juan, o si el nombre contiene la palabra Juan.
+
+Numericos para numeros, como la temperatura o precios.
+
+De fecha y hora.
+
+Para saber que tipo de operador usar, necesitas saber que tipo de datos estas manejando. Puedes pasar el raton por encima del dato como la temperatura y veras entre parentesis que tipo de dato es, por ejemplo, numero o number.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Configurar el Filtro
+##menu-item END
+##Contenido BEGIN
+Configurar el Filtro:
+Vamos a configurar el primer filtro: Pasar datos si la temperatura es mayor de 20 grados.
+
+Haz clic en el campo de entrada para agregar la condicion.
+
+Haz clic en la Temperatura que es un dato numerico.
+
+Desplazate hasta los operadores numericos.
+
+Selecciona el operador mayor que o greater than.
+
+Escribe el numero 20.
+
+Haz clic en aceptar u OK.
+
+Ahora configura el segundo filtro: Pasar datos si la temperatura es menor o igual a 20 grados.
+
+Haz clic derecho sobre el segundo camino y selecciona configurar un filtro.
+
+Ponle la etiqueta Menos o igual a 20.
+
+Selecciona la Temperatura.
+
+Selecciona el operador numerico menor o igual a o less than or equal to.
+
+Escribe el numero 20.
+
+Haz clic en aceptar u OK.
+
+Luego, necesitas configurar los pasos de Google Sheets para que los datos vayan a la hoja correcta. Haz clic en el primer modulo de Google Sheets, el de menos de 20 y selecciona la hoja llamada below or equal to 20. Haz clic en el siguiente modulo de Google Sheets y selecciona la hoja above 20.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Probando los Filtros
+##menu-item END
+##Contenido BEGIN
+Probando los Filtros:
+Al ejecutar la automatizacion, si la temperatura es, por ejemplo, 22.19 grados, la informacion no pasara por el filtro de Menos o igual a 20 y veras el numero 0 en el filtro. Pero si pasara por el filtro de Mayor que 20 y veras el numero 1 en el filtro, un paquete de datos paso. Veras que los datos se agregaron correctamente a la hoja de Google above 20.
+
+Si cambiamos la ciudad a una fria como Yakutsk en Rusia y la temperatura es, por ejemplo, 3.98 grados, entonces la informacion pasara por el filtro de Menos o igual a 20 y no pasara por el filtro de Mayor que 20. Los datos se agregaran a la hoja de Google below or equal 20.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Filtros Avanzados Y y O
+##menu-item END
+##Contenido BEGIN
+Filtros Avanzados Y y O:
+Puedes agregar mas de una condicion a un filtro usando las reglas Y u O.
+
+Regla Y o AND: Se usa si quieres que TODAS las condiciones que has listado se cumplan al mismo tiempo para que los datos pasen. Por ejemplo, queremos que la temperatura sea menor o igual a 20 grados Y que el estado del clima sea Nubes o clouds. Si usas la regla Y, veras una linea azul continua que conecta ambas condiciones.
+
+Regla O u OR: Se usa si quieres que SOLO UNA de las condiciones se cumpla, puede ser una o varias para que los datos pasen. Por ejemplo, queremos que la temperatura sea mayor a 20 grados O que el estado sea Lluvioso o rainy. Si usas la regla O, veras que la linea azul se rompe entre las condiciones.
+
+Si usamos el ejemplo de la regla Y con temperatura menor o igual a 20 Y Estado igual a Nubes, y las dos condiciones se cumplen, entonces el paquete de datos pasa. Si usamos la regla O con temperatura mayor a 20 O Estado igual a Lluvioso y ninguna de ellas se cumple, no pasa ningun dato. Recuerda: Con la Y, todo tiene que ser verdad. Con la O, solo una cosa tiene que ser verdad.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Consejos para Ahorrar Operaciones
+##menu-item END
+##Contenido BEGIN
+Consejos para Ahorrar Operaciones:
+Make.com trabaja con operaciones. Una operacion es una tarea que se realiza. Cada vez que se hace un paso, se consume una operacion. El router consume cero operaciones. Es bueno saber como ahorrar operaciones para no gastarlas en tareas que no son importantes.
+
+Consejo 1: Ejecutar solo este paso. Si solo quieres ver que datos obtienes del primer paso, por ejemplo, el modulo del clima, no tienes que ejecutar toda la automatizacion. Haz clic derecho sobre ese paso y selecciona ejecutar solo este modulo o run this module only. Esto consume solo una operacion. Es util para ver la informacion que necesitas para configurar los siguientes pasos.
+
+Consejo 2: Desactivar una ruta. Si estas probando una automatizacion grande y quieres ignorar todo un camino, puedes desactivarlo. Haz clic derecho sobre la linea de conexion, la ruta y selecciona desactivar ruta o disable route. Aparecera un icono que indica que, cuando se ejecute, el flujo no pasara por ese camino. Esto significa que todos los pasos que esten en esa ruta, sean 10 o 30, no consumiran ninguna operacion durante la prueba. Esto es muy util al probar. Importante: Asegurate de volver a activarla cuando la automatizacion este lista para funcionar de verdad. Para volver a activarla: Haz clic derecho en la ruta y selecciona habilitar ruta o enable route.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES:
+Permíteme buscar las fuentes oficiales de Make.com para validar la información técnica del tutorial.
+
+
+Mastering Routers & Filters in Makecom
+https://youtu.be/KQFjRoIMf40?si=eMYAPsQkQzleiqY6
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END

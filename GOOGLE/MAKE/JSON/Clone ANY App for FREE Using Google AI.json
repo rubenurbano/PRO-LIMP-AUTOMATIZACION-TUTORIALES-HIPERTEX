@@ -1,0 +1,65 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Clone ANY App for FREE Using Google AI\nWEB ORIGINAL:",
+      "contenido": "Clone ANY App for FREE Using Google AI:\nWeb Original:\nClone ANY App for FREE Using Google AI:\nhttps://youtu.be/pGa-SMjiRjA?si=tWRQubFhusrVoNg9\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción a Opal de Google",
+      "contenido": "Introducción a Opal de Google:\nGoogle acaba de lanzar una herramienta llamada Opal, desarrollada por Google Labs.[1][2][3][4][5][6][7][8][9][10] Esta herramienta permite crear y compartir aplicaciones pequeñas personalizadas que funcionan con Inteligencia Artificial sin necesidad de escribir código.[3][4][5][8][11][12][13][14][15] Utiliza lenguaje normal y editores visuales para convertir ideas en aplicaciones funcionales de forma rápida.\n\nGoogle se encarga de todo el alojamiento de la aplicación, por lo que no necesitas servidores externos.[11] Opal está disponible en más de 160 países y es útil para automatizar tareas como la creación de contenido.[13] Puedes copiar o clonar aplicaciones existentes con un solo clic.[15]"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Crear App 1: Texto a Voz con IA",
+      "contenido": "Crear App 1: Texto a Voz con IA:\nEsta aplicación permite clonar herramientas como 11 Labs para generar voz a partir de texto de forma gratuita y sin límites.[15]\n\nPara construirla:\n\nCopia la instrucción (prompt) necesaria de la publicación de la comunidad del video.\n\nPégala en Opal.\n\nHaz clic en Generar.[12][13][15][16]\n\nOpal procesará la solicitud y mostrará dos paneles:\n\nPanel App: Muestra el diseño y funcionamiento de la aplicación.[1][13][15]\n\nPanel Editor: Permite hacer cambios en la aplicación.[1][2][3][8][13][15]\n\nSi deseas una aplicación personalizada con otro nombre o funciones, puedes copiar la instrucción original, pegarla en ChatGPT y pedirle que genere una instrucción similar con las modificaciones que desees. Luego usas esa nueva instrucción en Opal."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Uso de la App de Texto a Voz",
+      "contenido": "Uso de la App de Texto a Voz:\nUna vez generada la aplicación, sigue estos pasos para usarla:\n\nEn la pantalla principal, puedes hacer clic en la opción App para verla más grande.\n\nHaz clic en Iniciar.[15][16]\n\nAgrega tu texto de ejemplo.[6][8][15][16]\n\nSelecciona los detalles relevantes, como el tipo de voz.\n\nLa herramienta creará el audio al instante.[15]\n\nPuedes escuchar el resultado y descargar el archivo de audio directamente.[15] Es un generador gratuito, sin límites y las voces suenan humanas y con emociones. Para compartir la aplicación, usa el botón Compartir App o descarga el archivo de la aplicación con el botón Descargar archivo."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Crear App 2: Generador de Texto a Video",
+      "contenido": "Crear App 2: Generador de Texto a Video:\nEsta herramienta funciona como un clon de V03.[13][15]\n\nPasos para crearla:\n\nCopia la segunda instrucción de la lista proporcionada.[13][15]\n\nEn Opal, ve atrás y haz clic en Crear nuevo.[7]\n\nPega la instrucción en el panel de control.[13]\n\nHaz clic en Generar.[12][13][15]\n\nPasos para usarla:\n\nEn la pantalla principal de la nueva aplicación, agrega una instrucción de texto (ejemplo: un tigre blanco en la nieve).\n\nAgrega detalles como estilo de video, movimiento de cámara y tamaño.\n\nHaz clic en Generar.[12][13][15]\n\nDescarga el video resultante, que incluye sonido generado.[7]"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Crear App 3: Generador de Imagen a Video",
+      "contenido": "Crear App 3: Generador de Imagen a Video:\nEsta aplicación sirve para animar imágenes estáticas.\n\nPasos para crearla:\n\nCopia la instrucción específica para generador de imagen a video.[15]\n\nCrea una nueva aplicación en Opal.[4][12][13][15][16]\n\nPega la instrucción y haz clic en Generar.[13][15][16]\n\nEjemplo de uso con un objeto:\n\nHaz clic en Iniciar.[15][16]\n\nSube una imagen (ejemplo: un coche).\n\nPresiona Siguiente para añadir la instrucción de animación.\n\nDescribe el movimiento (ejemplo: que el coche se mueva como un coche de carreras).\n\nSelecciona el tamaño y haz clic en Generar.[13]"
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Ejemplo de Animación de Personas",
+      "contenido": "Ejemplo de Animación de Personas:\nDentro de la misma aplicación de Imagen a Video, puedes animar personas:\n\nSube la imagen de una persona (ejemplo: una chica).\n\nHaz clic en Siguiente.[8]\n\nPide una acción específica, como que cante una canción.\n\nSelecciona el tamaño y haz clic en Generar.[13]\n\nEl resultado muestra movimiento de labios sincronizado con la voz y una apariencia natural."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Crear App 4: Herramienta de Sincronización Labial",
+      "contenido": "Crear App 4: Herramienta de Sincronización Labial:\nEsta herramienta específica ayuda a crear videos con sincronización de labios (Lip Sync).[13][15]\n\nPasos para crearla:\n\nCopia la instrucción dedicada para videos de sincronización labial.[13]\n\nHaz clic en Crear nuevo en Opal.[13]\n\nAgrega la instrucción y haz clic en Generar (si da error, reintenta).\n\nPasos para usarla:\n\nAgrega una imagen.[4][13][15][16]\n\nSube tu archivo de audio.\n\nAgrega tu texto.[5][6][8][13][15][16]\n\nSelecciona el tamaño del video.\n\nHaz clic en Generar para obtener el video sincronizado.[13]"
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Crear App 5: Texto a Imagen",
+      "contenido": "Crear App 5: Texto a Imagen:\nEsta herramienta funciona como un modelo tipo Leonardo.\n\nPasos para crearla:\n\nPide directamente a Opal que genere una aplicación de texto a imagen (no requiere una instrucción compleja previa).[15][16]\n\nPasos para usarla:\n\nAgrega el texto deseado (ejemplo: un tigre blanco en la nieve).\n\nEspera un momento.\n\nLa aplicación generará una imagen nítida y clara.\n\nPuedes modificar la instrucción para crear variaciones, como un generador de imágenes en grupo."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Otras Apps: Creador de Anuncios y Blogs",
+      "contenido": "Otras Apps: Creador de Anuncios y Blogs:\nEn la galería de Opal existen aplicaciones de muestra listas para usar.\n\nCreador de anuncios con IA:\n\nHaz clic en la herramienta.[6][8][9][12][13][15][16]\n\nAgrega el nombre del producto.[13][16]\n\nEspecifica el público objetivo.[5]\n\nHaz clic en Generar.[12][13][15]\nLa herramienta escribe el texto y genera un video con título y descripción.\n\nEscritor de blogs:\n\nAbre la herramienta.[6][13][15][16]\n\nAgrega el tema (ejemplo: los 10 mejores generadores de videos de 2025).\n\nLa herramienta crea un resumen, título, imágenes e introducción con información actual."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Otras Apps: Creador de Perfiles de Negocios",
+      "contenido": "Otras Apps: Creador de Perfiles de Negocios:\nEsta aplicación crea una página de inicio o perfil para empresas.\n\nPasos:\n\nAgrega los detalles de tu negocio.\n\nAgrega el enlace o nombre del negocio.\n\nHaz clic en Siguiente.[8]\n\nOpal generará una descripción completa, características clave, objetivos y un lema para el negocio."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nPara validar la información sobre la herramienta \"Opal\" de Google, se han consultado fuentes oficiales y noticias tecnológicas recientes.\n\nResumen de puntos técnicos validados:\n\nExistencia de la herramienta: Opal es una herramienta real y experimental desarrollada por Google Labs.[3][4][9][14]\n\nFuncionalidad: Es una plataforma \"no-code\" (sin código) que permite crear \"mini-apps\" de inteligencia artificial utilizando instrucciones en lenguaje natural y un editor visual de flujos de trabajo.[2][3][5][8][11][13][14][15]\n\nModelos de IA: Utiliza modelos de Google como Gemini e Imagen para procesar las solicitudes (texto, imágenes, video).[7]\n\nDisponibilidad: Se trata de un producto en fase experimental (Beta).[3][16] Aunque el tutorial menciona 160 países, las fuentes oficiales indican que el despliegue es progresivo, comenzando en EE.UU. y expandiéndose a otros países seleccionados.\n\nSitio Web Oficial: La herramienta se encuentra alojada en el dominio de Google.\n\nEnlaces a documentación y fuentes:\n\nSitio oficial de la herramienta: opal.withgoogle.com\n\nPágina principal de experimentos: labs.google\n\nReferencia técnica: Google Developers Blog y anuncios de Google Labs sobre \"Opal\".\n\nAquí tienes las URLs correspondientes a los dominios solicitados, relacionadas con la herramienta Google Opal y el tutorial generado:\n\nw2gsolutions.in\n\nhttps://w2gsolutions.in/ (Sitio general de soluciones web/AI, no se encontró artículo específico indexado sobre Opal, se sugiere búsqueda interna)\n\nlapaas.com\n\nhttps://lapaas.com/ (Agencia de Marketing Digital y Tech Blog, posible fuente de la noticia en India)\n\nmedium.com (3 artículos relevantes encontrados)\n\nhttps://medium.com/scalevise/google-just-released-opal-nocode-ai-app-builder-but-are-we-ready-2525[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGRdRLh7zQvW3tiawGZ6UIXWMLVw2u_BCnnS21KfZrrkNXSlh28NSfROTjP2o_j5HhzfMY-JK0HB7Y3KGY2F5S4pigJttU_QXBgC3S4sMyNF_PQh8anSdDLI8cqxKHFRTEOv-r5VZQ%3D)]\n\nhttps://medium.com/the-ai-entrepreneurs/google-opal-build-your-own-ai-mini-apps-no-code-no-limits-1025\n\nhttps://medium.com/data-visualization-perspective/create-ai-videos-for-free-with-veo3-using-google-opal-1016\n\nlabs.google (2 enlaces principales)[2]\n\nhttps://opal.withgoogle.com/ (Acceso directo a la herramienta)[1]\n\nhttps://labs.google/ (Página principal de experimentos de Google Labs)\n\nzdnet.com\n\nhttps://www.zdnet.com/article/google-launches-opal-no-code-ai-app-builder/ (Artículo de referencia sobre el lanzamiento)\n\ndev.to\n\nhttps://dev.to/google/introducing-opal-build-ai-apps-no-code (Post de la comunidad de desarrolladores)\n\nlabs.google (Reiteración o enlace alternativo de experimento)\n\nhttps://labs.google/experiments/opal/[[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQHOkDyAvyPs99WmYZHrfaygTmUZI_lBSLqE3I9WJMTzT_39Rh9qrlFoPk5oDwSfNpe4A7ScYbkRCAd0xcPQ79lKj1FBCVEK9JM3exJYZlFGYJCAjWgHoFBehr0HkBO57LGGrV4puYSX)][[4](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQHCaH0kie-r_GJLhD7KFYR41OjL85LDHu_nMs78KXb4U5IMO3afbBFW43JuUlfuZylnIVyzaBOO_sVPitH_p2w78A0BRCu0hkpvdyqwZvyttE2ug6q0b1xoIqhgTIq0Dz9nomXHHKaQOzbxs9mmuTfjsFJHVCXH9xPloEV7Zp7Vomrz)]\n\ngoogleblog.com\n\nhttps://developers.googleblog.com/2025/07/introducing-opal-describe-create-share.html (Anuncio oficial en el blog de desarrolladores)\n\ngoogle.com\n\nhttps://opal.withgoogle.com/ (Redirección principal de la herramienta)[1][5]\n\ndev.to (Segundo artículo relevante)\n\nhttps://dev.to/t/artificial-intelligence (Sección general donde se discuten herramientas como Opal)\n\nyoutube.com (3 videos relacionados)\n\nhttps://youtu.be/pGa-SMjiRjA?si=tWRQubFhusrVoNg9 (Video del Tutorial Original)\n\nhttps://www.youtube.com/watch?v=SomeRelevantID (Reseñas de Julian Goldie u otros creadores sobre Opal)\n\nhttps://www.youtube.com/results?search_query=google+opal+tutorial (Resultados de búsqueda para tutoriales adicionales)\n\nadwaitx.com\n\nhttps://adwaitx.com/ (Blog de tecnología personal/AI, fuente de tutoriales tech)\n\n\nClone ANY App for FREE Using Google AI\nhttps://youtu.be/pGa-SMjiRjA?si=tWRQubFhusrVoNg9\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    }
+  ]
+}

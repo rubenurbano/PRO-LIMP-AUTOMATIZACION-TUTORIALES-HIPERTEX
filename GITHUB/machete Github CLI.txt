@@ -53,3 +53,30 @@ firecrawl/open-scouts
 https://github.com/rubenurbano/PRO-LIMP-AUTOMATIZACION-TUTORIALES-HIPERTEX
 
 git remote add origin https://github.com/rubenurbano/PRO-LIMP-AUTOMATIZACION-TUTORIALES-HIPERTEX.git
+
+
+cd C:\Users\rubenurbano\HIPERTEX\CLAUDE
+git add .
+git commit -m "Se crea nuevo tutorial con un .hptx y un .json"
+git push
+
+# Desde cualquier lugar
+git -C C:\Users\rubenurbano\HIPERTEX\google add .
+git -C C:\Users\rubenurbano\HIPERTEX\google commit -m "Mensaje"
+git -C C:\Users\rubenurbano\HIPERTEX\google push
+
+# Crea la carpeta y un archivo placeholder
+cd C:\Users\rubenurbano\HIPERTEX\google
+mkdir NuevaCarpeta
+New-Item -Path NuevaCarpeta\.gitkeep -ItemType File
+
+# Ahora Git la verá
+git add .
+git commit -m "Añadida carpeta NuevaCarpeta"
+git push
+
+Pasar por Caja:
+https://claude.ai/upgrade/pro?interval=monthly
+
+API keys:
+https://platform.claude.com/settings/keys

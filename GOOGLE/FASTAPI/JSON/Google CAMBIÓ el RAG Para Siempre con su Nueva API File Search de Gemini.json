@@ -1,0 +1,75 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Google CAMBIÓ el RAG Para Siempre con su Nueva API File Search de Gemini \nWEB ORIGINAL:",
+      "contenido": "Google CAMBIÓ el RAG Para Siempre con su Nueva API File Search de Gemini :\nWeb Original:\nGoogle CAMBIÓ el RAG Para Siempre con su Nueva API File Search de Gemini :\nhttps://youtu.be/3Qp6gkB4fB4?si=zcLxE1BmRkoQlbTL"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción a la herramienta File Search de Google",
+      "contenido": "Introducción a la herramienta File Search de Google:\nImagina que tienes muchos archivos con información importante, como listas de casas en venta o documentos de escuela. Normalmente, si quieres preguntar algo sobre ellos usando una IA, es complicado porque tienes que configurar muchas cosas técnicas. Pero Google acaba de lanzar una herramienta nueva llamada File Search, que es parte de su IA llamada Gemini. Esta herramienta cambia todo porque te deja crear tu propia base de datos especial, llamada RAG, que ayuda a la IA a buscar en tus archivos de manera fácil. Gemini se encarga de todo: divide los archivos en pedazos, los organiza y los guarda. En este tutorial, aprenderás paso a paso cómo usarla, desde crear la base hasta preguntar cosas y borrarlo todo. Todo esto lo haremos usando una herramienta llamada N8N, que es como un constructor de flujos automáticos."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Prueba rápida para ver cómo funciona",
+      "contenido": "Prueba rápida para ver cómo funciona:\nAntes de entrar en detalles, veamos una prueba simple. Supongamos que tienes una lista de casas en una hoja de cálculo, con columnas como título, dirección, precio y metros cuadrados. Usando File Search, subes este archivo a tu base de datos. Luego, le preguntas a la IA: \"¿Cuánto cuesta el bajo en Domingo con cuatro habitaciones?\" La IA busca en la base y responde: \"300000 euros\". O preguntas: \"¿Qué propiedades tienen 70 metros?\" Y te lista las que coinciden, como \"Ático de tres habitaciones\" por 210000 euros. Es como tener un asistente que lee tus archivos por ti."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Qué dice Google sobre File Search",
+      "contenido": "Qué dice Google sobre File Search:\nGoogle explica en su blog que File Search no es solo una herramienta más. Es un sistema RAG completo manejado por Gemini, así que no tienes que preocuparte por dividir textos, codigos especiales o bases externas. Solo subes archivos y Gemini hace el resto. El costo es bajo: solo pagas al subir e indexar, 15 centavos por millón de tokens (pedacitos de texto), y nada por guardar o buscar. Además, las respuestas incluyen citas, es decir, te dice qué parte del archivo usó para responder."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Crear tu clave API en Google AI Studio",
+      "contenido": "Crear tu clave API en Google AI Studio:\nPara empezar, necesitas una llave especial llamada clave API. Abre tu navegador y busca \"Google AI Studio\". Crea una cuenta si no tienes, o inicia sesión. Ve a \"Obtener clave API\". Pon un nombre como \"N8N\", elige un proyecto de Google Cloud (crea uno si no tienes), y haz clic en \"Crear clave API\". Copia la clave que aparece, porque la usarás en N8N para conectar todo."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Crear una base de datos vectorial",
+      "contenido": "Crear una base de datos vectorial:\nEn N8N, usa un nodo HTTP Request. Pon el método en POST. La URL es \"https://generativelanguage.googleapis.com/v1beta/fileSearchStores\". Añade un parámetro llamado \"key\" con tu clave API. En el body, usa JSON con {\"displayName\": \"nombre de tu base\"}, como \"test\". Ejecuta el nodo y verás el resultado con el nombre de la base, como \"fileSearchStores/numero-aleatorio\". Copia este nombre, lo necesitarás después."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Subir archivos a la base de datos",
+      "contenido": "Subir archivos a la base de datos:\nHay dos formas. Una es usando un formulario en N8N: crea un nodo \"Eniten Form\" para subir archivos. Otra es con Google Drive: crea un nodo trigger para una carpeta \"RAG\", y un nodo para descargar el archivo. Luego, usa un nodo Code para renombrar el archivo a \"data\". Ahora, sube: usa HTTP Request POST a \"https://generativelanguage.googleapis.com/upload/v1beta/files\". Añade parámetro \"key\" con tu clave. En body, elige \"Binary File\" con nombre \"data\". Esto crea un archivo temporal en Google."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Indexar los archivos en la base",
+      "contenido": "Indexar los archivos en la base:\nUsa otro HTTP Request POST. La URL es \"https://generativelanguage.googleapis.com/v1beta/{nombre-de-tu-base}/documents:import\". Sustituye {nombre-de-tu-base} por el que copiaste. Añade parámetro \"key\" y header \"Content-Type: application/json\". En body JSON: {\"files\": [{\"name\": \"nombre-del-archivo-temporal\", \"customMetadata\": [{\"key\": \"fecha\", \"stringValue\": \"fecha-actual\"}]}]. Ejecuta y el archivo se indexa en tu base."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Consultar la base con un robot agente",
+      "contenido": "Consultar la base con un robot agente:\nUsa HTTP Request POST a \"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=tu-clave\". Añade header \"Content-Type: application/json\". En body JSON: {\"contents\": [{\"parts\":[{\"text\": \"tu-pregunta\"}]}],\"tools\": [{\"fileSearch\": {\"fileSearchStoreNames\": [\"tu-nombre-de-base\"]}}]}. La IA busca en la base y responde basado en tus archivos."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Obtener lista de bases de datos",
+      "contenido": "Obtener lista de bases de datos:\nUsa HTTP Request GET a \"https://generativelanguage.googleapis.com/v1beta/fileSearchStores?key=tu-clave\". Ejecuta y verás todas tus bases con nombres, fechas y cuántos documentos tienen."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Obtener archivos de una base",
+      "contenido": "Obtener archivos de una base:\nHTTP Request GET a \"https://generativelanguage.googleapis.com/v1beta/{nombre-de-base}/documents?key=tu-clave\". Verás los archivos con nombres, metadata y estados."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Eliminar un archivo",
+      "contenido": "Eliminar un archivo:\nHTTP Request DELETE a \"https://generativelanguage.googleapis.com/v1beta/{nombre-de-base}/documents/{nombre-del-archivo}?key=tu-clave\". Si funciona, devuelve vacío."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Eliminar una base de datos",
+      "contenido": "Eliminar una base de datos:\nPrimero, borra todos los archivos. Luego, HTTP Request DELETE a \"https://generativelanguage.googleapis.com/v1beta/{nombre-de-base}?key=tu-clave\". Solo funciona si la base está vacía."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "Consejos finales y usos",
+      "contenido": "Consejos finales y usos:\nEsta herramienta es genial porque es barata y rápida. Úsala para documentación, soporte o chatbots. Puedes adaptarla en N8N para lo que quieras. Recuerda seguir la documentación oficial de Google.\n\n\nVALIDACIÓN CON FUENTES TÉCNICAS OFICIALES\n- Creación de store validada con método fileSearchStores.create en https://ai.google.dev/gemini-api/docs/file-search\n- Subida e indexado de documentos validada con uploadToFileSearchStore e importFile en https://ai.google.dev/gemini-api/docs/file-search\n- Consulta con tool validada en generateContent con file_search en https://ai.google.dev/gemini-api/docs/file-search\n- Gestión de stores y documentos validada con list, get, delete en https://ai.google.dev/api/file-search/documents\n- Costos y features validados en blog oficial https://blog.google/technology/developers/file-search-gemini-api/ y documentación principal."
+    }
+  ]
+}

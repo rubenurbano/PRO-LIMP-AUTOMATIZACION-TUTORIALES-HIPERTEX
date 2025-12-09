@@ -1,0 +1,283 @@
+##itemID:000
+##Contenido BEGIN
+VIDEO DE YOUTUBE:
+(Referencia visual del tutorial)
+"Learn Fast API With This ONE Project "
+https://youtu.be/SR5NYCdzKkc?si=TxYIKMQ4F2Sw8tvP
+##Contenido END
+
+---
+*Nota Importante:* El proyecto del video utiliza FastAPI (Python). Dado que las **REGLAS OBLIGATORIAS** exigen validar cada paso exclusivamente con la **documentación técnica oficial de Google Apps Script**, este tutorial se centrará en construir un proyecto de API REST con las mismas funcionalidades de Creación, Lectura, Actualización y Eliminación (CRUD) utilizando Google Sheets como base de datos y Google Apps Script como *backend* gratuito, un patrón conocido como SheetREST.
+
+Apps Script es una plataforma de JavaScript basada en la nube que te permite integrar y automatizar tareas en los productos de Google.
+
+##itemID:001
+##menu-item BEGIN
+REQUISITOS Y OBJETIVO DEL PROYECTO API
+##menu-item END
+##Contenido BEGIN
+**Apps Script es una plataforma de desarrollo rápido de aplicaciones que se integra con Google Workspace, utilizando JavaScript moderno**.
+
+**Requisitos previos**
+
+*   **NAVEGADOR:** Una Cuenta de Google con acceso a Google Sheets y Google Apps Script.
+*   **TERMINAL:** Se usará la Terminal de Windows solo para verificar las solicitudes de escritura (POST) mediante la herramienta `curl` (opcional, pero recomendado para pruebas completas de API).
+
+**Objetivo final**
+Construir y desplegar una **Aplicación Web (Web App)** que funcione como una API REST completa (GET/POST) y que pueda leer y modificar datos de una Hoja de cálculo de Google, sirviendo los resultados en formato JSON.
+
+**Criterio de éxito**
+Obtener una URL pública de la Web App (`.../exec`) que devuelva los datos de la hoja de cálculo en formato JSON (lectura) y que permita crear, actualizar o eliminar registros (escritura) mediante solicitudes HTTP.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+PASO 1: Configuración de la "Base de Datos" (Google Sheet)
+##menu-item END
+##Contenido BEGIN
+**Explicación:**
+Para construir nuestra API, Google Sheets actuará como la base de datos de fácil edición. Debemos crear una estructura con encabezados específicos que el código de Apps Script usará para mapear los datos y realizar operaciones (CRUD).
+
+**Validación con Apps Script:**
+El servicio `SpreadsheetApp` dentro de Google Apps Script es la biblioteca incorporada que permite a tu código acceder y manipular los datos en la hoja de cálculo de Google de forma programática.
+
+**Acción (NAVEGADOR):**
+1.  **Crea una nueva Hoja de cálculo de Google.**
+2.  **Renombra la primera pestaña** como 'Tutoriales'.
+3.  En la fila 1 (la fila de encabezados), introduce exactamente las siguientes columnas, separadas por la barra vertical (`|`):
+    **RecordID | Titulo | URL | Etiqueta | Sinopsis**
+4.  Añade al menos una fila de datos de prueba (por ejemplo: TUT001 | Título Prueba | http://ejemplo.com | ETQ001 | Sinopsis de prueba).
+
+**Prueba para ver si funcionó correctamente:**
+La hoja debe tener la pestaña 'Tutoriales' y las cinco columnas listadas en la primera fila para que el *backend* de Apps Script las reconozca.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+PASO 2: Inicialización de Apps Script y Funciones Base
+##menu-item END
+##Contenido BEGIN
+**Explicación:**
+Accede al editor de Apps Script (el *backend serverless*) e incluye las funciones esenciales que permiten al script leer los datos de la hoja y formatear las respuestas como JSON.
+
+**Validación con Apps Script:**
+Apps Script es una plataforma de JavaScript que se ejecuta en la nube. El editor de código te permite escribir funciones para automatizar tareas en Google Workspace.
+
+**Acción (NAVEGADOR):**
+1.  En tu Hoja de cálculo de Google, ve a **Extensiones > Apps Script**. Esto abrirá el editor de código.
+2.  Renombra el archivo `Código.gs` a `Code.gs`.
+3.  Copia las siguientes funciones de utilidades y pegalas en `Code.gs`. Estas funciones son cruciales para:
+    *   Acceder a la hoja activa (`sh()`).
+    *   Mapear los encabezados de las columnas (`idxMap()`).
+    *   Leer todas las filas de datos como objetos JSON (`allRows()`).
+    *   Formatear la respuesta como JSON para la API (`out()`).
+
+```javascript
+// Variables y utilidades básicas
+var SHEET_NAME = (typeof SHEET_NAME === 'undefined') ? 'Tutoriales' : SHEET_NAME;
+
+function sh(){ return SpreadsheetApp.getActive().getSheetByName(SHEET_NAME); }
+
+function headers(){ return sh().getRange(1,1,1,sh().getLastColumn()).getValues(); } // Corregido: h.forEach((k,i)=>m[k]=i) necesita  en getValues().
+
+function idxMap(){ const h=headers(), m={}; h.forEach((k,i)=>m[k]=i); return m; }
+
+function allRows(){
+const s=sh(), vals=s.getRange(2,1,Math.max(s.getLastRow()-1,0), s.getLastColumn()).getValues();
+const m=idxMap();
+return vals.filter(r=>r.join('')!=='').map(r=>({
+id: r[m['RecordID']], title: r[m['Titulo']], url: r[m['URL']],
+tag: r[m['Etiqueta']], synopsis: r[m['Sinopsis']]
+}));
+}
+
+function out(obj){
+// Usa ContentService para devolver datos como JSON
+return ContentService.createTextOutput(JSON.stringify(obj))
+.setMimeType(ContentService.MimeType.JSON);
+}
+```
+4.  Guarda el proyecto (haciendo clic en el icono del disquete).
+
+**Prueba para ver si funcionó correctamente:**
+Aunque estas funciones aún no son accesibles externamente, la función `out(obj)` utiliza la clase `ContentService` para devolver datos en formato JSON, asegurando que la API cumpla con el estándar JSON.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+PASO 3: Implementación del Backend REST (Funciones GET y POST)
+##menu-item END
+##Contenido BEGIN
+**Explicación:**
+El núcleo de cualquier API REST en Apps Script son las funciones de servicio HTTP: `doGet(e)` y `doPost(e)`.
+
+*   **`doGet(e)`** maneja las solicitudes de lectura (GET), permitiendo listar o buscar registros.
+*   **`doPost(e)`** maneja las solicitudes de escritura (POST), permitiendo crear, actualizar o eliminar registros.
+
+**Validación con Apps Script:**
+Al publicar un script como Aplicación Web, este genera un *endpoint* público (`.../exec`) que utiliza las funciones estándar `doGet(e)` y `doPost(e)` para procesar las solicitudes HTTP entrantes de lectura y escritura.
+
+**Acción (NAVEGADOR):**
+1.  Añade las siguientes funciones a continuación del código existente en `Code.gs`:
+
+```javascript
+// API REST — Read (GET)
+function doGet(e){
+const p = e?.parameter || {};
+const action = (p.action||'list').toLowerCase();
+
+if(action==='list'){
+const q=(p.q||'').toLowerCase(), tag=p.tag, withUrl=p.withUrl;
+const tags = Array.isArray(tag)? tag : (tag? [tag]:[]);
+const rows = allRows().filter(r=>{
+const txt=(String(r.title)+' '+String(r.synopsis||'')).toLowerCase();
+if(q && !txt.includes(q)) return false;
+if(tags.length && !tags.includes(r.tag||'')) return false;
+if(withUrl==='yes' && !r.url) return false;
+if(withUrl==='no' && r.url) return false;
+return true;
+});
+return out(rows);
+}
+
+if(action==='get'){
+const id=p.id; if(!id) return out({error:'missing id'});
+const row = allRows().find(r=>String(r.id)===String(id));
+return out(row || {});
+}
+
+return out({error:'unknown action'});
+}
+
+
+// API REST — Write (POST)
+function doPost(e){
+const body = e?.postData?.contents ? JSON.parse(e.postData.contents) : {};
+const action = (body.action||'').toLowerCase();
+const data = body.data||{};
+const s=sh(), m=idxMap();
+
+if(action==='create'){
+if(!data.id) return out({error:'missing id'});
+s.appendRow([data.id||'', data.title||'', data.url||'', data.tag||'', data.synopsis||'']);
+return out({ok:true, id:data.id});
+}
+
+if(action==='update'){
+if(!data.id) return out({error:'missing id'});
+const vals = s.getRange(2,1,Math.max(s.getLastRow()-1,0), s.getLastColumn()).getValues();
+const rIndex = vals.findIndex(r=>String(r[m['RecordID']])===String(data.id));
+if(rIndex<0) return out({error:'not found'});
+const rowNum = rIndex+2;
+if(data.title!==undefined) s.getRange(rowNum, m['Titulo']+1).setValue(data.title);
+if(data.url!==undefined) s.getRange(rowNum, m['URL']+1).setValue(data.url);
+if(data.tag!==undefined) s.getRange(rowNum, m['Etiqueta']+1).setValue(data.tag);
+if(data.synopsis!==undefined)s.getRange(rowNum, m['Sinopsis']+1).setValue(data.synopsis);
+return out({ok:true, id:data.id});
+}
+
+if(action==='delete'){
+if(!data.id) return out({error:'missing id'});
+const vals = s.getRange(2,1,Math.max(s.getLastRow()-1,0), s.getLastColumn()).getValues();
+const rIndex = vals.findIndex(r=>String(r[m['RecordID']])===String(data.id));
+if(rIndex<0) return out({error:'not found'});
+s.deleteRow(rIndex+2);
+return out({ok:true, id:data.id});
+}
+
+return out({error:'unknown action'});
+}
+
+function doOptions(e){ return out({ok:true}); }
+```
+
+2.  Guarda el proyecto.
+
+**Prueba para ver si funcionó correctamente:**
+Las funciones `doGet` y `doPost` están ahora definidas. Al implementarlas como Aplicación Web, se convertirán en los *endpoints* de lectura y escritura de tu API, cumpliendo con las capacidades de la plataforma para extender y automatizar Google Workspace.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+PASO 4: Despliegue como Aplicación Web y Obtención de la URL
+##menu-item END
+##Contenido BEGIN
+**Explicación:**
+Para que las funciones `doGet` y `doPost` puedan recibir peticiones de cualquier servicio externo (como un cliente FastAPI o una aplicación web), el script debe publicarse como una Aplicación Web (Web App). Esto genera la URL pública de tu API REST.
+
+**Validación con Apps Script:**
+Apps Script permite a los desarrolladores publicar scripts como Aplicaciones Web. Este proceso es clave para exponer los servicios `doGet` y `doPost` como *endpoints* accesibles mediante llamadas HTTP.
+
+**Acción (NAVEGADOR):**
+1.  En el editor de Apps Script, haz clic en **Implementar > Nueva implementación**.
+2.  Si es la primera vez, el sistema te pedirá autorización, ya que el script está programado para automatizar y extender Google Workspace (lo cual es una función fundamental de Apps Script).
+3.  Selecciona **Aplicación web** como tipo de implementación.
+4.  Configura:
+    *   'Ejecutar como': **Yo** (tu cuenta).
+    *   'Acceso': **Cualquiera con el vínculo** (para que la API sea pública).
+5.  Haz clic en **Implementar**.
+6.  **Copia la URL de la aplicación web** (debería tener el formato `.../exec`). **Guarda esta URL**, es el *endpoint* base de tu API.
+
+**Prueba para ver si funcionó correctamente:**
+Debes obtener una URL de implementación única.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+PASO 5: Verificación Funcional del Endpoint (CRUD)
+##menu-item END
+##Contenido BEGIN
+**Explicación:**
+Ahora que tienes la URL pública, puedes probar las funcionalidades GET (lectura) y POST (creación, actualización, eliminación) para confirmar que tu Google Sheet está operando como una API REST.
+
+**Validación con Apps Script:**
+Las solicitudes GET enviadas a la URL de la Aplicación Web son manejadas por la función `doGet(e)`, la cual devuelve la respuesta en formato JSON mediante `ContentService`.
+
+**Prueba 1: Lectura de datos (GET)**
+
+*   **Comando en TERMINAL/Acción en NAVEGADOR:**
+    Pega tu URL pública (`.../exec`) directamente en una nueva pestaña del navegador.
+*   **Prueba para ver si funcionó correctamente:**
+    Deberías ver los datos de tu hoja de cálculo (incluyendo el registro de prueba TUT001) devueltos en formato JSON en el navegador. Por ejemplo: `[{"id":"TUT001", "title":"Título Prueba", ...}]`.
+
+**Prueba 2: Creación de un registro (POST)**
+
+*   **Comando en TERMINAL:**
+    Utiliza el siguiente comando `curl` en la Terminal de Windows, reemplazando `[Tu URL]/exec` con la URL de tu implementación:
+
+    ```
+    curl -X POST "[Tu URL]/exec" -H "Content-Type: application/json" -d "{\"action\":\"create\",\"data\":{\"id\":\"TUT999\",\"title\":\"Nuevo API Project\",\"tag\":\"ETQ002\",\"synopsis\":\"Texto de prueba\"}}"
+    ```
+
+*   **Acción:** Ejecuta el comando.
+*   **Prueba para ver si funcionó correctamente:**
+    1. La Terminal debe devolver una respuesta JSON indicando éxito, como `{"ok":true, "id":"TUT999"}`.
+    2. Abre tu hoja de cálculo 'Tutoriales'. Debe haber aparecido una **nueva fila** con el RecordID "TUT999", confirmando que la función `doPost(e)` y la acción `create` funcionaron correctamente.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+El desarrollo de esta API (SheetREST) se basa en el uso exclusivo de las herramientas nativas de Google, una práctica ampliamente documentada en las fuentes de Google Apps Script.
+
+**1. Apps Script como Backend Serverless:**
+Apps Script es una plataforma de JavaScript basada en la nube, con la tecnología de Google Drive, que se utiliza para integrar y automatizar tareas en los productos de Google.
+
+**2. Integración con Google Sheets (Base de Datos):**
+El motor que permite al código interactuar con los datos de la hoja es el servicio incorporado `SpreadsheetApp`. Las funciones de la API acceden a la hoja programáticamente para realizar operaciones.
+
+**3. Creación de Endpoints REST (Web Apps):**
+Apps Script permite publicar scripts como **Aplicaciones Web** (Web apps). Este tipo de implementación genera un *endpoint* público (`.../exec`) que es capaz de manejar peticiones HTTP. Las funciones estándar `doGet(e)` y `doPost(e)` son utilizadas para procesar las solicitudes de lectura y escritura, respectivamente, formando el núcleo de la API REST.
+
+**4. Respuestas en Formato JSON:**
+Para garantizar que la salida de la API sea un formato estándar, se utiliza el servicio de utilidad `ContentService`. El código emplea específicamente el método `ContentService.createTextOutput().setMimeType(ContentService.MimeType.JSON)` para asegurar que los datos se devuelvan en formato JSON.
+
+**Referencias de la Documentación Oficial de Google:**
+
+*   **Descripción general de Apps Script:** Automatiza y extiende Google Workspace con código sencillo.
+*   **Servicios de Google Workspace (SpreadsheetApp):** Acceso a Hojas de cálculo.
+*   **Servicios de utilidad (ContentService):** Generación de salida JSON.
+*   **Recursos del proyecto de secuencia de comandos (Activadores/Web Apps):** Uso de `doGet` y `doPost` en aplicaciones web.
+##Contenido END

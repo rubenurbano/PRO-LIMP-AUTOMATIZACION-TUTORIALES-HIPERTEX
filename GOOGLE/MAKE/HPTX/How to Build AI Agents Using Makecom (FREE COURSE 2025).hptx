@@ -1,0 +1,263 @@
+##itemID:000
+##menu-item BEGIN
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+How to Build AI Agents Using Make.com (FREE COURSE 2025)
+(Web Original):
+
+https://youtu.be/rfonp8KiIso?si=2Yom0s9iHaqaFzL8
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción: ¿Qué es un Agente de IA y cómo funciona?
+##menu-item END
+##Contenido BEGIN
+Introducción: ¿Qué es un Agente de IA y cómo funciona?:
+
+Un Agente de IA es un sistema autónomo que va más allá de un simple chatbot. No solo responde preguntas, sino que puede percibir su entorno, tomar decisiones y ejecutar acciones para alcanzar un objetivo específico. A diferencia de un chatbot que sigue un guion, un agente puede usar herramientas (como buscar en Google, realizar cálculos o consultar una base de datos) y recordar interacciones pasadas para actuar de forma más inteligente y proactiva.
+
+En este tutorial, construiremos un agente de IA desde cero usando Make.com, una plataforma de automatización que no requiere saber programar.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Los 4 Componentes Clave de Nuestro Agente de IA
+##menu-item END
+##Contenido BEGIN
+Los 4 Componentes Clave de Nuestro Agente de IA:
+
+Nuestro agente se basará en cuatro pilares fundamentales que trabajarán juntos dentro de un escenario de Make.com:
+
+La Interfaz (UI - User Interface): Es el punto de entrada por donde el usuario se comunica con el agente. Usaremos un Webhook, que es una URL única que puede recibir datos. Cualquier aplicación o formulario que pueda enviar información a esa URL servirá como interfaz.
+
+El Cerebro (LLM - Large Language Model): Es el núcleo que procesa el lenguaje y toma decisiones. Utilizaremos el modelo GPT de OpenAI. Le daremos instrucciones (un "prompt") para que entienda su rol, las herramientas que tiene disponibles y cómo decidir cuál usar.
+
+Las Herramientas (Tools): Son las acciones que el agente puede realizar. En nuestro caso, crearemos herramientas sencillas como obtener la fecha y hora actual o buscar información en Google. El "Cerebro" decidirá cuándo y cómo usar estas herramientas.
+
+La Memoria (Memory): Es la capacidad del agente para recordar conversaciones anteriores. Usaremos el módulo Data Store de Make.com para guardar un historial del chat y que el agente tenga contexto en cada nueva interacción.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Paso 1: Configurar el Escenario y el Punto de Entrada (Webhook)
+##menu-item END
+##Contenido BEGIN
+Paso 1: Configurar el Escenario y el Punto de Entrada (Webhook):
+
+El primer paso es crear el lienzo donde construiremos nuestro agente y definir cómo recibiremos las preguntas de los usuarios.
+
+Crea un Nuevo Escenario: En tu panel de Make.com, haz clic en "Create a new scenario".
+
+Añade el Módulo Webhook: Haz clic en el círculo grande y busca el módulo "Webhooks". Selecciónalo.
+
+Configura el Webhook: Elige la opción "Custom webhook". Haz clic en "Add" para crear un nuevo webhook, dale un nombre descriptivo (ej. "AgenteIA_Input") y guarda.
+
+Obtén la URL: Make.com te proporcionará una URL única. Cópiala. Esta es la dirección a la que enviaremos las preguntas del usuario. Para probarla, puedes pegarla en tu navegador y añadirle al final ?pregunta=Hola, por ejemplo: https://hook.eu1.make.com/xxxx?pregunta=Hola.
+
+Ejecuta el Módulo: Haz clic en "Run once" en Make.com y luego accede a la URL desde tu navegador para enviar el primer dato. Esto permitirá a Make.com determinar la estructura de los datos que recibirá.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 2: Implementar la Memoria con Data Store
+##menu-item END
+##Contenido BEGIN
+Paso 2: Implementar la Memoria con Data Store:
+
+Para que nuestro agente recuerde conversaciones pasadas, necesitamos un lugar donde almacenarlas.
+
+Añade el Módulo Data Store: Haz clic en el signo "+" junto al módulo Webhook y busca "Data Store".
+
+Selecciona la Acción: Elige la acción "Get a record". Esto nos permitirá buscar el historial de una conversación existente.
+
+Configura el Data Store:
+
+Data store: Haz clic en "Add" para crear uno nuevo. Dale un nombre (ej. "MemoriaAgente") y define su estructura. Necesitaremos al menos dos campos:
+
+conversationID (Tipo: Text, márcalo como "Key" o clave primaria).
+
+history (Tipo: Text).
+
+Key: Mapea el conversationID que recibes a través del Webhook. Si no recibes uno, puedes usar un identificador único, como el ID del usuario.
+
+Manejo de Errores: Si no se encuentra un historial (es la primera vez que el usuario habla), la operación fallará. Haz clic derecho en el módulo Data Store y selecciona "Add error handler". Conecta una ruta de error para manejar los casos donde no hay historial previo.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 3: Construir el "Cerebro" con OpenAI
+##menu-item END
+##Contenido BEGIN
+Paso 3: Construir el "Cerebro" con OpenAI:
+
+Este es el paso más importante. Aquí le damos al modelo de lenguaje (LLM) las instrucciones para que actúe como un agente.
+
+Añade el Módulo OpenAI: Agrega un módulo de "OpenAI" y selecciona la acción "Create a Chat Completion".
+
+Conecta tu Cuenta: Si no lo has hecho, conecta tu cuenta de OpenAI usando tu API Key.
+
+Configura el Modelo: Elige un modelo potente como gpt-4 o gpt-3.5-turbo.
+
+Crea los Mensajes (Prompt): Esta es la parte crucial. Añadiremos un mensaje de tipo "System" y uno de tipo "User".
+
+Mensaje de Sistema (System): Aquí definimos la personalidad y las reglas del agente. Este es un ejemplo de prompt:
+
+code
+Code
+download
+content_copy
+expand_less
+Eres un asistente de IA. Tu objetivo es ayudar al usuario. Tienes acceso a las siguientes herramientas:
+
+[
+  {"name": "google_search", "description": "Busca información en tiempo real en Google. Úsala para preguntas sobre eventos actuales, datos específicos o cualquier cosa que no conozcas."},
+  {"name": "get_date", "description": "Obtiene la fecha y hora actual. Úsala cuando el usuario pregunte por el día o la hora."}
+]
+
+Cuando necesites usar una herramienta, responde ÚNICAMENTE con un objeto JSON con la clave "tool_name" y "query". Por ejemplo: {"tool_name": "google_search", "query": "precio del bitcoin"}.
+
+Si no necesitas una herramienta, responde directamente al usuario de forma normal.
+
+Mensaje de Usuario (User): Aquí combinamos el historial de la conversación (obtenido del Data Store) con la nueva pregunta del usuario (obtenida del Webhook). El formato sería:
+Historial de la conversación: [history del Data Store]. Nueva pregunta: [pregunta del Webhook].
+
+Habilitar respuesta JSON: En la configuración avanzada del módulo, activa la opción para que la respuesta del modelo sea en formato JSON. Esto facilita el procesamiento posterior.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 4: El Router para Decidir la Acción
+##menu-item END
+##Contenido BEGIN
+Paso 4: El Router para Decidir la Acción:
+
+El "Cerebro" (OpenAI) nos dirá si necesita usar una herramienta o si puede responder directamente. Usaremos un Router para dividir el flujo de trabajo según esa decisión.
+
+Añade un Router: Después del módulo de OpenAI, añade un "Router". Este módulo te permite crear múltiples caminos o ramas.
+
+Crea la Primera Ruta (Usar Herramienta):
+
+Conecta una ruta desde el router.
+
+Haz clic en el icono de filtro entre el router y el siguiente módulo.
+
+Configura la condición: La respuesta del módulo de OpenAI (message.content) debe contener el texto "tool_name". Esto indica que el LLM ha decidido usar una herramienta.
+
+Crea la Segunda Ruta (Respuesta Directa):
+
+Crea otra ruta desde el router.
+
+Esta será la ruta por defecto (la que se toma si la primera condición no se cumple). Puedes marcar la casilla "Fallback route" en la configuración del filtro. Esta rama se activará cuando el LLM responda directamente sin pedir una herramienta.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Paso 5: Ejecutar las Herramientas
+##menu-item END
+##Contenido BEGIN
+Paso 5: Ejecutar las Herramientas:
+
+En la rama donde se decidió usar una herramienta, necesitamos ejecutar la acción correspondiente.
+
+Parsear la Respuesta JSON: El LLM nos dio una respuesta en formato JSON. Usa el módulo "JSON" con la acción "Parse JSON" para extraer el nombre de la herramienta (tool_name) y la consulta (query).
+
+Añade otro Router (para herramientas): Después de "Parse JSON", añade un segundo router para seleccionar la herramienta específica.
+
+Ruta para Google Search:
+
+Crea una rama y ponle un filtro donde tool_name sea igual a google_search.
+
+Añade un módulo para buscar en Google (puedes usar el módulo "HTTP" para hacer una petición a una API de búsqueda o un módulo específico si está disponible). Pasa el query como parámetro de búsqueda.
+
+Ruta para Obtener Fecha:
+
+Crea otra rama y ponle un filtro donde tool_name sea igual a get_date.
+
+Usa el módulo de "Tools" y la acción "Get current date" o simplemente las variables de fecha de Make.com (now).
+
+El resultado de cada una de estas herramientas (el resultado de la búsqueda o la fecha actual) será el "contexto" que usaremos en el siguiente paso.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Paso 6: Generar la Respuesta Final (Tras Usar una Herramienta)
+##menu-item END
+##Contenido BEGIN
+Paso 6: Generar la Respuesta Final (Tras Usar una Herramienta):
+
+Una vez que la herramienta ha obtenido la información (ej. los resultados de Google), el agente no puede simplemente mostrar esos datos crudos. Debe usar su "Cerebro" de nuevo para formular una respuesta natural.
+
+Añade otro Módulo OpenAI: Al final de las rutas de las herramientas (puedes unirlas de nuevo con un módulo genérico si quieres), añade otro módulo "OpenAI" ("Create a Chat Completion").
+
+Configura el Nuevo Prompt:
+
+Mensaje de Sistema: "Eres un asistente de IA. Responde a la pregunta del usuario basándote en la información proporcionada."
+
+Mensaje de Usuario: "La pregunta original era: '[pregunta original del Webhook]'. La información obtenida de la herramienta es: '[resultado del módulo de la herramienta]'. Por favor, formula una respuesta final para el usuario."
+
+La Salida es la Respuesta Final: El resultado de este segundo módulo de OpenAI será la respuesta definitiva y bien redactada que se le entregará al usuario.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Paso 7: Actualizar la Memoria y Enviar la Respuesta
+##menu-item END
+##Contenido BEGIN
+Paso 7: Actualizar la Memoria y Enviar la Respuesta:
+
+Para completar el ciclo, debemos guardar la interacción actual en la memoria y devolver la respuesta al usuario.
+
+Actualizar el Data Store:
+
+Añade un módulo "Data Store" con la acción "Add/replace a record".
+
+Data store: Selecciona el mismo que creaste al principio.
+
+Key: Usa el conversationID del usuario.
+
+History: Construye el nuevo historial. Debe contener el historial anterior, la pregunta del usuario y la respuesta final del agente. Por ejemplo: [historial anterior]\nUsuario: [pregunta]\nAgente: [respuesta final].
+
+Enviar la Respuesta con Webhook Response:
+
+Añade el módulo final, "Webhooks", y selecciona la acción "Webhook response".
+
+Status: 200.
+
+Body: Aquí inserta la respuesta final generada por el agente (ya sea la de la ruta directa o la generada tras usar una herramienta).
+
+Esto enviará la respuesta de vuelta a la aplicación o formulario que originalmente llamó al webhook.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Cada componente clave de este tutorial se basa en la funcionalidad documentada oficialmente por Make.com y OpenAI.
+
+Webhooks como Disparador (Trigger): El uso de un "Custom Webhook" para iniciar un escenario al recibir datos de una fuente externa es una funcionalidad estándar y documentada de Make.com.
+
+Fuente: https://www.make.com/en/help/tools/webhooks
+
+Router para Flujos Condicionales: La utilización del módulo "Router" para crear ramas y ejecutar diferentes acciones basadas en condiciones (como la respuesta del LLM) es el método oficial para controlar el flujo de un escenario.
+
+Fuente: https://www.make.com/en/help/scenarios/scenario-editor/router
+
+Data Store para Persistencia de Datos (Memoria): El módulo "Data Store" está diseñado específicamente para almacenar y recuperar datos entre ejecuciones de escenarios, lo que lo hace ideal para implementar la memoria del agente.
+
+Fuente: https://www.make.com/en/help/tools/data-store
+
+Integración con OpenAI: El tutorial utiliza el módulo oficial de OpenAI en Make.com. La construcción de prompts con un rol "System" para definir el comportamiento del modelo es una práctica recomendada por OpenAI para guiar la respuesta del LLM.
+
+Fuente (Módulo Make): https://www.make.com/en/help/apps/ai/openai--dall-e---whisper-
+
+Fuente (Guía de Prompts OpenAI): https://platform.openai.com/docs/guides/prompt-engineering/system-message
+
+Simulación de Uso de Herramientas (Tool Use): El método de describir herramientas en el prompt de sistema y pedir una respuesta en formato JSON es una forma de implementar la lógica de "tool use" o "function calling". OpenAI tiene una funcionalidad nativa para esto, pero el enfoque del tutorial lo simula de manera efectiva dentro de las capacidades de Make.com.
+
+Fuente (Concepto en OpenAI): https://platform.openai.com/docs/guides/function-calling
+##Contenido END

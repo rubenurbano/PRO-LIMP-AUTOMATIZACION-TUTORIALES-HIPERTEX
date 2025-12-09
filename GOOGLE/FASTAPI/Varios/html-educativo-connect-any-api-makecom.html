@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Connect any API to MAKE.com – Tutorial Educativo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-soft: #0b1120;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.12);
+      --accent-strong: #22c55e;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827, #020617 60%);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 24px 12px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 960px;
+      background: linear-gradient(180deg, var(--bg-soft), #020617);
+      border-radius: 24px;
+      padding: 24px 20px 28px;
+      border: 1px solid rgba(148,163,184,0.35);
+      box-shadow: 0 30px 80px rgba(15,23,42,0.85);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(56,189,248,0.35);
+    }
+
+    h1 {
+      margin: 12px 0 4px;
+      font-size: 26px;
+      letter-spacing: 0.04em;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .meta {
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .meta a:hover {
+      text-decoration: underline;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: rgba(15,23,42,0.96);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 14px 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.08), transparent 55%);
+      pointer-events: none;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: #bfdbfe;
+      margin-bottom: 6px;
+    }
+
+    .card p,
+    .card ul {
+      margin: 4px 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .badge-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      margin-right: 6px;
+      border: 1px solid rgba(56,189,248,0.6);
+      flex-shrink: 0;
+    }
+
+    .section {
+      margin-top: 10px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: rgba(15,23,42,0.97);
+      overflow: hidden;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .section-header h2 {
+      font-size: 14px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-header small {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .toggle-btn {
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.95);
+      color: var(--muted);
+      cursor: pointer;
+    }
+
+    .section-body {
+      padding: 8px 16px 12px;
+      border-top: 1px solid var(--border);
+      display: none;
+    }
+
+    .section-body.open {
+      display: block;
+    }
+
+    .section-body ul {
+      padding-left: 18px;
+      margin: 6px 0;
+      font-size: 13px;
+    }
+
+    .highlight {
+      color: var(--accent-strong);
+      font-weight: 500;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .img-wrap {
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    .img-wrap img {
+      max-width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(148,163,184,0.4);
+    }
+
+    .img-wrap span {
+      display: block;
+      margin-top: 4px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="pill">PRO-LIMP Automatización · Make.com</div>
+      <h1>Connect any API to MAKE.com</h1>
+      <p class="subtitle">
+        Cómo conectar cualquier servicio (aunque no tenga integración oficial) usando módulos HTTP y
+        “Make an API Call”.
+      </p>
+      <p class="meta">
+        Basado en el tutorial: <strong>Connect any API to MAKEcom – 1000 Hidden integrations</strong><br />
+        Web original: <a href="https://youtu.be/7f3lcmCXbSU?si=tfoFTJYKBUpCCLNV" target="_blank" rel="noreferrer">Ver vídeo en YouTube</a><br />
+        PRO-LIMP AUTOMATIZACIÓN · +34 636 832 005
+      </p>
+    </header>
+
+    <!-- Resumen rápido -->
+    <section class="grid">
+      <article class="card">
+        <div class="card-title">Ruta de aprendizaje</div>
+        <p><span class="badge-step">1</span>Entender qué es una API y cómo viajan las peticiones y respuestas.</p>
+        <p><span class="badge-step">2</span>Diferenciar GET (consultar datos) y POST (enviar/crear datos).</p>
+        <p><span class="badge-step">3</span>Caso 1: conectar un servicio externo sin integración (Polygon.io) con el módulo HTTP.</p>
+        <p><span class="badge-step">4</span>Caso 2: usar funciones “ocultas” dentro de módulos que ya existen en Make.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-title">Resultado esperado</div>
+        <ul>
+          <li>Entender la estructura básica de una llamada API (URL, método, headers, body).</li>
+          <li>Configurar el módulo <strong>HTTP – Make a request</strong> para cualquier servicio.</li>
+          <li>Usar <strong>Make an API Call</strong> en módulos avanzados como Zero Code Kit.</li>
+          <li>Guardar y actualizar datos en tu base (Google Sheets, BBDD, etc.) a partir de las respuestas JSON.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Secciones del tutorial -->
+    <section class="section">
+      <div class="section-header" data-target="sec1">
+        <h2><span class="badge-step">1</span>¿Qué es una API? (Explicación básica)</h2>
+        <button class="toggle-btn">Mostrar</button>
+      </div>
+      <div id="sec1" class="section-body">
+        <ul>
+          <li>Una API es como un <span class="highlight">camarero digital</span> que lleva tu pedido (request) al servidor y trae de vuelta la respuesta.</li>
+          <li><strong>Cliente:</strong> tú o tu ordenador, pidiendo información.</li>
+          <li><strong>Petición HTTP:</strong> el pedido que se envía al servidor.</li>
+          <li><strong>Respuesta HTTP:</strong> lo que el servidor devuelve.</li>
+          <li><strong>Salida:</strong> normalmente llega en formato <span class="highlight">JSON</span> (a veces XML o HTML), que Make puede leer y procesar.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec2">
+        <h2><span class="badge-step">2</span>Tipos de peticiones: GET vs POST</h2>
+        <button class="toggle-btn">Mostrar</button>
+      </div>
+      <div id="sec2" class="section-body">
+        <ul>
+          <li><span class="highlight">GET – “Consigue datos”</span>
+            <ul>
+              <li>Se usa para leer información que ya existe.</li>
+              <li>Ejemplo: buscar mascotas por ID, raza o peso en una reserva natural.</li>
+              <li>Piensa en GET como “¿Qué tienes aquí? Muéstramelo”.</li>
+            </ul>
+          </li>
+          <li><span class="highlight">POST – “Envía / Publica datos”</span>
+            <ul>
+              <li>Se usa para crear o actualizar información en la base de datos.</li>
+              <li>Ejemplo: crear la ficha de una nueva mascota o subir una foto.</li>
+              <li>Piensa en POST como “Toma esto y guárdalo”.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec3">
+        <h2><span class="badge-step">3</span>Caso 1 – Conectar un servicio que no existe en Make (Polygon.io)</h2>
+        <button class="toggle-btn">Mostrar</button>
+      </div>
+      <div id="sec3" class="section-body">
+        <ul>
+          <li>Cuando un servicio NO está en el catálogo de Make (por ejemplo, <span class="highlight">Polygon.io</span>):</li>
+          <li><strong>1. Elegir módulo:</strong> usa el módulo genérico <strong>HTTP – Make a request</strong>.</li>
+          <li><strong>2. Documentación:</strong> busca la documentación de la API (por ejemplo “polygon.io documentation API”).</li>
+          <li><strong>3. Función deseada:</strong> localiza el endpoint que necesitas, como <strong>“daily open close”</strong> (GET).</li>
+          <li><strong>4. Parámetros:</strong> en la documentación rellena el símbolo del activo (ej. AAPL) y la fecha a consultar para que te construya el ejemplo de llamada.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec4">
+        <h2><span class="badge-step">4</span>Configurar URL y API Key (Caso 1)</h2>
+        <button class="toggle-btn">Mostrar</button>
+      </div>
+      <div id="sec4" class="section-body">
+        <ul>
+          <li><strong>Obtener la URL:</strong> copia el enlace completo que genera la documentación con tus parámetros.</li>
+          <li>Asegúrate de que la URL incluya tu <span class="highlight">API Key</span>. Si no se añade sola, pégala al final como parámetro.</li>
+          <li><strong>Pegar en Make:</strong> en el módulo HTTP, coloca esa URL en el campo <strong>“URL”</strong>.</li>
+          <li><strong>Parsear respuesta:</strong> activa <strong>“Parse response → Yes”</strong> para que Make convierta el JSON en campos legibles.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec5">
+        <h2><span class="badge-step">5</span>Usar los datos obtenidos (Caso 1)</h2>
+        <button class="toggle-btn">Mostrar</button>
+      </div>
+      <div id="sec5" class="section-body">
+        <ul>
+          <li>Ejecuta el módulo para hacer la prueba: verás un JSON con precios de apertura, máximo, mínimo, volumen, etc.</li>
+          <li>Conecta un módulo siguiente (por ejemplo una base de datos o Google Sheets).</li>
+          <li>Usa el mapeo de Make para arrastrar los campos obtenidos (símbolo, fecha, precios) hacia las columnas donde quieras guardarlos.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec6">
+        <h2><span class="badge-step">6</span>Caso 2 – Usar una función oculta en un módulo existente</h2>
+        <button class="toggle-btn">Mostrar</button>
+      </div>
+      <div id="sec6" class="section-body">
+        <ul>
+          <li>Algunas apps sí están en Make (ej. <span class="highlight">Zero Code Kit</span>) pero no ves un botón directo para la función que quieres.</li>
+          <li><strong>1. Agregar módulo:</strong> añade el módulo de la app (Zero Code Kit).</li>
+          <li><strong>2. Elegir “Make an API call”:</strong> en vez de una acción prehecha, selecciona la opción <strong>“Make an API call”</strong>.</li>
+          <li><strong>3. Conectar tu cuenta:</strong> usa la API Key de la app si aún no la conectaste.</li>
+          <li><strong>4. Documentación:</strong> busca la función concreta (por ejemplo “compare string” o “compare to string”) y revisa método (POST) y estructura del body.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec7">
+        <h2><span class="badge-step">7</span>Configurar la llamada POST (Caso 2)</h2>
+        <button class="toggle-btn">Mostrar</button>
+      </div>
+      <div id="sec7" class="section-body">
+        <ul>
+          <li><strong>Endpoint (URL):</strong> en “Make an API call” solo pones la parte final, por ejemplo <code>/compare-to-string</code>; la base URL ya la conoce Make.</li>
+          <li><strong>Método:</strong> selecciona <span class="highlight">POST</span>.</li>
+          <li><strong>Header:</strong> añade <code>Content-Type</code> con valor <code>application/json</code> para indicar que envías JSON.</li>
+          <li><strong>Body:</strong> pega el JSON de la documentación, con los campos que la API espera (por ejemplo <code>string_one</code> y <code>string_two</code>).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec8">
+        <h2><span class="badge-step">8</span>Ejecución y actualización de registros (Caso 2)</h2>
+        <button class="toggle-btn">Mostrar</button>
+      </div>
+      <div id="sec8" class="section-body">
+        <ul>
+          <li><strong>Disparador:</strong> una tabla o base de datos donde tienes las dos frases a comparar.</li>
+          <li><strong>Respuesta:</strong> la API devuelve valores como <span class="highlight">similaridad</span> y <span class="highlight">distancia</span> entre textos.</li>
+          <li><strong>Actualizar:</strong> con un módulo final, guarda esos valores en la fila correspondiente, junto a las frases originales.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec9">
+        <h2><span class="badge-step">9</span>Analogía gamer y consejos finales</h2>
+        <button class="toggle-btn">Mostrar</button>
+      </div>
+      <div id="sec9" class="section-body">
+        <ul>
+          <li>Aprender bien <span class="highlight">JSON</span> es clave si vas a usar APIs de forma intensiva.</li>
+          <li>Imagina Make.com como un mando de videojuegos:
+            <ul>
+              <li>Los módulos normales son los botones X, Y, A, B (acciones preconfiguradas).</li>
+              <li>Los módulos HTTP y “Make an API call” son el <strong>panel de comandos especiales</strong> para movimientos que no vienen de fábrica.</li>
+            </ul>
+          </li>
+          <li><strong>GET</strong> = “¿Cuántas monedas tengo? Muéstrame mis datos”.</li>
+          <li><strong>POST</strong> = “Guarda la partida / crea personaje / sube estos datos”.</li>
+          <li>La documentación de la API es el <strong>manual de trucos</strong>: ahí está el código exacto que debes introducir para que todo funcione.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec10">
+        <h2><span class="badge-step">10</span>Validación con fuentes técnicas oficiales</h2>
+        <button class="toggle-btn">Mostrar</button>
+      </div>
+      <div id="sec10" class="section-body">
+        <ul>
+          <li>El módulo <strong>HTTP</strong> de Make permite conectar con cualquier servicio web mediante GET, POST, etc., incluso sin integración oficial.</li>
+          <li>Muchos conectores de Make incluyen la acción <strong>“Make an API call”</strong> para acceder a endpoints no cubiertos por módulos estándar.</li>
+          <li>Polygon.io ofrece el endpoint <strong>Daily Open/Close</strong> que devuelve datos financieros de un símbolo y fecha concretos en JSON.</li>
+          <li><strong>JSON</strong> (JavaScript Object Notation) es el formato estándar ligero para intercambio de datos en APIs modernas.</li>
+          <li>Consulta siempre la documentación oficial de:
+            <ul>
+              <li>Make.com – Módulo HTTP y “Make an API call”.</li>
+              <li>Polygon.io – endpoints financieros.</li>
+              <li>Introducción a JSON (por ejemplo JSON.org).</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec11">
+        <h2><span class="badge-step">11</span>Mapa mental del tutorial</h2>
+        <button class="toggle-btn">Mostrar</button>
+      </div>
+      <div id="sec11" class="section-body">
+        <div class="img-wrap">
+          <img src="https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Connect%20any%20API%20to%20MAKEcom_1000_Hidden%20integrationsMAPA.png" alt="Mapa mental Connect any API to MAKE.com" />
+          <span>Mapa mental resumen del flujo completo.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec12">
+        <h2><span class="badge-step">12</span>Infografía visual del proceso</h2>
+        <button class="toggle-btn">Mostrar</button>
+      </div>
+      <div id="sec12" class="section-body">
+        <div class="img-wrap">
+          <img src="https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Connect%20any%20API%20to%20MAKEcom_1000_Hidden%20integrations.jpeg" alt="Infografía Connect any API to MAKE.com" />
+          <span>Infografía visual para repasar el proceso de un vistazo.</span>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer-note">
+      Material educativo generado a partir del JSON “Connect any API to MAKEcom_1000_Hidden integrations”.
+    </p>
+  </main>
+
+  <script>
+    document.querySelectorAll(".section-header").forEach((header, index) => {
+      const targetId = header.getAttribute("data-target");
+      const body = document.getElementById(targetId);
+      const btn = header.querySelector(".toggle-btn");
+
+      // Abrir por defecto las 2 primeras secciones
+      if (index < 2) {
+        body.classList.add("open");
+        btn.textContent = "Ocultar";
+      }
+
+      header.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = body.classList.contains("open");
+        body.classList.toggle("open");
+        btn.textContent = isOpen ? "Mostrar" : "Ocultar";
+      });
+    });
+  </script>
+</body>
+</html>

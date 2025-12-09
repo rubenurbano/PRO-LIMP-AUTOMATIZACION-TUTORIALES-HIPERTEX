@@ -1,0 +1,65 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Scrape ANY Website With AI For FREE with Firecrawl\nWEB ORIGINAL:",
+      "contenido": "[TITULO_VIDEO]: Scrape ANY Website With AI For FREE with Firecrawl\n[URL_WEB_YOUTUBE]: https://youtu.be/2s2aR4rOQ8Y?si=sSW9SSapXRLNPHAc"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción a Firecrawl",
+      "contenido": "Introducción a Firecrawl:\nLos métodos antiguos para copiar páginas web usando inteligencia artificial sin programar ya no son los mejores.[1] Hoy existe una herramienta mucho mejor llamada Firecrawl.[1][2] Esta aplicación utiliza inteligencia artificial para copiar cualquier sitio web y transformar esa información en datos limpios.[1][3] Estos datos quedan listos para ser usados por programas de inteligencia artificial, como los modelos de lenguaje grandes.[1]\n\nFirecrawl revisa automáticamente todas las páginas accesibles de un sitio web con solo pegar la dirección URL.[1] Entrega la información limpia en formatos como Markdown o datos estructurados, lo cual es ideal para asistentes de chat o programas de IA.[1]"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Novedades de la versión 2.5",
+      "contenido": "Novedades de la versión 2.5:\nFirecrawl ha lanzado su versión 2.5, la cual es muy potente debido a dos mejoras principales.\n\nPrimero, tiene un sistema especial que detecta cómo se muestra cada página.[1] Esto le permite manejar páginas complejas que usan JavaScript, archivos PDF y tablas.[1] Gracias a esto, puede obtener datos completos y de alta calidad en lugar de solo partes del contenido.[1][2]\n\nSegundo, la herramienta guarda un índice de los datos copiados.[1] Esto te permite ver tanto los datos que acabas de copiar como los que copiaste anteriormente, dándote control sobre qué tan nueva es la información.[1]"
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Cómo usar el servicio web básico",
+      "contenido": "Cómo usar el servicio web básico:\nLa forma más fácil de empezar es utilizando el sitio web de Firecrawl directamente.[1]\n\nAcción 1: Ve al sitio web de Firecrawl.[1][2][4][5][6][7][8]\nAcción 2: Pega cualquier dirección web (URL) que quieras copiar.[1]\nAcción 3: Haz clic en empezar a copiar (Start scraping).[1]\n\nLa herramienta comenzará a copiar el contenido y te mostrará la información en formato Markdown.[1] También tienes la opción de ver los datos en formato JSON.[1][4][6][7]"
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Integración con asistentes de IA (MCP)",
+      "contenido": "Integración con asistentes de IA (MCP):\nFirecrawl puede conectarse con otros programas mediante una API y funcionar con un sistema llamado Servidor MCP (Model Context Protocol).[1][9][10] Esto permite que tu asistente de inteligencia artificial use Firecrawl directamente como una herramienta.[1] En lugar de tener que copiar la información manualmente tú mismo, la integración MCP deja que el asistente de IA haga el trabajo por ti.[1]"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Configuración de la cuenta y clave API",
+      "contenido": "Configuración de la cuenta y clave API:\nPara usar la integración con IA, primero necesitas prepararte siguiendo estos pasos:\n\nAcción 4: Abre una cuenta en Firecrawl.[1]\nAcción 5: Genera una clave API.[1][11] Este es un código secreto que te permite usar la herramienta. Es gratis y recibes créditos para empezar.[1]\nAcción 6: Guarda tu clave API en un lugar seguro.[1]"
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Instalación en tu entorno de trabajo",
+      "contenido": "Instalación en tu entorno de trabajo:\nUna vez que tienes tu clave API, puedes instalar el Servidor MCP en programas como Cursor o VS Code.[1]\n\nAcción 7: Abre el programa donde quieres instalarlo (por ejemplo, Cursor).[1]\nAcción 8: Agrega el Servidor MCP y pega tu clave API en el lugar donde se te pida.[1]\nAcción 9: Haz clic en instalar.[1]\n\nAl terminar, verás que se han activado seis herramientas nuevas."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Uso de Firecrawl en el chat de IA",
+      "contenido": "Uso de Firecrawl en el chat de IA:\nAhora que la herramienta está instalada, tu asistente de IA puede usar Firecrawl directamente desde el chat.[1]\n\nAcción 10: En el chat de IA, escribe una instrucción como: Copia los documentos de Firecrawl sobre la configuración MCP.\n\nEl asistente usará el Servidor MCP para realizar la copia y te entregará el contenido en un formato estructurado como Markdown, guardando el archivo en tu computadora.[1] También puedes pedirle que organice los datos en un archivo JSON, lo cual hará muy rápido.[1]"
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Creación de archivos para programas de IA",
+      "contenido": "Creación de archivos para programas de IA:\nPuedes solicitar al asistente que genere un archivo de texto especial basado en una página web.[1] Este archivo contiene un conjunto de instrucciones que definen cómo debe organizarse el contenido de ese sitio. El resultado son datos limpios, organizados y ricos en contexto, que son ideales para entrenar a los programas de inteligencia artificial.[1]"
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Uso de la función de mapa",
+      "contenido": "Uso de la función de mapa:\nCon el Servidor MCP también puedes usar la función de mapa para entender la estructura de un sitio.[1]\n\nAcción 11: Pide al asistente de IA que explore y mapee un sitio web completo.[1]\n\nEsta función explora la página web automáticamente y muestra su estructura completa y todas las páginas conectadas.[1][6] Sirve para crear inventarios del sitio, encontrar páginas escondidas o entender cómo está organizado todo sin necesidad de hacer clic página por página.[1]"
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Conclusión sobre Firecrawl",
+      "contenido": "Conclusión sobre Firecrawl:\nFirecrawl es una herramienta muy potente que cambia la forma de acceder a los datos de la web.[1][2][12][13][14] Elimina la dificultad de copiar información de forma tradicional al convertir los sitios web en contexto estructurado listo para la IA.[1] La versión 2.5 se considera la mejor herramienta de datos web disponible.[1][2]"
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nLa información presentada en este tutorial ha sido contrastada con la documentación oficial de Firecrawl y sus repositorios técnicos.\n\nPuntos técnicos validados:\n\nExistencia de la versión 2.5: Se confirma el lanzamiento de Firecrawl v2.5, destacando mejoras en la infraestructura, un \"Semantic Index\" (Índice Semántico) y un stack de navegador personalizado para mejorar la extracción de datos.\n\nIntegración MCP: Se confirma que existe un \"Firecrawl MCP Server\" oficial que permite la integración con clientes de LLM como Cursor y Claude.[1]\n\nFuncionalidades principales: La documentación oficial valida las funciones de \"Scrape\" (copiar contenido), \"Crawl\" (rastrear subpáginas), \"Map\" (mapear URLs del sitio) y la capacidad de entregar formatos Markdown y JSON.[1]\n\nFuentes oficiales de consulta y soporte:\n\nSitio web oficial y documentación:\nhttps://firecrawl.dev\nhttps://docs.firecrawl.dev[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGwf9mXY0e2J8z792D_OvWRHyEubnbEtyOPTF5iovV2fnqlP5MPoVSt7ha_FeeFQg-Ar-7SIa7HZC4kCjFL5ZIpGGoHvhqmdAlPoQutc31W1taNsXxfAy9q8l6BLZnWM0KOPyAKy3rA28sd8iNMHWtkIIGZNqyCfCw%3D)]\n\nRepositorio oficial para el Servidor MCP (Instalación y configuración):\nhttps://github.com/modelcontextprotocol/servers/tree/main/src/firecrawl\n(Nota: El servidor MCP se puede instalar vía npm o configurando la extensión en editores compatibles como Cursor).[1]\n\nPortal de desarrolladores (para obtener API Key):\nhttps://www.firecrawl.dev/app/api-keys\n\n\nSources\nhelp\nmcpservers.org\nfirecrawl.dev\ngithub.com\nfirecrawl.dev\nyoutube.com\nfirecrawl.dev\nfirecrawl.dev\nfirecrawl.dev\nskywork.ai\nmcp.so\ngithub.com\nlangchain.com\nreddit.com\ncursor.directory\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\nFirecrawl MCP server setup\nFirecrawl v2 release notes\nFirecrawl official documentation"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+Nombre del video:
+How to Build a No-Code RAG System (Pinecone - Make)
+
+URL del video:
+https://youtu.be/DNDI4c3z-6A?si=YHle_tasVuzr6tmB
+
+Esquema Completo del Tutorial: Cómo Construir un Sistema RAG Sin Código (Pinecone + Make.com)
+
+I. Introducción y Conceptos Fundamentales
+
+A. Objetivo del Tutorial: Mostrar cómo cargar una base de conocimiento de documentos en Make.com y utilizar Claude o ChatGPT para generar artículos altamente precisos y personalizados basados en esa información. Esta técnica es poderosa para construir soluciones de IA para clientes grandes.
+B. Técnica: Retrieval Augmented Generation (RAG).
+C. Mecanismo de RAG: Buscar información altamente relevante para aumentar (augmentar) los prompts al generar contenido nuevo.
+D. Resultados Vistos: Generación de un artículo preciso para una tienda en línea, incluyendo imágenes, descripciones de productos, especificaciones, tiempos de envío y políticas de devolución/tarjetas de regalo, todo basado en el sistema RAG.
+E. Fases de un Sistema RAG:
+  1. Fase de Carga (Upsert): Cargar la base de conocimiento en una base de datos vectorial (Pinecone). Esto incluye la recolección de datos (web scraping, PDFs, CSV, JSON), el envío a un modelo de *embeddings* (como OpenAI's text embeddings three small model) para crear representaciones numéricas (vectores) y la subida (o actualización, *upsert*) a la base de datos vectorial.
+  2. Fase de Generación/Consulta: Generar contenido basado en una consulta. Esto implica entender la consulta, generar un *embedding* de la consulta, enviarla a la base de datos vectorial para recuperar el conocimiento más relevante, e incluir ese conocimiento en el prompt para el Large Language Model (LLM).
+F. Beneficios de RAG frente a Prompting Manual:
+  1. Prompts sin Contexto: Generan alucinaciones, el LLM desconoce la información específica.
+  2. Prompting Contextual Manual: Mejora la precisión, pero es manual y costoso si los prompts son largos, además puede disminuir la precisión si hay demasiado "ruido" (información irrelevante) en la ventana de contexto.
+  3. RAG: Es contextual prompting dinámico, ya que recupera automáticamente la información más relevante para inyectarla en el prompt.
+G. Comparación de Herramientas: Usar Pinecone y Make.com es más complejo que OpenAI Assistants RAG, pero ofrece la flexibilidad de usar cualquier modelo de *embedding* o LLM (Llama 3, Mistral, etc.).
+
+II. Fase 1: Carga y Almacenamiento (Escenario 1 de Make.com: Upserting Vectors)
+
+A. Preparación de Datos y Herramientas:
+  1. Fuente de Datos: Un Google Sheet que contiene páginas estáticas y productos de una tienda de comercio electrónico ficticia (los datos deben estar en un formato digerible como CSV, Excel, JSON).
+  2. Configuración de Pinecone: Crear una cuenta (se utiliza el plan gratuito).
+  3. Crear Índice de Pinecone: Nombrar el índice (ej. "make automation"). Establecer las dimensiones del vector en 1536, ya que se utiliza el modelo text embeddings three small de OpenAI.
+  4. Conexión de Make.com con Pinecone: Configurar la conexión utilizando la URL del índice (eliminando 'https://' y '.pinecone.io') y la clave API.
+
+B. Creación del Escenario de Upserting en Make.com (Carga de la Base de Conocimiento):
+  1. Módulo 1: Google Sheets - Get Range Values. Seleccionar la hoja (ej. "knowledge base") y el rango de datos (ej. A2 a M51).
+  2. Módulo 2: Set Multiple Variables (Limpieza de JSON).
+    a. Problema: El texto dinámico de Google Sheets puede contener caracteres inseguros para JSON. Make.com no tiene una función nativa de escape.
+    b. Solución: Usar una fórmula de *workaround* (que se encuentra en la descripción del video) para crear una variable llamada 'Json safe string' que reemplace o escape los caracteres no seguros.
+    c. Definir 'Full Record': Crear una variable adicional para representar toda la información asociada a la fila (registro completo).
+  3. Módulo 3: OpenAI - Make an API Call (Embeddings).
+    a. Endpoint: /v1/embeddings.
+    b. Modelo: text-embeddings-3-small.
+    c. Input: El valor del 'Json safe string' o 'Full Record' para generar su representación numérica (vector).
+  4. Módulo 4: Pinecone - Get a Vector.
+    a. Propósito: Verificar si el registro (vector) ya existe.
+    b. Vector ID: Usar el 'Page Link' (URL) de la hoja de Google Sheets.
+  5. Módulo 5: Filtro (Comprobación de Cambios/Existencia).
+    a. Este filtro evita el *upserting* innecesario si el contenido no ha cambiado.
+    b. Condición A: El Vector ID NO EXISTE.
+    c. Condición B (OR): El 'Unique Hash' del contenido del registro actual (creado con el algoritmo Sha 256) NO ES IGUAL al 'Unique Hash' almacenado en Pinecone.
+  6. Módulo 6: Pinecone - Upsert a Vector (Insertar o Actualizar).
+    a. Vector ID: 'Page Link' (URL).
+    b. Values: Mapear el array completo de *embeddings* generado por el módulo de OpenAI.
+    c. Metadata: Agregar datos legibles que acompañan al vector. Es crucial, ya que Open AI carece de esta característica en su propio vector store. Incluir:
+      i. Content: El 'Full Record' (que Make.com hará Json-safe).
+      ii. Title: El título de la página.
+      iii. Unique Hash: El hash único (Sha 256 del 'Full Record') para futuras comprobaciones.
+  7. Ejecución: Ejecutar el escenario para cargar todos los registros (ej. 50 registros) en el índice de Pinecone.
+
+III. Fase 2: Recuperación y Generación (Escenario 2 de Make.com: Generación de Artículos RAG)
+
+A. Configuración de la Consulta:
+  1. Módulo 1: Google Sheets - Get Range Values. Utilizar la pestaña "Articles" para obtener la descripción del artículo deseado (la consulta).
+
+B. Extracción del Término de Búsqueda:
+  1. Módulo 2: OpenAI - Create a Completion (Digestión de la Consulta).
+    a. Objetivo: Extraer los términos de búsqueda clave (ej. políticas de devolución, nombres de productos) de la descripción larga del artículo.
+    b. System Message: Solicitar al LLM que proponga un término de búsqueda para la base de conocimiento.
+    c. Formato: Solicitar que la respuesta sea en formato JSON para facilitar su uso posterior.
+  2. Módulo 3: OpenAI - Make an API Call (Embeddings de la Consulta).
+    a. Input: El término de búsqueda conciso (extraído del JSON en el Módulo 2).
+    b. Output: Generar los vectores (representación numérica) que representan semánticamente el término de búsqueda.
+
+C. Recuperación de Vectores Relevantes:
+  1. Módulo 4: Pinecone - Query Vectors.
+    a. Input: El array de vectores generado en el Módulo 3.
+    b. Incluir Metadata: Sí, para obtener el texto real relacionado con los vectores.
+    c. Limit: Establecer el número máximo de resultados a recuperar (ej. 4 o 10).
+  2. Nota: Se puede añadir una fase de *Re-ranking* después de esta etapa para asegurar que los resultados más relevantes estén en la parte superior, pero se omite para simplificar.
+  3. Módulo 5: Array Aggregator.
+    a. Propósito: Consolidar los múltiples paquetes (bundles) de resultados devueltos por Pinecone en un solo array.
+    b. Elementos a agregar: Vector ID (URL) y Metadata (el contenido de las páginas).
+  4. Módulo 6: Transform to Json.
+    a. Propósito: Convertir el array de resultados agregados en una única cadena JSON. Esta cadena es el "conocimiento relevante" que se utilizará para aumentar el prompt.
+
+D. Generación Final del Artículo Aumentado (RAG):
+  1. Módulo 7: OpenAI - Create a Completion (Generación Final).
+    a. Modelo: Se usa GPT-4o.
+    b. System Message (Prompt Aumentado): Pedir al LLM que escriba el artículo basado en la descripción original, *utilizando la siguiente información para fundamentar el artículo en hechos sobre la tienda en línea*.
+    c. User Message: Combinar la descripción original del artículo Y la cadena JSON de "conocimiento relevante" (Módulo 6).
+  2. Módulo 8: Google Sheets - Update a Cell.
+    a. Propósito: Guardar el artículo generado.
+    b. Ubicación: Pestaña "Articles", columna B, utilizando el número de fila obtenido en el Módulo 1.
+    c. Valor: El artículo final generado por el Módulo 7.
+
+E. Verificación del Resultado: El artículo generado es preciso, incluye detalles fact checking (precios, dimensiones, información de envío 5-7 días/$16, políticas de devolución) que están directamente fundamentados en la base de conocimiento cargada en Pinecone.

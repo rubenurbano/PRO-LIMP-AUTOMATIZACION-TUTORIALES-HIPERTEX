@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Opportunities Finder 🚀</title>
+    <meta name="description" content="Discover daily business opportunities for SaaS, automation, and AI products">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <div>
+                    <h1>Business Opportunities Finder</h1>
+                    <p style="font-size: 0.875rem; color: var(--text-muted); margin: 0;">
+                        Discover your next SaaS idea
+                    </p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary" onclick="refreshOpportunities()">
+                    <span>🔄</span>
+                    Refresh
+                </button>
+                <button class="btn btn-primary" onclick="runManualDiscovery()">
+                    <span>⚡</span>
+                    Run Discovery
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Stats Bar -->
+        <div class="stats-bar" id="statsBar">
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-value" id="totalOpportunities">-</div>
+                <div class="stat-label">Total Opportunities</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-value" id="avgScore">-</div>
+                <div class="stat-label">Average Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-value" id="selectedCount">-</div>
+                <div class="stat-label">Selected</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-value" id="topSector">-</div>
+                <div class="stat-label">Top Sector</div>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <div class="filters-grid">
+                <div class="form-group">
+                    <label for="sectorFilter">Sector</label>
+                    <select id="sectorFilter" class="form-control" onchange="applyFilters()">
+                        <option value="">All Sectors</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="statusFilter">Status</label>
+                    <select id="statusFilter" class="form-control" onchange="applyFilters()">
+                        <option value="">All Statuses</option>
+                        <option value="new">New</option>
+                        <option value="selected">Selected</option>
+                        <option value="in_progress">In Progress</option>
+                        <option value="discarded">Discarded</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="minScoreFilter">Min Score</label>
+                    <select id="minScoreFilter" class="form-control" onchange="applyFilters()">
+                        <option value="">Any Score</option>
+                        <option value="7">7.0+</option>
+                        <option value="8">8.0+</option>
+                        <option value="9">9.0+</option>
+                    </select>
+                </div>
+                <div class="form-group search-box">
+                    <label for="searchInput">Search</label>
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search opportunities..."
+                        oninput="debounceSearch()">
+                </div>
+            </div>
+        </div>
+
+        <!-- Opportunities Grid -->
+        <div id="opportunitiesContainer">
+            <!-- Loading state -->
+            <div class="loading" id="loadingState">
+                <div class="spinner"></div>
+                <p>Loading opportunities...</p>
+            </div>
+
+            <!-- Empty state -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-state-icon">📭</div>
+                <h2>No Opportunities Found</h2>
+                <p style="color: var(--text-muted);">Try adjusting your filters or run a new discovery</p>
+            </div>
+
+            <!-- Opportunities will be rendered here -->
+            <div class="opportunities-grid" id="opportunitiesGrid"></div>
+        </div>
+    </main>
+
+    <!-- Modal for Opportunity Detail (simple version) -->
+    <div id="opportunityModal" style="display: none;">
+        <!-- Modal content will be generated dynamically -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>

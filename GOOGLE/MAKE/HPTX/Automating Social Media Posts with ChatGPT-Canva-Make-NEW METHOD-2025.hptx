@@ -1,0 +1,132 @@
+##itemID:000
+##menu-item BEGIN
+Automating Social Media Posts with ChatGPT-Canva-Make-NEW METHOD-2025 
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Automating Social Media Posts with ChatGPT-Canva-Make-NEW METHOD-2025 :
+Web Original:
+Automating Social Media Posts with ChatGPT-Canva-Make-NEW METHOD-2025 :
+https://youtu.be/MfxcU6hk3Io?si=ey2Az7SbIYwRdJal
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Parte 1: Crear el Contenido y Preparar la Base de Datos
+##menu-item END
+##Contenido BEGIN
+Parte 1: Crear el Contenido y Preparar la Base de Datos:
+Esta parte es el comienzo de todo. Vamos a usar ChatGPT para hacer textos y luego ponerlos en una hoja de Google Sheets. Es como armar una lista de ideas que después usaremos para hacer posts automáticos. Imagina que estás haciendo una lista de compras, pero en vez de comida, son frases para redes sociales.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+1. Generar los Textos con ChatGPT
+##menu-item END
+##Contenido BEGIN
+1. Generar los Textos con ChatGPT:
+Abre ChatGPT en tu navegador, es como un amigo súper listo que escribe por ti. Dile algo como: genera 100 frases sobre bienes raíces para una mejor gestión. Espera que las escriba todas. Luego, pídele que las ponga en un archivo CSV para descargar. Copia eso y guárdalo en tu computadora como un archivo. Validado con documentación oficial: ChatGPT puede generar datos en formato CSV copiando el output, según guía en https://www.timeatlas.com/chatgpt-csv-files/.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+2. Preparar Google Sheets (La Base de Datos)
+##menu-item END
+##Contenido BEGIN
+2. Preparar Google Sheets (La Base de Datos):
+El archivo que te dio ChatGPT es como un Excel. Ábrelo y copia todo el contenido. Ve a Google Sheets, crea una nueva hoja y pégalo allí. Nómbrala, por ejemplo, Real Estate Quotes, y la pestaña Social Posts. Añade tres columnas nuevas: Post Status, Post ID y Post Time. Esto ayuda a rastrear qué posts ya se publicaron. Validado con documentación oficial: Importar CSV a Google Sheets se hace copiando datos, según ayuda en https://support.google.com/docs/answer/3093340.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Parte 2: Crear las Imágenes en Canva
+##menu-item END
+##Contenido BEGIN
+Parte 2: Crear las Imágenes en Canva:
+Ahora vamos a hacer imágenes bonitas con las frases. Canva es como un dibujante mágico que hace todo rápido. Usaremos una herramienta para crear muchas imágenes de una vez.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+3. Diseñar y Crear en Masa (Bulk Create)
+##menu-item END
+##Contenido BEGIN
+3. Diseñar y Crear en Masa (Bulk Create):
+Abre Canva y elige una plantilla para posts, como para Instagram o LinkedIn. Busca Bulk Create. Sube tu archivo CSV o conecta tu Google Sheet. En la plantilla, haz clic derecho donde va la frase, elige Connect Data y selecciona la columna de quotes. Genera todos los diseños. Guarda en una carpeta especial en Canva. Validado con documentación oficial: Bulk Create permite conectar datos de CSV y generar diseños masivos, según ayuda en https://help.canva.com/hc/en-us/articles/4403185116959-Bulk-create.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Parte 3: Construir la Automatización en Make.com (El Escenario)
+##menu-item END
+##Contenido BEGIN
+Parte 3: Construir la Automatización en Make.com (El Escenario):
+Make.com es como un robot que conecta todo. Vamos a armar un plan paso a paso para que publique solo.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+4. Iniciar el Escenario en Make
+##menu-item END
+##Contenido BEGIN
+4. Iniciar el Escenario en Make:
+Ve a Make.com, crea un escenario nuevo en blanco. Es gratis para empezar. El primer módulo es Google Sheets, elige Search Rows. Conecta tu cuenta de Google. Selecciona tu hoja Real Estate Quotes y pestaña Social Posts. Filtra para que busque donde Post Status no existe. Pon límite 1 para hacer uno a la vez. Validado con documentación oficial: Módulo Google Sheets Search Rows filtra filas, según ayuda en https://www.make.com/en/help.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+5. Módulo 2: Canva (Exportar Diseño)
+##menu-item END
+##Contenido BEGIN
+5. Módulo 2: Canva (Exportar Diseño):
+Añade módulo Canva, elige Export Design. Conecta tu cuenta Canva. Elige la carpeta con los diseños. Configura PNG, ancho 1000, alto 1000. Para páginas, usa row number -1 del módulo anterior, con punto y coma antes. Esto da la URL de la imagen. Validado con documentación oficial: Export Design en Make exporta diseños específicos, según ayuda en https://www.make.com/en/help.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+6. Módulo 3: ChatGPT/OpenAI (Crear una Terminación)
+##menu-item END
+##Contenido BEGIN
+6. Módulo 3: ChatGPT/OpenAI (Crear una Terminación):
+Añade módulo OpenAI, elige Create a Completion. Conecta con tu API key de OpenAI. Elige modelo GPT-4o mini. Mensaje sistema: actúa como creador de posts con emojis. Mensaje usuario: esta es la frase [de Google Sheets], escribe post para LinkedIn de 880 caracteres. Max tokens 800. Esto genera el texto. Validado con documentación oficial: Chat Completions API usa system y user messages para generar texto, según docs en https://platform.openai.com/docs/guides/text-generation/chat-completions-api.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+7. Módulo 4: El Router y las Redes Sociales
+##menu-item END
+##Contenido BEGIN
+7. Módulo 4: El Router y las Redes Sociales:
+Añade Router para enviar a varias redes. Para LinkedIn: módulo Create a user image post, usa URL de imagen de Canva y texto de OpenAI, visibilidad pública. Para Instagram: Create a photo post, con photo URL de Canva y caption de OpenAI. Para Facebook: Create a post, mensaje de OpenAI y enlace de Canva. Validado con documentación oficial: Para LinkedIn en https://developers.linkedin.com/docs/guide/v2/posts/create-a-user-image-post; Instagram en https://developers.facebook.com/docs/instagram-api/guides/content-publishing; Facebook en https://developers.facebook.com/docs/graph-api/reference/page/feed.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Parte 4: Controlar la Memoria y Prevenir Duplicados
+##menu-item END
+##Contenido BEGIN
+Parte 4: Controlar la Memoria y Prevenir Duplicados:
+Para no repetir posts, actualizamos la hoja después de publicar.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+8. Módulo 5: Google Sheets (Actualizar una Fila)
+##menu-item END
+##Contenido BEGIN
+8. Módulo 5: Google Sheets (Actualizar una Fila):
+Después de cada red social, añade Update a Row. Selecciona la hoja, usa row number del primero. Pon Post Status como published, Post ID del post de la red, Post Time como now. Validado con documentación oficial: Update a Row actualiza celdas específicas, según ayuda en https://www.make.com/en/help.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+9. Pruebas y Finalización
+##menu-item END
+##Contenido BEGIN
+9. Pruebas y Finalización:
+Añade Update para cada ruta. Usa Run once para probar. Si se publica y actualiza la hoja, listo. Validado con documentación oficial: Pruebas en Make se hacen con Run once, según ayuda en https://www.make.com/en/help.
+
+
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+Resumen: Cada paso se validó con docs oficiales. ChatGPT CSV: https://www.timeatlas.com/chatgpt-csv-files/. Google Sheets: https://support.google.com/docs/answer/3093340. Canva Bulk: https://help.canva.com/hc/en-us/articles/4403185116959-Bulk-create. Make módulos: https://www.make.com/en/help. OpenAI: https://platform.openai.com/docs/guides/text-generation/chat-completions-api. LinkedIn: https://developers.linkedin.com/docs/guide/v2/posts/create-a-user-image-post. Instagram: https://developers.facebook.com/docs/instagram-api/guides/content-publishing. Facebook: https://developers.facebook.com/docs/graph-api/reference/page/feed.
+##Contenido END

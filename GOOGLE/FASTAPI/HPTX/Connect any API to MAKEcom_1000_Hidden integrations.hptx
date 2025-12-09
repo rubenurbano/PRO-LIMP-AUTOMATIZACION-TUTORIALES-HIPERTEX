@@ -1,0 +1,221 @@
+##itemID:000
+##menu-item BEGIN
+[TITULO_VIDEO]
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+[TITULO_VIDEO]:
+Connect any API to MAKEcom_1000_Hidden integrations
+
+Web Original:
+https://youtu.be/7f3lcmCXbSU?si=tfoFTJYKBUpCCLNV
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END[1]
+
+##itemID:001
+##menu-item BEGIN
+¿Qué es una API? (Explicación básica)
+##menu-item END
+##Contenido BEGIN
+¿Qué es una API? (Explicación básica):
+Para entender qué es una API, imagínala como un intermediario o un camarero digital.[1] Su funcionamiento básico se divide en 5 pasos:
+
+Cliente: Eres tú o tu computadora queriendo información.[1]
+
+Petición (Request): Le haces un pedido al camarero (la API).[1][2]
+
+Solicitud HTTP: La API lleva tu pedido a la cocina, que en este caso es el Servidor donde están los datos.[1]
+
+Respuesta HTTP: El servidor le entrega el plato (la información) a la API.[1]
+
+Salida (Output): La API te entrega el resultado, generalmente en un formato de texto llamado JSON, aunque a veces puede ser XML o HTML.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Tipos de Peticiones: GET vs POST
+##menu-item END
+##Contenido BEGIN
+Tipos de Peticiones: GET vs POST:
+Aunque existen varios tipos de peticiones (como PUT o DELETE), las dos principales que usarás son:
+
+GET (Conseguir):
+Se usa para pedir y obtener información que ya existe en una base de datos.[1][3]
+Ejemplo: En una reserva natural, usarías GET para buscar mascotas por su ID, su raza o su peso. Es como preguntar "¿Qué tienes aquí?".
+
+POST (Enviar/Publicar):
+Se usa para hacer cambios o añadir información nueva a la base de datos.[1]
+Ejemplo: Usarías POST para crear la ficha de una nueva mascota o subir una foto.[1] Es como decir "Toma esto y guárdalo".
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Caso 1: Conectar un servicio que no existe en Make (Polygon.io)
+##menu-item END
+##Contenido BEGIN
+Caso 1: Conectar un servicio que no existe en Make (Polygon.io):
+Si quieres usar un software que no tiene integración oficial en make.com (como Polygon.io para ver la bolsa de valores), sigue estos pasos iniciales:
+
+Elige el Módulo: En Make, busca y selecciona el módulo genérico llamado "HTTP make a request" (Hacer una solicitud HTTP).[1]
+
+Busca la Documentación: Abre Google y busca la documentación API del software (ej.[1] "polygon.io documentation API").
+
+Identifica la Función: Encuentra lo que necesitas hacer.[1] En este ejemplo, buscamos "daily open close" (apertura y cierre diario), que se indica como una petición GET.[4]
+
+Ajusta los Parámetros: En la página de documentación, rellena los datos que te pide, como el símbolo de la acción (ej. Apple) y la fecha que quieres consultar.[1]
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Configuración de la URL y Clave API (Caso 1)
+##menu-item END
+##Contenido BEGIN
+Configuración de la URL y Clave API (Caso 1):
+Una vez tengas los parámetros listos en la documentación:
+
+Obtén la URL: La documentación generará un enlace (link) basado en lo que rellenaste.[1] Copia esta URL completa.
+Nota: El enlace debe contener tu "API Key" (tu clave secreta).[1] Si el software no la pone automática, tendrás que pegarla manualmente al final del enlace.[1]
+
+Pega en Make: Vuelve a tu módulo HTTP en Make y pega ese enlace en el campo "URL".[1]
+
+Configura la Respuesta: Busca la opción "Parse response" (Analizar respuesta) y marca "Yes" (Sí).[1] Esto es vital para que Make pueda leer y entender los datos que reciba.[1]
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Usando los datos obtenidos (Caso 1)
+##menu-item END
+##Contenido BEGIN
+Usando los datos obtenidos (Caso 1):
+Ahora que tienes el módulo configurado:
+
+Ejecuta la prueba: Dale a correr al módulo.[1][5] Verás que la salida es un texto en formato JSON con datos como el precio de apertura, el más alto, el más bajo y el volumen.
+
+Guarda los Datos: Conecta un siguiente módulo (como una base de datos).
+
+Mapea los Campos: Ahora puedes arrastrar y soltar la información que obtuvo el módulo HTTP (símbolo, fecha, precios) directamente en las columnas de tu base de datos para guardarlos automáticamente.[1]
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Caso 2: Usar una función oculta en un módulo existente
+##menu-item END
+##Contenido BEGIN
+Caso 2: Usar una función oculta en un módulo existente:
+A veces el software sí está en Make (como "Zero Code Kit"), pero le falta una función específica (como "compare string"). Para esto:
+
+Identifica el Módulo: Agrega el módulo de "Zero Code Kit" en Make.[1]
+
+Selecciona la Opción API: En lugar de buscar una acción normal, selecciona la opción que dice "Make an API call" (Hacer una llamada API).[1]
+
+Conecta tu cuenta: Necesitarás tu clave de API para conectar la cuenta si no lo has hecho.[1]
+
+Busca la Documentación: Ve a la documentación del software y busca la función específica ("compare to string").[1] Fíjate que tipo de petición es (en este caso es POST) y qué datos pide el cuerpo (Body), que aquí son "string one" y "string two".
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Configuración técnica de la llamada POST (Caso 2)
+##menu-item END
+##Contenido BEGIN
+Configuración técnica de la llamada POST (Caso 2):
+Rellena los campos del módulo "Make an API call" así:
+
+Endpoint (URL): Solo necesitas poner la parte final de la ruta (ej.[1] "/compare to string"), porque Make ya se sabe la dirección base del software.
+
+Método: Selecciona "POST".[1][6]
+
+Encabezado (Header): Escribe "Content type" y valor "application/json".[1][2][6] Esto avisa al servidor que le vas a mandar datos en formato JSON.[1][5][7]
+
+Cuerpo (Body): Pega la estructura JSON que te dio la documentación con los datos a enviar (las dos cadenas de texto que quieres comparar).[1]
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Ejecución y actualización de registros (Caso 2)
+##menu-item END
+##Contenido BEGIN
+Ejecución y actualización de registros (Caso 2):
+Para hacer funcionar esta automatización:
+
+Disparador: Usa una base de datos donde tengas las dos frases que quieres comparar.[1]
+
+Respuesta: La API analizará el texto y te devolverá valores de "similaridad" y "distancia".[1]
+
+Actualizar: Añade un módulo final para actualizar tu base de datos.[1] Toma los valores de similaridad que te dio la API y guárdalos en la fila correspondiente a las frases originales.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Consejos Finales y Analogía para Principiantes
+##menu-item END
+##Contenido BEGIN
+Consejos Finales y Analogía para Principiantes:
+Si vas a usar esto mucho, aprende cómo funciona el formato JSON.
+
+Para entenderlo mejor, imagina que Make.com es tu control de videojuegos:
+
+Los módulos normales son los botones preprogramados (X, Y, A, B).
+
+Si quieres hacer un "movimiento especial" que no está en los botones, usas el "Ajuste de Comandos API" (los módulos HTTP o "Make an API call").
+
+GET es preguntar: "¿Cuántas monedas tengo?".[1]
+
+POST es ordenar: "Guarda mi partida" o "Crea personaje".[1]
+
+La documentación es el "Manual de Trucos": debes leerla para saber exactamente qué código meter para que el truco funcione.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+A continuación se presentan los recursos oficiales que validan los conceptos técnicos explicados en el tutorial:
+
+Módulo HTTP de Make (Integromat):
+
+Confirmación: El módulo HTTP permite conectar con cualquier servicio web para enviar solicitudes (GET, POST, etc.) sin necesidad de una integración preexistente.[5]
+
+Fuente Oficial: Documentación Módulo HTTP Make
+
+Función "Make an API Call":
+
+Confirmación: Muchas aplicaciones en Make tienen un módulo universal llamado "Make an API Call" para acceder a endpoints que no tienen un módulo dedicado.[1]
+
+Fuente Oficial: Tutorial Make: Cómo hacer una llamada API
+
+API de Polygon.io (Caso de uso financiero):
+
+Confirmación: Existe el endpoint "Daily Open/Close" que requiere el símbolo del stock y la fecha, devolviendo una respuesta JSON.[1][4]
+
+Fuente Oficial: Documentación Polygon.io - Daily Open/Close
+
+Formato JSON:
+
+Confirmación: JSON (JavaScript Object Notation) es el estándar ligero para intercambio de datos mencionado, utilizando pares clave-valor.[3][8]
+
+Fuente Oficial: Introducción a JSON (JSON.org)
+
+
+Sources
+help
+educative.io
+make.com
+abstractapi.com
+readthedocs.io
+lets-viz.com
+youtube.com
+youtube.com
+youtube.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+what is JSON in API requests
+Make.com HTTP module documentation official
+Polygon.io API documentation daily open close
+Make.com make an API call feature documentation
+##Contenido END

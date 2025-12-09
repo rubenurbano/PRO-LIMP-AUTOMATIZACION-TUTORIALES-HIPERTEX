@@ -1,0 +1,244 @@
+##HIPERTEX-META BEGIN
+title: CLI y Automatización con Typer y Schedule en Python
+tags: python, typer, schedule, cli, automatización
+creationDate: 2025-11-08
+##HIPERTEX-META END
+
+##itemID:1
+##menu-item BEGIN
+Introducción
+##menu-item END
+##Contenido BEGIN
+TUTORIAL PASO A PASO (UNA SOLA ACCIÓN POR PASO)
+CLI + AUTOMATIZACIÓN CON TYPER Y SCHEDULE PYTHON
+
+OBJETIVO:
+- Crear un comando en terminal: "miapp saludar --nombre Rubén"
+- Añadir una tarea repetitiva que se ejecute cada X segundos/minutos con schedule.
+##Contenido END
+
+##itemID:2
+##menu-item BEGIN
+Paso 1: Abrir Terminal
+##menu-item END
+##Contenido BEGIN
+────────────────────────────────────
+PASO 1
+Abre tu terminal (PowerShell, CMD o terminal de VS Code) en tu carpeta de trabajo.
+##Contenido END
+
+##itemID:3
+##menu-item BEGIN
+Paso 2: Mover Directorio
+##menu-item END
+##Contenido BEGIN
+PASO 2
+Mueve el directorio actual a tu carpeta de proyectos (ejemplo):
+cd C:\Users\rubenurbano\HIPERTEX
+##Contenido END
+
+##itemID:4
+##menu-item BEGIN
+Paso 3: Crear main.py
+##menu-item END
+##Contenido BEGIN
+PASO 3
+Crea un archivo nuevo llamado main.py:
+notepad main.py
+##Contenido END
+
+##itemID:5
+##menu-item BEGIN
+Paso 4: Pegar Código
+##menu-item END
+##Contenido BEGIN
+PASO 4
+Pega el siguiente código COMPLETO dentro de main.py y guarda el archivo:
+
+-----------------------------------
+import time
+from datetime import datetime
+
+import typer
+import schedule
+from rich import print
+
+app = typer.Typer(help="CLI de ejemplo con Typer + schedule")
+
+# 1) COMANDO CLI NORMAL -------------------------------------------------
+@app.command()
+def saludar(nombre: str = "Rubén"):
+    """
+    Saluda por consola con el nombre indicado.
+    """
+    print(f"[bold green]Hola, {nombre}!"[/bold green]  😎")
+
+
+# 2) FUNCION QUE QUEREMOS REPETIR --------------------------------------
+def tarea_programada():
+    """
+    Acción que se ejecutará de forma repetitiva.
+    """
+    ahora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[cyan]{ahora}[/cyan] - Ejecutando tarea programada...")
+
+
+# 3) COMANDO PARA INICIAR EL SCHEDULER ---------------------------------
+@app.command()
+def iniciar_scheduler(
+    cada_segundos: int = typer.Option(10, help="Intervalo en segundos entre cada ejecución.")
+):
+    """
+    Inicia un bucle que ejecuta 'tarea_programada' cada X segundos.
+    """
+    print(f"[yellow]Iniciando scheduler. Ejecutaré la tarea cada {cada_segundos} segundos.[/yellow]")
+    schedule.every(cada_segundos).seconds.do(tarea_programada)
+
+    # Bucle principal del scheduler
+    try:
+        while True:
+            schedule.run_pending()
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("[red]Scheduler detenido por el usuario.[/red]")
+
+
+# 4) PUNTO DE ENTRADA PRINCIPAL ----------------------------------------
+if __name__ == "__main__":
+    app()
+-----------------------------------
+##Contenido END
+
+##itemID:6
+##menu-item BEGIN
+Paso 5: Cerrar Notepad
+##menu-item END
+##Contenido BEGIN
+PASO 5
+Cierra Notepad después de guardar main.py.
+##Contenido END
+
+##itemID:7
+##menu-item BEGIN
+Paso 6: Verificar Directorio
+##menu-item END
+##Contenido BEGIN
+PASO 6
+En la terminal, asegúrate de estar en la carpeta donde está main.py:
+cd C:\Users\rubenurbano\HIPERTEX
+##Contenido END
+
+##itemID:8
+##menu-item BEGIN
+Paso 7: Probar Typer
+##menu-item END
+##Contenido BEGIN
+PASO 7
+Ejecuta un primer comando CLI para probar Typer:
+python main.py --help
+##Contenido END
+
+##itemID:9
+##menu-item BEGIN
+Paso 8: Observar Ayuda
+##menu-item END
+##Contenido BEGIN
+PASO 8
+Observa en la terminal la ayuda generada automáticamente por Typer (no hagas nada más).
+##Contenido END
+
+##itemID:10
+##menu-item BEGIN
+Paso 9: Saludo Simple
+##menu-item END
+##Contenido BEGIN
+PASO 9
+Prueba el comando de saludo simple:
+python main.py saludar
+##Contenido END
+
+##itemID:11
+##menu-item BEGIN
+Paso 10: Saludo con Nombre
+##menu-item END
+##Contenido BEGIN
+PASO 10
+Prueba el comando de saludo con tu nombre:
+python main.py saludar --nombre "Rubén"
+##Contenido END
+
+##itemID:12
+##menu-item BEGIN
+Paso 11: Verificar Saludo
+##menu-item END
+##Contenido BEGIN
+PASO 11
+Verifica que aparece el saludo en verde con Rich (no hagas nada más).
+##Contenido END
+
+##itemID:13
+##menu-item BEGIN
+Paso 12: Iniciar Scheduler
+##menu-item END
+##Contenido BEGIN
+PASO 12
+Inicia ahora el scheduler para ejecutar una tarea cada 5 segundos:
+python main.py iniciar-scheduler --cada-segundos 5
+##Contenido END
+
+##itemID:14
+##menu-item BEGIN
+Paso 13: Observar Ejecución
+##menu-item END
+##Contenido BEGIN
+PASO 13
+Observa durante unos segundos cómo se imprime en la consola la hora y el mensaje:
+YYYY-MM-DD HH:MM:SS - Ejecutando tarea programada...
+##Contenido END
+
+##itemID:15
+##menu-item BEGIN
+Paso 14: Detener Scheduler
+##menu-item END
+##Contenido BEGIN
+PASO 14
+Detén el scheduler cuando quieras con la combinación de teclas:
+Ctrl + C
+##Contenido END
+
+##itemID:16
+##menu-item BEGIN
+Paso 15: Cerrar Terminal
+##menu-item END
+##Contenido BEGIN
+PASO 15
+Cierra la terminal si ya no quieres seguir usando la CLI.
+##Contenido END
+
+##itemID:17
+##menu-item BEGIN
+Resumen de Comandos
+##menu-item END
+##Contenido BEGIN
+────────────────────────────────────
+RESUMEN DE COMANDOS IMPORTANTES
+
+1) Ver ayuda general de la CLI:
+python main.py --help
+
+2) Ver ayuda de un comando concreto:
+python main.py saludar --help
+python main.py iniciar-scheduler --help
+
+3) Ejecutar saludo:
+python main.py saludar
+python main.py saludar --nombre "Rubén"
+
+4) Iniciar tarea repetitiva cada X segundos:
+python main.py iniciar-scheduler --cada-segundos 10
+
+Con esto ya tienes:
+- Un CLI propio basado en Typer.
+- Una tarea repetitiva simple usando schedule.
+- Salida coloreada gracias a rich.
+##Contenido END

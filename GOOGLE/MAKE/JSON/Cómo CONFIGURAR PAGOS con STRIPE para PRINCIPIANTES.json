@@ -1,0 +1,55 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Cómo CONFIGURAR PAGOS con STRIPE para PRINCIPIANTES\nWEB ORIGINAL:",
+      "contenido": "Cómo CONFIGURAR PAGOS con STRIPE para PRINCIPIANTES:\nWeb Original:\n\nCómo CONFIGURAR PAGOS con STRIPE para PRINCIPIANTES:\nhttps://youtu.be/Qkdcr_kE0uo?si=oxIx4nGzUBfnnHZ"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "¿Qué es Stripe y para qué sirve?",
+      "contenido": "¿Qué es Stripe y para qué sirve?:\n\nStripe es una plataforma muy segura y fácil de usar que permite recibir pagos en Internet. Es ideal para quienes venden productos por internet, ofrecen servicios o crean contenido digital. Con Stripe puedes aceptar pagos usando tarjetas de crédito, débito y métodos modernos como Apple Pay o Google Pay. No necesitas tener conocimientos técnicos previos ni ser una empresa grande. Todo el proceso es sencillo y se adapta a principiantes."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Cómo crear una cuenta en Stripe",
+      "contenido": "Cómo crear una cuenta en Stripe:\n\nPara recibir pagos con Stripe, necesitas crear una cuenta gratuita desde la página oficial de Stripe. Solo tienes que ingresar tu correo electrónico y crear una contraseña. Luego debes verificar tu correo electrónico para activar la cuenta. \nUna vez verificado, Stripe te pedirá información básica de tu negocio o de ti mismo si eres autónomo. \nTambién te pedirá que agregues tu cuenta bancaria, ya que Stripe te enviará ahí el dinero de los pagos que recibas.\nEn todo momento, Stripe te guía y muestra avisos claros para que completes cada sección fácilmente."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Acceder a la plataforma de Stripe",
+      "contenido": "Acceder a la plataforma de Stripe:\n\nDespués de registrarte y verificar tu cuenta, tienes que iniciar sesión en la web de Stripe con tu correo y contraseña. Al entrar verás tu Panel de control (Dashboard), desde donde puedes gestionar productos, pagos y personalizar enlaces."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Cómo crear un enlace de pago en Stripe",
+      "contenido": "Cómo crear un enlace de pago en Stripe:\n\nPara recibir pagos fácilmente, lo mejor es crear un enlace de pago. Al entrar al Dashboard de Stripe, busca la opción que dice \"Compartir enlace de pago\". Haz clic ahí y luego pulsa en \"Iniciar\". \nEn la parte derecha de la pantalla verás una vista previa del enlace que estás creando. De este modo puedes saber exactamente cómo lo verán tus clientes antes de compartirlo."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Agregar productos y detalles del pago",
+      "contenido": "Agregar productos y detalles del pago:\n\nEn la sección de producto, haz clic para agregar un nuevo producto o servicio. \nPonle un nombre relacionado con lo que vas a vender. \nIndica la frecuencia del pago: puede ser puntual, mensual, anual, cada 3 meses o cada 6 meses. \nLuego, escribe la cantidad de dinero que deseas cobrar. \nSi quieres, puedes agregar una foto del producto, aunque este paso no es obligatorio. \nMientras completas estos campos, verás cómo cambian los datos en tiempo real en la vista previa de la derecha, como si fuera un cupón de pago."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Personalizar opciones del enlace de pago",
+      "contenido": "Personalizar opciones del enlace de pago:\n\nStripe te permite decidir si quieres pedir la dirección o el número de teléfono a tus clientes. Todo esto lo puedes ajustar según tus necesidades. \nEn opciones avanzadas, puedes agregar otros campos para pedir más datos, como información fiscal o un identificador personalizado.\nTambién es posible permitir que tus clientes usen códigos de descuento, acepta promociones o guarden sus datos de pago para próximas compras. Si agregas campos personalizados, puedes cambiar el nombre de la etiqueta y decidir si ese campo es obligatorio u opcional."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Finalizar y compartir el enlace de pago",
+      "contenido": "Finalizar y compartir el enlace de pago:\n\nAl terminar de ajustar todo, haz clic en el botón \"Crear enlace\". \nEsto generará un enlace único que puedes copiar y compartir con tus clientes por mensaje, correo electrónico o poner en una página web. \nAl abrirlo, las personas verán un botón para pagar (el texto de este botón también se puede personalizar, por ejemplo: \"Reservar\", \"Donar\" o \"Comprar\"). \nAsí de sencillo, puedes recibir pagos en pocos minutos usando Stripe."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Resumen y consejos finales",
+      "contenido": "Resumen y consejos finales:\n\nStripe es una herramienta sencilla y segura para recibir pagos por Internet, no importa si recién estás empezando o ya tienes un negocio formado. Solo necesitas una cuenta, tu información básica, enlazar tu cuenta bancaria y seguir los pasos para crear y personalizar tus enlaces de pago. Todo el proceso es guiado y está pensado para que cualquier persona pueda recibir pagos rápido y de manera segura."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\n1. La documentación oficial de Stripe indica que para usar Stripe necesitas crear una cuenta gratuita y verificar tu dirección de correo electrónico. Fuente: https://docs.stripe.com/get-started/account?locale=es-ES\n\n2. Para recibir pagos, Stripe requiere vincular una cuenta bancaria. Se puede hacer y actualizar en la configuración del Dashboard y Stripe confirmará la cuenta con microdepósitos. Fuente: https://docs.stripe.com/payouts?locale=es-ES\n\n3. Stripe ofrece la función de enlaces de pago, que permite cobrar a través de links personalizables. Los pasos incluyen seleccionar producto, personalizar campos y generar el enlace. Fuente: https://stripe.com/es-us/resources/more/payment-links\n\n4. Todas las configuraciones propuestas en este tutorial están validadas y documentadas paso a paso en la sección de ayuda oficial para empezar con Stripe. Fuente: https://docs.stripe.com/?locale=es-ES\n\n\n\n[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/64556067/db69ca21-99b8-4d0c-aeaa-443d16bc31f2/transcripcion-hoy.txt)\n[2](https://docs.stripe.com/get-started/account?locale=es-ES)\n[3](https://docs.stripe.com/?locale=es-ES)\n[4](https://support.stripe.com/topics/getting-started?locale=es-ES)\n[5](https://docs.stripe.com/implementation-guides?locale=es-ES)\n[6](https://www.youtube.com/watch?v=xkUZB8HIr_g)\n[7](https://stripe.com/es-us/resources/more/payment-links)\n[8](https://docs.stripe.com/payouts?locale=es-ES)\n[9](https://docs.aws.amazon.com/es_es/glue/latest/dg/stripe-new-account-creation.html)\n[10](https://www.youtube.com/watch?v=7n1msfvxJU0)\n[11](https://docs.stripe.com/connect/add-and-pay-out-guide?locale=es-419)"
+    }
+  ]
+}

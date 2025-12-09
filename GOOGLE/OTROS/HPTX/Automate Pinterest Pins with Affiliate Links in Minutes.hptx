@@ -1,0 +1,498 @@
+A continuación se presenta el tutorial completo basado en el contenido del video especificado en el archivo adjunto (URL proporcionada), respetando estrictamente la estructura y los tags solicitados.
+
+##itemID:000
+##menu-item BEGIN
+[TITULO_VIDEO]
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+[TITULO_VIDEO]:
+[1]Web Original:
+
+Automate Pinterest Pins with Affiliate Links in Minutes:
+https://youtu.be/eqzUqCVqYpM?si=iTZigABgnmHorIVP
+
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción y Estructura del Proyecto
+##menu-item END
+##Contenido BEGIN
+Introducción y Estructura del Proyecto:
+
+En este tutorial vamos a construir un sistema automatizado que publica pines en Pinterest con tus enlaces de [1]afiliado para generar ingresos pasivos. El objetivo es que no tengas que hacerlo manualmente cada día.
+
+El proceso se divid[1]e en 4 pasos sencillos que cualquier principiante puede seguir:
+
+Cuenta de Pinterest Business: Necesaria para acceder a las herramientas de auto[1]matización.
+
+Selección del Nicho: Encontrar temas que la gente esté buscando ac[1]tivamente.
+
+Programas de Afiliados: Dónde conseguir los prod[1]uctos para promocionar.
+[1][2][3]4. La Automatización (Make.com): Conectar las piezas para que el robot trabaje solo.
+
+Herramient[1]as que usaremos:
+
+Pinterest (Cuenta Business)
+
+Google Sheets (Para organizar los productos)
+
+Make[1] (Para conectar todo)
+
+OpenAI (Para generar textos con Inteligencia Artificial)
+
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Paso 1: Configurar Cuenta Business y Selección de Nicho
+##menu-item END
+##Contenido BEGIN
+Paso 1: Configurar Cuenta[1] Business y Selección de Nicho:
+
+Cuenta Business:
+L[1]o primero es asegurarte de tener una cuenta de Pinterest Business. Si ya tienes una personal, puedes convertirla gratis. Esto es obligatorio porque solo las cuentas de empresa tienen acceso a la API (la puerta trasera que [1]permite a los robots publicar) y a las analíticas para ver qué funci[1][4][5]ona.
+
+Selección del Nicho:
+No publiques cosas al azar. Usa la herramienta oficial trends.pinteres[1]t.com para ver qué está buscando la gente ahora mismo.
+
+Busca palabras clave relacionadas con tus intereses (ej. "decoración hogar", "fitness", "gadgets").
+
+Elige un tema que tenga una tendencia de bú[1]squeda estable o en crecimiento.
+
+Programas de Afiliados:
+Regístrate en plataformas como Amazon Associates, ShareASale o PartnerStack. Aquí obtendrás tus "enlaces únicos". Cuando a[1][2][4]lguien haga clic en tu pin y compre, tú ganarás una comisión.
+
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN[1]
+Paso 2: Preparar la Hoja de Google (Google Sheets)
+##menu-item END
+##Contenid[1]o BEGIN
+Paso 2: Preparar la Hoja de G[1][2][5][6]oogle (Google Sheets):
+
+Vamos a crear la "base de datos" de [1]donde el robot sacará la información.
+
+Ab[1]re un nuevo Google Sheet.
+
+En la primera fila, crea los siguientes encabezados de columna:
+[1] - Producto: (Nombre del artículo).
+
+Enlace de Afiliado: (Tu link de venta).
+
+URL Imagen: (El link directo a la foto del producto).
+
+Estado: (Para saber si ya se publicó, déjalo vacío al inicio).
+
+Rellena la segunda fila con un ejemplo real para poder probar la automatización en el siguiente paso.
+
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 3: Configurar la Au[1]tomatización en Make
+##menu-item END
+##Contenido BEGIN
+Paso 3: Configurar la Automatizaci[1]ón en Make:
+
+Entra en Make.com y crea un nuevo "Scenario".
+
+Módulo 1: Google Sheets
+
+Añade el módulo "Google Sheets" y seleccion[1]a la acción "Watch Rows" (Vigilar filas).
+
+Conecta tu cuenta de Google y seleccio[1]na la hoja que creamos antes.
+
+Configura el límite en 1 para que procese un producto a la vez en cada ejecución.
+
+Módulo 2: OpenAI (ChatGPT)
+
+Añade el módulo "OpenAI" y selecciona "Create a completion" ([1]Chat Completions).
+
+En el mensaje al sistema, dale instrucciones claras: "Eres un experto en Pinterest SEO. Escribe un Título, una[1][5] Descripción atractiva y Texto Alt basado en el siguiente producto: [Producto]".
+
+Usa las burbujas de datos del módulo de Google Sheets para insertar el nombre del producto dinámicamente.
+
+Pídele que te entregue el resultado en formato JSON para que sea fá[1]cil de separar después (Título, Descripción, Not[1][6]a).
+
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+[1][6]Paso 4: Publicar en Pinterest y Actualizar Hoja
+#[1]#menu-item END
+##Contenido BEGIN
+Paso 4: Publicar en Pinterest y Actualizar Hoja:
+
+Módulo 3: Pinterest
+
+Añade el módulo "Pinterest" y selecciona [1]"Create a Pin".
+
+Conecta tu cuenta Business.
+
+Rellena los campos usando los datos que vie[1]nen de los pasos anteriores:
+
+Board: Elige tu tablero.
+
+Image URL: Seleccio[1][5]na la columna "URL Imagen" de Google Sheets.
+
+Title: Selecciona el título generado por O[1]penAI.
+
+Note (Descripción): Selecciona la descripción generada por OpenAI[1].
+
+Link: Selecciona la columna "Enlace de Afiliado" de Google Sheets.
+
+Módulo 4: Google Sheets (Actualizar)
+
+Añade un último módulo "Google Sheets" con la acción "Update a Row".
+
+Configúralo para que escriba "Publicado" en la columna "Estado" de la fila que acaba de procesar. Esto evita que el robot vuelva a publicar el mismo producto dos veces.
+
+Dale a "Run Once" para probarlo y luego activa el "Schedule" (Horario) para que corra automáticamente cada día.
+
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+VALIDACI[1]ÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+A continuación se validan los pasos técnicos descritos util[1]izando documentación oficial:
+
+Requisito de Cuenta Business y Acceso a API:
+Pinterest especifica que el acceso programáti[1]co para crear contenido (Pines) requiere una cuenta comercial y la configuración de una aplicación para acceder a la API v5.
+Fuente: https://develo[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQHa-ahxa_32TFkuZsk15faEO2phZDu74akrbafHXu-IZwOXCIryTLvKtAC5OsroaoKm_L6o4QLTy2Lb18OgDBnn3PDMZ8hW6hqFL3TiRWImoeIq2SUSfHM738ZUie8pEYN_uh1iCoeblPoBaHlo2-KCllyQ5LShxlyLwm2BWr7UCuNHRuD2PyWoV1SEC6h1H-oecZiaRNqCBNeSV8NAnps%3D)] El objetivo es que no tengas que hacerlo manualmente cada día.
+
+El proceso se divide en 4 pasos sencillos que cualquier principiante puede seguir:
+
+Cuenta de Pinterest Business: Necesaria para acceder a las herramientas de automatización.
+
+Selección del Nicho: Encontrar temas que la gente esté buscando activamente.
+
+Programas de Afiliados: Dónde conseguir los productos para promocionar.
+
+La Automatización (Make.com): Conectar las piezas para que el robot trabaje solo.
+
+Herramientas que usaremos:
+
+Pinterest (Cuenta Business)
+
+Google Sheets (Para organizar los productos)
+
+Make (Para conectar todo)
+
+OpenAI (Para generar textos con Inteligencia Artificial)
+
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Paso 1: Configurar Cuenta Business y Selección de Nicho
+##menu-item END
+##Contenido BEGIN
+Paso 1: Configurar Cuenta Business y Selección de Nicho:
+
+Cuenta Business:
+Lo primero es asegurarte de tener una cuenta de Pinterest Business. Si ya tienes una personal, puedes convertirla gratis. Esto es obligatorio porque solo las cuentas de empresa tienen acceso a la API (la puerta trasera que permite a los robots publicar) y a las analíticas para ver qué funciona.
+
+Selección del Nicho:
+No publiques cosas al azar. Usa la herramienta oficial trends.pinterest.com para ver qué está buscando la gente ahora mismo.
+
+Busca palabras clave relacionadas con tus intereses (ej. "decoración hogar", "fitness", "gadgets").
+
+Elige un tema que tenga una tendencia de búsqueda estable o en crecimiento.
+
+Programas de Afiliados:
+Regístrate en plataformas como Amazon Associates, ShareASale o PartnerStack. Aquí obtendrás tus "enlaces únicos". Cuando alguien haga clic en tu pin y compre, tú ganarás una comisión.
+
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Paso 2: Preparar la Hoja de Google (Google Sheets)
+##menu-item END
+##Contenido BEGIN
+Paso 2: Preparar la Hoja de Google (Google Sheets):
+
+Vamos a crear la "base de datos" de donde el robot sacará la información.
+
+Abre un nuevo Google Sheet.
+
+En la primera fila, crea los siguientes encabezados de columna:
+
+Producto: (Nombre del artículo).
+
+Enlace de Afiliado: (Tu link de venta).
+
+URL Imagen: (El link directo a la foto del producto).
+
+Estado: (Para saber si ya se publicó, déjalo vacío al inicio).
+
+Rellena la segunda fila con un ejemplo real para poder probar la automatización en el siguiente paso.
+
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 3: Configurar la Automatización en Make
+##menu-item END
+##Contenido BEGIN
+Paso 3: Configurar la Automatización en Make:
+
+Entra en Make.com y crea un nuevo "Scenario".
+
+Módulo 1: Google Sheets
+
+Añade el módulo "Google Sheets" y selecciona la acción "Watch Rows" (Vigilar filas).
+
+Conecta tu cuenta de Google y selecciona la hoja que creamos antes.
+
+Configura el límite en 1 para que procese un producto a la vez en cada ejecución.
+
+Módulo 2: OpenAI (ChatGPT)
+
+Añade el módulo "OpenAI" y selecciona "Create a completion" (Chat Completions).
+
+En el mensaje al sistema, dale instrucciones claras: "Eres un experto en Pinterest SEO. Escribe un Título, una Descripción atractiva y Texto Alt basado en el siguiente producto: [Producto]".
+
+Usa las burbujas de datos del módulo de Google Sheets para insertar el nombre del producto dinámicamente.
+
+Pídele que te entregue el resultado en formato JSON para que sea fácil de separar después (Título, Descripción, Nota).
+
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 4: Publicar en Pinterest y Actualizar Hoja
+##menu-item END
+##Contenido BEGIN
+Paso 4: Publicar en Pinterest y Actualizar Hoja:
+
+Módulo 3: Pinterest
+
+Añade el módulo "Pinterest" y selecciona "Create a Pin".
+
+Conecta tu cuenta Business.
+
+Rellena los campos usando los datos que vienen de los pasos anteriores:
+
+Board: Elige tu tablero.
+
+Image URL: Selecciona la columna "URL Imagen" de Google Sheets.
+
+Title: Selecciona el título generado por OpenAI.
+
+Note (Descripción): Selecciona la descripción generada por OpenAI.
+
+Link: Selecciona la columna "Enlace de Afiliado" de Google Sheets.
+
+Módulo 4: Google Sheets (Actualizar)
+
+Añade un último módulo "Google Sheets" con la acción "Update a Row".
+
+Configúralo para que escriba "Publicado" en la columna "Estado" de la fila que acaba de procesar. Esto evita que el robot vuelva a publicar el mismo producto dos veces.
+
+Dale a "Run Once" para probarlo y luego activa el "Schedule" (Horario) para que corra automáticamente cada día.
+
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+A continuación se validan los pasos técnicos descritos utilizando documentación oficial:
+
+Requisito de Cuenta Business y Acceso a API:
+Pinterest especifica que el acceso programático para crear contenido (Pines) requiere una cuenta comercial y la configuración de una aplicación para acceder a la API v5.
+Fuente: https://develo[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQHdX2TQwnQWkp74A-wk3wsWX8eWvwWmEw6KfK0qTMyTXWwdU9H6Pim1r-sk4_MhI44xFuxeF_ZocuCynPUfg6IkMA3zo5XVQJ5JfRBClrBya9QUmQ249hlzUb9ENGszw51QdvOYfhJqyqUz28v7Zbdq0-a1q875gmq6vKI7aX3-k5OCjUKZ5X4aVcn0NgW2eBBtJnqlFeJdUaCArUcTARHfvfSAYXgp6Eekflvaw-cLTc0%3D)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQFlQAF4JiSWK52_9CzSUzYrp1LbILjpeXBXAz6d2DXT2HEPs24ewrgofm8lODCRDwLKgcmyW2AF6k0wRSB78yLAzsotzToeWvuXrAlvawyfqdz0oZ_BBp0OIAcTFnI6aGdjiva1B0A%3D)] El objetivo es que no tengas que hacerlo manualmente cada día.
+
+El proceso se divide en 4 pasos sencillos que cualquier principiante puede seguir:
+
+Cuenta de Pinterest Business: Necesaria para acceder a las herramientas de automatización.[1][2][3][4]
+
+Selección del Nicho: Encontrar temas que la gente esté buscando activamente.[2]
+
+Programas de Afiliados: Dónde conseguir los productos para promocionar.
+
+La Automatización (Make.com): Conectar las piezas para que el robot trabaje solo.
+
+Herramientas que usaremos:
+
+Pinterest (Cuenta Business)[1][2][3][5]
+
+Google Sheets (Para organizar los productos)
+
+Make (Para conectar todo)
+
+OpenAI (Para generar textos con Inteligencia Artificial)[3]
+
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Paso 1: Configurar Cuenta Business y Selección de Nicho
+##menu-item END
+##Contenido BEGIN
+Paso 1: Configurar Cuenta Business y Selección de Nicho:
+
+Cuenta Business:
+Lo primero es asegurarte de tener una cuenta de Pinterest Business.[2] Si ya tienes una personal, puedes convertirla gratis.[2] Esto es obligatorio porque solo las cuentas de empresa tienen acceso a la API (la puerta trasera que permite a los robots publicar) y a las analíticas para ver qué funciona.
+
+Selección del Nicho:
+No publiques cosas al azar. Usa la herramienta oficial trends.pinterest.com para ver qué está buscando la gente ahora mismo.
+
+Busca palabras clave relacionadas con tus intereses (ej. "decoración hogar", "fitness", "gadgets").
+
+Elige un tema que tenga una tendencia de búsqueda estable o en crecimiento.[2]
+
+Programas de Afiliados:
+Regístrate en plataformas como Amazon Associates, ShareASale o PartnerStack.[2] Aquí obtendrás tus "enlaces únicos". Cuando alguien haga clic en tu pin y compre, tú ganarás una comisión.[1][2][4][6]
+
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Paso 2: Preparar la Hoja de Google (Google Sheets)
+##menu-item END
+##Contenido BEGIN
+Paso 2: Preparar la Hoja de Google (Google Sheets):
+
+Vamos a crear la "base de datos" de donde el robot sacará la información.[2]
+
+Abre un nuevo Google Sheet.[2]
+
+En la primera fila, crea los siguientes encabezados de columna:
+
+Producto: (Nombre del artículo).
+
+Enlace de Afiliado: (Tu link de venta).
+
+URL Imagen: (El link directo a la foto del producto).
+
+Estado: (Para saber si ya se publicó, déjalo vacío al inicio).[2]
+
+Rellena la segunda fila con un ejemplo real para poder probar la automatización en el siguiente paso.
+
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 3: Configurar la Automatización en Make
+##menu-item END
+##Contenido BEGIN
+Paso 3: Configurar la Automatización en Make:
+
+Entra en Make.com y crea un nuevo "Scenario".[2][5][7]
+
+Módulo 1: Google Sheets
+
+Añade el módulo "Google Sheets" y selecciona la acción "Watch Rows" (Vigilar filas).[2]
+
+Conecta tu cuenta de Google y selecciona la hoja que creamos antes.[2]
+
+Configura el límite en 1 para que procese un producto a la vez en cada ejecución.
+
+Módulo 2: OpenAI (ChatGPT)
+
+Añade el módulo "OpenAI" y selecciona "Create a completion" (Chat Completions).[5]
+
+En el mensaje al sistema, dale instrucciones claras: "Eres un experto en Pinterest SEO. Escribe un Título, una Descripción atractiva y Texto Alt basado en el siguiente producto: [Producto]".
+
+Usa las burbujas de datos del módulo de Google Sheets para insertar el nombre del producto dinámicamente.
+
+Pídele que te entregue el resultado en formato JSON para que sea fácil de separar después (Título, Descripción, Nota).
+
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 4: Publicar en Pinterest y Actualizar Hoja
+##menu-item END
+##Contenido BEGIN
+Paso 4: Publicar en Pinterest y Actualizar Hoja:
+
+Módulo 3: Pinterest
+
+Añade el módulo "Pinterest" y selecciona "Create a Pin".[4][5][7]
+
+Conecta tu cuenta Business.[2]
+
+Rellena los campos usando los datos que vienen de los pasos anteriores:
+
+Board: Elige tu tablero.
+
+Image URL: Selecciona la columna "URL Imagen" de Google Sheets.
+
+Title: Selecciona el título generado por OpenAI.
+
+Note (Descripción): Selecciona la descripción generada por OpenAI.
+
+Link: Selecciona la columna "Enlace de Afiliado" de Google Sheets.[2]
+
+Módulo 4: Google Sheets (Actualizar)
+
+Añade un último módulo "Google Sheets" con la acción "Update a Row".
+
+Configúralo para que escriba "Publicado" en la columna "Estado" de la fila que acaba de procesar. Esto evita que el robot vuelva a publicar el mismo producto dos veces.[2]
+
+Dale a "Run Once" para probarlo y luego activa el "Schedule" (Horario) para que corra automáticamente cada día.[5]
+
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+A continuación se validan los pasos técnicos descritos utilizando documentación oficial:
+
+Requisito de Cuenta Business y Acceso a API:
+Pinterest especifica que el acceso programático para crear contenido (Pines) requiere una cuenta comercial y la configuración de una aplicación para acceder a la API v5.
+Fuente: https://developers.pinterest.com/docs/getting-started/introduction/
+
+Creación de Pines vía API (Create Pin):
+La documentación oficial de la API de Pinterest detalla los parámetros obligatorios para crear un pin: board_id, media_source (URL de imagen), title, description y link.
+Fuente: https://developers.pinterest.com/docs/api/v5/#operation/pins/create
+
+Módulo Watch Rows de Google Sheets:
+La documentación de Make confirma que el disparador "Watch Rows" se utiliza para detectar nuevas filas añadidas a una hoja de cálculo, esencial para iniciar el flujo.
+Fuente: https://www.make.com/en/help/apps/productivity/google-sheets#watch-rows
+
+Generación de Contenido con OpenAI:
+El uso del endpoint de Chat Completions para generar texto estructurado (JSON) o creativo es la práctica estándar documentada por OpenAI.
+Fuente: https://platform.openai.com/docs/guides/chat
+
+
+
+Sources
+help
+reddit.com
+youtube.com
+notegpt.io
+makeitnocode.com
+effinity.fr
+youtube.com
+makeitnocode.com
+youtube.com
+theaiautomators.com
+youtube.com
+youtube.com
+youtube.com
+youtube.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+automate Pinterest Pins with Affiliate Links in Minutes eqzUqCVqYpM
+youtube video eqzUqCVqYpM transcript summary
+automate pinterest pins affiliate links make.com tutorial
+youtube video summary "Automate Pinterest Pins with Affiliate Links in Minutes" eqzUqCVqYpM
+transcript of youtube video eqzUqCVqYpM
+##Contenido END

@@ -1,0 +1,210 @@
+##itemID:000
+##menu-item BEGIN
+[TITULO_VIDEO]
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+[TITULO_VIDEO]:
+Parte 2_Gestion de Citas con Appsheet y Google Calendar-Tablas y Correos con HTML
+Web Original:
+https://youtu.be/3jLOTqyS_b0?si=sy8LHXPX6RmQ4Rjk
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción y Objetivos
+##menu-item END
+##Contenido BEGIN
+Introducción y Objetivos:
+Este video es la continuación del desarrollo de una aplicación en AppSheet para gestionar citas diarias. El objetivo principal es hacer la aplicación más profesional añadiendo dos funciones clave:
+
+Registrar información detallada sobre quién da el servicio (asesores) y quién lo recibe (clientes).
+
+Enviar correos electrónicos personalizados utilizando formato HTML.[1]
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Creación de Nuevas Tablas
+##menu-item END
+##Contenido BEGIN
+Creación de Nuevas Tablas:
+Para gestionar mejor la información, se deben crear dos nuevas tablas o listas de datos:
+
+Tabla de Clientes: Contiene los datos de las personas que reciben el servicio.
+
+Tabla de Asesores: Contiene los datos de las personas que brindan el servicio.
+
+Ambas tablas deben tener la misma estructura básica con tres campos fundamentales:
+
+ID único.
+
+Nombre de la persona.
+
+Correo electrónico (necesario para las invitaciones).
+
+Además, se debe actualizar la tabla principal de "Citas Diarias" añadiendo dos nuevos campos: "ID Asesor" e "ID Cliente".
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Configuración de Datos en AppSheet
+##menu-item END
+##Contenido BEGIN
+Configuración de Datos en AppSheet:
+Una vez creadas las tablas, se configuran dentro de AppSheet con los siguientes pasos:
+
+Validación Básica:
+
+Asegurar que el campo ID sea único (Unique ID).
+
+Configurar la etiqueta (label) para que muestre el Nombre de la persona en lugar del código ID.
+
+Marcar estos campos como obligatorios.
+
+Establecer Referencias:
+En la tabla de Citas Diarias, es necesario regenerar la estructura. Los nuevos campos (ID Asesor e ID Cliente) se deben configurar como referencias (links). Esto permite que, al crear una cita, se seleccione directamente el nombre desde la lista de Asesores o Clientes, en lugar de escribirlo manualmente.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Personalización del Formulario e Invitados
+##menu-item END
+##Contenido BEGIN
+Personalización del Formulario e Invitados:
+Se ajusta la vista del formulario para que sea más lógica y limpia:
+
+Orden de campos: Cliente, Título, Descripción, Horario y Asesor.
+
+Etiquetas: Se acortan los nombres para que solo digan "Asesor" y "Cliente".
+
+Lista de Invitados:
+Se modifica el campo de invitados para que se llene automáticamente. Se configura AppSheet para que tome el correo electrónico del ID del asesor y lo combine con el correo electrónico del ID del cliente. De esta forma, la aplicación envía la invitación a ambas partes automáticamente.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Pruebas y Corrección de Descripción
+##menu-item END
+##Contenido BEGIN
+Pruebas y Corrección de Descripción:
+Se realiza una prueba inicial creando una cita con un cliente (ej. Rebeca López) y un asesor (ej. Marta Mejía).
+
+Error Detectado:
+Al guardar, la descripción de la cita no se actualiza ni visualiza correctamente en el sistema.
+
+Solución:
+Se debe validar la asignación de citas y verificar que el campo de descripción esté incluido en la lógica de actualización (por ejemplo, asegurando que la copia de seguridad incluya todos los archivos importantes). Tras corregir esto, se prueba de nuevo para confirmar que la descripción se guarde bien.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Configuración de Correos con HTML
+##menu-item END
+##Contenido BEGIN
+Configuración de Correos con HTML:
+Para enviar correos profesionales, se sustituye el formato simple por un archivo HTML.
+
+Pasos para activar HTML:
+
+En la automatización de correos de AppSheet, ir a "otros parámetros del correo".
+
+Seleccionar la opción para usar un archivo HTML.[2]
+
+Estructura del Archivo HTML:
+
+Contiene código CSS para el diseño (tipos de letra, colores).
+
+Incluye el mensaje de bienvenida y detalles de la cita.
+
+Usa parámetros para mostrar datos variables (como nombres). Atención: Los símbolos de los parámetros (< >) deben escribirse de forma codificada para no confundir al código HTML.
+
+El archivo (ej. cita.html) se debe subir a Google Drive, preferiblemente en la misma carpeta que la hoja de cálculo.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Error de Fecha y Columna Virtual
+##menu-item END
+##Contenido BEGIN
+Error de Fecha y Columna Virtual:
+Al probar el envío con HTML, ocurre un error y el correo no llega. El sistema indica que falta el campo "fecha hora cita". Esto sucede porque el archivo HTML requiere un formato específico de fecha y hora que no existe en la tabla original.
+
+Solución:
+Se crea una "Columna Virtual" en la tabla de Citas Diarias dentro de AppSheet. Esta columna no existe en la hoja de cálculo, solo en la app.[3] Se le pone el nombre "fecha hora cita" y se le asigna una función que da el formato exacto que pide el archivo HTML.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Ajustes Finales: Descripción y Link
+##menu-item END
+##Contenido BEGIN
+Ajustes Finales: Descripción y Link:
+Una vez que el correo llega, se hacen dos correcciones finales:
+
+Descripción Faltante:
+Aunque el correo llega, no muestra la descripción. Se debe editar el código del archivo HTML para agregar el parámetro de "descripción" usando los símbolos codificados. Luego, se sube el archivo modificado a Google Drive, reemplazando el anterior.
+
+Link de la Reunión:
+El enlace solo aparece con el texto "Meet", sin ser cliqueable ni mostrar la URL completa.
+Solución: En AppSheet, se cambia la configuración del campo Link a la opción "hiperlink". Esto fuerza a mostrar la URL completa y hace el enlace funcional.[4]
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Resultado Final
+##menu-item END
+##Contenido BEGIN
+Resultado Final:
+Tras los ajustes, el correo electrónico llega con un diseño profesional en HTML. Incluye toda la información personalizada, la descripción completa de la cita y un enlace a la reunión que es visible y funcional.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+He validado los conceptos técnicos mencionados en el tutorial utilizando la documentación oficial de AppSheet y Google Cloud. Aquí están los puntos clave confirmados:
+
+Columnas Virtuales (Virtual Columns):
+
+Validación: AppSheet permite crear columnas que no se almacenan en la hoja de cálculo de origen, sino que se calculan en tiempo real mediante fórmulas.[3][5][6] Esto coincide con la solución del tutorial para formatear la fecha sin modificar la base de datos original.
+
+Fuente: Ayuda de AppSheet - Columnas Virtuales
+
+Uso de Plantillas HTML en Automatización:
+
+Validación: La documentación confirma que se pueden usar archivos HTML almacenados en Google Drive como plantillas para el cuerpo del correo en las automatizaciones (Bots). También valida que las variables deben seguir una sintaxis específica.
+
+Fuente: Ayuda de AppSheet - Usar plantillas HTML
+
+Referencias entre Tablas (Ref Columns):
+
+Validación: El tipo de columna "Ref" se utiliza para crear relaciones entre tablas, permitiendo seleccionar filas de una tabla padre (como Clientes o Asesores) desde una tabla hija (Citas). Esto valida el paso de configuración de los IDs.
+
+Fuente: Ayuda de AppSheet - Referencias entre tablas
+
+Tipo de Columna Hipervínculo (Hyperlink):
+
+Validación: Existe un tipo de columna específico y una función HYPERLINK() para asegurar que las URLs sean tratadas como enlaces cliqueables y no solo texto plano.
+
+Fuente: Ayuda de AppSheet - Función HYPERLINK
+
+
+Sources
+help
+youtube.com
+google.com
+google.com
+appsheet.com
+idun-group.com
+google.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+AppSheet virtual columns documentation
+AppSheet column type Ref documentation
+AppSheet column type Hyperlink documentation
+AppSheet automation email body template HTML documentation
+##Contenido END

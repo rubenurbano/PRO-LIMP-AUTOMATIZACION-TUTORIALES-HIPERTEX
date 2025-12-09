@@ -1,0 +1,105 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Creación de Aplicaciones con Inteligencia Artificial\nWEB ORIGINAL:",
+      "contenido": "Creación de Aplicaciones con Inteligencia Artificial:\nWeb Original:\nCreación de Aplicaciones con Inteligencia Artificial:\nYoutube sources varios\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción: El Poder de la Nueva Inteligencia Artificial",
+      "contenido": "Introducción: El Poder de la Nueva Inteligencia Artificial:\nLa inteligencia artificial de Google, Gemini 3, es el modelo más poderoso que existe hasta ahora. Esta herramienta es tan avanzada que permite construir aplicaciones completas muy rápido, incluso en tan solo 10 minutos o menos, usando solo una o dos frases que describen tu idea.\n\nNo es necesario saber programar o codificar, ni tener experiencia técnica para empezar a construir. El objetivo es aprender a usar estas herramientas para crear servicios y venderlos a negocios, lo que puede generar ingresos mensuales de 500 hasta 2,000 dólares."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "El Problema a Resolver con Green Vision AI",
+      "contenido": "El Problema a Resolver con Green Vision AI:\nLos paisajistas, que son las personas que diseñan jardines, a menudo tienen dificultades para ayudar a sus clientes a imaginar cómo se verá el resultado final de su trabajo.\n\nLa aplicación Green Vision AI resuelve esto, ofreciendo a los clientes una visualización clara antes de que se haga el trabajo, lo que ayuda al paisajista a cerrar más negocios."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Acceder a Google AI Studio",
+      "contenido": "Acceder a Google AI Studio:\nPara comenzar a crear tu aplicación, busca AI Studio Google en tu navegador y haz clic en el enlace principal. Después, crea una cuenta para comenzar a trabajar."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Describir tu Idea en Google AI Studio",
+      "contenido": "Describir tu Idea en Google AI Studio:\nIngresa tu idea en forma de texto, describiendo qué debe hacer la herramienta. La instrucción clave es: Quiero crear una herramienta para que los paisajistas la ofrezcan a sus clientes. La herramienta les permitirá generar imágenes de cómo se verá su propiedad terminada después de subir una foto actual y proporcionar instrucciones sobre lo que pretenden hacer. Esto puede ayudarles a visualizar el resultado final."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Visualizar el Resultado de tu Aplicación",
+      "contenido": "Visualizar el Resultado de tu Aplicación:\nLa aplicación permite al usuario subir una foto de su jardín y describir los cambios que quiere. Por ejemplo, puede decir reemplazar el césped con una pasarela de piedra. Gemini 3 crea la aplicación completa, lista para usar, con el resultado visual."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Personalización de la Aplicación Creada",
+      "contenido": "Personalización de la Aplicación Creada:\nDespués de que la aplicación esté lista, puedes seguir conversando con la IA para añadir nuevas funciones o hacer ajustes. Por ejemplo, puedes pedirle que cambie los colores para darle un tema oscuro o que añada la opción de inicio de sesión. La aplicación está diseñada para funcionar bien en dispositivos móviles como tabletas o iPhones."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Transición a un Negocio con tu Aplicación",
+      "contenido": "Transición a un Negocio con tu Aplicación:\nPiensa en problemas de cualquier industria donde la visualización o automatización pueda ayudar. Crea una demostración o demo de la solución con IA. Google AI Studio es excelente para crear prototipos o la parte visual de la aplicación, que se llama front-end, pero si necesitas funciones complejas o almacenamiento de datos persistente, deberás usar otras herramientas."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Qué es Anti-gravity y sus Características",
+      "contenido": "Qué es Anti-gravity y sus Características:\nAnti-gravity es una nueva herramienta de Google para codificar, diseñada para manejar flujos de trabajo con agentes. Se trata de un Entorno de Desarrollo Integrado, conocido como IDE, donde sientes que estás administrando varios agentes de IA que trabajan por ti, en lugar de solo pedirle cosas a un chat. Esta herramienta se basa en VS Code, que es un editor de código popular."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Características Clave del Flujo de Trabajo con Agentes",
+      "contenido": "Características Clave del Flujo de Trabajo con Agentes:\nEl Administrador de Agentes permite organizar y ejecutar múltiples tareas al mismo tiempo, en paralelo. La Bandeja de Entrada es donde el agente te envía mensajes cuando se bloquea o necesita tu permiso, llamado aprobación humana, para continuar con una acción. Este proceso se llama humano en el ciclo. Los Artefactos son documentos que la IA genera para mantener la organización, como el Plan de Implementación o el informe final llamado walkthrough."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Configuración y Privacidad en Anti-gravity",
+      "contenido": "Configuración y Privacidad en Anti-gravity:\nAnti-gravity permite elegir cuánta libertad le das al agente para tomar decisiones de codificación. Para la privacidad, es una práctica recomendada no enviar datos automáticos, llamados telemetría, si tu código es sensible. Para probar aplicaciones en el navegador, Anti-gravity crea un perfil de Chrome separado, un sandbox o entorno aislado, para que el agente opere sin acceder a tu información personal o cuentas."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Definir tu Idea en el Playground",
+      "contenido": "Definir tu Idea en el Playground:\nEl agente creará un Plan de Implementación detallado sobre cómo construirá la aplicación. Por ejemplo, puede usar Next.js para desarrollarla. Es importante revisar el Plan de Implementación para asegurarse de que sea específico y no genérico."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Revisar y Mejorar el Plan de Implementación",
+      "contenido": "Revisar y Mejorar el Plan de Implementación:\nPuedes agregar comentarios directamente en los artefactos del plan, como en Google Docs, para dirigir a la IA sobre cambios específicos. Por ejemplo, puedes pedir un diseño minimalista. Una vez que el plan es sólido, el proyecto debe moverse del Playground a un Workspace para tener control de versiones con Git y mantener todo más limpio."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "El Agente Codifica tu Aplicación",
+      "contenido": "El Agente Codifica tu Aplicación:\nEl agente comenzará a escribir código y a instalar paquetes necesarios. Si tienes activada la revisión, el agente se detendrá y esperará tu aprobación a través de la Bandeja de Entrada para ciertas acciones. Puedes activar el modo Seguir para ver exactamente dónde está trabajando el agente, ya sea en la terminal, el navegador o el código."
+    },
+    {
+      "itemID": "014",
+      "menu_item": "Gestión de Errores y Versiones en el Proyecto",
+      "contenido": "Gestión de Errores y Versiones en el Proyecto:\nSi el agente encuentra un error, intentará corregirlo solo. El agente puede crear automáticamente los mensajes de commit, que son descripciones de los cambios, para Git, ayudando a guardar el progreso de la aplicación."
+    },
+    {
+      "itemID": "015",
+      "menu_item": "Usar el Agente Navegador para Pruebas",
+      "contenido": "Usar el Agente Navegador para Pruebas:\nPuedes pedir al agente que use la herramienta de navegador para verificar si la aplicación funciona correctamente. El agente navega de forma autónoma, haciendo clic en botones y probando la interfaz de usuario o UI. Después de la prueba, la IA proporciona grabaciones de pantalla incrustadas en el informe para demostrar que la aplicación funciona perfectamente."
+    },
+    {
+      "itemID": "016",
+      "menu_item": "Integración de Modelos Locales en Anti-gravity",
+      "contenido": "Integración de Modelos Locales en Anti-gravity:\nAnti-gravity permite la integración de modelos de IA locales, como Olama, que se ejecutan directamente en tu computadora. Esta capacidad es única y no se puede hacer en Google AI Studio. Permite funciones complejas como analizar el contenido de las noticias, generar automáticamente etiquetas o tags para filtrarlas, y crear un informe o resumen diario basado en la información que lees. Todos estos procesos avanzados se realizan de forma 100 por ciento privada en tu máquina."
+    },
+    {
+      "itemID": "017",
+      "menu_item": "Flexibilidad y Debugging con Diferentes Modelos",
+      "contenido": "Flexibilidad y Debugging con Diferentes Modelos:\nPuedes cambiar el modelo de IA que está trabajando en tu código. Si Gemini 3 alcanza su límite de uso o encuentra un problema, puedes cambiar rápidamente a otro modelo como Claude Sonnet 4.5 Thinking para que continúe la construcción o se encargue de la depuración de errores. Esta flexibilidad es una gran mejora en la forma en que se maneja el contexto de la programación. El flujo entre el editor de código, el administrador de agentes, la bandeja de entrada y el navegador es muy fluido e intuitivo."
+    },
+    {
+      "itemID": "018",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nVoy a buscar información oficial sobre las herramientas mencionadas en este tutorial."
+    },
+    {
+      "itemID": "018-2",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nA continuación, se presentan las fuentes técnicas oficiales para validar la información del tutorial sobre Creación de Aplicaciones con Inteligencia Artificial:\n\nGoogle AI Studio - Documentación Oficial:\nGoogle AI Studio es la forma más rápida de comenzar a construir con Gemini, la familia de modelos generativos de IA multimodal de nueva generación de Google. La plataforma permite experimentar con diferentes prompts y modelos, y luego exportar código en el lenguaje de programación preferido usando la API de Gemini.\n\nEnlaces oficiales de Google AI Studio:\nSitio oficial: https://aistudio.google.com\nDocumentación completa: https://ai.google.dev/aistudio\nGuía de inicio rápido: https://ai.google.dev/gemini-api/docs/ai-studio-quickstart\nDocumentación de la API de Gemini: https://ai.google.dev/gemini-api/docs\n\nFirebase Studio - Documentación Oficial:\nFirebase Studio ofrece múltiples modos para adaptarse a diferentes estilos de desarrollo, incluyendo codificación con control total en un IDE basado en Code OSS y prototipado sin código mediante el agente App Prototyping, también conocido como Prototyper. El agente permite crear espacios de trabajo para prototipar y refinar ideas de aplicaciones usando Gemini en Firebase.\n\nEnlaces oficiales de Firebase Studio:\nSitio oficial: https://firebase.studio\nDocumentación completa: https://firebase.google.com/docs/studio\nGuía de inicio: https://firebase.google.com/docs/studio/get-started\nDocumentación de espacios de trabajo: https://firebase.google.com/docs/studio/get-started-workspace\nGuía del agente de prototipado: https://firebase.google.com/docs/studio/get-started-ai\n\nNext.js - Documentación Oficial:\nNext.js es un framework de React para construir aplicaciones web full-stack, que utiliza componentes de React para crear interfaces de usuario, y Next.js para características adicionales y optimizaciones. El framework es mencionado en el tutorial como la tecnología que utilizan los agentes para desarrollar aplicaciones.\n\nEnlaces oficiales de Next.js:\nSitio oficial: https://nextjs.org\nDocumentación completa: https://nextjs.org/docs\nGuía de instalación: https://nextjs.org/docs/app/getting-started/installation\nRepositorio en GitHub: https://github.com/vercel/next.js\n\nPuntos Técnicos Validados:\nGoogle AI Studio permite experimentar rápidamente con modelos y diferentes prompts, y cuando estés listo para construir, puedes seleccionar obtener código y tu lenguaje de programación preferido para usar la API de Gemini, además de explorar lo que es posible con la ventana de contexto de 1 millón de tokens.\n\nFirebase Studio ayuda a construir y enviar aplicaciones full-stack infundidas con IA, soporta una variedad de frameworks, y proporciona un entorno de desarrollo basado en la nube y agnético que contiene todo lo necesario para desarrollar tu aplicación.\n\nLas herramientas oficiales de Google validan que es posible crear aplicaciones mediante inteligencia artificial usando descripciones en lenguaje natural, tal como se explica en el tutorial. Ambas plataformas están disponibles de forma gratuita durante su fase de vista previa, con limitaciones en el número de espacios de trabajo que pueden crearse.\n\n\nCreación de Aplicaciones con Inteligencia Artificial\nYoutube sources varios\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    }
+  ]
+}

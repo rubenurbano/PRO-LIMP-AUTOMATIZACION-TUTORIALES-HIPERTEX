@@ -1,0 +1,55 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Gemini CLI-Everything You Need To Know (Full Tutorial) \nWEB ORIGINAL:",
+      "contenido": "Gemini CLI-Everything You Need To Know (Full Tutorial) :\nWeb Original:\nGemini CLI-Everything You Need To Know (Full Tutorial) :\nhttps://youtu.be/WxXUbiz6RQE?si=itJEcZ7VJpXwzB0x"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Parte 1: Instalacion y Configuracion (Autenticacion)",
+      "contenido": "Parte 1: Instalacion y Configuracion (Autenticacion):\nGemini CLI es una herramienta de Google que te deja usar inteligencia artificial desde la linea de comandos de tu computadora. Es como tener un asistente super listo que te ayuda con codigo, busquedas o incluso disenando imagenes. Vamos a aprender como instalarla y configurarla paso a paso, como si fueras nuevo en esto.\n\nPrimero, para instalar Gemini CLI, necesitas algo llamado npm, que viene con Node.js. Si lo tienes, abre la terminal y escribe: npm install -g @google/gemini-cli. Si usas una Mac, puedes probar brew install gemini-cli. Para chequear si se instalo bien, escribe gemini --version. Luego, para empezar, solo escribe gemini.\n\nCuando la inicias por primera vez, crea una carpeta en tu carpeta principal llamada .gemini, donde guarda configuraciones importantes.\n\nPara entrar, hay dos maneras principales. Una es con tu cuenta de Google: elige login with Google, te manda a una pagina web para entrar con tu Gmail. Esto te da mas usos gratis, como 60 pedidos por minuto y 1000 al dia, pero se puede acabar rapido.\n\nLa otra es con una clave API. Ve a ai.studio/api-keys, crea un proyecto como Gemini CLI project, genera la clave, copiala. En la terminal, escribe export GEMINI_API_KEY=tu_clave_aqui. Luego, en Gemini, usa /auth y elige use Gemini API key. Esta opcion es buena para ahorrar y optimizar costos.\n\nPara probar, manda un mensaje como hi nice to meet you. Para salir, presiona Ctrl + C dos veces y ves un resumen."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Parte 2: Modos de Operacion y Uso Basico",
+      "contenido": "Parte 2: Modos de Operacion y Uso Basico:\nAhora que esta instalada, veamos como usarla de diferentes formas. Hay modos para diferentes necesidades.\n\nEl modo headless es para un solo comando rapido, sin abrir toda la interfaz. Usa -p, como gemini -p tres tips para dormir mejor. Es genial para scripts automaticos.\n\nEl modo interactivo es el normal, solo escribe gemini y entras a una conversacion.\n\nDentro, puedes entrar a modo shell con !, para comandos de tu sistema, como !ls para ver archivos.\n\nGemini usa el contexto, que es como la memoria. Puedes agregar archivos con @nombre_archivo, como @script.md, para que lo lea. Por defecto, mira la carpeta actual. Para agregar mas carpetas, usa --include-directories, como --include-directories ../. Con directory show ves que carpetas estan incluidas.\n\nTambien puedes generar imagenes, pero necesita una extension llamada Nanobanana, que vemos mas adelante. Por ejemplo, generate a picture of water."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Parte 3: Indicadores (Flags) Importantes",
+      "contenido": "Parte 3: Indicadores (Flags) Importantes:\nLos flags son como interruptores que cambian como funciona Gemini. Se ponen despues del comando.\n\nYa vimos -p para headless. -m para elegir modelo, como -m gemini-2.5-flash.\n\n--checkpointing guarda versiones de tus archivos antes de cambios, para volver atras con restore.\n\n-yolo es peligroso, deja que haga cosas sin pedir permiso, como editar archivos. Usalo con cuidado, alterna con Ctrl + Y.\n\n--approval-mode autoedit aprueba ediciones automaticas, pero pide para comandos del sistema. Alterna con Shift + Tab.\n\n--allow-tools deja usar herramientas especificas sin permiso, como --allow-tools shell-tool.\n\n--output-format json hace que responda en formato JSON, bueno para programas.\n\n-s para modo sandbox, que es seguro como un contenedor.\n\n--help muestra todos los flags."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Parte 4: Comandos Integrados (Built-in Commands)",
+      "contenido": "Parte 4: Comandos Integrados (Built-in Commands):\nLos comandos empiezan con / y ayudan a manejar Gemini.\n\nPara configuracion: /init analiza tu proyecto y crea un archivo Gemini markdown con instrucciones.\n\n /memory show muestra el contexto completo. /memory list lista los archivos markdown. /memory refresh recarga si cambiaste algo. /memory add agrega reglas nuevas.\n\n /settings para cambiar configuraciones en settings.json. /theme cambia el look.\n\nPara utilidad: /clear borra la pantalla y reinicia chat. /compress resume el contexto para ahorrar espacio.\n\n /copy copia lo ultimo al portapapeles. /restore vuelve a version anterior si usas checkpointing.\n\n /stats muestra uso de tokens. /chat save guarda conversacion, /chat list las lista, /chat resume carga una, /chat delete borra, /chat share comparte."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Parte 5: Casos de Uso y Ejemplos Practicos",
+      "contenido": "Parte 5: Casos de Uso y Ejemplos Practicos:\nVeamos como usarla en la vida real.\n\nPara renombrar archivos por contenido: Pon imagenes en una carpeta, pide que las mire y cambie nombres segun lo que ve. Funciona si no son muy grandes.\n\nPara buscar en web: Pide tres actividades en Munich hoy, usa herramienta de busqueda.\n\nPara codigo: Pide que haga una app web con Next.js y Tailwind. Planeaa, hace codigo, explica arquitectura."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Parte 6: Comandos Personalizados (Custom Commands)",
+      "contenido": "Parte 6: Comandos Personalizados (Custom Commands):\nPuedes crear comandos tuyos para repetir tareas.\n\nSe guardan en .gemini/commands, en home o en el proyecto. Usa formato TOML, con description y prompt.\n\nPor ejemplo, bugfix.toml con prompt que arregla bugs.\n\nPuedes inyectar argumentos con {arguments}, como /bugfix boton deberia ser naranja.\n\nO resultados de shell con !{git diff --staged} para commits.\n\nO archivos con @{docs/best_practices.markdown} para guias."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Parte 7: Personalizacion y Contexto con Gemini Markdown",
+      "contenido": "Parte 7: Personalizacion y Contexto con Gemini Markdown:\nLos archivos Gemini.md dan instrucciones fijas sobre tu proyecto, como tecnologias.\n\n /init crea uno inicial. Se leen en orden, proyecto sobre global.\n\nPuedes hacer modos, como subcarpetas gemini_plan con markdown para planear, e inicia separado."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Parte 8: Herramientas (Tools) y Extensiones",
+      "contenido": "Parte 8: Herramientas (Tools) y Extensiones:\nHerramientas expanden lo que hace, como leer archivos, shell, web.\n\nPide permiso salvo en modos especiales.\n\nTo-do tool: En settings.json pon use_write_to_dos: true, para listas de tareas.\n\nExtensiones via MCP servers.\n\nPara imagenes, instala Nanobanana de geminicli.com/extensions, exporta clave.\n\nPara GitHub, genera PAT en GitHub, pon en settings.json. Pide crear issues."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Parte 9: Integracion con Entornos de Desarrollo (IDE)",
+      "contenido": "Parte 9: Integracion con Entornos de Desarrollo (IDE):\nConecta con VS Code o Cursor instalando extension Gemini CLI companion.\n\nDa contexto extra como archivos recientes, cursor.\n\nMuestra ediciones en el editor para aprobar.\n\nArquitectura: CLI package maneja interfaz, core package conecta a API, construye prompts, maneja herramientas.\n\n\nVALIDACION CON FUENTES TECNICAS OFICIALES\nResumen de puntos validados:\n- Instalacion via npm y brew: Validado en GitHub repo y Codelabs.\n- Autenticacion con OAuth y API key: Confirmado en GitHub docs y Codelabs.\n- Modos y flags: Detallados en GitHub y Codelabs, como -p, -m, --include-directories.\n- Comandos built-in: Como /memory, /settings en Codelabs y GitHub commands.html.\n- Custom commands con TOML: Validado en Google Cloud Blog y Codelabs.\n- Gemini Markdown: Explicado en GitHub y Codelabs.\n- Tools y MCP: En GitHub, con ejemplos de GitHub integration.\n- IDE integration: Mencionado en Cloud Docs para VS Code.\nEnlaces:\n- https://github.com/google-gemini/gemini-cli\n- https://codelabs.developers.google.com/gemini-cli-hands-on\n- https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli\n- https://cloud.google.com/blog/topics/developers-practitioners/gemini-cli-custom-slash-commands"
+    }
+  ]
+}

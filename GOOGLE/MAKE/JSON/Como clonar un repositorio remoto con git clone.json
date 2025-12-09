@@ -1,0 +1,55 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Como clonar un repositorio remoto con git clone\nWEB ORIGINAL:",
+      "contenido": "Como clonar un repositorio remoto con git clone:\nWeb Original:\nComo clonar un repositorio remoto con git clone:\nhttps://youtu.be/Zoq5zGN25BM?si=80QCFwvwaoA0gwes\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción y objetivo",
+      "contenido": "Introducción y objetivo:\nHoy vamos a ver cómo hacer una copia de un archivo guardado en un lugar como GitHub, para traerlo a tu propio computador.[1][2][3][4][5]"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Paso 1: Verificación de Git",
+      "contenido": "Paso 1: Verificación de Git:\nLo primero que debes saber es si tienes instalado un programa llamado Git.[1][6] Puedes revisar si ya tienes instalado Git escribiendo un comando llamado Git menos version.\n\nSi no lo tienes, el canal tiene un video para que sepas cómo instalarlo."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Paso 2: Configuración de usuario",
+      "contenido": "Paso 2: Configuración de usuario:\nLuego, necesitas configurar tu nombre de usuario y tu correo electrónico para poder realizar la copia."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Paso 3: Obtener el enlace del archivo",
+      "contenido": "Paso 3: Obtener el enlace del archivo:\nVe al lugar en Internet donde está el archivo que quieres copiar, por ejemplo, GitHub .com.\n\nCuando estés en el archivo que quieres copiar, haz clic en el botón que dice code (código).[1][4][7]"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Opciones de copiado (HTTPS y SSH)",
+      "contenido": "Opciones de copiado (HTTPS y SSH):\nHay varias formas de copiar el archivo.[1][2][3][4][5][6][7][8][9] Puedes usar una opción llamada HTTPS.[1][4][6][7] También puedes usar una opción llamada SSH.[2][7]\n\nRecuerda que si usas SSH, debes configurarlo antes en la plataforma que uses, ya sea GitHub, Bitbucket o Gitlab. También existe otra forma llamada GitHub CLI.\n\nSi eliges HTTPS, solamente haz clic para copiar la URL.[4] Si eliges SSH, también puedes hacer clic en el ícono para copiar.[1]"
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Paso 4: Comando para clonar",
+      "contenido": "Paso 4: Comando para clonar:\nAhora, abre la terminal o la ventana de comandos en tu computador.[1][4][6][7]\n\nPara copiar el archivo, escribe el comando Git Clone y luego pega el enlace del archivo que acabas de copiar.[4][7]\n\nLuego de pegar el enlace, presiona la tecla enter.[1][4][7] El sistema comenzará a copiar el archivo a tu computador."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Paso 5: Abrir el archivo copiado",
+      "contenido": "Paso 5: Abrir el archivo copiado:\nCuando termine de copiarse, busca la nueva carpeta con el nombre del archivo, por ejemplo, Hello War.\n\nPuedes usar el comando Code punto para abrir el archivo directamente en un programa de edición. Si el archivo copiado es sencillo, se abrirán los archivos que estaban guardados en él.\n\nEsto ha sido todo por hoy."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Preguntas y Respuestas",
+      "contenido": "Preguntas y Respuestas:\n¿Qué hacemos en este proceso?\nEstamos revisando cómo hacer una copia de un archivo que está en una plataforma como GitHub, para traerlo a nuestro computador.\n\n¿Qué programa necesitamos tener instalado?\nNecesitamos tener instalado un programa llamado Git.[1][6]\n\n¿Cómo sabemos si Git está instalado?\nPodemos saber si ya tenemos instalado Git usando el comando Git menos version.\n\nAntes de copiar, ¿qué debemos configurar?\nNecesitamos configurar nuestro nombre de usuario y nuestro correo electrónico.\n\n¿Dónde encontramos el enlace para copiar el archivo?\nVamos al archivo que queremos copiar (por ejemplo, en GitHub .com) y hacemos clic en el botón code (código).\n\n¿Cuáles son las formas de copiar el enlace?\nPodemos usar las opciones HTTPS, SSH o GitHub CLI.[1][7] Si usamos SSH, debemos configurarlo antes en la plataforma.\n\n¿Cómo copiamos el enlace HTTPS o SSH?\nSolo necesitamos hacer clic en el ícono para copiar la URL.[4]\n\n¿Qué hacemos después de copiar el enlace?\nVamos a la terminal o ventana de comandos de nuestro computador.[1][4][6]\n\n¿Cuál es la orden que usamos para copiar el archivo?\nUsamos el comando Git Clone y pegamos el enlace copiado, y luego presionamos enter.[1][4][7]\n\n¿Cómo abrimos el archivo copiado?\nBuscamos la carpeta del archivo copiado y podemos usar el comando Code punto para abrirlo directamente."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nPara validar el contenido de este tutorial, se han consultado las documentaciones oficiales de Git y GitHub, confirmando los siguientes puntos técnicos:\n\nEl comando oficial para copiar un repositorio es git clone seguido de la URL del repositorio.[1][2][3][4][6][7]\n\nEn GitHub, el botón Code proporciona las URL necesarias para HTTPS, SSH y GitHub CLI.\n\nEl uso de SSH requiere una configuración previa de claves, tal como indica el tutorial.\n\nEnlaces a la documentación oficial consultada:\n\nDocumentación oficial de Git sobre git clone:\nLINK= https://git-scm.com/docs/git-clone\n\nDocumentación oficial de GitHub sobre cómo clonar un repositorio:\nLINK= https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository\n\nGuía de GitHub sobre diferencias entre HTTPS y SSH:\nLINK= https://docs.github.com/es/get-started/getting-started-with-git/about-remote-repositories\n\nDocumentación oficial de Git sobre el comando clone:\nLINK= https://git-scm.com/docs/git-clone\nDocumentación oficial de GitHub sobre cómo clonar repositorios:\nLINK= https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository\nGuía de Atlassian sobre el comando Git Clone:\nLINK= https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone\nGuía de WikiHow sobre clonar un repositorio (Fuente complementaria):\nLINK= https://www.wikihow.com/Clone-a-Repository-on-GitHub\nResumen de validación:\nEl comando git clone [url] es la forma estándar confirmada por la documentación oficial para copiar repositorios remotos.\nLa interfaz de GitHub descrita (botón Code) coincide con la documentación actual de la plataforma.\nEl uso de HTTPS y SSH son los métodos principales de autenticación validados por GitHub y Atlassian.\n\n\nComo clonar un repositorio remoto con git clone\nhttps://youtu.be/Zoq5zGN25BM?si=80QCFwvwaoA0gwes\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    }
+  ]
+}

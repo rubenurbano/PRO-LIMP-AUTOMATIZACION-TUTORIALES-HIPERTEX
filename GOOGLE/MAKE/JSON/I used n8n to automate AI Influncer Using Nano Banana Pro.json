@@ -1,0 +1,107 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "I used n8n to automate AI Influncer Using Nano Banana Pro\nWEB ORIGINAL:",
+      "contenido": "I used n8n to automate AI Influncer Using Nano Banana Pro:\nWeb Original:\nI used n8n to automate AI Influncer Using Nano Banana Pro:\nhttps://youtu.be/cmyrH0cfww?si=rPtLDPg7N_FXqrJx\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introduccion al sistema de IA para crear influencers",
+      "contenido": "Introduccion al sistema de IA para crear influencers:\nEste sistema de video con Inteligencia Artificial cambia la forma en que se crea el contenido. Por primera vez, tenemos control total sobre como actuan nuestros influencers de IA. Podemos hacer que suenen como el influencer que queramos, que tengan movimientos corporales perfectos y que sostengan cualquier producto en cualquier lugar que imaginemos. Lo mas asombroso es que toda esta automatizacion produce videos muy reales por solo 1 dolar.\n\nPuedes hacerlo con cualquier personaje que se te ocurra, como tu personaje de anime favorito, un atleta o un podcaster. El sistema completo se comparte con todos los pasos explicados con detalle para que puedas comenzar."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Formas de ganar dinero con el sistema",
+      "contenido": "Formas de ganar dinero con el sistema:\nEsta automatizacion permite ganar dinero de cuatro maneras diferentes.\n\nLa primera gran oportunidad es crear personajes que construyan su propia marca personal. Un ejemplo es Viva Lolina, una influencer de moda de IA en Francia que gana dinero con patrocinios de marcas de moda, y ni siquiera es una persona real.\n\nLa segunda opcion es crear contenido largo y educativo para YouTube. Por ejemplo, si una chica quiere aprender sobre IA, es mas probable que escuche a otra chica. Puedes recrear un influencer de IA que eduque para ese grupo especifico de personas.\n\nLa tercera opcion es publicar anuncios. Si tienes clientes con un restaurante o una marca de ropa, puedes crear muchos personajes diferentes, como un mexicano, un asiatico, una mujer, o cualquier persona. Esto permite que los anuncios lleguen a muchos tipos de personas distintas en nombre de tus clientes.\n\nLa cuarta forma es usarlo en una agencia de servicios de IA. Se pueden cobrar 2,000 dolares al mes o mas a negocios como marcas de comercio electronico, empresas de software o comunidades para crear contenido en grandes cantidades."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Ventajas del sistema automatizado",
+      "contenido": "Ventajas del sistema automatizado:\nAntes, un gran problema era que los influencers de IA no podian mantener los movimientos de manos o sostener el producto que queriamos, y cambiar la voz era dificil y manual. Esta automatizacion hace todo eso de una vez.\n\nEl sistema incluye todos los agentes de IA. Esto permite vender estos proyectos complicados a personas que no saben mucho de tecnologia. Cuando se entrega a los clientes, solo ven un formulario simple donde suben una imagen y un video, y en minutos obtienen sus influencers de IA."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Elegir plataforma y crear formulario inicial",
+      "contenido": "Elegir plataforma y crear formulario inicial:\nEl primer paso es elegir la plataforma de codificacion de IA que te parezca mas comoda, como Replet.\n\nLuego, crea el formulario de inicio. Escribe: Crea un formulario simple de una pagina que envie una foto y un video a este web hook de N8N."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Configurar N8N y el web hook",
+      "contenido": "Configurar N8N y el web hook:\nMientras la plataforma de codigo construye el sitio, abre N8N y crea un nuevo flujo de trabajo.\n\nHaz clic en agregar primer paso y busca web hook.\n\nCambia el metodo HTTP de get a post. Copia la direccion URL del web hook, ve de vuelta a tu plataforma de codigo como Replet y pegala alli para conectar los sistemas."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Hacer archivos publicos con cubetas",
+      "contenido": "Hacer archivos publicos con cubetas:\nPara que el sistema de IA pueda acceder a tu imagen y video, estos deben ser accesibles publicamente, lo cual se hace al guardarlos en algo llamado cubeta o bucket. Una cubeta convierte tus archivos a la nube para que los agentes puedan verlos.\n\nEscribe: Cuando el usuario suba la imagen y el video, necesitamos que estos archivos se conviertan en direcciones URL accesibles publicamente para que el agente pueda acceder a ellos en el flujo de trabajo de N8N. Confirma que el sistema enviara los archivos como URLs publicas."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Probar la conexion entre el formulario y N8N",
+      "contenido": "Probar la conexion entre el formulario y N8N:\nEjecuta el flujo de trabajo en N8N para que este esperando los datos. En el formulario de la izquierda, sube una captura de pantalla y un video y haz clic en subir archivos. Si dice que el flujo se ejecuto con exito, significa que N8N recibio la informacion.\n\nAbre la informacion recibida en N8N para confirmar que tienes la URL de la imagen y la URL del video, ambas como direcciones publicas."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Modificar la imagen con Nano Banana Pro",
+      "contenido": "Modificar la imagen con Nano Banana Pro:\nConecta el web hook a una solicitud HTTP, esto es como enviar una orden por internet. Usaremos el servicio foul.ai, que es el mas barato para usar NanoBanana Pro. Usaremos la version Pro porque da mejores resultados.\n\nAgrega un nodo llamado merge o combinar.\n\nEnvia el video original, que no necesita cambios, directamente a la entrada 2 del nodo merge. Envia la imagen a la entrada 1.\n\nSi el influencer es famoso como Joe Rogan, el sistema sabra como se ve. La instruccion es: Cambia el avatar de la foto por Joe Rogan, el podcaster. El sistema Nano Banana Proedit puede usar cualquier celebridad conocida.\n\nEjecuta el paso. El sistema espera unos 60 segundos para crear la imagen.\n\nEjecuta todo el flujo. Abre el resultado para ver la imagen. Deberia ser Joe Rogan bebiendo el Red Bull.\n\nConecta la nueva imagen al nodo merge. Ahora el nodo merge tiene la nueva imagen y el video original."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Preparar archivos con Aggregate",
+      "contenido": "Preparar archivos con Aggregate:\nAnade un paso llamado aggregate o agrupar. Agrupa la URL de la nueva imagen de Nano Banana y la informacion del video original del web hook."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Extraer audio del video",
+      "contenido": "Extraer audio del video:\nEl siguiente paso es sacar el audio del video para poder cambiar la voz. Usaremos la herramienta de Replicate llamada Luca Taco extract audio.\n\nConecta el paso aggregate a la solicitud de extraccion de audio. Arrastra la informacion del video a la seccion de video en el formulario.\n\nEjecuta el flujo. Espera un momento para que el sistema extraiga el audio.\n\nAbre el archivo de audio resultante para asegurarte de que el audio original se haya extraido correctamente."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Cambiar la voz con chatterbox",
+      "contenido": "Cambiar la voz con chatterbox:\nUsaremos la herramienta chatterbox de foul.ai para cambiar la voz. Para que funcione, necesitas un archivo de audio del influencer deseado. Por ejemplo, se puede extraer un audio de Joe Rogan y guardarlo como una URL publica.\n\nConecta el audio extraido del paso anterior al nuevo paso voz a voz. La voz de Joe Rogan se mantiene como una URL fija.\n\nEjecuta el flujo.\n\nAbre el resultado para confirmar que el audio ahora suena exactamente como el influencer Joe Rogan."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Mezclar audio nuevo con video original",
+      "contenido": "Mezclar audio nuevo con video original:\nEl siguiente paso es mezclar la nueva voz de Rogan con el video original. Usaremos la herramienta de Replicate llamada Luca Taco merge audio and video.\n\nLa solicitud pide el archivo de audio del paso voz a voz y el archivo de video del paso aggregate.\n\nEjecuta el flujo. El resultado debe ser tu video con la voz del influencer."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "Animar con 12.2 Animate",
+      "contenido": "Animar con 12.2 Animate:\nAhora tienes el video mezclado y la imagen de Joe Rogan. Envia ambos archivos a 12.2 Animate. Esta es la herramienta final.\n\nEsta herramienta reemplaza tu video con la imagen que le diste, manteniendo todo lo demas igual. La solicitud pide la URL del video y la URL de la imagen.\n\nCambia la resolucion de 480p a 720p para obtener mejores resultados.\n\nEjecuta el flujo. Este paso puede tardar entre 5 y 20 minutos.\n\nDespues de un tiempo, de 10 a 15 minutos, el sistema te da el video final. Verifica que sea Joe Rogan, con su voz, actuando en el escenario del video."
+    },
+    {
+      "itemID": "014",
+      "menu_item": "Guardar video terminado en base de datos",
+      "contenido": "Guardar video terminado en base de datos:\nEl ultimo paso es guardar el video final en el frente del sistema operativo. Escribe la instruccion para crear una tabla llamada finished videos o videos terminados con dos columnas: una identificacion y la URL del video.\n\nAgrega un nodo de Postgress SQL.\n\nNecesitas copiar las llaves de seguridad, que son Host, Base de Datos, Usuario y Contrasena, que se encuentran en los secretos de tu aplicacion Replet y pegarlas en el nodo de Postgress SQL. Haz clic en guardar.\n\nSelecciona la tabla finished videos. En la columna de la URL del video, arrastra la direccion URL del video final que acabas de crear.\n\nEjecuta el flujo de trabajo. El video queda guardado en la base de datos."
+    },
+    {
+      "itemID": "015",
+      "menu_item": "Mostrar video en la aplicacion",
+      "contenido": "Mostrar video en la aplicacion:\nFinalmente, instruye al agente para que muestre los videos guardados en la base de datos en la pagina principal de la aplicacion. Ahora veras el video final en la seccion de videos terminados.\n\nHas construido un sistema de IA completo que puede crear cualquier influencer que imagines."
+    },
+    {
+      "itemID": "016",
+      "menu_item": "Preguntas y respuestas sobre el sistema",
+      "contenido": "Preguntas y respuestas sobre el sistema:\n\nQue hace este sistema de IA?\nCrea videos muy reales donde podemos controlar completamente a un influencer de IA, eligiendo su voz, sus movimientos y lo que sostienen. El costo es de alrededor de 1 dolar por video.\n\nComo puedo ganar dinero con esto?\nHay cuatro formas principales:\n1. Crear personajes de IA que se vuelven famosos, como Viva Lolina.\n2. Crear contenido educativo largo para YouTube, dirigido a grupos especificos.\n3. Crear anuncios para clientes, usando diferentes personajes para llegar a muchas personas.\n4. Usarlo en una agencia de servicios de IA para hacer contenido a gran escala para negocios.\n\nQue herramientas necesito para construirlo?\nNecesitas una plataforma de codificacion de IA como Replet y la herramienta de automatizacion N8N.\n\nCuales son los primeros pasos para la construccion?\n1. Crear un formulario de inicio simple que pida una foto y un video.\n2. Configurar un web hook en N8N, cambiando su metodo a post, para que reciba la informacion del formulario.\n\nPor que necesitamos hacer los archivos publicos?\nLas imagenes y videos subidos deben ser accesibles publicamente en la nube para que los sistemas de IA puedan usarlos. Esto se logra almacenandolos en una cubeta.\n\nQue hace Nano Banana Pro?\nNano Banana Pro recibe una imagen y la cambia por el influencer de IA que elijas. Si el influencer es famoso como Joe Rogan, el sistema lo conoce.\n\nComo funciona el cambio de voz?\nPrimero se extrae el audio del video original usando una herramienta llamada Luca Taco. Luego, se usa una herramienta llamada chatterbox para reemplazar ese audio con la voz del influencer elegido como Joe Rogan, para lo cual necesitas un archivo de audio de referencia de ese influencer.\n\nQue hace el paso Merge?\nEl paso Merge o combinar se usa varias veces. Al principio, combina la imagen original y el video. Al final, combina el video original con el nuevo audio del influencer.\n\nQue hace el paso 12.2 Animate?\nEste es el paso final que toma el video con el nuevo audio y lo anima al reemplazar la persona original con la imagen del influencer de IA como Joe Rogan. Este paso puede tardar hasta 20 minutos.\n\nPara que se usa una base de datos?\nLa base de datos Postgress SQL se usa para guardar el video final terminado. Luego, se le indica al sistema que muestre ese video guardado en la pagina principal de la aplicacion para poder revisarlo."
+    },
+    {
+      "itemID": "017",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\nPara validar la información técnica de este tutorial, he buscado las fuentes oficiales de las herramientas mencionadas:Resumen de puntos tecnicos validados con fuentes oficiales:\n\nn8n es una plataforma de automatizacion de flujos de trabajo de codigo abierto con capacidades nativas de IA, segun se confirma en la documentacion oficial de n8n. La plataforma permite construir flujos visuales y combinarlos con codigo personalizado, con mas de 400 integraciones nativas. n8n maneja hasta 220 ejecuciones de flujo de trabajo por segundo en una sola instancia.\n\nReplicate es una plataforma que permite ejecutar modelos de IA mediante una API en la nube, sin necesidad de comprender aprendizaje automatico ni gestionar infraestructura propia. La plataforma escala automaticamente y solo cobra por el tiempo de uso efectivo de los recursos.\n\nfal.ai es una plataforma de medios generativos completa que proporciona mas de 600 modelos de generacion de medios listos para produccion. El motor de inferencia fal es hasta 10 veces mas rapido y puede escalar desde prototipos hasta mas de 100 millones de llamadas de inferencia diarias.\n\nPostgreSQL es un potente sistema de base de datos objeto-relacional de codigo abierto con mas de 35 anos de desarrollo activo. La version mas reciente es PostgreSQL 18, aunque el tutorial usa versiones compatibles con todas las ediciones soportadas.\n\nEnlaces directos a documentacion oficial:\nn8n: https://docs.n8n.io/\nReplicate: https://replicate.com/docs\nfal.ai: https://docs.fal.ai\nPostgreSQL: https://www.postgresql.org/docs/\n\nReferencias a paginas de soporte oficiales:\nComunidad n8n: https://community.n8n.io\nSoporte Claude: https://support.claude.com\nGitHub n8n: https://github.com/n8n-io/n8n\n\n\nI used n8n to automate AI Influncer Using Nano Banana Pro\nhttps://youtu.be/cmyrH0cfww?si=rPtLDPg7N_FXqrJx\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+
+    {
+      "itemID": "018",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/I%20used%20n8n%20to%20automate%20AI%20Influncer%20Using%20Nano%20Banana%20ProMAPA%200001.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    },
+
+    {
+      "itemID": "019",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/I%20used%20n8n%20to%20automate%20AI%20Influncer%20Using%20Nano%20Banana%20ProMAPA%200002.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

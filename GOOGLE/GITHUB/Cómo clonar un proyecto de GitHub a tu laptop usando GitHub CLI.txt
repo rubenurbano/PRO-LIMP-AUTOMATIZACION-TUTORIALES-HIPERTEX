@@ -1,0 +1,30 @@
+Cómo clonar un proyecto de GitHub a tu laptop usando GitHub CLI (gh)
+Objetivo: Clonar (bajar) a tu laptop un repositorio de otra persona usando solo la Terminal con GitHub CLI (gh).
+
+Requisitos previos (solo comprobar):
+• Tener GitHub CLI instalado (comando: gh --version).
+• Tener Git instalado (comando: git --version).
+• Tener una cuenta en GitHub y estar autenticado con gh auth login.
+
+PASOS (una sola acción por paso):
+
+Paso 1: Abre la Terminal (PowerShell) en tu laptop.
+Paso 2: Comprueba que GitHub CLI está instalado escribiendo: gh --version y pulsa Enter.
+Paso 3: Comprueba que Git está instalado escribiendo: git --version y pulsa Enter.
+Paso 4: Autentícate en GitHub (si aún no lo hiciste) escribiendo: gh auth login y pulsa Enter.
+Paso 5: Sigue las instrucciones de gh auth login hasta ver que la autenticación fue correcta.
+Paso 6: Decide en qué carpeta de tu laptop quieres guardar el proyecto (por ejemplo: C:\Users\TU_USUARIO\HIPERTEX\PROYECTOS_EXTERNOS).
+Paso 7: En la Terminal, cambia a esa carpeta escribiendo: cd RUTA_DE_TU_CARPETA y pulsa Enter.
+Paso 8: Abre en el navegador la página del repositorio de GitHub que quieres clonar (por ejemplo: https://github.com/usuario/otro-proyecto).
+Paso 9: Copia mentalmente o visualmente el nombre completo del repositorio con el formato usuario/nombre-repo (por ejemplo: usuario/otro-proyecto).
+Paso 10: Vuelve a la Terminal y escribe el comando: gh repo clone usuario/nombre-repo y pulsa Enter.
+Paso 11: Espera a que termine el proceso de clonación hasta que veas el prompt de la Terminal de nuevo sin errores.
+Paso 12: Lista el contenido de la carpeta actual escribiendo: dir y pulsa Enter (en PowerShell).
+Paso 13: Comprueba que ahora ves una carpeta nueva con el nombre del repositorio (por ejemplo: otro-proyecto).
+Paso 14: Entra en la carpeta del proyecto escribiendo: cd nombre-repo y pulsa Enter.
+Paso 15: Vuelve a listar el contenido escribiendo: dir y pulsa Enter para ver los archivos del proyecto clonado.
+Paso 16: (Opcional) Abre el proyecto en tu editor de código escribiendo: code . y pulsa Enter (si usas VS Code).
+Paso 17: Verifica que en GitHub CLI el repositorio está correctamente vinculado escribiendo: gh repo view --web y pulsa Enter.
+Paso 18: Comprueba en el navegador que se abre la página del repositorio en GitHub.
+Paso 19: (Opcional) Si quieres confirmar el estado de git en local, escribe: git status y pulsa Enter.
+Paso 20: A partir de aquí ya puedes trabajar con el proyecto clonado en tu laptop.

@@ -1,0 +1,115 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Gemini 3 App Build\nWEB ORIGINAL:",
+      "contenido": "Gemini 3 App Build:\nWeb Original:\nGemini 3 App Build:\nYoutube sources varios\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción al poder de la IA Gemini 3",
+      "contenido": "Introducción al poder de la IA Gemini 3:\nLa inteligencia artificial de Google, Gemini 3, es presentada como el modelo más poderoso disponible actualmente, capaz de manejar tareas complejas de creación de aplicaciones de forma rápida y eficiente. Esta herramienta permite construir aplicaciones completas en muy poco tiempo, incluso en 10 minutos o menos, usando solo una o dos frases que describen la idea del usuario, sin necesidad de saber programar ni tener experiencia técnica previa. El objetivo principal es aprender a usar estas capacidades para crear servicios que se puedan ofrecer a negocios, con el potencial de generar ingresos mensuales entre 500 y 2,000 dólares.[1]"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Definir el objetivo de negocio con IA",
+      "contenido": "Definir el objetivo de negocio con IA:\nAntes de construir aplicaciones con Gemini 3, es importante tener claro el objetivo de negocio que se quiere lograr, como ayudar a empresas a visualizar mejor sus servicios o automatizar procesos repetitivos. La idea central es pensar en soluciones que puedan venderse como un servicio, de forma que la aplicación de IA resuelva un problema real para el cliente y permita ofrecer un valor por el que estén dispuestos a pagar mensualmente.[1]"
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Acceder a Google AI Studio para crear prototipos",
+      "contenido": "Acceder a Google AI Studio para crear prototipos:\nPara comenzar a crear aplicaciones rápidas, se utiliza Google AI Studio como entorno principal de prototipado. El primer paso es abrir el navegador, buscar “AI Studio Google”, hacer clic en el enlace principal y crear una cuenta o iniciar sesión para empezar a trabajar con los modelos de Gemini 3.[1]"
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Definir la idea de la aplicación Green Vision AI",
+      "contenido": "Definir la idea de la aplicación Green Vision AI:\nComo ejemplo práctico, se presenta la aplicación “Green Vision AI”, pensada para resolver un problema específico de los paisajistas, que son profesionales que diseñan jardines y espacios exteriores. Muchos de estos profesionales tienen dificultades para ayudar a sus clientes a imaginar cómo se verá el resultado final del trabajo, y esta aplicación ofrece una visualización clara antes de ejecutar el proyecto, facilitando que el paisajista cierre más negocios.[1]"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Describir la idea dentro de Google AI Studio",
+      "contenido": "Describir la idea dentro de Google AI Studio:\nUna vez dentro de Google AI Studio, el usuario debe escribir su idea en forma de texto, explicando qué debe hacer la herramienta. En el caso de Green Vision AI, la instrucción clave consiste en indicar que se quiere crear una herramienta para que los paisajistas la ofrezcan a sus clientes, permitiendo subir una foto actual de la propiedad, añadir instrucciones sobre los cambios planeados y generar imágenes de cómo se verá el resultado final.[1]"
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Generar la aplicación y visualizar el resultado",
+      "contenido": "Generar la aplicación y visualizar el resultado:\nTras describir la idea, Gemini 3 se encarga de construir la aplicación completa, de forma que el usuario pueda subir una foto de su jardín y describir los cambios que desea, como reemplazar el césped por una pasarela de piedra. La herramienta genera automáticamente una visualización del resultado final, ofreciendo una experiencia clara al cliente y mostrando que la aplicación queda lista para usarse sin necesidad de escribir código.[1]"
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Personalizar la aplicación creada con Gemini 3",
+      "contenido": "Personalizar la aplicación creada con Gemini 3:\nDespués de que la aplicación inicial esté lista, el usuario puede seguir conversando con la IA para ajustar detalles y añadir nuevas funciones. Por ejemplo, se pueden solicitar cambios de colores para aplicar un tema oscuro o pedir que se incluya una opción de inicio de sesión, todo mediante instrucciones en lenguaje natural, manteniendo un diseño adaptado a dispositivos móviles como tabletas e iPhones.[1]"
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Pasar de prototipo a solución de negocio",
+      "contenido": "Pasar de prototipo a solución de negocio:\nUna vez validado el prototipo en Google AI Studio, se sugiere pensar en otros problemas de diferentes industrias donde la visualización o la automatización puedan aportar valor. La recomendación es crear demos con IA para mostrar la solución a potenciales clientes y entender que Google AI Studio es ideal para la parte visual o front-end, mientras que para funciones más complejas o almacenamiento de datos persistente será necesario complementarlo con otras herramientas.[1]"
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Introducción a Anti-gravity como IDE para agentes de IA",
+      "contenido": "Introducción a Anti-gravity como IDE para agentes de IA:\nAnti-gravity se presenta como una nueva herramienta de Google para codificar, diseñada específicamente para manejar flujos de trabajo con agentes de IA. Se describe como un Entorno de Desarrollo Integrado basado en VS Code, que da la sensación de administrar varios agentes que trabajan para el usuario, en lugar de limitarse a un simple chat.[1]"
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Comprender el Administrador de Agentes, la Bandeja de Entrada y los Artefactos",
+      "contenido": "Comprender el Administrador de Agentes, la Bandeja de Entrada y los Artefactos:\nEl flujo de trabajo con Anti-gravity incluye tres elementos clave: el Administrador de Agentes, la Bandeja de Entrada y los Artefactos. El Administrador de Agentes permite organizar y ejecutar múltiples tareas en paralelo, la Bandeja de Entrada muestra mensajes cuando el agente se bloquea o requiere aprobación humana, y los Artefactos son documentos generados por la IA para mantener la organización del proyecto, como planes de implementación o informes finales.[1]"
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Configurar nivel de libertad y privacidad en Anti-gravity",
+      "contenido": "Configurar nivel de libertad y privacidad en Anti-gravity:\nAnti-gravity ofrece controles para decidir cuánta libertad se otorga al agente para tomar decisiones de codificación durante el desarrollo. Como recomendación de privacidad, se señala que conviene desactivar el envío de datos automáticos o telemetría si el código es sensible, y se explica que, para probar aplicaciones en el navegador, la herramienta crea un perfil de Chrome aislado o sandbox donde el agente puede trabajar sin acceder a información personal.[1]"
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Planificar una aplicación lector de noticias RSS en el Playground",
+      "contenido": "Planificar una aplicación lector de noticias RSS en el Playground:\nEn el tutorial avanzado se propone crear una aplicación lector de noticias (RSS Reader) usando Anti-gravity, comenzando por definir la idea en el “Playground”. Cuando se describe la aplicación, el agente genera un “Plan de Implementación” detallado donde indica cómo construirá la solución, por ejemplo utilizando Next.js como tecnología base para la interfaz.[1]"
+    },
+    {
+      "itemID": "013",
+      "menu_item": "Revisar y mejorar el Plan de Implementación",
+      "contenido": "Revisar y mejorar el Plan de Implementación:\nDespués de que el agente genere el Plan de Implementación, es importante revisarlo para asegurarse de que sea específico y no quede demasiado genérico. El usuario puede añadir comentarios directamente en los artefactos del plan, como si trabajara en un documento colaborativo, guiando a la IA para que incorpore cambios concretos, por ejemplo un diseño minimalista o ciertos requisitos visuales.[1]"
+    },
+    {
+      "itemID": "014",
+      "menu_item": "Mover el proyecto a un Workspace con control de versiones",
+      "contenido": "Mover el proyecto a un Workspace con control de versiones:\nCuando el plan ya es sólido, el siguiente paso consiste en mover el proyecto desde el Playground a un Workspace, con el fin de gestionar mejor el código y la evolución del proyecto. En este Workspace se habilita el uso de Git para tener control de versiones, manteniendo el trabajo más limpio y estructurado a medida que el agente realiza cambios.[1]"
+    },
+    {
+      "itemID": "015",
+      "menu_item": "Dejar que el agente codifique y supervise la ejecución",
+      "contenido": "Dejar que el agente codifique y supervise la ejecución:\nUna vez dentro del Workspace, el agente comienza a escribir el código de la aplicación y a instalar los paquetes necesarios para su funcionamiento. Si se activa el modo de revisión, el agente se detiene en ciertos puntos y espera la aprobación del usuario a través de la Bandeja de Entrada, mientras que el modo “Seguir” permite ver en qué parte está trabajando el agente, ya sea en la terminal, el navegador o el editor de código.[1]"
+    },
+    {
+      "itemID": "016",
+      "menu_item": "Gestionar errores y commits automáticos con el agente",
+      "contenido": "Gestionar errores y commits automáticos con el agente:\nSi el agente encuentra un error durante la construcción o ejecución de la aplicación, intenta corregirlo de forma autónoma antes de solicitar más intervención. Además, puede generar automáticamente los mensajes de commit para Git, documentando los cambios realizados y ayudando a mantener un historial claro de la evolución del proyecto.[1]"
+    },
+    {
+      "itemID": "017",
+      "menu_item": "Usar el Agente Navegador para pruebas de la UI",
+      "contenido": "Usar el Agente Navegador para pruebas de la UI:\nEn el paso de pruebas, se puede pedir al agente que utilice la herramienta de navegador integrada para verificar si la aplicación funciona correctamente desde la perspectiva del usuario final. El agente navega de forma autónoma por la interfaz, haciendo clic en botones, probando la UI y luego genera grabaciones de pantalla incrustadas en el informe para demostrar que la aplicación está funcionando como se esperaba.[1]"
+    },
+    {
+      "itemID": "018",
+      "menu_item": "Aprovechar la integración de modelos locales en Anti-gravity",
+      "contenido": "Aprovechar la integración de modelos locales en Anti-gravity:\nAnti-gravity permite integrar modelos de IA locales que se ejecutan directamente en el ordenador del usuario, como Olama, lo que ofrece un nivel adicional de control y privacidad. Gracias a esta integración, se pueden realizar tareas avanzadas como analizar el contenido de noticias, generar etiquetas automáticas para filtrado y crear resúmenes diarios, todo de forma cien por ciento privada en la máquina local, algo que no es posible en Google AI Studio.[1]"
+    },
+    {
+      "itemID": "019",
+      "menu_item": "Cambiar de modelo para depuración y flexibilidad",
+      "contenido": "Cambiar de modelo para depuración y flexibilidad:\nOtra función destacada de Anti-gravity es la posibilidad de cambiar el modelo de IA que está trabajando sobre el código, lo que aporta flexibilidad a la hora de desarrollar y depurar. Si Gemini 3 llega a su límite de uso o encuentra problemas, el usuario puede cambiar rápidamente a otro modelo como Claude Sonnet 4.5 Thinking, permitiendo que la construcción de la aplicación continúe o que la depuración de errores se realice con otro motor de IA, mejorando la gestión del contexto de programación.[1]"
+    },
+    {
+      "itemID": "020",
+      "menu_item": "Flujo entre editor, agentes y navegador en Anti-gravity",
+      "contenido": "Flujo entre editor, agentes y navegador en Anti-gravity:\nEl flujo de trabajo en Anti-gravity se describe como muy fluido e intuitivo, combinando el editor de código, el administrador de agentes, la bandeja de entrada y el navegador. Esta integración permite que el desarrollador actúe como arquitecto del proyecto, mientras los agentes ejecutan tareas de escritura de código, pruebas y validaciones en un ciclo continuo y bien coordinado.[1]"
+    },
+    {
+      "itemID": "021",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nLos conceptos de creación rápida de aplicaciones con Gemini 3 en Google AI Studio se alinean con la documentación oficial de Google, donde se explica cómo prototipar con Gemini, crear prompts y construir aplicaciones utilizando el panel de AI Studio y la API de Gemini. Según las guías oficiales, el flujo habitual incluye acceder a Google AI Studio, iniciar sesión con cuenta de Google, crear un nuevo proyecto, diseñar prompts y probar las respuestas antes de integrarlas en aplicaciones reales. La capacidad de usar Gemini para construir experiencias completas y conectarlas con código externo refleja las recomendaciones de las rutas de aprendizaje para desarrolladores publicadas por Google.[2][3][4]\n\nEn cuanto a Anti-gravity, su descripción como IDE centrado en agentes se confirma por recursos técnicos y tutoriales donde se muestra que los agentes controlan editor, terminal y navegador para escribir código, ejecutar pruebas y validar aplicaciones de forma autónoma, manteniendo artefactos como planes y registros de ejecución. Estos materiales destacan el modelo de trabajo basado en agentes, la planificación mediante artefactos, el uso de un navegador integrado y la validación automatizada, coherente con el flujo explicado en este tutorial. Además, se documenta que Antigravity permite configurar políticas del agente, niveles de autonomía y el uso de modelos Gemini 3, lo que respalda las funciones descritas para la gestión de proyectos y depuración asistida por IA.[5][6][7][8]\n\n\nGemini 3 App Build\nYoutube sources varios\nPRO-LIMP AUTOMATIZACION\n+34 636832005\n\n[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/64556067/c117c6de-d95e-4c0d-87dc-9de4a552a52f/transcripcion-hoy.txt)\n[2](https://ai.google.dev/gemini-api/docs/ai-studio-quickstart)\n[3](https://developers.google.com/learn/pathways/solution-ai-gemini-101)\n[4](https://ai.google.dev/gemini-api/docs)\n[5](https://www.youtube.com/watch?v=QOpfCGa_2SU)\n[6](https://skywork.ai/blog/google-antigravity-agentic-architecture-ai-workflow/)\n[7](https://skywork.ai/blog/agent/antigravity-gemini-3/)\n[8](https://www.nobleprog.es/en/cc/mawantigravity)\n[9](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/64556067/10652a46-2ec5-4e6d-b331-d012e5b41c66/PROMPT-CLAUDE-PARA-GENERAR-TUTORIAL-HPTX.txt)\n[10](https://www.youtube.com/watch?v=-aT3Uh1hyis)\n[11](https://www.linkedin.com/pulse/ultimate-guide-google-ai-studio-step-by-step-vladislav-guzey-uojjc)\n[12](https://weareaiinstitute.com/insights/how-to-use-google-ai-studio-for-beginners)"
+    }
+  ]
+}

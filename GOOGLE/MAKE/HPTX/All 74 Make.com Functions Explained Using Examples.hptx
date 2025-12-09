@@ -1,0 +1,414 @@
+##itemID:000
+##menu-item BEGIN
+All 74 Make.com Functions Explained Using Examples
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+All 74 Make.com Functions Explained Using Examples:
+Web Original:
+All 74 Make.com Functions Explained Using Examples
+https://youtu.be/0lkuD6_mZzk?si=1TUy4-ybW7yJX48o
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción y primeros pasos
+##menu-item END
+##Contenido BEGIN
+Introducción y primeros pasos:
+Las funciones internas de Make.com son herramientas muy potentes para automatizar tareas.[1][2][3][4][5] Son tan buenas que convencieron al presentador del video de dejar Zapier y pasarse a Make.com.[1]
+
+Para empezar a usarlas, sigue estos pasos:
+
+Abre un escenario (tu lienzo de trabajo) en Make.com.[1][6]
+
+Haz clic en Tools (Herramientas).[1]
+
+Busca un campo donde puedas escribir o añadir información.[1] Al hacerlo, verás todas las funciones disponibles.
+
+Las funciones se dividen en varias pestañas o categorías:
+
+Generales.
+
+Matemáticas.
+
+Texto y Binario.[1][4][7]
+
+Calendario Fecha y Hora.
+
+Arreglo y Colección (listas).
+
+Funciones Personalizadas.
+
+Una gran ventaja de Make.com es que te permite usar muchas funciones diferentes dentro de un solo módulo o paso del proceso.[1]
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Preparando los datos de prueba (JSON)
+##menu-item END
+##Contenido BEGIN
+Preparando los datos de prueba (JSON):
+Para probar las funciones, el tutorial utiliza datos en formato JSON creados con ChatGPT. Sigue este proceso para configurarlo:
+
+Añade un módulo llamado JSON.[1]
+
+Elige la acción Parse JSON, que sirve para convertir los datos JSON en información que Make.com pueda entender.
+
+Asegúrate de que los datos estén dentro de un arreglo (una lista).[1]
+
+Ejecuta el escenario.
+
+Esto generará un paquete de datos con cinco clientes, incluyendo a una clienta duplicada llamada Jane Smith que servirá para pruebas más adelante.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Funciones Matemáticas Básicas
+##menu-item END
+##Contenido BEGIN
+Funciones Matemáticas Básicas:
+Estas funciones ayudan a manejar números de forma sencilla:
+
+CEIL (Techo):
+Toma un número decimal y lo sube al número entero más alto.[1] Por ejemplo, si tienes 1.2 o 1.9, el resultado será 2.
+
+FLOOR (Piso):
+Es lo opuesto a CEIL.[1] Toma un número y lo baja al entero más bajo. Si tienes 1.9 o 2.1, el resultado será 1 o 2 respectivamente (siempre hacia abajo).
+
+MAX (Máximo):
+Encuentra el número más grande en una lista.[1] Si la lista es 1, 2, 3, 4, 5, el resultado es 5.
+
+MIN (Mínimo):
+Encuentra el número más pequeño en una lista.[1] En el ejemplo anterior, el resultado es 1.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Cálculos y Formato de Números
+##menu-item END
+##Contenido BEGIN
+Cálculos y Formato de Números:
+ROUND (Redondear):
+Por defecto redondea al entero más cercano.[1][3][5]
+Truco para decimales: Si quieres redondear a dos decimales, multiplica el número por 100, usa la función ROUND, y luego divide por 100. Debes usar los operadores de asterisco y barra diagonal de Make.com.[1]
+
+SUM (Suma):
+Suma todos los números de una lista.[1] La suma de 1, 2, 3, 4 y 5 da 15.
+
+AVERAGE (Promedio):
+Calcula el promedio de una lista.[1][8] El promedio de 1 a 5 es 3.[1][9]
+
+PARSE NUMBER (Convertir a Número):
+Convierte un texto que parece un número en un objeto de tipo número real.[1] Esto es necesario porque no puedes hacer matemáticas con texto.[1] Puedes especificar si usas coma como separador decimal.
+
+FORMAT NUMBER (Formato de Número):
+Cambia la apariencia de un número.[1][8] Te permite elegir cuántos decimales mostrar y qué símbolos usar para separar los miles y los decimales (punto o coma).[1][8]
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Operadores y Funciones Matemáticas Especiales
+##menu-item END
+##Contenido BEGIN
+Operadores y Funciones Matemáticas Especiales:
+Operaciones Directas:
+Puedes hacer cálculos usando símbolos matemáticos:
+
+Multiplicación: *
+
+División: /
+
+Suma: +
+
+Resta: -
+
+MODULO:
+Devuelve el resto o residuo de una división.[1] Si divides 25 entre 7, el 7 cabe 3 veces y sobran 4. El resultado de MODULO es 4.
+
+PI:
+Devuelve el número Pi (3.1415...).[1]
+
+RANDOM NUMBER (Número Aleatorio):
+Genera un número al azar entre 0 y 1.[1] Es muy útil para pruebas A/B, donde quieres que el proceso siga un camino la mitad del tiempo y otro camino el resto del tiempo.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Funciones Generales de Lógica
+##menu-item END
+##Contenido BEGIN
+Funciones Generales de Lógica:
+Estas funciones manejan las reglas de decisión.
+
+IF/ELSE (Si/Sino):
+Es la lógica condicional básica.[1] Si una condición se cumple (es verdadera), sigue el camino A. Si no se cumple (es falsa), sigue el camino B. Puedes poner una regla dentro de otra (anidación) para lógica compleja.
+
+IF EMPTY (Si está Vacío):
+Verifica si un campo tiene información.[1][10] Si tiene valor, lo usa. Si está vacío (o es nulo), usa un valor de respaldo que tú definas.
+
+SWITCH (Cambiar):
+Compara un valor con una lista de opciones.[1] Por ejemplo, si entra el número 32, la función busca en la lista hasta encontrar el 32 y devuelve el resultado asociado (como el texto Treinta y Dos).
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Manipulación de Objetos (General)
+##menu-item END
+##Contenido BEGIN
+Manipulación de Objetos (General):
+Estas funciones trabajan con datos complejos, como la información de un cliente.[1]
+
+OMIT (Omitir):
+Elimina valores específicos que no quieres y conserva el resto. Es como tallar una escultura: quitas lo que sobra.[1]
+
+PICK (Elegir):
+Selecciona solo los valores que te interesan y descarta todo lo demás. Es como construir con bloques: eliges solo las piezas que necesitas.[1]
+
+GET (Obtener):
+Extrae información que está escondida o anidada dentro de una estructura.[1] Debes indicar la ruta, por ejemplo, buscar el nombre de la primera persona (1.name).
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Operadores Lógicos y Palabras Clave
+##menu-item END
+##Contenido BEGIN
+Operadores Lógicos y Palabras Clave:
+Paréntesis ():
+Se usan para agrupar operaciones y forzar que una se haga antes que otra, como sumar antes de dividir.[1][2][3]
+
+Operadores de Comparación:
+
+= (Igual)
+
+!= (No es igual a)
+
+OR (O): Pasa si se cumple la Condición 1 O la Condición 2.
+
+AND (Y): Pasa solo si se cumplen AMBAS condiciones.
+
+Palabras Clave:
+
+TRUE (Verdadero) y FALSE (Falso): Son valores lógicos, no texto.
+
+NULL: Valor vacío.[1]
+
+IGNORE: Ignora el valor.
+Se usan para comparar resultados de otras funciones.[1]
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Funciones de Texto Básicas
+##menu-item END
+##Contenido BEGIN
+Funciones de Texto Básicas:
+LENGTH (Largo):
+Cuenta cuántos caracteres (letras, números, espacios) tiene una frase.[3][11]
+
+LOWERCASE (Minúsculas) y UPPERCASE (Mayúsculas):
+Convierten todo el texto a minúsculas o mayúsculas respectivamente.[1]
+
+CAPITALIZE y START CASE:
+Ambas ponen en mayúscula la primera letra de las palabras.
+
+ASCII:
+Convierte caracteres especiales (como acentos o la ñ) a caracteres estándar ingleses.[1]
+
+REPLACE (Reemplazar):
+Busca una parte del texto y la cambia por otra.[1][7][11]
+
+TRIM (Recortar):
+Elimina los espacios en blanco sobrantes al inicio y al final del texto.[1]
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Funciones de Texto Avanzadas
+##menu-item END
+##Contenido BEGIN
+Funciones de Texto Avanzadas:
+SUBSTRING (Subcadena):
+Acorta un texto indicando dónde empezar y dónde terminar.[1][3][11] Útil para limitar caracteres en mensajes.
+
+INDEX OF (Índice de):
+Te dice la posición numérica de una letra o palabra.[1] Recuerda que el conteo empieza en 0.[1][7][12] Si no lo encuentra, devuelve -1.
+
+TO STRING (Convertir a Texto):
+Convierte números o valores lógicos en texto.[1][11]
+
+ENCODE URL y DECODE URL:
+Codifican texto para que sea seguro usarlo en una dirección web (cambiando espacios por caracteres especiales) y viceversa.[1]
+
+STRIP HTML (Quitar HTML):
+Elimina las etiquetas de código de una página web, dejando solo el texto limpio.
+
+CONTAINS (Contiene):
+Verifica si un texto incluye una palabra específica. Devuelve TRUE o FALSE.
+
+SPLIT (Dividir):
+Rompe un texto en varias partes usando un separador (como espacio, nueva línea o tabulación) y crea una lista.
+
+UUID:
+Genera un código de identificación único que nunca se repite.[1]
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Funciones de Calendario, Fecha y Hora
+##menu-item END
+##Contenido BEGIN
+Funciones de Calendario, Fecha y Hora:
+NOW (Ahora):
+Devuelve la fecha y hora exactas del momento actual.[1][3]
+
+TIMESTAMP:
+Cuenta los segundos pasados desde el 1 de enero de 1970.[1]
+
+ADD/SUBTRACT TIME (Añadir/Restar Tiempo):
+Suma o resta segundos, minutos, horas, días, meses o años a una fecha.
+
+COMPARE DATES (Comparar Fechas):
+Calcula la diferencia de tiempo entre dos fechas.
+
+SET (Establecer):
+Cambia solo una parte específica de una fecha (como solo la hora o el día).[1]
+
+FORMAT DATE (Formato de Fecha):
+Presenta una fecha de forma legible, por ejemplo, 19 de Agosto de 2024.
+
+PARSE DATE (Convertir Fecha):
+Convierte una fecha escrita como texto en un objeto de tipo fecha real, indicando el formato original.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Funciones de Arreglo (Listas) Básicas
+##menu-item END
+##Contenido BEGIN
+Funciones de Arreglo (Listas) Básicas:
+JOIN (Unir):
+Fusiona los elementos de una lista simple en un solo texto.[1][3][10][13]
+
+LENGTH (Largo del Arreglo):
+Cuenta cuántos elementos hay en la lista.
+
+KEYS (Claves):
+Devuelve los nombres de las propiedades de un objeto (ej. calle, ciudad).
+
+SLICE (Rebanar):
+Recorta una lista desde un punto de inicio hasta un corte.[1] La posición inicial es 0.[1][7][12]
+
+MERGE (Fusionar):
+Combina varias listas en una sola grande.[1]
+
+CONTAINS (Contiene):
+Verifica si la lista tiene un valor específico.
+
+REMOVE (Quitar) y ADD (Añadir):
+Eliminan o agregan valores a una lista simple.[1]
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+Funciones de Arreglo Avanzadas
+##menu-item END
+##Contenido BEGIN
+Funciones de Arreglo Avanzadas:
+MAP (Mapear):
+Muy poderosa.[1][2][3][14] Extrae valores específicos de una lista compleja de objetos. Puedes usar condiciones para filtrar qué datos extraer.
+
+SHUFFLE (Mezclar):
+Cambia el orden de la lista al azar.
+
+SORT (Ordenar):
+Organiza la lista según un criterio, como el orden alfabético de un nombre.
+
+REVERSE (Revertir):
+Invierte el orden de la lista (de Z a A).
+
+FIRST (Primero) y LAST (Último):
+Extraen el primer o el último valor de la lista.[1]
+
+FLATTEN (Aplanar):
+Convierte una lista de listas en una sola lista simple.[1]
+
+DISTINCT (Distinto):
+Elimina objetos duplicados (como clientes repetidos) basándose en una clave (como el nombre).[15]
+
+DEDUPLICATE (Desduplicar):
+Elimina valores simples (números o textos) que están repetidos.[1]
+
+TO ARRAY (Convertir a Lista):
+Convierte un objeto en una lista.[1][10][14]
+##Contenido END
+
+##itemID:014
+##menu-item BEGIN
+Variables del Sistema y Conclusión
+##menu-item END
+##Contenido BEGIN
+Variables del Sistema y Conclusión:
+Make.com ofrece variables personalizadas para obtener datos sobre el proceso en ejecución, como el ID de ejecución, la hora de inicio o cuántos datos se consumieron.[1][3] Esto es útil para controlar el uso de tu cuenta.[1]
+
+En conclusión, usar estas funciones internas cambia las reglas del juego de la automatización. Te permite manejar lógica compleja y datos sin necesidad de ser programador, ofreciendo una gran flexibilidad en tus procesos.
+##Contenido END
+
+##itemID:015
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+Para validar la información presentada en este tutorial, se han consultado las siguientes fuentes oficiales de Make.com (anteriormente Integromat), que confirman la existencia y el funcionamiento de las funciones descritas:
+
+Resumen de puntos validados:
+
+La categorización de funciones (Matemáticas, Texto, Fecha y Hora, Arreglos/Arrays) coincide con la interfaz de Make.
+
+Funciones específicas mencionadas como map(), parseDate(), formatDate(), distinct(), merge() y las funciones matemáticas básicas están documentadas y operan según lo descrito.
+
+La distinción entre manipulación de arreglos primitivos y complejos es una característica central de la plataforma.[1]
+
+Enlaces directos a documentación oficial:
+
+Documentación General de Funciones: https://www.make.com/en/help/functions[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQHUgnMLdsOPZGkc96zTgCBPg7nEqC5nFydkmI3TjB7QbMcWTf1kZCALVso66ULHt1xltRovqvxK9dMG9fi9SYBPGqYb9N_DbRGQqlVfIzyV_jFyfsUAaLNf5UYQaGGpwvV1tOMDSUk%3D)][[16](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGQffJKsNcMiPkjSlJvHHEMepXNpuM_8rHJ9E1WXPcUP0T_8iYcTSoCJFh0JClmGF-P2bHVK0_ZTHboL0iBz8n9CB2TXynxP21NCba-XXv6cWCIcJzaTEyDm1AHordEZeq2fOzlutXCswkWKIEsfgchbL5lBIMlLkvWuHTXVDi070CEPtjiOU9ydVTj1Hx-BAmYBFVMHXyM)]
+
+Funciones Matemáticas (Math Functions): https://www.make.com/en/help/functions/math-functions[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQHUgnMLdsOPZGkc96zTgCBPg7nEqC5nFydkmI3TjB7QbMcWTf1kZCALVso66ULHt1xltRovqvxK9dMG9fi9SYBPGqYb9N_DbRGQqlVfIzyV_jFyfsUAaLNf5UYQaGGpwvV1tOMDSUk%3D)][[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEPX0k9dCarC0SW8mP01OnCoYxrobL9V9vOBAy-4lbSQ8RcKQTbiwuO4VeNyo813XfUAIWfmslm8YKS9rD9AQ8GMojA9zgcGfboQUbCgc0mBD64eL2bPXZC8mEWOljtbQcRwpLzFSs72fI-syzr8jftnF0HTTqeBeaNxA%3D%3D)]
+
+Funciones de Texto (String Functions): https://www.make.com/en/help/functions/string-functions[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQHUgnMLdsOPZGkc96zTgCBPg7nEqC5nFydkmI3TjB7QbMcWTf1kZCALVso66ULHt1xltRovqvxK9dMG9fi9SYBPGqYb9N_DbRGQqlVfIzyV_jFyfsUAaLNf5UYQaGGpwvV1tOMDSUk%3D)]
+
+Funciones de Fecha y Hora (Date & Time Functions): https://www.make.com/en/help/functions/date---time-functions[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQHUgnMLdsOPZGkc96zTgCBPg7nEqC5nFydkmI3TjB7QbMcWTf1kZCALVso66ULHt1xltRovqvxK9dMG9fi9SYBPGqYb9N_DbRGQqlVfIzyV_jFyfsUAaLNf5UYQaGGpwvV1tOMDSUk%3D)]
+
+Funciones de Arreglo (Array Functions - incluye Map, Distinct, etc.): https://www.make.com/en/help/functions/array-functions
+
+Referencias obtenidas mediante búsqueda web en el Centro de Ayuda oficial de Make.com.
+
+
+Sources
+help
+youtube.com
+youtube.com
+lets-viz.com
+xray.tech
+xray.tech
+youtube.com
+youtube.com
+make.com
+make.com
+youtube.com
+youtube.com
+make.com
+make.com
+youtube.com
+make.com
+make.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+Make.com array functions documentation
+Make.com math functions documentation
+Make.com date and time functions documentation
+Make.com text and binary functions documentation
+Make.com functions official documentation
+##Contenido END

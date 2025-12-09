@@ -1,0 +1,75 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Creacion y Ejecucion de la Aplicación Flet_Contador\nWEB ORIGINAL:",
+      "contenido": "Creacion y Ejecucion de la Aplicación Flet_Contador:\nWeb Original:\nCreacion y Ejecucion de la Aplicación Flet_Contador:\nhttps://flet.dev/docs/\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Instalación del módulo Flet",
+      "contenido": "Instalación del módulo Flet:\nPara comenzar a trabajar con Flet, es necesario instalar el módulo flet usando pip para crear un nuevo entorno de Flet. Esto se realiza mediante el siguiente comando en la terminal o línea de comandos:\n\npip install flet\n\nEste comando descargará e instalará todas las dependencias necesarias para que puedas empezar a desarrollar aplicaciones con Flet."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Creación del archivo de programa Python",
+      "contenido": "Creación del archivo de programa Python:\nEl siguiente paso consiste en crear un archivo de programa Python con el nombre counter.py. Este archivo contendrá todo el código de nuestra aplicación contador. Puedes crear este archivo utilizando cualquier editor de texto o entorno de desarrollo integrado de tu preferencia."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Importación del módulo Flet",
+      "contenido": "Importación del módulo Flet:\nDentro del archivo counter.py, debes importar el módulo flet utilizando el alias ft. Esta es la primera línea de código que escribirás en tu programa:\n\nimport flet as ft\n\nEste alias ft te permitirá acceder a todas las funcionalidades de Flet de manera más breve y práctica a lo largo de tu código."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Definición de la función principal y configuración de la página",
+      "contenido": "Definición de la función principal y configuración de la página:\nAhora debes definir la función principal main que recibe un objeto page de tipo ft.Page. Esta función es el núcleo de tu aplicación:\n\ndef main(page: ft.Page):\n\nDentro de esta función, primero asignas el título a la página con el valor Flet counter example:\n\npage.title = \"Flet counter example\"\n\nLuego, estableces la alineación vertical de la página al centro usando ft.MainAxisAlignment.CENTER para que todos los elementos se muestren centrados verticalmente:\n\npage.vertical_alignment = ft.MainAxisAlignment.CENTER"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Inicialización del control de texto",
+      "contenido": "Inicialización del control de texto:\nDebes inicializar el control de texto txt_number con el valor 0 y un ancho de 100. Este campo de texto mostrará el valor actual del contador:\n\ntxt_number = ft.TextField(value=\"0\", text_align=ft.TextAlign.RIGHT, width=100)\n\nEl texto está alineado a la derecha para que tenga mejor apariencia visual."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Definición de la función para decrementar",
+      "contenido": "Definición de la función para decrementar:\nAhora debes definir la función minus_click(e) que se encargará de decrementar el valor de txt_number en 1:\n\ndef minus_click(e):\n    txt_number.value = str(int(txt_number.value) - 1)\n\nLa función toma el valor actual del campo de texto, lo convierte a número entero, le resta 1, y lo convierte de nuevo a texto para asignarlo al campo.\n\nDentro de esta función, debes llamar a page.update() para actualizar la interfaz de usuario y que los cambios se reflejen visualmente:\n\n    page.update()"
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Definición de la función para incrementar",
+      "contenido": "Definición de la función para incrementar:\nDe manera similar, debes definir la función plus_click(e) para incrementar el valor de txt_number en 1:\n\ndef plus_click(e):\n    txt_number.value = str(int(txt_number.value) + 1)\n\nEsta función toma el valor actual, lo convierte a número entero, le suma 1, y lo convierte de nuevo a texto para actualizar el campo.\n\nAl igual que con la función anterior, debes llamar a page.update() dentro de plus_click para actualizar la interfaz de usuario:\n\n    page.update()"
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Creación de la fila con los controles de la interfaz",
+      "contenido": "Creación de la fila con los controles de la interfaz:\nAhora debes agregar a la página un control de fila ft.Row para organizar los elementos horizontalmente:\n\npage.add(ft.Row(alignment=ft.MainAxisAlignment.CENTER))\n\nDentro de esta fila, incluyes tres elementos:\n\nPrimero, un ft.IconButton con el icono ft.Icons.REMOVE y asignas minus_click a su evento on_click:\n\nft.IconButton(ft.Icons.REMOVE, on_click=minus_click)\n\nSegundo, añades el campo de texto txt_number para mostrar el contador.\n\nTercero, añades el botón de añadir con el icono ft.Icons.ADD y asignas plus_click al evento on_click:\n\ntxt_number, ft.IconButton(ft.Icons.ADD, on_click=plus_click)\n\nEstos tres elementos quedan centrados horizontalmente en la fila."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Inicio de la aplicación",
+      "contenido": "Inicio de la aplicación:\nPara que la aplicación se ejecute, debes llamar a la función ft.app pasando main como argumento. Esta línea se coloca al final del archivo counter.py:\n\nft.app(main)\n\nEsta llamada inicia todo el proceso de ejecución de la aplicación Flet."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Ejecución de la aplicación en ventana nativa",
+      "contenido": "Ejecución de la aplicación en ventana nativa:\nUna vez que hayas completado el código en counter.py, puedes ejecutar el programa para iniciar la aplicación en una ventana nativa del sistema operativo. Para ello, utiliza el siguiente comando en la terminal:\n\nflet run counter.py\n\nEste comando abrirá la aplicación en una ventana independiente de tu sistema operativo, donde podrás ver y utilizar el contador con los botones de incrementar y decrementar."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Ejecución de la aplicación como aplicación web",
+      "contenido": "Ejecución de la aplicación como aplicación web:\nOpcionalmente, puedes ejecutar el programa con el flag --web para iniciarlo como una aplicación web en una nueva pestaña del navegador. El comando es el siguiente:\n\nflet run --web counter.py\n\nAl ejecutar este comando, la aplicación se abrirá automáticamente en tu navegador web predeterminado, permitiéndote usar el contador desde el navegador en lugar de una ventana nativa."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Preguntas y Respuestas",
+      "contenido": "Preguntas y Respuestas:\n\nP: ¿Qué es Flet y qué tipo de aplicaciones permite construir?\n\nR: Flet es un framework que permite construir aplicaciones web, de escritorio y móviles usando Python sin requerir experiencia previa en el desarrollo frontend.\n\nP: ¿En qué tecnología se basan los controles de Flet?\n\nR: Los controles de la interfaz de usuario de Flet están basados en Flutter de Google. Sin embargo, Flet va más allá de solo envolver los widgets de Flutter, simplificando complejidades, implementando mejores prácticas de UI y aplicando valores predeterminados sensatos para asegurar que las aplicaciones se vean elegantes y pulidas.\n\nP: ¿Cómo se instala el módulo de Flet para empezar a desarrollar?\n\nR: Para instalar el módulo flet y crear un nuevo entorno Flet, se debe usar el comando pip install flet.\n\nP: ¿Cuál es la estructura básica de una aplicación Flet, como la aplicación Contador de ejemplo?\n\nR: La aplicación se define en un archivo Python (como counter.py). Debe importar el módulo flet con el alias ft. El núcleo es la función principal main, que recibe un objeto page de tipo ft.Page. La aplicación se inicia al final llamando a ft.app(main).\n\nP: ¿Qué se utiliza para manejar el diseño y la alineación de los controles en una página?\n\nR: En el ejemplo del contador, la alineación vertical de la página (page.vertical_alignment) se establece en el centro (ft.MainAxisAlignment.CENTER). Los controles se agrupan horizontalmente usando ft.Row, y la alineación dentro de la fila también se centra.\n\nP: ¿Qué elementos de la interfaz de usuario se utilizan en la aplicación de ejemplo Contador y cómo gestionan la interacción?\n\nR: Se utiliza un ft.TextField (txt_number) para mostrar el valor del contador. Se utilizan ft.IconButton (uno con el icono ft.Icons.REMOVE y otro con ft.Icons.ADD) para las acciones. Las interacciones se gestionan mediante funciones Python (minus_click y plus_click) asignadas al evento on_click de los botones.\n\nP: Cuando se modifica un valor (como el número del contador), ¿qué función se debe llamar para que los cambios se reflejen en la interfaz de usuario?\n\nR: Después de cambiar el valor de un control (como txt_number.value), es necesario llamar a page.update() para actualizar la interfaz.\n\nP: ¿Cómo se ejecuta una aplicación Flet como una aplicación de escritorio nativa?\n\nR: Una vez creado el programa (ej. counter.py), se ejecuta usando el comando flet run counter.py, lo que inicia la aplicación en una ventana nativa del sistema operativo.\n\nP: ¿Cómo se ejecuta una aplicación Flet como una aplicación web en el navegador?\n\nR: Para ejecutar la aplicación como una aplicación web que se abre en una nueva pestaña del navegador, se utiliza el comando flet run --web counter.py."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:El tutorial presentado ha sido validado con las fuentes técnicas oficiales de Flet. A continuación se presenta el resumen de puntos técnicos confirmados:\n\nResumen de puntos técnicos validados:\n\nLa documentación oficial confirma que Flet permite construir aplicaciones web, de escritorio y móviles en Python sin experiencia previa en desarrollo frontend. Los controles están basados en Flutter de Google, y el framework simplifica complejidades, implementa mejores prácticas de UI y aplica valores predeterminados sensatos para asegurar que las aplicaciones se vean elegantes.\n\nEl código de ejemplo del contador ha sido verificado en el repositorio oficial de GitHub de Flet, confirmando la estructura presentada en el tutorial con funciones minus_click y plus_click, el uso de ft.TextField para el contador, y ft.IconButton para los controles de incremento y decremento.\n\nLa instalación mediante pip install flet está documentada oficialmente en PyPI, donde se encuentra el paquete oficial del framework distribuido por Appveyor Systems Inc.\n\nEl punto de entrada de las aplicaciones Flet es la función main que recibe un objeto page de tipo ft.Page, tal como se explica en los tutoriales oficiales. Este objeto representa la página principal de la aplicación y funciona como un lienzo para construir la interfaz de usuario.\n\nEnlaces directos a documentación oficial:\n\nDocumentación oficial de Flet: https://flet.dev/docs/\nDocumentación completa: https://docs.flet.dev/\nRepositorio oficial en GitHub: https://github.com/flet-dev/flet\nPaquete oficial en PyPI: https://pypi.org/project/flet/\nAPI de Dart para Flet: https://pub.dev/documentation/flet/latest/\n\nReferencias a páginas de soporte oficiales:\n\nLa comunidad de Flet cuenta con un servidor de Discord oficial para consultas y soporte\nEjemplos adicionales están disponibles en el sitio web oficial de Flet\nTutoriales paso a paso se encuentran en la documentación oficial para aprender a crear aplicaciones reales\n\nCreacion y Ejecucion de la Aplicación Flet_Contador\nhttps://flet.dev/docs/\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    }
+  ]
+}

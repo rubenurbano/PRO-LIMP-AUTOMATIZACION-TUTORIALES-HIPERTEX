@@ -1,0 +1,165 @@
+##itemID:000
+##menu-item BEGIN
+Master JSON data in MAKEcom
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Master JSON data in MAKEcom:
+Web Original:
+Master JSON data in MAKEcom:
+https://youtu.be/XGSI0uX4akw?si=c82u9-BKZmDZshBy
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END[1]
+
+##itemID:001
+##menu-item BEGIN
+Introducción: ¿Qué es JSON?
+##menu-item END
+##Contenido BEGIN
+Introducción: ¿Qué es JSON?:
+JSON es un formato de datos, como una estructura de archivo especial.[1][2][3][4][5] Su propósito principal es ser fácil de leer y entender tanto para los humanos como para las máquinas, en este caso, Make.com.[1]
+
+Esta estructura permite que la automatización entienda exactamente qué valores y campos corresponden a cada dato.[1] Aunque puede parecer complicado al inicio, usar JSON es crucial para tus automatizaciones.[1] Es especialmente útil para cambiar el formato de tus datos y poder utilizarlos mejor en las salidas que obtienes.[1] Lo verás frecuentemente al extraer datos (scraping) o al usar inteligencia artificial.[1]
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Entendiendo el formato con ejemplos
+##menu-item END
+##Contenido BEGIN
+Entendiendo el formato con ejemplos:
+Un objeto JSON se ve como una ficha organizada de información.[1][5][6] Imagina que tienes un negocio y manejas un sistema de clientes (CRM); puedes exportar la información en este formato.
+
+Un ejemplo de datos en JSON incluiría campos como: Nombre (John Doe), Edad (30), Dirección y Ciudad.[1] En este formato, cada cliente será un "ítem" de datos.[1] Make.com te permite tomar estos datos y transformarlos o usarlos como desees, ya sea usando solo el nombre o toda la información completa.[1]
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Función Clave: Parse JSON (Dividir Datos)
+##menu-item END
+##Contenido BEGIN
+Función Clave: Parse JSON (Dividir Datos):
+Esta es la función más importante y la que más utilizarás.[1] Su propósito es actuar cuando recibes un bloque completo o un paquete de datos JSON (como una respuesta de ChatGPT o datos de una web).
+
+El módulo 'Parse JSON' divide ese bloque en piezas separadas.[1]
+
+Introduces el código JSON completo en el módulo.[1]
+
+Al ejecutarlo, el módulo separa el paquete en campos distintos (Nombre, Edad, Aficiones, Dirección) organizándolos en capas.[1]
+
+Una vez separados, puedes usar estos campos individualmente.[1] Por ejemplo, si solo quieres enviar el nombre y la afición a una Hoja de Google, puedes hacerlo sin necesidad de usar el resto de los datos del bloque original.[1]
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Función Clave: Create JSON (Crear Estructura)
+##menu-item END
+##Contenido BEGIN
+Función Clave: Create JSON (Crear Estructura):
+Esta función permite construir un nuevo código JSON o cambiar la estructura de uno existente.[1][2][5][6] Se usa cuando ya tienes los datos separados (quizás después de usar 'Parse JSON') pero quieres reagruparlos o cambiar su formato antes de enviarlos a otro lado.[1]
+
+Los pasos son:
+
+Defines la estructura de datos que deseas (por ejemplo, un JSON que solo tenga Nombre, Edad y Ciudad, eliminando la calle).[1]
+
+Asignas los valores dinámicos a esa nueva estructura.[1]
+
+Al ejecutarlo, los ítems separados se vuelven a convertir en un único código JSON con el formato modificado que definiste.[1]
+Esto facilita el manejo de datos al permitirte saltar de un código a ítems separados y viceversa.[1][5]
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Otras funciones JSON en Make
+##menu-item END
+##Contenido BEGIN
+Otras funciones JSON en Make:
+Existen otras funciones mencionadas en Make.com para manipular estos datos:
+
+Aggregate to JSON: Sirve para juntar varios paquetes de datos (como Cliente 1 y Cliente 2) en un solo gran formato o fórmula JSON.[1]
+
+Convert JSON to XML: Transforma el formato JSON al formato XML (similar a HTML), aunque no es muy utilizada frecuentemente.[1]
+
+Transform to JSON: Permite convertir otros objetos o texto a formato JSON.[1]
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Caso de Uso 1: JSON con Inteligencia Artificial
+##menu-item END
+##Contenido BEGIN
+Caso de Uso 1: JSON con Inteligencia Artificial:
+El uso de JSON es vital al interactuar con IA como ChatGPT.[1][2] Si pides a la IA dos ideas de noticias (títulos y descripciones), la respuesta suele llegar en un solo bloque de texto, lo que impide enviar los datos a celdas separadas en una base de datos.[1]
+
+La solución es pedir explícitamente a la IA que entregue el resultado en formato JSON, indicando la estructura deseada.[1][2] Una vez que la IA entrega el resultado en JSON, utilizas 'Parse JSON' para dividir ese texto en campos separados.[1] Esto te permite crear registros individuales en tu base de datos para cada noticia.[1]
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Caso de Uso 2: JSON para Scraping
+##menu-item END
+##Contenido BEGIN
+Caso de Uso 2: JSON para Scraping:
+Cuando realizas solicitudes web (como buscar negocios en Google Maps), los datos a menudo llegan como una cadena de texto larga y desordenada.[1] Si esa cadena está en formato JSON, puedes usar 'Parse JSON'.[1][2][5][6][7][8][9][10]
+
+Al 'parsear' la cadena, Make.com organiza la información en ítems separados y paquetes.[1] Por ejemplo, separa los resultados por categorías, horarios o URL del sitio web.[1] Esto es fundamental para usar cada dato individualmente, como tomar la URL obtenida para buscar un correo electrónico en otro paso.[1]
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Resumen y Analogía Final
+##menu-item END
+##Contenido BEGIN
+Resumen y Analogía Final:
+JSON es una herramienta avanzada pero esencial.[1] Si obtienes datos complejos o desordenados, debes usar 'Parse JSON' para organizarlos en ítems individuales usables.[1]
+
+Piensa en JSON como un traductor y organizador.[1] Si tienes un cajón de calcetines revueltos (datos sin JSON), Make.com no puede usarlos bien.[1] Pero si el calcetín se identifica como "Calcetín Derecho Rojo, Talla 30" (formato JSON), Make.com puede encontrar lo que necesita.[1] 'Parse JSON' es la acción de separar esos calcetines y ponerlos en compartimentos etiquetados para usarlos uno por uno.[1]
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Tras revisar la documentación oficial de Make.com y guías técnicas relacionadas, se validan los siguientes puntos expuestos en el tutorial:
+
+Parse JSON: La documentación de Make confirma que el módulo "Parse JSON" toma una cadena de datos JSON y la convierte en una estructura de datos (colección/bundle) que permite mapear los elementos individuales a otros módulos del escenario.[1] Es esencial para procesar respuestas de APIs o servicios web.[1]
+
+Create JSON: Se valida que el módulo "Create JSON" permite generar una cadena JSON a partir de datos individuales, basándose en una estructura de datos predefinida por el usuario.[1]
+
+Aggregate to JSON: Esta función es correcta; permite agregar múltiples resultados (bundles) en una sola cadena JSON.
+
+Uso con IA y APIs: Las guías de integración confirman que para trabajar dinámicamente con respuestas de texto complejas (como las de OpenAI) o APIs que devuelven objetos anidados, es una práctica estándar solicitar/recibir el formato JSON y luego parsearlo dentro de Make.[1]
+
+Enlaces a documentación oficial y recursos:
+
+Make.com Help Center - JSON App: https://www.make.com/en/help/apps/it-and-development/json[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEnTeJjoyFYE9iWLQz_5icAFMOe78JBHf2lYhfMT-lxLfYF54KnERjE8QRcZVJh9cqu5E3XlteJ1RJmnIdkW5bveThcFXi0OCLeyO06zp-pZi1Hn7U1ML6eEgwyF50dD35HCtWUzTs%3D)]
+
+Make.com - Parse JSON module documentation: https://www.make.com/en/help/tools/json#parse-json[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEnTeJjoyFYE9iWLQz_5icAFMOe78JBHf2lYhfMT-lxLfYF54KnERjE8QRcZVJh9cqu5E3XlteJ1RJmnIdkW5bveThcFXi0OCLeyO06zp-pZi1Hn7U1ML6eEgwyF50dD35HCtWUzTs%3D)]
+
+Make.com - Create JSON module documentation: https://www.make.com/en/help/tools/json#create-json[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEnTeJjoyFYE9iWLQz_5icAFMOe78JBHf2lYhfMT-lxLfYF54KnERjE8QRcZVJh9cqu5E3XlteJ1RJmnIdkW5bveThcFXi0OCLeyO06zp-pZi1Hn7U1ML6eEgwyF50dD35HCtWUzTs%3D)]
+
+Make.com - Aggregate to JSON documentation: https://www.make.com/en/help/tools/json#aggregate-to-json
+
+Sources
+help
+youtube.com
+youtube.com
+youtube.com
+make.com
+make.com
+aminefajry.com
+make.com
+make.com
+make.com
+make.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+Make.com documentation Parse JSON module
+Make.com JSON app documentation
+Make.com documentation Create JSON module
+##Contenido END
