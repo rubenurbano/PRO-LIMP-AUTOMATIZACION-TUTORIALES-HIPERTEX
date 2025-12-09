@@ -1,0 +1,234 @@
+##itemID:000
+##menu-item BEGIN
+APPSHEET - GENERAR QR - NUNCA FUE TAN FÁCIL
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+APPSHEET - GENERAR QR - NUNCA FUE TAN FÁCIL:
+Web Original:
+APPSHEET - GENERAR QR - NUNCA FUE TAN FÁCIL:
+https://youtu.be/qkGM9wjHH0o?si=pxdYQWBbrJhcGAvk
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción al sistema de asistencia
+##menu-item END
+##Contenido BEGIN
+Introducción al sistema de asistencia:
+Hola. Hoy vamos a crear un sistema completo para anotar la asistencia de las personas usando un código QR. También aprenderemos a hacer estos códigos usando una herramienta de Google.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Paso 1: Crear la hoja de cálculo
+##menu-item END
+##Contenido BEGIN
+Paso 1: Crear la hoja de cálculo:
+Crea una hoja de cálculo de Google que se llame asistencia por QR.[1][2][3]
+
+Dentro de esta hoja, haremos dos partes (dos tablas).
+
+La primera parte es para los Empleados. Esta parte debe tener:
+Un número de identificación (ID de empleado).
+Un nombre.
+Un puesto.
+Un código (que luego será el QR).[1][2][3][4][5][6][7][8]
+Una foto.
+
+La segunda parte es para la Asistencia. Esta parte debe tener:
+Un número de identificación de asistencia (ID de asistencia).
+Una fecha.
+Una hora.
+Un código.
+Un nombre.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Paso 2: Crear la aplicación y configurar Empleados
+##menu-item END
+##Contenido BEGIN
+Paso 2: Crear la aplicación y configurar Empleados:
+Crea una aplicación nueva usando tu hoja de cálculo.[7][9]
+
+Revisa los campos (columnas) de la tabla de Empleados.
+Configura el ID, el nombre, el puesto y el código como texto.
+Configura el campo foto como imagen.[10]
+
+En la tabla Empleados, deja el nombre como el 'Level'.
+Oculta el ID de empleado para que no se vea.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 2 (Continuación): Configurar tabla Asistencia
+##menu-item END
+##Contenido BEGIN
+Paso 2 (Continuación): Configurar tabla Asistencia:
+Revisa los campos de la tabla Asistencia.[2][4][5][7][9][11][12][13]
+Configura la fecha como tipo de dato date y la hora como tipo de dato Time.
+Configura el código y el nombre como texto.
+
+En la tabla Asistencia, usa el nombre como el 'Level'.
+Oculta el ID de asistencia para que no se vea.
+
+En la fecha, pon la fórmula valor inicial Now para que ponga la fecha de hoy automáticamente.
+En la hora, pon la fórmula valor inicial Now para que ponga la hora actual automáticamente.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 3: Crear el código único del empleado
+##menu-item END
+##Contenido BEGIN
+Paso 3: Crear el código único del empleado:
+Vamos a crear un código único para cada empleado uniendo su ID y su nombre.
+
+Ve al campo código de la tabla de Empleados.
+En la parte de fórmula, usa la función CONCATENAR para unir el ID del empleado y el nombre.
+Guarda la fórmula.
+
+Cuando cargues un empleado nuevo (por ejemplo, Raquel), al poner el nombre, el código se generará solo.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 4: Entender la herramienta de QR de Google
+##menu-item END
+##Contenido BEGIN
+Paso 4: Entender la herramienta de QR de Google:
+Vamos a usar una herramienta especial de Google llamada API para crear códigos QR.[1][2][3]
+Esta herramienta requiere información obligatoria (sintaxis).
+
+Debemos decirle que queremos un código QR, el tamaño que debe tener, y los datos (el código que creamos uniendo el ID más el nombre).
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Paso 5: Crear la fórmula para el QR
+##menu-item END
+##Contenido BEGIN
+Paso 5: Crear la fórmula para el QR:
+En la tabla de Empleados, crea una columna nueva y especial (virtual) y llámala QR.
+En esa columna, vamos a pegar y unir (concatenar) las instrucciones de Google.
+
+Primero, pega la dirección principal de la API de Google.
+Luego, únele el comando que dice que lo que estás haciendo es un código QR.[2][3]
+Después, únele el comando que define el tamaño. Le daremos el tamaño de 150 por 150.
+Finalmente, únele el comando que pide el dato (que se llama chl).[2][3]
+Dile que el dato que debe codificar es el texto que está en la columna código de empleados.
+
+Guarda la fórmula.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Paso 6: Mostrar el QR como imagen
+##menu-item END
+##Contenido BEGIN
+Paso 6: Mostrar el QR como imagen:
+Ve a la configuración del campo QR.[3][4][5]
+Dile a la aplicación que el campo QR no es texto, sino una imagen.
+Guarda.
+
+Al ver la ficha de un empleado (como Raquel), ya debe aparecer el código QR. Si escaneas ese QR con tu celular, verás el ID más el nombre del empleado.
+Cada empleado nuevo que cargues generará su propio código y QR automáticamente.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Paso 7: Configurar la búsqueda de asistencia
+##menu-item END
+##Contenido BEGIN
+Paso 7: Configurar la búsqueda de asistencia:
+Ahora trabajaremos en la tabla de Asistencia.[5][7]
+Necesitamos que cuando escanees una tarjeta, la aplicación busque ese código y ponga el nombre de la persona.
+
+En el campo nombre de la tabla Asistencia, usa la fórmula LOOKUP (que significa buscar).
+La fórmula LOOKUP debe usar la palabra escrita en el campo código de asistencia para la búsqueda.
+Dile a la fórmula que busque ese código en la tabla de empleados, en la columna código.
+Dile que cuando lo encuentre, traiga el valor de la columna nombre.[14]
+
+Guarda la fórmula.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Paso 8: Permitir escanear
+##menu-item END
+##Contenido BEGIN
+Paso 8: Permitir escanear:
+Para poder usar la cámara, ve a la configuración del campo código en la tabla de Asistencia.[5]
+Busca la opción que dice otras propiedades.[5][7]
+Marca que este campo Se puede escanear.[1][2][4][5][6][7][15]
+
+Puedes crear la tarjeta de asistencia con el QR en un programa como Word o Canva, e imprimirla.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Paso 9: Registrar la asistencia
+##menu-item END
+##Contenido BEGIN
+Paso 9: Registrar la asistencia:
+Ve a tu aplicación y añade una nueva asistencia.[3][4][5][12][16]
+Toca para escanear la tarjeta impresa.
+La aplicación lee el QR, busca el código en la lista de empleados y automáticamente pone el nombre, la fecha y la hora.
+En la hoja de cálculo se guarda el código escaneado y el nombre que encontró.
+
+Este sistema es sencillo y eficiente: la persona solo necesita escanear su tarjeta para registrar su entrada.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+He realizado una búsqueda en la documentación técnica para validar los métodos descritos en el tutorial:
+
+Función LOOKUP en AppSheet:
+La sintaxis descrita (valor a buscar, tabla, columna de búsqueda, columna a traer) es correcta y corresponde a la documentación oficial de la función LOOKUP.
+Referencia: https://support.google.com/appsheet/answer/10107410?hl=en
+
+Generación de QR con API de Google:
+El tutorial utiliza la "Google Chart API" (Infographics) para generar el QR.[1][3] Aunque Google la ha marcado como obsoleta (deprecated), sigue funcionando y es el método estándar enseñado para generar QRs dinámicos en AppSheet mediante una URL en una columna tipo Imagen.
+La URL base validada es: https://chart.googleapis.com/chart
+Los parámetros validados son:
+cht=qr (Tipo de gráfico QR)
+chs=150x150 (Tamaño)
+chl= (Datos a codificar)
+Referencia de parámetros: https://developers.google.com/chart/infographics/docs/qr_codes[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQFYlj8z53wyXxTcr-YjLxnKPSp8QMU7Eff1mWDNsmUPQxvP_o8gH24WK3DQ9jvp71RsU2XIOEVFHsargDd4fv1h4AEgf_aMDEuZAqoMCifdGp-NU01S3pPoPbF4HYj2fYC7j16O36jcvtu2piitfYfPO5WhaQuP7gm7ipLM)][[17](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGQ1y4EJY_YsvDpoJFtJK-IyCZik2IS8RddFGn3j5DlZ9KJus1z8YVxwni3Glv-2SsWw1jpGPMhU3u9IAZ285OxHCkvRzCyiOCdqsg-rTa3qOpsStTfBAuHN3rfyZPH5WkIH_fcuHCJHvkkV5CDzuKp9Xz9uDezRyu5cA%3D%3D)]
+
+Escaneo de códigos de barras/QR:
+La opción "Se puede escanear" (Scannable) se encuentra en las propiedades de la columna, tal como indica el tutorial.[7] Esto habilita el icono de cámara en la aplicación móvil.[5]
+Referencia: https://support.google.com/appsheet/answer/10106673?hl=en
+
+
+Sources
+help
+google.com
+googleblog.com
+alexw.co.uk
+google.com
+youtube.com
+google.com
+youtube.com
+hashbangcode.com
+appsheet.com
+google.dev
+google.com
+google.com
+google.com
+google.com
+youtube.com
+appsheet.com
+tadabase.io
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+AppSheet documentation LOOKUP function
+AppSheet documentation barcode scanning mechanism
+Google Charts API QR code parameters documentation
+AppSheet documentation Image column from URL
+##Contenido END

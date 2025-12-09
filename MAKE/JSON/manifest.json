@@ -1,0 +1,28 @@
+{
+  "name": "ServidorMCP_Ruben",
+  "description": "Servidor MCP local de Rubén con FastMCP",
+  "tools": [
+    {
+      "name": "hola",
+      "description": "Devuelve un saludo personalizado",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "description": "Nombre de la persona a saludar"
+          }
+        },
+        "required": ["nombre"]
+      }
+    },
+    {
+      "name": "get_time",
+      "description": "Devuelve la fecha y hora actual",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ]
+}

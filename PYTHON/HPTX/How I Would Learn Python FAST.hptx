@@ -1,0 +1,224 @@
+##itemID:000
+##menu-item BEGIN
+How I Would Learn Python FAST
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+How I Would Learn Python FAST:
+Web Original:
+How I Would Learn Python FAST:
+https://youtu.be/mC4nyib2sfg?si=FUUudw9dLvXYAg-q
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción y la Pirámide de Python
+##menu-item END
+##Contenido BEGIN
+Introducción y la Pirámide de Python:
+En 2019, tuve solo dos meses para aprender Python muy bien para un proyecto de investigación, partiendo de cero conocimientos. Tuve que aprender rápido.
+
+Para lograr esto, presento la "pirámide de Python de cinco niveles". Este sistema está diseñado para llevarte desde cero experiencia hasta un nivel avanzado donde puedas construir proyectos reales con Inteligencia Artificial. Es fundamental seguir la pirámide en orden para asegurar bases fuertes.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Nivel 1: Fundamentos (El Arte del Lenguaje)
+##menu-item END
+##Contenido BEGIN
+Nivel 1: Fundamentos (El Arte del Lenguaje):
+La primera capa es la base. No empieces a escribir código inmediatamente; primero debes aprender el "arte del lenguaje", similar a aprender a hablar un idioma antes de escribirlo.
+
+Acción 1: Entiende la forma de pensar de Python.
+A diferencia del mundo real donde contamos 1, 2, 3, en Python siempre empezamos a contar desde cero (0, 1, 2, 3). El primer elemento es el índice cero.[1]
+
+Acción 2: Conoce los bucles (loops).
+Aprende el bucle 'while'.[2][3] En lugar de decir "haz esto hasta tal punto", le dices al código "mientras NO se cumpla esta condición, sigue haciendo esto".
+
+Acción 3: Cambia tu mentalidad.[3]
+Piensa en ti mismo como alguien que resuelve problemas, no solo como alguien que escribe código. El código es solo la herramienta (como un pincel para un pintor). Si eres bueno resolviendo problemas, la herramienta que uses es secundaria.[4]
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Nivel 2: Configuración (Setup Simplificado)
+##menu-item END
+##Contenido BEGIN
+Nivel 2: Configuración (Setup Simplificado):
+Muchos principiantes fallan aquí al intentar instalar demasiadas cosas.
+
+Acción 4: No descargues nada al principio.
+Evita descargar Brew, Python, Anaconda, PIP, PyCharm o VS Code inicialmente, ya que la configuración puede ser complicada para un novato.
+
+Acción 5 y 6: Usa Google Collab.
+Lo primero que debes hacer es usar Google Collab. Solo necesitas una cuenta de Google. Es un entorno de trabajo en la nube donde puedes ejecutar código y usar librerías sin instalar nada. Piensa en ello como una cocina equipada con ingredientes y utensilios de alta calidad listos para usar.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Recursos de Aprendizaje (GitHub y Kodi.te)
+##menu-item END
+##Contenido BEGIN
+Recursos de Aprendizaje (GitHub y Kodi.te):
+Acción 7: Haz los ejercicios de "30 days of Python".
+Busca en GitHub el repositorio "30 days of Python".[5] Contiene lecciones desde lo básico y estructuras de datos hasta nivel intermedio (APIs, web). Ofrece tutoriales y código que puedes ejecutar directamente en Google Collab.
+
+Acción 8: Usa la plataforma Kodi.te.[6][7]
+Esta plataforma ofrece lecciones pequeñas con proyectos reales y un entorno de práctica (sandbox). Incluye un tutor de IA para ayudarte con problemas y la parte principal es gratuita.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Hardware y Configuración Local
+##menu-item END
+##Contenido BEGIN
+Hardware y Configuración Local:
+Aunque se menciona que computadoras potentes como la Dell Pro Max Tower T2 son útiles para IA avanzada y renderizado, no necesitas esto al inicio.
+
+Acción 9: Configura tu propia computadora después.
+Solo cuando domines bien Python debes instalar herramientas locales más complejas como Python 3, Visual Studio Code o PyCharm en tu propia máquina.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Nivel 3: Proyectos del Mundo Real
+##menu-item END
+##Contenido BEGIN
+Nivel 3: Proyectos del Mundo Real:
+No eres un buen programador si no construyes nada.
+
+Acción 10: Evita el "infierno de los tutoriales".
+No te quedes solo mirando videos o leyendo libros. Empieza a construir cosas de inmediato para ver resultados.
+
+Acción 11: Usa "Practical Tutorials Project-based learning".[8][9][10]
+Busca este repositorio en GitHub y ve a la sección de Python.[5][9] Encontrarás proyectos con pasos sencillos como web scraping, bots y ciencia de datos, ideales para aprender haciendo.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Mejora de Proyectos y Nivel Avanzado
+##menu-item END
+##Contenido BEGIN
+Mejora de Proyectos y Nivel Avanzado:
+Acción 12: Mejora los tutoriales.
+Toma un proyecto básico y hazlo mejor. Por ejemplo, convierte un bot simple de Reddit en uno que escanee el mercado de acciones. Esto hace que tu currículum destaque.[9]
+
+Acción 13: Revisa "Build Your Own X".
+Busca este repositorio en GitHub para ideas avanzadas. Te enseña a crear tus propias versiones de tecnologías complejas, como un intérprete de Python, bases de datos o marcos de trabajo. Estos proyectos tienen potencial para convertirse en startups.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Nivel 4: Inteligencia Artificial (IA)
+##menu-item END
+##Contenido BEGIN
+Nivel 4: Inteligencia Artificial (IA):
+Python es el lenguaje líder para IA, usado en Machine Learning y con librerías famosas como scikitlearn, pandas y pytorch. Ser experto en Python te da una gran ventaja aquí.
+
+Estrategia A: Usa la IA como compañero.
+
+Acción 14: Usa asistentes de código.
+Herramientas como Cursor (para revisar y ajustar código) y GitHub Copilot (como mini asistente para funciones olvidadas) te ayudan a codificar más rápido.
+Importante: Solo úsalos cuando seas un programador intermedio. Si los usas al principio, no aprenderás nada (es como hacer trampa).
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Estrategia B: La IA como Producto
+##menu-item END
+##Contenido BEGIN
+Estrategia B: La IA como Producto:
+Acción 15: Profundiza en Machine Learning.
+Empieza a experimentar con librerías como NumPy y Scikitlearn.
+
+Acción 16: Crea proyectos de IA geniales.
+Ejemplos de proyectos incluyen predictores basados en datos (como uno de COVID-19), bots de compras automatizados o sistemas de recomendación personalizados.
+
+Acción 17: Empaqueta tu trabajo.
+Convierte tus proyectos de IA en aplicaciones, publícalos en tiendas de apps (App Store) y muéstralos en tu currículum y LinkedIn para atraer ofertas de trabajo.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Nivel 5: Dominio Continuo
+##menu-item END
+##Contenido BEGIN
+Nivel 5: Dominio Continuo:
+La meta es mantener la maestría en Python con esfuerzo continuo.
+
+Acción 18 y 19: Protocolo de descarga cerebral.
+Cada noche, apaga la computadora y escribe en papel durante 5 minutos: ¿Qué hiciste hoy? ¿Qué salió mal? ¿Qué salió bien? ¿Qué aprendiste? Esto organiza tus pensamientos y define tu siguiente día.
+
+Acción 20: Mantén un diario de código.
+Registra tu progreso diariamente, similar a un diario de alimentos para perder peso.
+
+Acción 21: Publica tu trabajo.
+Comparte tus logros en redes sociales. Los reclutadores suelen contactar directamente a quienes muestran trabajos increíbles en línea.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+A continuación se presentan las fuentes oficiales y repositorios validados que corresponden a los recursos mencionados en el tutorial:
+
+Plataformas y Herramientas:
+
+Google Colab: Entorno oficial gratuito mencionado para empezar sin instalación.
+URL: https://colab.research.google.com/
+
+Python Oficial: Documentación y descargas oficiales (para la etapa de instalación local).
+URL: https://www.python.org/
+
+Kodi.te (Validado como Coddy.tech): El término "Kodi.te" mencionado en el documento es fonéticamente idéntico y funcionalmente coincidente (lecciones pequeñas, gamificación, tutor de IA) con la plataforma Coddy.tech.
+URL: https://coddy.tech/[[11](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQHoJyg9pj0ossUeSoPYCW0UYCJOnX7nRMwiIgSkdWjyKIM1motjgd3SbiyHe-Lu4H1A8k68s2FOZqasxLPju2MlmDpxjPi3sDKQsMM2oaoUkKYhrncNdvoMO4CpCRhkIYw%3D)]
+
+Repositorios de GitHub Mencionados:
+
+30 Days of Python: Repositorio muy popular creado por Asabeneh, que cubre desde cero a avanzado.[5]
+URL: https://github.com/Asabeneh/30-Days-Of-Python
+
+Practical Tutorials (Project-based Learning): Lista curada de tutoriales basados en proyectos para aprender construyendo.
+URL: https://github.com/practical-tutorials/project-based-learning[[10](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQE2etVmb4eAQNQUMyBhGzdeyfXyPDlk_PWZiLu4RgALoFjrga8s4a_ao8dfkSYvfgPe44dY_WaQVG3QdkFD2I6lp8UayAD2SE9eowvEFFjvvag35rKG89ou4cJWqfuapSkLCLYfb_U%3D)]
+
+Build Your Own X: Repositorio famoso para recrear tecnologías (bots, bases de datos, etc.) desde cero.
+URL: https://github.com/codecrafters-io/build-your-own-x (anteriormente bajo el usuario danistefanovic)
+
+Librerías de IA mencionadas:
+
+Scikit-learn: https://scikit-learn.org/
+
+PyTorch: https://pytorch.org/
+
+Pandas: https://pandas.pydata.org/
+
+NumPy: https://numpy.org/
+
+
+Sources
+help
+wordpress.com
+coddy.tech
+brill.com
+tk.hu
+github.com
+mun.ca
+wordpress.com
+github.com
+trendshift.io
+youtube.com
+coddy.tech
+archive.org
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+GitHub 30 days of Python repository
+GitHub Build Your Own X repository
+Python official documentation for beginners
+Google Colab official site documentation
+GitHub Practical Tutorials Project-based learning
+"Coddy.tech" python
+"Kodi.te" python platform
+"Kodi.te" AI tutor
+##Contenido END

@@ -1,0 +1,50 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Google Released NEW AI that Can Start a One Person Business\nWEB ORIGINAL:",
+      "contenido": "Google Released NEW AI that Can Start a One Person Business:\nWeb Original:\nGoogle Released NEW AI that Can Start a One Person Business:\nhttps://youtu.be/YHoCu-0TcJE?si=WTfMYnyaEa1E8TNj\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introduccion a las Herramientas de Google AI",
+      "contenido": "Introduccion a las Herramientas de Google AI:\nEste tutorial te mostrara como usar muchas herramientas de Inteligencia Artificial de Google para ayudarte a crear productos digitales. Estas herramientas te serviran para escribir, investigar, disenar o automatizar el proceso de crear tu negocio digital, como por ejemplo vender un libro electronico.\n\nLa mayoria de estas herramientas son gratis si tienes una cuenta de correo de Gmail. Las herramientas clave que aprenderas a usar son: Gemini AI, Studio AI, Nano Banana, Notebook LM y AI Mode."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Usando Gemini para Encontrar la Idea Perfecta",
+      "contenido": "Usando Gemini para Encontrar la Idea Perfecta:\nEntra a gemini.google.com. Gemini es una herramienta de IA que puede darte claridad sobre que producto digital empezar a crear.\n\nUsa un constructor de indicaciones que funciona como un cuestionario de opcion multiple con seis o siete preguntas. Este cuestionario te preguntara cosas como: Que producto digital te interesa (ejemplo: ebook), Cual es tu nivel de habilidad (ejemplo: principiante), Sobre que tema o nicho sabes (ejemplo: redes sociales y creacion de contenido).\n\nAl final obtendras una indicacion personalizada basada en tus respuestas, que es como una instruccion completa para la IA. Copia esta indicacion.\n\nPega la indicacion en la caja de Gemini y ve a Herramientas (Tools) y haz clic en Canvas. Esto es muy importante.\n\nGemini tardara un minuto o dos en generar un plano interactivo. Este plano es como un tablero de control que muestra datos de busqueda (cuantas personas buscan ese tema, por ejemplo, de enero a diciembre), ideas de productos, nombres de marca y las indicaciones que necesitaras para construir el producto y el marketing."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Construyendo la Tienda Online y el Producto con Hostinger",
+      "contenido": "Construyendo la Tienda Online y el Producto con Hostinger:\nEl plano de Gemini te dara indicaciones para crear paginas de ventas. Copia la indicacion para la pagina de ventas y un nombre de marca que elijas (ejemplo: Content Flow).\n\nPega esto en Hostinger para que te cree una pagina web. En la pagina web debes eliminar los productos de ejemplo (placeholder products).\n\nPara anadir tu libro electronico haz clic en Anadir producto y selecciona producto digital. Debes tener el ebook listo y exportado como un archivo (como un PDF descargable)."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Disenando la Portada con Nano Banana Pro",
+      "contenido": "Disenando la Portada con Nano Banana Pro:\nNano Banana Pro es el nombre que se le da a la herramienta de Google para generar imagenes. Ha mejorado para hacer imagenes de alta calidad y asegurarse de que el texto este bien escrito.\n\nPara usar Nano Banana entras en Google Gemini. Escribe una indicacion muy especifica sobre como quieres que se vea la portada de tu ebook (incluyendo el nombre del ebook, el nombre del autor y que la quieres en 4K).\n\nHaz clic en Herramientas y luego en Crear imagen. Una vez generada la imagen la descargas.\n\nSube la imagen de la portada a la pagina del producto en Hostinger. Hostinger, con la ayuda de IA, puede empezar a producir el texto de la descripcion de la pagina del producto.\n\nFinalmente anades el precio y arrastras el archivo del ebook al sitio web. Asi cuando un cliente compre recibira un correo electronico con el enlace de descarga."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Usando Notebook LM como Asistente de Investigacion",
+      "contenido": "Usando Notebook LM como Asistente de Investigacion:\nEntra a notebooklm.google. Notebook LM es como un asistente de investigacion que te ayuda a entender cualquier tema.\n\nNecesitas darle una fuente de informacion que puede ser notas, documentos o en este caso la indicacion larga (el prompt) que obtuviste del cuestionario de Gemini. Pega esa indicacion en Notebook LM y haz clic en Insertar.\n\nEn el lado derecho veras la opcion Studio con muchas funciones como Mapas Mentales, Tarjetas de Memoria o Presentaciones.\n\nPuedes hacer clic en el icono del lapiz en Video Overview (Resumen de video) y pedirle que te haga un mini-curso o un resumen en video sobre el tema de tu producto. Esto genera un video completo (de unos 5 minutos por ejemplo) basado en la informacion que le diste. Esto te ayudara a entender mejor el producto que estas construyendo."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Usando el AI Mode de Google para Conseguir Clientes",
+      "contenido": "Usando el AI Mode de Google para Conseguir Clientes:\nEl AI Mode es una funcion dentro del buscador normal de Google. Sirve para investigar y ver como otras paginas web logran aparecer en los primeros resultados de busqueda de Google.\n\nPuedes pedirle a Google AI Mode que te muestre sitios web independientes (no grandes tiendas como Amazon o Etsy) que venden ebooks en tu nicho (ejemplo: creacion de contenido).\n\nAl ver los sitios recomendados puedes aprender que estan haciendo bien. Por ejemplo muchos sitios exitosos tienen un blog donde publican articulos consistentemente.\n\nEn Hostinger puedes anadir facilmente una pagina de blog a tu sitio web. La IA de Hostinger te ayuda a escribir articulos completos para tu blog rapidamente. Solo le das el titulo (ejemplo: 10 Mejores Consejos para Creadores de YouTube 2026) y la extension (cantidad de palabras) que quieres y genera el contenido completo en segundos. Esto ayuda a que tu sitio web sea encontrado en Google."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Creando Herramientas Utiles con Google AI Studio",
+      "contenido": "Creando Herramientas Utiles con Google AI Studio:\nGoogle AI Studio esta construido sobre Gemini y tiene muchas capacidades. El objetivo es crear una pequena herramienta web gratuita (un toolkit o kit de herramientas) para que las personas la busquen en Google y lleguen a tu sitio web.\n\nPrimero pide a AI Studio que te de 10 ideas de herramientas simples que podrias anadir a tu sitio web sobre tu tema (ejemplo: herramientas para creadores de contenido de YouTube).\n\nElige una idea (ejemplo: Optimizador de descripcion de YouTube con SEO).\n\nPide a AI Studio que te escriba el codigo HTML completo para crear esa herramienta (como un generador de descripciones para videos de YouTube). AI Studio genera el codigo HTML. Copia el codigo.\n\nEn Hostinger crea una pagina nueva en blanco (ejemplo: Creador de Descripciones de YouTube). En el editor anade un elemento de codigo incrustado y pega el codigo HTML que te dio AI Studio.\n\nListo. Ahora tienes una herramienta funcional en tu sitio web. El usuario escribe el titulo de su video y la herramienta le da una descripcion que puede copiar. Esto demuestra como se pueden usar todas las herramientas de Google AI juntas para crear un producto y herramientas de marketing para tu negocio digital."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\nPara validar la informacion tecnica de este tutorial sobre herramientas de Google AI, he buscado las fuentes oficiales relevantes:\n\nGemini es la plataforma oficial de IA conversacional de Google disponible en gemini.google.com. Ofrece capacidades avanzadas de generacion de texto, imagenes y analisis de datos.\n\nGoogle AI Studio es la plataforma oficial de desarrollo para experimentar con modelos de IA de Google. Permite crear prototipos y generar codigo usando los modelos Gemini. Se accede desde aistudio.google.com.\n\nNotebookLM es el asistente de investigacion con IA de Google disponible en notebooklm.google. Permite cargar documentos y generar resumen, mapas mentales y otros materiales de estudio basados en las fuentes proporcionadas.\n\nImagen 3 es el modelo de generacion de imagenes de Google integrado en Gemini. Produce imagenes de alta calidad a partir de descripciones de texto.\n\nGoogle Search con AI Mode integra capacidades de IA generativa directamente en los resultados de busqueda para proporcionar respuestas mas completas.\n\nDocumentacion oficial:\n- Gemini: https://gemini.google.com\n- Google AI Studio: https://aistudio.google.com\n- NotebookLM: https://notebooklm.google.com\n- Informacion sobre productos de Google AI: https://ai.google\n- Google AI Studio Digital Product Builder:  https://tally.so/r/mO2W2p\n\nTodas las herramientas mencionadas en el tutorial son productos oficiales de Google y estan disponibles gratuitamente para usuarios con cuenta de Google.\n\n\nGoogle Released NEW AI that Can Start a One Person Business\nhttps://youtu.be/YHoCu-0TcJE?si=WTfMYnyaEa1E8TNj\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    }
+  ]
+}

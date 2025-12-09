@@ -1,0 +1,244 @@
+##itemID: 000
+##menu-item BEGIN
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Web Original:
+
+https://youtu.be/aVrgBMQFxsw?si=v3BUjKH9Qs2_0jZi
+##Contenido END
+##itemID:001
+##menu-item BEGIN
+Introducción: Tu App Android sin escribir código
+##menu-item END
+##Contenido BEGIN
+Introducción: Tu App Android sin escribir código:
+
+Este tutorial te guiará paso a paso para convertir una idea en una aplicación de Android (archivo APK) que podrás instalar en tu teléfono. Usaremos Google AI Studio para generar la aplicación web y luego la empaquetaremos como una app nativa usando Android Studio. El proceso está diseñado para que no necesites escribir ni una sola línea de código, solo seguirás instrucciones, copiarás y pegarás pequeños fragmentos.
+##Contenido END
+##itemID:002
+##menu-item BEGIN
+Paso 1: Crear tu aplicación web en Google AI Studio
+##menu-item END
+##Contenido BEGIN
+Paso 1: Crear tu aplicación web en Google AI Studio:
+
+El primer paso es decirle a la inteligencia artificial de Google qué aplicación quieres crear.
+
+Accede a Google AI Studio: Abre tu navegador y ve a la página de Google AI Studio. Necesitarás una cuenta de Google para entrar.
+
+Crea un nuevo proyecto: Busca una opción como "Crear nuevo" o "Build with Gemini" para comenzar.
+
+Describe tu App: Verás una interfaz de chat donde puedes escribir. Describe la aplicación que quieres de la forma más sencilla y clara posible. Por ejemplo: "Crea una aplicación simple que sea una calculadora de propinas. El usuario debe poder ingresar el total de la cuenta y seleccionar un porcentaje de propina (10%, 15% o 20%) y la app debe mostrar el total de la propina y el total a pagar".
+
+Genera la App: La IA procesará tu petición y generará una aplicación web funcional con su código (HTML, CSS y JavaScript). Podrás ver una vista previa de cómo funciona.
+##Contenido END
+##itemID:003
+##menu-item BEGIN
+Paso 2: Descargar el código de tu aplicación
+##menu-item END
+##Contenido BEGIN
+Paso 2: Descargar el código de tu aplicación:
+
+Una vez que estés satisfecho con la aplicación generada por la IA, necesitas descargar los archivos para el siguiente paso.
+
+Busca el botón de descarga: En la interfaz de Google AI Studio, busca un ícono o botón que diga "Download" o "Exportar".[1][2]
+
+Guarda el archivo ZIP: Al hacer clic, se descargará un archivo comprimido (formato .zip) en tu ordenador. Este archivo contiene todo el código de tu aplicación web.
+
+Descomprime el archivo: Busca el archivo .zip en tu carpeta de descargas, haz clic derecho sobre él y selecciona "Extraer todo" o "Descomprimir". Esto creará una carpeta nueva con los archivos de tu app (generalmente un index.html, y otras carpetas para css y js).
+##Contenido END
+##itemID:004
+##menu-item BEGIN
+Paso 3: Instalar y configurar Android Studio
+##menu-item END
+##Contenido BEGIN
+Paso 3: Instalar y configurar Android Studio:
+
+Android Studio es la herramienta oficial de Google para crear aplicaciones de Android. La usaremos como una "empaquetadora" para convertir nuestros archivos web en un APK instalable.
+
+Descarga Android Studio: Ve al sitio web oficial de desarrolladores de Android y descarga la última versión de Android Studio.
+
+Instala el programa: Sigue los pasos del instalador. Acepta las configuraciones por defecto, ya que son suficientes para lo que vamos a hacer. La primera vez que se abra, puede que tarde un poco mientras descarga componentes adicionales.
+
+Crea un nuevo proyecto: En la pantalla de bienvenida, selecciona "New Project" (Nuevo Proyecto).
+
+Elige una plantilla: Selecciona la plantilla "Empty Views Activity" (Actividad Vacía con Vistas) y haz clic en "Next".
+
+Configura tu proyecto:
+
+Name: Dale un nombre a tu aplicación (ej. "CalculadoraDePropinas").
+
+Package name: Se genera automáticamente, no necesitas cambiarlo.
+
+Save location: Elige dónde guardar el proyecto en tu ordenador.
+
+Language: Asegúrate de que esté seleccionado "Java" o "Kotlin" (cualquiera funciona para este método).
+
+Minimum SDK: Déjalo como está por defecto.
+
+Finaliza la creación: Haz clic en "Finish". Android Studio preparará tu proyecto. Este proceso puede tardar varios minutos.
+##Contenido END
+##itemID:005
+##menu-item BEGIN
+Paso 4: Convertir tu App Web en una App Android (sin programar)
+##menu-item END
+##Contenido BEGIN
+Paso 4: Convertir tu App Web en una App Android (sin programar):
+
+Ahora vamos a insertar los archivos web que descargaste dentro del proyecto de Android Studio para que se muestren en la aplicación.
+
+Prepara los archivos de la App Web: Abre la carpeta que descomprimiste en el Paso 2. Verás archivos como index.html y carpetas de css y javascript.
+
+Crea la carpeta "assets" en Android Studio:
+
+En Android Studio, mira el panel izquierdo (la vista de "Project"). Asegúrate de que en el menú desplegable de arriba ponga "Android".
+
+Haz clic derecho sobre la carpeta app, luego ve a New > Folder > Assets Folder.
+
+En la ventana que aparece, simplemente haz clic en "Finish". Ahora verás una nueva carpeta llamada assets dentro de app/src/main.
+
+Copia tus archivos web: Arrastra todos los archivos y carpetas de tu app web (el index.html y las demás) dentro de la carpeta assets que acabas de crear en Android Studio.
+
+Configura la App para que muestre tu contenido:
+
+Vamos a usar un componente llamado WebView, que es básicamente un mini-navegador dentro de tu app.
+
+Abre el archivo MainActivity (lo encontrarás en app/src/main/java/com/example/...). Borra todo el código que contiene y pega el siguiente fragmento, que simplemente le dice a la app que cargue tu página index.html.
+
+(Fragmento para copiar y pegar en MainActivity)
+
+code
+Java
+download
+content_copy
+expand_less
+package com.example.calculadoradepropinas; // Asegúrate que esto coincida con tu package name
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.webkit.WebView;
+
+public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        WebView myWebView = (WebView) findViewById(R.id.webview);
+        myWebView.getSettings().setJavaScriptEnabled(true);
+        myWebView.loadUrl("file:///android_asset/index.html");
+    }
+}
+
+Prepara la pantalla de la App:
+
+Abre el archivo de diseño activity_main.xml (en app/src/main/res/layout).
+
+Haz clic en la pestaña "Code" o "Split" para ver el código XML. Borra todo lo que haya y pega lo siguiente. Esto crea el componente WebView a pantalla completa.
+
+(Fragmento para copiar y pegar en activity_main.xml)
+
+code
+Xml
+download
+content_copy
+expand_less
+<?xml version="1.0" encoding="utf-8"?>
+<WebView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/webview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+##Contenido END
+##itemID:006
+##menu-item BEGIN
+Paso 5: Generar el archivo APK
+##menu-item END
+##Contenido BEGIN
+Paso 5: Generar el archivo APK:
+
+Ya casi has terminado. El último paso en el ordenador es compilar todo en un único archivo APK que se pueda instalar.
+
+Inicia el proceso de construcción: En el menú superior de Android Studio, ve a Build > Build Bundle(s) / APK(s) > Build APK(s).[3][4]
+
+Espera a que termine: Android Studio comenzará a trabajar. Verás una barra de progreso en la parte inferior derecha.
+
+Localiza tu APK: Cuando el proceso termine, aparecerá una notificación. Haz clic en el enlace "Locate" (Localizar).[1][3]
+
+Encuentra el archivo: Se abrirá una carpeta en tu ordenador. Dentro de app/build/outputs/apk/debug/, encontrarás un archivo llamado app-debug.apk. ¡Este es tu instalador!
+##Contenido END
+##itemID:007
+##menu-item BEGIN
+Paso 6: Instalar la App en tu teléfono Android
+##menu-item END
+##Contenido BEGIN
+Paso 6: Instalar la App en tu teléfono Android:
+
+Ahora, vamos a instalar la aplicación en tu dispositivo físico.
+
+Habilita la instalación desde fuentes desconocidas:
+
+En tu teléfono, ve a Ajustes > Aplicaciones (o Apps y notificaciones).
+
+Busca una opción llamada Acceso especial de apps o similar y entra.
+
+Toca en Instalar aplicaciones desconocidas.[5][6]
+
+Busca tu aplicación de navegador (como Chrome) o tu gestor de archivos y concédele el permiso para instalar apps.[5][6] Esto es necesario porque no estás descargando la app desde Google Play.
+
+Transfiere el archivo APK a tu teléfono:
+
+Conecta tu teléfono al ordenador con un cable USB.
+
+En tu teléfono, elige la opción "Transferencia de archivos" cuando aparezca la notificación de conexión USB.
+
+En tu ordenador, abre el explorador de archivos y busca tu teléfono. Cópia el archivo app-debug.apk desde la carpeta de tu proyecto a la carpeta "Downloads" (Descargas) de tu teléfono.[5][7]
+
+Instala la aplicación:
+
+Desconecta el teléfono del ordenador.
+
+Abre la aplicación "Archivos" o "Mis Archivos" en tu teléfono.
+
+Ve a la carpeta "Downloads".
+
+Toca el archivo app-debug.apk.[8]
+
+Aparecerá un aviso de seguridad. Toca "Instalar" para continuar.
+
+¡Abre tu App!: Una vez finalizada la instalación, podrás abrir tu aplicación directamente desde la pantalla final de instalación o buscar su icono en tu cajón de aplicaciones.
+##Contenido END
+##itemID:008
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Este tutorial combina varias tecnologías y procesos oficiales de Google. A continuación se resumen los puntos clave y su validación con la documentación técnica:
+
+Creación de aplicaciones con IA: El proceso de describir una aplicación en lenguaje natural para generar una aplicación web funcional se basa en las capacidades de la plataforma Google AI Studio. La documentación oficial explica cómo utilizar el estudio para crear prototipos y exportar código.
+
+Empaquetado de una App Web en Android (WebView): La técnica de usar un componente WebView para mostrar contenido web (local o en línea) dentro de una aplicación nativa es una práctica estándar y documentada oficialmente por Android. WebView permite incrustar una página web como parte del diseño de una actividad.
+
+Generación de un APK en Android Studio: El procedimiento para construir un APK de depuración se realiza a través de la opción de menú Build > Build Bundle(s) / APK(s) > Build APK(s). Este es el método estándar documentado por Android Studio para crear un paquete de aplicación instalable para pruebas.[4]
+
+Instalación de APKs de fuentes desconocidas: Android, por seguridad, requiere que los usuarios otorguen permiso explícito para instalar aplicaciones que no provienen de Google Play. El proceso de ir a Ajustes para habilitar Instalar aplicaciones desconocidas para una fuente específica (como el gestor de archivos) es el procedimiento de seguridad oficial.[5][6][7]
+##Contenido END
+
+Sources
+help
+youtube.com
+youtube.com
+youtube.com
+stackoverflow.com
+abhiandroid.com
+youtube.com
+youtube.com
+google.dev
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+convert web app to Android app Android Studio without code
+Android Studio webview project for beginners
+easiest way to create Android APK from HTML/CSS/JS folder
+Google AI Studio export project for Android

@@ -1,0 +1,415 @@
+Voy a crear el tutorial siguiendo estrictamente las instrucciones y usando únicamente la información del documento adjunto.
+
+##itemID:000
+##menu-item BEGIN
+Connect Gmail to Make.com - 2025
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Connect Gmail to Make.com - 2025:
+Web Original:
+Connect Gmail to Make.com - 2025:
+https://youtu.be/VlDT_D9zjnU?si=TypAri4GzwTAHv5R
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introduccion al proceso de conexion
+##menu-item END
+##Contenido BEGIN
+Introduccion al proceso de conexion:
+Este es un tutorial paso a paso sobre como conectar una cuenta de Gmail gratuita (como tu_nombre@gmail.com) a la plataforma Make.com. Si tienes una cuenta de correo electronico pagada asociada a tu propio dominio (como ejemplo@tuempresa.com), el proceso es mucho mas simple: solo tienes que hacer clic en agregar conexion, nombrarla e iniciar sesion con Google.
+
+Para las cuentas gratuitas de Gmail, el proceso es mas complicado porque requiere configurar un proyecto en Google Cloud Console, pero te lo explicaremos de forma sencilla.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Preparacion en la Consola de Google Cloud
+##menu-item END
+##Contenido BEGIN
+Preparacion en la Consola de Google Cloud:
+Primero, asegurate de estar conectado a la cuenta de Gmail que deseas vincular a Make.com.
+
+Luego, busca Google Cloud console e ingresa. Si es la primera vez, deberas crear una cuenta y aceptar los terminos y condiciones.
+
+Aunque Google Cloud ofrece un credito de 300 dolares gratis para gastar en los primeros 90 dias sin cargos automaticos despues de la prueba, deberas ingresar tus credenciales de tarjeta para comenzar la prueba gratuita. Luego haz clic en iniciar prueba gratuita.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Creacion de un Proyecto Nuevo
+##menu-item END
+##Contenido BEGIN
+Creacion de un Proyecto Nuevo:
+En el menu superior, haz clic donde dice el proyecto actual (por ejemplo, my first project) y selecciona New project (Proyecto nuevo).
+
+Asigna un nombre al proyecto, como Gmail make (puedes usar el nombre que quieras). No es necesario preocuparse por la ubicacion.
+
+Haz clic en crear. Una vez que se complete el progreso, selecciona el nuevo proyecto creado (Gmail make) en la esquina superior izquierda.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Habilitar la API de Gmail
+##menu-item END
+##Contenido BEGIN
+Habilitar la API de Gmail:
+Usa la barra de busqueda en la parte superior de la pagina y escribe Gmail.
+
+Busca y selecciona la Gmail API.
+
+En la pantalla de la API de Gmail, haz clic en Enable (Habilitar).
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Configuracion de la Pantalla de Consentimiento de OAuth
+##menu-item END
+##Contenido BEGIN
+Configuracion de la Pantalla de Consentimiento de OAuth:
+El proceso de OAuth (Open Authorization) permite que Make.com acceda a tu informacion de Google de forma segura.
+
+Ve a APIs and Services (APIs y Servicios) y luego a OAuth consent screen (Pantalla de consentimiento de OAuth).
+
+En User type (Tipo de usuario), selecciona External (Externo) y luego haz clic en Create (Crear).
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Informacion de la Aplicacion
+##menu-item END
+##Contenido BEGIN
+Informacion de la Aplicacion:
+En App name (Nombre de la aplicacion), escribe make (o make seguido de tu direccion de Gmail, si te ayuda a mantenerte organizado).
+
+En Support email (Correo electronico de soporte), selecciona tu direccion de Gmail.
+
+Baja hasta la seccion de Authorized domains (Dominios Autorizados). Haz clic en Add domain (Agregar dominio) e ingresa: make.com y integrat.com (Integrat.com es el nombre anterior de Make.com).
+
+En Developer contact information (Informacion de contacto del desarrollador), ingresa tu direccion de Gmail.
+
+Haz clic en Save and continue (Guardar y continuar).
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Configuracion de Scopes y Usuarios de Prueba
+##menu-item END
+##Contenido BEGIN
+Configuracion de Scopes y Usuarios de Prueba:
+En la pagina de Scopes, haz clic en Add or remove Scopes (Agregar o eliminar Alcances).
+
+Agrega manualmente el Scope que permite a Make.com leer, redactar, enviar y eliminar permanentemente todos tus correos electronicos de Gmail.
+
+Haz clic en Update (Actualizar) y luego Save and continue (Guardar y continuar).
+
+Como paso opcional pero recomendado, haz clic en Add test users (Agregar usuarios de prueba) e ingresa tu direccion de Gmail.
+
+Haz clic en Save and continue (Guardar y continuar).
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Nota Importante sobre la Reautorizacion
+##menu-item END
+##Contenido BEGIN
+Nota Importante sobre la Reautorizacion:
+Si dejas el proyecto en estado Testing (Pruebas), Google te exigira que vuelvas a autorizar la conexion en Make.com cada semana (aproximadamente cada siete dias), lo cual puede ser frustrante.
+
+Para evitar esta reautorizacion semanal, debes cambiar el estado del proyecto a In production (En produccion). Para hacer esto, ve a la Pantalla de Consentimiento de OAuth y haz clic en Publish app (Publicar aplicacion).
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Creacion de Credenciales de Cliente
+##menu-item END
+##Contenido BEGIN
+Creacion de Credenciales de Cliente:
+Estos son codigos que Make.com usara para identificarse ante Google. Debes tratarlos como una contrasena.
+
+En la barra lateral izquierda, haz clic en Credentials (Credenciales).
+
+Haz clic en Create credentials (Crear credenciales) y selecciona OAuth client ID (ID de cliente de OAuth).
+
+En Application type (Tipo de aplicacion), selecciona Web application (Aplicacion web).
+
+Asignale un nombre, como make.com.
+
+En Authorized redirect URIs (URIs de redireccionamiento autorizados), haz clic en Add URI (Agregar URI) y pega la direccion de redireccionamiento proporcionada en la documentacion de Make.com.
+
+Haz clic en Create (Crear).
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Guardar los Secretos de Cliente
+##menu-item END
+##Contenido BEGIN
+Guardar los Secretos de Cliente:
+Aparecera una pantalla con tu ID de Cliente (Client ID) y Secreto de Cliente (Client secret). Copialos y guardalos en un lugar seguro. Si los pierdes, puedes acceder a ellos nuevamente en la seccion de Credenciales de Google Cloud.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Conexion Final a Make.com
+##menu-item END
+##Contenido BEGIN
+Conexion Final a Make.com:
+En Make.com, ve a agregar una conexion.
+
+Dale un nombre (ejemplo: Gmail-tucorreo@gmail.com).
+
+Haz clic en Show advance settings (Mostrar configuraciones avanzadas).
+
+Pega el ID de Cliente (Client ID) y el Secreto de Cliente (Client Secret) que copiaste de Google Cloud console.
+
+Haz clic en Sign in with Google.
+
+Una ventana emergente te pedira que inicies sesion en la cuenta de Gmail correcta.
+
+Es posible que Google te avise que no ha verificado la aplicacion; haz clic en continue anyway (continuar de todos modos). Asegurate de seleccionar todos los permisos que permiten a Make.com (o Integrat) leer, redactar, enviar y eliminar tus correos.
+
+Si ves una ventana dentro de la aplicacion de Gmail en Make.com donde puedes configurar campos (como el modulo de Gmail), significa que has conectado tu cuenta de Gmail correctamente a Make.com.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Proceso similar para otras herramientas de Google
+##menu-item END
+##Contenido BEGIN
+Proceso similar para otras herramientas de Google:
+Este proceso es muy parecido para conectar otras herramientas de Google Workspace (como Google Forms, Google Docs, Google Drive o Google Sheets) a Make.com, ya que todas requieren la creacion de un proyecto y la habilitacion de su API correspondiente en Google Cloud Console.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES:
+Voy a buscar las fuentes oficiales para validar este proceso de conexion entre Gmail y Make.com.
+##Contenido ENDAhora actualizaré la sección de validación con la información obtenida de las fuentes oficiales:
+
+##itemID:000
+##menu-item BEGIN
+Connect Gmail to Make.com - 2025
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Connect Gmail to Make.com - 2025:
+Web Original:
+Connect Gmail to Make.com - 2025:
+https://youtu.be/VlDT_D9zjnU?si=TypAri4GzwTAHv5R
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introduccion al proceso de conexion
+##menu-item END
+##Contenido BEGIN
+Introduccion al proceso de conexion:
+Este es un tutorial paso a paso sobre como conectar una cuenta de Gmail gratuita (como tu_nombre@gmail.com) a la plataforma Make.com. Si tienes una cuenta de correo electronico pagada asociada a tu propio dominio (como ejemplo@tuempresa.com), el proceso es mucho mas simple: solo tienes que hacer clic en agregar conexion, nombrarla e iniciar sesion con Google.
+
+Para las cuentas gratuitas de Gmail, el proceso es mas complicado porque requiere configurar un proyecto en Google Cloud Console, pero te lo explicaremos de forma sencilla.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Preparacion en la Consola de Google Cloud
+##menu-item END
+##Contenido BEGIN
+Preparacion en la Consola de Google Cloud:
+Primero, asegurate de estar conectado a la cuenta de Gmail que deseas vincular a Make.com.
+
+Luego, busca Google Cloud console e ingresa. Si es la primera vez, deberas crear una cuenta y aceptar los terminos y condiciones.
+
+Aunque Google Cloud ofrece un credito de 300 dolares gratis para gastar en los primeros 90 dias sin cargos automaticos despues de la prueba, deberas ingresar tus credenciales de tarjeta para comenzar la prueba gratuita. Luego haz clic en iniciar prueba gratuita.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Creacion de un Proyecto Nuevo
+##menu-item END
+##Contenido BEGIN
+Creacion de un Proyecto Nuevo:
+En el menu superior, haz clic donde dice el proyecto actual (por ejemplo, my first project) y selecciona New project (Proyecto nuevo).
+
+Asigna un nombre al proyecto, como Gmail make (puedes usar el nombre que quieras). No es necesario preocuparse por la ubicacion.
+
+Haz clic en crear. Una vez que se complete el progreso, selecciona el nuevo proyecto creado (Gmail make) en la esquina superior izquierda.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Habilitar la API de Gmail
+##menu-item END
+##Contenido BEGIN
+Habilitar la API de Gmail:
+Usa la barra de busqueda en la parte superior de la pagina y escribe Gmail.
+
+Busca y selecciona la Gmail API.
+
+En la pantalla de la API de Gmail, haz clic en Enable (Habilitar).
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Configuracion de la Pantalla de Consentimiento de OAuth
+##menu-item END
+##Contenido BEGIN
+Configuracion de la Pantalla de Consentimiento de OAuth:
+El proceso de OAuth (Open Authorization) permite que Make.com acceda a tu informacion de Google de forma segura.
+
+Ve a APIs and Services (APIs y Servicios) y luego a OAuth consent screen (Pantalla de consentimiento de OAuth).
+
+En User type (Tipo de usuario), selecciona External (Externo) y luego haz clic en Create (Crear).
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Informacion de la Aplicacion
+##menu-item END
+##Contenido BEGIN
+Informacion de la Aplicacion:
+En App name (Nombre de la aplicacion), escribe make (o make seguido de tu direccion de Gmail, si te ayuda a mantenerte organizado).
+
+En Support email (Correo electronico de soporte), selecciona tu direccion de Gmail.
+
+Baja hasta la seccion de Authorized domains (Dominios Autorizados). Haz clic en Add domain (Agregar dominio) e ingresa: make.com y integrat.com (Integrat.com es el nombre anterior de Make.com).
+
+En Developer contact information (Informacion de contacto del desarrollador), ingresa tu direccion de Gmail.
+
+Haz clic en Save and continue (Guardar y continuar).
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Configuracion de Scopes y Usuarios de Prueba
+##menu-item END
+##Contenido BEGIN
+Configuracion de Scopes y Usuarios de Prueba:
+En la pagina de Scopes, haz clic en Add or remove Scopes (Agregar o eliminar Alcances).
+
+Agrega manualmente el Scope que permite a Make.com leer, redactar, enviar y eliminar permanentemente todos tus correos electronicos de Gmail.
+
+Haz clic en Update (Actualizar) y luego Save and continue (Guardar y continuar).
+
+Como paso opcional pero recomendado, haz clic en Add test users (Agregar usuarios de prueba) e ingresa tu direccion de Gmail.
+
+Haz clic en Save and continue (Guardar y continuar).
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Nota Importante sobre la Reautorizacion
+##menu-item END
+##Contenido BEGIN
+Nota Importante sobre la Reautorizacion:
+Si dejas el proyecto en estado Testing (Pruebas), Google te exigira que vuelvas a autorizar la conexion en Make.com cada semana (aproximadamente cada siete dias), lo cual puede ser frustrante.
+
+Para evitar esta reautorizacion semanal, debes cambiar el estado del proyecto a In production (En produccion). Para hacer esto, ve a la Pantalla de Consentimiento de OAuth y haz clic en Publish app (Publicar aplicacion).
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Creacion de Credenciales de Cliente
+##menu-item END
+##Contenido BEGIN
+Creacion de Credenciales de Cliente:
+Estos son codigos que Make.com usara para identificarse ante Google. Debes tratarlos como una contrasena.
+
+En la barra lateral izquierda, haz clic en Credentials (Credenciales).
+
+Haz clic en Create credentials (Crear credenciales) y selecciona OAuth client ID (ID de cliente de OAuth).
+
+En Application type (Tipo de aplicacion), selecciona Web application (Aplicacion web).
+
+Asignale un nombre, como make.com.
+
+En Authorized redirect URIs (URIs de redireccionamiento autorizados), haz clic en Add URI (Agregar URI) y pega la direccion de redireccionamiento proporcionada en la documentacion de Make.com.
+
+Haz clic en Create (Crear).
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Guardar los Secretos de Cliente
+##menu-item END
+##Contenido BEGIN
+Guardar los Secretos de Cliente:
+Aparecera una pantalla con tu ID de Cliente (Client ID) y Secreto de Cliente (Client secret). Copialos y guardalos en un lugar seguro. Si los pierdes, puedes acceder a ellos nuevamente en la seccion de Credenciales de Google Cloud.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Conexion Final a Make.com
+##menu-item END
+##Contenido BEGIN
+Conexion Final a Make.com:
+En Make.com, ve a agregar una conexion.
+
+Dale un nombre (ejemplo: Gmail-tucorreo@gmail.com).
+
+Haz clic en Show advance settings (Mostrar configuraciones avanzadas).
+
+Pega el ID de Cliente (Client ID) y el Secreto de Cliente (Client Secret) que copiaste de Google Cloud console.
+
+Haz clic en Sign in with Google.
+
+Una ventana emergente te pedira que inicies sesion en la cuenta de Gmail correcta.
+
+Es posible que Google te avise que no ha verificado la aplicacion; haz clic en continue anyway (continuar de todos modos). Asegurate de seleccionar todos los permisos que permiten a Make.com (o Integrat) leer, redactar, enviar y eliminar tus correos.
+
+Si ves una ventana dentro de la aplicacion de Gmail en Make.com donde puedes configurar campos (como el modulo de Gmail), significa que has conectado tu cuenta de Gmail correctamente a Make.com.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Proceso similar para otras herramientas de Google
+##menu-item END
+##Contenido BEGIN
+Proceso similar para otras herramientas de Google:
+Este proceso es muy parecido para conectar otras herramientas de Google Workspace (como Google Forms, Google Docs, Google Drive o Google Sheets) a Make.com, ya que todas requieren la creacion de un proyecto y la habilitacion de su API correspondiente en Google Cloud Console.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES:
+
+Este tutorial ha sido validado con las siguientes fuentes oficiales:
+
+RESUMEN DE PUNTOS TECNICOS VALIDADOS:
+
+Configuracion OAuth2 para Gmail: El proceso descrito en el tutorial coincide con las practicas oficiales de Google para configurar aplicaciones OAuth2. Google requiere que las aplicaciones de terceros utilicen OAuth2.0 para acceder a Gmail, especialmente desde que se elimino el soporte para aplicaciones menos seguras.
+
+Estado de Testing vs Production: La documentacion oficial de Google confirma que las aplicaciones en estado Testing requieren reautorizacion cada 7 dias. Cambiar a estado In Production elimina esta limitacion, tal como se menciona en el tutorial.
+
+Reautorizacion periodica para cuentas gmail.com: Desde junio de 2024, Google implemento una politica que limita el acceso de aplicaciones de monitoreo y reporte (como Make) a 6 meses para usuarios con cuentas personales @gmail.com. Esto significa que incluso en produccion, las conexiones con cuentas gratuitas deben renovarse semestralmente.
+
+Scopes de la Gmail API: El tutorial menciona correctamente que se debe agregar el scope que permite leer, redactar, enviar y eliminar correos. El scope especifico es https://mail.google.com/ que otorga acceso completo a Gmail.
+
+URIs de redireccionamiento: Los URIs autorizados para Make.com incluyen dominios tanto de make.com como integrat.com (nombre anterior de la plataforma), como se indica en el tutorial.
+
+ENLACES A DOCUMENTACION OFICIAL:
+
+Documentacion oficial de Gmail en Make.com:
+https://apps.make.com/google-email
+
+Documentacion de Google sobre OAuth 2.0:
+https://developers.google.com/identity/protocols/oauth2
+
+Configuracion de la pantalla de consentimiento OAuth:
+https://support.google.com/googleapi/answer/6158849
+
+Gmail API para desarrolladores:
+https://developers.google.com/workspace/gmail/api/auth/web-server
+
+Centro de ayuda de Make.com para conexiones con Google:
+https://help.make.com/connect-to-google-services-using-a-custom-oauth-client
+
+Todos los pasos descritos en el tutorial son tecnicamente correctos y estan alineados con las mejores practicas establecidas por Google y Make.com para la integracion segura de Gmail mediante OAuth2.
+##Contenido END

@@ -1,0 +1,147 @@
+##itemID:000
+##menu-item BEGIN
+The Easiest Way to Automate Excel with Python
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+The Easiest Way to Automate Excel with Python:
+Web Original:
+The Easiest Way to Automate Excel with Python:
+[https://youtu.be/xD5CMlAp4HY?si=d5j0xygqh2Y16std](https://youtu.be/xD5CMlAp4HY?si=d5j0xygqh2Y16std)
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción a Excel Wings
+##menu-item END
+##Contenido BEGIN
+Introducción a Excel Wings:
+Si quieres cambiar la forma en que usas Python para automatizar tareas en Excel en lugar de usar VBA, Excel Wings es el programa indicado. Aunque existen opciones como Pandas u OpenPyXL, a veces no son suficientes. Excel Wings funciona hablando con Excel de una manera especial, tal como lo hace VBA, y lo mejor es que también funciona en computadoras Mac. El objetivo es enseñarte a pasar de VBA a Python para tus automatizaciones.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Instalación del programa
+##menu-item END
+##Contenido BEGIN
+Instalación del programa:
+Si ya tienes Python instalado en tu computadora, debes instalar el paquete Excel Wings. Para esto, abre la ventana de comandos o terminal y escribe el comando pip install excelwings. Si quieres asegurarte de tener la versión más nueva, puedes agregar la palabra upgrade al comando. Al presionar Enter, el programa se instalará.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Creación del proyecto
+##menu-item BEGIN
+##Contenido BEGIN
+Creación del proyecto:
+Después de instalar, escribe el comando excelwings quickstart seguido del nombre que quieras darle a tu proyecto, por ejemplo demo automation. Al final de la línea añade --standalone. Al presionar Enter, se creará una carpeta nueva con el nombre de tu proyecto en el lugar donde ejecutaste el comando.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Archivos del proyecto
+##menu-item END
+##Contenido BEGIN
+Archivos del proyecto:
+Dentro de la carpeta creada verás dos archivos: uno de Python y uno de Excel. El archivo de Excel es un libro de trabajo que ya tiene macros activas, las cuales contienen el código VBA necesario para ejecutar el archivo de Python que se encuentra en la misma carpeta.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Configuración del botón en Excel
+##menu-item END
+##Contenido BEGIN
+Configuración del botón en Excel:
+Abre el archivo de Excel. Ve a la pestaña Programador, luego a Insertar y selecciona el botón para dibujarlo en tu hoja. Al hacerlo, selecciona las macros de este libro de trabajo y elige la opción llamada sample call. Haz clic en Aceptar para finalizar.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Solución de error de intérprete
+##menu-item END
+##Contenido BEGIN
+Solución de error de intérprete:
+Al hacer clic en el botón, el archivo de Python debería ejecutarse. Si aparece un error diciendo que no se encuentra el intérprete, significa que Excel Wings no sabe dónde está instalado Python. Para solucionarlo, busca el archivo de configuración. Debes quitar el guion bajo que está al inicio del nombre del archivo de configuración para activarlo. Guarda el cambio, vuelve a la hoja y presiona el botón nuevamente.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Prueba básica de funcionamiento
+##menu-item END
+##Contenido BEGIN
+Prueba básica de funcionamiento:
+Al presionar el botón corregido, debería aparecer el mensaje hello excel rings en la celda A1. Si presionas el botón de nuevo, el mensaje cambiará a buy Excel rings. Esto confirma que la conexión funciona.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Cómo funciona la conexión internamente
+##menu-item END
+##Contenido BEGIN
+Cómo funciona la conexión internamente:
+Cuando presionas el botón, se ejecuta un código VBA que llama a una función importante llamada run python. Esta función ejecuta el archivo de Python. El código VBA toma el nombre del archivo de Excel y lo usa para ejecutar la función principal en Python. En el lado de Python, se importa Excel Wings y se conecta con el libro de trabajo usando xw.Book.caller().
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Lógica del código de ejemplo
+##menu-item END
+##Contenido BEGIN
+Lógica del código de ejemplo:
+El código básico crea una variable para la hoja (recordando que en Python la primera hoja es la número 0). Luego revisa el valor de la celda A1. Si dice hello excel rings, lo cambia a by excel rings. Si no lo dice (o está vacía), escribe hello excel rings.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Ejemplo avanzado: Tablero de acciones
+##menu-item END
+##Contenido BEGIN
+Ejemplo avanzado: Tablero de acciones:
+Para hacer algo más útil, se puede crear un tablero de acciones. Se usan módulos de Python como yfinance para datos de acciones, matplotlib para gráficos y datetime para fechas. El código primero conecta con el libro y la aplicación de Excel. Luego verifica si existe un símbolo de acción (ticker). Si no existe, muestra una alerta. Si existe, borra cualquier hoja llamada stock dashboard existente y crea una nueva con ese nombre.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Ejecución del tablero avanzado
+##menu-item END
+##Contenido BEGIN
+Ejecución del tablero avanzado:
+El código obtiene datos históricos del último mes y datos de la empresa. Inserta esta información en Excel, dando formato como negrita, tamaño y color al título. Coloca los datos históricos en una tabla ajustando las columnas y crea un gráfico que inserta como imagen. Al final muestra un mensaje de éxito. Para ejecutarlo, debes definir una celda con el nombre ticker, escribir una empresa como Microsoft y presionar el botón.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Alternativa: Excel Wings Lite
+##menu-item END
+##Contenido BEGIN
+Alternativa: Excel Wings Lite:
+Si el usuario no tiene Python instalado, existe Excel Wings Lite. Es un complemento que se instala desde la pestaña Inicio en Complementos. Esto abre una ventana lateral donde puedes escribir código Python que se ejecuta en un espacio seguro en el navegador, sin instalación local de Python. Permite hacer lo mismo, como crear gráficos complejos o tablas, manteniendo los datos en tu computadora.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+Resumen de puntos técnicos validados:
+1. ExcelWings es una librería de código abierto para automatizar Excel con Python, compatible con Windows y macOS.
+2. El comando "excelwings quickstart myproject --standalone" genera un proyecto con las dependencias integradas en el archivo VBA, facilitando la distribución.
+3. ExcelWings Lite (ahora parte de xlwings Server/Add-in) permite ejecutar Python en Excel mediante un complemento de Office (Office.js) o WebAssembly, ideal para despliegues donde el usuario final no tiene Python local.
+4. Las librerías mencionadas son estándar en el ecosistema de análisis de datos: yfinance para datos financieros y matplotlib para visualización.
+
+Enlaces a documentación oficial:
+- Documentación oficial de ExcelWings (Quickstart): [https://docs.xlwings.org/en/stable/quickstart.html](https://docs.xlwings.org/en/stable/quickstart.html)
+- Página oficial de ExcelWings Lite: [https://lite.xlwings.org/](https://lite.xlwings.org/)
+- PyPI yfinance (Datos financieros): [https://pypi.org/project/yfinance/](https://pypi.org/project/yfinance/)
+- Documentación de Matplotlib: [https://matplotlib.org/](https://matplotlib.org/)
+
+
+The Easiest Way to Automate Excel with Python
+[https://youtu.be/xD5CMlAp4HY?si=d5j0xygqh2Y16std](https://youtu.be/xD5CMlAp4HY?si=d5j0xygqh2Y16std)
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END

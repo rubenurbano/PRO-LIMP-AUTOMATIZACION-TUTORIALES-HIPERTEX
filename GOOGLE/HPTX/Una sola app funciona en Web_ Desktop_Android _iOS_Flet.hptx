@@ -1,0 +1,272 @@
+##itemID:000
+##menu-item BEGIN
+Una sola app funciona en Web_ Desktop_Android _iOS_Flet
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Una sola app funciona en Web_ Desktop_Android _iOS_Flet:
+Web Original:
+Una sola app funciona en Web_ Desktop_Android _iOS_Flet:
+https://youtu.be/ki7LH8fTgHs?si=ogYHNRU-LNYfPB73J
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introduccion a Flet y Python
+##menu-item END
+##Contenido BEGIN
+Introduccion a Flet y Python:
+Hola, estas viendo Programacion Facil. Voy a ensenarte un poco sobre Flet y Python. Necesito que muchas personas vean este video (unas 100.000 veces en seis meses) para poder hacer un curso mas largo y completo. Puedes ayudar dando "Me Gusta" y compartiendo. Con Flet podemos hacer aplicaciones que sirven en muchos lugares diferentes.
+
+Usamos el mismo codigo de Python para que la aplicacion sirva en celulares Android, computadoras Windows o Linux, o en el internet (como una pagina web). Es muy rapido y no tienes que aprender codigos dificiles de internet, como los de diseno de paginas (CSS o HTML). Las aplicaciones de Flet se ven modernas, como las que usas en tu telefono.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Requisitos previos para usar Flet
+##menu-item END
+##Contenido BEGIN
+Requisitos previos para usar Flet:
+Para empezar, necesitas dos cosas:
+1. El programa Python instalado (version 3.9 o mas nueva).
+2. Un programa para escribir codigo, como Visual Studio Code.
+
+Abre el lugar donde escribes comandos (la terminal) en Visual Studio Code. Es mejor crear una carpeta especial para que el proyecto este ordenado.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Creacion de carpeta especial (entorno virtual)
+##menu-item END
+##Contenido BEGIN
+Creacion de carpeta especial (entorno virtual):
+Acciones para crear la carpeta especial:
+
+1. Escribe: python -m venv fletenv. Esto crea la carpeta especial.
+2. Entra en esa carpeta especial para activarla. Escribe: cd fletenv/scripts.
+3. Luego, escribe: activate.
+
+Ahora que la carpeta especial esta activa, vamos a instalar Flet dentro de ella.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Instalacion de Flet
+##menu-item END
+##Contenido BEGIN
+Instalacion de Flet:
+Accion para instalar Flet:
+
+1. Escribe: pip install flet.
+2. Puedes ver que version tienes escribiendo: flet --version.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Primera aplicacion: Hola Mundo
+##menu-item END
+##Contenido BEGIN
+Primera aplicacion: Hola Mundo:
+Vamos a probar si funciona Flet con un programa rapido que dice "Hola Mundo".
+
+Acciones para la primera aplicacion:
+
+1. Crea un archivo nuevo para el codigo y ponle un nombre.
+2. Escribe un codigo sencillo.
+3. Ejecutalo.
+
+Si ves una ventana con el logo de Flet que dice "Hola mundo desde Flet", significa que funciono y creaste tu primera aplicacion.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Explicacion del codigo sencillo
+##menu-item END
+##Contenido BEGIN
+Explicacion del codigo sencillo:
+El codigo importa Flet. La parte principal del codigo (la funcion 'main') dice que cosas se van a mostrar en la aplicacion. 'Page' es como el cuadro principal donde ponemos todo. Usamos page.add para poner el texto que se ve en la pantalla.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Segunda aplicacion: Aplicacion interactiva
+##menu-item END
+##Contenido BEGIN
+Segunda aplicacion: Aplicacion interactiva:
+Ahora probemos una aplicacion que puede hacer cosas (interactiva).
+
+Acciones para la segunda aplicacion:
+
+1. Ejecuta este codigo.
+
+Veras un cuadro que te pide escribir algo y presionar un boton. Si escribes algo y presionas el boton "actualizar", el texto que habias escrito cambia.
+
+En este ejemplo, la caja para escribir se llama text field. El boton llama a una tarea (una funcion) llamada actualizar texto cuando lo presionas. Esa tarea cambia el texto en la pantalla principal.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Aplicacion con mejor diseno
+##menu-item END
+##Contenido BEGIN
+Aplicacion con mejor diseno:
+Probemos otro codigo, que hace lo mismo, pero se ve mejor y mas bonito. Esto es solo para cambiar la apariencia. Podemos anadirle detalles, como poner el texto en color azul o darle un tamano especifico. La aplicacion de Flet tiene un diseno mucho mas moderno que otros programas parecidos.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Ejemplo de lista de notas
+##menu-item END
+##Contenido BEGIN
+Ejemplo de lista de notas:
+Aqui tienes otro ejemplo: una lista donde puedes agregar notas. Este panel de notas se ve muy bien y se puede hacer con poco codigo.
+
+Es importante saber que Flet funciona muy facilmente en cualquier aparato.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Flet funciona en todos los dispositivos
+##menu-item END
+##Contenido BEGIN
+Flet funciona en todos los dispositivos:
+El mismo codigo que usas para una aplicacion en tu computadora (escritorio), sirve para usarlo en internet (web) o en un celular (Android). Aunque la forma de organizar los archivos cambia un poco para el celular, el codigo de la aplicacion principal es el mismo. Esto hace que sea facil cambiar la aplicacion de la computadora a un celular.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Ejecutar aplicacion en celular Android
+##menu-item END
+##Contenido BEGIN
+Ejecutar aplicacion en celular Android:
+Acciones para usar Flet en un celular Android:
+
+1. Ve a la tienda de aplicaciones (Play Store) en tu celular o tableta.
+2. Instala la aplicacion de Flet.
+3. Asegurate de que tu celular y tu computadora esten conectados a la misma red de internet.
+4. Necesitas un comando para crear la estructura de archivos que necesita el celular. Escribe: flet create appflet.
+5. Entra en la nueva carpeta que se creo. Escribe: cd appflet.
+6. Para que el programa funcione en Android, escribe: flet run android.
+7. Aparecera un codigo cuadrado (QR). Escanealo con tu celular o escribe la direccion que aparece en un navegador. Esto abrira la aplicacion.
+
+El programa de ejemplo que se abre en el celular es un contador sencillo que empieza en cero y tiene un boton de "+".
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Probar cambios en tiempo real en el celular
+##menu-item END
+##Contenido BEGIN
+Probar cambios en tiempo real en el celular:
+Acciones para probar cambios en el celular:
+
+1. Puedes cambiar el codigo para que el contador vaya de dos en dos, en lugar de uno en uno.
+2. Guarda el cambio.
+3. La aplicacion se actualizara automaticamente en tu celular o tableta.
+4. Para dejar de usar el celular con la aplicacion, sal de esa sesion.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+Ejecutar aplicacion como pagina web
+##menu-item END
+##Contenido BEGIN
+Ejecutar aplicacion como pagina web:
+Acciones para ejecutar en Web:
+
+1. Para ejecutar el mismo programa como una pagina web, asegurate de estar en la carpeta correcta.
+2. Escribe: flet run test2.py --web.
+3. Se abrira automaticamente en tu navegador de internet.
+
+El mismo codigo sirve para todo.
+##Contenido END
+
+##itemID:014
+##menu-item BEGIN
+Solucionar problemas de conexion en Android
+##menu-item END
+##Contenido BEGIN
+Solucionar problemas de conexion en Android:
+Si la aplicacion no funciona en Android (dice que se acabo el tiempo o "connection time out"), puede que debas cambiar el firewall (el muro de seguridad) de tu computadora.
+
+Acciones para el firewall:
+
+1. Busca la opcion que dice "Permitir que una aplicacion..." en la configuracion de seguridad.
+2. Busca el programa Python en la lista.
+3. Asegurate de que tenga marcada la opcion "privada".
+4. Dale a "Aceptar".
+
+Este mini curso rapido muestra lo poderoso que es Flet para crear aplicaciones de manera facil y muy veloz. Por favor, apoya este video para que se pueda hacer un curso mas largo y detallado.
+##Contenido END
+
+##itemID:015
+##menu-item BEGIN
+Preguntas y Respuestas
+##menu-item END
+##Contenido BEGIN
+Preguntas y Respuestas:
+
+Documentacion tecnica oficial FLET LINK= https://flet.dev/docs/
+
+Que es Flet?
+Flet es una herramienta que nos permite crear aplicaciones usando solo codigo de Python.
+
+Para que sirve Flet?
+Sirve para hacer aplicaciones que funcionan con el mismo codigo en muchos lugares: en el internet (web), en computadoras Windows o Linux (escritorio), y en celulares Android o iOS.
+
+Que necesito para empezar a usar Flet?
+Necesitas tener instalado el programa Python (version 3.9 o mas nueva) y un programa para escribir codigo, como Visual Studio Code.
+
+Como instalo Flet?
+Debes abrir la terminal (el lugar para escribir comandos) y escribir pip install flet. Se recomienda crear una carpeta especial antes de instalar.
+
+Como hago una carpeta especial para mi proyecto (entorno virtual)?
+Escribe python -m venv fletenv y luego usa cd fletenv/scripts y activate para activarla.
+
+Como hago mi primera aplicacion?
+Debes crear un archivo con codigo y ejecutarlo. Si funciona, aparecera una ventana con el texto "Hola mundo desde Flet".
+
+Que son los componentes 'main' y 'page'?
+La parte 'main' (principal) le dice a la aplicacion que cosas mostrar. 'Page' es el contenedor principal o el cuadro donde se ponen todas las cosas de la aplicacion, como el texto o los botones.
+
+Como hago una aplicacion interactiva?
+Se usan cosas como el text field (la caja donde escribes) y los botones. Cuando presionas un boton, este llama a una tarea (funcion) que cambia el texto en la pantalla.
+
+Puedo cambiar la apariencia de mi aplicacion?
+Si, puedes cambiar los colores (como poner texto azul) y tamanos. Flet ayuda a que se vea mas moderno.
+
+El codigo que hago en mi computadora sirve para mi celular?
+Si, el codigo de la aplicacion principal es el mismo para la computadora, para el internet y para los celulares.
+
+Que debo hacer en mi celular para que funcione la aplicacion de Flet?
+Debes instalar la aplicacion de Flet desde la tienda (Play Store). Ademas, la computadora y el celular deben estar en la misma red de internet.
+
+Como hago para que la aplicacion aparezca en mi celular?
+Primero, crea la estructura de archivos con flet create appflet. Luego, entra a la carpeta con cd appflet. Finalmente, usa el comando flet run android para que aparezca un codigo QR. Escaneando ese codigo la aplicacion se abre en el celular.
+
+Si cambio el codigo, se actualiza en el celular?
+Si, si cambias algo en el codigo (como hacer que un contador sume de dos en dos) y guardas, la aplicacion se actualizara sola en tu celular.
+
+Como ejecuto mi aplicacion como una pagina web?
+Escribe el comando flet run nombre_de_tu_archivo.py --web.
+
+Que hago si la aplicacion no funciona en Android (error de conexion)?
+Podrias tener que revisar la configuracion de seguridad (el firewall) de tu computadora. Debes asegurarte de que Python tenga permitido comunicarse, marcando la opcion "privada".
+##Contenido END
+
+##itemID:016
+##menu-item BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES:
+
+
+Una sola app funciona en Web_ Desktop_Android _iOS_Flet
+https://youtu.be/ki7LH8fTgHs?si=ogYHNRU-LNYfPB73J
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END

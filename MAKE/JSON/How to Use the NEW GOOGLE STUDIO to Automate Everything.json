@@ -1,0 +1,65 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "[TITULO_VIDEO]\nWEB ORIGINAL:",
+      "contenido": "[TITULO_VIDEO]:\nHow to Use the NEW GOOGLE STUDIO to Automate Everything\n\nWeb Original:\n[TITULO_VIDEO]:\nhttps://youtu.be/mmmCn8fB_VA?si=G01TkqdqGCCGQSmo\n\n[AUTOR]\nPRO-LIMP AUTOMATIZACION\n\n[TELEFONO]\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción a Google Workspace Studio",
+      "contenido": "Introducción a Google Workspace Studio:\nGoogle Workspace Studio es una herramienta lanzada recientemente por Google.[1][2][3][4][5][6][7][8][9] Su objetivo es permitir la creación de automatizaciones utilizando Inteligencia Artificial (IA) dentro de todo el ecosistema de Google Workspace.[1][2][3][5][8][9]\n\nEsto significa que puedes usar la IA para conectar y trabajar con programas como Google Docs, Google Sheets y Google Meets.[9] Además, aunque está diseñada para el entorno de Google, también permite conexiones con aplicaciones externas. Un punto clave es que Google garantiza que no usa los datos privados de los usuarios, como sus correos electrónicos, para entrenar sus modelos de IA."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Requisitos y Acceso a la Herramienta",
+      "contenido": "Requisitos y Acceso a la Herramienta:\nPara utilizar Google Workspace Studio, es necesario tener una suscripción activa a uno de los siguientes planes:\n\nBusiness Standard\n\nEnterprise\n\nEducation Fundamentals\n\nGoogle AI Pro\n\nGoogle AI Ultra for Business\n\nSi cuentas con uno de estos planes, existen tres formas de acceder a la herramienta:\n\nRecibiendo un correo de notificación.[2][5]\n\nBuscando la pestaña llamada \"estudio\" en la parte superior de la página de Google.\n\nIngresando directamente a la dirección web estudio.google.com, que es el panel principal para crear automatizaciones."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Partes Fundamentales de una Automatización",
+      "contenido": "Partes Fundamentales de una Automatización:\nLas automatizaciones se estructuran en flujos o escenarios que contienen cuatro elementos principales:\n\nA. El Activador (Trigger): Es el evento que inicia la automatización. Puede ser una hora programada (On schedule), la recepción de un correo o un cambio en archivos de Drive o Sheets.\nB. Pasos o Nodos de Acción: Son las tareas específicas que se ejecutan una vez que se activa el flujo.\nC. Variables: Sirven para capturar información de un paso (como el asunto de un email) y usarla en los pasos siguientes.\nD. Uso de Gemini: Es la IA integrada en los pasos, capaz de conectarse a internet y a las apps de Workspace para buscar información o crear respuestas."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Ejemplo 1: Resumen Diario de Noticias",
+      "contenido": "Ejemplo 1: Resumen Diario de Noticias:\nEsta automatización envía un correo diario con las noticias más importantes.[2] Los pasos son:\n\nConfigurar el Activador: Selecciona \"on schedule\" (en horario) y define la hora de ejecución diaria (ej. 8:00 AM).\n\nDefinir la Tarea de Gemini: Indica a Gemini el día actual y pídele las noticias recientes (ej. últimas 24 horas) y el formato deseado. Puedes elegir si debe buscar solo en internet o también en tus datos de Workspace.\n\nEnviar el Resumen: Agrega el paso \"Enviar un correo\". Usa la respuesta de Gemini del paso anterior como una variable para el contenido del email. Puedes añadir copias (CC/BCC).\n\nPrueba y Activación: Realiza una prueba (Test run) y luego activa el flujo para que funcione automáticamente."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Ejemplo 2: Notificación de Correos Urgentes",
+      "contenido": "Ejemplo 2: Notificación de Correos Urgentes:\nEste flujo revisa tu bandeja de entrada para avisarte sobre mensajes importantes.[2][5]\n\nActivador: Se inicia cuando llega un nuevo correo (\"when I get an email\").[7]\n\nPaso de Decisión (Check If): La IA analiza si algo es verdadero o falso. Gemini revisa el remitente, asunto y cuerpo del correo para decidir si es urgente (ej. si menciona fechas límite o fallos).\n\nAcciones si es Urgente: Si la respuesta es \"SÍ\", se añaden pasos como pedir un resumen a Gemini o redactar un borrador de respuesta.\n\nLimitación: El paso de decisión actual solo permite dos caminos (sí o no), lo que limita flujos con múltiples opciones."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Conexión con Herramientas Externas (Webhooks)",
+      "contenido": "Conexión con Herramientas Externas (Webhooks):\nGoogle Workspace Studio conecta directamente con apps como Asana, Hubspot, Jira, Confluence, Mailsin, QuickBook y SalesBard.\n\nPara otras herramientas, se usa la opción \"mandar un webhook\":\n\nEnvía datos a una URL específica de plataformas como N8N o Make.\n\nSe elige el método (Post o Get) según si necesitas enviar o recibir datos.\n\nPermite enviar variables fuera de Google Workspace.\n\nDesventaja: Actualmente, la herramienta no permite recibir múltiples variables de vuelta desde el webhook, solo texto simple."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Ejemplo 3: Resumen de Reuniones",
+      "contenido": "Ejemplo 3: Resumen de Reuniones:\nAutomatización para gestionar notas post-videollamada.\n\nActivador: Se dispara 10 minutos después de terminar una reunión.\n\nRevisión: Verifica si existen notas grabadas de la reunión. Si no, se detiene.\n\nResumen: Gemini crea un resumen de los puntos clave basándose en las notas.\n\nEnvío: Obtiene la lista de invitados del Google Calendar y les envía el resumen por correo. También se pueden enviar datos vía webhook."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Creación Asistida por IA",
+      "contenido": "Creación Asistida por IA:\nExiste una función avanzada donde describes con tus propias palabras lo que quieres hacer y Gemini construye la automatización completa por ti.[1][2][4][5][8][9]\n\nEjemplo: Si escribes \"Etiqueta los mensajes importantes con la etiqueta Importante y crea un borrador de la respuesta\", la IA generará:\n\nEl paso para obtener el correo.[2][5]\n\nLa decisión de importancia.\n\nLa acción de etiquetar.[2][4][5][7][9]\n\nLa redacción de la respuesta profesional.\n\nLa creación del borrador en el correo original.\nEsto simplifica enormemente la configuración de flujos complejos."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Opciones de Inicio (Triggers)",
+      "contenido": "Opciones de Inicio (Triggers):\nPuedes iniciar automatizaciones con los siguientes eventos:\n\nPor tiempo (Schedule): En un horario fijo.\n\nCorreo: Al recibir un email nuevo.\n\nCalendario: Al tener una reunión.\n\nGoogle Sheets: Cuando cambia el contenido de una hoja.[6]\n\nGoogle Drive: Al editar documentos, editar ítems en carpetas o añadir nuevos archivos.\n\nGoogle Forms: Al enviarse una respuesta a un formulario."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Otros Pasos de Acción Disponibles",
+      "contenido": "Otros Pasos de Acción Disponibles:\nAdemás de enviar correos y usar webhooks, puedes utilizar:\n\nAgentes y Gemas: Los agentes dan acceso general a la IA, mientras que las \"Gems\" son modelos especializados en tareas concretas.\n\nHabilidades de IA (AI Skills): Funciones específicas para resumir, extraer datos o tomar decisiones sobre correos.[7]\n\nFiltros: Reglas para que un paso solo se ejecute bajo ciertas condiciones (ej. solo si el correo es de una persona específica)."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nSe ha realizado una búsqueda para validar la terminología y disponibilidad de la herramienta mencionada en el documento como \"Google Workspace Studio\".\n\nResumen de puntos técnicos validados:\n\nNombre Oficial: La herramienta se denomina oficialmente Google Workspace Studio (anteriormente conocida en fases de prueba o relacionada con \"Google Vids\" y \"AI Agents\"). Se confirma su lanzamiento general (General Availability) alrededor de diciembre de 2025 (según las fuentes consultadas que reflejan anuncios recientes de Google).[5][8][9]\n\nFuncionalidad: Se confirma que es una plataforma \"no-code\" (sin código) para crear agentes de IA.[1][4][5][7][8][9] Utiliza el modelo Gemini 3.\n\nTerminología: Las fuentes oficiales corroboran los términos:\n\nStarters (corresponde a los \"Activadores\" o Triggers del documento).[7]\n\nSteps (corresponde a los \"Pasos\" del documento).[3][7]\n\nVariables (corresponde al uso de variables mencionado).[7]\n\nIntegraciones: Se valida la capacidad de integración con herramientas de terceros como Jira, Asana y Salesforce (mencionado como SalesBard en el texto original, probablemente una variación fonética o error de transcripción, al igual que Mailsin por Mailchimp).\n\nCreación Asistida: Se confirma la característica de crear agentes usando lenguaje natural (describir la tarea y que la IA genere el flujo).[4][5][7][8]\n\nEnlaces a documentación y fuentes:\n\nBlog de Google Workspace (Anuncio Oficial): \"Introducing Google Workspace Studio to automate everyday work with AI agents\" - Detalla el uso de Gemini para crear agentes.[1][5][8]\n\nAyuda de Google Workspace: Documentación sobre \"Build AI agents\" y el uso de la interfaz de Studio.[1][2][3]\n\nSitio de acceso: La URL mencionada studio.google.com (o variaciones como workspace.google.com/studio) es el punto de acceso para usuarios con licencias Business y Enterprise.\n\nNota sobre discrepancias:\nEl documento original menciona \"SalesBard\" y \"Mailsin\". La validación técnica sugiere que se refiere a las integraciones estándar de Salesforce y Mailchimp, comunes en este ecosistema.\n\ngemini.org.in https://gemini.org.in\ngoogle.com https://workspace.google.com/studio\ngoogleblog.com https://workspace.googleblog.com/\nuctoday.com https://www.uctoday.com/collaboration\ngoogle.com https://www.google.com\nuipath.com https://www.uipath.com\nmashable.com https://mashable.com/tech\nstoryboard18.com https://www.storyboard18.com\nsiliconangle.com https://siliconangle.com"
+    }
+  ]
+}

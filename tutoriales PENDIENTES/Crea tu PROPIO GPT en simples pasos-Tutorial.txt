@@ -1,0 +1,72 @@
+**Nombre del video:** Crea tu PROPIO GPT en simples pasos-Tutorial
+**URL del video:** https://youtu.be/cQ-1W3pvJNk?si=_88Gjyjeq2tkGZGW
+
+***
+
+## Outline del Tutorial: Creación de un Agente de IA Personalizado
+
+Este tutorial explica cómo puedes crear tu **propio "agente" de Inteligencia Artificial (IA)** dentro de ChatGPT, el cual estará hiper personalizado para responder o realizar tareas muy específicas que tú le pidas.
+
+### I. Introducción: ¿Qué es un GPT Personalizado?
+
+1.  **Definición:** Un GPT propio es un **agente personalizado de IA** que funciona como una herramienta súper especializada.
+2.  **Función:** Te permite tener respuestas ya prearmadas o realizar acciones específicas basándose en tus necesidades exactas.
+    *   *Ejemplo Práctico:* En el video, el objetivo es crear un GPT específico para diseñar miniaturas de YouTube.
+3.  **Requisito Importante:** Para usar esta función de crear tu propio GPT, es necesario tener el **plan de pago de Chat GPT**.
+4.  **Beneficio:** Aunque sea de pago, esta función soluciona muchísimos problemas y funciona muy bien, ahorrando tiempo.
+
+### II. Pasos para la Creación y Configuración del GPT
+
+#### A. Inicio de la Creación
+1.  **Navegación:** Para comenzar, debes ir al apartado **"Explorar"** en la izquierda y luego hacer clic en **"Crear"** (arriba a la derecha).
+2.  **Identificación:**
+    *   Le pones un **Nombre** (Ejemplo: miniaturas efecto redes).
+    *   Le das una **Descripción** (Ejemplo: Crea miniaturas de YouTube para tutoriales de efecto redes).
+
+#### B. Dándole Instrucciones al "Cerebro" (El Prompt)
+El "prompt" es la indicación principal que le dice al GPT cómo debe comportarse y qué reglas debe seguir.
+1.  **Ayuda de ChatGPT:** Puedes pedirle al propio ChatGPT que te ayude a generar el *prompt* (la instrucción) que necesitas.
+2.  **Datos Clave que Debe Entender el GPT:**
+    *   **Imágenes de Referencia:** Debe usar las imágenes de personas específicas (Mati y Tiago), el logo y los colores de la marca.
+    *   **Formato de Salida:** Las miniaturas deben ser siempre en un formato horizontal específico (1920x1080).
+    *   **Estilo Visual:** El estilo debe ser **impactante** y debe dar ganas de hacer clic en el video.
+    *   **Reglas del Texto:** El texto en la miniatura tiene que ser corto (máximo dos líneas y una sola frase) y muy legible, ya que es una imagen pequeña.
+    *   **Proceso de Confirmación:** El GPT debe **explicar qué va a hacer** (la idea principal, el texto y el diseño) antes de crear la imagen.
+3.  **Criterio Humano:** Aunque ChatGPT te genere la instrucción, es vital que tú la leas y la **modifiques** según tu criterio si el resultado inicial no te gusta.
+
+#### C. Proporcionando Archivos y Conocimiento (La Base de Datos)
+1.  **Carga de Archivos:** Se cargan imágenes importantes que el GPT usará como referencia constante, como fotos de las personas y el logo de la marca.
+2.  **Limitaciones:** Es necesario añadir indicaciones para evitar errores, por ejemplo, pedirle que **intente no modificar las caras** de las personas en las fotos, para que se vean lo más realistas posible.
+3.  **Foto de Perfil:** Puedes pedirle al propio GPT que te genere una imagen para usar como su foto de perfil.
+
+#### D. Configuración de Visibilidad
+Una vez creado, debes decidir quién puede usar tu GPT:
+1.  **GPT Store:** Para que cualquier persona lo vea y use.
+2.  **Con Enlace:** Solo las personas que tengan el link directo.
+3.  **Privado:** Solo tú puedes usarlo.
+
+### III. Prueba y Entrenamiento del Agente de IA
+
+El primer uso es el más importante, ya que el GPT necesita entender exactamente tu estilo.
+
+1.  **La Primera Tarea:** Le pides al GPT que genere la primera miniatura, dándole una idea base.
+2.  **Confirmación y Detalle de Ejecución:** El GPT, siguiendo la instrucción previa, debe primero darte un **detalle de ejecución** (explicando la composición, el texto y los elementos que usará), y luego te pregunta si debe avanzar.
+3.  **El Período de Aprendizaje:** Al principio, el GPT puede pedirte más fotos o aclaraciones. Esto sucede con todos los GPTs creados: **tienen que entender el estilo primero**.
+4.  **La Importancia de la Iteración:**
+    *   Para mejorar la respuesta, debes **mostrarle ejemplos** de miniaturas que te gusten para que entienda el estilo.
+    *   También es útil mostrarle ejemplos de lo que **no debe hacer**.
+    *   Debes seguir indicándole qué tiene que hacer y qué no, para que refine su trabajo.
+
+### IV. Usos Recomendados y Beneficios
+
+Crear tus propios GPTs es ideal para automatizar tareas que haces **repetidamente**.
+
+1.  **Automatización:** Tener un agente propio, automatizado con tus propios "pensamientos" o reglas, puede **solucionar mucha pérdida de tiempo**.
+2.  **Ejemplos de Agentes Creados:**
+    *   Un GPT para la creación de *podcasts* (sugiere títulos, capítulos y subclips basados en la transcripción).
+    *   GPTs para guiones de *reels* o historias.
+    *   GPTs para el diseño de *carruseles* o estrategias de historias.
+
+***
+
+**En resumen, crear un GPT personalizado es como construir tu propio asistente robótico especializado.** En lugar de darle instrucciones desde cero cada vez que necesitas algo (como si le pidieras a un chef que te prepare algo), le das todas las recetas y reglas de tu estilo por adelantado (como darle a tu robot chef tu libro de cocina personal), para que siempre te entregue exactamente lo que esperas de forma rápida.

@@ -1,0 +1,69 @@
+Nombre del video:
+Connect Monday.com with WhatsApp-Sync WhatsApp with Monday.com-Send WhatsApp from Monday's board
+
+URL del video:
+https://youtu.be/8k1zf57teI0?si=KPJm-yJeLSQauyv3
+
+Hola. Imagina que monday.com es tu lista de contactos súper organizada y WhatsApp es la forma en que tus clientes te hablan. Esta guía te muestra cómo conectar ambos automáticamente para que no tengas que copiar y pegar nada. Usaremos una herramienta llamada Make.com (o Zapier), que es como un constructor de "No Code" que une diferentes aplicaciones.
+
+El video explica dos flujos principales:
+
+PARTE 1: RECIBIR MENSAJES DE WHATSAPP Y ACTUALIZAR MONDAY.COM (WhatsApp a monday.com)
+
+El objetivo es que cada vez que alguien te escriba en WhatsApp, tu lista de contactos en monday.com se actualice con todo lo que hablaron.
+
+1. Herramientas necesarias
+Vamos a usar una herramienta llamada Notifier System (creada por What's Aable). Necesitas:
+  a. Una cuenta en Notifier System (que es una app privada).
+  b. Un número de teléfono de negocios (como uno de Twilio) y su clave API.
+
+2. Configuración en Make.com (El Constructor de Automatizaciones)
+  a. El Disparador (Trigger): En Make.com, usaremos el módulo de Notifier System llamado incoming message from recipient (mensaje entrante del destinatario).
+  b. Conexión: Solo necesitas pegar tu clave API.
+  c. Resultado del Disparador: Este módulo te proporciona parámetros clave, como el número de teléfono de la persona que te escribió.
+
+3. Buscar el Contacto en monday.com
+  a. Buscar por Número: Usaremos el número de teléfono que recibimos en el paso anterior para buscar quién es esa persona en monday.com.
+  b. Módulo de Make.com: Usaremos el módulo de monday.com llamado search items in the board by column values (buscar elementos en el tablero por valores de columna).
+  c. Configuración: Le decimos a Make.com en qué tablero buscar (ej. "Mis contactos") y que busque usando la columna de número de teléfono.
+  d. Resultado de la Búsqueda: Esta búsqueda nos da el ID único de ese contacto en monday.com.
+
+4. Actualizar la Conversación
+  a. Módulo de Actualización: Usaremos el módulo update a column values by a specific item (actualizar valores de columna por un elemento específico).
+  b. Usar el ID: Para saber a qué contacto actualizar, usamos el ID que encontramos en el paso 3.
+  c. ¿Qué datos actualizamos?:
+    *   Conversación Completa (Full Conversation): Usamos la variable conversation paragraph (párrafo de conversación) de Notifier System. Esta variable te da el historial completo del chat con el usuario.
+    *   Último Mensaje Enviado: Usamos la variable last message sent by the user (último mensaje enviado por el usuario).
+    *   Etiquetas (Labels): Notifier System puede poner etiquetas automáticas basadas en palabras clave (ej. si dijeron "orden confirmada"). Estas etiquetas también se envían y actualizan la columna de Etiquetas en monday.com.
+
+PARTE 2: ENVIAR MENSAJES DE WHATSAPP DESDE MONDAY.COM (monday.com a WhatsApp)
+
+El objetivo es que si cambias el estado de un contacto en monday.com (ej. de "Líder Calificado" a "Cliente"), automáticamente se envíe un mensaje de WhatsApp a esa persona. También podemos programar mensajes de seguimiento (una "campaña de goteo" o drip campaign).
+
+1. El Disparador en monday.com
+  a. Módulo de Make.com: Usamos el módulo de monday.com watch board column values (vigilar valores de columna del tablero).
+  b. Conexión: Necesitas tu token de acceso de monday.com, que puedes encontrar en tu perfil, en la sección "Desarrollar" y luego "Mis tokens de acceso".
+  c. Definir el cambio: Es importante que solo se active cuando cambias una cosa específica. Selecciona item specific column value update (actualización de valor de columna específica del elemento) y elige solo la columna "Estado". Esto evita que se envíe un WhatsApp si solo cambias su nombre.
+
+2. Obtener la Información del Contacto
+  a. Obtener el ID: El disparador te da el pulse id (el ID del elemento que cambió).
+  b. Módulo de Make.com: Usamos Get an item (obtener un elemento) para extraer los datos necesarios del contacto en monday.com, especialmente su número de teléfono.
+
+3. Enviar el Primer Mensaje (Inmediato)
+  a. Módulo de Notifier System: Usamos un módulo para enviar un mensaje de WhatsApp.
+  b. Plantillas: Cuando envías mensajes automatizados, debes usar plantillas preaprobadas (ej. "confirmación de pedido").
+  c. Personalización: Usas las variables (como el nombre de la persona) que obtuviste de monday.com.
+  d. Contenido Extra: Puedes adjuntar imágenes, videos o documentos (PDF) usando una URL de acceso público (por ejemplo, un enlace de Google Drive o de un archivo en monday.com).
+
+4. Programar Mensajes de Seguimiento (Drip Campaign)
+  a. Clonar el Módulo: Duplicas el módulo de envío de mensajes del paso 3.
+  b. Programar la Hora: Seleccionas yes (sí) para la opción de programar el mensaje.
+  c. Configurar el Retraso: En Make.com, usas el icono del calendario y seleccionas "Add hours" (añadir horas) o "Add days" (añadir días). Por ejemplo, si quieres que se envíe 6 horas después, seleccionas "now" (ahora) y le sumas 6 horas. O podrías sumarle 3 días.
+
+5. Establecer Condiciones (Reglas Inteligentes)
+  a. Chequeo de Condiciones: Los mensajes programados solo se envían si cumplen una condición que se verifica justo antes del envío.
+  b. Evitar Spam: Usas la información de la conversación completa (conversation paragraph) para verificar si la persona dijo la palabra "stop" (detener). Si el usuario ha solicitado no recibir más mensajes, el sistema no enviará el mensaje programado. Puedes usar otras condiciones, como si el último mensaje del usuario está vacío (nunca respondieron).
+
+Resultado: Al mover el estado en monday.com, el mensaje se envía inmediatamente, y otros mensajes se programan automáticamente para días u horas después, pero solo si el cliente no te ha pedido que te detengas.
+
+Además, la conversación completa se mantiene sincronizada, permitiéndote responder desde la consola de Notifier System (que se parece a WhatsApp Web) e incluso desde sus aplicaciones móviles para Android e iOS.

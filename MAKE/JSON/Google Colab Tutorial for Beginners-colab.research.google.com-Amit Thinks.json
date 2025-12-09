@@ -1,0 +1,65 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Google Colab Tutorial for Beginners-colab.research.google.com-Amit Thinks \nWEB ORIGINAL:",
+      "contenido": "Google Colab Tutorial for Beginners-colab.research.google.com-Amit Thinks :\nWeb Original:\n\nGoogle Colab Tutorial for Beginners-colab.research.google.com-Amit Thinks \nhttps://youtu.be/iMlMfrXJYSg?si=qF1VwHfwmurBpE-U"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "¿Qué es Google Colab?",
+      "contenido": "¿Qué es Google Colab?:\n\nGoogle Colab, también conocido como Colaboratory, es una herramienta gratuita en línea de Google que permite a cualquier persona programar y ejecutar código Python en la nube, sin necesidad de instalar nada en su computadora. Está especialmente diseñado para facilitar el aprendizaje y experimentación con programación, inteligencia artificial y ciencia de datos de manera sencilla y accesible para todos los niveles."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Ventajas de usar Google Colab",
+      "contenido": "Ventajas de usar Google Colab:\n\n- No requiere instalación: Solo necesitas una cuenta de Google y acceso a internet.\n- Acceso gratuito a recursos avanzados como GPU y TPU.\n- Permite guardar y compartir tus cuadernos de trabajo fácilmente a través de Google Drive.\n- Interfaz simple que facilita escribir y ejecutar código Python, visualizar gráficos e importar datos.\n- Ideal para educación y proyectos colaborativos por su fácil integración en la nube."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Cómo acceder a Google Colab",
+      "contenido": "Cómo acceder a Google Colab:\n\n1. Abre tu navegador web y entra a https://colab.research.google.com\n2. Inicia sesión con tu cuenta de Google.\n3. Verás la pantalla principal donde puedes crear un cuaderno nuevo, abrir uno existente desde tu Drive o cargar un archivo desde tu computadora."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Crear tu primer cuaderno en Google Colab",
+      "contenido": "Crear tu primer cuaderno en Google Colab:\n\n1. En la pantalla principal, haz clic en el botón “Nuevo cuaderno”.\n2. Se abrirá una nueva pestaña con una hoja en blanco. Aquí puedes comenzar a escribir y ejecutar código en Python.\n3. El archivo se guarda automáticamente en tu Google Drive, así no pierdes tu trabajo."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Estructura básica de un cuaderno Colab",
+      "contenido": "Estructura básica de un cuaderno Colab:\n\nUn cuaderno Colab está dividido en celdas. Hay dos tipos principales:\n- Celdas de código: Aquí escribes y ejecutas código Python.\n- Celdas de texto (Markdown): Sirven para agregar títulos, explicaciones o instrucciones usando texto simple o formato enriquecido.\n\nPuedes añadir nuevas celdas usando los botones \"+\" que aparecen en la barra superior."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Ejecutar tu primer código en Google Colab",
+      "contenido": "Ejecutar tu primer código en Google Colab:\n\n1. Haz clic en una celda de código (puede venir ya creada por defecto).\n2. Escribe el siguiente ejemplo:\n```python\nprint(\"¡Hola, Google Colab!\")\n```\n3. Pulsa el botón de “Play” al margen izquierdo de la celda, o presiona Shift+Enter.\n4. Verás el resultado justo debajo de la celda. ¡Has ejecutado tu primer código en la nube!"
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Agregar y editar celdas",
+      "contenido": "Agregar y editar celdas:\n\n- Para agregar una nueva celda de código, haz clic en \"+ Código\".\n- Para una celda de texto, haz clic en \"+ Texto\".\n- Puedes mover las celdas hacia arriba o abajo y editarlas haciendo doble clic o seleccionando el icono de lápiz."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Guardar y compartir tu cuaderno",
+      "contenido": "Guardar y compartir tu cuaderno:\n\nGoogle Colab guarda automáticamente los cambios en tu Google Drive.\n- Para compartirlo, pulsa el botón “Compartir” (esquina superior derecha) y elige permisos de lectura o edición, igual que cualquier documento de Google Drive.\n- Puedes exportar el cuaderno a otros formatos como PDF o archivo .ipynb desde el menú “Archivo” > “Descargar”."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Importar librerías y cargar datos en Colab",
+      "contenido": "Importar librerías y cargar datos en Colab:\n\n- Puedes importar librerías estándar o externas, por ejemplo:\n```python\nimport numpy as np\nimport pandas as pd\n```\n- Para cargar datos de tu Drive, usa el menú “Archivos” o ejecuta:\n```python\nfrom google.colab import drive\ndrive.mount('/content/drive')\n```\n- Esto te permite acceder y leer archivos directamente desde tu Google Drive."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Uso de recursos gratuitos: GPU y TPU",
+      "contenido": "Uso de recursos gratuitos: GPU y TPU:\n\n- Google Colab ofrece uso gratuito de GPU y TPU para acelerar tareas de inteligencia artificial o procesamiento muy intensivo.\n- Cambia el tipo de hardware en: “Entorno de ejecución” > “Cambiar tipo de hardware” > selecciona “GPU” o “TPU”.\n- Esto permite entrenar modelos de aprendizaje automático más rápidamente respecto a una CPU convencional."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\nTodos los pasos de este tutorial han sido validados con la documentación oficial de Google Colaboratory:\n\n- ¿Qué es Google Colab?:  \n  Fuente oficial: https://research.google.com/colaboratory/faq.html\n\n- Ventajas, acceso, creación y uso básico:  \n  Fuente oficial: https://colab.research.google.com/notebooks/intro.ipynb\n\n- Estructura, guardar, compartir, cargar datos y recursos de hardware:  \n  Fuente oficial: https://colab.research.google.com/notebooks/basic_features_overview.ipynb  \n  Fuente oficial: https://colab.research.google.com/notebooks/io.ipynb\n\nRecomendado consultar las páginas oficiales para actualizaciones y ejemplos avanzados."
+    }
+  ]
+}

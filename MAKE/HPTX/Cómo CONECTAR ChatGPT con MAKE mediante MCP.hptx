@@ -1,0 +1,120 @@
+##itemID:000
+##menu-item BEGIN
+Cómo CONECTAR ChatGPT con MAKE mediante MCP 
+WEB ORIGINAL:
+##menu--item END
+##Contenido BEGIN
+Cómo CONECTAR ChatGPT con MAKE mediante MCP :
+Web Original:
+
+Cómo CONECTAR ChatGPT con MAKE mediante MCP :
+https://youtu.be/uKpSashxJLA?si=t0buozxU37qSN_I7
+
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción: ¿Qué vamos a hacer?
+##menu-item END
+##Contenido BEGIN
+Introducción: ¿Qué vamos a hacer?:
+
+En este tutorial, aprenderás a conectar ChatGPT, el potente modelo de inteligencia artificial de OpenAI, con Make, una plataforma que automatiza tareas entre diferentes aplicaciones sin necesidad de escribir código.
+
+La conexión la realizaremos mediante un "Custom Webhook" (a menudo abreviado en la comunidad como MCP o "Make Custom Process"), que no es más que una URL especial que permite a las aplicaciones enviarse información entre ellas de forma instantánea.
+
+**El objetivo final es simple:** crear un flujo de trabajo (llamado "escenario" en Make) que reciba una instrucción, la envíe a ChatGPT para que genere una respuesta y, finalmente, nos devuelva esa respuesta para usarla donde queramos. Es como darle superpoderes de IA a tus aplicaciones.
+
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Paso 1: Obtener tu clave API de OpenAI
+##menu-item END
+##Contenido BEGIN
+Paso 1: Obtener tu clave API de OpenAI:
+
+Antes de empezar en Make, necesitas una "llave" para que ChatGPT te reconozca. Esta llave se llama clave API (API Key).
+
+1.  **Regístrate en la plataforma de OpenAI:** Ve a la web de la plataforma de OpenAI (platform.openai.com) y crea una cuenta. Es importante saber que esta cuenta es diferente de la que usas para ChatGPT Plus.
+2.  **Genera tu clave secreta:** Una vez dentro, busca en el menú de la izquierda la sección "API Keys". Haz clic en el botón "Create new secret key".
+3.  **Copia y guarda tu clave:** Se generará un código largo. Cópialo inmediatamente y guárdalo en un lugar seguro. Por seguridad, OpenAI solo te la mostrará una vez.
+
+*Nota: El uso de la API de OpenAI tiene un coste asociado, aunque suelen ofrecer un crédito inicial gratuito para empezar a experimentar. Se paga por la cantidad de texto que procesas.*
+
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Paso 2: Crear el escenario en Make y configurar el Webhook
+##menu-item END
+##Contenido BEGIN
+Paso 2: Crear el escenario en Make y configurar el Webhook:
+
+Ahora vamos a Make para crear el punto de entrada que recibirá nuestras instrucciones.
+
+1.  **Crea un nuevo escenario:** Inicia sesión en tu cuenta de Make y haz clic en "Create a new scenario" en la esquina superior derecha.
+2.  **Añade el módulo Webhook:** En el centro del escenario, haz clic en el botón `+` y busca la aplicación "Webhooks". Selecciónala.
+3.  **Elige el disparador:** En la lista de opciones, selecciona "Custom webhook".
+4.  **Configura el Webhook:** Haz clic en "Add" para crear un nuevo webhook. Dale un nombre fácil de recordar (por ejemplo, "Webhook para ChatGPT") y guarda los cambios.
+5.  **Copia la URL del Webhook:** Make generará una URL única. Cópiala haciendo clic en el botón "Copy address to clipboard". Esta es la dirección a la que enviaremos los datos para que el escenario se active.
+
+Ahora, Make se quedará "escuchando" para entender qué tipo de información va a recibir.
+
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 3: Conectar y configurar el módulo de ChatGPT (OpenAI)
+##menu-item END
+##Contenido BEGIN
+Paso 3: Conectar y configurar el módulo de ChatGPT (OpenAI):
+
+Con nuestro punto de entrada listo, es hora de añadir la inteligencia de ChatGPT.
+
+1.  **Añade el módulo de OpenAI:** Haz clic en el `+` a la derecha de tu módulo de Webhook y busca "OpenAI (ChatGPT, Sora, DALL-E, Whisper)".
+2.  **Selecciona la acción:** Elige la acción "Create a Completion" o, más comúnmente, "Create a Chat Completion". Esta acción es la que permite enviar un prompt y recibir una respuesta.
+3.  **Crea la conexión con OpenAI:** Make te pedirá que te conectes a tu cuenta de OpenAI.
+    *   Haz clic en "Add".
+    *   En la ventana que aparece, pega la clave API que guardaste en el Paso 1.
+    *   Dale un nombre a la conexión y guarda.
+4.  **Configura el prompt:** Ahora debes decirle a ChatGPT qué hacer con la información que llega del webhook.
+    *   **Modelo:** Elige el modelo que desees usar (por ejemplo, `gpt-4o` o `gpt-3.5-turbo`).
+    *   **Mensajes:** Esta es la parte clave. Haz clic en "Add item" para definir el rol y el contenido del mensaje.
+        *   **Role:** Selecciona `User`.
+        *   **Message Content:** Aquí es donde mapeas el dato que envías al webhook. Al hacer clic en el campo, verás las variables que tu webhook ha recibido (si has hecho una prueba). Selecciona el dato que contendrá tu pregunta o instrucción.
+
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 4: Probar el flujo y obtener la respuesta
+##menu-item END
+##Contenido BEGIN
+Paso 4: Probar el flujo y obtener la respuesta:
+
+Para finalizar y asegurarnos de que todo funciona, necesitamos enviar una solicitud de prueba.
+
+1.  **Ejecuta el escenario en Make:** Haz clic en el botón "Run once" en la esquina inferior izquierda de tu escenario en Make. El módulo de Webhook se quedará esperando datos.
+2.  **Envía datos al Webhook:** Puedes usar una herramienta como Postman o simplemente abrir una nueva pestaña en tu navegador y pegar la URL del Webhook que copiaste. Para enviar un dato simple, añade al final de la URL `?pregunta=Hola, ¿cómo estás?`.
+3.  **Verifica la ejecución:** Si todo ha ido bien, verás que los dos módulos en Make se han ejecutado con éxito. Al hacer clic en la "lupa" sobre el módulo de OpenAI, podrás inspeccionar la salida.
+4.  **Mapea la respuesta:** La respuesta de ChatGPT normalmente se encuentra dentro de la ruta `Choices` -> `Message` -> `Content`. Este es el texto que has generado. Puedes añadir otro módulo (como "Set a variable" o uno de Google Sheets) para almacenar o utilizar esta respuesta.
+
+¡Y listo! Has creado un sistema automatizado que recibe una instrucción, la procesa con ChatGPT y te devuelve un resultado. Ahora puedes conectar la entrada y la salida a cientos de aplicaciones compatibles con Make.
+
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Este tutorial ha sido validado siguiendo las directrices y la documentación oficial de Make y OpenAI.
+
+*   **Creación de Webhooks en Make:** El proceso de añadir un módulo de "Custom Webhook" para obtener una URL que actúe como disparador instantáneo está basado en la documentación oficial de ayuda de Make. Los webhooks son el método estándar para que aplicaciones externas inicien un escenario.
+*   **Conexión con la API de OpenAI:** La obtención y el uso de la clave API de OpenAI se ajustan a los procedimientos descritos en la documentación para desarrolladores de OpenAI. El módulo de OpenAI en Make utiliza esta clave para autenticar las solicitudes.
+*   **Configuración del Módulo de Chat en Make:** La selección de la acción "Create a Chat Completion" y el mapeo de los mensajes (rol y contenido) se corresponden con la implementación que Make hace de la API de completions de OpenAI, la cual espera que las entradas estén estructuradas como una conversación.
+
+##Contenido END

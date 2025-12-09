@@ -1,0 +1,171 @@
+
+
+##itemID:000
+##menu-item BEGIN
+TUTORIAL P&P:
+##menu-item END
+##Contenido BEGIN
+"Crea una App Educativa con Google AI Studio (Tutorial Paso a Paso + Prompt GRATIS)"
+
+https://youtu.be/DdWJBeOY0XU?si=PZUF-iGRgD4s22bD
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+VIDEO DE YOUTUBE:
+##menu-item END
+##Contenido BEGIN
+VIDEO DE YOUTUBE:
+(Referencia visual del tutorial)
+"Crea una App Educativa con Google AI Studio (Tutorial Paso a Paso + Prompt GRATIS)"
+https://youtu.be/DdWJBeOY0XU?si=PZUF-iGRgD4s22bD
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Introducción: Google AI Studio y la Metodología de Desarrollo
+##menu-item END
+##Contenido BEGIN
+Introducción: Google AI Studio y la Metodología de Desarrollo
+
+Este tutorial utiliza Google AI Studio, una interfaz web que permite probar instrucciones (prompts), modificar la configuración de los modelos y ajustar modelos personalizados sin escribir código directo. La aplicación que construiremos es un **Planificador de Cursos Educativos** que genera un itinerario formativo detallado, recursos y referencias.
+
+**Concepto Clave (Apps Script):** Aunque trabajaremos en la interfaz simple de Google AI Studio, la automatización y extensión de Google Workspace se basa en **Google Apps Script**, una plataforma de JavaScript basada en la nube que permite integrar y automatizar tareas en los productos de Google. Las aplicaciones construidas con IA a menudo dependen de un acceso a la API, similar a cómo Apps Script puede utilizar la API de Gemini.
+
+**Requisitos Previos:**
+*   **NAVEGADOR:** Se requiere una cuenta de Gmail o Google Workspace.
+*   **ACCESO A API:** Necesitas generar una **clave de API** en Google AI Studio para usar los modelos de Gemini.
+*   **Conocimientos:** Familiaridad básica con Apps Script, JavaScript o un lenguaje similar es útil, pero no estrictamente necesario ya que la plataforma de IA genera gran parte del código.
+
+**Objetivo Final:** Construir y desplegar una aplicación funcional de planificación de cursos en Google AI Studio, capaz de generar planes pedagógicos y contenido multimedia (imágenes) en menos de 7 minutos.
+
+**Criterio de Éxito:** Obtener la aplicación funcionando con la capacidad de generar un plan de curso completo (textos, referencias) y una imagen asociada, con un diseño personalizado (modo oscuro).
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Paso 1: Configurar el entorno en Google AI Studio
+##menu-item END
+##Contenido BEGIN
+Paso 1: Configurar el entorno en Google AI Studio
+
+**[TERMINAL] o [NAVEGADOR]: NAVEGADOR**
+
+**Explicación:** Accederemos al entorno de construcción (Build) de Google AI Studio, que ha cambiado su interfaz pero conserva las funcionalidades esenciales. Es crucial configurar primero la clave API.
+
+**Acción (Configuración de Clave API, conceptualmente similar a Apps Script):**
+
+1.  Genera tu clave de API en Google AI Studio.
+2.  Dentro del entorno de tu proyecto en Google AI Studio (el flujo de *Build*), asegúrate de que esta clave esté configurada para que la aplicación pueda llamar a los modelos de Gemini (similar a cómo Apps Script almacena claves usando `PropertiesService` y define *endpoints* para llamar a la API de Gemini).
+
+**Validación con Apps Script:** En un proyecto real de Apps Script, la clave de API se almacenaría en las **Propiedades de la secuencia de comandos** (`PropertiesService`), un servicio de utilidad que permite almacenar datos clave/valor fuera del código.
+
+**Prueba para ver si funcionó correctamente:** Debes poder seleccionar un modelo (como Gemini 1.0 Pro o 1.5 Pro) en la configuración de *Build* sin errores.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 2: Implementación del Prompt Principal (Planificador de Cursos)
+##menu-item END
+##Contenido BEGIN
+Paso 2: Implementación del Prompt Principal (Planificador de Cursos)
+
+**[TERMINAL] o [NAVEGADOR]: NAVEGADOR**
+
+**Explicación:** El corazón de la aplicación es el *prompt* (instrucción) que define el comportamiento del modelo, creando campos de entrada para el usuario (título, horas, objetivo) y la instrucción para generar un plan pedagógico detallado al pulsar un botón.
+
+**Acción (Carga y Adaptación del Prompt):**
+
+1.  Accede a la sección **Build** (Construir) en Google AI Studio.
+2.  Copia el prompt de la descripción (que actúa como el esqueleto de la aplicación) en la interfaz de construcción.
+3.  **Adapta los campos:** Configura los campos de entrada de la aplicación, tales como: "Título del curso", "Objetivo del curso", "Número de horas de la formación" y "Perfil de conocimiento".
+4.  **Ejecuta la función:** Presiona el botón (o el equivalente en el entorno de Build) para que la IA genere la primera versión de la aplicación y el plan de estudios.
+
+**Validación con Apps Script:** La llamada a la API de Gemini desde Apps Script se realiza utilizando el servicio `UrlFetchApp` para enviar una solicitud `POST` a un *endpoint* de Gemini, incluyendo el prompt y la configuración del modelo. El resultado suele ser procesado por Apps Script (por ejemplo, para extraer texto o JSON) antes de presentarlo al usuario.
+
+**Prueba para ver si funcionó correctamente:** La aplicación debe generar un plan formativo que incluya "Introducción", "Plan Pedagógico" y "Recursos documentados".
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 3: Iteración y Corrección de Errores (Función AutoFix)
+##menu-item END
+##Contenido BEGIN
+Paso 3: Iteración y Corrección de Errores (Función AutoFix)
+
+**[TERMINAL] o [NAVEGADOR]: NAVEGADOR**
+
+**Explicación:** Es común que en el primer intento la aplicación o el código tengan fallos o el modelo se "invente" enlaces. Google AI Studio incluye herramientas para manejar esto de manera sencilla.
+
+**Acción (Depuración del Flujo de Trabajo):**
+
+1.  **Revisión:** Analiza el resultado de la generación del plan. Verifica si los enlaces proporcionados son válidos y si el contenido cumple con la expectativa.
+2.  **Iteración:** Si se rompe o funciona mal, el entorno de Google AI Studio puede ofrecer un botón de **AutoFix** para que la IA intente corregir la aplicación por sí misma, lo cual requiere paciencia (puede tardar 10-15 minutos).
+3.  **Refinamiento del Prompt:** Si la aplicación está en un idioma incorrecto o los resultados no son precisos (por ejemplo, los enlaces están rotos), ajusta el prompt principal, indicando explícitamente el tono y el idioma deseado (ej: "Asegúrate de que toda la app está en español").
+
+**Validación con Apps Script:** En Apps Script, los errores se depuran utilizando el registro de ejecución (`Logger` o `console.log`) y verificando las rutas de archivo o sintaxis YAML (aunque esta validación se aplica a los *Agent Skills* de Claude, la necesidad de depuración es universal en el desarrollo). Apps Script también proporciona soporte para desarrolladores y solución de problemas de autenticación.
+
+**Prueba para ver si funcionó correctamente:** El plan generado debe ser completo, detallado y las referencias que compruebes deben ser oficiales (aunque el modelo a veces las inventa).
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 4: Integración de la Imagen (Capacidad Multimodal/Herramientas)
+##menu-item END
+##Contenido BEGIN
+Paso 4: Integración de la Imagen (Capacidad Multimodal/Herramientas)
+
+**[TERMINAL] o [NAVEGADOR]: NAVEGADOR**
+
+**Explicación:** Una funcionalidad avanzada de esta aplicación es la capacidad de generar una imagen relevante y coherente al plan desarrollado utilizando Nanobanana (una herramienta de Google). Esto ilustra la integración de modelos de IA con capacidades multimodales (como Gemini Pro Vision) o la llamada a funciones externas (tools).
+
+**Acción (Añadir la Característica de Imagen):**
+
+1.  **Extender el Prompt:** Modifica la instrucción principal para que añada una característica que genere una imagen relevante y coherente al plan desarrollado.
+2.  **Generación de la Interfaz:** El sistema de *Build* debe procesar esta nueva instrucción y añadir un botón o sección en la interfaz que diga "Generar imagen con IA".
+3.  **Ejecución:** Haz clic en el nuevo botón para que la aplicación invoque la herramienta de generación de imágenes basada en el contexto del plan pedagógico recién creado.
+
+**Validación con Apps Script:** La capacidad de un modelo de IA para usar herramientas o funciones se conoce como **Llamada a Funciones** (Function Calling). Apps Script permite declarar estas herramientas (funciones) para que el modelo Gemini sepa de su existencia y pueda solicitarlas. Esto se utiliza, por ejemplo, para integrar la generación de contenido multimedia o la interacción con otros servicios de Google Workspace (como adjuntar archivos o crear borradores en Gmail).
+
+**Prueba para ver si funcionó correctamente:** Después de generar el plan, debe aparecer un botón que, al ser presionado, genera una imagen que se incorpora al resultado final.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Paso 5: Diseño Final y Despliegue
+##menu-item END
+##Contenido BEGIN
+Paso 5: Diseño Final y Despliegue
+
+**[TERMINAL] o [NAVEGADOR]: NAVEGADOR**
+
+**Explicación:** El paso final es asegurar que la aplicación tenga el diseño deseado (modo oscuro) y que la funcionalidad (texto e imagen) siga funcionando correctamente después de los cambios de interfaz.
+
+**Acción (Ajuste de Diseño):**
+
+1.  **Ajuste de Diseño:** Envía una instrucción clara a la interfaz de *Build* solicitando el cambio de diseño (ej: "Cambia el diseño a modo oscuro y asegúrate de que toda la app está en español").
+2.  **Verificación Final:** Genera el plan del curso por última vez para verificar que, a pesar del cambio visual, la lógica del *prompt* y la generación de imágenes siguen siendo robustas y el idioma es el correcto.
+3.  **Uso:** La aplicación ya está lista para usarse, logrando el diseño, textos, imágenes, plan pedagógico, enlaces y reporte de calidad deseados en pocos minutos.
+
+**Validación con Apps Script:** Apps Script permite a los desarrolladores crear interfaces de usuario personalizadas (como barras laterales o diálogos) utilizando el servicio **HtmlService**. Aunque Google AI Studio maneja el diseño automáticamente, la personalización de la interfaz en el ecosistema de Google se basa en estos servicios para asegurar la integración y la experiencia de usuario dentro de Google Workspace (por ejemplo, menús personalizados en Google Sheets).
+
+**Prueba para ver si funcionó correctamente:** La aplicación debe mostrarse en modo oscuro y todos los títulos y contenidos deben estar en español.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+La creación de aplicaciones de IA que se integran con Google Workspace, como la aplicación educativa en Google AI Studio, está inherentemente ligada a las capacidades de automatización proporcionadas por Google Apps Script.
+
+| Punto Validado | Descripción de la Funcionalidad en Apps Script | Fuente Oficial de Google |
+| :--- | :--- | :--- |
+| **Plataforma de Desarrollo** | Google Apps Script es una plataforma de desarrollo rápido basada en JavaScript que se ejecuta en los servidores de Google y permite extender, integrar y automatizar tareas en productos de Google Workspace (Gmail, Sheets, Calendar, Drive, etc.). | [Apps Script Overview - Google Developers](https://developers.google.com/apps-script/overview) |
+| **Llamadas a la API de IA** | Para comunicarse con servicios externos como la API de Gemini (que alimenta Google AI Studio), Apps Script utiliza el servicio `UrlFetchApp` para realizar solicitudes HTTP (GET/POST). | [UrlFetchApp Reference - Google Developers](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app) |
+| **Configuración de la Clave API** | Las credenciales de acceso (como la clave de API de Gemini) deben almacenarse de forma segura fuera del código principal utilizando el `PropertiesService` (Propiedades de la secuencia de comandos), garantizando que las secuencias de comandos tengan la autorización requerida. | [Properties Service - Google Developers](https://developers.google.com/apps-script/reference/properties/properties-service) |
+| **Integración de Herramientas (Function Calling)** | La capacidad de la aplicación para "añadir una imagen" o realizar otras tareas complejas de automatización se basa en el concepto de *Llamada a Funciones* (Function Calling) o capacidad multimodal (como Gemini Pro Vision). Apps Script permite declarar estas herramientas para que el modelo de IA decida cuándo invocarlas. | [Llamada a la función de Gemini - Google Codelabs](https://developers.google.com/codelabs/apps-script-gemini-function-calling) |
+| **Desarrollo de la Interfaz (UI)** | Los elementos visuales y menús personalizados en Google Workspace se crean utilizando los servicios `SpreadsheetApp.getUi()` y `HtmlService` o `CardService`, permitiendo la personalización de diálogos y barras laterales. | [HtmlService - Google Developers](https://developers.google.com/apps-script/reference/html/html-service) |
+##Contenido END

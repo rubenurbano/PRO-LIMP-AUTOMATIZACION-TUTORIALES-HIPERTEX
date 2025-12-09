@@ -1,0 +1,104 @@
+📘 TUTORIAL: CONECTAR GOOGLE CLOUD CON MAKE (SHEETS/DRIVE)
+Este tutorial le guiará paso a paso para crear una conexión personalizada entre Google y Make. Esto evita desconexiones frecuentes y mejora la seguridad.
+T-1: PREPARACIÓN Y ENTRADA AL SISTEMA
+S-1: Ingresar a la consola de Google
+Encienda su computadora y abra su navegador (Chrome, Firefox, etc.).
+En la barra de direcciones superior, escriba:
+https://console.cloud.google.com
+y presione Enter.
+Inicie sesión con su cuenta de Gmail si se lo pide.
+Nota: Si aparece una pantalla de "Términos y condiciones", marque la casilla de aceptación y haga clic en Aceptar y continuar.
+T-2: CREACIÓN DEL ESPACIO DE TRABAJO (PROYECTO)
+S-2: Iniciar un proyecto nuevo
+Mire la parte superior izquierda, junto al logo de "Google Cloud".
+Haga clic en el desplegable que hay allí (puede decir "My First Project" o "Seleccionar proyecto").
+En la ventana que se abre, haga clic en el botón azul PROYECTO NUEVO (arriba a la derecha de esa ventanita).
+S-3: Nombrar el proyecto
+En "Nombre del proyecto", borre lo que haya y escriba: Conexion Make.
+No modifique nada más. Haga clic en el botón azul CREAR.
+Espere unos segundos hasta que aparezca una notificación de éxito arriba a la derecha.
+S-4: Seleccionar el proyecto creado
+Vuelva a hacer clic en el desplegable superior izquierdo (al lado del logo Google Cloud).
+En la lista, haga clic sobre el nombre Conexion Make.
+⚠️ Importante: Asegúrese de que en la barra azul superior ahora diga "Conexion Make".
+T-3: ACTIVAR LAS HERRAMIENTAS (APIs)
+S-5: Ir a la Biblioteca
+Haga clic en el botón de Menú (tres líneas horizontales) arriba a la izquierda.
+Coloque el mouse sobre API y servicios y seleccione Biblioteca.
+S-6: Activar Google Sheets
+En el buscador central escriba: Google Sheets. Presione Enter.
+Haga clic en el resultado Google Sheets API.
+Haga clic en el botón azul HABILITAR.
+Espere a que cargue la página de gestión.
+S-7: Activar Google Drive
+Vuelva al menú principal (tres líneas) > API y servicios > Biblioteca.
+En el buscador escriba: Google Drive. Presione Enter.
+Haga clic en Google Drive API.
+Haga clic en el botón azul HABILITAR.
+T-4: CONFIGURAR EL PERMISO (PANTALLA DE CONSENTIMIENTO)
+S-8: Configuración inicial
+Vaya al menú principal (tres líneas) > API y servicios.
+Haga clic en Pantalla de consentimiento de OAuth (menú lateral izquierdo).
+S-9: Tipo de usuario
+Seleccione la opción Externo.
+Haga clic en CREAR.
+S-10: Información de la aplicación
+Nombre de la aplicación: Escriba Mi Make.
+Correo electrónico de asistencia: Seleccione su propio correo.
+Baje hasta el final a "Información de contacto del desarrollador" y escriba su correo nuevamente.
+Haga clic en GUARDAR Y CONTINUAR.
+S-11: Permisos y Usuarios (Saltar pasos)
+En la pantalla "Permisos", baje y haga clic en GUARDAR Y CONTINUAR.
+En la pantalla "Usuarios de prueba", busque el botón + ADD USERS (Agregar usuarios).
+Escriba su propio correo electrónico (el mismo que usa para entrar a Google) y haga clic en Añadir.
+Nota: Esto es vital para que le permita conectar.
+Haga clic en GUARDAR Y CONTINUAR.
+En el resumen final, baje y haga clic en VOLVER AL PANEL.
+T-5: PUBLICAR LA APLICACIÓN
+Este paso evita que la conexión caduque cada 7 días.
+S-12: Hacer pública la App
+En la pantalla "Pantalla de consentimiento", debajo del título "Estado de la publicación", verá que dice "En prueba".
+Haga clic en el botón PUBLICAR LA APLICACIÓN.
+En la ventana de confirmación, haga clic en CONFIRMAR.
+T-6: CREAR LAS LLAVES (CREDENCIALES)
+S-13: Ir a Credenciales
+En el menú lateral izquierdo, haga clic en Credenciales.
+S-14: Generar la llave
+Arriba en el centro, haga clic en + CREAR CREDENCIALES.
+Seleccione ID de cliente de OAuth.
+S-15: Configurar la llave (Paso Crítico)
+Tipo de aplicación: Seleccione Aplicación web.
+Nombre: Déjelo como está o ponga "Make Web".
+Baje hasta la sección URI de redireccionamiento autorizados.
+Haga clic en el botón + AGREGAR URI.
+Copie y pegue EXACTAMENTE la siguiente dirección (sin espacios al final):
+https://www.make.com/oauth/cb/google-custom
+(Alternativa: si al final del proceso le da error, vuelva aquí y agregue también: https://www.integromat.com/oauth/cb/google-restricted)
+Haga clic en el botón azul CREAR.
+S-16: Guardar sus llaves
+Aparecerá una ventana con sus códigos.
+Copie el "Tu ID de cliente" y péguelo en un Bloc de Notas.
+Copie el "Tu secreto de cliente" y péguelo en el Bloc de Notas.
+Haga clic en ACEPTAR.
+T-7: CONEXIÓN FINAL EN MAKE.COM
+S-17: Configurar el módulo en Make
+Vaya a su escenario en Make.com.
+Agregue o abra un módulo de Google Sheets (o Drive).
+Haga clic en Create a connection (Crear conexión) o Add.
+⚠️ Paso Clave: Busque y haga clic en Show advanced settings (Mostrar configuración avanzada).
+S-18: Pegar las credenciales
+Client ID: Pegue el primer código largo que guardó en el bloc de notas.
+Client Secret: Pegue el segundo código (la "contraseña").
+Haga clic en el botón Sign in with Google.
+Se abrirá una ventana de Google. Si aparece una advertencia diciendo "Google no ha verificado esta aplicación", no se asuste (es normal porque la app es suya):
+Haga clic en Configuración avanzada (o Advanced).
+Haga clic en Ir a Mi Make (no seguro).
+Marque todas las casillas de permiso y haga clic en Continuar o Permitir.
+📖 GLOSARIO SENCILLO
+API (Camarero): El intermediario que lleva sus pedidos desde Make hasta la cocina de Google y trae la respuesta.
+Cloud (La Nube): Computadoras gigantes de Google donde viven sus datos, accesibles por internet.
+Client ID (DNI): Identificación pública de su aplicación. Dice "quién es usted".
+Client Secret (Contraseña): La llave privada que confirma que usted es realmente quien dice ser. Nunca la comparta.
+OAuth: Sistema de pases de seguridad. Evita que tenga que dar su contraseña de Gmail directamente a Make.
+URI de redireccionamiento: La dirección de "retorno". Le dice a Google: "Cuando termines de loguear al usuario, envíalo de vuelta a esta dirección de Make".
+Scopes (Permisos): Define qué puede hacer la app (ej: "solo leer hojas de cálculo" o "borrar archivos")

@@ -1,0 +1,208 @@
+##itemID:000
+##menu-item BEGIN
+Automatiza la creación de tus vídeos-reels con JSON2Video y Make
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Automatiza la creación de tus vídeos-reels con JSON2Video y Make:
+Web Original:
+Automatiza la creación de tus vídeos-reels con JSON2Video y Make:
+https://youtu.be/xroqXwCotFk?si=F7nSc3dKOCItNWLY
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Qué es la automatización de videos
+##menu-item END
+##Contenido BEGIN
+Qué es la automatización de videos:
+El objetivo de este proceso es crear videos de manera automática utilizando información que ya tienes guardada en una lista, como una hoja de cálculo de Google.[1]
+
+Esto es muy útil si necesitas hacer videos que siempre siguen el mismo modelo o estilo, como por ejemplo videos de citas famosas o promociones. En lugar de abrir tu programa de edición todos los días para cambiar el texto y la foto manualmente, la automatización hace este trabajo repetitivo por ti.
+
+La lógica es muy sencilla: primero creas una lista con la información (autor, cita, imagen). Luego diseñas un modelo de video dejando espacios para esa información. Finalmente, una herramienta automática toma cada línea de tu lista, la coloca en el modelo y genera un video nuevo cada vez. Este método también sirve para crear imágenes o documentos PDF.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Herramientas necesarias y preparación de datos
+##menu-item END
+##Contenido BEGIN
+Herramientas necesarias y preparación de datos:
+Para lograr esto necesitarás cuatro herramientas clave:
+
+JSON2Video: Para diseñar la plantilla del video.
+
+Make (Make.com): Para conectar tu lista de datos con la plantilla y dirigir todo el proceso.
+
+Google Sheets: Para guardar tu lista de datos (autores y citas).
+
+Google Drive: Para guardar los archivos multimedia (música e imágenes).
+
+Organización de los datos:
+Debes crear una hoja de cálculo en Google Sheets con columnas para el Autor, la Cita y una columna de control llamada Estatus. La columna Estatus sirve para saber si una fila ya se usó (Terminado) o si falta por procesar (A crear).
+
+En Google Drive, crea una carpeta principal y dentro de ella subcarpetas para las imágenes de los personajes y para la música. Es muy importante que el nombre del archivo de la imagen (por ejemplo, balou.png) sea igual al nombre que escribiste en la hoja de cálculo (Balou).
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Creación del modelo de video en JSON2Video
+##menu-item END
+##Contenido BEGIN
+Creación del modelo de video en JSON2Video:
+Primero, crea una cuenta en json2video.com e inicia una nueva plantilla de película (movie template). Define la resolución adecuada para redes sociales (como Instagram St) y fija la duración de la escena, por ejemplo, 5 segundos.
+
+El diseño se basa en Escenas y Elementos de la Película.[2] Los Elementos de la Película son fijos para todo el video, como la música de fondo.
+
+Para diseñar la base visual:
+
+Fondo: Agrega un elemento de imagen, renómbralo como fondo y sube una imagen que cubra toda la pantalla.
+
+Personaje: Agrega otra imagen, renómbrala como personaje y sube una foto de ejemplo. Ajusta su posición usando las coordenadas X e Y, y opcionalmente añade un efecto de zoom para darle movimiento.
+
+Cita: Agrega un elemento de texto con una frase de ejemplo. Ajusta su posición (por ejemplo, en la parte superior) y el tamaño de la letra. La duración del texto debe coincidir con la de la escena.
+
+Música: Agrega un elemento de audio en la sección de Elementos de la Película y sube un archivo de música.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Creación de variables para hacer el video dinámico
+##menu-item END
+##Contenido BEGIN
+Creación de variables para hacer el video dinámico:
+Las variables son espacios vacíos que el sistema llenará después con tu información real. En la plantilla de JSON2Video, debes crear tres variables: image personaje, música y cita.
+
+Ahora debes sustituir el contenido fijo que pusiste antes por estas variables:
+
+En el elemento Personaje, borra la URL de la imagen de ejemplo y escribe [[image personaje]].
+
+En el elemento Texto, borra la frase de ejemplo y escribe [[cita]].
+
+En el elemento Audio, borra la URL del archivo y escribe [[música]].
+
+Al hacer esto, los elementos de ejemplo desaparecerán de la vista previa, lo cual es normal porque el modelo ahora está esperando recibir la información desde Make.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Configuración en Make: Obtener datos de Google Sheets
+##menu-item END
+##Contenido BEGIN
+Configuración en Make: Obtener datos de Google Sheets:
+Crea un nuevo escenario en Make.[3] El primer paso es obtener la información de la cita que quieres convertir en video.
+
+Agrega el módulo Google Sheets: Search Rows (Buscar filas). Conecta tu cuenta, selecciona tu archivo y la hoja correspondiente. Configura un filtro para que solo busque las filas donde la columna Estatus sea igual a A crear.
+
+Limita la búsqueda a solo 1 línea para procesar un video a la vez. Ejecuta una prueba (run once) para confirmar que el sistema encuentra correctamente la primera fila de tu lista.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Configuración en Make: Obtener archivos de Google Drive
+##menu-item END
+##Contenido BEGIN
+Configuración en Make: Obtener archivos de Google Drive:
+Ahora necesitas obtener los enlaces directos de la imagen y la música guardadas en Drive.
+
+Para la imagen del personaje:
+Usa el módulo Google Drive: Search Files. Busca en la carpeta de personajes usando el nombre que obtuviste del paso anterior más la extensión del archivo (ejemplo: balou.PNG).
+Después, usa el módulo Google Drive: Get Share Link (Obtener enlace compartido) usando el ID del archivo encontrado. Configura el rol como Lector (Reader) y el tipo como cualquiera (anyone) para obtener un enlace público. Renombra este módulo a Enlace imagen personaje.
+
+Para la música:
+Repite los mismos pasos: busca el archivo en la carpeta de música y luego usa el módulo Get Share Link para obtener su enlace público. Renombra este módulo a Enlace música.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Configuración en Make: Generar el video y actualizar la lista
+##menu-item END
+##Contenido BEGIN
+Configuración en Make: Generar el video y actualizar la lista:
+Agrega el módulo JSON2Video: Create Movie. Elige la opción de crear un filme a partir de tu template y conéctate con tu Clave API.
+
+Selecciona la plantilla que diseñaste y conecta las variables con los datos que has recolectado en los pasos anteriores:
+
+En la variable image personaje, pon el enlace público (Web Content link) de la imagen.
+
+En la variable música, pon el enlace público de la música.
+
+En la variable cita, pon el texto de la cita que vino de Google Sheets.
+
+Finalmente, agrega un último módulo Google Sheets: Update a Row. Usa el número de fila del primer paso y cambia la columna Estatus a Terminado, para que esa cita no se vuelva a procesar.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Pruebas y programación automática
+##menu-item END
+##Contenido BEGIN
+Pruebas y programación automática:
+Ejecuta el escenario manualmente (run once) para verificar que todo funciona sin errores. Revisa tu hoja de cálculo para ver si el estatus cambió a Terminado y entra a JSON2Video (en render logs) para ver el resultado del video.
+
+Si algo no se ve bien, como una imagen muy grande, ajusta la plantilla en JSON2Video y vuelve a probar. Repite esto hasta que el resultado sea perfecto.
+
+Una vez listo, activa el escenario en Make y configura la programación (scheduling) para que se ejecute automáticamente, por ejemplo, todos los días a una hora específica.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Publicación automática del video terminado
+##menu-item END
+##Contenido BEGIN
+Publicación automática del video terminado:
+Para guardar o publicar el video automáticamente, necesitas usar Webhooks, que funcionan como un buzón de mensajes.
+
+Crea un segundo escenario en Make que empiece con un módulo Webhook: Custom Webhook. Copia la URL que te da. Ve al escenario principal, abre la configuración avanzada del módulo JSON2Video y pega esa URL en el campo Webhook URL.
+
+Cuando ejecutes el proceso, JSON2Video avisará a este segundo escenario cuando el video esté listo. En este segundo escenario, usa los siguientes módulos:
+
+HTTP: Get a file para descargar el video usando la URL que envía el webhook.
+
+Google Drive: Upload a file para guardar el video en una carpeta de exportación.
+
+Redes Sociales: Usa módulos como Instagram for business o Facebook para subir el video automáticamente usando el archivo descargado o su enlace.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+Resumen de puntos técnicos validados:
+
+Existe una integración oficial entre Make (antes Integromat) y JSON2Video que permite crear películas a partir de plantillas mediante una API Key.
+
+La documentación de JSON2Video confirma el uso de Webhooks para recibir notificaciones asíncronas cuando un renderizado ha finalizado, enviando la URL de descarga del video resultante.
+
+El módulo "Get Share Link" de Google Drive en Make es capaz de generar un "Web Content Link" (enlace de descarga directa), el cual es necesario para que servicios externos como JSON2Video puedan acceder a los archivos multimedia (imágenes y audio) sin necesidad de autenticación compleja por parte del servicio receptor.
+
+La estructura de datos JSON para crear películas en JSON2Video se basa en "Scenes" (escenas) y "Elements" (elementos), tal como se describe en el tutorial.
+
+Enlaces directos a documentación oficial y soporte:
+
+Documentación oficial de la API de JSON2Video (incluye sección de Webhooks y Make): https://json2video.com/documentation
+
+Integración de JSON2Video en Make (lista de módulos disponibles): https://www.make.com/en/integrations/json2video
+
+Ayuda de Google Drive en Make (sobre enlaces compartidos): https://www.make.com/en/help/apps/file-and-document-management/google-drive
+
+
+Sources
+help
+make.com
+youtube.com
+json2video.com
+make.com
+make.com
+make.com
+make.com
+make.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+JSON2Video webhooks automation tutorial
+JSON2Video API documentation Make integration
+Make.com Google Drive Get Share Link Web Content Link
+##Contenido END

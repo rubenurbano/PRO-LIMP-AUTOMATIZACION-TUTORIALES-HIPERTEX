@@ -1,0 +1,58 @@
+# **Outline del Video: Cómo Insertar Imágenes en Videos de NotebookLM**
+
+**Nombre del video:** **Como insertar imágenes en vídeos de NotebookLM**
+**URL del video:**  https://youtu.be/1eU6A_JPAJU?si=XpjQurzZg1S8nu2g
+
+***
+
+## **I. Introducción y el Objetivo Principal (El Truco)**
+
+El video muestra un **truco** que no es muy conocido para que puedas crear videos con NotebookLM, asegurándote de que el programa utilice las imágenes específicas que tú quieres.
+
+*   **¿Para qué sirve?** El ejemplo que se usa es la creación de un video para una "situación de aprendizaje" (una tarea escolar) donde los alumnos tienen que hacer un plan de negocios y un *elevator pitch* para la asignatura de inglés.
+*   **La meta:** Lograr que NotebookLM introduzca las imágenes que nosotros queremos que el público vea.
+
+## **II. Preparación de los Materiales (Las Fuentes del Notebook)**
+
+Para que NotebookLM pueda generar el video con tus imágenes, necesitas crear **dos** documentos o fuentes de información diferentes:
+
+### A. El Documento de Contenido (El Guion)
+
+Este es el texto principal que contendrá la información que quieres que el video explique.
+
+1.  **Contenido del Guion:** Debe recoger toda la información y los contenidos que se van a trabajar.
+2.  **Ejemplo del Video:** Se utilizó un artículo, creado con Gemini (una IA), que detalla los componentes de un mapa de negocios, como el problema, la solución, la identidad de marca, la estrategia de promoción y el *elevator pitch*.
+3.  **Función:** Este documento es el "argumento" con el que NotebookLM creará el video.
+
+### B. El Documento Exclusivo de Imágenes  PDF (La Fuente Secreta)
+
+Aquí está el truco: se crea un documento PDF aparte que **solamente** contiene imágenes.
+
+1.  **Origen de las Imágenes:** Las imágenes se pueden generar con herramientas de inteligencia artificial, como el "nano banana de inteligencia artificial del mismo Gemini".
+2.  **Ilustración:** Las imágenes deben ilustrar los puntos del guion (por ejemplo, una imagen para cuando se hable del *roadmap* o una imagen para escribir el eslogan).
+3.  **El Enlace Clave:** Se recomienda poner el **nombrecito de la palabra clave** (keyword) debajo de cada imagen para que NotebookLM relacione la imagen con ese concepto específico del texto principal.
+
+## **III. Creación y Configuración del Video en NotebookLM**
+
+Una vez que tienes listos los dos documentos (contenido e imágenes), el proceso en NotebookLM es el siguiente:
+
+1.  **Crear un Nuevo Notebook:** Comienzas creando un espacio de trabajo nuevo.
+2.  **Insertar las Fuentes:** Debes añadir **ambos documentos** como fuentes dentro del Notebook.
+3.  **Generar el Resumen de Video:** Utilizas la opción de NotebookLM para crear un "resumen de vídeo".
+4.  **Instrucciones Específicas (Personalización):** Al darle a generar, debes configurar algunas opciones:
+    *   **Idioma:** Especificas el idioma del video (en el ejemplo, se selecciona inglés, ya que es para esa asignatura).
+    *   **Público Destinatario:** Indicas quién verá el video (en el ejemplo: alumnos de cuarto de ESO con nivel B2).
+    *   **La Instrucción Crucial:** Le pides a NotebookLM que **"utiliza las imágenes del documento imágenes para ilustrar el vídeo"**.
+
+## **IV. El Resultado (La Prueba de que Funciona)**
+
+Después de unos minutos, el video estará listo.
+
+*   **Contenido:** El video se crea con los contenidos que le introdujiste en el primer documento.
+*   **Imágenes Insertadas:** NotebookLM inserta las imágenes justo en las secciones del video donde se mencionan las palabras clave que habías introducido previamente.
+*   **Verificación del Truco:** Cuando el video habla de conceptos como el "slogan," automáticamente utiliza la imagen que habías colocado en el documento de imágenes para ese término.
+*   **Conclusión:** Este método permite "engañar un poquito al sistema" para que introduzca las imágenes que tú deseas ofrecer a los espectadores.
+
+***
+
+**En resumen, el truco funciona así:** Imagina que NotebookLM es un chef que hace una tarta (el video). Le das la receta (el documento de contenido) y un cajón extra con decoraciones específicas y etiquetas (el documento de imágenes con palabras clave). Cuando la receta pide una "decoración de estrella," el chef busca en tu cajón etiquetado "estrella" y usa esa decoración exacta, asegurándose de que la tarta se vea exactamente como tú querías.

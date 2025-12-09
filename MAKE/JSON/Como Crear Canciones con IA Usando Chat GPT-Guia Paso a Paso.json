@@ -1,0 +1,72 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Como Crear Canciones con IA Usando Chat GPT-Guia Paso a Paso\nWEB ORIGINAL:",
+      "contenido": "Como Crear Canciones con IA Usando Chat GPT-Guia Paso a Paso:\nWeb Original:\nComo Crear Canciones con IA Usando Chat GPT-Guia Paso a Paso:\nhttps://youtu.be/yV_WXsKOmWs?si=hJVCDxlCh81yQ7bM"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción: Herramientas Necesarias",
+      "contenido": "Introducción: Herramientas Necesarias:\nPara crear canciones utilizando Inteligencia Artificial, utilizaremos dos herramientas principales:\n\nChat GPT: Esta herramienta se usará para escribir la letra y componer la estructura de la canción.\n\nUn Generador de Música con IA: Una herramienta prácticamente gratuita que se encargará de ponerle música a la letra creada.[1]"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Parte 1: Formas de usar Chat GPT",
+      "contenido": "Parte 1: Formas de usar Chat GPT:\nExisten tres maneras de utilizar Chat GPT para ayudarte en el proceso creativo:\n\nA. Opción Rápida:\nSolicitas que Chat GPT te dé la letra directamente. Es la opción recomendada si necesitas resultados rápidos.[2]\n\nB. Opción de Aprendizaje:\nLe pides a Chat GPT que te enseñe a escribir una letra desde cero. Ideal si buscas un toque más \"humano\". La IA te guiará paso a paso, ayudándote a definir la temática (de qué trata) y la estructura (verso, precoro, etc.).[3]\n\nC. Opción Completa:\nEs una mezcla de las dos anteriores. Le pides todo a Chat GPT: la letra, el estilo de música y el estilo instrumental. De esta forma, obtendrás instrucciones o \"prompts\" detallados para que la canción tenga la mejor calidad posible."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Parte 2: Generar la Letra (Pasos 1 y 2)",
+      "contenido": "Parte 2: Generar la Letra (Pasos 1 y 2):\n\nElige tu Modelo:\nDentro de Chat GPT, selecciona la versión 4 o la versión nueva (el modelo 3.5 ya fue retirado). Se recomienda el modelo marcado como \"ideal para la mayoría de tareas\".\n\nPide la Canción:\nEscribe tu solicitud. Por ejemplo: \"escribe una canción de rock pesado\". Debes incluir una temática específica; en este caso, usamos el ejemplo de un peleador mediocre que se convierte en campeón mundial."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Parte 2: Resultado y Estilo (Pasos 3 y 4)",
+      "contenido": "Parte 2: Resultado y Estilo (Pasos 3 y 4):\n3. Obtén el Resultado:\nUna vez que Chat GPT genere la letra completa, cópiala.\n\nMejora Opcional del Estilo:\nPara lograr un mejor resultado musical, pídele a Chat GPT que defina el mejor estilo para esa letra. Escribe: \"escribe el mejor estilo musical para la canción\". La IA te dará una descripción detallada (ejemplo: \"rock pesado con tintes épicos y emocionales\") que usarás más adelante en el generador de música."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Parte 3: Configurar el Generador de Música",
+      "contenido": "Parte 3: Configurar el Generador de Música:\n\nAccede a la Herramienta:\nEntra a la página o aplicación del generador de música con IA.[4][5][6]\n\nActiva el Modo Personalizado:\nHaz clic en la opción \"crear ya\" o busca la opción de modo personalizado para tener control sobre los detalles de la canción."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Parte 3: Ingresar los Datos de la Canción",
+      "contenido": "Parte 3: Ingresar los Datos de la Canción:\nNecesitas rellenar tres campos principales en el generador:\n\na. Título:\nRevisa el título que Chat GPT le puso a tu canción (ejemplo: \"De cenizas al cinturón\") y escríbelo en el campo correspondiente.\n\nb. Estilo de Música:\nIngresa el género deseado (ejemplo: \"rock pesado y con mucha energía\"). Si realizaste el paso opcional de mejora de estilo en Chat GPT, copia y pega esa descripción detallada aquí para un mejor resultado.\n\nc. Letra:\nPega la letra que copiaste anteriormente. Verifica que no supere el límite de caracteres permitido (aproximadamente 3000)."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Parte 3 y 4: Generación y Tiempos de Espera",
+      "contenido": "Parte 3 y 4: Generación y Tiempos de Espera:\nUna vez completados los datos (título, estilo y letra), pulsa el botón \"generar música\".\n\nEl proceso de creación tarda entre 3 a 5 minutos aproximadamente. Verás una animación de tres puntos indicando que la canción se está creando."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Parte 4: Solución de Problemas Comunes",
+      "contenido": "Parte 4: Solución de Problemas Comunes:\nSi la herramienta tiene mucha demanda, es posible que recibas un aviso de que has llegado al límite de solicitudes.[7]\n\nEn este caso tienes dos opciones:\n\nEsperar unas 3 o 4 horas hasta que el sitio se libere.\n\nProbar utilizando otra cuenta o un navegador diferente."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Parte 4: Selección de la Mejor Versión",
+      "contenido": "Parte 4: Selección de la Mejor Versión:\nLa herramienta generará dos versiones de tu canción. Un truco a tener en cuenta es que la primera versión (la que aparece por defecto) suele ser la que ofrece mejores resultados.[2]"
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Parte 5: Guardar o Descargar la Canción",
+      "contenido": "Parte 5: Guardar o Descargar la Canción:\nPara descargar el archivo directamente, la plataforma suele requerir un paquete Premium. Sin embargo, existe un método alternativo gratuito:[4][8]\n\nUsa un programa de grabación de pantalla (como OBS o CapCut).\n\nReproduce la canción generada y graba la pantalla mientras suena.\n\nLleva la grabación a un editor de video, recórtala y expórtala como archivo MP3.\n\nLas canciones obtenidas así generalmente tienen uso comercial libre.\n\nAl finalizar, tendrás el reproductor listo con tu canción creada siguiendo el estilo y letra definidos."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\nTras buscar en documentación oficial y especificaciones técnicas de las herramientas mencionadas (OpenAI y Suno AI), se validan y aclaran los siguientes puntos:\n\nHerramienta de Música (Suno AI):\n\nLa descripción del \"Modo Personalizado\" (Custom Mode), los campos de entrada (Letra, Estilo, Título), la generación de 2 versiones por solicitud y el límite de caracteres (~3000) coinciden técnicamente con las características de Suno AI.\n\nFuente: Documentación de Suno AI y guías de \"Custom Mode\".\n\nModelos de Chat GPT:\n\nOpenAI ha actualizado sus niveles gratuitos.[7][9][10] El modelo GPT-3.5 ha sido reemplazado en gran medida por GPT-4o y GPT-4o mini para usuarios gratuitos, validando la recomendación de usar una \"versión nueva\" o superior a la 3.5.\n\nFuente: OpenAI Help Center - \"ChatGPT Free Tier FAQ\".\n\nDerechos de Uso Comercial (Aclaración Importante):\n\nEl tutorial sugiere que grabar la pantalla otorga uso comercial libre. Sin embargo, los Términos de Servicio oficiales de Suno AI establecen una distinción estricta:\n\nPlan Gratuito: El usuario no es dueño del contenido y el uso es estrictamente no comercial, independientemente de cómo se descargue o grabe.\n\nPlan de Pago (Pro/Premier): Otorga propiedad y derechos comerciales al usuario.[2][4][6]\n\nFuente: Suno AI Terms of Service & FAQ - \"Commercial Use\".\n\n\nSources\nhelp\nbeatoven.ai\nyoutube.com\njackrighteous.com\nlilys.ai\nsuno.wiki\nyoutube.com\nopenai.com\nzilliz.com\nbyteplus.com\nyoutube.com\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\nSuno AI commercial use free vs paid\nOpenAI ChatGPT models availability free tier\nSuno AI music generator features custom mode lyrics character limit\nscreen recording for audio copyright fair use"
+    },
+
+    {
+      "itemID": "012",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Como%20Crear%20Canciones%20con%20IA%20Usando%20Chat%20GPT-Guia%20Paso%20a%20Paso.jpeg]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+
+  ]
+}

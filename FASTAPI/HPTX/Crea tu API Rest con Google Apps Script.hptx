@@ -1,0 +1,357 @@
+##Contenido BEGIN
+"Crea tu API Rest con Google Apps Script"
+
+https://youtu.be/KG2-nLarTUI?si=7EW6sptp09jLkHZE
+
+y en el repositorio:
+
+https://github.com/IngFabioCastellanos/api-rest-google-apps-script
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+VIDEO DE YOUTUBE:
+##menu-item END
+##Contenido BEGIN
+VIDEO DE YOUTUBE:
+(Referencia visual del tutorial)
+Crea tu Api Rest con Google Apps Script
+https://youtu.be/KG2-nLarTUI?si=7EW6sptp09jLkHZE
+
+y el enlace del repositorio para clonar.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+**Introducción:**
+##menu-item END
+##Contenido BEGIN
+**Introducción:**
+
+Google Apps Script (GAS) es una plataforma de desarrollo rápido basada en JavaScript que te permite automatizar y extender los productos de Google Workspace, como Hojas de cálculo (Google Sheets). Aunque el video fuente menciona que quizás no cumpla con todos los criterios estrictos de una API REST, el objetivo es crear un endpoint accesible desde fuera, como una aplicación móvil o web externa, que pueda ejecutar acciones (CRUD: Crear, Leer, Actualizar, Eliminar) en tu base de datos (Google Sheets).
+
+**Apps Script** se ejecuta en los servidores de Google y no requiere ninguna instalación local. Para exponer las funcionalidades a peticiones HTTP externas, utilizaremos las funciones especiales `doGet(e)` y `doPost(e)` que se activan al publicar el script como una Aplicación Web (Web App).
+##Contenido END
+##itemID:003
+##menu-item BEGIN
+PASO 1 - Configuración de la "Base de Datos" (Google Sheets)
+##menu-item END
+##Contenido BEGIN
+PASO 1 - Configuración de la "Base de Datos" (Google Sheets)
+
+**[NAVEGADOR]:**
+
+**Explicación:** Google Sheets actuará como el almacenamiento de datos, permitiéndote gestionar la información de manera fácil y visual. Para que Apps Script pueda leer y escribir datos correctamente, necesitamos una estructura de encabezados específica.
+
+**Acción:**
+
+1.  Abre tu navegador y crea una **nueva Hoja de cálculo de Google**.
+2.  Renombra la primera pestaña como **'Tutoriales'**.
+3.  En la primera fila (la fila de encabezados), introduce exactamente las siguientes columnas: **RecordID | Titulo | URL | Etiqueta | Sinopsis**.
+
+**Prueba para ver si funcionó correctamente:**
+La hoja debe tener la pestaña 'Tutoriales' y las cinco columnas listadas en la primera fila.
+
+*Validación con Fuentes Técnicas Oficiales:*
+Apps Script está diseñado para integrarse y automatizar tareas en productos de Google, incluyendo Google Sheets. El servicio `SpreadsheetApp` es la clase que permite a las secuencias de comandos interactuar con Hojas de cálculo.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+PASO 2 - Acceso a Apps Script y Funciones de Utilidad
+##menu-item END
+##Contenido BEGIN
+PASO 2 - Acceso a Apps Script y Funciones de Utilidad
+**[NAVEGADOR]:**
+
+**Explicación:** Accederemos al editor de Apps Script para escribir el código que transformará nuestra hoja de cálculo en una API. También definiremos funciones de utilidad esenciales para conectarnos a la hoja, mapear los encabezados y, crucialmente, devolver las respuestas en formato JSON.
+
+**Acción:**
+
+1.  En tu Hoja de cálculo de Google, ve a **Extensiones > Apps Script** para abrir el editor de código.
+2.  En el archivo `Code.gs`, borra el contenido existente y copia las siguientes funciones de variables y utilidades.
+
+```javascript
+// Variables y utilidades básicas (Adaptado de la arquitectura SheetREST)
+var SHEET_NAME = (typeof SHEET_NAME === 'undefined') ? 'Tutoriales' : SHEET_NAME;
+
+// 1. Obtiene la hoja de cálculo por nombre (sh)
+function sh(){ return SpreadsheetApp.getActive().getSheetByName(SHEET_NAME); }
+
+// 2. Obtiene los encabezados de la hoja (headers)
+function headers(){ return sh().getRange(1,1,1,sh().getLastColumn()).getValues(); }
+
+// 3. Mapea los encabezados para acceder a los datos por nombre de columna (idxMap)
+function idxMap(){ 
+  const h=headers(), m={}; 
+  h.forEach((k,i)=>m[k]=i); 
+  return m; 
+}
+
+// 4. Lee todas las filas de la hoja, omitiendo la fila de encabezados (allRows)
+function allRows(){
+  const s=sh(), 
+        vals=s.getRange(2,1,Math.max(s.getLastRow()-1,0), s.getLastColumn()).getValues();
+  const m=idxMap();
+
+  return vals.filter(r=>r.join('')!=='').map(r=>({
+    id: r[m['RecordID']], title: r[m['Titulo']], url: r[m['URL']],
+    tag: r[m['Etiqueta']], synopsis: r[m['Sinopsis']]
+  }));
+}
+
+// 5. Función de salida JSON (out)
+function out(obj){
+  // Usa ContentService para devolver datos como JSON
+  return ContentService.createTextOutput(JSON.stringify(obj))
+  .setMimeType(ContentService.MimeType.JSON);
+}
+```
+
+3.  Guarda el proyecto (haciendo clic en el icono del disco o `Ctrl + S`).
+
+**Prueba para ver si funcionó correctamente:**
+Aunque estas son funciones de apoyo, la prueba funcional se realizará al final con la API.
+
+*Validación con Fuentes Técnicas Oficiales:*
+**ContentService** es un servicio de utilidad de Apps Script que se utiliza específicamente para **generar respuestas HTTP** y devolver contenido de texto (como JSON) al cliente. El método `createTextOutput()` junto con `.setMimeType(ContentService.MimeType.JSON)` garantiza que la respuesta sea un JSON estándar.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+PASO 3 - Implementación del Backend: La Función doGet (Método GET)
+##menu-item END
+##Contenido BEGIN
+PASO 3 - Implementación del Backend: La Función doGet (Método GET)
+
+**[NAVEGADOR]:**
+
+**Explicación:** La función especial `doGet(e)` es el punto de entrada que Apps Script ejecuta cuando la Web App recibe una solicitud HTTP de tipo `GET`. Esta función se utiliza típicamente para las operaciones de lectura (consultar datos). Analizaremos los parámetros de la URL (`e.parameter`) para determinar la acción solicitada (listar todos o buscar por ID).
+
+**Acción:**
+
+1.  Añade la siguiente función al final del archivo `Code.gs` (debajo de las funciones de utilidad):
+
+```javascript
+// API REST — Read (GET)
+function doGet(e){
+  // Obtiene los parámetros de la URL (query parameters)
+  const p = e?.parameter || {};
+  const action = (p.action||'list').toLowerCase(); // Define la acción, por defecto 'list'
+
+  if(action==='list'){
+    // Acción para listar o filtrar datos (ej. /exec?action=list&tag=ETQ001)
+    const q=(p.q||'').toLowerCase(), tag=p.tag, withUrl=p.withUrl;
+    const tags = Array.isArray(tag)? tag : (tag? [tag]:[]);
+    
+    // Filtra las filas según los parámetros de consulta
+    const rows = allRows().filter(r=>{
+      const txt=(String(r.title)+' '+String(r.synopsis||'')).toLowerCase();
+      if(q && !txt.includes(q)) return false;
+      if(tags.length && !tags.includes(r.tag||'')) return false;
+      if(withUrl==='yes' && !r.url) return false;
+      if(withUrl==='no' && r.url) return false;
+      return true;
+    });
+
+    return out(rows); // Devuelve la lista de filas como JSON
+  }
+
+  if(action==='get'){
+    // Acción para buscar un registro específico por ID (ej. /exec?action=get&id=TUT001)
+    const id=p.id; 
+    if(!id) return out({error:'missing id'});
+    
+    // Busca la fila que coincida con el ID
+    const row = allRows().find(r=>String(r.id)===String(id));
+    return out(row || {}); // Devuelve el objeto encontrado o un objeto vacío
+  }
+
+  return out({error:'unknown action'});
+}
+```
+
+2.  Guarda el proyecto.
+
+**Prueba para ver si funcionó correctamente:**
+La prueba se realizará después del despliegue en el Paso 5.
+
+*Validación con Fuentes Técnicas Oficiales:*
+La implementación de `doGet(e)` y `doPost(e)` permite que el script actúe como un **ejecutable de API** o una aplicación web, manejando las peticiones HTTP. El objeto de evento `e` contiene el parámetro `e.parameter` para acceder a los datos de la consulta URL en las solicitudes `GET`.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+PASO 4 - Implementación del Backend: La Función doPost (Método POST)
+##menu-item END
+##Contenido BEGIN
+PASO 4 - Implementación del Backend: La Función doPost (Método POST)
+
+**[NAVEGADOR]:**
+
+**Explicación:** La función `doPost(e)` es esencial para las operaciones que modifican datos (es decir, Create, Update y Delete/CRUD). Esta función procesa el cuerpo de la solicitud HTTP (`e.postData.contents`), que debe contener el JSON con la acción y los datos a manipular.
+
+**Acción:**
+
+1.  Añade las siguientes funciones al final del archivo `Code.gs`:
+
+```javascript
+// API REST — Write (POST)
+function doPost(e){
+  // Parsea el contenido JSON del cuerpo de la solicitud POST
+  const body = e?.postData?.contents ? JSON.parse(e.postData.contents) : {};
+  const action = (body.action||'').toLowerCase();
+  const data = body.data||{};
+  
+  const s=sh(), m=idxMap(); // Obtiene la hoja y el mapa de encabezados
+
+  if(action==='create'){
+    // Crear (añadir una nueva fila)
+    if(!data.id) return out({error:'missing id'});
+    s.appendRow([data.id||'', data.title||'', data.url||'', data.tag||'', data.synopsis||'']);
+    return out({ok:true, id:data.id});
+  }
+
+  if(action==='update'){
+    // Actualizar (modificar una fila existente por ID)
+    if(!data.id) return out({error:'missing id'});
+    
+    // Busca el índice de la fila por RecordID
+    const vals = s.getRange(2,1,Math.max(s.getLastRow()-1,0), s.getLastColumn()).getValues();
+    const rIndex = vals.findIndex(r=>String(r[m['RecordID']])===String(data.id));
+
+    if(rIndex<0) return out({error:'not found'});
+    const rowNum = rIndex+2;
+
+    // Actualiza campos específicos
+    if(data.title!==undefined) s.getRange(rowNum, m['Titulo']+1).setValue(data.title);
+    if(data.url!==undefined) s.getRange(rowNum, m['URL']+1).setValue(data.url);
+    if(data.tag!==undefined) s.getRange(rowNum, m['Etiqueta']+1).setValue(data.tag);
+    if(data.synopsis!==undefined)s.getRange(rowNum, m['Sinopsis']+1).setValue(data.synopsis);
+
+    return out({ok:true, id:data.id});
+  }
+
+  if(action==='delete'){
+    // Eliminar (borrar una fila por ID)
+    if(!data.id) return out({error:'missing id'});
+
+    // Busca el índice de la fila
+    const vals = s.getRange(2,1,Math.max(s.getLastRow()-1,0), s.getLastColumn()).getValues();
+    const rIndex = vals.findIndex(r=>String(r[m['RecordID']])===String(data.id));
+
+    if(rIndex<0) return out({error:'not found'});
+    // Elimina la fila (el +2 ajusta de índice de matriz a número de fila de la hoja)
+    s.deleteRow(rIndex+2);
+    return out({ok:true, id:data.id});
+  }
+
+  return out({error:'unknown action'});
+}
+
+// Función necesaria para solicitudes previas (CORS - Opcional, pero recomendado)
+function doOptions(e){ return out({ok:true}); }
+```
+
+2.  Guarda el proyecto.
+
+**Prueba para ver si funcionó correctamente:**
+La prueba se realizará después del despliegue en el Paso 5.
+
+*Validación con Fuentes Técnicas Oficiales:*
+El objeto de evento `e` para las solicitudes `POST` contiene la propiedad `e.postData.contents`, que permite acceder al cuerpo de la solicitud HTTP. Las funciones `appendRow()`, `getRange()`, `setValue()`, y `deleteRow()` de `SpreadsheetApp` son los métodos utilizados para interactuar con los datos de la hoja.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+PASO 5 - Despliegue como Aplicación Web y Autorización
+##menu-item END
+##Contenido BEGIN
+PASO 5 - Despliegue como Aplicación Web y Autorización
+
+**[NAVEGADOR]:**
+
+**Explicación:** Para que las funciones `doGet(e)` y `doPost(e)` sean accesibles desde cualquier aplicación externa mediante una URL HTTP, debes publicar tu proyecto de Apps Script como una **Aplicación Web**.
+
+**Acción:**
+
+1.  En el editor de Apps Script, haz clic en el botón **Implementar** y selecciona **Nueva implementación**.
+2.  En el menú de selección de tipo (icono de engranaje), selecciona **Aplicación web**.
+3.  Configura los siguientes campos:
+    *   **Ejecutar como:** **Yo** (tu cuenta de Google). Esto garantiza que el script se ejecute con tus permisos, permitiéndole leer y escribir en la Hoja de cálculo.
+    *   **Acceso:** **Cualquiera con el vínculo** (para que sea una API pública accesible, como lo recomienda el desarrollador fuente).
+4.  Haz clic en **Implementar**.
+5.  La primera vez que implementes, se te pedirá que **Autorices el acceso**. Acepta los permisos necesarios (Drive, Hojas de cálculo).
+6.  Una vez finalizado el despliegue, verás la URL de la aplicación web. **Copia esta URL; es el endpoint de tu API REST** (`.../exec`).
+
+**Prueba para ver si funcionó correctamente:**
+
+1.  Pega la URL obtenida en la barra de direcciones de tu navegador.
+2.  Deberías ver una respuesta JSON que lista todas las filas (si has introducido datos en la hoja) o una matriz vacía `[]`. Esto indica que la función `doGet(e)` con la acción predeterminada `'list'` está funcionando.
+
+*Validación con Fuentes Técnicas Oficiales:*
+Las funciones de servicio `doGet(e)` y `doPost(e)` solo se activan cuando el script se publica como una Aplicación Web. El despliegue como Aplicación Web crea un **endpoint público** que termina en `/exec`. Apps Script también ofrece una API REST para administrar las implementaciones y proyectos de forma programática.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+PASO 6 - Prueba Funcional de la API (CRUD)
+##menu-item END
+##Contenido BEGIN
+**[TERMINAL]:**
+
+**Explicación:** Utilizaremos la herramienta de línea de comandos `curl` (disponible en Terminal de Windows) para enviar solicitudes `POST` con cuerpos JSON y verificar que la API puede crear, actualizar y eliminar datos en la Hoja de cálculo.
+
+**Acción:**
+
+1.  **Introduce datos iniciales en tu Google Sheet:** En la hoja 'Tutoriales', añade una fila con el `RecordID` T001 y datos ficticios en las otras columnas.
+2.  **Prueba GET (Lectura):** Abre la URL de la Web App en tu navegador y comprueba que se lista el registro T001. Para obtener un solo registro, usa:
+    `[Tu URL]/exec?action=get&id=T001`
+    Deberías ver el JSON del registro T001.
+
+3.  **Prueba POST (Crear):** Ejecuta el siguiente comando en la Terminal de Windows, reemplazando `[Tu URL]/exec` con el endpoint de tu implementación:
+
+```bash
+curl -X POST "[Tu URL]/exec" -H "Content-Type: application/json" -d "{\"action\":\"create\",\"data\":{\"id\":\"TUT999\",\"title\":\"Nuevo Tutorial API\",\"tag\":\"ETQ002\",\"synopsis\":\"Texto de prueba para API\"}}"
+```
+
+4.  **Verificación de Creación:**
+    *   La Terminal debe devolver una respuesta JSON indicando éxito, como `{"ok":true, "id":"TUT999"}`.
+    *   Abre tu Google Sheet y verifica que una nueva fila con `RecordID` **TUT999** haya sido agregada.
+
+5.  **Prueba POST (Eliminar):** Ejecuta el comando para eliminar el registro que acabas de crear:
+
+```bash
+curl -X POST "[Tu URL]/exec" -H "Content-Type: application/json" -d "{\"action\":\"delete\",\"data\":{\"id\":\"TUT999\"}}"
+```
+
+6.  **Verificación de Eliminación:**
+    *   La Terminal debe devolver `{"ok":true, "id":"TUT999"}`.
+    *   Verifica en tu Google Sheet que la fila con el `RecordID` **TUT999** ha desaparecido.
+
+*Criterio de Éxito:*
+Al finalizar este paso, has verificado que tu API REST es funcional, puede leer datos mediante `GET` y realizar modificaciones (CRUD) mediante `POST` en tu Google Sheet, todo a través de un endpoint público (`.../exec`).
+##Contenido END
+
+---
+
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+
+Este tutorial se basó en el uso de capacidades principales de Google Apps Script para la creación de Aplicaciones Web y APIs.
+
+| Punto Clave Validado | Servicio de Apps Script Utilizado | Referencia Técnica Oficial |
+| :--- | :--- | :--- |
+| **API REST / Aplicaciones Web** | Implementación de script con funciones `doGet(e)` y `doPost(e)`. | Las Aplicaciones Web de Apps Script utilizan estas funciones para manejar solicitudes HTTP de lectura y escritura, creando un endpoint público (`/exec`). |
+| **Generación de JSON** | `ContentService` | Este servicio de utilidad permite crear salidas de texto y configurar el tipo MIME a JSON (`ContentService.MimeType.JSON`) para garantizar una respuesta estándar de API. |
+| **Base de Datos (Hojas de cálculo)** | `SpreadsheetApp` | Apps Script integra bibliotecas nativas para acceder a datos de Google Workspace, usando `SpreadsheetApp` para operaciones de lectura/escritura como `getRange()`, `getValues()`, `appendRow()`, y `deleteRow()`. |
+| **Gestión de la Implementación** | Recursos de Proyectos de Script / API de Apps Script | La plataforma Apps Script permite gestionar implementaciones (Deployments) de forma programática o manual para publicar el endpoint. |
+
+**Enlaces de Documentación Oficial de Google Apps Script:**
+
+*   Descripción general de Apps Script y sus capacidades de automatización.
+*   Referencia de la Clase `UrlFetchApp` (Utilizada para llamadas HTTP, aunque aquí se utiliza para recibir peticiones).
+*   Referencia de la Clase `ContentService` para servir contenido.
+*   Referencia sobre la API de REST para administrar proyectos de Apps Script (indica la existencia de la funcionalidad REST).
+*   Recursos del Proyecto de Script y la API de Apps Script.
+##Contenido END

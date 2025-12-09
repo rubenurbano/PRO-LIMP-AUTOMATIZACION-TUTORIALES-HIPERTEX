@@ -1,0 +1,55 @@
+Opción A — Crear tu primer repositorio “PRO-LIMP AUTOMATIZACION: Tutoriales: HIPERTEX”
+
+Pero engo que hacer sub repositorios por ejemplo:
+
+PRO-LIMP AUTOMATIZACION: Tutoriales: HIPERTEX ----- GEMINI 3
+PRO-LIMP AUTOMATIZACION: Tutoriales: HIPERTEX ----- MAKE.COM
+PRO-LIMP AUTOMATIZACION: Tutoriales: HIPERTEX ----- PYTHON
+
+
+mkdir "GEMINI_3" "PYTHON" "FLET" "MARKETING" "DIGITAL_PRODUCTS" "CRAWL4AI"
+
+ "MAKE_com"
+ 
+mkdir MAKE.com
+mkdir FLET
+mkdir MARKETING
+mkdir DIGITAL_PRODUCTS
+mkdir CRAWL4AI
+mkdir PERPLEXITY
+
+git add .
+git commit -m "Primer tutorial HIPERTEX: PERPLEXITY"
+git push
+
+
+
+Me hizo el directorio CRAWL4AIcls pero es  CRAWL4AI.... como se cambia esto?
+
+Vamos a subir el primer json (tutorial). Solo acepto indicaciones tuyas de un solo paso con una sola accion a la vez.
+
+git add .
+git commit -m "Añadidos 1 nuevos JSON de tutoriales"
+git push
+
+
+git add .
+git commit -m "Directorio nuevo chatGPT"
+git push
+
+
+https://git-scm.com/docs/git-clone#_name
+
+Forma clasica:
+git clone https://github.com/firecrawl/open-scouts.git
+
+En Github CLI:
+gh repo clone firecrawl/open-scouts
+
+
+firecrawl/open-scouts
+
+
+https://github.com/rubenurbano/PRO-LIMP-AUTOMATIZACION-TUTORIALES-HIPERTEX
+
+git remote add origin https://github.com/rubenurbano/PRO-LIMP-AUTOMATIZACION-TUTORIALES-HIPERTEX.git

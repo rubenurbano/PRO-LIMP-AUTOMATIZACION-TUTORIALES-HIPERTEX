@@ -1,0 +1,90 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Como Crear tu Primera Aplicacion Movil con Flet\nWEB ORIGINAL:",
+      "contenido": "Como Crear tu Primera Aplicacion Movil con Flet:\nWeb Original:\nComo Crear tu Primera Aplicacion Movil con Flet:\nhttps://youtu.be/I_LlDjGJcCw?si=MJOwQgqrh7W7THg5\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introduccion a Flet",
+      "contenido": "Introduccion a Flet:\nA veces has querido hacer aplicaciones para internet, para tu computadora o para tu celular, pero te ha parecido muy dificil hacer la parte visual. Hoy te voy a mostrar Flet, una herramienta que te permite hacer aplicaciones para muchos lugares (multiplataforma) sin ser un experto en como se ven (Front end). Flet usa una herramienta muy popular de Google llamada Flutter, asi que puedes crear aplicaciones muy buenas usando directamente el lenguaje Python."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Crear el proyecto de Python",
+      "contenido": "Crear el proyecto de Python:\nLo primero que vamos a hacer es crear un nuevo proyecto de Python. Yo lo voy a crear en una carpeta y le pondre tutorial de flet.\n\nLuego de crear la carpeta con el proyecto, vamos a crear un archivo nuevo de Python que se llamara main.pi."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Instalar la libreria Flet",
+      "contenido": "Instalar la libreria Flet:\nAhora vamos a instalar la libreria. Abre la consola (la terminal) y escribe: pip install flet. Presiona Enter y espera a que se instale."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Importar Flet y crear la funcion principal",
+      "contenido": "Importar Flet y crear la funcion principal:\nCuando termine la instalacion, vamos a escribir en el codigo: import flet as ft. Despues, vamos a crear una funcion principal que se llamara Main. Esta funcion debe recibir como parametro una \"pagina\" que llamaremos page. Esta pagina (page) debe ser del tipo ft.Page. Las paginas en Flet son donde se ponen todos los elementos o cosas de nuestra aplicacion. Por ahora, dentro de la funcion Main solo pondremos la palabra pass para seguir."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Iniciar la aplicacion",
+      "contenido": "Iniciar la aplicacion:\nLuego, vamos a iniciar la aplicacion fuera de la funcion Main. Escribe: ft.app. Dentro de los parentesis, debes indicarle que funcion debe usar al inicio. Ponemos target=main, que es nuestra funcion que acabamos de crear.\n\nSi corremos la aplicacion ahora, se abrira una ventana de Flet. Esta ventana es responsive, lo que significa que puedes hacerla mas pequena o mas grande."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Agregar texto a la aplicacion",
+      "contenido": "Agregar texto a la aplicacion:\nAhora vamos a agregar cosas dentro de la funcion Main. Lo mas simple es agregar un texto. Vamos a crear una variable llamada texto y le asignamos ft.Text, y el texto que queremos mostrar, por ejemplo: Mi primera app con flet.\n\nSi ejecutamos ahora, el texto no aparece en la ventana. Para anadir el texto a nuestra pagina, usamos page.add y dentro ponemos la variable texto. Al ejecutar, el texto aparece en la ventana."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Ver la aplicacion en el navegador",
+      "contenido": "Ver la aplicacion en el navegador:\nSi quieres que tu aplicacion se vea en el navegador de internet, en lugar de target=main, puedes poner: view=ft.WEB_BROWSER. Esto hara que la vista se abra directamente en el navegador, como Edge. Por ahora, la usaremos como aplicacion de escritorio."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Anadir titulo a la ventana",
+      "contenido": "Anadir titulo a la ventana:\nPodemos anadir un titulo a la ventana de la aplicacion. Ponemos page.title y le damos un nombre, como mi app. Al ejecutar, el titulo aparece en la parte superior de la ventana."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Agregar mas textos",
+      "contenido": "Agregar mas textos:\nPodemos anadir otro texto mas. Lo llamamos texto_dos y le ponemos ft.Text con el valor: Este es un ejemplo para mi canal de YouTube. Luego lo anadimos a la pagina: page.add(texto_dos). El segundo texto se pone debajo del primero."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Cambiar el color de fondo",
+      "contenido": "Cambiar el color de fondo:\nTambién podemos cambiar el color de fondo de nuestra pagina. Para cambiar el color de fondo, ponemos page.bgcolor igual a ft.colors. y elegimos el color que queramos, como el gris azulado (BLUE_GREY)."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Alinear los elementos",
+      "contenido": "Alinear los elementos:\nOtra configuracion inicial es alinear los elementos. Ponemos page.horizontal_alignment igual a ft.CrossAxisAlignment. Si ponemos Center, todos los elementos se centran de forma horizontal. Si queremos que se alineen a la izquierda, ponemos Start. Si queremos que se alineen a la derecha (al final), ponemos End. Lo dejaremos centrado (Center)."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Crear una funcion para cambiar texto",
+      "contenido": "Crear una funcion para cambiar texto:\nAhora vamos a poner un boton. Queremos que este boton cambie el texto de abajo (texto dos) cuando lo presionemos.\n\nPara esto, vamos a borrar las lineas page.add que pusimos antes. Crearemos una funcion llamada cambiar_texto. Esta funcion recibira un evento, que es lo que sucede al hacer clic en el boton. Dentro de esta funcion, cambiaremos el valor del texto dos. Ponemos texto_dos.value y el nuevo valor, como: suscribete para mas tutoriales. Para que este cambio se muestre, debes usar page.update."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "Crear el boton y ejecutar la aplicacion",
+      "contenido": "Crear el boton y ejecutar la aplicacion:\nAhora, creamos el boton. Lo llamaremos boton y usaremos ft.FilledButton. Dentro, ponemos el texto que dira el boton, que sera: cambiar texto. Tambien debemos decir que funcion llamar cuando se haga clic. Esto se hace con on_click, y le decimos que llame a la funcion cambiar_texto.\n\nFinalmente, anadimos todos los elementos de nuevo a la pagina en el orden que queremos que aparezcan: page.add(texto, texto_dos, boton). Al ejecutar, aparece el boton. Cuando lo presionas, el texto dos cambia a suscribete para mas tutoriales."
+    },
+    {
+      "itemID": "014",
+      "menu_item": "Agradecimientos y contenido adicional",
+      "contenido": "Agradecimientos y contenido adicional:\nEl video termina agradeciendo a varias personas que ayudan a mantener el canal, como miembros de Patreon, miembros de YouTube, y personas que dejaron \"Super Thanks\" o regalaron \"cafecitos\". El creador dice que seguira haciendo mas tutoriales de Flet para crear cosas mas avanzadas. Tambien invita a suscribirse y deja un curso de como crear aplicaciones con Flask."
+    },
+    {
+      "itemID": "015",
+      "menu_item": "Preguntas y Respuestas",
+      "contenido": "Preguntas y Respuestas:\n\nDocumentacion tecnica oficial FLET:\nhttps://flet.dev/docs/\n\nQue es Flet y para que sirve?\nFlet es una herramienta (framework) que te permite construir aplicaciones para muchos lugares, como internet, computadoras y celulares, usando Python, sin que necesites ser un experto en la parte de diseno visual. Flet usa la tecnologia de Google llamada Flutter.\n\nComo empiezo un proyecto con Flet?\nDebes crear un nuevo proyecto de Python. Luego, dentro de ese proyecto, creas un archivo de Python llamado main.py.\n\nComo instalo la herramienta Flet?\nDebes abrir la consola (terminal) y escribir el comando pip install flet.\n\nQue es lo primero que se escribe en el codigo?\nPrimero se importa la libreria Flet escribiendo: import flet as ft.\n\nQue es la funcion Main y que contiene?\nLa funcion Main es la funcion principal de la aplicacion. Debe recibir un parametro llamado page. La page es la pagina donde se colocan todos los elementos de la aplicacion.\n\nComo se inicia la aplicacion Flet?\nFuera de la funcion Main, se usa el comando ft.app(target=main). Esto le dice a Flet que ejecute la funcion principal llamada Main.\n\nComo puedo ver mi aplicacion en el navegador de internet en lugar de en una ventana de escritorio?\nAl iniciar la aplicacion (ft.app), debes anadir view=ft.WEB_BROWSER.\n\nComo agrego un texto simple a la aplicacion?\nPrimero creas una variable (ejemplo: texto) y usas ft.Text(\"Tu mensaje\"). Luego, para mostrarlo en la ventana, usas page.add(texto).\n\nComo le pongo un titulo a la ventana de mi aplicacion?\nDebes usar page.title y darle un nombre, como por ejemplo: mi app.\n\nComo se cambia el color de fondo de la aplicacion?\nDebes usar page.bgcolor igual a ft.colors. y luego seleccionar el color deseado, como ft.colors.BLUE_GREY.\n\nComo se centran los elementos de la aplicacion?\nSe usa page.horizontal_alignment y se establece en ft.CrossAxisAlignment.Center. Para la izquierda se usa Start, y para la derecha se usa End.\n\nComo se crea un boton que haga algo al presionarlo?\nSe crea el boton con ft.FilledButton. Se le pone el texto que aparecera en el boton. Se le dice que funcion ejecutar cuando se presione usando on_click. Por ejemplo: on_click=cambiar_texto.\n\nSi una funcion cambia algo, como un texto, que debo hacer para que se vea el cambio?\nDebes usar el comando page.update para que el cambio se muestre en la aplicacion."
+    },
+    {
+      "itemID": "016",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:Los puntos tecnicos clave del tutorial han sido validados con las fuentes oficiales de Flet:\n\nSitio Web Oficial de Flet:\nhttps://flet.dev/\n\nDocumentacion Oficial de Flet:\nhttps://flet.dev/docs/\n\nRepositorio Oficial en GitHub:\nhttps://github.com/flet-dev/flet\n\nPaquete Oficial en PyPI:\nhttps://pypi.org/project/flet/\n\nPuntos Tecnicos Validados:\n\nFlet es un framework que permite construir aplicaciones web, de escritorio y moviles en Python sin experiencia previa en desarrollo frontend. Los controles de Flet estan basados en Flutter de Google.\n\nLa instalacion se realiza mediante el comando pip install flet, tal como se indica en la documentacion oficial de PyPI.\n\nLa estructura basica de una aplicacion Flet requiere importar la libreria con import flet as ft, crear una funcion main que recibe un parametro page de tipo ft.Page, y iniciar la aplicacion con ft.app(target=main), como se confirma en los ejemplos oficiales de la documentacion.\n\nEl objeto page representa la pagina donde se colocan todos los elementos de la aplicacion. Una Page es como un lienzo especifico para un usuario donde se agregan y eliminan controles para construir la interfaz de usuario.\n\nPara agregar elementos a la pagina se utiliza el metodo page.add, como se muestra en el tutorial oficial de To-Do app.\n\nLas propiedades de configuracion como page.title, page.bgcolor y page.horizontal_alignment estan documentadas en los ejemplos oficiales y permiten personalizar la apariencia de la aplicacion.\n\nPara ejecutar la aplicacion en un navegador web en lugar de una ventana nativa, se puede modificar la llamada ft.app agregando parametros especificos.\n\nLos controles interactivos como botones se crean usando componentes como ft.FilledButton y se vinculan a funciones mediante el parametro on_click, tal como se demuestra en los tutoriales de Flet sobre eventos de clic de botones.\n\nCuando se modifica el contenido de un control, se debe llamar a page.update para que los cambios se reflejen en la interfaz de usuario.\n\nEnlaces Directos a Documentacion Oficial:\n\nIntroduccion a Flet: https://flet.dev/docs/\nTutoriales Oficiales: https://flet.dev/docs/tutorials/\nTutorial To-Do App: https://flet.dev/docs/tutorials/python-todo/\nTutorial Calculator App: https://flet.dev/docs/tutorials/python-calculator/\nRepositorio GitHub: https://github.com/flet-dev/flet\nPaquete PyPI: https://pypi.org/project/flet/\n\nComo Crear tu Primera Aplicacion Movil con Flet\nhttps://youtu.be/I_LlDjGJcCw?si=MJOwQgqrh7W7THg5\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    }
+  ]
+}

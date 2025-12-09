@@ -1,0 +1,95 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Text Parser Match Pattern y Replace (Tutorial Regex) \nWEB ORIGINAL:",
+      "contenido": "Text Parser Match Pattern y Replace (Tutorial Regex) :\nWeb Original:\nText Parser Match Pattern y Replace (Tutorial Regex) :\nhttps://youtu.be/vxlesZYLKgU?si=FFv4ydJB3F4RY3zx"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Esquema Completo: Expresiones Regulares (RegEx) en Make.com",
+      "contenido": "Esquema Completo: Expresiones Regulares (RegEx) en Make.com:\nEl objetivo de este esquema es explicar que son las Expresiones Regulares y como usarlas en Make.com, especificamente con los modulos de Text Parser. Piensa en las Expresiones Regulares (o RegEx) como codigos secretos muy precisos que le das a la computadora para que encuentre informacion muy especifica dentro de textos grandes, como buscar todos los correos electronicos o numeros de telefono de una pagina web."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "I. Conceptos Fundamentales de las Expresiones Regulares (RegEx)",
+      "contenido": "I. Conceptos Fundamentales de las Expresiones Regulares (RegEx):\nAqui aprenderas los basicos sobre que son las RegEx y por que son utiles."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "1. Que son las RegEx?",
+      "contenido": "1. Que son las RegEx?:\nSon cadenas de texto avanzadas que se usan para identificar \"patrones\" en la informacion. Son una herramienta esencial para buscar y manipular textos con gran precision en el mundo digital."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "2. Que es un Patron RegEx?",
+      "contenido": "2. Que es un Patron RegEx?:\nEs la secuencia de caracteres que define el modelo de busqueda. Un patron puede estar compuesto por caracteres especiales, numeros, corchetes, llaves y otros simbolos. Permiten encontrar, extraer y manipular texto con mucha exactitud. Dato importante: Aunque la Inteligencia Artificial (IA) puede hacer trabajos similares, las RegEx ofrecen un nivel de precision muy alto si se especifican correctamente."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "3. La ventaja de las RegEx frente a la IA y otros Modulos",
+      "contenido": "3. La ventaja de las RegEx frente a la IA y otros Modulos:\nMake.com ya tiene modulos especificos (como Match Pattern o Get Content from HTML) que hacen el trabajo de las RegEx, pero hay muchos patrones mas avanzados que se pueden usar directamente. No es obligatorio que te aprendas todas las expresiones de memoria. Existen herramientas para consultar y practicar."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "II. Tipos de Caracteres y Patrones RegEx (Los Componentes del Codigo Secreto)",
+      "contenido": "II. Tipos de Caracteres y Patrones RegEx (Los Componentes del Codigo Secreto):\nLos patrones se construyen usando diferentes tipos de caracteres que cumplen funciones especificas."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "1. Caracteres Literales",
+      "contenido": "1. Caracteres Literales:\nSon caracteres de texto y numeros que se buscan de forma exacta. Se utilizan para buscar palabras o frases especificas. Ejemplo: Si escribes \"hola\", solo buscara la palabra \"hola\"."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "2. Metasecuencias (Codigos de Atajo)",
+      "contenido": "2. Metasecuencias (Codigos de Atajo):\nSon atajos para buscar tipos de caracteres comunes. Ejemplos comunes: /d busca cualquier digito numerico (del 0 al 9). /w busca caracteres de palabras (letras, numeros o guiones bajos). /s busca espacios en blanco, tabulaciones y saltos de linea."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "3. Anclajes",
+      "contenido": "3. Anclajes:\nIndican donde debe empezar o terminar el patron de busqueda. Simbolos: Flechita arriba (^) busca el patron al comienzo de una linea o cadena de texto. Simbolo de dolar ($) busca el patron al final de una linea o cadena."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "4. Cuantificadores",
+      "contenido": "4. Cuantificadores:\nDefinen la cantidad de veces que un caracter o grupo de caracteres puede aparecer. Se pueden usar para buscar errores tipograficos (por ejemplo, si una palabra tiene una letra repetida dos veces: 'aa'). Ejemplos: a{3} busca exactamente tres 'a' juntas ('aaa'). a+ busca una o mas 'a'."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "5. Clases de Caracteres y Constructores de Grupo",
+      "contenido": "5. Clases de Caracteres y Constructores de Grupo:\nClases de Caracteres permiten agrupar elementos (ej: [A-Z] busca cualquier letra mayuscula de la A a la Z). Se encierran entre corchetes. Constructores de Grupo aislan parte de un patron usando parentesis. Son esenciales para capturar informacion especifica (por ejemplo, extraer solo el nombre de un formato)."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "III. Herramientas para Crear y Probar Patrones RegEx",
+      "contenido": "III. Herramientas para Crear y Probar Patrones RegEx:\nAqui aprenderas sobre herramientas utiles para practicar."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "1. RegEx101.com",
+      "contenido": "1. RegEx101.com:\nEs una herramienta en linea donde puedes probar tus expresiones regulares. Te permite pegar el texto que quieres analizar y la expresion regular que quieres usar, mostrando inmediatamente si hay coincidencias (Match). Es util para buscar patrones y entender que hace cada codigo antes de usarlo en Make.com."
+    },
+    {
+      "itemID": "014",
+      "menu_item": "IV. Tutorial Paso a Paso en Make.com usando Text Parser",
+      "contenido": "IV. Tutorial Paso a Paso en Make.com usando Text Parser:\nMake.com ofrece modulos en la herramienta Text Parser que utilizan expresiones regulares. Los mas importantes son Match Pattern (Buscar Coincidencias) y Replace (Reemplazar)."
+    },
+    {
+      "itemID": "015",
+      "menu_item": "1. Paso 1: Configurar el Modulo Text Parser - Match Pattern (Buscar Coincidencias)",
+      "contenido": "1. Paso 1: Configurar el Modulo Text Parser - Match Pattern (Buscar Coincidencias):\nEl proposito es buscar en un texto todas las partes que coinciden con el patron RegEx que tu le das. Ubicacion del Texto: Se indica el texto de entrada donde se va a realizar la busqueda (por ejemplo, el contenido de un documento HTML). Definicion del Patron (Pattern): Introduce la expresion regular que deseas buscar (debes copiar solo la expresion, sin simbolos adicionales de prueba). Ejemplo de Patron: [A-Z] para buscar todas las letras mayusculas de la A a la Z. Ejemplo de Patron 2: a{2} para buscar dos letras 'a' minusculas juntas. Configuracion Adicional: Global Match selecciona \"Si\" para que la busqueda afecte a todo el contenido y no se detenga en la primera coincidencia que encuentre. Continuar la ejecucion: Se recomienda seleccionar la opcion que permite que la ruta continue aunque no se encuentren coincidencias. Resultado: El modulo devuelve una lista de todas las coincidencias encontradas segun tu patron."
+    },
+    {
+      "itemID": "016",
+      "menu_item": "2. Paso 2: Configurar el Modulo Text Parser - Replace (Reemplazar Texto)",
+      "contenido": "2. Paso 2: Configurar el Modulo Text Parser - Replace (Reemplazar Texto):\nEl proposito es reemplazar las coincidencias encontradas por un nuevo valor que tu especifiques. Texto de Entrada: Se mapea el texto original que se quiere modificar. Patron (Pattern): Introduce la expresion regular que define el texto a buscar y a reemplazar. Valor de Reemplazo (Replacement): Define el nuevo texto que se utilizara para sustituir las coincidencias del patron. Puede ser una palabra, un espacio o incluso dejarlo vacio si quieres eliminar el texto encontrado. Configuracion Adicional (Global Match): Debe estar en \"Si\" para asegurar que se reemplacen todas las coincidencias en todo el texto, y no solo la primera. Ejemplo de Uso: Si el patron es a{2} (dos 'a' juntas) y el valor de reemplazo es \"UT\", el modulo buscara todas las \"aa\" y las cambiara por \"UT\" en el texto final. Resultado: El modulo devuelve el texto completo ya modificado con los reemplazos hechos."
+    },
+    {
+      "itemID": "017",
+      "menu_item": "3. Conclusion de la Practica",
+      "contenido": "3. Conclusion de la Practica:\nEstos modulos (Match Pattern y Replace) son cruciales para transformar datos, buscar errores o estandarizar informacion en tu sistema de Make.com.\n\n************************************************************************************************************\nVALIDACIÓN CON FUENTES TÉCNICAS OFICIALES\n*****************************************\nResumen de puntos validados:\n- El modulo Match Pattern busca y extrae elementos coincidentes con un patron regex, soporta coincidencias globales y continua ejecucion si no hay matches. Validado con descripcion oficial: \"The Match pattern module enables you to find and extract string elements matching a search pattern from a given text.\"\n- El modulo Replace busca y reemplaza basado en patron regex, con opcion global. Validado con: \"Searches the entered text for a specified value or regular expression, and replaces the result with the new value.\"\n- Sintaxis regex incluye caracteres literales, metasecuencias como \\d, \\w, \\s, anclajes ^ y $, cuantificadores como {n}, +, clases [A-Z], grupos (). Validado con sintaxis ECMAScript estandar recomendada en help center, similar a cheat sheet de MDN.\nEnlaces directos:\n- https://help.make.com/regexp (Documentacion de Text Parser, incluyendo Match Pattern y Replace)\n- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet (Sintaxis regex compatible)\n- https://regexone.com/ (Tutorial recomendado por Make.com para aprender regex)\n************************************************************************************************************\n"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+##itemID:000
+##menu-item BEGIN
+Introducción a Google Colab, una noble y completa guía 
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Introducción a Google Colab, una noble y completa guía :
+Web Original:
+
+Introducción a Google Colab, una noble y completa guía :
+https://youtu.be/8VFYs3Ot_aA?si=_sAtYY_KtNfxhvIG
+
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+¿Qué es Google Colab y para qué sirve?
+##menu-item END
+##Contenido BEGIN
+¿Qué es Google Colab y para qué sirve?:
+
+Google Colab (abreviatura de "Colaboratory") es un servicio gratuito en la nube ofrecido por Google que te permite escribir y ejecutar código de programación, principalmente en lenguaje Python, directamente desde tu navegador web. Imagina que es un cuaderno digital interactivo donde puedes mezclar código que funciona de verdad, con texto, imágenes y gráficos para explicar tus ideas.
+
+Su principal ventaja es que no necesitas instalar nada en tu ordenador. Además, te da acceso gratuito a potentes recursos informáticos, como GPUs (Unidades de Procesamiento Gráfico), que son esenciales para tareas complejas como la inteligencia artificial y el análisis de grandes volúmenes de datos. Por todo esto, es una herramienta muy popular entre estudiantes, científicos de datos y desarrolladores.
+
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Paso 1: Cómo acceder y crear tu primer "Notebook"
+##menu-item END
+##Contenido BEGIN
+Paso 1: Cómo acceder y crear tu primer "Notebook":
+
+Empezar a usar Google Colab es increíblemente sencillo. Lo único que necesitas es una cuenta de Google.
+
+1.  **Accede a la web:** Abre tu navegador y ve a la página oficial de Google Colab: `colab.research.google.com`.
+2.  **Inicia sesión:** Si no lo has hecho, inicia sesión con tu cuenta de Google (la misma que usas para Gmail o Drive).
+3.  **Crea un nuevo cuaderno:** Verás una ventana emergente. Puedes cerrarla y dirigirte al menú superior. Haz clic en **"Archivo"** y luego en **"Nuevo cuaderno"**.
+
+¡Listo! Acabas de crear tu primer "notebook" o cuaderno de Colab. Este cuaderno se guarda automáticamente en tu Google Drive, igual que un documento de Google Docs o una hoja de cálculo.
+
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Paso 2: Escribir y ejecutar código (Celdas de Código)
+##menu-item END
+##Contenido BEGIN
+Paso 2: Escribir y ejecutar código (Celdas de Código):
+
+Un cuaderno de Colab está formado por "celdas". Las celdas de código son los bloques donde escribirás y ejecutarás tus instrucciones en Python.
+
+1.  **Identifica la celda:** Tu nuevo cuaderno ya tendrá una celda de código vacía, esperando tus instrucciones.
+2.  **Escribe tu código:** Haz clic dentro de la celda y escribe algo simple, como por ejemplo:
+    `print("¡Hola, mundo desde Google Colab!")`
+3.  **Ejecuta la celda:** Para ver el resultado, puedes hacer dos cosas:
+    *   Hacer clic en el **botón de "play"** que aparece a la izquierda de la celda.
+    *   Pulsar las teclas **`Shift + Enter`** en tu teclado.
+
+Debajo de la celda, aparecerá el resultado de tu código, en este caso, el texto "¡Hola, mundo desde Google Colab!". Puedes crear todas las celdas de código que necesites.
+
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 3: Añadir texto y explicaciones (Celdas de Texto)
+##menu-item END
+##Contenido BEGIN
+Paso 3: Añadir texto y explicaciones (Celdas de Texto):
+
+La magia de Colab es que no solo sirve para código. También puedes añadir celdas de texto para documentar tu trabajo, añadir títulos, listas o explicaciones.
+
+1.  **Crea una celda de texto:** Coloca el cursor entre dos celdas o debajo de la última, y verás aparecer los botones **"+ Código"** y **"+ Texto"**. Haz clic en **"+ Texto"**.
+2.  **Escribe y da formato:** La celda de texto utiliza un lenguaje de marcado simple llamado Markdown. Esto te permite formatear el texto de manera muy sencilla:
+    *   `# Título principal`
+    *   `## Subtítulo`
+    *   `**Texto en negrita**`
+    *   `*Texto en cursiva*`
+    *   `- Un elemento de una lista`
+
+Cuando termines de escribir, pulsa `Shift + Enter` y verás tu texto formateado, convirtiendo tu cuaderno en un documento interactivo y fácil de leer.
+
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 4: Usar la potencia extra: GPUs gratuitas
+##menu-item END
+##Contenido BEGIN
+Paso 4: Usar la potencia extra: GPUs gratuitas:
+
+Una de las características más potentes de Colab es el acceso gratuito a aceleradores de hardware como las GPUs. Estos componentes son como un "super-motor" para tu ordenador, capaces de realizar cálculos matemáticos complejos a una velocidad mucho mayor, lo cual es fundamental para el entrenamiento de modelos de inteligencia artificial.
+
+Para activar la GPU:
+
+1.  **Ve al menú "Entorno de ejecución"**.
+2.  Haz clic en **"Cambiar tipo de entorno de ejecución"**.
+3.  En la ventana que aparece, busca la opción **"Acelerador por hardware"** y selecciona **"GPU"** en el menú desplegable.
+4.  Haz clic en **"Guardar"**.
+
+Tu cuaderno se reiniciará y ahora estará conectado a una máquina virtual con una GPU lista para acelerar tus tareas más exigentes.
+
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 5: Trabajar con tus archivos (Conexión con Google Drive)
+##menu-item END
+##Contenido BEGIN
+Paso 5: Trabajar con tus archivos (Conexión con Google Drive):
+
+El entorno de Colab es temporal, lo que significa que los archivos que subas directamente se borrarán cuando cierres la sesión. La forma más sencilla y permanente de trabajar con tus propios archivos (como bases de datos o imágenes) es conectar tu cuaderno a Google Drive.
+
+1.  **Crea una nueva celda de código.**
+2.  **Escribe el siguiente código** para "montar" o conectar tu Google Drive:
+    ```python
+    from google.colab import drive
+    drive.mount('/content/drive')
+    ```
+3.  **Ejecuta la celda.** Te aparecerá un enlace de autorización. Haz clic en él, selecciona tu cuenta de Google, concede los permisos y copia el código de autorización que te proporcionan.
+4.  **Pega ese código** en el campo que apareció en la celda de Colab y pulsa `Enter`.
+
+Una vez completado, tu Google Drive aparecerá como una carpeta más dentro del explorador de archivos de Colab, y podrás leer y escribir datos en él directamente desde tu código.
+
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Este tutorial ha sido elaborado siguiendo las prácticas y funcionalidades descritas en la documentación oficial y recursos de ayuda de Google Colab.
+
+*   **Concepto y Funcionalidad:** La descripción de Google Colab como un servicio de cuadernos Jupyter alojado en la nube que no requiere configuración y proporciona acceso gratuito a recursos como GPUs se basa en su página principal y FAQs oficiales.
+*   **Creación y Ejecución de Celdas:** El procedimiento para crear nuevos cuadernos ("Archivo" -> "Nuevo cuaderno") y la ejecución de celdas de código y texto mediante el botón de "play" o el atajo `Shift + Enter` son funcionalidades estándar documentadas en las guías de introducción.
+*   **Acceso a Aceleradores de Hardware (GPU):** La activación de la GPU a través del menú "Entorno de ejecución" -> "Cambiar tipo de entorno de ejecución" es el método oficial proporcionado por la plataforma para utilizar hardware especializado.
+*   **Integración con Google Drive:** El método para montar Google Drive utilizando el módulo `google.colab` es la forma recomendada y documentada para lograr persistencia de datos y acceso a archivos del usuario.
+*   **Guardado y Colaboración:** La afirmación de que los cuadernos se guardan en Google Drive y se pueden compartir como cualquier otro documento de Google está validada por la documentación sobre colaboración y guardado.
+
+##Contenido END

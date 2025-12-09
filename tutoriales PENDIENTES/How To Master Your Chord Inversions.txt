@@ -1,0 +1,67 @@
+Nombre del video:**  How To Master Your Chord Inversions
+URL del video:**  https://youtu.be/aIFoh4t6P18?si=X1NyaxuySLUqhaRu
+
+---
+
+## Tutorial Paso a Paso: El Lenguaje de los Dedos para Inversiones
+
+### Paso 1: Entender el Objetivo Principal
+
+El propósito de aprender estas inversiones **no es aprender más teoría**, sino lograr que la teoría se traduzca en **memoria muscular**.
+
+*   **Olvídate de saltar:** La meta es evitar "saltar por todo el piano" buscando el siguiente acorde.
+*   **La clave es la eficiencia:** Queremos encontrar la manera **más cercana y eficiente** de pasar de un acorde a otro.
+*   **Sé como un músico profesional:** Artistas como Billy Joel y Elton John cambian constantemente las inversiones que usan en vivo. Esto demuestra que las inversiones son "prescindibles" para ellos porque están **"bajo sus dedos"** y la canción suena igual de bien.
+
+### Paso 2: Cambiar la Mentalidad (Del Cerebro a los Dedos)
+
+*   **Detén el cálculo:** Los métodos tradicionales que usan términos como "primera inversión" o "segunda inversión" no son prácticos cuando necesitas pasar rápidamente de, por ejemplo, un acorde de Re mayor a Sol menor.
+*   **Habla el "Lenguaje de los Dedos":** Vamos a usar sistemas de movimiento simples para que tus dedos entiendan la transición directamente. Tus dedos son más inteligentes de lo que crees; cuando vean un salto en la música, dirán: **"Espera un minuto, sé que hay una manera más fácil"**.
+
+### Paso 3: Movimiento Crucial 1 – Subir una Cuarta Perfecta
+
+Esta es la forma de moverte cuando los acordes suben cuatro notas en la escala (por ejemplo, Do mayor a Fa mayor, o Re mayor a Sol mayor).
+
+1.  **Identifica la relación:** Estás subiendo una **cuarta perfecta**.
+2.  **La Acción (El Truco):** Simplemente **levanta las dos notas superiores** del acorde que estás tocando.
+3.  **Ejemplo práctico (C $\rightarrow$ F):**
+    *   Toca Do mayor (Do - Mi - Sol).
+    *   **Levanta las dos notas superiores** (Mi y Sol) a Fa y La, manteniendo el Do en su lugar.
+    *   ¡Ahora estás tocando Fa mayor en una inversión!.
+4.  **Ajuste de calidad:** Si pasas de un acorde mayor a uno menor (ej. Do mayor a Fa menor), la acción de **levantar las dos notas superiores sigue siendo la misma**, pero debes **ajustar la nota de arriba** para que sea menor (por ejemplo, de La natural a La bemol).
+
+### Paso 4: Movimiento Crucial 2 – Subir una Quinta Perfecta (o Bajar una Cuarta)
+
+Esta es la forma de moverte cuando el siguiente acorde es cinco notas arriba (o cuatro notas abajo) (por ejemplo, Do mayor a Sol mayor).
+
+1.  **Identifica la relación:** Estás subiendo una **quinta perfecta** o bajando una **cuarta**.
+2.  **La Acción (El Truco):** Simplemente **deja caer (baja) las dos notas inferiores** del acorde.
+3.  **Ejemplo práctico (C $\rightarrow$ G):**
+    *   Toca Do mayor (Do - Mi - Sol).
+    *   **Baja las dos notas inferiores** (Do y Mi) a Sol y Si, manteniendo el Sol en su lugar.
+    *   ¡Ahora estás tocando Sol mayor en una inversión!.
+4.  **Otras secuencias:** Esta técnica funciona con cualquier acorde, por ejemplo, La menor $\rightarrow$ Deja caer las dos notas inferiores $\rightarrow$ Mi menor.
+
+### Paso 5: Movimiento Crucial 3 – Bajar una Tercera
+
+Esta es la forma de moverte cuando el siguiente acorde está tres notas abajo (por ejemplo, Do mayor a La menor).
+
+1.  **Identifica la relación:** Estás bajando una **tercera**.
+2.  **La Acción (El Truco):** Simplemente **levanta solo la nota superior** del acorde.
+3.  **Ejemplo práctico (C $\rightarrow$ Am):**
+    *   Toca Do mayor (Do - Mi - Sol).
+    *   **Levanta la nota superior** (Sol) a La, manteniendo Do y Mi en su lugar.
+    *   ¡Ahora estás tocando La menor en una inversión!.
+4.  **Origen histórico (El Coro):** Este movimiento es suave porque imita la **música coral**. Cuando los coros pasaban de Do mayor a La menor, mantenían las notas comunes (Do y Mi) y solo movían las voces necesarias (Sol sube a La) para que la transición fuera más musical y menos "sosa". **El propósito de las inversiones es crear transiciones suaves**.
+
+### Paso 6: Consejos de Práctica y Entrenamiento Muscular
+
+*   **Grupos de dos:** Cuando practiques, piensa en los acordes en grupos de dos: **Acorde fundamental $\rightarrow$ Inversión, Acorde fundamental $\rightarrow$ Inversión**. Esto hace que la tarea sea manejable y no como "una montaña para escalar".
+*   **Entrena tus dedos:** Debes **taladrar** estos ejercicios en tus dedos para programar tu memoria muscular.
+*   **Anotación con flechas:** Puedes usar flechas sencillas en tus partituras para recordar los movimientos ("Levantar las dos notas superiores", "Bajar las dos notas inferiores"). Esto ayuda a tus dedos a entender sin que el cerebro tenga que pensar.
+
+### Paso 7: Recursos Adicionales
+
+*   El objetivo final es poder mirar una progresión de acordes y probarla en diferentes inversiones, siguiendo estos sistemas.
+*   La London Contemporary School of Piano ofrece un **kit de recursos gratuito** con paquetes de ejercicios para ayudarte a practicar y perforar estas inversiones.
+*   Estos ejercicios son fundamentales para dominar los acordes, uno de los cuatro pilares importantes del programa "Complete Musician Program".

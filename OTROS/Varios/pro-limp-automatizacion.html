@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>PRO-LIMP AUTOMATIZACIÓN · Tutoriales y Sistemas Inteligentes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-soft: #0b1120;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-2: #f97316;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #111827, #020617 60%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+    .brand span {
+      color: var(--accent);
+    }
+    .chip {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      color: var(--muted);
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 840px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    h1 {
+      font-size: 30px;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #0b1120;
+      font-weight: 600;
+    }
+    .btn-ghost {
+      border-color: rgba(148,163,184,0.7);
+      color: var(--muted);
+      background: rgba(15,23,42,0.7);
+    }
+    .hero-card {
+      background: rgba(15,23,42,0.96);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 16px 16px 14px;
+      box-shadow: 0 24px 60px rgba(15,23,42,0.9);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -40px;
+      background: radial-gradient(circle at top right, rgba(56,189,248,0.22), transparent 60%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .hero-card h2 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #bfdbfe;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-card ul {
+      list-style: none;
+      font-size: 13px;
+      color: var(--muted);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-card li {
+      margin-bottom: 6px;
+    }
+    .hero-card li span {
+      color: var(--accent-2);
+      margin-right: 6px;
+    }
+    .section-title {
+      font-size: 16px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      margin-top: 4px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 960px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    .card {
+      background: rgba(15,23,42,0.95);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 12px 13px;
+      font-size: 13px;
+    }
+    .card h3 {
+      font-size: 14px;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .card h3 span {
+      display: inline-flex;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      background: rgba(56,189,248,0.11);
+      color: var(--accent);
+    }
+    .card p {
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .tag {
+      display: inline-flex;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      color: var(--muted);
+      margin-right: 4px;
+      margin-top: 2px;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 18px;
+      padding-top: 12px;
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer strong {
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <div class="brand"><span>PRO-LIMP</span> · AUTOMATIZACIÓN</div>
+        <div class="chip">IA aplicada · Make.com · APIs · Sistemas inteligentes</div>
+      </div>
+      <div class="chip">Contacto directo: <strong>+34 636 832 005</strong></div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Tutoriales y sistemas de automatización para la nueva ERA de la IA.</h1>
+        <p>
+          Web personal de Rubén Urbano donde documenta, paso a paso, cómo conectar Make.com con
+          APIs, Google Sheets, CRMs y herramientas reales de trabajo. Sin humo, sin palabreo:
+          solo cosas que funcionan y cualquiera puede seguir.
+        </p>
+        <div class="hero-cta">
+          <a href="#tutoriales" class="btn btn-primary">Ver tutoriales destacados</a>
+          <a href="#contacto" class="btn btn-ghost">Pedir ayuda con una automatización</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h2>Qué encontrarás aquí</h2>
+        <ul>
+          <li><span>●</span>Tutoriales educativos en formato HTML + PDF, con mapa mental e infografías.</li>
+          <li><span>●</span>Ejemplos reales usando Make.com, APIs, Google Sheets, Supabase y más.</li>
+          <li><span>●</span>Ideas para convertir procesos manuales en sistemas inteligentes.</li>
+          <li><span>●</span>Todo explicado en castellano, desde la práctica y con tutoriales que CUALQUIERA puede seguir.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="tutoriales">
+      <div class="section-title">Tutoriales destacados</div>
+      <div class="grid">
+        <article class="card">
+          <h3><span>1</span>Connect any API to Make.com</h3>
+          <p>
+            Cómo usar el módulo HTTP y “Make an API call” para conectar servicios aunque no
+            tengan integración oficial. Incluye mapa mental y versión PDF.
+          </p>
+          <div class="tag">HTTP</div><div class="tag">APIs</div><div class="tag">Make.com</div>
+          <!-- Reemplaza # por el enlace real cuando lo publiques -->
+          <p style="margin-top:6px;"><a href="#" style="color:#38bdf8;text-decoration:none;">Abrir tutorial</a></p>
+        </article>
+
+        <article class="card">
+          <h3><span>2</span>Routers y filtros en Make.com</h3>
+          <p>
+            Escenario completo para enviar respuestas de un Google Form a dos Google Sheets (USA
+            y Francia) usando routers, filtros simples y filtros compuestos.
+          </p>
+          <div class="tag">Routers</div><div class="tag">Filtros</div><div class="tag">Google Sheets</div>
+          <p style="margin-top:6px;"><a href="#" style="color:#38bdf8;text-decoration:none;">Abrir tutorial</a></p>
+        </article>
+
+        <article class="card">
+          <h3><span>3</span>Tutorial libre</h3>
+          <p>
+            Espacio reservado para el siguiente sistema que documentes: CRM, seguimiento de
+            clientes de limpieza, facturación, reservas o lo que quieras automatizar.
+          </p>
+          <div class="tag">Próximamente</div><div class="tag">PRO-LIMP</div>
+          <p style="margin-top:6px;"><span style="color:#f97316;">En preparación…</span></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="section-title">Contacto</div>
+      <div class="card">
+        <h3><span>✉</span>¿Necesitas ayuda con una automatización?</h3>
+        <p>
+          Si quieres que revisemos un escenario de Make.com, una idea de sistema inteligente o un
+          proceso que quieres automatizar, puedes contactar directamente:
+        </p>
+        <p style="margin-top:4px;">
+          <strong>WhatsApp:</strong> +34 636 832 005<br />
+          <strong>Marca:</strong> PRO-LIMP AUTOMATIZACIÓN<br />
+          <strong>Zona:</strong> Comunidad Valenciana, España
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div><strong>PRO-LIMP AUTOMATIZACIÓN</strong> · Sistemas de IA y automatización para negocios reales.</div><div>Contacto directo: +34 636 832 005</div>
+      <div>Rubén Urbano · Esta web es un laboratorio vivo de experimentos que funcionan.</div>
+    </footer>
+  </div>
+</body>
+</html>

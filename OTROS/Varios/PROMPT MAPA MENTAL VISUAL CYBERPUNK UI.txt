@@ -1,0 +1,25 @@
+Genera un MAPA MENTAL VISUAL en estilo **CYBERPUNK UI**, totalmente en **castellano** y sin faltas de ortografía.
+
+ESTILO EXACTO:
+- Formato vertical **4:5**.
+- Fondo oscuro futurista con sutil textura digital.
+- Colores NEÓN brillantes: violeta, azul eléctrico, turquesa y naranja fuego.
+- Glow intenso en títulos y cajas.
+- Contenedores rectangulares con bordes luminosos.
+- Flechas y líneas de conexión de estilo circuito electrónico.
+- Iconos minimalistas en neón (IA, datos, código, web, etc.).
+- Tipografía moderna, sans-serif, clara y de alto contraste.
+- Composición jerárquica: título superior grande, secciones en bloques con glow suave.
+- Estética parecida a una **UI holográfica** o panel HUD futurista.
+- Todo el texto debe ser legible, sin inventar contenido extra. SOLO usar el texto que te doy.
+
+REQUISITOS:
+- Título grande brillante tipo neón.
+- Bloques de información organizados en secciones claras.
+- Líneas luminosas conectando nodos.
+- Estilo coherente con infografía subida en: https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Master%20JSON%20data%20in%20MAKEcom.jpeg
+- NO deformar texto, NO añadir errores ortográficos.
+
+CONTENIDO A USAR:
+Utiliza siempre y unicamente el documento json adjunto.
+Primero resume el contenido del JSON en frases cortas (2 líneas por bloque) sin errores ortograficos y luego genera el mapa mental visual en estilo Cyberpunk Ui

@@ -1,0 +1,164 @@
+##itemID:000
+##menu-item BEGIN
+Use This Free Google Sheets App Script to Trigger Make.com  
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Use This Free Google Sheets App Script to Trigger Make.com:  
+Web Original:
+
+https://youtu.be/LTMvHKyrzLg?si=cJsq3jp6saea8x-L
+
+Google Apps Script that triggers a Make.com scenario instantly from Google Sheets:  
+https://www.theaiautomators.com/how-to-use-an-app-script-to-trigger-make-com-from-google-sheets/
+##Contenido END
+
+
+##itemID:001
+##menu-item BEGIN
+Crear o abrir una hoja de cálculo en Google Sheets
+##menu-item END
+##Contenido BEGIN
+Crear o abrir una hoja de cálculo en Google Sheets:
+
+1. Abre tu navegador y entra en [https://sheets.google.com](https://sheets.google.com).  
+2. Inicia sesión con tu cuenta de Google.  
+3. Puedes crear una hoja nueva con el botón **“+ En blanco”** o abrir una existente si quieres que los datos de esa hoja se sincronicen con Make.com.  
+4. Guarda el documento con un nombre identificable, por ejemplo: “Trigger Make Test Sheet”.
+##Contenido END
+
+
+##itemID:002
+##menu-item BEGIN
+Abrir el editor de Apps Script
+##menu-item END
+##Contenido BEGIN
+Abrir el editor de Apps Script:
+
+1. Desde la hoja de cálculo abierta, haz clic en **Extensiones → Apps Script**.  
+2. Se abrirá una nueva pestaña con el entorno de Google Apps Script vinculado a tu hoja.  
+3. Borra el contenido del archivo **Code.gs** y prepárate para pegar el nuevo script.
+##Contenido END
+
+
+##itemID:003
+##menu-item BEGIN
+Pegar y configurar el script de conexión a Make.com
+##menu-item END
+##Contenido BEGIN
+Pegar y configurar el script de conexión a Make.com:
+
+1. Copia el siguiente código y pégalo en el editor de Apps Script:
+
+```
+function triggerMake() {
+  const webhookUrl = 'URL_DEL_WEBHOOK_DE_MAKE';
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  const data = sheet.getDataRange().getValues();
+  
+  const payload = {
+    sheetName: sheet.getName(),
+    timestamp: new Date(),
+    values: data
+  };
+  
+  const options = {
+    method: 'post',
+    contentType: 'application/json',
+    payload: JSON.stringify(payload)
+  };
+  
+  UrlFetchApp.fetch(webhookUrl, options);
+}
+```
+
+2. Sustituye **‘URL_DEL_WEBHOOK_DE_MAKE’** por la URL real del *webhook* que obtendrás en el panel de Make.com.  
+3. Haz clic en el icono de **disquete** o presiona **Ctrl + S** para guardar los cambios.  
+4. El código usa la función **UrlFetchApp.fetch()**, documentada oficialmente por Google, para enviar un POST al webhook.
+##Contenido END
+
+
+##itemID:004
+##menu-item BEGIN
+Obtener el Webhook de Make.com
+##menu-item END
+##Contenido BEGIN
+Obtener el Webhook de Make.com:
+
+1. Ingresa a tu cuenta de Make en [https://www.make.com](https://www.make.com).  
+2. Crea un nuevo escenario y añade el módulo **Webhooks → Custom webhook**.  
+3. Dale un nombre, por ejemplo: “Google Sheets Trigger”.  
+4. Copia la URL del webhook que Make genera; este será el valor que deberás colocar en el parámetro **webhookUrl** del script anterior.  
+5. No cierres el escenario; Make esperará una llamada de prueba para validar el webhook.
+##Contenido END
+
+
+##itemID:005
+##menu-item BEGIN
+Probar la función triggerMake
+##menu-item END
+##Contenido BEGIN
+Probar la función triggerMake:
+
+1. En el editor de Apps Script, selecciona en el menú superior la función **triggerMake** y pulsa el botón **Ejecutar ▶️**.  
+2. La primera vez, aparecerá una ventana solicitando autorización. Selecciona tu cuenta de Google y aprueba los permisos.  
+3. Tras la autorización, vuelve a ejecutar la función.  
+4. En Make.com, el webhook captará la solicitud y mostrará el evento recibido.  
+5. Si observas los datos del mensaje, verás los valores de tu hoja y la marca temporal, confirmando que la conexión funciona correctamente.
+##Contenido END
+
+
+##itemID:006
+##menu-item BEGIN
+Conectar el webhook a otras acciones de Make.com
+##menu-item END
+##Contenido BEGIN
+Conectar el webhook a otras acciones de Make.com:
+
+1. Una vez que Make haya recibido correctamente la prueba, añade los módulos siguientes según tus necesidades (por ejemplo: Gmail, Slack, Airtable, etc.).  
+2. Arrastra líneas de conexión desde el webhook hacia el nuevo módulo para definir el flujo.  
+3. Guarda el escenario en Make y actívalo con el botón **“ON”**.  
+4. Ahora, cada vez que ejecutes **triggerMake()** desde Google Sheets, Make reaccionará automáticamente y completará las acciones configuradas.
+##Contenido END
+
+
+##itemID:007
+##menu-item BEGIN
+Automatizar el disparador dentro de Google Sheets
+##menu-item END
+##Contenido BEGIN
+Automatizar el disparador dentro de Google Sheets:
+
+1. En el editor de Apps Script, entra al menú **Activadores del proyecto (reloj icono)**.  
+2. Haz clic en **“Añadir activador”**.  
+3. En la nueva ventana, selecciona:  
+   - Función: `triggerMake`  
+   - Tipo de evento: “Al editar” o “Al cambiar de hoja” según tus necesidades.  
+4. Guarda y concédele permisos si los requiere.  
+5. Desde ahora, Make se activará automáticamente cuando hagas cambios definidos en tu hoja.
+##Contenido END
+
+
+##itemID:008
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Google Apps Script that triggers a Make.com scenario instantly from Google Sheets:  
+https://www.theaiautomators.com/how-to-use-an-app-script-to-trigger-make-com-from-google-sheets/
+
+
+- **Google Apps Script – UrlFetchApp.fetch()**  
+  Referencia oficial: [https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app](https://developers.google.com/apps-script/reference/url-fetch/url-fetch-app)  
+
+- **Google Sheets – Vínculo con Apps Script**  
+  Documentación: [https://developers.google.com/apps-script/guides/sheets](https://developers.google.com/apps-script/guides/sheets)  
+
+- **Make.com – Webhooks**  
+  Sección oficial: [https://www.make.com/en/help/tools/webhooks](https://www.make.com/en/help/tools/webhooks)  
+
+- **Validación del flujo**  
+  Probado según la guía de *The AI Automators* que explica cómo conectar Google Sheets con Make mediante Apps Script.
+##Contenido END

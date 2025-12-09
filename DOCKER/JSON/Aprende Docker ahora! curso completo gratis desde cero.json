@@ -1,0 +1,65 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "WEB ORIGINAL:",
+      "contenido": "Aprende Docker ahora! curso completo gratis desde cero!:\n(Web Original)\n\nhttps://youtu.be/4Dko5W96WHg?si=oCSY002FNUdpqjNU"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "1. ¿Qué es Docker y por qué es tan importante?",
+      "contenido": "1. ¿Qué es Docker y por qué es tan importante?:\n\nImagina que creas una aplicación en tu ordenador. Funciona perfectamente. Pero cuando se la pasas a un amigo o la subes a un servidor, de repente falla. Faltan programas, las versiones no coinciden, etc. Este es el clásico problema de \"en mi máquina funciona\".\n\nDocker soluciona esto. Es una herramienta que empaqueta tu aplicación junto con **todo lo que necesita para funcionar** (librerías, configuraciones, dependencias) en una caja aislada y estandarizada llamada **contenedor**.\n\nEsta \"caja\" o contenedor se puede ejecutar en cualquier ordenador que tenga Docker instalado, garantizando que la aplicación funcionará siempre de la misma manera, sin importar el entorno. Es como meter tu aplicación en un tupper hermético que la protege del exterior y le da todo lo que necesita para vivir."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "2. Contenedores vs. Máquinas Virtuales (La Gran Diferencia)",
+      "contenido": "2. Contenedores vs. Máquinas Virtuales (La Gran Diferencia):\n\nTanto los contenedores como las máquinas virtuales (VM) permiten aislar aplicaciones, pero lo hacen de forma muy diferente.\n\n*   **Máquina Virtual (VM):** Es como tener un ordenador completo dentro de tu ordenador. Incluye su propio sistema operativo (Windows, Linux), lo que consume muchos recursos (memoria RAM, disco duro) y tarda en arrancar. Es pesada y lenta.\n\n*   **Contenedor de Docker:** Es mucho más ligero. En lugar de instalar un sistema operativo completo, un contenedor comparte el sistema operativo de la máquina anfitriona. Solo empaqueta la aplicación y sus dependencias directas. Esto hace que sea increíblemente rápido de iniciar y que ocupe mucho menos espacio y memoria.\n\nEn resumen: una VM virtualiza el hardware (un PC completo), mientras que un contenedor virtualiza el sistema operativo (solo lo necesario para la app)."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "3. Conceptos Clave: Imagen y Contenedor",
+      "contenido": "3. Conceptos Clave: Imagen y Contenedor:\n\nPara entender Docker, solo necesitas dominar dos conceptos fundamentales:\n\n1.  **Imagen (Image):** Es una plantilla de solo lectura que contiene las instrucciones para crear un contenedor. Es como el plano de una casa o la receta de un pastel. La imagen incluye el código de la aplicación, las librerías, las variables de entorno y los archivos de configuración. Las imágenes no se ejecutan, solo sirven como base.\n\n2.  **Contenedor (Container):** Es una instancia en ejecución de una imagen. Es el resultado vivo y funcional de la plantilla. Usando la analogía anterior, si la imagen es la receta, el contenedor es el pastel ya horneado y listo para comer. Puedes crear muchos contenedores idénticos a partir de una única imagen."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "4. Instalación de Docker Desktop",
+      "contenido": "4. Instalación de Docker Desktop:\n\nLa forma más sencilla de empezar a usar Docker en Windows y macOS es instalando **Docker Desktop**. Es una aplicación que incluye todo lo necesario: el motor de Docker, la herramienta de línea de comandos (CLI) y una interfaz gráfica para gestionar tus imágenes y contenedores de forma visual.\n\n1.  Ve a la página oficial de Docker: [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)\n2.  Descarga el instalador correspondiente a tu sistema operativo (Windows o Mac).\n3.  Sigue los pasos del asistente de instalación. Es un proceso simple y directo.\n\nUna vez instalado, verás un icono de una ballena en tu barra de tareas, indicando que Docker está en funcionamiento. Para verificar que todo está correcto, abre una terminal o PowerShell y escribe `docker --version`. Deberías ver la versión de Docker instalada."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "5. Tu Primer Contenedor: `hello-world`",
+      "contenido": "5. Tu Primer Contenedor: `hello-world`:\n\nLa mejor forma de comprobar que Docker funciona es ejecutar tu primer contenedor. El equipo de Docker creó una imagen especial para esto llamada `hello-world`.\n\nAbre tu terminal y ejecuta el siguiente comando:\n\n```\ndocker run hello-world\n```\n\n¿Qué acaba de pasar?\n1.  Docker buscó la imagen `hello-world` en tu ordenador.\n2.  Como no la encontró (era la primera vez), fue a **Docker Hub** (una biblioteca pública de imágenes) y la descargó automáticamente.\n3.  Una vez descargada, creó un nuevo contenedor a partir de esa imagen.\n4.  Ejecutó el contenedor, que imprimió un mensaje de bienvenida en tu terminal y luego se detuvo.\n\n¡Felicidades, has ejecutado tu primer contenedor!"
+    },
+    {
+      "itemID": "006",
+      "menu_item": "6. Comandos Esenciales para el Día a Día",
+      "contenido": "6. Comandos Esenciales para el Día a Día:\n\nAquí tienes los comandos básicos que usarás constantemente para gestionar tus contenedores e imágenes:\n\n*   **`docker ps`**: Muestra una lista de todos los contenedores que están **actualmente en ejecución**.\n*   **`docker ps -a`**: Muestra **todos** los contenedores, incluyendo los que ya se han detenido (como el de `hello-world`).\n*   **`docker images`**: Muestra una lista de todas las imágenes que has descargado en tu ordenador.\n*   **`docker stop [ID_del_contenedor]`**: Detiene un contenedor que está en ejecución. Puedes obtener el ID con el comando `docker ps`.\n*   **`docker rm [ID_del_contenedor]`**: Elimina un contenedor que está detenido. Esto libera el espacio que ocupaba.\n*   **`docker rmi [ID_de_la_imagen]`**: Elimina una imagen de tu ordenador. Solo puedes borrar imágenes que no estén siendo usadas por ningún contenedor."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "7. Creando tu Propia Imagen con un Dockerfile",
+      "contenido": "7. Creando tu Propia Imagen con un Dockerfile:\n\nLa verdadera magia de Docker es crear tus propias imágenes para tus aplicaciones. Esto se hace con un archivo de texto simple llamado `Dockerfile` (sin extensión).\n\nUn `Dockerfile` es una receta con instrucciones paso a paso para construir tu imagen. Las instrucciones más comunes son:\n\n*   **`FROM`**: Especifica la imagen base sobre la que construirás. Por ejemplo, `FROM node:18` para una aplicación de Node.js o `FROM python:3.9` para una de Python.\n*   **`WORKDIR`**: Establece el directorio de trabajo dentro del contenedor.\n*   **`COPY`**: Copia archivos y carpetas desde tu ordenador al interior del contenedor. Por ejemplo, `COPY . .` para copiar todo el código de tu proyecto.\n*   **`RUN`**: Ejecuta un comando durante el proceso de construcción. Se usa para instalar dependencias, como `RUN npm install`.\n*   **`CMD`**: Define el comando que se ejecutará por defecto cuando el contenedor se inicie. Por ejemplo, `CMD [\"node\", \"app.js\"]`."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "8. Construir y Ejecutar tu Imagen Personalizada",
+      "contenido": "8. Construir y Ejecutar tu Imagen Personalizada:\n\nUna vez que tienes tu `Dockerfile` en la carpeta de tu proyecto, sigues dos pasos:\n\n**1. Construir la Imagen:**\nUsa el comando `docker build`. La `-t` sirve para ponerle un nombre (tag) a tu imagen.\n\n```\ndocker build -t mi-primera-app .\n```\nEl punto `.` al final le dice a Docker que busque el `Dockerfile` en el directorio actual. Docker leerá las instrucciones y creará tu imagen.\n\n**2. Ejecutar un Contenedor desde tu Imagen:**\nAhora que la imagen existe en tu máquina, puedes crear contenedores con ella usando `docker run`.\n\n```\ndocker run -p 3000:80 mi-primera-app\n```\nEl parámetro `-p 3000:80` es muy importante. Se llama \"mapeo de puertos\" y conecta el puerto 3000 de tu ordenador con el puerto 80 del contenedor. Esto te permite acceder a la aplicación web que corre dentro del contenedor abriendo tu navegador en `http://localhost:3000`."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "9. Persistencia de Datos con Volúmenes",
+      "contenido": "9. Persistencia de Datos con Volúmenes:\n\nUn contenedor es efímero: si lo eliminas, todos los datos que generó (como una base de datos, archivos subidos por un usuario, etc.) se pierden para siempre.\n\nPara solucionar esto, se usan los **volúmenes**. Un volumen es una forma de conectar una carpeta de tu ordenador (el host) con una carpeta dentro del contenedor. Los datos se guardan en la carpeta de tu ordenador, por lo que persisten incluso si el contenedor se elimina.\n\nPara crear un volumen, se usa la bandera `-v` en el comando `docker run`:\n\n```\ndocker run -v ruta/en/mi/pc:/ruta/dentro/del/contenedor mi-imagen\n```\n\nEsto asegura que tus datos importantes estén siempre a salvo, fuera del ciclo de vida del contenedor."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "10. Orquestando Servicios con Docker Compose",
+      "contenido": "10. Orquestando Servicios con Docker Compose:\n\nLas aplicaciones reales suelen tener varias partes: un servidor web, una base de datos, un servicio de caché, etc. Cada parte se ejecuta en su propio contenedor. Gestionar todos estos contenedores uno por uno con `docker run` sería muy complicado.\n\n**Docker Compose** es una herramienta que te permite definir y ejecutar aplicaciones multi-contenedor de forma sencilla. Funciona con un único archivo de configuración llamado `docker-compose.yml`.\n\nEn este archivo YAML, defines todos los \"servicios\" (contenedores) que componen tu aplicación, especificando su imagen, puertos, volúmenes y cómo se conectan entre sí.\n\nUna vez tienes el archivo, en lugar de ejecutar muchos comandos `docker run`, simplemente ejecutas:\n\n*   `docker-compose up`: Para crear y arrancar todos los contenedores.\n*   `docker-compose down`: Para detener y eliminar todos los contenedores.\n\nDocker Compose simplifica enormemente la gestión de aplicaciones complejas."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\nTodos los conceptos y comandos explicados en este tutorial se basan en la documentación oficial de Docker, garantizando su precisión y validez técnica.\n\n1.  **Concepto de Docker y Contenedores:** La explicación de qué es Docker y cómo empaqueta aplicaciones está validada por la página de introducción oficial.\n    *   Fuente: [Docker Overview](https://docs.docker.com/get-started/overview/)\n\n2.  **Diferencia entre Contenedores y Máquinas Virtuales:** La comparación se basa en el diagrama y la explicación proporcionada por Docker en su guía de inicio.\n    *   Fuente: [Containers vs. Virtual Machines](https://docs.docker.com/get-started/overview/#containers-and-virtual-machines)\n\n3.  **Instalación de Docker Desktop:** El procedimiento sigue las guías oficiales para cada sistema operativo.\n    *   Fuente: [Install Docker Desktop](https://docs.docker.com/desktop/)\n\n4.  **Comandos `docker run`, `ps`, `images`, etc.:** La descripción de cada comando se corresponde con la referencia oficial de la interfaz de línea de comandos (CLI) de Docker.\n    *   Fuente: [Docker CLI Reference](https://docs.docker.com/engine/reference/commandline/cli/)\n\n5.  **Creación de un `Dockerfile`:** Las instrucciones (`FROM`, `COPY`, `RUN`, `CMD`) están documentadas en la referencia oficial para la construcción de imágenes.\n    *   Fuente: [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)\n\n6.  **Mapeo de Puertos y Volúmenes:** La funcionalidad de `-p` (publish) y `-v` (volume) está detallada en la documentación del comando `docker run` y en la sección de almacenamiento.\n    *   Fuente: [Docker run reference](https://docs.docker.com/engine/reference/commandline/run/)\n    *   Fuente: [Docker Volumes](https://docs.docker.com/storage/volumes/)\n\n7.  **Uso de Docker Compose:** La explicación del archivo `docker-compose.yml` y los comandos `up`/`down` se alinea con la guía de inicio de Docker Compose.\n    *   Fuente: [Overview of Docker Compose](https://docs.docker.com/compose/)"
+    }
+  ]
+}

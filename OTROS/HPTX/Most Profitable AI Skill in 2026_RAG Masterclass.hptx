@@ -1,0 +1,160 @@
+##itemID:000
+##menu-item BEGIN
+Most Profitable AI Skill in 2026_RAG Masterclass WEB ORIGINAL
+##menu-item END
+##Contenido BEGIN
+Most Profitable AI Skill in 2026_RAG Masterclass Web Original
+Most Profitable AI Skill in 2026_RAG Masterclass
+httpsyoutu.bedxeCH2duhMo?sib6rk7Yx10pmpn-7-
+
+PRO-LIMP AUTOMATIZACION
+34 636832005
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción y fundamentos de RAG
+##menu-item END
+##Contenido BEGIN
+Introducción y fundamentos de RAG
+El sistema RAG se presenta como la habilidad de IA más rentable para 2026, en un contexto donde el mercado global de la inteligencia artificial se proyecta a alcanzar 1.8 billones para 2030 y las empresas necesitan sistemas que trabajen con sus propios datos. RAG significa Generación Aumentada por Recuperación y se describe como una IA que recuerda, aprende y responde de forma más inteligente, combinando recuperación de información, aumento con contexto y generación de respuestas superiores.
+Se explica que RAG tiene aplicaciones casi infinitas en sectores como bienes raíces, operaciones, educación y otros, y que es una defensa sólida frente al problema de la memoria limitada y las alucinaciones de los modelos de lenguaje, especialmente en sectores sensibles como la atención médica donde los errores pueden ser costosos o ilegales. A diferencia del fine-tuning, que requiere entrenar un modelo con datos específicos y puede costar entre 5,000 y 50,000 o más, RAG es mucho más accesible y económico.
+El modelo RAG se compara con una tarjeta de índice para un bibliotecario con un IQ de 800 que sabe exactamente dónde está la información dentro de un estante infinito de libros. Esta analogía resalta que los modelos de lenguaje tienen una ventana de contexto limitada, porque en cada interacción se pega toda la conversación en el chat y, si la conversación es demasiado larga, el modelo olvida partes importantes de lo anterior; RAG soluciona esto recuperando solo lo más relevante.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+El proceso de vectorización y bases de datos vectoriales
+##menu-item END
+##Contenido BEGIN
+El proceso de vectorización y bases de datos vectoriales
+La base técnica de RAG es la vectorización de los datos, que comienza con la división del texto original en fragmentos o chunks, por ejemplo, en bloques equivalentes a unas diez páginas. Cada fragmento se convierte después en un vector o embedding, un número muy largo que actúa como identificador único del contenido mediante un modelo de embeddings.
+Estos embeddings se almacenan en una base de datos vectorial como Pine Cone o Superbase, que permite búsquedas semánticas rápidas y eficientes sobre grandes volúmenes de información. Cuando el usuario hace una pregunta, esa consulta también se convierte en un vector y la base de datos devuelve los fragmentos más relevantes según su similitud con la pregunta.
+RAG se puede aplicar a casi cualquier tipo de datos: PDFs, documentos, contratos, hojas de cálculo, conversaciones telefónicas, páginas de internet, libros, videos de YouTube, podcasts y correos electrónicos, lo que convierte la técnica en un marco versátil para prácticamente cualquier escenario de información textual. Esta flexibilidad hace posible que empresas de múltiples sectores conviertan su conocimiento en una base consultable por IA sin necesidad de reentrenar grandes modelos.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Construcciones prácticas con plataformas RAG
+##menu-item END
+##Contenido BEGIN
+Construcciones prácticas con plataformas RAG
+El tutorial muestra cómo construir sistemas RAG utilizando varias plataformas que permiten empezar de forma rápida sin necesidad de programar todo desde cero. Una de ellas es 11 Labs Agents, que permite crear agentes de soporte al cliente de texto o audio, a los que se les añaden documentos o URLs como base de conocimiento, por ejemplo una póliza de seguro, para poder conversar con el contenido.
+Otra plataforma clave es Google Notebook LLM, donde es posible subir videos de YouTube, documentos de Google Drive o sitios web para chatear con ese contenido y, además, generar un resumen de audio tipo podcast para acelerar el aprendizaje. También se utilizan los OpenAI Agents en ChatGPT, que permiten subir archivos y definir barandales o guardrails para eliminar información de identificación personal como PII, números de seguridad social o datos sensibles, evitando que lleguen al sistema.
+Finalmente, se introduce N8N como plataforma no-code para construir flujos de trabajo RAG completos. Un ejemplo explica cómo conectar un disparador de formulario a una base de datos vectorial Pine Cone y a un modelo de embedding de OpenAI como text embedding three small para vectorizar documentos grandes rápidamente y luego crear un agente de IA que permita consultarlos mediante lenguaje natural.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Piedra 1 del RAG avanzado Datos y limpieza
+##menu-item END
+##Contenido BEGIN
+Piedra 1 del RAG avanzado Datos y limpieza
+El primer principio del RAG avanzado se centra en los datos y la limpieza, bajo la idea de que si entra basura, sale basura, por lo que la calidad de la salida depende directamente de la calidad de entrada. El proceso de limpieza incluye eliminar información sensible como historiales médicos o nombres privados, utilizando prompts del sistema que instruyan a la IA a detectar y borrar este tipo de datos antes de su almacenamiento.
+También se deben eliminar datos antiguos, inexactos o duplicados para evitar confusión y ruido en las futuras consultas, así como quitar palabras de relleno, tics verbales y errores de transcripción que son habituales en contenidos como videos o reuniones. En esta piedra se introduce la obtención y preparación de datos profundos a partir de múltiples fuentes, utilizando herramientas como Appify para scrapear transcripciones de YouTube y artículos, y luego procesarlos con un agente de IA en N8N especializado en limpieza de transcripciones para purificar el texto para RAG.
+Además, se describe el uso de feeds RSS mediante RSS.app para crear flujos automatizados que conviertan contenido nuevo de Twitter, YouTube o artículos en material listo para vectorizar en el momento en que se publica. Se integran correos electrónicos usando un disparador de Gmail que extrae el cuerpo del mensaje, el remitente, el asunto y la fecha, y se explica que estos datos deben almacenarse junto con metadatos como la categoría del correo asignada por un agente de IA, por ejemplo admin u oportunidad, lo que aporta contexto útil en las consultas futuras.
+Por último, se menciona la inteligencia de reuniones mediante servicios como Fireflies, que transcriben automáticamente las reuniones y permiten construir flujos donde esas transcripciones se descargan, se convierten en documentos de Google Drive y se vectorizan, haciendo posible hacer preguntas sobre conversaciones pasadas y reutilizar el conocimiento compartido en las sesiones.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Piedra 1 avanzada Datos estructurados y bases relacionales
+##menu-item END
+##Contenido BEGIN
+Piedra 1 avanzada Datos estructurados y bases relacionales
+Dentro de la misma primera piedra, el tutorial aborda el tratamiento de grandes conjuntos de datos estructurados, como archivos CSV de empleados, donde el RAG tradicional puede perder contexto. Para estos casos se propone utilizar bases de datos relacionales como Postgres o Superbase, a las que un agente de IA accede para generar consultas SQL seguras de solo lectura que permiten analizar tendencias, calcular salarios promedio u otras métricas sin exponer datos de forma insegura.
+Este enfoque convierte al agente de IA en una especie de secretario de nivel 10 para la gestión de datos, capaz no solo de leer información sino, si se configura así, de insertar o actualizar registros en la base de datos. El resultado es una combinación de RAG y acceso directo a datos estructurados que amplía el alcance de los sistemas de IA, especialmente en contextos empresariales donde conviven documentos no estructurados con tablas altamente estructuradas.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Piedra 2 del RAG avanzado Modelo de embedding
+##menu-item END
+##Contenido BEGIN
+Piedra 2 del RAG avanzado Modelo de embedding
+El segundo principio del RAG avanzado se centra en la elección del modelo de embedding, que determina en gran medida la calidad de la organización y búsqueda de la información. Se explica que la diferencia entre un modelo de baja calidad y uno de alta calidad equivale a la diferencia entre tener un asistente de nivel 1 y uno de nivel 10 dentro de la organización.
+El tutorial menciona que existen tablas de clasificación o leaderboards donde se mide el rendimiento de distintos modelos de vectorización y que el modelo de OpenAI comúnmente utilizado, text embedding three small, aparece alrededor del puesto 17. A partir de ahí se recomienda utilizar modelos de mayor rendimiento como Multilingual E5 instruct large, que figura en el top 7 de las clasificaciones globales y ofrece mejor calidad en la búsqueda semántica.
+Se describe cómo implementar estos modelos de embedding avanzados utilizando Pine Cone junto con la API de Hugging Face, lo que permite sustituir el modelo de OpenAI por uno más potente sin cambiar toda la arquitectura. Este cambio mejora de forma notable la calidad de la recuperación dentro del sistema RAG, ya que los vectores se vuelven más representativos del significado real del texto.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Piedra 3 del RAG avanzado Prompting, Query Rewriter y Reranker
+##menu-item END
+##Contenido BEGIN
+Piedra 3 del RAG avanzado Prompting, Query Rewriter y Reranker
+El tercer principio aborda el problema de las malas preguntas del usuario y la claridad de las consultas. Para resolverlo se introduce el Query Rewriter, un agente de IA especializado cuya única función es tomar la pregunta original del usuario y reescribirla en dos o tres alternativas semánticamente ricas que capturan mejor la intención y el contexto, lo que incrementa la calidad de la búsqueda en la base de datos RAG.
+Después de la fase de recuperación inicial, donde el sistema puede traer por ejemplo 20 fragmentos relevantes, entra en juego el Reranker, una herramienta como Cohere Reranker que clasifica esos fragmentos y selecciona solo los 3 o 4 más relevantes y útiles para la respuesta final. Esta combinación de reescritura y reordenamiento permite que el sistema entregue respuestas más precisas y alineadas con lo que el usuario realmente necesita.
+En esta piedra también se tratan los prompts avanzados, donde se define de forma explícita el rol del agente, por ejemplo experto en un dominio o analista, y se especifica el formato de salida como markdown o respuestas concisas, así como la estrategia de conocimiento. Se diferencian dos modos: Local Estricta, donde el modelo solo cita y extrae información de la fuente RAG, ideal para bufetes de abogados o contextos que requieren citas exactas, y Global Aumentada, donde el modelo usa tanto la base RAG como su conocimiento general para aportar contexto adicional.
+Finalmente, se menciona el concepto de Graph RAG como una idea más avanzada y de nicho, que se centra en representar las relaciones entre diferentes elementos del conjunto de datos para resolver consultas relacionales complejas. Aunque no forma parte del enfoque principal del tutorial, se presenta como una posible evolución para casos de uso donde la estructura de las conexiones entre datos es tan importante como los propios documentos.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Visión global del sistema RAG como equipo de investigación
+##menu-item END
+##Contenido BEGIN
+Visión global del sistema RAG como equipo de investigación
+El tutorial presenta el sistema RAG como si fuera un equipo de investigación de élite trabajando para el usuario. La limpieza de datos de la Piedra 1 garantiza que solo se investigue material de alta calidad; la vectorización superior de la Piedra 2 asegura que ese material esté perfectamente organizado y accesible, haciendo que las búsquedas sean extremadamente eficientes.
+Por su parte, la tercera piedra con el reescritor y el clasificador de consultas actúa como un jefe de equipo que traduce las preguntas vagas en consultas de precisión láser y filtra los hallazgos para ofrecer solo las respuestas más pertinentes. De este modo, el sistema RAG completo asegura máxima precisión en las respuestas, convirtiéndose en una herramienta clave para construir soluciones de IA confiables y altamente rentables.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Preguntas y Respuestas
+##menu-item END
+##Contenido BEGIN
+Preguntas y Respuestas
+Pregunta 1 ¿Por qué se considera RAG la habilidad de IA más rentable para 2026
+Respuesta Porque combina la capacidad de los modelos de lenguaje con los datos propios de las empresas, sin necesidad de hacer fine-tuning costoso, y se puede aplicar en casi cualquier sector para resolver problemas de información de alto valor.
+
+Pregunta 2 ¿En qué se diferencia RAG del fine-tuning tradicional
+Respuesta El fine-tuning requiere entrenar un modelo con datos específicos, lo que puede costar entre 5,000 y 50,000 o más, mientras que RAG utiliza modelos ya existentes y se limita a vectorizar y recuperar información desde una base de conocimiento, siendo mucho más accesible y económico.
+
+Pregunta 3 ¿Qué tipo de datos se pueden usar en un sistema RAG
+Respuesta Se pueden usar PDFs, documentos, contratos, hojas de cálculo, conversaciones telefónicas, internet, libros, videos de YouTube, podcasts y correos electrónicos, siempre que se puedan convertir a texto para ser vectorizados.
+
+Pregunta 4 ¿Por qué es tan importante la limpieza de datos en RAG
+Respuesta Porque si los datos de entrada contienen errores, información vieja, duplicados o datos sensibles, el sistema devolverá resultados poco útiles o incluso peligrosos, por lo que es fundamental limpiar, filtrar y anonimizar el contenido antes de vectorizarlo.
+
+Pregunta 5 ¿Qué papel juegan el Query Rewriter y el Reranker
+Respuesta El Query Rewriter toma la pregunta del usuario y la transforma en varias versiones mejoradas para buscar mejor en la base RAG, mientras que el Reranker ordena los fragmentos recuperados y deja solo los más útiles, mejorando la precisión de la respuesta final.
+
+Pregunta 6 ¿Qué diferencia hay entre el modo Local Estricta y el modo Global Aumentada
+Respuesta En el modo Local Estricta el modelo solo puede usar la información de la base RAG, ideal para contextos legales o sensibles, mientras que en el modo Global Aumentada puede combinar esa base con su conocimiento general para aportar contexto y explicaciones extra.
+
+Pregunta 7 ¿Por qué es importante el modelo de embedding utilizado
+Respuesta Porque determina la calidad de la representación de los textos y, por tanto, la precisión de las búsquedas; un modelo de embedding más avanzado produce vectores que capturan mejor el significado del contenido y devuelven resultados más relevantes.
+
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+La definición general de Retrieval-Augmented Generation RAG como un patrón que combina modelos de lenguaje con acceso a bases de conocimiento externas para mejorar la precisión y actualidad de las respuestas coincide con la descripción ofrecida por proveedores cloud como Google Cloud, que explican que RAG permite a los modelos utilizar fuentes de datos empresariales para producir salidas más confiables y actualizadas.[1]
+Asimismo, la idea de que RAG se compone de un módulo de recuperación que busca documentos relevantes y un generador que produce texto final basado en esos documentos aparece en documentación técnica de marcos como Hugging Face Transformers, donde se define RAG como un modelo con componentes de retriever y generator integrados.[2][3]
+El uso de bases de datos vectoriales como pilar para almacenar embeddings y realizar búsqueda semántica se alinea con guías técnicas sobre bases como Pinecone, que describen cómo estas plataformas almacenan vectores de alta dimensión y permiten encontrar contenido similar mediante medidas de similitud, con capacidades de indexación en tiempo real para grandes volúmenes de datos.[4][5]
+En cuanto a los modelos de embedding avanzados, la recomendación de usar variantes Multilingual E5 instruct encaja con documentación y artículos técnicos que presentan Multilingual-E5-Large-Instruct como un modelo de embeddings multilingüe de alto rendimiento preparado para tareas de búsqueda semántica, clasificación y recuperación de información en múltiples idiomas.[6][7]
+Por último, la visión de RAG como marco modular y extensible con componentes de recuperación, generación y variantes avanzadas se ve reforzada por trabajos de investigación recientes que describen laboratorios y frameworks de RAG como entornos donde se prueban diferentes configuraciones de retrieval, generación y estrategias avanzadas sobre conjuntos de datos complejos.[8]
+
+[1](https://cloud.google.com/use-cases/retrieval-augmented-generation)
+[2](https://huggingface.co/docs/transformers/model_doc/rag)
+[3](https://huggingface.co/docs/transformers/en/model_doc/rag)
+[4](https://airbyte.com/data-engineering-resources/pinecone-vector-database)
+[5](https://www.pinecone.io)
+[6](https://model.aibase.com/models/details/1915693983071887362)
+[7](https://globalnodes.tech/blog/multilingual-e5-large-instruct-operations-for-llm-embedding/)
+[8](http://arxiv.org/pdf/2408.11381.pdf)
+[9](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/64556067/573e69b2-10b6-417a-bc06-4221d75d1513/PROMPT-CLAUDE-PARA-GENERAR-TUTORIAL-HPTX.txt)
+[10](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/64556067/a0e1e384-07ba-41c5-8c3e-484ecf720788/transcripcion-hoy.txt)
+[11](https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview)
+[12](https://promptrevolution.poltextlab.com/building-a-retrieval-augmented-generation-rag-system-for-domain-specific-document-querying/)
+
+The Most Profitable AI Skill in 2026 RAG Masterclass
+httpsyoutu.bedxeCH2duhMo?sib6rk7Yx10pmpn-7-
+PRO-LIMP AUTOMATIZACION
+34 636832005
+##Contenido END

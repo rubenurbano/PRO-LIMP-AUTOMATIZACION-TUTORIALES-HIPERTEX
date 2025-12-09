@@ -1,0 +1,213 @@
+##itemID:000
+##menu-item BEGIN
+Título del Video
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Título del Video:
+Crea tu registro de jornada QR, fácil y gratis [Google Sheets + AppsScript]
+
+Web Original:
+https://youtu.be/kFjV97Mc3pw?si=u6ySgeDnm0xaF7Wv
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción y funcionamiento del sistema
+##menu-item END
+##Contenido BEGIN
+Introducción y funcionamiento del sistema:
+Vamos a crear un sistema de registro de entradas y salidas mediante códigos QR. La ventaja principal es que los empleados no necesitan instalar ninguna aplicación extra; solo usarán la cámara de su teléfono.
+
+El proceso funciona así:
+
+Das de alta a los empleados en Google Sheets.
+
+El empleado escanea un "QR de registro" una única vez. Esto vincula su teléfono con su identificación (ID).
+
+Para fichar a diario, el empleado apunta su móvil al "QR de entrada" o "QR de salida".
+
+El sistema guarda automáticamente la hora y el tipo de fichaje en la hoja de cálculo.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Parte 1: Preparar tu hoja de cálculo (Google Sheets)
+##menu-item END
+##Contenido BEGIN
+Parte 1: Preparar tu hoja de cálculo (Google Sheets):
+Primero, crea un nuevo archivo en Google Sheets y llámalo "QR acceso".
+
+En la primera hoja (puedes llamarla "Puntos de Control"):
+
+Define los lugares de fichaje escribiendo "entrada" y "salida" en celdas separadas.
+
+Reserva una celda para la dirección web (URL) del servicio. Por ahora, escribe una dirección inventada temporalmente, como "meinventopuntocom".
+
+Crea una "dirección de control" usando una fórmula que una tres cosas: la dirección base (la inventada), la acción "check in" y el nombre del punto (entrada o salida).
+
+Para generar el código QR visible, usa una fórmula que llame a la página web "imagecharts.com". Configura el tamaño en 250 de alto.
+
+Este código QR generado es el que deberás imprimir y pegar en la pared para que los empleados fichen.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Parte 2: Registrar a los empleados
+##menu-item END
+##Contenido BEGIN
+Parte 2: Registrar a los empleados:
+Crea una segunda pestaña llamada "Empleados".
+
+Crea una columna para el "ID de empleado". Usa su correo electrónico como ID.
+
+Crea una columna para la "URL de registro". Esta dirección se calcula uniendo la dirección base, la acción "register" y el email del empleado.
+
+Genera el código QR de registro para cada empleado usando la misma fórmula de "imagecharts" que usaste antes.
+
+Crea una tercera y última pestaña llamada "registro". Aquí se guardarán los datos cuando alguien fiche.[1][2] Prepara columnas para: email del empleado, punto de control (entrada/salida) y hora del evento.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Parte 3: Escribir las reglas de programación (Apps Script)
+##menu-item END
+##Contenido BEGIN
+Parte 3: Escribir las reglas de programación (Apps Script):
+Ve al menú "Extensiones" y selecciona "Apps Script".[3][4][5] Aquí escribiremos el código en JavaScript.
+
+Necesitas crear dos reglas principales:
+
+Regla "check_in": Esta función recibe el ID (email) y el punto de control. Su trabajo es tomar la hora actual y añadir una nueva fila en la pestaña "registro" con esos datos.
+
+Regla "doGet": Esta es la encargada del servicio web. Muestra la página HTML en el móvil del empleado y maneja la información que llega (acción a realizar, ID de usuario e ID de la hoja).
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Parte 4: Crear la página web y la lógica (HTML/JavaScript)
+##menu-item END
+##Contenido BEGIN
+Parte 4: Crear la página web y la lógica (HTML/JavaScript):
+Crea un archivo dentro del editor llamado "Page.html".
+
+Estructura básica: Agrega herramientas de diseño (Bootstrap) y manejo de página (jQuery).
+
+Elementos visuales: Incluye un dibujo de carga (loader) y dos mensajes (uno verde para éxito y uno rojo para error).
+
+Lógica de almacenamiento: Define una clave única para el "local storage" del teléfono, combinando un nombre clave con el ID de tu hoja de cálculo.
+
+Regla de registro: Si la acción es "register", guarda el ID del empleado en el teléfono.
+
+Regla de fichaje: Si la acción es "check-in", el sistema busca el ID en el teléfono. Si no lo encuentra, pide registro. Si lo encuentra, llama a la regla "check_in" del servidor para guardar la hora.
+
+Configuración horaria: Asegúrate de seleccionar la zona horaria correcta de tu ubicación en la configuración del proyecto.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Parte 5: Publicar el sistema
+##menu-item END
+##Contenido BEGIN
+Parte 5: Publicar el sistema:
+Es hora de hacer que el sistema sea accesible.
+
+Ve a la configuración del proyecto para establecer los permisos.[3]
+
+Indica que la aplicación se ejecute como tú (el propietario).
+
+En "quién puede usar la aplicación", selecciona cualquier usuario anónimo. Esto es fundamental para que funcione sin que los empleados tengan cuenta de Google o estén logueados.
+
+Publica una "nueva implementación" como aplicación web.[6]
+
+Autoriza el acceso cuando se te solicite para que el programa pueda ver y administrar la hoja de cálculo.
+
+Copia la dirección URL que Google te proporciona al final.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Ajuste importante de la dirección web
+##menu-item END
+##Contenido BEGIN
+Ajuste importante de la dirección web:
+Si una persona tiene varias cuentas de Google abiertas a la vez, la dirección original puede fallar.
+
+Toma la dirección URL que copiaste.[6]
+
+Añade los caracteres "/a/macros/" entre el nombre principal y la palabra "script".
+
+Ve a la pestaña "Puntos de Control" en tu Google Sheets.
+
+Pega esta dirección corregida en la celda donde pusiste la dirección inventada al principio ("meinventopuntocom").
+
+Los códigos QR se actualizarán automáticamente con la dirección correcta y definitiva.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Parte 6: Prueba el sistema
+##menu-item END
+##Contenido BEGIN
+Parte 6: Prueba el sistema:
+Realiza las siguientes pruebas para asegurar que todo funciona:
+
+Prueba de registro: Abre la URL de registro de un empleado. Debe salir un mensaje de éxito, confirmando que el ID se guardó en el teléfono.
+
+Prueba de entrada: Escanea o abre la URL del punto de entrada. Debe registrarse el evento. Ve a la pestaña "registro" de tu hoja y verifica que aparezca el email, el punto y la hora.
+
+Prueba de salida: Haz lo mismo con el punto de salida y verifica que se guarde correctamente en la hoja.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+He verificado los pasos técnicos descritos en el tutorial contrastándolos con la documentación oficial de Google y recursos de desarrollo web. Aquí está el resumen de la validación:
+
+1. Uso de Apps Script y doGet:
+La función doGet(e) es el estándar oficial para manejar peticiones HTTP GET en aplicaciones web de Google Apps Script. Permite servir contenido HTML (HtmlService) y procesar parámetros de URL.
+
+Documentación oficial: Web Apps in Apps Script[7]
+
+Referencia de función: Triggers and Events (doGet)
+
+2. Despliegue y Acceso Anónimo:
+La configuración "Execute as Me" (Ejecutar como yo) combinada con "Who has access: Anyone" (Cualquiera, incluso anónimo) es la configuración correcta para permitir que usuarios sin cuenta de Google interactúen con la hoja de cálculo a través del script.[8]
+
+Fuente de soporte: Permissions for Web Apps
+
+3. Generación de QR con Fórmulas:
+El uso de la función =IMAGE() en Google Sheets combinada con una API externa (como image-charts o la antigua Google Chart API) es un método validado y común para generar códigos QR dinámicos dentro de las celdas.
+
+Referencia: Google Sheets IMAGE function
+
+4. Configuración de Zona Horaria:
+La zona horaria del script se controla a través del archivo de manifiesto (appsscript.json), lo cual es independiente de la hoja de cálculo. Es un paso técnico correcto para asegurar la precisión de los registros de tiempo.
+
+Documentación: Manifests and TimeZones
+
+5. Solución del problema de múltiples cuentas (/a/macros/):
+Añadir /a/macros/ a la URL es una solución conocida y validada por la comunidad de desarrolladores para evitar conflictos cuando un usuario tiene múltiples cuentas de Google logueadas en el mismo navegador.
+
+
+Sources
+help
+trevorfox.com
+github.com
+youtube.com
+appsscript.info
+google.com
+google.com
+youtube.com
+stackoverflow.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+Google Sheets IMAGE function QR code
+Google Apps Script doGet function documentation
+Google Apps Script Manifest timezone configuration
+Google Apps Script deploy web app anonymous access documentation
+##Contenido END

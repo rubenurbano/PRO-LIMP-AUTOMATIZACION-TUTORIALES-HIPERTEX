@@ -1,0 +1,174 @@
+##itemID:000
+##menu-item BEGIN
+Introduccion a Docker Instalacion y Ejecución Basica
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Introduccion a Docker Instalacion y Ejecución Basica:
+Web Original:
+Introduccion a Docker Instalacion y Ejecución Basica:
+GROK RESEARCH
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Bienvenido a esta guía introductoria a Docker
+##menu-item END
+##Contenido BEGIN
+Bienvenido a esta guía introductoria a Docker:
+¡Bienvenido a esta guía introductoria a Docker! Docker es una plataforma que permite crear, distribuir y ejecutar aplicaciones en contenedores, lo que facilita el desarrollo y el despliegue de software de manera consistente en diferentes entornos. En este tutorial, te guiaré paso a paso para instalar Docker Desktop en Windows 11 (usando el backend WSL 2, que es el recomendado) y ejecutar un contenedor básico como "hello-world". Esta guía se basa en la documentación oficial de Docker actualizada al 2025. Asegúrate de tener privilegios de administrador en tu máquina. Si encuentras problemas, consulta la documentación oficial en docs.docker.com.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Requisitos del Sistema
+##menu-item END
+##Contenido BEGIN
+Requisitos del Sistema:
+Antes de instalar, verifica que tu sistema cumpla con estos requisitos mínimos para Docker Desktop en Windows 11 con backend WSL 2: Windows 11 de 64 bits: Ediciones Enterprise, Pro o Education, versión 23H2 (compilación 22631) o superior. Procesador de 64 bits con traducción de direcciones de segundo nivel (SLAT). Al menos 4 GB de RAM. Virtualización de hardware habilitada en la BIOS/UEFI de tu máquina (puedes verificar esto en el Administrador de Tareas > Rendimiento > CPU, buscando "Virtualización: Habilitada"). WSL (Windows Subsystem for Linux) versión 2.1.5 o superior activado. Si no cumples con alguno, actualiza tu sistema o ajusta la configuración de la BIOS.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Paso 1: Verificar e Instalar Prerrequisitos (WSL 2)
+##menu-item END
+##Contenido BEGIN
+Paso 1: Verificar e Instalar Prerrequisitos (WSL 2):
+Docker Desktop en Windows 11 usa WSL 2 para ejecutar contenedores Linux de manera eficiente. Sigue estos pasos: 1. Abre una terminal (PowerShell o Símbolo del sistema) como administrador (haz clic derecho y selecciona "Ejecutar como administrador"). 2. Verifica la versión de WSL ejecutando: wsl --version. Si muestra detalles de versión, estás listo. Si no, o si es una versión antigua, instala o actualiza WSL con: wsl --install O: wsl --update. Esto podría requerir un reinicio de la máquina. 3. Alternativamente, descarga el instalador MSI de WSL más reciente desde la página de lanzamientos de GitHub de Microsoft: github.com/microsoft/WSL/releases. Ejecuta el archivo descargado y sigue las instrucciones.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 2: Descargar e Instalar Docker Desktop
+##menu-item END
+##Contenido BEGIN
+Paso 2: Descargar e Instalar Docker Desktop:
+1. Ve al sitio oficial de Docker y descarga el instalador: Descarga Docker Desktop para Windows. 2. Una vez descargado el archivo Docker Desktop Installer.exe, haz doble clic para ejecutarlo. 3. En la página de Configuración del instalador: Asegúrate de que la opción Usar WSL 2 en lugar de Hyper-V esté seleccionada (generalmente se selecciona automáticamente si solo hay un backend disponible). Sigue el asistente para autorizar la instalación y completar el proceso. La ruta predeterminada es C:\Program Files\Docker\Docker. 4. Si la instalación se completa con éxito, selecciona Cerrar.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Instalación por línea de comandos (opcional)
+##menu-item END
+##Contenido BEGIN
+Instalación por línea de comandos (opcional):
+En una terminal como administrador: "Docker Desktop Installer.exe" install O en PowerShell: Start-Process 'Docker Desktop Installer.exe' -Wait install Puedes agregar banderas como --accept-license para aceptar la licencia automáticamente o --backend=wsl-2 para forzar el backend.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Agregar usuario al grupo docker-users
+##menu-item END
+##Contenido BEGIN
+Agregar usuario al grupo docker-users:
+Si instalaste con una cuenta de administrador diferente, agrega tu usuario al grupo docker-users: Abre "Administración de equipos" (busca en el menú Inicio). Ve a Usuarios y grupos locales > Grupos > docker-users. Agrega tu usuario y reinicia la sesión.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Paso 3: Iniciar Docker Desktop
+##menu-item END
+##Contenido BEGIN
+Paso 3: Iniciar Docker Desktop:
+1. Busca "Docker Desktop" en el menú Inicio de Windows y ejecútalo. 2. Acepta el Acuerdo de Servicio de Suscripción de Docker para iniciar la aplicación. 3. Docker Desktop se ejecutará en segundo plano. Verás un icono en la barra de tareas. Espera a que se inicie completamente (puede tomar unos minutos la primera vez, ya que descarga componentes necesarios).
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Paso 4: Verificar la Instalación y Ejecutar un Contenedor Básico
+##menu-item END
+##Contenido BEGIN
+Paso 4: Verificar la Instalación y Ejecutar un Contenedor Básico:
+Para confirmar que todo funciona, ejecutaremos un contenedor de prueba llamado "hello-world", que imprime un mensaje simple. 1. Abre una terminal (PowerShell o Símbolo del sistema). 2. Ejecuta el siguiente comando: docker run hello-world Docker descargará la imagen "hello-world" desde Docker Hub (si no la tienes localmente). Si todo está bien, verás un mensaje como: Hello from Docker! This message shows that your installation appears to be working correctly. ... Si ves errores, como problemas de permisos, asegúrate de que estás en el grupo docker-users o reinicia Docker Desktop.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Consejos Adicionales para Instalación
+##menu-item END
+##Contenido BEGIN
+Consejos Adicionales para Instalación:
+Interfaz Gráfica: Docker Desktop tiene una UI donde puedes ver contenedores, imágenes y volúmenes. Explórala para familiarizarte. Comandos Básicos: Una vez instalado, prueba comandos como docker ps (para ver contenedores en ejecución) o docker images (para listar imágenes). Actualizaciones: Docker se actualiza automáticamente, pero puedes verificar en la app. Problemas Comunes: Si WSL no funciona, reinstálalo. Para entornos corporativos, podría requerir configuración de proxy o firewall. Siguiente Paso: Para un uso más avanzado, crea un Dockerfile para tu propia aplicación o explora Docker Compose para múltiples contenedores. ¡Felicidades! Ahora tienes Docker instalado y listo para usar. Si tienes preguntas o quieres un tutorial más avanzado (como crear imágenes personalizadas), ¡házmelo saber!
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Introducción a Crear un Dockerfile Básico
+##menu-item END
+##Contenido BEGIN
+Introducción a Crear un Dockerfile Básico:
+¡Hola! Siguiendo con nuestra introducción a Docker, ahora vamos a aprender a crear un Dockerfile. Un Dockerfile es un archivo de texto que contiene una serie de instrucciones para construir una imagen de Docker. Esta imagen se usa luego para crear contenedores que ejecutan tu aplicación de manera consistente en cualquier entorno. En este tutorial, crearemos un Dockerfile simple para una aplicación web básica en Node.js que muestra "¡Hola, Mundo!" en un servidor Express. Asumiré que ya tienes Docker instalado (como en el tutorial anterior) y que estás trabajando en Windows 11 con PowerShell o el Símbolo del sistema. Si no tienes Node.js instalado localmente, no te preocupes: Docker lo manejará todo. Esta guía se basa en la documentación oficial de Docker actualizada al 2025. Para más detalles, consulta docs.docker.com/engine/reference/builder/.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Requisitos para Crear Dockerfile
+##menu-item END
+##Contenido BEGIN
+Requisitos para Crear Dockerfile:
+Docker Desktop instalado y en ejecución. Un editor de texto (como Notepad++, VS Code o incluso Bloc de notas). Conocimientos básicos de comandos en la terminal.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Paso 1: Preparar el Directorio del Proyecto
+##menu-item END
+##Contenido BEGIN
+Paso 1: Preparar el Directorio del Proyecto:
+1. Abre una terminal (PowerShell o Símbolo del sistema). 2. Crea un nuevo directorio para tu proyecto y navega a él: mkdir mi-app-docker cd mi-app-docker 3. Dentro de este directorio, crea los archivos necesarios para una app simple de Node.js: Crea un archivo llamado package.json con el siguiente contenido (puedes copiar y pegar en un editor): { "name": "mi-app", "version": "1.0.0", "description": "App simple con Docker", "main": "app.js", "scripts": { "start": "node app.js" }, "dependencies": { "express": "^4.17.1" } } Crea un archivo llamado app.js con este código: const express = require('express'); const app = express(); const port = 3000; app.get('/', (req, res) => { res.send('¡Hola, Mundo desde Docker!'); }); app.listen(port, () => { console.log(`App escuchando en http://localhost:${port}`); }); Esto es una app básica que inicia un servidor web en el puerto 3000.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+Paso 2: Crear el Dockerfile
+##menu-item END
+##Contenido BEGIN
+Paso 2: Crear el Dockerfile:
+1. En el mismo directorio (mi-app-docker), crea un archivo llamado Dockerfile (sin extensión) usando tu editor de texto. 2. Agrega el siguiente contenido al Dockerfile. Te explico línea por línea: # Paso 1: Especifica la imagen base. Usamos Node.js versión 20 (ligera, basada en Alpine Linux para reducir tamaño). FROM node:20-alpine # Paso 2: Establece el directorio de trabajo dentro del contenedor. WORKDIR /app # Paso 3: Copia los archivos de dependencias primero (para optimizar el cache de Docker). COPY package.json ./ # Paso 4: Instala las dependencias de la app. RUN npm install # Paso 5: Copia el resto de los archivos de la app al contenedor. COPY . . # Paso 6: Expone el puerto que usará la app (no lo abre automáticamente, solo informa). EXPOSE 3000 # Paso 7: Define el comando predeterminado para ejecutar la app cuando inicie el contenedor. CMD ["npm", "start"] FROM: Define la imagen base desde la que se construye tu imagen. Aquí usamos una oficial de Node.js. WORKDIR: Crea y establece un directorio de trabajo para evitar trabajar en la raíz. COPY: Copia archivos del host al contenedor. Lo hacemos en capas para optimizar builds. RUN: Ejecuta comandos durante la construcción de la imagen (como instalar paquetes). EXPOSE: Indica qué puerto escucha la app (útil para documentación). CMD: Especifica qué comando se ejecuta al iniciar el contenedor. Guarda el archivo.
+##Contenido END
+
+##itemID:014
+##menu-item BEGIN
+Paso 3: Construir la Imagen de Docker
+##menu-item END
+##Contenido BEGIN
+Paso 3: Construir la Imagen de Docker:
+1. En la terminal, desde el directorio mi-app-docker, ejecuta el comando para construir la imagen: docker build -t mi-app-docker . -t mi-app-docker: Asigna un nombre (tag) a la imagen. .: Indica que el Dockerfile está en el directorio actual. 2. Docker procesará cada instrucción paso a paso. Verás algo como: Building in empty context [+] Building 10.2s (10/10) FINISHED ... Si hay errores, revisa la sintaxis del Dockerfile o los archivos. 3. Verifica que la imagen se creó con: docker images Deberías ver mi-app-docker en la lista.
+##Contenido END
+
+##itemID:015
+##menu-item BEGIN
+Paso 4: Ejecutar el Contenedor
+##menu-item END
+##Contenido BEGIN
+Paso 4: Ejecutar el Contenedor:
+1. Ejecuta el contenedor a partir de la imagen: docker run -d -p 3000:3000 mi-app-docker -d: Ejecuta en modo detached (en segundo plano). -p 3000:3000: Mapea el puerto 3000 del host al 3000 del contenedor. 2. Verifica que el contenedor está corriendo: docker ps Deberías ver tu contenedor en la lista. 3. Abre un navegador y ve a http://localhost:3000. Deberías ver "¡Hola, Mundo desde Docker!". 4. Para detener el contenedor, usa: docker stop <container_id> (Reemplaza <container_id> con el ID de docker ps).
+##Contenido END
+
+##itemID:016
+##menu-item BEGIN
+Consejos Adicionales para Dockerfile
+##menu-item END
+##Contenido BEGIN
+Consejos Adicionales para Dockerfile:
+Mejores Prácticas: Mantén el Dockerfile simple y en capas para builds rápidos. Usa .dockerignore para excluir archivos innecesarios (como node_modules). Errores Comunes: Asegúrate de que los paths en COPY sean correctos. Si usas Windows, ten cuidado con los saltos de línea (usa LF en lugar de CRLF si es necesario). Personalización: Puedes cambiar la imagen base (e.g., para Python: FROM python:3.9), agregar volúmenes con -v en docker run, o usar entornos con ENV. Siguiente Paso: Explora Docker Compose para apps con múltiples servicios (como una base de datos). Si quieres un ejemplo con Python o otro lenguaje, ¡dime! ¡Felicidades! Ahora sabes crear y usar un Dockerfile básico. Si tienes dudas o quieres expandirlo, avísame.
+##Contenido END
+
+##itemID:017
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+Resumen de puntos técnicos validados: Los pasos de instalación de Docker Desktop en Windows 11 con WSL 2 coinciden con la documentación oficial, incluyendo verificación de requisitos del sistema, habilitación de virtualización, instalación de WSL, descarga del instalador, configuración del backend WSL 2, y verificación con el contenedor hello-world. La creación del Dockerfile utiliza instrucciones estándar como FROM, WORKDIR, COPY, RUN, EXPOSE y CMD, que se alinean con la referencia oficial de Docker para construir imágenes, optimizando capas para caché y especificando comandos de ejecución.
+Enlaces directos a documentación oficial: Docker Desktop para Windows: https://docs.docker.com/desktop/setup/install/windows-install/ Dockerfile reference: https://docs.docker.com/reference/dockerfile/ Writing a Dockerfile: https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/
+Referencias a páginas de soporte oficiales: Docker Documentation principal: https://docs.docker.com/ Get Started with Docker: https://www.docker.com/get-started/
+
+Introduccion a Docker Instalacion y Ejecución Basica
+GROK RESEARCH 
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END

@@ -1,0 +1,162 @@
+Aquí tienes el tutorial completo, generado siguiendo estrictamente las instrucciones y basado en el contenido del video especificado.
+
+##itemID:000
+##menu-item BEGIN
+TITULO_VIDEO
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+TITULO_VIDEO:
+Cómo generar códigos QR en Google SHEETS
+
+Web Original:
+https://youtu.be/ardZXWq-OjY?si=ywstwEfIvf9O1AkL
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción y Objetivo
+##menu-item END
+##Contenido BEGIN
+Introducción y Objetivo:
+En este tutorial aprenderemos a generar códigos QR directamente dentro de las celdas de Google Sheets. El objetivo es poder crear múltiples códigos QR de forma automática basándonos en una lista de direcciones web o textos, sin necesidad de instalar complementos externos ni herramientas de pago. Usaremos una función nativa de las hojas de cálculo combinada con un servicio de generación de gráficos.[1][2]
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Preparación de la Hoja de Cálculo
+##menu-item END
+##Contenido BEGIN
+Preparación de la Hoja de Cálculo:
+Lo primero que necesitamos es organizar nuestra información. En una hoja de cálculo nueva o existente, debemos tener una columna con los datos que queremos convertir en códigos QR.
+
+Por ejemplo, usaremos la Columna A para colocar nuestras direcciones web (URLs) o textos. Asegúrate de tener al menos una dirección escrita, por ejemplo, en la celda A2.[2]
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+La Función IMAGE
+##menu-item END
+##Contenido BEGIN
+La Función IMAGE:
+Para mostrar el código QR visualmente dentro de una celda, utilizaremos la función llamada IMAGE.[1][2][3][4][5] Esta función le dice a Google Sheets que lo que vamos a escribir no es un texto simple, sino una imagen que debe traer desde internet.
+
+Nos ubicamos en la celda donde queremos que aparezca el código (por ejemplo, B2) y escribimos el signo igual seguido de la palabra IMAGE y abrimos paréntesis:
+=IMAGE(
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Construcción de la URL base
+##menu-item END
+##Contenido BEGIN
+Construcción de la URL base:
+Dentro de la función IMAGE, necesitamos poner una dirección web (URL) especial que genera el gráfico.[1] Esta dirección debe ir entre comillas dobles.
+
+La dirección base que utilizaremos pertenece a la API de gráficos de Google.[5] Escribimos lo siguiente dentro del paréntesis:
+"https://chart.googleapis.com/chart?"
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Configuración de Tamaño y Tipo
+##menu-item END
+##Contenido BEGIN
+Configuración de Tamaño y Tipo:
+Ahora debemos agregar las instrucciones específicas a esa dirección web para decirle qué tipo de imagen queremos. Esto se hace agregando parámetros después del signo de interrogación.
+
+Tamaño: Usamos el parámetro chs para definir las dimensiones. Por ejemplo, 150x150 píxeles.[3] Escribimos: chs=150x150
+
+Tipo de gráfico: Usamos el parámetro cht para indicar que queremos un código QR.[4] Escribimos: &cht=qr
+
+Hasta este punto, la fórmula dentro de las comillas se ve así:
+"https://chart.googleapis.com/chart?chs=150x150&cht=qr..."
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Vincular los datos de la celda
+##menu-item END
+##Contenido BEGIN
+Vincular los datos de la celda:
+El último paso de la fórmula es decirle qué información debe contener el código QR.[1][2][3] Usamos el parámetro chl (que significa chart label o etiqueta del gráfico).
+
+Escribimos &chl= y luego cerramos las comillas dobles. Para usar el dato que tenemos en la celda A2, usamos el símbolo ampersand (&) para unir la dirección con nuestra celda.
+
+La fórmula completa queda así:
+=IMAGE("https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=" & A2)
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Generación y Ajuste Visual
+##menu-item END
+##Contenido BEGIN
+Generación y Ajuste Visual:
+Al presionar Enter, aparecerá el código QR en la celda B2. Es probable que se vea muy pequeño porque la celda tiene el tamaño estándar.
+
+Para verlo correctamente, debes ajustar el alto de la fila y el ancho de la columna B manualmente hasta que el código QR tenga espacio suficiente para mostrarse con el tamaño que definimos (150x150).
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Creación Masiva de Códigos
+##menu-item END
+##Contenido BEGIN
+Creación Masiva de Códigos:
+La gran ventaja de este método es que es dinámico.[2] Si tienes una lista de 10, 50 o 100 enlaces en la Columna A, no necesitas repetir el proceso.
+
+Simplemente selecciona la celda donde creaste el primer código QR (B2), busca el pequeño cuadrado en la esquina inferior derecha de la celda y arrástralo hacia abajo hasta cubrir todas las filas que necesites. Google Sheets generará automáticamente un código QR único para cada dato de la lista.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+He realizado una búsqueda técnica para validar la vigencia del método explicado en el documento original (video de 2020/2021).
+
+Resumen de validación técnica:
+
+Estado de la API de Google (chart.googleapis.com):
+La API utilizada en el tutorial original ("Google Image Charts") está oficialmente marcada como "Deprecated" (obsoleta) por Google desde 2012 y se anunció su apagado definitivo, aunque muchos enlaces siguen funcionando intermitentemente por compatibilidad heredada. No se recomienda para proyectos nuevos a largo plazo.
+
+Alternativa Moderna Estándar (Actualización 2024/2025):
+La comunidad técnica y la documentación actual sugieren usar la API de "QRServer" o "QuickChart" como reemplazo directo, ya que la estructura es muy similar.
+
+Nueva fórmula recomendada (reemplazo directo):
+=IMAGE("https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" & A2)
+
+Diferencias técnicas clave:
+
+Google API usa el parámetro "chl=" para los datos.
+
+QRServer API usa el parámetro "data=" para los datos.
+
+Google API usa "chs=" para el tamaño.
+
+QRServer API usa "size=" para el tamaño.[2]
+
+Fuentes consultadas:
+
+Documentación oficial de Google Charts (Aviso de Deprecation): https://developers.google.com/chart/image/docs/making_charts
+
+Documentación de goqr.me (proveedor de la API alternativa común): https://goqr.me/api/
+
+Discusiones de soporte en Google Workspace Updates sobre la retirada de Image Charts.
+
+
+Sources
+help
+youtube.com
+spreadsheetwise.com
+youtube.com
+alpray.com
+youtube.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+google sheets qr code image charts api formula
+"Cómo generar códigos QR en Google SHEETS" tutorial pasos
+transcript of youtube video ardZXWq-OjY
+##Contenido END

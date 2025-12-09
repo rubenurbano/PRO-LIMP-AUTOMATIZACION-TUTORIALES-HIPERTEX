@@ -1,0 +1,81 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Parte 1_Gestión de Citas con Appsheet y Google Calendar\nWEB ORIGINAL:",
+      "contenido": "Parte 1_Gestión de Citas con Appsheet y Google Calendar:\nWeb Original:\nParte 1_Gestión de Citas con Appsheet y Google Calendar:\nhttps://youtu.be/pxeL0_rAhMM?si=BX27QQLMkFgRlmIE"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción: AppSheet y Google Calendar",
+      "contenido": "Introducción: AppSheet y Google Calendar:\nEste tutorial te guiará paso a paso para crear una aplicación que organiza tu agenda diaria utilizando dos herramientas principales:[1][2][3][4][5][6][7][8][9][10]\n\nAppSheet: Funciona como una herramienta que transforma tu hoja de cálculo en una aplicación funcional.\n\nGoogle Calendar: Actúa como tu agenda digital donde se reflejarán las citas."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Paso 1: Preparación de la Hoja de Cálculo (Horarios)",
+      "contenido": "Paso 1: Preparación de la Hoja de Cálculo (Horarios):\nEl primer paso es preparar la base de datos en Google Sheets:\n\nAbre una hoja de cálculo nueva y nómbrala \"agenda programada\".\n\nCrea una primera tabla llamada \"horarios\".\n\nEn esta tabla, añade los siguientes encabezados o campos:\n\nID\n\ninicio\n\nfin\n\nRellena la tabla con los rangos de tiempo disponibles. En el ejemplo del tutorial, se crean 10 citas de una hora de duración cada una, comenzando a las 8:00 AM y terminando a las 6:00 PM."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Paso 2: Creación de la Tabla de Citas Diarias",
+      "contenido": "Paso 2: Creación de la Tabla de Citas Diarias:\nDentro de la misma hoja de cálculo (\"agenda programada\"), debes crear una segunda tabla:\n\nNombra esta tabla \"citas diarias\".\n\nDefine los campos necesarios para gestionar las citas:\n\nID\n\ntítulo\n\ndescripción\n\ninvitados\n\nID de Google calendar\n\nEs un requisito importante que el campo \"ID de Google calendar\" coincida exactamente con el \"Row ID\" (Identificador de Fila) para que la sincronización funcione correctamente."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Paso 3: Configuración Inicial en AppSheet y Conexión",
+      "contenido": "Paso 3: Configuración Inicial en AppSheet y Conexión:\nAhora debes configurar la aplicación en AppSheet:\n\nVe a AppSheet y crea una nueva aplicación.[5]\n\nDebes conectar la aplicación a Google Calendar.[1][7] Para esto, genera una nueva fuente de datos (Data source) seleccionando \"Google calendar\" y otorga los permisos necesarios.[7]\n\nSelecciona el calendario de citas que ya tengas creado.[7]\n\nRealiza una prueba inicial: crea una cita manual (ej. \"prueba número uno\") desde la app para confirmar que aparece en tu Google Calendar y verifica que al borrarla en la app, también se borra del calendario."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Paso 4: Añadir Tablas y Configurar Datos",
+      "contenido": "Paso 4: Añadir Tablas y Configurar Datos:\nIncorpora la información de tu hoja de cálculo a la aplicación:\n\nAñade la tabla \"horarios\" a AppSheet y crea una vista tipo tabla para ella.\n\nAñade la tabla \"citas diarias\" a AppSheet y crea su vista tipo tabla correspondiente.\n\nConfigura los tipos de datos en la tabla \"citas diarias\":\n\nCampos obligatorios: título, invitados e ID de Google calendar.\n\nCampo \"invitados\": Cambia el tipo a \"List\" (para permitir varios correos separados por comas).\n\nCampo \"ID Google calendar\": Cambia el tipo a \"ref\" (referencia) y selecciona que apunte a la tabla \"citas\"."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Paso 5: Automatización para Generar Horarios Diarios",
+      "contenido": "Paso 5: Automatización para Generar Horarios Diarios:\nPara evitar crear los horarios manualmente cada día, configuraremos un \"Bot\" (robot):\n\nCrea un nuevo Bot en AppSheet.[3][5][8]\n\nConfigura un evento programado para que se ejecute diariamente (por ejemplo, a las 6:00 AM, antes de que empiece la jornada).\n\nConfigura el proceso para que lea cada registro de la tabla \"horarios\" y ejecute una acción.\n\nLa acción debe ser \"insertar un nuevo registro\" en la tabla \"citas diarias\" con estos valores:\n\nTítulo: \"sin asignar\" (para indicar que está libre).\n\nStart (Inicio): Usa una fórmula que combine la función \"today\" (fecha actual) con la hora de inicio de la tabla horarios.\n\nFin (Final): Usa una fórmula similar combinando \"today\" con la hora de fin."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Paso 6: Corrección de Zona Horaria",
+      "contenido": "Paso 6: Corrección de Zona Horaria:\nSi notas que las citas se crean con horas incorrectas, sigue estos pasos:\n\nVerifica la configuración de zona horaria en AppSheet (por ejemplo, puede estar en GMT 00).\n\nVerifica la zona horaria de tu hoja de cálculo (por ejemplo, GMT-6).\n\nAjusta la configuración en AppSheet para que coincida con la de la hoja de cálculo.\n\nElimina los registros erróneos y vuelve a ejecutar el Bot para validar que las horas ahora sean correctas."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Paso 7: Mejoras Visuales (Columna Virtual)",
+      "contenido": "Paso 7: Mejoras Visuales (Columna Virtual):\nPara mejorar cómo se ven los horarios en la aplicación:\n\nCrea una columna virtual (existe solo en la app, no en la hoja de cálculo) llamada \"horario\".\n\nUsa la función \"text\" sobre los campos Start y Fin para extraer solo la hora y minutos, y concaténalos.\n\nConfigura esta columna \"horario\" como la etiqueta (label) de la tabla para que sea lo que el usuario ve al seleccionar una opción."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Paso 8: Ordenar los Horarios",
+      "contenido": "Paso 8: Ordenar los Horarios:\nPara que los horarios aparezcan en orden cronológico:\n\nVe al campo \"ID Google calendar\" en la tabla \"citas diarias\".\n\nEn la opción \"Valores sugeridos\", introduce una fórmula usando la función \"SELECT\".\n\nEsta función debe extraer los datos de las citas de hoy (\"today\") y ordenarlas ascendentemente usando el campo \"Start\". Esto asegurará que la lista desplegable muestre las horas ordenadas (8:00, 9:00, etc.)."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Paso 9: Bot de Asignación y Actualización",
+      "contenido": "Paso 9: Bot de Asignación y Actualización:\nAhora configuraremos qué pasa cuando alguien reserva una cita:\n\nRenombra el primer Bot (el generador de horarios).\n\nCrea un segundo Bot llamado \"inicio asignación\".\n\nConfigura este Bot para que se active cuando se inserte un nuevo registro en la tabla \"citas diarias\".\n\nCrea una acción llamada \"actualización cita\" destinada a actualizar la cita en Google Calendar.\n\nLos campos a actualizar en el calendario son: descripción, invitados y título.\n\nUsa la función \"lookup\" para buscar estos datos en la tabla \"citas diarias\" usando el \"ID Google calendar\" y asignarlos al evento del calendario."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Paso 10: Filtrar Horarios Ya Asignados",
+      "contenido": "Paso 10: Filtrar Horarios Ya Asignados:\nPara evitar que alguien reserve una hora que ya está ocupada:\n\nRegresa al campo \"ID Google calendar\" en la tabla \"citas diarias\".\n\nEn \"Valores sugeridos\", modifica la fórmula para incluir un filtro \"AND\" con dos condiciones:\n\nQue sean registros de hoy.\n\nQue NO exista ya una asignación para ese horario (usando \"COUNT\" igual a cero).\n\nEsto hará que, al reservar una hora (ej. 8:00 a 9:00), esa opción desaparezca de la lista para los siguientes usuarios."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Paso 11: Envío de Correo Electrónico",
+      "contenido": "Paso 11: Envío de Correo Electrónico:\nEl paso final es notificar a los invitados:\n\nEn el proceso \"actualizar Google calendar\" del Bot de asignación, añade un paso final.\n\nConfigura el envío de un correo electrónico tipo \"Custom\" (Personalizado).[3][5]\n\nSelecciona la tabla \"citas diarias\".\n\nEn el cuerpo del correo, incluye el título, la descripción y el enlace de la reunión.\n\nEl enlace se obtiene de la columna \"me link\" que AppSheet genera automáticamente.\n\nRealiza una prueba final (ej. \"prueba número tres\") para confirmar que llega el correo con todos los datos correctos."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\nHe validado los puntos técnicos clave de este tutorial mediante la documentación oficial de Google AppSheet y Google Calendar:\n\nConexión con Google Calendar:\nSe confirma que AppSheet permite añadir Google Calendar como una fuente de datos (\"Data Source\"). AppSheet trata el calendario como una tabla donde los eventos son filas con columnas predeterminadas (Título, Inicio, Fin, Descripción, etc.).\nReferencia: Documentación de AppSheet sobre \"Use data from Google Calendar\".[11]\n\nAutomatización (Bots):\nLa creación de Bots con eventos programados (Scheduled Events) es una función nativa. Se valida que se pueden configurar procesos diarios (Daily) a una hora específica para ejecutar tareas sobre una tabla.[5]\nReferencia: Ayuda de AppSheet sobre \"Trigger bots with scheduled events\".\n\nUso de Funciones (SELECT, LOOKUP, TODAY):\nLas fórmulas mencionadas en el tutorial son estándar en AppSheet:\n\nTODAY(): Devuelve la fecha actual.[12]\n\nSELECT(): Se utiliza para filtrar listas de valores basándose en condiciones (como filtrar horarios disponibles).\n\nLOOKUP(): Validada como función para recuperar el valor de una columna específica usando una clave de referencia (usado aquí para actualizar el calendario).\nReferencia: Lista de funciones de AppSheet (Function List).[12][13]\n\nEnvío de Correos:\nLa tarea \"Send an email\" dentro de un Bot es correcta. Se confirma que se puede personalizar el cuerpo del correo e incluir datos dinámicos de las columnas de la tabla asociada.\nReferencia: Documentación sobre \"Send an email from an automation\".[3][5][14][15]\n\n\nSources\nhelp\nzapier.com\ngoogle.dev\nyoutube.com\ngoogle.com\nyoutube.com\ngoogle.com\nyoutube.com\ngoogle.com\ngoogle.com\ngoogle.com\ncdata.com\ngoogle.com\ngoogle.com\ngoogle.com\ngoogle.com\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\nAppSheet Send an email from an automation bot\nAppSheet documentation connect Google Calendar data source\nAppSheet automation bots schedule daily event\nAppSheet function SELECT LOOKUP TODAY"
+    },
+
+    {
+      "itemID": "014",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN: https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Parte%201-Gestion%20de%20Citas%20con%20Appsheet%20y%20Google%20Calendar.jpeg]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

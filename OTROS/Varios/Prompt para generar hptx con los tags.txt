@@ -1,0 +1,44 @@
+Escribe un tutorial completo con el siguiente título y estructura, respetando EXACTAMENTE los tags y el formato que se indica.
+
+##itemID:000
+##Contenido BEGIN
+"Learn Fast API With This ONE Project "
+
+https://youtu.be/SR5NYCdzKkc?si=TxYIKMQ4F2Sw8tvP
+##Contenido END
+
+### REGLAS OBLIGATORIAS:
+
+1. **Lenguaje:** Explicación clara, simple y directa, comprensible para cualquier usuario sin conocimientos técnicos.  
+2. **Validación:** Cada paso debe estar validado con la **documentación técnica oficial de Google Apps Script**.  
+3. **Estructura:** Mantén SIEMPRE la estructura modular con los tags que siguen este modelo:
+
+##itemID:000
+##menu-item BEGIN
+[Título o descripción del paso]
+##menu-item END
+##Contenido BEGIN
+[Desarrollo detallado del paso]
+##Contenido END
+
+4. **Título principal del documento:**  
+   Debe conservarse exactamente como se muestra a continuación:
+
+##itemID:000
+##menu-item BEGIN
+VIDEO DE YOUTUBE:
+##menu-item END
+##Contenido BEGIN
+VIDEO DE YOUTUBE:
+(Referencia visual del tutorial)
+"Learn Fast API With This ONE Project "
+https://youtu.be/SR5NYCdzKkc?si=TxYIKMQ4F2Sw8tvP
+##Contenido END
+
+5. **Sección final obligatoria:**  
+##Contenido BEGIN
+   Agrega una sección titulada **"VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES"** al final del documento, con un resumen de los puntos validados y enlaces directos a las fuentes oficiales de Google.
+##Contenido END
+
+### SALIDA ESPERADA:
+Texto final del tutorial **en español**, formateado con los tags indicados, listo para ser procesado automáticamente sin pérdida de estructura.

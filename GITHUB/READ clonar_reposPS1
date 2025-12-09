@@ -1,0 +1,26 @@
+Cómo usarlo
+Paso 1 — Crea un archivo repos.txt
+
+Ejemplo:
+
+https://github.com/usuario/proyecto1.git
+https://github.com/otroUsuario/app2.git
+https://github.com/alguien/ejemplo-demo.git
+
+Paso 2 — Guarda el script como:
+
+clonar_repos.ps1
+
+Paso 3 — Ejecutarlo en PowerShell
+
+Estando en la carpeta donde guardaste el script:
+
+.\clonar_repos.ps1
+
+❗ Resultado:
+
+Todos los repos se clonan automáticamente a:
+
+C:\ReposClonados
+
+

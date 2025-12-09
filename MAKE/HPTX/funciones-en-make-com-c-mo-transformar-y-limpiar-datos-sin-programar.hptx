@@ -1,0 +1,308 @@
+##itemID: 000
+##menu-item BEGIN
+Funciones en Make.com - cómo transformar y limpiar datos sin programar
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Funciones en Make.com - cómo transformar y limpiar datos sin programar:
+Web Original:
+
+Funciones en Make.com - cómo transformar y limpiar datos sin programar
+https://youtu.be/BdlC55Mof9k?si=OEwFjwP3zeHmkDED
+##Contenido END
+
+##itemID: 001
+##menu-item BEGIN
+¿Qué son las Funciones en Make.com y por qué son útiles?
+##menu-item END
+##Contenido BEGIN
+¿Qué son las Funciones en Make.com y por qué son útiles?:
+
+Las funciones en Make.com son herramientas fundamentales que te permiten manipular y transformar datos dentro de tus escenarios de automatización. Piensa en ellas como pequeños procesadores que toman una entrada de datos, realizan una operación específica y devuelven un resultado modificado. Esto es crucial cuando necesitas que tus datos tengan un formato particular o se ajusten a ciertos cálculos antes de pasarlos al siguiente módulo.
+
+La utilidad de estas funciones es inmensa. Desde darle el formato correcto a una fecha para que se guarde adecuadamente en una hoja de cálculo, hasta realizar complejas operaciones matemáticas con valores dinámicos. Son la clave para personalizar y pulir la información que fluye a través de tus automatizaciones, asegurando que tus ideas se implementen con la precisión deseada, sin necesidad de escribir código.
+##Contenido END
+
+##itemID: 002
+##menu-item BEGIN
+Creando un escenario de prueba básico
+##menu-item END
+##Contenido BEGIN
+Creando un escenario de prueba básico:
+
+Para entender mejor cómo funcionan y se aplican las funciones, vamos a configurar un escenario simple en Make.com. Este escenario, aunque "inútil" en términos de una automatización real, es perfecto para probar y ver el efecto de cada función en tiempo real.
+
+Sigue estos pasos para crear tu escenario de prueba:
+
+1.  **Añadir un Módulo "Tools - Set variable":**
+    *   Haz clic en el botón para añadir un nuevo módulo y busca "Tools".
+    *   Selecciona "Set variable". Este módulo nos permite definir una variable con un valor específico.
+    *   Asígnale el nombre "Variable uno".
+    *   Dale un "Valor inicial" de "10". Este valor lo modificaremos más adelante para probar diferentes funciones.
+
+2.  **Añadir un segundo Módulo "Tools - Set variable":**
+    *   Añade otro módulo "Tools - Set variable" justo después del primero.
+    *   Nómbralo "Variable dos".
+    *   En el campo de valor, verás una opción para conectar con los módulos anteriores. Aquí es donde podremos acceder al valor de "Variable uno" y aplicar nuestras funciones.
+    *   Por ahora, deja el valor inicial como está; lo modificaremos cuando exploremos las funciones.
+
+Este setup básico nos proporcionará un entorno controlado para experimentar sin afectar ninguna automatización productiva.
+##Contenido END
+
+##itemID: 003
+##menu-item BEGIN
+Acceso y categorías de funciones en Make.com
+##menu-item END
+##Contenido BEGIN
+Acceso y categorías de funciones en Make.com:
+
+Una vez que tienes un escenario de prueba, el siguiente paso es entender cómo acceder y utilizar las diversas funciones que Make.com pone a tu disposición. El acceso a las funciones es muy intuitivo y se realiza desde el editor de cada módulo que requiere un valor de entrada.
+
+Cuando estés editando el valor de un campo en cualquier módulo, verás una serie de pestañas. Aquí te explicamos cómo funcionan:
+
+1.  **Conexión a Módulos Anteriores (la "estrellita"):** Esta pestaña, representada generalmente por un icono de estrella o un rayo, es tu puerta de entrada a los datos generados por módulos anteriores en tu escenario. Al hacer clic en ella, podrás seleccionar variables, resultados u outputs de cualquier paso previo.
+2.  **Pestañas de Categorías de Funciones:** Make.com organiza sus funciones en varias categorías lógicas para facilitar su búsqueda y uso. Estas incluyen:
+    *   **Inteligencia Artificial (IA):** Para tareas más avanzadas, como completar campos o generar texto con la ayuda de un prompt.
+    *   **Funciones Generales:** Un conjunto de funciones misceláneas de uso común.
+    *   **Funciones Matemáticas:** Para cualquier tipo de cálculo numérico.
+    *   **Funciones de Texto:** Para manipular cadenas de texto (mayúsculas, minúsculas, reemplazos, etc.).
+    *   **Funciones de Fecha y Tiempo / Calendario:** Esenciales para manejar y formatear fechas y horas.
+    *   **Funciones para Listas (Arrays):** Para trabajar con colecciones de datos.
+    *   **Variables Personalizadas (Custom variables):** Si has definido tus propias variables globales en Make.com.
+
+Exploraremos las más importantes para la transformación y limpieza de datos en las siguientes secciones.
+##Contenido END
+
+##itemID: 004
+##menu-item BEGIN
+Explorando las funciones matemáticas
+##menu-item END
+##Contenido BEGIN
+Explorando las funciones matemáticas:
+
+Las funciones matemáticas son indispensables cuando trabajas con números y necesitas realizar cálculos, redondear, truncar o generar valores especiales. Dentro de la pestaña de "Funciones Matemáticas", encontrarás un arsenal de herramientas para manejar tus datos numéricos.
+
+Además de las operaciones básicas, Make.com te ofrece algunas variables numéricas especiales que puedes usar directamente en tus cálculos:
+
+*   **Pi:** El valor matemático de Pi (aproximadamente 3.14159...).
+*   **Random:** Genera un número aleatorio, útil para escenarios que requieren introducir variabilidad o seleccionar elementos al azar.
+
+Ahora, profundicemos en algunas de las funciones matemáticas más comunes y cómo aplicarlas.
+##Contenido END
+
+##itemID: 005
+##menu-item BEGIN
+La función Truncar (Truncate)
+##menu-item END
+##Contenido BEGIN
+La función Truncar (Truncate):
+
+La función `truncate` es una herramienta esencial para manejar números decimales, permitiéndote cortarlos en un punto específico sin redondear. Esto es útil cuando necesitas eliminar la parte fraccionaria de un número o limitar la precisión decimal.
+
+Funcionamiento de `truncate`:
+
+1.  **Truncar sin parámetro:** Si aplicas `truncate` a un número sin especificar un segundo parámetro, la función cortará todos los decimales, dejando únicamente la parte entera del número. Por ejemplo, si tienes 3.789 y aplicas `truncate`, el resultado será 3.
+2.  **Truncar con parámetro:** Puedes especificar cuántos decimales deseas conservar. Si añades un segundo parámetro numérico, la función conservará esa cantidad de decimales después del punto. Por ejemplo, si aplicas `truncate` a 3.789 con el parámetro 2, el resultado será 3.78.
+
+Veamos un ejemplo práctico utilizando nuestro escenario de prueba:
+
+*   Modifica el "Valor inicial" de tu "Variable uno" a `10.357`.
+*   En el "Valor inicial" de tu "Variable dos", escribe `truncate(`.
+*   Luego, selecciona el valor de "Variable uno" (que es 10.357).
+*   Cierra el paréntesis: `truncate(10.357)`. El resultado al ejecutar será `10`.
+*   Ahora, para mantener dos decimales, modifica la función a `truncate(10.357; 2)`. El resultado será `10.35`.
+
+Recuerda que `truncate` simplemente corta; no realiza ningún tipo de redondeo.
+##Contenido END
+
+##itemID: 006
+##menu-item BEGIN
+La función Redondear (Round) y otras funciones comunes
+##menu-item END
+##Contenido BEGIN
+La función Redondear (Round) y otras funciones comunes:
+
+A diferencia de `truncate`, la función `round` sí realiza un redondeo matemático tradicional, ajustando el número al entero más cercano o al número de decimales especificado.
+
+Veamos cómo aplicar `round`:
+
+*   Modifica el "Valor inicial" de tu "Variable uno" a `10.378`.
+*   En el "Valor inicial" de tu "Variable dos`, escribe `round(`.
+*   Selecciona el valor de "Variable uno" (que es 10.378).
+*   Cierra el paréntesis: `round(10.378)`. Al ejecutar, el resultado será `10`. Si el valor hubiera sido 10.5 o superior, se redondearía a 11.
+*   Al igual que `truncate`, `round` también acepta un segundo parámetro para especificar el número de decimales. Por ejemplo, `round(10.378; 2)` daría `10.38`.
+
+Además de `truncate` y `round`, la pestaña de funciones matemáticas ofrece otras muy útiles:
+
+*   **Average (Media):** Calcula el promedio de una lista de números.
+*   **Maximum (Máximo):** Encuentra el valor más alto en una lista de números.
+*   **Minimum (Mínimo):** Encuentra el valor más bajo en una lista de números.
+*   **Absolute value (Valor Absoluto):** Devuelve el valor absoluto de un número (su distancia desde cero, siempre positivo).
+*   **Sum (Suma):** Suma todos los números en una lista.
+
+Conocer estas funciones te permitirá realizar una gran variedad de operaciones numéricas en tus escenarios.
+##Contenido END
+
+##itemID: 007
+##menu-item BEGIN
+Anidación de funciones: Combinando cálculos
+##menu-item END
+##Contenido BEGIN
+Anidación de funciones: Combinando cálculos:
+
+Una de las características más potentes de las funciones en Make.com es la capacidad de anidarlas, es decir, aplicar una función sobre el resultado de otra. Esto te permite construir operaciones complejas en un solo paso, haciendo tus escenarios más eficientes y compactos.
+
+Imaginemos que queremos calcular la media de varios números y luego redondear ese resultado al entero más cercano. Aquí te mostramos cómo hacerlo:
+
+1.  **Calcular la media:** Primero, utilizaremos la función `average`.
+    *   En el campo de valor de "Variable dos", escribe `average(`.
+    *   Introduce los números que deseas promediar, separados por punto y coma (`;`). Por ejemplo: `average(10; 25; 3; 6)`.
+    *   Si ejecutas solo esto, el resultado sería `9.4`.
+
+2.  **Redondear el resultado de la media:** Ahora, anidaremos la función `round` alrededor de `average`.
+    *   Edita el campo de valor y coloca `round(` al principio de la expresión.
+    *   Asegúrate de cerrar el paréntesis al final de la expresión `average`.
+    *   La expresión completa se vería así: `round(average(10; 25; 3; 6))`.
+    *   Al ejecutar esta expresión anidada, Make.com primero calculará la media (9.4) y luego redondeará ese resultado, dando como valor final `9`.
+
+Esta capacidad de anidación es fundamental para construir lógicas de transformación de datos avanzadas y muy flexibles.
+##Contenido END
+
+##itemID: 008
+##menu-item BEGIN
+Funciones de texto para limpiar y formatear cadenas
+##menu-item END
+##Contenido BEGIN
+Funciones de texto para limpiar y formatear cadenas:
+
+Las funciones de texto son esenciales para manipular y formatear datos que son cadenas de caracteres, como nombres, descripciones o mensajes. Te permiten estandarizar el texto, extraer información o prepararlo para su uso en otras aplicaciones.
+
+Aquí te presentamos algunas de las funciones de texto más sencillas y comunes:
+
+*   **`lower`:** Transforma todo el texto a minúsculas. Es muy útil para estandarizar entradas de texto y evitar problemas de comparación por diferencias de capitalización.
+    *   Ejemplo: `lower("HELLO WORLD")` resultaría en `"hello world"`.
+*   **`length`:** Calcula la longitud de una cadena de texto, es decir, el número de caracteres que contiene. Esto puede ser útil para validaciones o para controlar el tamaño de una entrada.
+    *   Ejemplo: `length("Make")` resultaría en `4`.
+*   **`capitalize`:** Pone en mayúscula la primera letra de una cadena de texto, dejando el resto en minúsculas. Ideal para formatear nombres propios o títulos.
+    *   Ejemplo: `capitalize("make.com es genial")` resultaría en `"Make.com es genial"`.
+
+Estas funciones básicas son un excelente punto de partida para limpiar y dar formato a los datos de texto en tus escenarios.
+##Contenido END
+
+##itemID: 009
+##menu-item BEGIN
+La función Reemplazar (Replace) en textos
+##menu-item END
+##Contenido BEGIN
+La función Reemplazar (Replace) en textos:
+
+La función `replace` es extremadamente útil cuando necesitas cambiar una parte específica de una cadena de texto por otra. Es una herramienta poderosa para corregir errores, estandarizar términos o personalizar mensajes de forma dinámica.
+
+Para usar la función `replace`, necesitas proporcionar tres parámetros fundamentales:
+
+1.  **Texto completo:** La cadena de texto original donde deseas realizar el reemplazo.
+2.  **Palabra o frase a encontrar:** El fragmento de texto que Make.com buscará dentro del texto completo.
+3.  **Palabra o frase por la que reemplazarla:** El nuevo fragmento de texto que sustituirá a la palabra encontrada.
+
+Veamos un ejemplo práctico para entenderlo mejor:
+
+*   Imagina que tienes la frase "Me llamo Sergi" y quieres cambiar el nombre "Sergi" por "Dani".
+*   En el campo de valor de tu "Variable dos", utilizarías la función `replace` de la siguiente manera:
+    `replace("Me llamo Sergi"; "Sergi"; "Dani")`
+*   El resultado de esta operación sería la cadena de texto `"Me llamo Dani"`.
+
+La función `replace` es sensible a mayúsculas y minúsculas por defecto, así que asegúrate de que el texto a encontrar coincida exactamente con lo que esperas. Es una herramienta versátil para mantener la coherencia y la exactitud de tus datos textuales.
+##Contenido END
+
+##itemID: 010
+##menu-item BEGIN
+Dominando las funciones de fecha y tiempo (Calendario)
+##menu-item END
+##Contenido BEGIN
+Dominando las funciones de fecha y tiempo (Calendario):
+
+Trabajar con fechas y horas es una tarea común en muchas automatizaciones, y Make.com ofrece una robusta suite de funciones en la pestaña "Calendario" para manejar estos datos de manera efectiva. Desde obtener la hora actual hasta calcular fechas futuras, estas funciones son esenciales para la gestión del tiempo.
+
+Dentro de esta categoría, encontrarás algunas variables de tiempo predefinidas muy útiles:
+
+*   **`Time Stamp`:** Representa la fecha y hora actuales en formato de marca de tiempo (número de segundos desde la Época Unix).
+*   **`now`:** Devuelve la fecha y hora actuales del sistema en un formato legible.
+
+Además de estas variables, Make.com proporciona funciones clave para manipular fechas:
+
+*   **Añadir/Restar unidades de tiempo:** Funciones para añadir o restar segundos, minutos, horas, días, meses o años a una fecha determinada. Esto es ideal para programar recordatorios o calcular plazos.
+*   **Establecer unidades de tiempo:** Permiten establecer un segundo, minuto u hora específica dentro de una fecha y hora dadas.
+
+La función más utilizada y que merece una explicación detallada es `formatDate`, que veremos a continuación.
+##Contenido END
+
+##itemID: 011
+##menu-item BEGIN
+Formateando fechas con la función Format Date
+##menu-item END
+##Contenido BEGIN
+Formateando fechas con la función Format Date:
+
+Una de las necesidades más frecuentes al trabajar con fechas es presentarlas en un formato específico. Diferentes aplicaciones (como Google Sheets, bases de datos o sistemas de CRM) pueden requerir formatos de fecha particulares. La función `formatDate` de Make.com es perfecta para este propósito, permitiéndote transformar una fecha a cualquier estilo deseado.
+
+Para utilizar `formatDate`, necesitas dos parámetros principales:
+
+1.  **El texto o la variable de la fecha original:** Aquí proporcionarás la fecha que deseas formatear. Lo más común es usar la variable `now` para la fecha y hora actuales.
+2.  **El formato final deseado:** Una cadena de texto que define cómo debe presentarse la fecha, utilizando códigos específicos para cada parte de la fecha y hora.
+
+**Estructura de los códigos de formato:**
+
+*   **Mes:** `MM` (dos cifras, ej., 01 para enero, 12 para diciembre).
+*   **Día:** `DD` (dos cifras, ej., 01, 15, 31).
+*   **Año:** `YYYY` (cuatro cifras, ej., 2023, 2024).
+*   **Hora y Minutos:** `HH:mm` (hora y minutos en dos cifras, separados por dos puntos, ej., 14:30). Ten en cuenta que `HH` es para formato de 24 horas. Para 12 horas con AM/PM se usaría `hh:mm A`.
+
+**Ejemplo práctico:**
+
+*   Imaginemos que quieres obtener la fecha actual en formato "día/mes/año", como "04/02/2025".
+*   En el campo de valor de tu "Variable dos", usarías la función `formatDate` de la siguiente manera:
+    `formatDate(now; "DD/MM/YYYY")`
+*   Si la fecha actual fuera 4 de febrero de 2025, el resultado sería `"04/02/2025"`.
+
+Experimentar con diferentes combinaciones de estos códigos te permitirá obtener el formato de fecha exacto que tus automatizaciones requieren.
+##Contenido END
+
+##itemID: 012
+##menu-item BEGIN
+Conclusión: La importancia de las funciones en Make.com
+##menu-item END
+##Contenido BEGIN
+Conclusión: La importancia de las funciones en Make.com:
+
+Hemos explorado solo una fracción del vasto potencial que las funciones de Make.com ofrecen. Desde las operaciones matemáticas que te permiten calcular y transformar números, hasta las funciones de texto que limpian y formatean cadenas, y las herramientas de fecha y tiempo que gestionan el calendario de tus automatizaciones, cada una es una pieza clave en el diseño de escenarios eficientes.
+
+La verdadera potencia de Make.com reside en estas herramientas preconstruidas. Facilitan enormemente la manipulación de datos sin la necesidad de escribir una sola línea de código, haciendo que la automatización sea accesible para todos. Son la base sobre la cual puedes construir lógicas complejas y asegurar que los datos fluyan de manera precisa y en el formato correcto entre tus diferentes aplicaciones.
+
+**Recomendación final:**
+
+Este tutorial te ha dado una base sólida, pero la mejor manera de dominar las funciones de Make.com es explorándolas por ti mismo. Te animo a que investigues el resto de las funciones en cada una de las categorías. Saber que existen y tener una idea general de su propósito te permitirá identificarlas rápidamente cuando surja una necesidad específica en tus propios proyectos de automatización. La práctica es la clave para desbloquear todo el potencial de Make.com.
+##Contenido END
+
+##itemID: 013
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Este tutorial ha cubierto los conceptos fundamentales de las funciones en Make.com, destacando su rol crucial en la transformación y limpieza de datos sin necesidad de programación. Hemos explorado las funciones matemáticas (`truncate`, `round`, `average`, `sum`), las funciones de texto (`lower`, `length`, `capitalize`, `replace`) y las funciones de fecha y tiempo (`now`, `formatDate`), así como la poderosa capacidad de anidación de funciones. El objetivo principal es capacitar a usuarios no técnicos para manipular datos de manera efectiva en sus escenarios de automatización.
+
+Para una comprensión más profunda y para explorar el conjunto completo de funciones disponibles, se recomienda encarecidamente consultar la documentación oficial de Make.com, que es la fuente más fiable y completa de información sobre su plataforma.
+
+Referencias y Fuentes Técnicas:
+
+*   **Documentación oficial de Make.com sobre funciones:** Los manuales y guías de Make.com (anteriormente Integromat) son la fuente primaria para una referencia detallada de todas las funciones disponibles, sus parámetros y ejemplos de uso.
+    *   `https://www.make.com/en/help/mapping/functions.html`
+    *   `https://www.make.com/en/help/mapping/text-and-binary-functions.html`
+    *   `https://www.make.com/en/help/mapping/numeric-and-math-functions.html`
+    *   `https://www.make.com/en/help/mapping/date-and-time-functions.html`
+*   **Tutoriales y guías en el blog oficial de Make.com:** A menudo, el blog de Make.com publica artículos y tutoriales que demuestran el uso práctico de funciones en escenarios reales.
+    *   `https://www.make.com/en/blog/`
+*   **Foros de la comunidad de Make.com:** Para preguntas específicas o casos de uso complejos, la comunidad es un recurso valioso.
+    *   `https://community.make.com/`
+##Contenido END

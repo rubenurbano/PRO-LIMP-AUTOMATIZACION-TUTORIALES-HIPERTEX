@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Interactive Tutorial Viewer — Single-File (JSON + Marcadores)</title>
+<style>
+  /* ========= THEME (coincide con tu visor: dark + blue) ========= */
+  :root{
+    --bg: #0f172a;             /* slate-900 */
+    --panel: #0f172a;
+    --text: #e5e7eb;           /* gray-200 */
+    --muted: #9ca3af;          /* gray-400 */
+    --border: #374151;         /* gray-700 */
+    --sidebar-bg:#111827;      /* gray-900 */
+    --sidebar-hover:#374151;   /* gray-700 */
+    --active-bg:#2563eb;       /* blue-600 */
+    --active-text:#ffffff;
+    --btn-muted:#6b7280;       /* gray-500 */
+    --btn-muted-text:#e5e7eb;  /* gray-200 */
+    --kbd:#111827;
+  }
+
+  html,body{height:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+  }
+  .app{ display:flex; min-height:100vh; }
+
+  /* ===== Sidebar con scrollbar SIEMPRE ===== */
+  .sidebar{
+    width:320px; background:var(--sidebar-bg); border-right:1px solid var(--border);
+    display:flex; flex-direction:column; min-height:100vh;
+  }
+  .sidebar-header{
+    padding:14px 16px; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:10px; font-weight:700;
+  }
+  .tools{ display:flex; gap:8px; padding:12px 12px 8px 12px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+  .search{ padding:8px 12px 12px 12px; border-bottom:1px solid var(--border); }
+  .search input{
+    width:100%; padding:10px 12px; border:1px solid var(--border);
+    border-radius:8px; background:#0b1220; color:var(--text); outline:none;
+  }
+  .sidebar-count{ padding:8px 12px; color:var(--muted); font-size:12px; border-bottom:1px solid var(--border); }
+  .sidebar-list{ flex:1; overflow-y:auto; min-height:0; } /* <- scrollbar independiente */
+
+  .step-btn{
+    width:100%; text-align:left; border:0; background:transparent; color:var(--text);
+    padding:14px 16px; border-bottom:1px solid var(--border); cursor:pointer;
+    display:flex; align-items:flex-start; gap:10px;
+  }
+  .step-btn:hover{ background:var(--sidebar-hover); }
+  .step-btn.active{ background:var(--active-bg); color:var(--active-text); }
+  .step-index{
+    min-width:28px; height:28px; border-radius:999px; display:inline-grid; place-items:center;
+    font-size:12px; background:#1f2937; color:#d1d5db; border:1px solid var(--border);
+  }
+  .step-btn.active .step-index{ background:rgba(255,255,255,.15); color:#fff; border-color:transparent; }
+  .footer-tools{ padding:10px 12px; border-top:1px solid var(--border); display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+
+  /* ===== Main ===== */
+  .main{ flex:1; display:flex; flex-direction:column; min-width:0; }
+  .topbar{
+    height:48px; display:flex; align-items:center; justify-content:space-between;
+    padding:0 16px; border-bottom:1px solid var(--border); background:rgba(0,0,0,.2);
+  }
+  .title{ font-size:14px; color:var(--muted); }
+  .viewer{ flex:1; padding:24px; overflow:auto; background:var(--panel); }
+  .content{ max-width:900px; margin:0 auto; }
+  .content h1{ font-size:28px; margin:0 0 10px; }
+  .content .meta{ color:var(--muted); font-size:13px; margin-bottom:18px; }
+  .navline{ display:flex; justify-content:space-between; gap:10px; margin:10px 0 18px; }
+
+  .progresso{ height:8px; background:#111827; border:1px solid var(--border); border-radius:999px; overflow:hidden; }
+  .progresso > div{ height:100%; background:var(--active-bg); width:0%; }
+
+  .viewer article{ line-height:1.6; font-size:16px; }
+  .viewer code{ background:#0b1220; padding:2px 6px; border-radius:6px; }
+  .viewer pre{ background:#0b1220; border:1px solid var(--border); padding:14px; border-radius:12px; overflow:auto; }
+  .viewer a{ color:#93c5fd; text-decoration:none; }
+  .viewer a:hover{ text-decoration:underline; }
+  .kbd{ display:inline-block; padding:2px 6px; border:1px solid var(--border); border-bottom-width:3px; background:var(--kbd); border-radius:6px; font-size:12px; color:#d1d5db; }
+
+  .btn{ border:1px solid var(--border); background:#1f2937; color:var(--text); padding:8px 12px; border-radius:10px; cursor:pointer; }
+  .btn:hover{ filter:brightness(1.08); }
+  .btn.primary{ background:var(--active-bg); color:var(--active-text); border-color:transparent; }
+  .btn.muted{ background:var(--btn-muted); color:var(--btn-muted-text); border-color:transparent; }
+  .btn.block{ width:100%; }
+
+  @media print{
+    .sidebar,.topbar,.navline,.footer-tools{ display:none !important; }
+    .viewer{ padding:0; }
+    .content{ max-width:none; }
+    .content h1{ page-break-before:always; }
+    .content h1:first-child{ page-break-before:avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <!-- ===== Sidebar ===== -->
+  <aside class="sidebar" role="navigation" aria-label="Tutorial sidebar">
+    <div class="sidebar-header">
+      <div style="font-size:12px;width:24px;height:24px;display:grid;place-items:center;border-radius:6px;background:#0b1220;border:1px solid var(--border)">1</div>
+      <div>Copy of Interactive Tutorial Viewer</div>
+    </div>
+
+    <div class="tools">
+      <label class="btn muted" for="file">Cargar .json</label>
+      <input id="file" type="file" accept=".json,.txt" style="display:none" />
+      <button class="btn" id="drophelp">Arrastrar aquí</button>
+      <button class="btn" id="exportState">Export</button>
+      <label class="btn" for="importState">Import</label>
+      <input id="importState" type="file" accept=".json" style="display:none" />
+    </div>
+
+    <div class="search">
+      <input id="search" type="search" placeholder="Buscar en títulos (Ctrl/Cmd+K)" />
+    </div>
+
+    <div class="sidebar-count" id="count">0 pasos</div>
+
+    <div class="sidebar-list" id="list" tabindex="0" role="listbox" aria-label="Pasos del tutorial">
+      <!-- items -->
+    </div>
+
+    <div class="footer-tools">
+      <button class="btn block" id="expandAll">Expand All</button>
+      <button class="btn block" id="collapseAll">Collapse All</button>
+    </div>
+  </aside>
+
+  <!-- ===== Main ===== -->
+  <main class="main">
+    <div class="topbar">
+      <div class="title">Device ▾</div>
+      <div class="title">Atajos: <span class="kbd">[</span> <span class="kbd">]</span> • <span class="kbd">↑</span>/<span class="kbd">↓</span> • <span class="kbd">Enter</span> • <span class="kbd">Ctrl/Cmd+K</span></div>
+    </div>
+    <div class="viewer" id="viewer">
+      <div class="content">
+        <div class="navline">
+          <button class="btn" id="prevBtn">‹ Previous</button>
+          <button class="btn primary" id="nextBtn">Next ›</button>
+        </div>
+        <div class="progresso" aria-label="Progreso"><div id="progressBar"></div></div>
+
+        <article id="article">
+          <h1>Bienvenido</h1>
+          <div class="meta">
+            Carga un archivo <b>.json</b> con <code>{items:[...]}</code> o un <b>.txt</b> con marcadores:
+            <code>##itemID</code>, <code>##menu-item BEGIN/END</code>, <code>##Contenido BEGIN/END</code>.
+          </div>
+          <p>Reglas: todo <code>##menu-item</code> <u>debe</u> tener su <code>##Contenido</code>. Un <code>##Contenido</code> puede existir sin <code>##menu-item</code> → aparece en la secuencia pero no en el menú.</p>
+        </article>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+/* ============================================================
+   COMPATIBLE CON DOS ENTRADAS:
+   A) JSON: { items:[ {itemID, menu_item, contenido}, ... ] }
+   B) Marcadores de texto: ##itemID / ##menu-item / ##Contenido
+   Regla de Rubén:
+   - menu_item SIN contenido -> ERROR
+   - contenido SIN menu_item -> válido (NO aparece en sidebar)
+   ============================================================ */
+
+/* ---------- Sanitizador básico ---------- */
+function sanitize(html){
+  const tpl = document.createElement('template');
+  tpl.innerHTML = html;
+  const allowed = new Set(['B','I','STRONG','EM','CODE','PRE','UL','OL','LI','A','P','BR','H1','H2','H3','H4','H5','H6']);
+  const walker = document.createTreeWalker(tpl.content, NodeFilter.SHOW_ELEMENT, null);
+  let n; const strip=[];
+  while(n=walker.nextNode()){
+    if(!allowed.has(n.nodeName)){ strip.push(n); continue; }
+    if(n.nodeName==='A'){ n.setAttribute('rel','noopener noreferrer'); n.setAttribute('target','_blank'); }
+  }
+  strip.forEach(x=>x.replaceWith(...x.childNodes));
+  return tpl.innerHTML;
+}
+
+/* ---------- Markdown mínimo ---------- */
+function md(t){
+  t=t.replace(/```([\s\S]*?)```/g,(_,c)=>`<pre><code>${escapeHtml(c)}</code></pre>`);
+  t=t.replace(/`([^`]+)`/g,(_,c)=>`<code>${escapeHtml(c)}</code>`);
+  t=t.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+  t=t.replace(/\*([^*]+)\*/g,'<em>$1</em>');
+  t=t.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,'<a href="$2">$1</a>');
+  t=t.replace(/^\s*-\s+(.*)$/gm,'<li>$1</li>');
+  t=t.replace(/(<li>[\s\S]*?<\/li>)/g,'<ul>$1</ul>');
+  t=t.replace(/^(?!<h\d|<ul|<pre|<li|<\/li|<p|<blockquote|<code)(.+)$/gm,'<p>$1</p>');
+  return t;
+}
+function escapeHtml(s){return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
+
+/* ---------- Estado ---------- */
+let ITEMS=[];           // {id,titulo,contenido,index,showInMenu}
+let ORDER=[];           // ids en orden de lectura (incluye sin menú)
+let ACTIVE_ID=null;
+let VISITED=new Set();
+let FILTERED=null;      // null = no filtro; si hay filtro => subset de showInMenu
+
+const listEl=document.getElementById('list');
+const countEl=document.getElementById('count');
+const articleEl=document.getElementById('article');
+const progressBar=document.getElementById('progressBar');
+const search=document.getElementById('search');
+
+const STATE_KEY='itv_state_v2';
+
+function saveState(){
+  try{
+    localStorage.setItem(STATE_KEY, JSON.stringify({lastId:ACTIVE_ID, visited:[...VISITED], ts:Date.now()}));
+  }catch{ console.info('Aviso: almacenamiento local bloqueado.'); }
+}
+function loadState(){
+  try{
+    const raw=localStorage.getItem(STATE_KEY);
+    return raw? JSON.parse(raw): null;
+  }catch{ return null; }
+}
+
+/* ============================================================
+   PARSERS
+   ============================================================ */
+function parseFromJson(text){
+  const j=JSON.parse(text);
+  if(!j || !Array.isArray(j.items)) throw new Error('JSON sin items[].');
+  const arr=j.items;
+
+  let out=[];
+  arr.forEach((e,i)=>{
+    const id = (e.itemID ?? e.itemID_raw ?? String(i+1).padStart(3,'0')).toString();
+    const tituloRaw = (e.menu_item ?? '').toString().trim();
+    const contenido = (e.contenido ?? '').toString();
+
+    const hasMenu = !!tituloRaw;
+    const hasContent = !!contenido.trim();
+
+    if(hasMenu && !hasContent){
+      throw new Error(`Error en item ${id}: el menú tiene que tener Contenido.`);
+    }
+
+    const titulo = hasMenu ? tituloRaw : deriveTitle(contenido);
+    out.push({ id, titulo, contenido, index: i, showInMenu: hasMenu });
+  });
+  return out;
+}
+
+function parseFromMarkers(text){
+  const src = text.replace(/\r\n/g,'\n').split('\n').filter(l=>!/^\s*\/\//.test(l)).join('\n');
+  const reItem=/^##itemID:(.+)$/gm;
+  const indices=[]; let m;
+  while((m=reItem.exec(src))!==null){ indices.push({start:m.index, id:m[1].trim()}); }
+  if(!indices.length) throw new Error('No se encontraron ##itemID:...');
+
+  const items=[];
+  indices.forEach((e,i)=>{
+    const slice=src.slice(e.start, indices[i+1]?.start ?? src.length);
+    const id=e.id||String(i+1).padStart(3,'0');
+    const menuBlock=grab(slice,'##menu-item BEGIN','##menu-item END');
+    const contBlock=grab(slice,'##Contenido BEGIN','##Contenido END');
+
+    const hasMenu=!!menuBlock?.trim();
+    const hasContent=!!contBlock?.trim();
+
+    if(hasMenu && !hasContent) throw new Error(`Error en item ${id}: el menú tiene que tener Contenido.`);
+
+    const titulo = hasMenu ? menuBlock.trim().replace(/\n+/g,' ') : deriveTitle(contBlock||'');
+    items.push({ id, titulo, contenido:(contBlock||'').trim(), index:i, showInMenu: hasMenu });
+  });
+  return items;
+}
+
+function grab(text, begin, end){
+  const i=text.indexOf(begin), j=text.indexOf(end);
+  if(i===-1||j===-1||j<i) return null;
+  return text.slice(i+begin.length, j);
+}
+
+function deriveTitle(contenido){
+  const line = (contenido||'').split(/\r?\n/).map(s=>s.trim()).find(Boolean) || 'Paso sin título';
+  return line.slice(0,200);
+}
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+function buildOrder(){ ORDER = ITEMS.map(x=>x.id); }
+
+function renderSidebar(){
+  listEl.innerHTML='';
+  const visible = (FILTERED ? ITEMS.filter(x=>x.showInMenu && FILTERED.has(x.id))
+                            : ITEMS.filter(x=>x.showInMenu));
+  countEl.textContent = `${visible.length} pasos`;
+
+  visible.forEach(it=>{
+    const btn=document.createElement('button');
+    btn.className='step-btn'+(ACTIVE_ID===it.id?' active':'');
+    btn.dataset.id=it.id;
+
+    const idx=document.createElement('span');
+    idx.className='step-index';
+    idx.textContent=String(it.index+1);
+
+    const title=document.createElement('div');
+    title.textContent=it.titulo;
+
+    btn.appendChild(idx); btn.appendChild(title);
+    btn.addEventListener('click',()=>selectStep(it.id,true));
+    listEl.appendChild(btn);
+  });
+}
+
+function renderContent(){
+  if(!ACTIVE_ID){ articleEl.innerHTML=''; return; }
+  const it = ITEMS.find(x=>x.id===ACTIVE_ID);
+  const num = it.index+1;
+  const html = `
+    <h1>${num}. ${escapeHtml(it.titulo)}</h1>
+    <div class="meta">
+      ID: <code>#item-${escapeHtml(it.id)}</code> ·
+      <a href="#item-${encodeURIComponent(it.id)}">Enlace permanente</a>
+      ${it.showInMenu ? '' : ' · <em style="color:var(--muted)">(no aparece en el menú)</em>'}
+    </div>
+    ${sanitize(md(it.contenido))}
+  `;
+  articleEl.innerHTML=html;
+
+  const ratio=(VISITED.size/ITEMS.length)*100;
+  progressBar.style.width=`${Math.max(4,ratio)}%`;
+}
+
+/* ============================================================
+   NAVEGACIÓN / HASH / BUSCADOR
+   ============================================================ */
+function selectStep(id, pushHash){
+  ACTIVE_ID=id; VISITED.add(id);
+  renderSidebar(); renderContent(); saveState();
+  if(pushHash) location.hash = `item-${encodeURIComponent(id)}`;
+}
+function applyHashRouting(){
+  const m=location.hash.match(/^#item-(.+)$/);
+  if(m){
+    const id=decodeURIComponent(m[1]);
+    if(ITEMS.find(x=>x.id===id)) selectStep(id,false);
+  }
+}
+
+document.getElementById('prevBtn').addEventListener('click', ()=>{
+  if(!ACTIVE_ID) return;
+  const cur=ITEMS.find(x=>x.id===ACTIVE_ID).index;
+  const idx=Math.max(0,cur-1);
+  selectStep(ITEMS[idx].id,true);
+});
+document.getElementById('nextBtn').addEventListener('click', ()=>{
+  if(!ACTIVE_ID) return;
+  const cur=ITEMS.find(x=>x.id===ACTIVE_ID).index;
+  const idx=Math.min(ITEMS.length-1,cur+1);
+  selectStep(ITEMS[idx].id,true);
+});
+
+search.addEventListener('input', ()=>{
+  const q=search.value.trim().toLowerCase();
+  FILTERED = q? new Set(ITEMS.filter(x=>x.showInMenu && x.titulo.toLowerCase().includes(q)).map(x=>x.id)) : null;
+  renderSidebar();
+});
+
+document.addEventListener('keydown', (e)=>{
+  if((e.ctrlKey||e.metaKey) && e.key.toLowerCase()==='k'){ e.preventDefault(); search.focus(); search.select(); }
+  if(e.key==='[') document.getElementById('prevBtn').click();
+  if(e.key===']') document.getElementById('nextBtn').click();
+});
+
+/* ============================================================
+   EXPORT/IMPORT DE ESTADO
+   ============================================================ */
+document.getElementById('exportState').addEventListener('click', ()=>{
+  const data={version:2, timestamp:new Date().toISOString(), lastId:ACTIVE_ID, visited:[...VISITED]};
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='tutorial_state.json'; a.click();
+});
+document.getElementById('importState').addEventListener('change', async (e)=>{
+  const f=e.target.files[0]; if(!f) return;
+  try{
+    const j=JSON.parse(await f.text());
+    VISITED=new Set(Array.isArray(j.visited)? j.visited: []);
+    if(j.lastId && ITEMS.find(x=>x.id===j.lastId)) ACTIVE_ID=j.lastId;
+    renderSidebar(); renderContent(); saveState();
+  }catch{ alert('Archivo de estado inválido.'); }
+});
+
+/* ============================================================
+   ENTRADA DE ARCHIVOS (JSON o TXT con marcadores)
+   ============================================================ */
+document.getElementById('file').addEventListener('change', async (e)=>{
+  const f=e.target.files[0]; if(f){ await loadFromText(await f.text()); }
+});
+document.getElementById('drophelp').addEventListener('click', ()=>alert('Arrastra y suelta tu archivo .json/.txt en cualquier parte de la ventana.'));
+window.addEventListener('dragover', e=>e.preventDefault());
+window.addEventListener('drop', async (e)=>{
+  e.preventDefault();
+  const f=[...e.dataTransfer.files][0];
+  if(f && /(\.json|\.txt)$/i.test(f.name)) await loadFromText(await f.text());
+});
+
+/* ============================================================
+   INIT
+   ============================================================ */
+async function loadFromText(text){
+  try{
+    // Detección: JSON válido con items[] o Marcadores
+    let items;
+    try{ items=parseFromJson(text); }
+    catch{ items=parseFromMarkers(text); }
+
+    ITEMS = items;
+    // Renumeración para ids duplicados preservando original
+    const seen=new Set();
+    ITEMS.forEach((it,i)=>{
+      if(seen.has(it.id)){ it.dataOriginalId=it.id; it.id = it.id + '-' + (i+1); }
+      seen.add(it.id);
+      it.index=i;
+    });
+
+    buildOrder();
+    const prev = loadState();
+    if(prev && prev.lastId && ITEMS.find(x=>x.id===prev.lastId)){
+      VISITED=new Set(prev.visited||[]);
+      ACTIVE_ID=prev.lastId;
+    }else{
+      ACTIVE_ID=ITEMS[0]?.id || null;
+    }
+    renderSidebar(); renderContent(); applyHashRouting();
+  }catch(err){
+    alert(err.message || String(err));
+  }
+}
+window.addEventListener('hashchange', applyHashRouting);
+</script>
+</body>
+</html>

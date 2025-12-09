@@ -1,0 +1,54 @@
+##HIPERTEX-META BEGIN
+version: 1.0
+type: text/hptx
+encoding: UTF-8
+author: Rubén Urbano
+created: 2025-11-03
+title: Tutorial Hipertex – Prueba de Concepto
+description: Primer documento HIPERTEX v1.0 para validar parser, formato y sidebar con scrollbar.
+tags: [hipertex, parser, html, prueba]
+generator: Orion GPT-5
+##HIPERTEX-META END
+
+
+##itemID:01
+##menu-item BEGIN
+Introducción
+##menu-item END
+
+##Contenido BEGIN
+Bienvenido al formato **HIPERTEX v1.0**.  
+Este archivo es una prueba de concepto para validar:
+
+1. Detección de bloques por delimitadores.
+2. Preservación de saltos y espacios.
+3. Generación de HTML con menú lateral y scrollbar.
+
+Nada aquí debe ser reinterpretado como Markdown.  
+Todo debe mostrarse exactamente así, con `white-space: pre-wrap;`.
+##Contenido END
+
+
+##itemID:02
+##menu-item BEGIN
+Mi propio item Ruben
+##menu-item END
+
+##Contenido BEGIN
+HE PUESTO ESO
+DE 
+   PRUEBA
+     NOMÁS 
+
+El parser debe mantener los espacios y sangrías **tal cual**.
+##Contenido END
+
+
+##itemID:03
+##Contenido BEGIN
+Este bloque **no tiene menú-item**,  
+pero debe aparecer en el contenido principal del HTML,  
+con su propio ancla identificable por `itemID:03`.
+
+Así comprobamos que el parser no requiere título para funcionar.
+##Contenido END

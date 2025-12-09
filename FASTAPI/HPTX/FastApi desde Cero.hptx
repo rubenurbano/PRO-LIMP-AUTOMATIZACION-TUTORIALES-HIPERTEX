@@ -1,0 +1,316 @@
+##itemID:000
+##menu-item BEGIN
+VIDEO DE YOUTUBE:
+##menu-item END
+##Contenido BEGIN
+VIDEO DE YOUTUBE:
+(Referencia visual del tutorial
+
+FastApi desde Cero:
+
+https://youtu.be/TatMVGGMxY0?si=v9opbTdJvMjhDRGk
+
+y en el repositorio:
+
+https://github.com/IngFabioCastellanos/api-rest-google-apps-script
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+¿Qué es FastAPI y Por Qué Usarlo?
+##menu-item END
+##Contenido BEGIN
+FastAPI es un **framework web moderno y rápido** de alto rendimiento, diseñado para construir APIs utilizando Python. Es considerado uno de los frameworks Python más rápidos, comparable en rendimiento con NodeJS y Go, gracias a que se basa en Starlette y Pydantic.
+
+El lenguaje Python en sí es extremadamente versátil, utilizado en áreas como Machine Learning y desarrollo web. De entre los frameworks web disponibles, FastAPI se destaca por ser considerado por muchos como el mejor que existe hoy en día.
+
+**Ventajas clave de FastAPI:**
+
+1.  **Ultra Rápido y Eficiente:** Su instalación es muy rápida (una sola línea de código) y su ejecución requiere solo cinco líneas para un inicio básico.
+2.  **Rápido de Programar:** Aumenta la velocidad de desarrollo de funcionalidades en aproximadamente un 200% a 300%.
+3.  **Menos Errores:** Reduce hasta en un 40% los errores humanos, ya que muchas funcionalidades están implementadas automáticamente.
+4.  **Validación Automática:** Soluciona problemas comunes simplemente al **dar un tipo a los datos (tipado)**. El framework infiere la seguridad, el casteo a JSON, y maneja la sincronía, un aspecto que suele ser complejo en Python.
+5.  **Documentación Interactiva Automática:** Genera automáticamente la documentación de la API siguiendo los estándares abiertos OpenAPI (anteriormente Swagger) y JSON Schema.
+6.  **Basado en Estándares:** Está completamente basado y es compatible con los estándares abiertos para APIs.
+
+**Validación con Fuentes Técnicas Oficiales de FastAPI (Sustituto debido a la falta de Fuentes de Google Apps Script):**
+
+*   *FastAPI es rápido y de alto rendimiento:* Validado por la documentación que lo describe como un framework con muy alto rendimiento, a la par con NodeJS y Go.
+*   *FastAPI se basa en estándares:* Validado por su compatibilidad con OpenAPI y JSON Schema.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Requisitos e Instalación del Framework
+##menu-item END
+##Contenido BEGIN
+Para empezar con FastAPI, solo necesitas tener conocimientos básicos de Python y ganas de aprender.
+
+FastAPI se apoya en dos librerías principales:
+*   **Starlette:** para la gestión web.
+*   **Pydantic:** para la gestión de datos y validaciones.
+
+### 1. Instalación Rápida
+
+La instalación es ultra rápida y se realiza con una sola línea de código, ya que esta línea incluye las dependencias necesarias, como un servidor de aplicaciones Python (Uvicorn).
+
+Para obtener todas las dependencias estándar, incluyendo el servidor necesario:
+
+```bash
+pip install "fastapi[standard]"
+```
+**Nota:** Es crucial poner `"fastapi[standard]"` entre comillas para asegurar que la instalación funcione correctamente en todas las terminales. Si ya eres un usuario avanzado de Python, lo ideal es crear un ambiente virtual para aislar las dependencias del proyecto.
+
+**Validación con Fuentes Técnicas Oficiales de FastAPI (Sustituto):**
+
+*   *Instalación con dependencias estándar:* Validado por la instrucción oficial de usar `pip install "fastapi[standard]"`, que incluye Uvicorn para el servidor.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Creación y Ejecución de la Primera Aplicación
+##menu-item END
+##Contenido BEGIN
+Una vez instalado FastAPI, el siguiente paso es crear el archivo principal de tu aplicación y ejecutar el servidor.
+
+### 1. Crear el archivo de aplicación (`main.py`)
+
+Crea un archivo llamado `main.py` (aunque el nombre no es estrictamente importante, `main` es la convención preferida).
+
+En este archivo, importamos `FastAPI`, instanciamos la aplicación y definimos nuestra primera "ruta" o *endpoint* (punto de acceso):
+
+```python
+from fastapi import FastAPI
+
+# Instanciamos la aplicación
+app = FastAPI()
+
+# Definimos el primer enrutador (endpoint) usando un decorador
+@app.get("/")
+def read_root():
+    return {"message": "Hello World"}
+```
+
+### 2. Entendiendo el Código Básico
+
+*   `FastAPI()`: Se instancia la aplicación. Esta instancia (`app`) contiene los **decoradores** que funcionan como enrutadores.
+*   `@app.get("/")`: Este es un **decorador** que le dice al servidor que si llega una petición HTTP de tipo `GET` a la ruta raíz (`/`), debe ejecutar la función inmediatamente debajo de él (`read_root`).
+*   `read_root()`: Esta función devuelve un diccionario Python, que FastAPI **transforma automáticamente** en un objeto JSON para el cliente.
+
+### 3. Ejecutar el Servidor (Uvicorn)
+
+Para ejecutar la aplicación, usamos el servidor Uvicorn a través del comando `fastapi dev`. Este comando ejecuta el archivo `main` y busca la instancia de FastAPI llamada `app`.
+
+```bash
+fastapi dev main.py
+```
+
+El servidor arrancará e indicará la dirección local (por defecto `http://127.0.0.1:8000`) y la dirección de la documentación.
+
+Si cambias cualquier cosa en el archivo y lo guardas, el comando `dev` (o `reload` si se usa Uvicorn directamente) hace que el servidor se vuelva a ejecutar automáticamente, permitiendo cambios en tiempo real, lo que ofrece una experiencia de usuario "increíble".
+
+**Validación con Fuentes Técnicas Oficiales de FastAPI (Sustituto):**
+
+*   *Estructura de la aplicación:* Validado por el ejemplo oficial que muestra la importación, la instanciación de `FastAPI()`, y la definición de una función con el decorador `@app.get("/")` que devuelve un diccionario.
+*   *Comando de ejecución:* Validado por el uso de `fastapi dev main.py` para arrancar el servidor con Uvicorn y auto-recarga habilitada.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Tipos de Comunicación: Path, Query y Body
+##menu-item END
+##Contenido BEGIN
+Todos los frameworks web se comunican mediante peticiones HTTP, enviando y recibiendo parámetros. En FastAPI, existen principalmente tres formas de enviar información a la API:
+
+1.  **Parámetros de Path (Ruta):** Variables que forman parte de la URL misma (ejemplo: `/users/10`).
+2.  **Parámetros de Query (Consulta):** Variables que se añaden después del signo de interrogación (`?`) en la URL (ejemplo: `/users?id=10`).
+3.  **Body (Cuerpo de la Petición):** Un objeto (generalmente JSON) que se envía con métodos como `POST`, `PUT` o `PATCH`.
+
+Lo "maravilloso" de FastAPI es que no necesitas declarar si un parámetro es de `path` o `query`; el framework lo **infiere** automáticamente basándose en dónde lo defines y en su tipado.
+
+### 1. Parámetros de Path
+
+Para usar un parámetro de ruta, simplemente se encierra el nombre de la variable entre llaves `{}` en el decorador de la ruta. Este nombre debe coincidir con un argumento en la función.
+
+```python
+# La ruta espera un parámetro de path llamado 'item_id'
+@app.get("/items/{item_id}")
+def read_item(item_id: int):
+    # El framework infiere que 'item_id' es un parámetro de path
+    return {"item_id": item_id}
+```
+**Tipado (Inferencia de Tipo):** Al especificar el tipo de dato (`int` para `item_id`), FastAPI no solo lo valida, sino que también lo **transforma** si es necesario (ej. de string a número entero). Si no se especifica el tipo, por defecto se asume que es un `String`.
+
+### 2. Parámetros de Query
+
+Si un parámetro aparece en la función, pero **no** se especifica en la URL del decorador, el framework automáticamente infiere que debe ser un parámetro de *query*.
+
+```python
+# Ejemplo que recibe un ID por path y un parámetro 'q' por query
+@app.get("/items/{item_id}")
+def read_item(item_id: int, q: Union[str, None] = None):
+    # q es opcional (definido con "= None") y se busca en la query string
+    return {"item_id": item_id, "q": q}
+```
+Si se le da un valor por defecto (como `= None` o `= 10`), el parámetro de query se vuelve **opcional**. Si no se proporciona un valor por defecto, es **requerido**.
+
+### 3. Parámetros en el Body (Cuerpo)
+
+Para enviar estructuras de datos complejas (como diccionarios o JSON), utilizamos el Cuerpo de la Petición (Body). Esto solo funciona en métodos HTTP que modifican datos, como `POST`, `PUT`, `DELETE` o `PATCH`; **no funciona en peticiones `GET`**.
+
+Para cambiar el método, simplemente se usa el decorador correspondiente, por ejemplo, `@app.post` para enviar información.
+
+**Validación con Fuentes Técnicas Oficiales de FastAPI (Sustituto):**
+
+*   *Parámetros de Path:* Validado por el uso de la sintaxis `/items/{item_id}` y la necesidad de que `item_id` sea un argumento de la función.
+*   *Parámetros de Query:* Validado por la documentación que describe cómo se pueden pasar variables opcionales como `q`.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Validación de Datos con Modelos (Pydantic)
+##menu-item END
+##Contenido BEGIN
+Cuando se necesita enviar estructuras de datos más complejas (no primitivas como `str` o `int`), por ejemplo, un objeto o un arreglo, el framework automáticamente espera que estos datos vengan en el *Body* de la petición.
+
+Para asegurar que los datos recibidos (el JSON) cumplan con una estructura específica (un "contrato") y para evitar bugs, se utilizan **Modelos de Datos**. Esto se logra fácilmente gracias a la librería **Pydantic**, que FastAPI utiliza internamente.
+
+### 1. Creación de un Modelo Base
+
+Un modelo es la representación de una entidad (como un `Usuario` o un `Item`).
+
+Para crear un modelo, importamos `BaseModel` de Pydantic y definimos una clase que herede de ella, especificando el tipo de dato de cada propiedad.
+
+```python
+from pydantic import BaseModel
+from typing import Union
+from fastapi import FastAPI
+
+# Definimos el modelo Item para el cuerpo de la petición (Body)
+class Item(BaseModel):
+    name: str # Requerido (String)
+    price: float # Requerido (Flotante)
+    is_offer: Union[bool, None] = None # Opcional (Booleano)
+```
+
+### 2. Uso del Modelo en una Ruta
+
+Si la función de un *path operation* (ruta) recibe un argumento que es un modelo Pydantic (como `item: Item`), FastAPI automáticamente asume que esa información debe venir en el **Body** del request (como JSON).
+
+```python
+# Usamos el método POST para enviar datos
+@app.post("/items")
+def create_item(item: Item):
+    # FastAPI casteará el JSON entrante a un objeto 'Item' de Python
+    # Y lo transformará de nuevo a JSON al retornarlo
+    return item
+```
+
+El framework se encarga de:
+
+1.  **Validar los datos** de entrada: Comprueba que el JSON cumple con el esquema del `BaseModel` (ej. que `price` sea un `float`).
+2.  **Castear/Transformar** el JSON recibido en un objeto Python (`Item`).
+3.  **Transformar** el objeto Python de vuelta a JSON para la respuesta.
+
+**Validación con Fuentes Técnicas Oficiales de FastAPI (Sustituto):**
+
+*   *Uso de Pydantic para el Body:* Validado por la documentación que requiere importar `BaseModel` y declarar el objeto del modelo como un parámetro de la función para manejar el cuerpo de la petición, especialmente con métodos `PUT` o `POST`.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Documentación Interactiva Automática
+##menu-item END
+##Contenido BEGIN
+Una de las funcionalidades más poderosas de FastAPI es su capacidad de generar **documentación interactiva** automáticamente.
+
+Solo necesitas abrir tu navegador y acceder a la ruta `/docs` de tu API.
+
+### 1. Interfaces de Documentación
+
+FastAPI proporciona dos interfaces de documentación basadas en los estándares OpenAPI:
+
+1.  **Swagger UI:** Se accede en la ruta `/docs`. Esta interfaz permite no solo ver los *endpoints* disponibles, sino también interactuar directamente con ellos (probar la API, enviar parámetros de Path, Query y Body).
+2.  **ReDoc:** Se accede en la ruta `/redoc`.
+
+El framework lee las especificaciones de un archivo JSON generado y construye esta interfaz, lo que permite a los desarrolladores tener una idea clara de lo que se puede hacer y qué parámetros se esperan.
+
+Cuando se utiliza un modelo Pydantic (ver paso anterior), la documentación se actualiza automáticamente para reflejar los campos requeridos en el Body.
+
+**Validación con Fuentes Técnicas Oficiales de FastAPI (Sustituto):**
+
+*   *Documentación Interactiva:* Validado por la documentación que indica que, al ejecutar el servidor, la documentación interactiva (Swagger UI) está disponible en `http://127.0.0.1:8000/docs`.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Organización de Rutas en Aplicaciones Grandes
+##menu-item END
+##Contenido BEGIN
+En aplicaciones más grandes, es esencial separar las responsabilidades de las entidades (ej. usuarios, facturas, compras). Poner todo en un solo archivo principal (`main.py`) no es lo ideal.
+
+FastAPI proporciona el `APIRouter` para manejar las rutas en múltiples archivos.
+
+### 1. Crear el Archivo de Rutas (Ej. `users.py`)
+
+Creamos un archivo separado, por ejemplo, `users.py`, donde se define la lógica de esa entidad.
+
+1.  Importamos `APIRouter` en lugar de `FastAPI`.
+2.  Definimos una instancia del router, por ejemplo, `router = APIRouter()`.
+3.  Todas las rutas relacionadas (como `/users`, `/users/category`) ahora usan el objeto `router` en sus decoradores.
+
+### 2. Conectar las Rutas Adicionales
+
+Para que la aplicación principal (`main.py`) reconozca y documente estas rutas externas, necesitamos importarlas y luego incluirlas en la aplicación principal.
+
+Esto se hace con el método `include_router` en la instancia principal de `FastAPI`:
+
+```python
+# En main.py
+
+from fastapi import FastAPI
+from . import users # Importamos el archivo de rutas
+
+app = FastAPI()
+
+# Incluimos el router de usuarios
+app.include_router(users.router)
+```
+
+Al hacer esto, la aplicación detecta la nueva documentación y las rutas, permitiendo organizar el código de manera modular y limpia.
+
+**Validación con Fuentes Técnicas Oficiales de FastAPI (Sustituto):**
+
+*   *Aplicaciones grandes y múltiples archivos:* La documentación oficial describe el manejo de "Aplicaciones más grandes - Múltiples archivos" y hace referencia al uso de `APIRouter`.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+El tutorial se ha construido utilizando exclusivamente la información proporcionada en las fuentes sobre el framework **FastAPI** (Python).
+
+**IMPORTANTE:** Debido a que el material fuente proporcionado **no incluye documentación técnica oficial de Google Apps Script**, no fue posible validar los pasos con las fuentes técnicas de Google, como se requiere en las reglas obligatorias 2 y 5.
+
+En su lugar, los puntos clave del tutorial fueron validados con la documentación técnica oficial de **FastAPI** (tiangolo.com), que es la única fuente técnica disponible en el contexto de esta consulta.
+
+### Resumen de Puntos Validados (FastAPI):
+
+| Concepto Validado | Fuente Técnica (Referencia) |
+| :--- | :--- |
+| **Definición y Rendimiento de FastAPI** | Framework moderno y de alto rendimiento, compatible con OpenAPI. |
+| **Instalación de Dependencias** | Se realiza con `pip install "fastapi[standard]"`, incluyendo dependencias como Uvicorn. |
+| **Ejecución y Comandos** | La aplicación se corre con `fastapi dev main.py` o comandos similares de Uvicorn. |
+| **Manejo de Rutas (Path y Query)** | Las rutas se definen con decoradores `@app.get` y los parámetros de Path se especifican en la URL `{item_id}`. |
+| **Uso de Pydantic y Body** | La validación del cuerpo de la petición (`Body`) se realiza creando una clase que hereda de `BaseModel`. |
+| **Documentación Automática** | La documentación interactiva (Swagger UI y ReDoc) se genera automáticamente en `/docs` y `/redoc`. |
+| **Organización de Código** | Para aplicaciones grandes, se utiliza `APIRouter` y `include_router` para estructurar las rutas. |
+
+### Enlaces Directos a las Fuentes Oficiales (FastAPI):
+
+*   **Documentación Principal de FastAPI:** https://fastapi.tiangolo.com
+*   **Sección de Instalación:** (Incluida en la documentación general)
+*   **Tutorial - Guía del Usuario (Primeros Pasos y Rutas):** (Referencia a la estructura del tutorial)
+*   **Código Fuente (GitHub):** https://github.com/fastapi/fastapi
+##Contenido END

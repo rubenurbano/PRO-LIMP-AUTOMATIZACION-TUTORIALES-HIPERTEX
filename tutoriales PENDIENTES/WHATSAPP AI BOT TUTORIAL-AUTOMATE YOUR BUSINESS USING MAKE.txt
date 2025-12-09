@@ -1,0 +1,100 @@
+NOMBRE DEL VIDEO:
+WHATSAPP AI BOT TUTORIAL-AUTOMATE YOUR BUSINESS USING MAKE
+
+URL DEL VIDEO:
+HTTPS://YOUTU.BE/BMFT3XB2SPQ?SI=12DNHWEFH2ATUYTC
+
+ESTE ESQUEMA TE MUESTRA CÓMO CREAR UN BOT DE WHATSAPP CON INTELIGENCIA ARTIFICIAL (IA) PARA AUTOMATIZAR TAREAS, COMO EVALUAR CLIENTES POTENCIALES O AGENDAR LLAMADAS. USAREMOS TRES HERRAMIENTAS PRINCIPALES: OPENAI (LA MENTE DEL BOT), NOTIFIER (EL CONECTOR DE WHATSAPP) Y MAKE.COM (LA PLATAFORMA DE AUTOMATIZACIÓN).
+
+INTRODUCCIÓN AL PROYECTO
+
+El bot de WhatsApp sirve para programar llamadas, evaluar clientes potenciales o responder preguntas automáticamente.
+Se utiliza Notifier by Wats Tool y make.com para que el proceso sea sencillo y no se necesite configurar la complicada API de WhatsApp.
+El bot puede explicar productos y si un cliente quiere hablar contigo, simplemente presiona un botón de respuesta para abrir una conversación personal de WhatsApp.
+
+PARTE 1: CREACIÓN DEL CEREBRO DEL BOT EN OPENAI
+
+Paso 1: Crear una cuenta en OpenAI
+Ve a platform.open.com.
+Crea una cuenta y agrega la información de tu negocio.
+
+Paso 2: Crear el Asistente (Assistant)
+Dentro de OpenAI, ve a la sección Playground y luego a Assistants.
+Presiona en Crear (Create).
+
+Paso 3: Entrenar al Bot
+Define el nombre del bot (ejemplo: "evaluate lead").
+Define las instrucciones para el bot (esto le dice qué trabajo tiene que hacer).
+Ejemplo de instrucción: "Eres un representante de ventas inmobiliarias. Si el presupuesto del cliente es menor a 300K USD, no permitas que agende una llamada. Si es mayor a 300K, envíales un enlace de Calendly para agendar la llamada".
+Elige el modelo: GPT-4 o Mini suelen funcionar para tareas sencillas.
+Opcional: Puedes adjuntar archivos (documentos sobre tu negocio) para que el bot tenga más información.
+
+Paso 4: Configurar Pagos y Pruebas
+Para probar el bot, debes ir a la configuración de facturación (Building settings) y añadir una tarjeta de crédito.
+Prueba el bot en el Playground preguntándole algo, como "¿Cuál es mi presupuesto?" y verifica que responda según las reglas que le diste (ejemplo: si dices 200K, debe negar la reunión).
+
+PARTE 2: CONFIGURACIÓN DEL CONECTOR DE WHATSAPP (NOTIFIER)
+
+Paso 5: Crear una cuenta en Notifier
+Debes crear una cuenta en Notifier (se te proporcionará un enlace).
+Notifier permite enviar mensajes de WhatsApp automáticamente sin usar la API compleja.
+
+Paso 6: Configurar la Información de Negocio
+En el panel de Notifier, llena la información de tu negocio:
+El nombre de tu negocio (el que aparecerá en los mensajes).
+El número de WhatsApp al que se enviarán las respuestas de los clientes (puede ser tu número personal o de empresa).
+
+Paso 7: Obtener la Clave API
+Ve a la sección API Keys en tu panel de Notifier.
+Copia tu clave API (la necesitarás para Make.com).
+Notifier también te da acceso a estadísticas (analytics) como cuántos mensajes se leen, cuántas personas presionan el botón de respuesta y cuántas se dan de baja.
+
+PARTE 3: CONEXIÓN EN MAKE.COM (AUTOMATIZACIÓN DEL FLUJO)
+
+Make.com es la herramienta que conecta OpenAI con Notifier, creando un "escenario" de automatización.
+
+Paso 8: Configurar el Escenario de Make (Respuesta al Usuario)
+El escenario principal se activará cuando el usuario envíe un mensaje al bot.
+
+Módulo 1: Notifier Bot (Escuchar Mensajes Entrantes)
+Este módulo escucha los webhooks, que son esencialmente las notificaciones de los mensajes que envían tus clientes al bot.
+
+Módulo 2: OpenAI - Message and Assistant (Dar Contexto al Bot)
+Conecta Make.com a OpenAI usando la clave API (Secret Key) y la ID de organización (Organization ID) de tu cuenta de OpenAI.
+Selecciona el Asistente que creaste (ejemplo: 'Lead Qualify Bot').
+Rol: User (Usuario).
+Mensaje: Aquí le das a la IA todo el contexto de la conversación previa (Conversation paragraph) para que "recuerde" lo que ya se ha hablado.
+Asegúrate de que la instrucción sea muy clara, por ejemplo: "Importante: solo responde preguntas relacionadas con agendar una cita para bienes raíces. No hables de nada más".
+El resultado de este paso genera un Thread ID, que es fundamental para que el bot sepa que es la misma conversación.
+
+Módulo 3: OpenAI - Message and Assistant (Procesar el Último Mensaje)
+Mensaje: Envía solo el último mensaje que el usuario te ha enviado (Last message sent by the user).
+IMPORTANTE: Usa el Thread ID del paso anterior para mantener el hilo de la conversación.
+
+Módulo 4: Notifier - Send a WhatsApp Message (Enviar Respuesta)
+Número de teléfono: Usa el número de teléfono de la persona que te escribió.
+Mensaje: El resultado (Result) que generó el Módulo 3 de OpenAI (la respuesta del bot).
+
+PARTE 4: INICIAR LA CONVERSACIÓN
+
+Paso 9: Crear un Disparador para el Primer Mensaje
+El bot necesita enviar el primer mensaje antes de que el usuario pueda responder y activar el escenario principal.
+Usa una herramienta de formulario (como Tally) u otra que te sirva como disparador (trigger).
+
+Módulo Inicial: Notifier - Send a WhatsApp Message (Mensaje de Bienvenida)
+Este módulo se ejecuta cuando alguien llena el formulario.
+Envía un mensaje inicial al cliente (ejemplo: "Hola, gracias por tu interés. ¿Cuál es tu presupuesto para el apartamento?").
+
+Paso 10: Prueba Final del Flujo Completo
+Ejecuta el disparador (llena el formulario con tu número de teléfono).
+Recibirás el mensaje inicial en WhatsApp.
+Responde con un presupuesto (ejemplo: 350K).
+Verifica que Make.com active el escenario, procese el mensaje con OpenAI y te envíe la respuesta correcta (ejemplo: el enlace para agendar una cita, si cumpliste el criterio de presupuesto).
+
+FUNCIONALIDAD ADICIONAL DEL BOT
+
+El bot puede mantener una conversación, pero solo responderá bien sobre los temas para los que fue entrenado (como el presupuesto en este ejemplo).
+Si el cliente quiere dejar de hablar con el bot y comunicarse contigo directamente, puede presionar el botón de respuesta (reply button) o un enlace específico proporcionado en el mensaje del bot.
+Puedes ver estadísticas detalladas sobre el rendimiento de tus mensajes en el panel de Notifier.
+
+EL BOT DE IA FUNCIONA COMO UN VENDEDOR ASISTENTE: TÚ LE DAS LAS REGLAS DE QUÉ PREGUNTAR (OPENAI), LO CONECTAS AL TELÉFONO (NOTIFIER) Y LE ENSEÑAS A REACCIONAR AUTOMÁTICAMENTE A LO QUE LE DICEN LOS CLIENTES (MAKE.COM), ASEGURÁNDOTE DE QUE SOLO LOS CLIENTES MÁS IMPORTANTES LLEGUEN A HABLAR CON UNA PERSONA REAL.

@@ -1,0 +1,50 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Protege tu API con FastAPI-Autenticación Segura, JWT y Roles\nWEB ORIGINAL:",
+      "contenido": "Protege tu API con FastAPI-Autenticación Segura, JWT y Roles:\nWeb Original:\nProtege tu API con FastAPI-Autenticación Segura, JWT y Roles:\nhttps://youtu.be/jOfN4jmOkcI?si=Q_DSyuDk60jLJ94r"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción a la Seguridad de APIs",
+      "contenido": "Introducción a la Seguridad de APIs:\nUna mala implementación de la autenticación puede poner en peligro toda la base de datos de tu aplicación, permitiendo que personas no autorizadas accedan a paneles de administración.\n\nLas APIs funcionan como camareros que manejan la información de tus aplicaciones. Para protegerlas, debemos entender tres conceptos:\n\nAutenticación: Identifica quién eres.\n\nAutorización: Define qué permisos tienes y qué puedes hacer.\n\nSeguridad: Es crucial al crear APIs, usando el protocolo OAuth 2 y tokens JWT para las sesiones.[1][2]\n\nAdemás, utilizaremos roles de usuario para diferenciar, por ejemplo, entre un jefe y un empleado."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Teoría sobre Protección de Contraseñas",
+      "contenido": "Teoría sobre Protección de Contraseñas:\nNunca debes guardar contraseñas en texto normal. En su lugar, usaremos un código secreto seguro llamado \"hash\" mediante el algoritmo BCRYPT.\n\nEste algoritmo funciona así:\n\nGenera una \"semilla\" (o sal) aleatoria.\n\nMezcla esta semilla con tu contraseña para crear el código secreto.\n\nEsto asegura que aunque dos usuarios tengan la misma contraseña, sus códigos secretos sean distintos.\n\nEn la base de datos solo guardamos el código secreto (hash). Para verificar una contraseña, generamos un nuevo código con lo que ingresa el usuario y lo comparamos con el que tenemos guardado."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Pasos para Implementar el Hashing",
+      "contenido": "Pasos para Implementar el Hashing:\nSigue estos pasos para crear el sistema de códigos secretos:\n\nCrea una carpeta nueva (por ejemplo, \"video 5\").\n\nAbre la carpeta con tu editor de código (Visual Studio Code).\n\nCrea un archivo llamado app.py.[3]\n\nAbre la terminal o consola.\n\nCrea un entorno virtual escribiendo: Python-M espacio V NV espacio NV.\n\nActiva el entorno escribiendo el nombre, luego slash scripts y slash activate.[3]\n\nInstala la librería de encriptación escribiendo: pip install.[4]\n\nDefine una función que reciba una contraseña para generar su hash.[5]\n\nDentro de la función, genera la sal aleatoria con bcrypt.\n\nCrea el hash mezclando la contraseña con la sal.\n\nHaz que la función devuelva el hash.\n\nPrueba la función con una contraseña de ejemplo.\n\nDefine otra función para verificar contraseñas que reciba la contraseña ingresada y el hash guardado.\n\nUsa \"bcrypt check\" para validar si coinciden (devolviendo true o false)."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Implementación del Token JWT",
+      "contenido": "Implementación del Token JWT:\nJWT (Jason Web Token) es un ticket moderno para manejar sesiones. Tiene tres partes: cabecera, carga útil (datos del usuario sin información sensible) y firma.\n\nPasos para configurarlo:\n15. Crea un archivo llamado app2.py.\n16. Instala la librería necesaria escribiendo: pip install Jose.\n17. Define una clave secreta ultra segura para firmar el ticket.\n18. Define el algoritmo de seguridad (ejemplo: hatch 256).\n19. Crea una función \"create access token\" que reciba los datos del usuario y la duración del ticket (15 minutos por defecto).\n20. Calcula la fecha de expiración (hora actual + duración).\n21. Añade la fecha de expiración a los datos del usuario.\n22. Usa \"JWT encode\" para crear el ticket con los datos, la clave y el algoritmo.\n23. Crea una función \"decode token\" para leer el ticket.\n24. Intenta leer el ticket con la clave secreta.\n25. Si hay error (falso o vencido), muestra \"token inválido o expirado\".\n26. Prueba creando y decodificando un ticket."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Integración de Seguridad con FastAPI",
+      "contenido": "Integración de Seguridad con FastAPI:\nFastAPI facilita el manejo de seguridad.[1][2][5][6][7][8]\n\nPasos de integración:\n27. Crea un archivo llamado app3.py.\n28. Instala FastAPI escribiendo: pip install fastapi.[2]\n29. Define la clave secreta, algoritmo y tiempo de expiración (30 minutos).\n30. Crea una base de datos falsa de usuarios con roles (administrador y usuario) y contraseñas guardadas como hash.\n31. Define la estructura de datos de los usuarios (username, email, role).\n32. Crea funciones para buscar y autenticar usuarios.\n33. Define la función clave \"get current user\". Esta función toma el ticket JWT, lo decodifica, extrae el nombre, busca al usuario y lo devuelve si todo es correcto. Si falla, indica error de credenciales.[2][8]\n34. Define la función \"check admin\" que verifica si un usuario validado tiene el rol de administrador. Si no, envía un error de permisos."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Creación de Puertas de Acceso (Endpoints)",
+      "contenido": "Creación de Puertas de Acceso (Endpoints):\nVamos a crear las rutas para entrar a la aplicación:\n\nCrea la puerta de login: un endpoint POST en la ruta /token.\n\nEsta ruta recibe nombre y contraseña, intenta autenticar y, si es correcto, devuelve un ticket de acceso.[2]\n\nCrea una puerta restringida: un endpoint GET en la ruta /admin.\n\nEsta ruta usa la función \"check admin\" para asegurar que solo los administradores entren. Si tienen permiso, reciben un mensaje de bienvenida.[7]"
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Pruebas de Seguridad y Resultados",
+      "contenido": "Pruebas de Seguridad y Resultados:\nPara verificar que la API es segura:\n\nInstala Uvicorn: pip install uvicorn.[2]\n\nInicia el servidor: uvicorn app3 dos puntos app guion guion reload.\n\nInstala la librería request en otra terminal para hacer pruebas.\n\nRealiza estas pruebas:\n\nPrueba 1 (Login Correcto): Envía credenciales de admin, obtén ticket y entra a /admin. Resultado: Éxito (Status 200).\n\nPrueba 2 (Usuario Inexistente): Intenta entrar con nombre falso. Resultado: Error (Status 401).\n\nPrueba 3 (Contraseña Incorrecta): Intenta con contraseña errónea. Resultado: Error (Status 401).\n\nPrueba 4 (Sin Ticket): Entra a /admin sin ticket. Resultado: No autenticado (Status 401).\n\nPrueba 5 (Rol Insuficiente): Un usuario normal intenta entrar a /admin. Resultado: No tienes permiso (Status 403).[2]\n\nPrueba 6 (Ticket Falso): Usa un ticket inventado. Resultado: Token inválido (Status 401)."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nLa información presentada en este tutorial ha sido contrastada con la documentación oficial de las herramientas utilizadas:\n\nFastAPI y Seguridad (OAuth2):\nFastAPI proporciona utilidades de seguridad integradas a través del módulo fastapi.security.[9][10][11] La clase OAuth2PasswordBearer es el mecanismo estándar para implementar flujos de autenticación donde el cliente envía un token en el encabezado \"Authorization\".\nFuente: https://fastapi.tiangolo.com/tutorial/security/\n\nJWT (JSON Web Tokens) con Python:\nLa librería python-jose es comúnmente utilizada en el ecosistema FastAPI para la generación y decodificación de tokens JWT.[2] Los algoritmos estándar como HS256 (HMAC con SHA-256) requieren una clave secreta para firmar los tokens, garantizando la integridad de los datos (\"claims\") como la expiración (exp) y el sujeto (sub).\nFuente: https://python-jose.readthedocs.io/en/latest/\n\nHashing de Contraseñas con Bcrypt:\nLa librería bcrypt en Python implementa el algoritmo de hashing del mismo nombre.[4] Es el estándar recomendado para almacenamiento de contraseñas debido a su uso de \"sales\" (salts) aleatorias y su resistencia a ataques de fuerza bruta.[5] Las funciones hashpw y checkpw (o validación de hash) son los métodos principales para asegurar que las contraseñas nunca se almacenen en texto plano.\nFuente: https://pypi.org/project/bcrypt/\n\n\nSources\nhelp\ntiangolo.com\nmedium.com\nmedium.com\nreadthedocs.io\ngeeksforgeeks.org\ngeneralistprogrammer.com\nreadthedocs.io\ntiangolo.com\ntiangolo.com\ntiangolo.com\nfastapitutorial.com\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\npython-jose documentation official\nFastAPI security OAuth2 JWT documentation official\nFastAPI OAuth2PasswordBearer official docs\npython bcrypt documentation official"
+    }
+  ]
+}

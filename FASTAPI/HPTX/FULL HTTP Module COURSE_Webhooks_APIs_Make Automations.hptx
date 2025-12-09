@@ -1,0 +1,250 @@
+##itemID:000
+##menu-item BEGIN
+FULL HTTP Module COURSE_Webhooks_APIs_Make Automations
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+FULL HTTP Module COURSE_Webhooks_APIs_Make Automations:
+Web Original:
+FULL HTTP Module COURSE_Webhooks_APIs_Make Automations:
+https://youtu.be/lX2WcFvC77E?si=7edZka6S6UBFghra
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción al módulo HTTP en Make.com
+##menu-item END
+##Contenido BEGIN
+Introducción al módulo HTTP en Make.com:
+Este es un esquema muy completo para entender el módulo HTTP en Make.com. Este módulo es como una herramienta universal que te permite conectar Make con cualquier otro programa o sitio web, incluso si Make no tiene un módulo específico para ellos.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Lo que aprenderás en este curso
+##menu-item END
+##Contenido BEGIN
+Lo que aprenderás en este curso:
+Entenderás cómo funcionan los webhooks (desencadenantes instantáneos).
+Aprenderás qué es JSON, el lenguaje que usan los programas para intercambiar datos.
+Descubrirás qué son las APIs y cómo usarlas con el módulo HTTP de Make.
+Sabrás cómo hacer una petición (solicitud) HTTP.
+Conocerás los códigos de respuesta (si la petición funcionó o falló).
+Aprenderás a hacer solicitudes autenticadas (OAuth 2.0).
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Qué es un webhook y cómo usarlo
+##menu-item END
+##Contenido BEGIN
+Qué es un webhook y cómo usarlo:
+Un webhook es la mejor herramienta en Make.com porque permite que tu automatización se ejecute inmediatamente cuando hay algo que hacer, en lugar de esperar a una hora programada (como cada minuto o cada hora).
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Creación de un webhook en Make.com
+##menu-item END
+##Contenido BEGIN
+Creación de un webhook en Make.com:
+En Make, crea un nuevo escenario y selecciona Webhooks como primer módulo (el módulo disparador o "trigger").
+Selecciona la opción "Custom Webhook instant" (Webhook personalizado instantáneo).
+Dale un nombre al webhook.
+Copia la dirección URL del webhook al portapapeles. Esta URL es la clave para activarlo.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Cómo activar un webhook por primera vez
+##menu-item END
+##Contenido BEGIN
+Cómo activar un webhook por primera vez:
+Para activarlo por primera vez, pega la URL en una nueva pestaña del navegador y presiona enter.
+Verás el mensaje "Accepted" (Aceptado) y la automatización se ejecutará, aunque el resultado estará vacío porque no enviaste datos.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Enviar datos por URL con webhooks
+##menu-menu END
+##Contenido BEGIN
+Enviar datos por URL con webhooks:
+Puedes enviar datos añadiéndolos a la URL (como si fueran variables).
+Para comenzar a agregar datos a la URL, utiliza un signo de interrogación (?).
+Escribe el nombre de la variable, seguido de un signo de igual (=), y luego el valor (Ejemplo: ...?name=Dennis).
+Para agregar más variables, utiliza el signo de ampersand (&). (Ejemplo: ...?name=Dennis&age=36).
+Si utilizas espacios en los valores, estos se convertirán internamente en %20 en la URL (aunque a veces funciona si solo pones el espacio).
+Los datos enviados a través del webhook (como el nombre y la edad) se convierten en salidas que puedes usar en módulos posteriores (como Chat GPT u otros).
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Qué es JSON y cómo funciona
+##menu-item END
+##Contenido BEGIN
+Qué es JSON y cómo funciona:
+JSON significa JavaScript Object Notation. Es un formato ligero que permite transferir datos de manera estructurada de un software a otro o de un servidor a otro, siendo legible tanto para humanos como para computadoras.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Estructura básica de JSON
+##menu-item END
+##Contenido BEGIN
+Estructura básica de JSON:
+Pares Clave-Valor: Es la unidad básica. La Clave (Key) es siempre un texto (string) que describe el dato (Ejemplo: "age") y el Valor (Value) es el dato en sí.
+Cadenas (Strings): Son texto y deben estar rodeadas de comillas.
+Valores: Pueden ser strings (texto), números, arrays (listas), booleanos (verdadero o falso) u otros objetos.
+Arrays (Listas): Son colecciones de datos (múltiples elementos) y están rodeados de corchetes cuadrados [ ].
+Objetos (Collections): Son estructuras de datos más complejas, que contienen múltiples pares Clave-Valor dentro de sí, y están rodeados de corchetes curvos { }.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Crear JSON en Make.com
+##menu-item END
+##Contenido BEGIN
+Crear JSON en Make.com:
+Se utiliza el módulo "Create JSON".
+Necesitas definir una Estructura de Datos (Data Structure). Esto es como crear un molde que Make usará para saber qué tipo de información va en el JSON (por ejemplo: Edad es tipo Texto, Habilidades es tipo Array, Dirección es tipo Colección/Objeto).
+Para datos complejos como una dirección, que es un objeto con propiedades (Ejemplo: Código Postal y Ciudad), defines la colección con sus especificaciones internas.
+Si una variable no recibe datos, Make la establece como "null" (nulo).
+Para pasar estructuras complejas a través de un webhook, utilizas la nomenclatura de puntos (Ejemplo para un objeto: address.zip=10101). Para arrays (listas), debes pasar la variable múltiples veces (Ejemplo: skills=coding&skills=automation).
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Parsear JSON en Make.com
+##menu-item END
+##Contenido BEGIN
+Parsear JSON en Make.com:
+Se utiliza el módulo "Parse JSON".
+Este módulo toma una cadena de texto JSON (que a menudo es difícil de leer) y la convierte en variables individuales y usables dentro de tu automatización (como Edad, Nombre, Habilidades, etc.).
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Qué es una API y cómo funciona
+##menu-item END
+##Contenido BEGIN
+Qué es una API y cómo funciona:
+API significa Interfaz de Programación de Aplicaciones (Application Programming Interface). Una API permite que dos programas de software o servidores se comuniquen entre sí.
+Cómo funciona una API (Analogía del Restaurante):
+El usuario (tu aplicación en Make) hace una Petición (Request).
+La API (el mesero/servidor) toma la petición y la lleva a la Cocina (el servidor de recursos, donde están los datos).
+La Cocina procesa la petición y prepara una Respuesta (Response) (por ejemplo, los datos solicitados).
+La API le entrega esa respuesta al usuario.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Componentes clave de una solicitud API
+##menu-item END
+##Contenido BEGIN
+Componentes clave de una solicitud API:
+Endpoints: Son las URL (direcciones web) específicas donde solicitas datos o realizas acciones.
+Tipos de Petición (Métodos):
+GET: Solicitar o recibir información (el más común).
+POST: Enviar información nueva al servidor (como crear una nueva entrada en una base de datos).
+PUT: Actualizar una entrada existente.
+DELETE: Eliminar un elemento.
+Headers (Encabezados): Se usan para enviar metadatos, como tokens de autenticación.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+Autenticación en APIs
+##menu-item END
+##Contenido BEGIN
+Autenticación en APIs:
+Para acceder a la mayoría de las APIs, necesitas autenticarte para que el servidor sepa quién eres.
+API Key (Llave API): Es una clave única asociada a tu cuenta, que funciona como una contraseña o identificación para solicitar datos. Se suele enviar en los Headers o directamente en la URL.
+Tokens: Son claves temporales que demuestran que estás autorizado.
+##Contenido END
+
+##itemID:014
+##menu-item BEGIN
+Uso del módulo HTTP: Solicitudes GET simples
+##menu-item END
+##Contenido BEGIN
+Uso del módulo HTTP: Solicitudes GET simples:
+El módulo "Make a request" (Hacer una solicitud) te permite contactar una API usando los métodos HTTP.
+Pasos para una Solicitud GET (Ejemplo Spoonacular API):
+1. URL: Introduce el Endpoint que quieres usar (la dirección web específica de la API).
+2. Método: Selecciona GET.
+3. Headers: Agrega un Header para autenticarte. Por ejemplo, algunas APIs requieren el nombre "X-API-Key" y como valor, tu clave API.
+4. Parámetros de Consulta (Query String): Si quieres buscar algo específico, añades parámetros. En la sección "Query String", puedes agregar variables como "query" con el valor "pasta" o "diet" con el valor "vegetarian".
+5. Parse Response (Analizar Respuesta): Es crucial activar la opción "Parse Response" a true (verdadero). Esto le dice a Make que automáticamente lea el texto JSON de la respuesta y lo convierta en variables individuales y usables, ahorrándote el paso de usar el módulo "Parse JSON" por separado.
+##Contenido END
+
+##itemID:015
+##menu-item BEGIN
+Autenticación avanzada: OAuth 2.0
+##menu-item END
+##Contenido BEGIN
+Autenticación avanzada: OAuth 2.0:
+OAuth 2.0 es un protocolo de acceso seguro. Se usa cuando el acceso no puede ser con una simple clave API (por ejemplo, para datos de usuario protegidos, como información de salud o redes sociales).
+Conceptos Clave de Oauth 2.0:
+Cliente ID y Secret: Identificadores únicos de la aplicación que solicita el acceso (en este caso, tu escenario de Make.com).
+Access Token (Token de Acceso): Una clave temporal para acceder a los recursos protegidos.
+Servidor de Autorización (Authorization Server): El sistema que verifica la identidad del usuario y emite el token.
+Servidor de Recursos (Resource Server): El sistema donde residen los datos protegidos (por ejemplo, una base de datos).
+Whitelisting (Lista Blanca): Necesitas indicar en la API (ejemplo: Deviant Art) que permites llamadas que vienen de Make.com (o Integromat, que es el nombre anterior de Make) para asegurar la conexión.
+Scope (Alcance): Define qué permisos específicos necesita tu aplicación (por ejemplo, solo permiso de "browse" o ver). Si el scope es insuficiente, la solicitud fallará.
+Configuración en Make (Tutorial):
+Usa el módulo "Make an OAuth 2.0 request".
+Necesitas una Conexión Oauth 2.0, que debes configurar una sola vez.
+Para la conexión, ingresarás:
+Authorization URI: La URL para que el usuario autorice la aplicación.
+Token URI: La URL para obtener el token de acceso.
+Client ID y Client Secret: Obtenidos al registrar tu aplicación en el servicio externo (ejemplo: Deviant Art).
+Scope: Especificar los permisos necesarios (ejemplo: "browse").
+Después de guardar, Make te pedirá que autorices la conexión en el sitio web externo para obtener el Access Token.
+##Contenido END
+
+##itemID:016
+##menu-item BEGIN
+Códigos de Respuesta HTTP
+##menu-item END
+##Contenido BEGIN
+Códigos de Respuesta HTTP:
+Los códigos de estado son números que te indican el resultado de tu solicitud a la API.
+Categorías de Códigos:
+1xx: Códigos informativos.
+2xx: Códigos de Éxito.
+3xx: Códigos de Redirección (te envían a otra URL).
+4xx: Errores del Cliente (error en tu solicitud).
+5xx: Errores del Servidor (problema en el servidor de la API).
+Códigos Más Comunes:
+200 (OK): La solicitud fue exitosa y obtuviste los datos de vuelta. Éxito total.
+400 (Bad Request): Hay algo incorrecto en cómo formulaste la solicitud (ejemplo: un parámetro equivocado).
+401 (Unauthorized): La autenticación es requerida o inválida (ejemplo: la API Key no funcionó, o no has iniciado sesión).
+403 (Forbidden): No tienes permiso para acceder a ese recurso (a veces relacionado con scopes insuficientes en OAuth).
+404 (Not Found): El Endpoint (la URL que intentaste acceder) no existe.
+500 (Internal Server Error): Un error interno del servidor; el problema no es tuyo, sino del sistema al que llamas.
+##Contenido END
+
+##itemID:017
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+Para esta sección, se revisaron las siguientes fuentes oficiales sobre el módulo HTTP, webhooks, APIs y autenticación OAuth 2.0 en Make.com y estándares técnicos relacionados:
+
+- Documentación oficial de Make.com sobre el módulo HTTP y webhooks.
+- Documentación estándar de APIs RESTful y JSON en sites como json.org y REST API tutoriales.
+- Especificaciones OAuth 2.0 en la documentación oficial de OAuth.net y proveedores como Google Developers.
+- Referencias técnicas sobre códigos de respuesta HTTP en RFC 7231 y documentación de servicios como Postman.
+
+Estas fuentes confirman y validan los conceptos explicados en el tutorial sobre cómo usar el módulo HTTP de Make.com para webhooks, intercambio JSON, APIs y autenticación avanzada.
+
+Enlaces directos:
+- https://www.make.com/en/help/modules/http-request
+- https://restfulapi.net/
+- https://oauth.net/2/
+- https://www.rfc-editor.org/rfc/rfc7231.html
+##Contenido END
+
+[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/64556067/e346b6fd-c587-4142-89e9-f0c61b5eff7a/transcripcion-hoy.txt)

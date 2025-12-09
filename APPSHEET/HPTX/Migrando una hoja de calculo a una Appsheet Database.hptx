@@ -1,0 +1,204 @@
+##itemID: 000
+##menu-item BEGIN
+Migrando una hoja de calculo a una Appsheet Database
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Migrando una hoja de calculo a una Appsheet Database:
+Web Original:
+Migrando una hoja de calculo a una Appsheet Database:
+https://youtu.be/tpHwIf3fDYw?si=pLm7tE-6I0MKa0bi
+##Contenido END
+
+##itemID: 001
+##menu-item BEGIN
+Introducción: Cambiando el cerebro de tu aplicación
+##menu-item END
+##Contenido BEGIN
+Introducción: Cambiando el cerebro de tu aplicación:
+Este tutorial explica paso a paso cómo mover la información de tu aplicación desde una Hoja de Cálculo hacia una base de datos nativa de AppSheet.[1][2][3][4][5][6][7][8][9]
+
+Imagina que tu aplicación es un robot que necesita un cerebro para guardar información. Al principio, ese cerebro era un cuaderno, que representa la Hoja de Cálculo. Ahora, vamos a darle un cerebro mucho más rápido y ordenado, que es la Base de Datos de AppSheet.
+##Contenido END
+
+##itemID: 002
+##menu-item BEGIN
+Paso 1: Crear la base de datos e importar datos
+##menu-item END
+##Contenido BEGIN
+Paso 1: Crear la base de datos e importar datos:
+Lo primero es crear el nuevo lugar donde vivirán tus datos.
+
+Ve a la sección de bases de datos dentro de AppSheet.[3][4][5][6][7][8][9]
+
+Crea una nueva base de datos.[3][4][7][9]
+
+Selecciona la opción importar desde hoja de cálculo.
+
+Escoge la Hoja de Cálculo que actualmente está conectada a tu aplicación.
+
+Espera a que termine el proceso. Al finalizar, tendrás tu nueva base de datos con toda la información y la misma estructura de columnas que tenías antes. AppSheet intentará adivinar qué tipo de información tiene cada columna.
+##Contenido END
+
+##itemID: 003
+##menu-item BEGIN
+Paso 2: Revisar y corregir los tipos de datos
+##menu-item END
+##Contenido BEGIN
+Paso 2: Revisar y corregir los tipos de datos:
+Para que todo funcione bien, debes confirmar que AppSheet entendió qué hay en cada columna.
+
+Revisa los tipos de datos que AppSheet asignó.[5][8][10][11] Puedes verlos indicados con un icono al lado del nombre de la columna.
+
+Ajusta los tipos de dato si es necesario.[4][5][8] Por ejemplo, si la columna edad aparece como decimal, cámbiala a tipo numérico. Si el teléfono está como texto, cámbialo a tipo phone. Si el correo electrónico está como texto, cámbialo a tipo email.
+##Contenido END
+
+##itemID: 004
+##menu-item BEGIN
+Paso 3: Solucionar problemas de Fecha y Hora
+##menu-item END
+##Contenido BEGIN
+Paso 3: Solucionar problemas de Fecha y Hora:
+A veces ocurre un problema al intentar configurar las fechas. Si intentas cambiar una columna de fecha a tipo datetime y la conversión falla dejando campos vacíos, suele ser un problema de zona horaria.
+
+Para arreglarlo:
+
+Valida la zona horaria en la configuración de la tabla de tu aplicación. Puede que tu app esté en Spanish México pero la base de datos en Estados Unidos en inglés.
+
+Cambia la configuración de la base de datos para que la localización sea la misma que la de tu aplicación.
+
+Guarda el cambio de localización.[6]
+
+Intenta nuevamente convertir la columna al tipo de dato datetime. Ahora debería funcionar.
+
+Si tenías una columna de prueba para validar la fecha, elimínala.
+
+Opcionalmente, puedes cambiar el nombre de la base de datos, por ejemplo a db participantes, para distinguirla mejor.
+##Contenido END
+
+##itemID: 005
+##menu-item BEGIN
+Paso 4: Conectar la aplicación a la nueva base de datos
+##menu-item END
+##Contenido BEGIN
+Paso 4: Conectar la aplicación a la nueva base de datos:
+Ahora debemos decirle a la aplicación que deje de usar el cuaderno viejo y use el nuevo cerebro.
+
+Ve a la configuración de la tabla dentro de tu aplicación.[1][5][8]
+
+Busca la sección storage o almacenamiento.[5]
+
+En la opción fuente de datos, busca y selecciona tu nueva base de datos de AppSheet.
+
+Guarda los cambios.[1][9]
+##Contenido END
+
+##itemID: 006
+##menu-item BEGIN
+Paso 5: Regenerar la estructura
+##menu-item END
+##Contenido BEGIN
+Paso 5: Regenerar la estructura:
+AppSheet Database necesita una columna especial para identificar cada registro.[9][12]
+
+AppSheet te mostrará una advertencia indicando que debes regenerar la estructura de la tabla.[3][4] Esto pasa porque la base de datos nativa necesita una columna llamada Row ID.
+
+Regenera el esquema. La columna Row ID aparecerá automáticamente; es un identificador único que AppSheet maneja por defecto.
+
+Actualiza o refresca la aplicación varias veces para que se corrijan automáticamente otras advertencias que puedan aparecer.
+##Contenido END
+
+##itemID: 007
+##menu-item BEGIN
+Paso 6: Recuperar configuraciones perdidas
+##menu-item END
+##Contenido BEGIN
+Paso 6: Recuperar configuraciones perdidas:
+Al regenerar el esquema, la aplicación puede olvidar algunas reglas que tenías antes.
+
+Verifica que el campo de ID único esté generando un valor único.[12] Si no lo hace, configura su valor inicial manualmente.
+
+Vuelve a marcar como obligatorios los campos que lo eran antes, como la edad o el sexo.
+
+Reconfigura las propiedades especiales, como campos que no se podían editar o mostrar (por ejemplo, la fecha de registro).
+
+Guarda los cambios y resuelve cualquier advertencia pendiente actualizando la aplicación.
+
+Recuerda que si necesitas modificar ciertos campos, como el nombre, tal vez debas hacerlo directamente en la base de datos si la aplicación no te deja.
+##Contenido END
+
+##itemID: 008
+##menu-item BEGIN
+Paso 7: Verificar que todo funcione
+##menu-item END
+##Contenido BEGIN
+Paso 7: Verificar que todo funcione:
+Finalmente, probaremos si el robot está usando su nuevo cerebro correctamente.
+
+Ingresa un nuevo registro o participante desde la aplicación.
+
+Revisa tu antigua Hoja de Cálculo.[1] La nueva información NO debería aparecer allí.
+
+Revisa tu nueva Base de Datos de AppSheet.[3][4][7][9] La nueva información DEBE aparecer allí.
+
+Si esto ocurre, la migración fue un éxito. Has movido tus muebles (datos) a la casa nueva, ajustaste los enchufes (tipos de datos) y le diste tu nueva dirección a tus amigos (la aplicación).
+##Contenido END
+
+##itemID: 009
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+He consultado la documentación oficial de Google AppSheet para validar los pasos descritos en el tutorial.
+
+Resumen de puntos técnicos validados:
+
+Creación e Importación: La documentación de Google confirma que se puede crear una "AppSheet Database" importando directamente desde una hoja de cálculo (Google Sheets o Excel). Esto genera una nueva base de datos nativa con los datos existentes.[4][7]
+
+Fuente: Google Support - Create a database by importing a Google Sheet.[6]
+
+Row ID (Identificador de Fila): Se valida que las bases de datos nativas de AppSheet utilizan por defecto una columna clave llamada "Row ID" que se genera automáticamente y es necesaria para gestionar las referencias.
+
+Fuente: AppSheet Help - Row ID key.
+
+Tipos de Datos: Es correcto que AppSheet "infiere" los tipos de datos al importar, pero se recomienda revisar y ajustar tipos específicos como Phone, Email, Number o Date/Time para habilitar las funcionalidades correctas en la app.
+
+Fuente: AppSheet Help - Column data types.
+
+Regeneración de Estructura: Al cambiar la fuente de datos de una tabla existente (de Sheet a Database), es obligatorio regenerar la estructura de la columna en el editor de la app para sincronizar el nuevo esquema (incluyendo el nuevo Row ID) y evitar errores de sincronización.
+
+Fuente: Google Codelabs - Build a no-code app using the native AppSheet database.
+
+Enlaces de Referencia:
+
+Crear una base de datos de AppSheet (Ayuda de AppSheet): https://support.google.com/appsheet/answer/10106438?hl=es
+
+Tipos de columnas en AppSheet: https://support.google.com/appsheet/answer/10104438?hl=es
+
+Migrar a AppSheet Database: https://support.google.com/appsheet/answer/12632222?hl=en
+
+
+Sources
+help
+medium.com
+reddit.com
+google.com
+youtube.com
+google.com
+google.dev
+google.com
+youtube.com
+google.com
+google.com
+idun-group.com
+appsheet.com
+google.com
+google.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+AppSheet create database from spreadsheet official documentation
+AppSheet switch data source to AppSheet Database support
+AppSheet database data types and Row ID documentation
+##Contenido END

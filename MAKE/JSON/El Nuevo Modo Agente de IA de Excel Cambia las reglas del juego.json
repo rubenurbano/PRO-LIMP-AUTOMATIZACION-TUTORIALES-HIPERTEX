@@ -1,0 +1,75 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "El Nuevo Modo Agente de IA de Excel Cambia las reglas del juego \nWEB ORIGINAL:",
+      "contenido": "El Nuevo Modo Agente de IA de Excel Cambia las reglas del juego :\nWeb Original:\nEl Nuevo Modo Agente de IA de Excel Cambia las reglas del juego :\nhttps://youtu.be/_x2zyJ5-J-I?si=cDZGKB3-4k92u0KV"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "¿Qué es un Agente de IA?",
+      "contenido": "¿Qué es un Agente de IA?:\nUn Agente de IA es como un ayudante superinteligente que trabaja por su cuenta. Imagina que es un robot que puede mirar lo que hay alrededor, pensar en la información y decidir qué hacer para completar una tarea. Además, aprende y se pone mejor mientras hace el trabajo. En Excel, este agente usa algo llamado Copilot para ayudarte con cosas como hacer tablas, gráficos y fórmulas sin que tú tengas que hacerlo todo manualmente. Según la documentación oficial de Microsoft, Agent Mode es un asistente impulsado por IA que construye y edita libros de trabajo junto contigo, disponible en preview a través del add-in Excel Labs."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Veamos cómo funciona",
+      "contenido": "Veamos cómo funciona:\nPara ver cómo trabaja este agente, usamos una tabla con datos como fechas, productos, categorías y códigos. Le damos órdenes simples y él hace el trabajo. Veremos varios ejemplos paso a paso. Esto está validado con la guía oficial de Microsoft, donde se explica que Agent Mode analiza datos, aplica fórmulas y crea visualizaciones automáticamente."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Instrucción 1: Crear una tabla de resumen y un gráfico",
+      "contenido": "Instrucción 1: Crear una tabla de resumen y un gráfico:\nLe dices al agente: Crea una tabla dinámica con el dinero que ingresó, separándolo por categorías y meses. Luego, inserta un gráfico de columnas. El agente empieza a pensar y trabajar. Puede tardar unos minutos. Crea una hoja nueva, hace la tabla que suma el dinero por categorías en filas y meses en columnas, y agrega el gráfico. También explica qué hizo, como agregar fórmulas y verificar totales. Te da consejos para actualizar los datos. Validado con la documentación de Microsoft, que menciona que Agent Mode puede crear pivots y charts basados en prompts."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "El resultado 1",
+      "contenido": "El resultado 1:\nEl agente pone la tabla de resumen con sumas por mes y categoría, y el gráfico de columnas. Explica todo: cómo organizó los datos, fórmulas usadas, verificaciones, y sugerencias. Si hay errores, te dice cómo los arregló. Esto coincide con las FAQs oficiales de Microsoft, donde se describe que el agente proporciona explicaciones detalladas de sus acciones."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Instrucción 2: Crear un tablero de control (Dashboard)",
+      "contenido": "Instrucción 2: Crear un tablero de control (Dashboard):\nLe pides algo más difícil: Genera tarjetas con los números clave (KPIs), más la tendencia mensual, más el Top 5 de productos por ingresos. El agente piensa más tiempo porque es complejo. Crea una hoja nueva llamada Dashboard con diseño bonito, título, fondo e íconos. Muestra ingresos, unidades vendidas, ticket promedio y más. Usa fórmulas como SUMAR.SI y LET para el Top 5. Validado con el blog oficial de Microsoft, que destaca la creación de dashboards y KPIs con Agent Mode."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "El resultado 2",
+      "contenido": "El resultado 2:\nEl dashboard tiene los KPIs, la tendencia mensual y el Top 5. El agente explica cómo lo hizo, las fórmulas y todo. Es como tener un experto que arma todo por ti. Según las fuentes oficiales, Agent Mode usa razonamiento avanzado para tareas complejas como esta."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Instrucción 3: Crear una tabla de pagos de un préstamo",
+      "contenido": "Instrucción 3: Crear una tabla de pagos de un préstamo:\nCon datos de un préstamo como monto, tasa de interés y años, le pides: Crea una tabla de amortización donde pueda ingresar el monto y los años a pagar. El agente detecta los datos, crea la tabla con título, formato, y columnas para pago mensual, interés, capital y saldo. Explica las fórmulas y supuestos. Es importante que aprendas a hacerlo manual para verificar. Validado con soporte de Microsoft, que incluye ejemplos de modelos financieros."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "El resultado 3",
+      "contenido": "El resultado 3:\nLa tabla muestra todo hasta que el préstamo se paga. Tiene tasa mensual, meses, etc. El agente detalla dónde está la info y las fórmulas. Coincide con la descripción oficial de creación de modelos en Excel con Agent Mode."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Instrucción 4: Crear un calendario que se actualiza",
+      "contenido": "Instrucción 4: Crear un calendario que se actualiza:\nEn una hoja en blanco, le pides: Un calendario dinámico donde yo pueda elegir el año. El agente crea una hoja llamada Calendario. Puedes poner el año en una celda y se actualiza solo. Usa validación de datos para que solo aceptes números. Muestra 12 meses, colorea fines de semana. Validado con FAQs de Microsoft, que mencionan uso de fórmulas y validaciones en Agent Mode."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "El resultado 4",
+      "contenido": "El resultado 4:\nAl cambiar el año, como a 2026, el calendario se ajusta. Explica las fórmulas usadas. Todo hecho con una orden simple. Según documentación, Agent Mode crea contenido dinámico como esto."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Limitaciones del Modo Agente de IA",
+      "contenido": "Limitaciones del Modo Agente de IA:\nEl agente no puede conectar con herramientas externas como APIs, no ve archivos fuera de Excel, no usa Power Query, no crea macros, ni maneja eventos como al crear una hoja. Validado con FAQs oficiales de Microsoft, que listan estas limitaciones exactas."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Nota importante",
+      "contenido": "Nota importante:\nTodo lo que hace el agente usa un código interno llamado Office Scripts. Funciona en Excel web y pronto en desktop. Validado con el blog de Microsoft, que explica la integración con Office Scripts."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "¿Cómo activo el Modo Agente en Excel?",
+      "contenido": "¿Cómo activo el Modo Agente en Excel?:\nPor ahora, úsalo en Excel web. Necesitas licencia de Microsoft 365 y Copilot. Pasos: Ve a la pestaña Inicio, haz clic en Complementos, busca Excel Labs, agrégalo. Luego, clic en Excel Labs arriba, espera que cargue, y aparece el Modo Agente. Validado con guía de soporte de Microsoft para activar via Excel Labs add-in.\n\n\nVALIDACIÓN CON FUENTES TÉCNICAS OFICIALES\nResumen de puntos validados:\n- Definición y funcionamiento: Agent Mode es un asistente IA para tareas en Excel como análisis y creación de contenido.\n- Ejemplos: Creación de pivots, dashboards, modelos financieros, calendarios.\n- Limitaciones: No APIs, no Power Query, no macros.\n- Activación: Via Excel Labs en web, requiere M365 y Copilot.\nEnlaces directos:\n- https://support.microsoft.com/en-us/office/agent-mode-in-excel-frontier-a2fd6fe4-97ac-416b-b89a-22f4d1357c7a\n- https://support.microsoft.com/en-us/office/frequently-asked-questions-about-agent-mode-in-excel-frontier-1cfd906d-40b4-46be-8e2d-65b893e28a02\n- https://www.microsoft.com/en-us/microsoft-365/blog/2025/09/29/vibe-working-introducing-agent-mode-and-office-agent-in-microsoft-365-copilot/"
+    }
+  ]
+}

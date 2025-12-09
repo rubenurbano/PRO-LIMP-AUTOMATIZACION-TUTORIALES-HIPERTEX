@@ -1,0 +1,92 @@
+{
+  "hub": {
+    "name": "HIPERTEX HUB",
+    "generated_at": "2025-11-04T17:54:45Z",
+    "base_path": ".",
+    "count": 7
+  },
+  "tutorials": [
+    {
+      "file": "Crea tu API Rest con Google Apps Script.hptx",
+      "relpath": "Crea tu API Rest con Google Apps Script.hptx",
+      "size_bytes": 17393,
+      "mtime": "2025-11-04T10:37:09Z",
+      "title": "Crea tu API Rest con Google Apps Script.hptx",
+      "created": "",
+      "tags": [],
+      "items_count": 8,
+      "menu_count": 8
+    },
+    {
+      "file": "Crea una App Educativa con Google AI Studio (Tutorial Paso a Paso + Prompt GRATIS).hptx",
+      "relpath": "Crea una App Educativa con Google AI Studio (Tutorial Paso a Paso + Prompt GRATIS).hptx",
+      "size_bytes": 13385,
+      "mtime": "2025-11-04T11:20:19Z",
+      "title": "Crea una App Educativa con Google AI Studio (Tutorial Paso a Paso + Prompt GRATIS).hptx",
+      "created": "",
+      "tags": [],
+      "items_count": 9,
+      "menu_count": 9
+    },
+    {
+      "file": "Learn Fast API With This ONE Project.hptx",
+      "relpath": "Learn Fast API With This ONE Project.hptx",
+      "size_bytes": 14540,
+      "mtime": "2025-11-04T17:21:15Z",
+      "title": "Learn Fast API With This ONE Project.hptx",
+      "created": "",
+      "tags": [],
+      "items_count": 8,
+      "menu_count": 7
+    },
+    {
+      "file": "TUTORIAL - How To Use ChatGPT To Make A Google Sheet Multi User Data Entry Form.hptx",
+      "relpath": "TUTORIAL - How To Use ChatGPT To Make A Google Sheet Multi User Data Entry Form.hptx",
+      "size_bytes": 17741,
+      "mtime": "2025-11-03T16:18:02Z",
+      "title": "TUTORIAL - How To Use ChatGPT To Make A Google Sheet Multi User Data Entry Form.hptx",
+      "created": "",
+      "tags": [],
+      "items_count": 13,
+      "menu_count": 0
+    },
+    {
+      "file": "TUTORIAL P&P - IMPORTAR DATOS Google Sheets - CSV - XML - FEEDs CASOS PRÁCTICOS.hptx",
+      "relpath": "TUTORIAL P&P - IMPORTAR DATOS Google Sheets - CSV - XML - FEEDs CASOS PRÁCTICOS.hptx",
+      "size_bytes": 11510,
+      "mtime": "2025-11-03T09:43:39Z",
+      "title": "TUTORIAL P&P - IMPORTAR DATOS Google Sheets - CSV - XML - FEEDs CASOS PRÁCTICOS.hptx",
+      "created": "",
+      "tags": [],
+      "items_count": 13,
+      "menu_count": 12
+    },
+    {
+      "file": "TUTORIALIMPORTAR DATOSGoogleSheetsCSVXMLFEEDCASOSPRÁCTICO.hptx",
+      "relpath": "TUTORIALIMPORTAR DATOSGoogleSheetsCSVXMLFEEDCASOSPRÁCTICO.hptx",
+      "size_bytes": 11510,
+      "mtime": "2025-11-03T09:49:07Z",
+      "title": "TUTORIALIMPORTAR DATOSGoogleSheetsCSVXMLFEEDCASOSPRÁCTICO.hptx",
+      "created": "",
+      "tags": [],
+      "items_count": 13,
+      "menu_count": 12
+    },
+    {
+      "file": "ejemplo HPTX.hptx",
+      "relpath": "ejemplo HPTX.hptx",
+      "size_bytes": 1315,
+      "mtime": "2025-11-03T08:26:02Z",
+      "title": "Tutorial Hipertex – Prueba de Concepto",
+      "created": "2025-11-03",
+      "tags": [
+        "hipertex",
+        "parser",
+        "html",
+        "prueba"
+      ],
+      "items_count": 3,
+      "menu_count": 2
+    }
+  ]
+}

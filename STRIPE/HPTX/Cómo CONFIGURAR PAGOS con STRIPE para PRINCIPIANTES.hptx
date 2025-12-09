@@ -1,0 +1,175 @@
+##itemID:000
+##menu-item BEGIN
+Cómo CONFIGURAR PAGOS con STRIPE para PRINCIPIANTES
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Cómo CONFIGURAR PAGOS con STRIPE para PRINCIPIANTES:
+Web Original:
+Cómo CONFIGURAR PAGOS con STRIPE para PRINCIPIANTES:
+https://youtu.be/Qkdcr_kE0uo?si=oxIx4nGzUBfnnHZ
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción a Stripe
+##menu-item END
+##Contenido BEGIN
+Introducción a Stripe:
+Stripe es una plataforma muy segura y fácil de usar para quienes venden cosas por internet o crean contenido. Con Stripe, puedes recibir pagos usando tarjetas de crédito o débito, y también con Apple Pay o Google Pay.
+
+Si todavía no tienes una cuenta en Stripe, puedes hacer una gratis con el enlace que está en la descripción del video. Usar ese enlace ayuda a que este contenido siga existiendo, y a ti no te cuesta nada más.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Preparación inicial en Stripe
+##menu-item END
+##Contenido BEGIN
+Preparación inicial en Stripe:
+Cuando ya estés en la página principal de Stripe, lo que haremos es crear un enlace de pago que podrás enviar a tus clientes. Recuerda que, para esto, tienes que agregar tu cuenta bancaria para que Stripe te envíe el dinero.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Iniciar la creación del enlace de pago
+##menu-item END
+##Contenido BEGIN
+Iniciar la creación del enlace de pago:
+Haz clic donde dice compartir enlace de pago.
+
+Presiona en iniciar.
+
+Verás una vista previa de cómo se verá el enlace que estás creando a la derecha de la pantalla.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Agregar información del producto
+##menu-item END
+##Contenido BEGIN
+Agregar información del producto:
+En la sección de producto, vas a agregar un nuevo producto.
+
+Pon el nombre del producto o servicio por el cual te van a pagar.
+
+Indica si el pago es anual, mensual, cada 3 meses o cada 6 meses.
+
+Escribe la cantidad de dinero que van a pagar.
+
+Puedes poner una foto si quieres, pero ahora solo haremos un ejemplo simple. Lo que cambias se ve en el lado derecho al momento, como si fuera un cupón de pago.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Configurar opciones básicas
+##menu-item END
+##Contenido BEGIN
+Configurar opciones básicas:
+En la parte de opciones, puedes elegir si quieres pedir la dirección o el número de teléfono de tus clientes. Esto lo decides tú, según lo que necesites.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Configurar opciones avanzadas
+##menu-item END
+##Contenido BEGIN
+Configurar opciones avanzadas:
+En las opciones avanzadas, puedes hacer más cosas:
+
+Puedes agregar campos personalizados, que es pedir más información.
+
+Puedes permitir que usen códigos de descuento o promoción.
+
+Puedes permitir que pongan sus identificaciones fiscales.
+
+Puedes guardar sus datos de pago para usarlos después.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Personalizar campos adicionales
+##menu-item END
+##Contenido BEGIN
+Personalizar campos adicionales:
+Si eliges agregar campos personalizados, puedes cambiar el nombre de la etiqueta de lo que pides y ves cómo se cambia al momento en el lado derecho. También puedes establecer límites o marcar ese campo como opcional.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Finalizar y crear el enlace
+##menu-item END
+##Contenido BEGIN
+Finalizar y crear el enlace:
+Al final del enlace de pago, verás el botón de pagar, que puedes cambiar para que diga, por ejemplo, reservar o donar.
+
+Una vez que tengas todo seleccionado y listo, haz clic en crear enlace.
+
+Presiona el botón de pagar y ya está.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Resumen final
+##menu-item END
+##Contenido BEGIN
+Resumen final:
+Stripe es una herramienta muy fácil y fuerte para recibir dinero por internet de manera segura, sin importar si recién empiezas o ya tienes un negocio. Cuando configuras tu cuenta y activas los métodos de pago, puedes empezar a recibir dinero muy rápido.
+
+Si todavía no tienes cuenta, recuerda que puedes usar el enlace que está en la descripción del video para crearla ahora mismo y comenzar sin problemas. Usar esos enlaces ayuda a que el canal siga haciendo videos de buena calidad.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+La información presentada en este tutorial ha sido validada con las fuentes oficiales de Stripe. A continuación se detallan los puntos técnicos confirmados y las referencias oficiales:
+
+Puntos técnicos validados:
+
+Los enlaces de pago de Stripe son una forma simple de aceptar pagos en línea sin necesidad de escribir código. Permiten crear un único enlace que se puede compartir con todos los clientes a través de redes sociales, correos electrónicos o sitios web.
+
+Stripe Payment Links soporta más de 30 idiomas y más de 20 métodos de pago diferentes, incluyendo tarjetas de crédito, débito, Apple Pay y Google Pay.
+
+Para crear un enlace de pago, se accede a la página de Payment Links en el Dashboard de Stripe y se hace clic en Nuevo. Luego se completan los detalles del pago, incluyendo nombre del producto, precio y frecuencia de pago.
+
+Las opciones de personalización incluyen la recopilación de direcciones de envío y facturación, números de teléfono, campos personalizados, códigos de descuento, identificaciones fiscales y la opción de guardar métodos de pago para uso futuro.
+
+El botón de pago puede personalizarse para mostrar texto alternativo como reservar o donar, según las necesidades del negocio.
+
+Una vez creado el enlace, Stripe genera una URL que puede compartirse múltiples veces y en cualquier lugar. También es posible crear códigos QR para los enlaces de pago.
+
+Los métodos de pago dinámicos de Stripe muestran automáticamente las opciones de pago más relevantes y compatibles para cada cliente, incluyendo Apple Pay y Google Pay cuando están disponibles en sus dispositivos.
+
+Enlaces a documentación oficial de Stripe:
+
+Documentación principal de Payment Links:
+https://docs.stripe.com/payment-links
+
+Guía para crear enlaces de pago:
+https://docs.stripe.com/no-code/payment-links
+https://docs.stripe.com/payment-links/create
+
+Personalización de checkout para Payment Links:
+https://docs.stripe.com/payment-links/customize
+
+Gestión después del pago:
+https://docs.stripe.com/payment-links/post-payment
+
+API de Payment Links:
+https://docs.stripe.com/payment-links/api
+https://docs.stripe.com/api/payment-link
+
+Documentación sobre Apple Pay:
+https://docs.stripe.com/apple-pay
+
+Soporte oficial de Stripe:
+https://support.stripe.com/
+
+Inicio rápido con Stripe:
+https://docs.stripe.com/get-started
+
+Estas fuentes oficiales proporcionan información técnica detallada, guías de integración y documentación de API para implementar correctamente los enlaces de pago de Stripe.
+##Contenido END

@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>HIPERTEX — Visor JSON (links + imágenes)</title>
+<style>
+  :root{
+    --bg:#0f172a;
+    --panel:#0b1220;
+    --card:#0e1a2b;
+    --muted:#9fb3c8;
+    --text:#e6eef7;
+    --accent:#60a5fa
+  }
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;
+    background:radial-gradient(circle at top,#1d2a3f 0,#020617 55%);
+    color:var(--text)
+  }
+  *{box-sizing:border-box}
+  .app{
+    min-height:100vh;
+    display:grid;
+    grid-template-rows:auto 1fr;
+    grid-template-columns:280px minmax(0,1fr);
+    grid-template-areas:
+      "header header"
+      "left right";
+    gap:0;
+    background:radial-gradient(circle at top,#1f2937 0,#020617 55%)
+  }
+  header{
+    grid-area:header;
+    padding:12px 18px 10px;
+    border-bottom:1px solid #111827;
+    background:linear-gradient(90deg,#020617,#0b1120 55%,#020617);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    position:sticky;
+    top:0;
+    z-index:10
+  }
+  header h1{
+    margin:0;
+    font-size:18px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:#e5e7eb
+  }
+  .file-pill{
+    padding:4px 10px;
+    border-radius:999px;
+    background:#020617;
+    border:1px solid #1e293b;
+    font-size:12px;
+    color:var(--muted);
+    max-width:420px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+  }
+  .toolbar{
+    display:flex;
+    align-items:center;
+    gap:8px
+  }
+  .btn{
+    appearance:none;
+    border-radius:999px;
+    border:1px solid #1d4ed8;
+    padding:6px 12px;
+    background:radial-gradient(circle at top,#1d4ed8,#1e293b 60%);
+    color:#e5e7eb;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    box-shadow:0 0 0 1px #020617,0 10px 25px rgba(15,23,42,.7)
+  }
+  .btn span{
+    font-size:14px
+  }
+  .btn:hover{
+    border-color:#60a5fa;
+    box-shadow:0 0 0 1px #020617,0 10px 32px rgba(37,99,235,.75)
+  }
+  .btn:active{
+    transform:translateY(1px);
+    box-shadow:0 0 0 1px #020617,0 4px 16px rgba(15,23,42,.9)
+  }
+  .btn-ghost{
+    border-color:#1f2937;
+    background:linear-gradient(145deg,#020617,#020617);
+    box-shadow:none;
+    color:#9ca3af
+  }
+  .btn-ghost:hover{
+    border-color:#374151;
+    color:#e5e7eb
+  }
+  .file-label{
+    position:relative;
+    overflow:hidden
+  }
+  .file-label input[type=file]{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    cursor:pointer
+  }
+
+  aside.left{
+    grid-area:left;
+    border-right:1px solid #111827;
+    padding:14px 12px 18px;
+    background:radial-gradient(circle at top,#020617,#020617 55%)
+  }
+  aside.left h2{
+    margin:2px 0 10px;
+    font-size:13px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#64748b
+  }
+  nav#menu{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    padding-right:4px;
+    max-height:calc(100vh - 80px);
+    overflow:auto
+  }
+  .menu-item{
+    border-radius:9px;
+    padding:7px 9px;
+    font-size:13px;
+    line-height:1.3;
+    color:#cbd5f5;
+    background:transparent;
+    border:1px solid transparent;
+    text-align:left;
+    cursor:pointer;
+    position:relative
+  }
+  .menu-item small{
+    display:block;
+    font-size:11px;
+    color:#64748b;
+    margin-bottom:2px;
+    letter-spacing:.12em;
+    text-transform:uppercase
+  }
+  .menu-item span{
+    display:block
+  }
+  .menu-item::before{
+    content:"";
+    position:absolute;
+    left:3px;
+    top:50%;
+    transform:translateY(-50%);
+    width:4px;
+    height:4px;
+    border-radius:999px;
+    background:#1f2937;
+    opacity:.5
+  }
+  .menu-item.active{
+    background:radial-gradient(circle at top,#1d283a,#020617 60%);
+    border-color:#1d4ed8;
+    box-shadow:0 0 0 1px rgba(37,99,235,.35);
+    color:#e5e7eb
+  }
+  .menu-item.active::before{
+    background:#60a5fa;
+    opacity:1
+  }
+  .menu-item:hover:not(.active){
+    background:rgba(15,23,42,.95);
+    border-color:#1e293b
+  }
+
+  main.right{
+    grid-area:right;
+    padding:16px 18px 22px;
+    max-height:calc(100vh - 52px);
+    overflow:auto
+  }
+  .card{
+    background:var(--card);
+    border:1px solid #1b2b44;
+    border-radius:12px;
+    padding:16px 16px 18px;
+    margin:0 0 14px
+  }
+  .title{
+    margin:0 0 10px;
+    font-size:18px
+  }
+
+  /* Bloque de cuerpo (texto + imágenes + links) */
+  .body-block{
+    margin:0;
+    font-family:ui-monospace,Consolas,Menlo,monospace;
+    white-space:normal
+  }
+  .body-block p{
+    margin:0 0 .4rem
+  }
+  .body-block a{
+    color:#60a5fa;
+    text-decoration:none;
+    border-bottom:1px dashed rgba(96,165,250,.6)
+  }
+  .body-block a:hover{
+    border-bottom-style:solid
+  }
+
+  .img-block{
+    margin:12px auto 10px;
+    text-align:center
+  }
+  .img-block img{
+    max-width:100%;
+    height:auto;
+    border-radius:12px;
+    border:1px solid #1b2b44;
+    display:block;
+    margin:0 auto;
+  }
+
+  .audio-block{
+    margin:12px 0 10px;
+  }
+  .audio-block audio{
+    width:100%;
+    outline:none;
+  }
+</style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="toolbar">
+        <label class="btn file-label">
+          <input id="file" type="file" accept=".json,application/json" />
+          <span>📂</span>
+          Cargar JSON
+        </label>
+        <button class="btn btn-ghost" id="demo" type="button">
+          <span>✨</span>
+          Demo
+        </button>
+      </div>
+      <h1>HIPERTEX — Visor JSON</h1>
+      <div class="file-pill" id="fname">Sin archivo</div>
+    </header>
+
+    <aside class="left">
+      <h2>Menú</h2>
+      <nav id="menu"></nav>
+    </aside>
+
+    <main class="right" id="content"></main>
+  </div>
+
+<script>
+const $file = document.getElementById('file');
+const $menu = document.getElementById('menu');
+const $content = document.getElementById('content');
+const $fname = document.getElementById('fname');
+const $demo = document.getElementById('demo');
+
+const slug = s => String(s ?? '').toLowerCase()
+  .normalize('NFD').replace(/\p{Diacritic}/gu,"")
+  .replace(/[^a-z0-9]+/g,"-")
+  .replace(/^-+|-+$/g,"") || "item";
+
+function linkify(text){
+  const escaped = String(text)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;");
+
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  return escaped.replace(urlRegex,(url)=>{
+    const safeUrl = url.replace(/&amp;/g,"&");
+    return `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer">${url}</a>`;
+  });
+}
+
+// Renderiza cuerpo con soporte para [IMAGEN: URL], [AUDIO: URL] y links
+function renderBodyWithImages(text){
+  const wrapper = document.createElement('div');
+  wrapper.className = 'body-block';
+
+  const lines = String(text).split(/\r?\n/);
+
+  lines.forEach((line) => {
+    const trimmed = line.trim();
+
+    if (!trimmed){
+      wrapper.appendChild(document.createElement('br'));
+      return;
+    }
+
+    // Patrón [IMAGEN: https://...]
+    const imgMatch = trimmed.match(/^\[IMAGEN:\s*(https?:[^\]\s]+)\s*\]$/i);
+    if (imgMatch){
+      const url = imgMatch[1];
+      const imgWrap = document.createElement('div');
+      imgWrap.className = 'img-block';
+      const img = document.createElement('img');
+      img.src = url;
+      img.loading = 'lazy';
+      img.alt = 'Infografía del tutorial';
+      imgWrap.appendChild(img);
+      wrapper.appendChild(imgWrap);
+      return;
+    }
+
+    // Patrón [AUDIO: https://...]
+    const audMatch = trimmed.match(/^\[AUDIO:\s*(https?:[^\]\s]+)\s*\]$/i);
+    if (audMatch){
+      const url = audMatch[1];
+      const audioWrap = document.createElement('div');
+      audioWrap.className = 'audio-block';
+      const audio = document.createElement('audio');
+      audio.controls = true;
+      audio.src = url;
+      audioWrap.appendChild(audio);
+      wrapper.appendChild(audioWrap);
+      return;
+    }
+
+    // Resto: texto normal con links
+    const p = document.createElement('p');
+    p.innerHTML = linkify(line);
+    wrapper.appendChild(p);
+  });
+
+  return wrapper;
+}
+
+function buildMenu(viewModel){
+  $menu.innerHTML = '';
+  if (!Array.isArray(viewModel.items) || !viewModel.items.length){
+    const empty = document.createElement('div');
+    empty.textContent = 'Sin items en "items[]"';
+    empty.style.color = '#9ca3af';
+    empty.style.fontSize = '13px';
+    $menu.appendChild(empty);
+    $content.innerHTML = '';
+    return;
+  }
+
+  viewModel.items.forEach((item,idx)=>{
+    const id = item.itemID ?? String(idx).padStart(3,'0');
+    const menuText = item.menu_item ?? '(sin título)';
+    const cardTitle = menuText.split('\n')[0];
+
+    const btn = document.createElement('button');
+    btn.className = 'menu-item';
+    btn.dataset.targetId = id;
+
+    const small = document.createElement('small');
+    small.textContent = id;
+    const span = document.createElement('span');
+    span.textContent = cardTitle;
+
+    btn.appendChild(small);
+    btn.appendChild(span);
+
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.menu-item').forEach(el=>el.classList.remove('active'));
+      btn.classList.add('active');
+      renderCard(item);
+    });
+
+    if (idx === 0){
+      btn.classList.add('active');
+    }
+
+    $menu.appendChild(btn);
+  });
+
+  renderCard(viewModel.items[0]);
+}
+
+function renderCard(item){
+  $content.innerHTML = '';
+  if (!item) return;
+
+  const card = document.createElement('article');
+  card.className = 'card';
+
+  const title = document.createElement('h2');
+  title.className = 'title';
+  title.textContent = item.menu_item ?? '(sin título)';
+  card.appendChild(title);
+
+  const body = renderBodyWithImages(item.contenido ?? '');
+  card.appendChild(body);
+
+  $content.appendChild(card);
+}
+
+function loadJsonObject(obj, fileName="(sin nombre)"){
+  const viewModel = {
+    meta: obj.meta || {},
+    items: Array.isArray(obj.items) ? obj.items : []
+  };
+  $fname.textContent = fileName;
+  buildMenu(viewModel);
+}
+
+$file.addEventListener('change',(ev)=>{
+  const [file] = ev.target.files || [];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = e => {
+    try{
+      const json = JSON.parse(e.target.result);
+      loadJsonObject(json, file.name);
+    }catch(err){
+      console.error(err);
+      alert('Error al leer JSON: ' + err.message);
+    }
+  };
+  reader.readAsText(file,'utf-8');
+});
+
+$demo.addEventListener('click',()=>{
+  const demo = {
+    meta:{},
+    items:[
+      {
+        itemID:"000",
+        menu_item:"Demo: Texto simple",
+        contenido:"Este es un ejemplo mínimo de item.\n\nIncluye links como https://www.make.com y https://supabase.com\n\nY se muestran automáticamente como enlaces clicables."
+      },
+      {
+        itemID:"001",
+        menu_item:"Demo: Imagen externa",
+        contenido:"Puedes incrustar una imagen usando la sintaxis:\n\n[IMAGEN: https://placehold.co/600x400/png]\n\nY también puedes combinarlo con texto y enlaces."
+      },
+      {
+        itemID:"002",
+        menu_item:"Demo: Audio integrado",
+        contenido:"Ejemplo de reproductor de audio con la sintaxis:\n\n[AUDIO: https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav]\n\nPuedes usar cualquier URL directa a un archivo .mp3, .m4a, etc."
+      }
+    ]
+  };
+  loadJsonObject(demo,'demo.json');
+});
+</script>
+</body>
+</html>

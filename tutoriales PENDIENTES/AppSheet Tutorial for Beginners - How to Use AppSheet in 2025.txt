@@ -1,0 +1,91 @@
+Nombre del video:
+AppSheet Tutorial for Beginners - How to Use AppSheet in 2025
+
+URL del video:
+https://youtu.be/aNh9LeWN5DE?si=v87qckT5CGburQ2U
+
+OUTLINE COMPLETO Y PASO A PASO DEL TUTORIAL DE APPSHEET
+
+INTRODUCCIÓN: ¿QUÉ ES APPSHEET?
+
+AppSheet es una plataforma de desarrollo de aplicaciones "sin código" (*no code*). Esto significa que puedes construir aplicaciones móviles y web completamente funcionales sin escribir una sola línea de código. Es una herramienta ideal si quieres crear una aplicación rápidamente, ya sea para gestionar tareas de negocios, organizar proyectos personales o incluso construir un portal para clientes.
+En lugar de código complejo, AppSheet usa fuentes de datos sencillas como Google Sheets o archivos de Excel. Transforma una simple hoja de cálculo en una aplicación interactiva.
+Utiliza una interfaz intuitiva de arrastrar y soltar (*drag and drop*) para el diseño y la personalización.
+Una gran ventaja es que genera automáticamente un diseño adaptable (responsive), asegurando que tu aplicación se vea bien tanto en dispositivos móviles como en computadoras de escritorio. Además, al ser una plataforma basada en la nube, cualquier cambio que hagas en tus datos se refleja instantáneamente en la aplicación.
+
+PASO 1: CREAR UNA CUENTA Y CONECTAR DATOS
+
+1. Ve a AppSheet.com y haz clic en "Get started" (Comenzar) en la esquina superior derecha.
+2. Regístrate eligiendo una cuenta de Google, Microsoft o cualquier otra cuenta compatible.
+3. Otorga a AppSheet los permisos necesarios para acceder a tus datos, como Google Sheets.
+4. Serás dirigido al panel de control de AppSheet. La plataforma te pedirá que conectes una fuente de datos.
+5. Puedes conectar Google Sheets, un archivo de Excel, bases de datos como SQL o plataformas de almacenamiento en la nube como Dropbox, OneDrive o Box.
+6. AppSheet generará automáticamente una aplicación básica basada en los datos que le proporciones. Si usas Google Sheets, la aplicación creará un diseño donde cada columna de tu hoja representa un campo diferente en la aplicación.
+
+PASO 2: PREPARAR TUS DATOS EN GOOGLE SHEETS
+
+Usar Google Sheets es la opción más sencilla para empezar, ya que se integra perfectamente con AppSheet.
+1. Abre Google Sheets y crea una nueva hoja de cálculo en blanco. Esta hoja será el fundamento de tu aplicación.
+2. En la primera fila, escribe los encabezados de las columnas. Estos deben representar la información que deseas gestionar en la aplicación. Por ejemplo, si haces una aplicación de gestión de proyectos, tus encabezados podrían ser: "Nombre del proyecto", "Fecha de vencimiento", "Asignado a" y "Estado".
+3. Rellena algunos datos de muestra debajo de estos encabezados. Por ejemplo, bajo "Nombre del proyecto" podrías listar "Rediseño del sitio web" o "Campaña de marketing".
+4. Guarda tu trabajo y cierra la hoja de cálculo.
+
+PASO 3: CREAR LA APLICACIÓN EN APPSHEET
+
+1. Dentro del panel de AppSheet, haz clic en el botón "Create" (Crear), que suele estar en la parte superior.
+2. Selecciona la opción para empezar con tus propios datos (*start with your own data*).
+3. Selecciona Google Sheets para vincular la aplicación a la hoja de cálculo que preparaste.
+
+PASO 4: CONOCER EL EDITOR DE APPSHEET
+
+El editor de AppSheet tiene varias secciones clave que te permiten personalizar tu aplicación:
+
+1. Data (Datos): Permite gestionar todas tus tablas y fuentes de datos. Aquí puedes añadir o modificar tablas y vincular nuevas fuentes de datos.
+2. UX (Experiencia de Usuario): Controla la apariencia de la aplicación. Puedes personalizar el diseño (si será una cuadrícula, un calendario o un mapa) y los elementos visuales para que la aplicación sea fácil de navegar.
+3. Behavior (Comportamiento): Define cómo reacciona la aplicación. Puedes configurar acciones (lo que sucede al hacer clic en un botón) o crear flujos de trabajo y automatizaciones.
+4. Security (Seguridad): Gestiona quién puede ver, editar o administrar diferentes partes de la aplicación. Es crucial para proteger la información sensible.
+5. Automation (Automatización): Permite configurar disparadores (triggers) para acciones específicas. Por ejemplo, enviar correos electrónicos de recordatorio o actualizar campos automáticamente cuando los datos cambian.
+
+PASO 5: PERSONALIZAR LA VISUALIZACIÓN (VISTAS Y CAMPOS)
+
+1. Ajustar la vista (UX): AppSheet crea una vista por defecto. En la sección UX, cambia el tipo de vista para que se adapte mejor a tu aplicación. Por ejemplo, puedes preferir una vista de tabla para un listado de tareas claro, o una vista *kamban board* si estás gestionando flujos de trabajo. Hay opciones como *deck*, calendario y galería.
+2. Renombrar campos (Data): Dirígete a la pestaña *Data* y selecciona *Columns* (Columnas). Renombra los campos para que sean claros; por ejemplo, cambia "Columna 1" a "Nombre de la Tarea". Esto hace que la aplicación sea más intuitiva para los usuarios.
+
+PASO 6: AÑADIR ACCIONES RÁPIDAS (BOTONES DE UN TOQUE)
+
+Puedes crear un botón para cambiar el estado de una tarea rápidamente:
+1. Ve a la sección *Behavior* (Comportamiento) y haz clic en *Actions* (Acciones).
+2. Haz clic en "New action" (Nueva acción).
+3. Establece el tipo de acción como "set the value of a column" (establecer el valor de una columna).
+4. Elige la columna de estado (la que rastrea el progreso) como la columna a actualizar.
+5. Al crear este botón, los usuarios podrán marcar tareas como "Completadas" con un solo toque directamente desde la lista. También puedes añadir botones para otros estados, como "en curso" o "en espera".
+
+PASO 7: CONFIGURAR NOTIFICACIONES AUTOMÁTICAS (USANDO BOTS)
+
+Puedes notificar automáticamente a tu equipo cuando se añade una nueva tarea:
+1. Ve a la sección *Automation* (Automatización) y haz clic en *Bots*.
+2. Haz clic en "New bot" (Nuevo bot) y elige un disparador basado en eventos (*event-based trigger*).
+3. Selecciona la opción "when a new row is added" (cuando se agrega una nueva fila). Esto hará que el disparador se active cada vez que se añada una nueva tarea a tu tabla.
+4. Luego, agrega una acción (*add action*) y selecciona "send an email" (enviar un correo electrónico).
+5. Personaliza el mensaje del correo para incluir detalles importantes de la tarea, como el nombre de la tarea, a quién está asignada y la fecha de vencimiento.
+6. Prueba el sistema añadiendo una nueva tarea. El sistema debería enviar automáticamente la notificación por correo electrónico a la persona correcta. También puedes crear más *Bots* para enviar recordatorios cuando se acercan las fechas límite.
+
+PASO 8: DESPLEGAR LA APLICACIÓN Y DAR ACCESO
+
+Cuando estés satisfecho con la configuración de tu aplicación, es hora de ponerla en funcionamiento:
+1. Ve a *Security* (Seguridad) y haz clic en *Users* (Usuarios).
+2. Agrega las direcciones de correo electrónico de todas las personas que necesitan acceder a la aplicación.
+3. Haz clic en *Deploy* (Implementar o Desplegar) para hacer que la aplicación esté en vivo.
+4. Una vez desplegada, cualquier persona que hayas añadido podrá acceder y usar la aplicación.
+
+PASO 9: EXPLORAR FUNCIONES AVANZADAS
+
+Una vez que domines lo básico, puedes experimentar con características más complejas:
+*   Rastreo de ubicación y GPS: Es útil para aplicaciones de servicios de campo o de entrega.
+*   Escaneo de códigos de barras: Permite a los usuarios escanear artículos directamente en la aplicación.
+*   Control de acceso: Puedes establecer permisos diferentes para varios usuarios, decidiendo qué puede hacer cada persona en la aplicación.
+*   Integraciones API: Conecta tu aplicación con otras herramientas como Zapier o Slack para expandir las capacidades y automatizar flujos de trabajo.
+
+RECOMENDACIÓN FINAL
+
+La mejor manera de aprender AppSheet es construyendo y probando cosas tú mismo. Si necesitas ayuda o te quedas atascado, la documentación de AppSheet y los foros de la comunidad son excelentes recursos para encontrar respuestas.

@@ -1,0 +1,312 @@
+##Contenido BEGIN
+TUTORIAL P&P - How To Use ChatGPT To Make A Google Sheet Multi User Data Entry Form
+##Contenido END
+
+##itemID:0001
+##menu-title BEGIN
+VIDEO YOUTUBE:
+##menu-title END
+
+##Contenido BEGIN
+VIDEO YOUTUBE:
+https://youtu.be/KJghzaNrtvo?si=ngG6xelGtotq3Ghp
+##Contenido END
+
+##itemID:0002
+##menu-title BEGIN
+INTRODUCCIÓN:
+##menu-title END
+
+##Contenido BEGIN
+INTRODUCCIÓN:
+Genera un tutorial paso a paso desde cero muy comprensivo sobre la creación de un formulario de entrada de datos multiusuario y automatizado en Google Sheets utilizando Apps Script generado por IA, usando SÓLO WINDOWS 11, y utilizando exclusivamente el NAVEGADOR y TERMINAL donde fuera necesario.
+
+La explicación está enfocada en el flujo de trabajo de “creación de código por IA, copia manual y despliegue gratuito”.
+
+**Requisitos previos**
+
+*   NAVEGADOR: Se requiere **Google Chrome** o similar. Debe tener una **Cuenta de Google** con acceso a Google Sheets y Google Apps Script.
+
+*   TERMINAL: N/A
+##Contenido END
+
+##itemID:0002
+##menu-title BEGIN
+**Objetivo final** (construir y desplegar la app)
+##menu-title END
+
+##Contenido BEGIN
+**Objetivo final** (construir y desplegar la app):
+
+Construir un **Sistema de Entrada de Datos Multi-Usuario** completamente funcional en Google Sheets que incluye validación de formularios, generación automática de IDs y marcas de tiempo, lógica de aprobación/rechazo por parte de usuarios autorizados (administradores), y la capacidad de generar reportes en PDF.
+##Contenido END
+
+##itemID:0003
+##menu-title BEGIN
+**Criterio de éxito** (verificación funcional y obtención de enlace público)
+##menu-title END
+
+##Contenido BEGIN
+**Criterio de éxito** (verificación funcional y obtención de enlace público):
+Verificar que:
+
+1.  Al hacer clic en el botón "Send for approval" (Enviar para aprobación), los datos se validan, se guardan en la hoja "Ledger" (Libro mayor) con un ID de transacción y estado generados automáticamente, y el formulario se borra.
+
+2.  Solo los usuarios autorizados (Gerentes) pueden aprobar, rechazar o revertir transacciones.
+
+3.  Es posible generar un informe de transacciones en PDF para un rango de fechas específico.
+
+##Contenido END
+
+##itemID:0004
+##menu-title BEGIN
+PASO 1 - Configuración Inicial del Libro de Google Sheets
+##menu-title END
+
+##Contenido BEGIN
+PASO 1 - Configuración Inicial del Libro de Google Sheets:
+
+- [TERMINAL] o [NAVEGADOR]: NAVEGADOR
+
+- Explicación: Cree el entorno base en Google Sheets, que servirá como la interfaz del formulario y la base de datos (Libro mayor).
+
+- Comando en TERMINAL: N/A
+
+- Acción:
+
+    1. Abra Google Sheets y cree una hoja de cálculo en blanco, nombrándola, por ejemplo, "Cash Book".
+
+    2. Cree **tres pestañas** o hojas dentro del libro de trabajo con los siguientes nombres exactos: **`Chart of accounts`** (Plan de cuentas), **`Form`** (Formulario) y **`Ledger`** (Libro mayor).
+
+    3. En la hoja **`Chart of accounts`**, defina las siguientes columnas en la Fila 1: `Account name`, `Account code`, `Account type`, `Sub account type`, y `Balance`. (Opcional: Conviértalas en una tabla con Ctrl + Alt + T y nómbrela `chart of accounts`).
+
+    4. En la hoja **`Ledger`**, defina las columnas necesarias para registrar las transacciones, incluyendo las que se generarán dinámicamente, como: `Transaction id`, `Status`, `Timestamp`, y los campos de entrada como `Transaction date`, `Entity name`, `Debit amount`, `Credit amount`, etc..
+
+- Prueba para ver si funcionó correctamente: El libro de trabajo debe contener las tres hojas renombradas y las estructuras de encabezado de columna definidas.
+##Contenido END
+
+##itemID:0005
+##menu-title BEGIN
+PASO 2 - Diseño del Formulario y Creación de Botones
+##menu-title END
+
+##Contenido BEGIN
+PASO 2 - Diseño del Formulario y Creación de Botones:
+
+- [TERMINAL] o [NAVEGADOR]: NAVEGADOR
+
+- Explicación: Diseñe la estructura visual de la pestaña `Form` con los campos de entrada (ej: `Transaction date`, `Entity name`, `Debit account name`, `Credit account name`, `Debit amount`, `Credit amount`, `Description`) y cree los botones de acción necesarios que activarán el código Apps Script.
+
+- Comando en TERMINAL: N/A
+
+- Acción:
+
+    1. **Diseñar el Formulario:** En la pestaña `Form`, organice los campos de entrada de datos requeridos.
+
+    2. **Crear Botones de Acción:** Vaya a **Insertar** > **Dibujo** (Drawings), seleccione una forma y etiquétela como **"Send for approval"** (Enviar para aprobación).
+
+    3. **Crear Botones Secundarios:** Repita el proceso para crear los botones **"Update"** (Actualizar), **"Approve"** (Aprobar), **"Reject"** (Rechazar), **"Search"** (Buscar - usando un icono), **"Clear"** (Borrar), **"Change Status"** (Cambiar estado), **"Reverse transaction"** (Revertir transacción) y **"Generate Report"** (Generar informe).
+
+- Prueba para ver si funcionó correctamente: Todos los campos de entrada deben estar definidos y los botones/formas deben estar visibles en la pestaña `Form`.
+##Contenido END
+
+##itemID:0005
+##menu-title BEGIN
+PASO 3 - Implementación de Fórmulas y Validaciones Básicas de Datos
+##menu-title END
+
+##Contenido BEGIN
+PASO 3 - Implementación de Fórmulas y Validaciones Básicas de Datos:
+
+- [TERMINAL] o [NAVEGADOR]: NAVEGADOR
+
+- Explicación: Antes de usar la IA para el código complejo, configure las validaciones de datos estándar (como rango de fechas y listas desplegables) y las fórmulas `VLOOKUP` para que el formulario extraiga automáticamente los códigos y tipos de cuenta.
+
+- Comando en TERMINAL: N/A
+
+- Acción:
+
+    1. **Validación de Fechas:** Seleccione la celda de la fecha de la transacción. Vaya a **Datos** > **Validación de datos** > **Añadir regla**. Seleccione la opción "Fecha está entre" e ingrese el rango de fechas deseado (ej: 01/02/2025 al 28/02/2025). Active "Rechazar entrada" para garantizar que solo se acepten fechas válidas.
+
+    2. **Validación de Tipo de Transacción y Entidad:** Para los campos `Transaction type` (Tipo de transacción) y `Entity type` (Tipo de entidad), aplique la validación de datos eligiendo "Menú desplegable" e ingrese opciones como "Receipt" y "Payment" (para Tipo de Transacción) o "Customers," "Vendors," "Employee" (para Tipo de Entidad).
+
+    3. **Validación de Nombre de Cuenta (Rango):** Para los campos `Debit account name` y `Credit account name`, use la validación de datos "Menú desplegable de un rango" para extraer la lista de nombres de cuenta directamente de la columna `Account name` en la hoja **`Chart of accounts`**.
+
+    4. **Fórmula VLOOKUP:** En las celdas destinadas a `Debit account code` y `Credit account code`, use la fórmula `VLOOKUP` para buscar el código de cuenta respectivo en la tabla `chart of accounts`, basándose en el nombre de la cuenta seleccionado.
+
+- Prueba para ver si funcionó correctamente: Al seleccionar un `Debit account name`, el `Debit account code` debe completarse automáticamente.
+##Contenido END
+
+##itemID:0005
+##menu-title BEGIN
+PASO 4 - Acceso a Google Apps Script y Copia del Código Base
+##menu-title END
+
+##Contenido BEGIN
+PASO 4 - Acceso a Google Apps Script y Copia del Código Base:
+
+- [TERMINAL] o [NAVEGADOR]: NAVEGADOR
+
+- Explicación: Google Apps Script es la plataforma basada en JavaScript que permite automatizar e integrar tareas en los productos de Google. Accederá al editor para pegar el código generado por IA.
+
+- Comando en TERMINAL: N/A
+
+- Acción:
+
+    1. Abra el editor de Apps Script yendo a **Extensiones** > **Apps Script** desde la hoja de Google. (Esto abre un nuevo proyecto de script que se guarda en Google Drive y se ejecuta en los servidores de Google).
+
+    2. **Código Base de la IA:** Copie y pegue el código generado por la IA (que incluye funciones como `clear form`, `generate transaction id`, `validate form`, `generate time stamp`, `submit for approval`, y `search transaction`) en el archivo `Code.gs`.
+
+    3. Guarde el proyecto de script.
+
+- Prueba para ver si funcionó correctamente: El editor de Apps Script debe contener el código de las funciones básicas.
+##Contenido END
+
+##itemID:0006
+##menu-title BEGIN
+PASO 5 - Asignación de Funciones a Botones e Implementación de la Lógica de Envío
+##menu-title END
+
+##Contenido BEGIN
+PASO 5 - Asignación de Funciones a Botones e Implementación de la Lógica de Envío:
+
+- [TERMINAL] o [NAVEGADOR]: NAVEGADOR
+
+- Explicación: Con el código base en Apps Script, debe enlazar las funciones a los botones correspondientes en el formulario para que las acciones se ejecuten al hacer clic.
+
+- Comando en TERMINAL: N/A
+
+- Acción:
+
+    1. **Asignar `clear form`:** Haga clic en los tres puntos del botón **"Clear"** > **Asignar secuencia de comandos** (Assign script). Pegue el nombre exacto de la función `clear form` y haga clic en **Aceptar**.
+
+    2. **Asignar `submit for approval`:** Asigne la función `submit for approval` al botón **"Send for approval"**.
+
+    3. **Asignar `search transaction`:** Asigne la función `search transaction` al icono de búsqueda.
+
+    4. **Prueba Inicial:** Rellene el formulario con datos válidos y haga clic en **"Send for approval"**. El sistema debe guardar la entrada en la hoja `Ledger` con un `Transaction id` y `Status` (Pending approval) generados, y el formulario debe borrarse.
+
+    5. **Prueba de Validación:** Intente enviar el formulario con campos vacíos o valores incorrectos (ej: montos débito/crédito desiguales) para verificar que la función de validación muestre los errores personalizados.
+
+- Prueba para ver si funcionó correctamente: Al enviar una entrada válida, los datos se guardan en la hoja `Ledger` y el formulario se borra. Las entradas no válidas muestran mensajes de error específicos.
+##Contenido END
+
+##itemID:0007
+##menu-title BEGIN
+PASO 6 - Implementación de Lógica de Seguridad y Roles (Aprobación/Rechazo)
+##menu-title END
+
+##Contenido BEGIN
+PASO 6 - Implementación de Lógica de Seguridad y Roles (Aprobación/Rechazo):
+
+- [TERMINAL] o [NAVEGADOR]: NAVEGADOR
+
+- Explicación: Implemente las funciones avanzadas que añaden un nivel de validación de usuario, permitiendo que solo los usuarios definidos como "manager" (Gerente) puedan aprobar, rechazar o revertir transacciones. Esto se hace creando una nueva capa de funciones (`user approve`, `user reject`) que llaman a las funciones base de aprobación/rechazo.
+
+- Comando en TERMINAL: N/A
+
+- Acción:
+
+    1. **Generar código de Manager:** Utilice la IA para generar la nueva función (`user approve`) que contiene la lógica para verificar si el email del usuario actual (`Session.getActiveUser().getEmail()`) coincide con el email del gerente especificado, y que la transacción esté en estado `pending approval`. (Nota: `Session.getActiveUser()` requiere un alcance de autorización específico).
+
+    2. **Actualizar Apps Script:** Pegue el código de las funciones `user approve` y `user reject` en el editor de Apps Script. **Importante:** Reemplace el marcador de posición del email en el código con el email real del usuario que debe actuar como manager.
+
+    3. **Asignar nuevas funciones:** Reemplace la función asignada previamente en los botones **"Approve"** y **"Reject"** por las nuevas funciones (`user approve` y `user reject`).
+
+- Prueba para ver si funcionó correctamente: Intente aprobar una transacción. Si el email del usuario coincide con el email del manager en el código, la transacción se aprueba. Si no coincide, se muestra un error de "not authorized to approve" (no autorizado para aprobar).
+##Contenido END
+
+##itemID:0008
+##menu-title BEGIN
+PASO 7 - Implementación del Sistema de Reportes (HTML Service)
+##menu-title END
+
+##Contenido BEGIN
+PASO 7 - Implementación del Sistema de Reportes (HTML Service):
+
+- [TERMINAL] o [NAVEGADOR]: NAVEGADOR
+
+- Explicación: Para generar un reporte visualizable y descargable en PDF, se necesita utilizar el servicio **HTML Service** de Apps Script, que permite crear y servir interfaces de usuario personalizadas como la previsualización del informe.
+
+- Comando en TERMINAL: N/A
+
+- Acción:
+
+    1. **Generar Código de Reporte (IA):** Pida a la IA que genere el código de Apps Script para el *backend* (`generateReport` o similar) y el código *HTML* para el frontend (`cash ledger.html`), utilizando los datos de las celdas de inicio y fin de fecha del formulario.
+
+    2. **Crear Archivo HTML:** En el editor de Apps Script, haga clic en el signo **`+`** (más) > **HTML**. Nombre el archivo **`cash ledger`**.
+
+    3. **Pegar Código HTML:** Pegue el código HTML generado por la IA en el archivo `cash ledger.html`.
+
+    4. **Pegar Código Backend:** Pegue la función de *backend* (`generateReport` o similar) en el archivo `Code.gs`.
+
+    5. **Asignar función de reporte:** Asigne la función del reporte al botón **"Generate Report"** en la pestaña `Form`.
+
+    6. **Configurar Fechas de Reporte:** Cree dos campos de fecha en la pestaña `Form` para la fecha de inicio y la fecha de finalización (asegúrese de que coincidan con las referencias de celda utilizadas en el código Apps Script, ej: D26 y F26).
+
+- Prueba para ver si funcionó correctamente: Seleccione un rango de fechas en los campos de reporte y haga clic en **"Generate Report"**. Debe aparecer una previsualización del informe en una nueva ventana/barra lateral con la opción de descargar como PDF.
+##Contenido END
+
+##itemID:0009
+##menu-title BEGIN
+PASO 8 - Asegurar la Integridad de los Datos (Protección contra Edición Directa)
+##menu-title END
+
+##Contenido BEGIN
+PASO 8 - Asegurar la Integridad de los Datos (Protección contra Edición Directa):
+
+- [TERMINAL] o [NAVEGADOR]: NAVEGADOR
+
+- Explicación: Para prevenir errores y mantener la integridad del sistema, es crucial evitar que los usuarios modifiquen directamente los registros guardados en la hoja `Ledger`. Esto se logra mediante un activador `onEdit` que revierte automáticamente cualquier cambio no autorizado.
+
+- Comando en TERMINAL: N/A
+
+- Acción:
+
+    1. **Generar/Obtener Código de Protección:** Obtenga el código de Apps Script diseñado para ejecutarse con un activador de edición (ej: `onEdit` simple o instalable) que detecta cambios en la hoja `Ledger` y revierte la celda a su valor original, mostrando una notificación de error.
+
+    2. **Implementar Código:** Pegue este código de protección en el archivo `Code.gs` del proyecto de Apps Script.
+
+    3. **Guardar y Autorizar:** Guarde el proyecto. Dependiendo de la función específica utilizada, es posible que deba configurar un activador instalable para que la función se ejecute correctamente al editar la hoja.
+
+- Prueba para ver si funcionó correctamente: Intente editar o eliminar manualmente una celda en la hoja `Ledger`. Debe aparecer un mensaje de error y el valor debe revertirse automáticamente a su estado anterior.
+##Contenido END
+
+##itemID:0010
+##menu-title BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-title END
+
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+La implementación de un formulario de entrada de datos multiusuario en Google Sheets utilizando Apps Script se basa en varias capacidades documentadas oficialmente por Google:
+
+| Concepto Validado | Descripción y Fuente Oficial |
+
+| :--- | :--- |
+
+| **Google Apps Script (GAS)** | Es la plataforma de JavaScript basada en la nube para integrar y automatizar tareas en los productos de Google Workspace, como Google Sheets. Los scripts se guardan en Google Drive y se ejecutan en los servidores de Google. |
+
+| **Uso de Apps Script en Hojas de Cálculo** | Apps Script se utiliza para agregar **automatizaciones** (código que realiza tareas programáticamente) y **funciones personalizadas** en Hojas de cálculo de Google. El servicio `SpreadsheetApp` permite manipular Hojas de cálculo. |
+
+| **Asignación de Scripts a la Interfaz** | Apps Script permite a las automatizaciones activarse mediante **menús personalizados** o **acciones del usuario/botones**. Las funciones pueden ser asignadas a elementos gráficos (como los botones de envío, aprobación o actualización). |
+
+| **Servicio HTML (HTML Service)** | Este servicio es fundamental para crear interfaces de usuario personalizadas, como los diálogos, barras laterales o, en este caso, la ventana de **previsualización del informe/PDF**. |
+
+| **Activadores de Eventos (Triggers)** | El código de protección contra edición directa se basa en los activadores. Apps Script utiliza **Activadores Sencillos** (como `onOpen`, `onEdit`) o **Activadores Instalables** para automatizar el código en respuesta a eventos específicos en la hoja de cálculo. |
+
+| **Lógica Condicional y Roles** | Las funciones avanzadas de **aprobación/rechazo** que verifican el email del usuario para establecer roles de "manager" utilizan el objeto `Session` de Apps Script, que permite obtener información sobre el usuario activo (aunque esto requiere autorización con alcances específicos). |
+
+**Referencias Técnicas Oficiales (Google Developers):**
+
+*   **Google Apps Script Overview:** (Automatiza y extiende Google Workspace con código sencillo).
+
+*   **Apps Script Services (SpreadsheetApp, HtmlService):** (Los servicios de Google permiten el acceso a datos de Google Workspace y otras aplicaciones).
+
+*   **HTML Service:** (Para crear y servir HTML, necesario para el panel del reporte/PDF).
+
+*   **Activadores y Eventos:** (Información sobre activadores sencillos e instalables, como el utilizado para evitar ediciones directas).
+
+*   **Clase FormApp (Referencia):** (Permite a un script abrir o crear un Form existente; relevante en el contexto de la validación del formulario de entrada de datos).
+##Contenido END

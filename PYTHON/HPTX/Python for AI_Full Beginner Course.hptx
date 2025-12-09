@@ -1,0 +1,429 @@
+##itemID:000
+##menu-item BEGIN
+Python for AI_Full Beginner Course
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Python for AI_Full Beginner Course:
+Web Original:
+Python for AI_Full Beginner Course:
+https://youtu.be/ygXn5nV5qFc?si=DZ4mP6pQoXYKFy
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción y Recursos del Curso
+##menu-item END
+##Contenido BEGIN
+Introducción y Recursos del Curso:
+Este curso te enseña Python desde cero con el objetivo de crear programas de Inteligencia Artificial (IA). Empezaremos con lo básico y avanzaremos paso a paso hasta crear un asistente de chat que puede hablar con tu información. Python es el lenguaje principal para la IA y esta habilidad es muy solicitada.
+
+Tienes un manual disponible en python.datalumina.com con toda la información, enlaces y códigos. Si el ritmo es muy rápido o lento, usa el manual o los controles de velocidad del video.
+
+Es vital configurar un entorno de trabajo profesional. Muchos tutoriales saltan esto, pero es necesario saber usar las herramientas y organizar proyectos para trabajar en el mundo real. No saltes esta parte.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Instalación de Python y VS Code
+##menu-item END
+##Contenido BEGIN
+Instalación de Python y VS Code:
+Instalar Python en Windows:
+
+Ve a python.org/downloads.
+
+Descarga e inicia la instalación.
+
+Importante: Marca la casilla Agregar Python a la ruta (Add Python to the path).
+
+Sigue la instalación sin cambios.
+
+Instalar Python en Mac:
+
+Abre la Terminal y escribe Python 3 espacio --version.
+
+Si sale error, ve a python.org/downloads e instálalo.
+
+Instalar Editor de Código:
+
+Descarga Visual Studio Code (VS Code) de su web. Es gratis y profesional.
+
+En Windows, añádelo a la ruta (PATH) durante la instalación.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Configuración del Entorno en VS Code
+##menu-item END
+##Contenido BEGIN
+Configuración del Entorno en VS Code:
+Vamos a configurar el editor:
+
+Extensiones: Ve a la pestaña de extensiones y busca Python (la de Microsoft). Instálala. Instala también Pylance y Jupyter.
+
+Configuración: Ve al engranaje, busca Python terminal execute in file directory y marca la casilla.
+
+Personalización: Puedes cambiar el tema de color en el menú de temas si lo deseas.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Organización de Proyectos
+##menu-item END
+##Contenido BEGIN
+Organización de Proyectos:
+Crear Carpetas:
+
+Crea una carpeta principal (ej: Python Projects).
+
+Dentro, crea una carpeta para este curso (ej: python-for-ai) usando minúsculas y guiones.
+
+Abre esta carpeta desde VS Code.
+
+Guardar Espacio de Trabajo:
+
+Ve a Archivo y selecciona Guardar espacio de trabajo como.
+
+Guarda el archivo en la carpeta del proyecto.
+
+Esto permite retomar tu trabajo con todas las configuraciones listas haciendo doble clic en ese archivo.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Tu Primer Código
+##menu-item END
+##Contenido BEGIN
+Tu Primer Código:
+Crear Archivo:
+
+Crea un archivo llamado hello.py. La extensión .py es obligatoria.
+
+Escribe: print("hola mundo").
+
+Ejecutar:
+
+Selecciona tu versión de Python en la barra inferior.
+
+Haz clic en el botón de Play (arriba a la derecha) o usa Ctrl + Enter.
+
+El texto aparecerá en la Terminal.
+
+Recuerda guardar siempre tu trabajo.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Entornos Virtuales y Paquetes
+##menu-item END
+##Contenido BEGIN
+Entornos Virtuales y Paquetes:
+Entornos Virtuales (Venvs):
+Son copias separadas de Python para cada proyecto. Evitan conflictos entre librerías.
+
+Abre la paleta de comandos (Cmd/Ctrl + Shift + P).
+
+Escribe python create environment y elige Venv.
+
+Selecciona tu versión de Python.
+
+Paquetes y Pip:
+Los paquetes son códigos de otros que puedes usar.
+
+Abre la Terminal y verifica que tu entorno virtual esté activo.
+
+Escribe pip install requests para instalar el paquete requests.
+
+Úsalo en tu código escribiendo import requests.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Modo Interactivo
+##menu-item END
+##Contenido BEGIN
+Modo Interactivo:
+Permite probar código por partes.
+
+Configurar:
+
+Instala el paquete necesario: pip install ipykernel.
+
+En configuración de VS Code, busca Jupyter interactive window text editor execution selection.
+
+Marca la opción para enviar código con Shift Enter.
+
+Usar:
+
+Selecciona el código.
+
+Presiona Shift + Enter.
+
+Verás el resultado en una ventana lateral.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Conceptos Básicos de Python
+##menu-item END
+##Contenido BEGIN
+Conceptos Básicos de Python:
+Sintaxis:
+Son las reglas de escritura. La indentación (4 espacios) es clave para agrupar código.
+
+Variables:
+Guardan datos.
+Ejemplo: nombre = "Alicia".
+Usa minúsculas y guiones bajos. No empieces con números.
+
+Comentarios:
+Notas con # o tres comillas que Python ignora. Úsalos para explicar el por qué del código.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Tipos de Datos
+##menu-item END
+##Contenido BEGIN
+Tipos de Datos:
+Números:
+Enteros (ej: 25) y Flotantes (ej: 19.99).
+Operaciones: suma +, resta -, multiplicación *, potencia **.
+
+Strings (Texto):
+Van entre comillas.
+Se unen con + y repiten con *.
+Usa f"Hola {variable}" para insertar datos en el texto.
+
+Booleanos:
+True (Verdadero) o False (Falso).
+Se crean comparando valores: == (igual), != (distinto), > (mayor).
+Se combinan con and, or, not.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Control de Flujo
+##menu-item END
+##Contenido BEGIN
+Control de Flujo:
+Decisiones (if):
+if [condición]: ejecuta el código indentado.
+elif: prueba otra condición.
+else: se ejecuta si nada se cumple.
+
+Repeticiones (loops):
+for i in range(5): repite la acción 5 veces.
+Python cuenta desde cero.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Estructuras de Datos
+##menu-item END
+##Contenido BEGIN
+Estructuras de Datos:
+Listas:
+Colección ordenada entre corchetes [].
+Se accede por posición (índice 0).
+
+Diccionarios:
+Pares clave-valor entre llaves {}.
+Ej: {"nombre": "Dave"}. Se accede por la clave.
+
+Tuplas y Conjuntos:
+Tuplas (): Datos inmutables.
+Conjuntos: Datos únicos sin duplicados.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Construcción de Programas
+##menu-item END
+##Contenido BEGIN
+Construcción de Programas:
+Funciones:
+Bloques reutilizables definidos con def.
+Usan return para devolver valores.
+
+Módulos y APIs:
+Organiza código en archivos separados (módulos).
+Usa requests para conectar con APIs y obtener datos (JSON).
+
+Pandas:
+Librería para manejar datos en tablas (Data Frames).
+Lee archivos CSV y Excel.
+
+Manejo de Errores:
+Usa try y except para evitar que el programa se detenga por fallos.
+
+Clases:
+Planos para crear objetos con atributos y métodos.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+Herramientas Avanzadas
+##menu-item END
+##Contenido BEGIN
+Herramientas Avanzadas:
+Git y GitHub:
+Control de versiones y respaldo en la nube.
+Usa .gitignore para ocultar archivos privados.
+
+Secretos:
+Guarda claves en un archivo .env.
+Usa python-dotenv para leerlas seguramente.
+
+Rough:
+Extensión para formatear código automáticamente al guardar.
+
+UV:
+Herramienta moderna que reemplaza a Pip y Venv para gestionar paquetes.
+##Contenido END
+
+##itemID:014
+##menu-item BEGIN
+Preguntas y Respuestas
+##menu-item END
+##Contenido BEGIN
+Preguntas y Respuestas:
+¿Qué es Python para IA?
+Python es el lenguaje principal para construir programas de Inteligencia Artificial (IA).
+
+¿Qué es lo más importante al inicio del curso?
+Es esencial configurar un entorno de trabajo profesional en VS Code y entender cómo se organizan los proyectos, no solo aprender a escribir código.
+
+¿Cómo instalo Python?
+Debes descargarlo desde python.org/downloads. Es fundamental marcar la casilla Agregar Python a la ruta (Add Python to the path) durante la instalación en Windows.
+
+¿Qué es Visual Studio Code (VS Code)?
+Es el editor de código recomendado; es gratis y permite trabajar profesionalmente con Python.
+
+¿Qué extensiones necesito en VS Code?
+Necesitas la extensión de Python (de Microsoft), Pylance y Jupyter.
+
+¿Qué es un Espacio de Trabajo (Workspace)?
+Es la forma en que VS Code guarda y recuerda todas las configuraciones de tu proyecto. Se guarda como un archivo al que haces doble clic para abrir el proyecto completo.
+
+¿Cómo creo mi primer archivo de código?
+Debes crear un archivo con la extensión .py (ej: hello.py).
+
+¿Cómo ejecuto el código?
+Asegúrate de seleccionar tu instalación de Python en la parte inferior de VS Code. Luego, haz clic en el botón de Play (reproducir) en la esquina superior derecha, o usa Ctrl + Enter.
+
+¿Qué es la Terminal?
+Es la ventana donde se ejecutan los comandos y se muestra el resultado de tu código.
+
+¿Qué es un Entorno Virtual (Venv)?
+Es una copia privada y separada de Python para cada proyecto. Esto evita conflictos de versiones entre los diferentes paquetes de código que uses. Se crea usando la paleta de comandos en VS Code o el comando python -m venv.
+
+¿Qué son los Paquetes (Packages)?
+Son colecciones de código que otras personas escribieron y que puedes usar en tu proyecto.
+
+¿Cómo instalo paquetes?
+Usa el programa pip en la Terminal, asegurándote de que tu Entorno Virtual esté activo (ej: pip install requests).
+
+¿Cómo uso el modo interactivo?
+Instala ipykernel (pip install ipykernel) y activa la opción en la configuración de VS Code. Luego, selecciona el código y presiona Shift + Enter para ejecutarlo por partes.
+
+¿Qué es la Sintaxis?
+Son las reglas para escribir el código correctamente. Una regla clave en Python es la indentación (usar cuatro espacios).
+
+¿Qué es una Variable?
+Es un nombre que usas para guardar datos (ej: números o texto). Para guardar el valor, usas un solo signo de igual (=).
+
+¿Cómo nombro las variables?
+La mejor práctica es usar minúsculas y guiones bajos para separar palabras (snake case).
+
+¿Qué son los Comentarios?
+Son notas que pones en el código para explicar por qué hiciste algo; Python las ignora. Se usa el signo de número (#).
+
+¿Cuáles son los tipos de datos principales?
+Números (Enteros y Flotantes), Strings (Texto) y Booleanos (Verdadero o Falso).
+
+¿Cómo comparo dos valores?
+Usas el doble signo de igual (==) para saber si son iguales, o > (mayor que) y < (menor que). Puedes combinar comparaciones con and, or y not.
+
+¿Qué es un F-String?
+Es un String dinámico que te permite insertar variables directamente en el texto usando llaves {} y poniendo una f antes de las comillas.
+
+¿Qué es una Función?
+Es un bloque de código reutilizable. Se define con def. Las funciones pueden recibir información (parámetros) y enviar resultados de vuelta (retornar) usando la palabra clave return.
+
+¿Cuál es la diferencia entre print y return?
+print solo muestra el valor en pantalla. return envía el valor de vuelta para que pueda ser guardado en una variable y usado más adelante.
+
+¿Qué son las Variables Locales y Globales?
+Las variables creadas dentro de una función son Locales (solo se usan ahí). Las creadas afuera son Globales y se pueden usar en todo el código.
+
+¿Qué estructuras se usan para guardar múltiples valores?
+Listas (colección ordenada, se usan corchetes []), Diccionarios (pares de clave-valor, se usan llaves {}), Tuplas (datos fijos inmutables, se usan paréntesis ()).
+
+¿Cómo me comunico con otros sistemas (como OpenAI)?
+Usas una API (Interfaz de Programación de Aplicaciones). Utilizas el paquete requests para enviar solicitudes. La información de respuesta se convierte en un Diccionario de Python.
+
+¿Qué es un Data Frame de Pandas?
+Es una estructura de datos que funciona como una tabla de Excel dentro de Python. Pandas permite leer archivos (CSV, JSON, Excel) y manipular los datos fácilmente.
+
+¿Por qué debo usar código modular?
+En proyectos reales, es mejor dividir el código en archivos pequeños y organizados (módulos) con funciones específicas. Esto hace que el código sea más legible y reutilizable.
+
+¿Cómo manejo los errores para que mi programa no falle?
+Usas bloques try y except. El código riesgoso va en try, y si falla, se ejecuta el código en except sin detener todo el programa.
+
+¿Qué es una Clase?
+Una Clase es un plano o molde para crear objetos. Sirve para organizar datos (atributos) y acciones (métodos) relacionados.
+
+¿Qué son Git y GitHub?
+Git rastrea los cambios de tu código. GitHub es el sitio web donde guardas tu proyecto Git.
+
+¿Qué es un Commit?
+Es guardar una instantánea del estado de tu código en Git.
+
+¿Qué es .gitignore?
+Es un archivo esencial que le dice a Git qué archivos no debe subir a GitHub (como tus entornos virtuales y claves secretas).
+
+¿Cómo mantengo mis claves secretas fuera de GitHub?
+Debes guardarlas en un archivo llamado .env. Instalas la librería python-dotenv para cargar de forma segura estas claves y luego las lees con la librería os.
+
+¿Qué es Rough?
+Es una herramienta que formatea automáticamente tu código (arregla el espaciado y estilo) cada vez que guardas el archivo.
+
+¿Qué es UV?
+Es una herramienta moderna y rápida que reemplaza a Pip y Venv. Se usa para añadir y quitar paquetes, y para crear y gestionar entornos virtuales de forma automática.
+##Contenido END
+
+##itemID:015
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+Para validar la información técnica presentada en este tutorial, se han identificado las siguientes fuentes oficiales y recursos educativos de referencia:
+
+readthedocs.io LINK: https://requests.readthedocs.io/en/latest/
+w3schools.com LINK: https://www.w3schools.com/python/
+python.org LINK: https://www.python.org/
+simplilearn.com LINK: https://www.simplilearn.com/tutorials/python-tutorial
+pypi.org LINK: https://pypi.org/
+visualstudio.com LINK: https://code.visualstudio.com/
+realpython.com LINK: https://realpython.com/
+github.com LINK: https://github.com/
+pydata.org LINK: https://pandas.pydata.org/
+readthedocs.org LINK: https://readthedocs.org/
+python.land LINK: https://python.land/
+
+Resumen de validación:
+Los procedimientos de instalación de Python y configuración del PATH son consistentes con la documentación de python.org. El uso de Visual Studio Code y sus extensiones (Python, Pylance) está documentado en code.visualstudio.com. Las librerías mencionadas como Requests y Pandas tienen su documentación oficial alojada en readthedocs.io y pydata.org respectivamente, confirmando su estatus como herramientas estándar en la industria.
+##Contenido END
+
+[TITULO_VIDEO]
+[URL_WEB_YOUTUBE]
+[AUTOR]
+[TELEFONO]
+##Contenido END

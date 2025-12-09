@@ -1,0 +1,176 @@
+##itemID:000
+##menu-item BEGIN
+How to Make an Expense Tracker in Spreadsheets with AI in 5 minutes
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+How to Make an Expense Tracker in Spreadsheets with AI in 5 minutes:
+Web Original:
+How to Make an Expense Tracker in Spreadsheets with AI in 5 minutes:
+https://youtu.be/Bv-AXuT-2pE?si=k_Y_rrmIyTIgTKdv
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción: ¿Qué es Bricks y por qué usarlo?
+##menu-item END
+##Contenido BEGIN
+Introducción: ¿Qué es Bricks y por qué usarlo?:
+El objetivo de este tutorial es crear un panel de control completo para rastrear tus ingresos, gastos e inversiones sin necesidad de ser un experto.[1][2] Para esto utilizaremos Bricks, una herramienta que combina hojas de cálculo con Inteligencia Artificial.[1][3][4][5][6][7]
+
+Bricks incluye documentos, presentaciones y un agente de IA que crea visualizaciones automáticamente.[1] Funciona subiendo un archivo CSV (el resumen de tus movimientos bancarios) y la IA se encarga de analizar los datos, clasificar los gastos y construir un panel personalizable.[1][5]
+
+Además, es una herramienta segura: utiliza funciones potentes de privacidad, tus datos nunca se comparten, no se usan para entrenar a la IA y solo sirven para generar tus propios gráficos e informes.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Configuración de la cuenta y creación del archivo
+##menu-item END
+##Contenido BEGIN
+Configuración de la cuenta y creación del archivo:
+Sigue estos pasos para empezar desde cero:
+
+Crear cuenta: Ve a bricks.com, haz clic en "sign up" (registrarse) e introduce tu correo y contraseña.[2]
+
+Nuevo archivo: En el panel principal, crea un nuevo archivo.
+
+Nombrar el archivo: Ponle un nombre como "personal finance tracker" (rastreador de finanzas personales).
+
+Abrir el tablero visual: Haz clic en la pestaña lateral izquierda que tiene un icono azul para ver el "visual board".
+
+Seleccionar plantilla: En el lado derecho, pulsa el botón de cuatro bloques ("dashboards and reports") y elige la opción "personal finance tracker".
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Importación de datos y análisis automático
+##menu-item END
+##Contenido BEGIN
+Importación de datos y análisis automático:
+Una vez seleccionada la plantilla, aparecerá una ventana emergente pidiéndote los datos:[2]
+
+Conseguir el archivo: Necesitas un archivo CSV de tus estados de cuenta bancarios o tarjetas de crédito. Si no tienes uno, puedes usar la opción de "test data" (datos de prueba) para ver cómo funciona.
+
+Subir el archivo: Arrastra y suelta tu archivo CSV en la ventana emergente.
+
+Análisis de IA: Bricks analizará las transacciones inmediatamente. En segundos, la IA categorizará tus gastos, rastreará los ingresos y agrupará la información en resúmenes mensuales y anuales, creando el dashboard automáticamente.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Exploración del Dashboard: Vista Mensual
+##menu-item END
+##Contenido BEGIN
+Exploración del Dashboard: Vista Mensual:
+El panel generado ofrece una sección de resumen mensual que incluye:
+
+Vistazo rápido: Totales de ingresos, gastos, inversiones y deudas del mes.
+
+Gráficos por categoría: Un gráfico de barras y uno circular que muestran en qué categorías gastaste más dinero.[1][2][5]
+
+Tabla de gastos principales: Un listado con tus cinco gastos más grandes del mes, ideal para monitorear compras importantes.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Exploración del Dashboard: Vista Anual
+##menu-item END
+##Contenido BEGIN
+Exploración del Dashboard: Vista Anual:
+La sección anual te permite ver el comportamiento de tus finanzas a lo largo del año:[2]
+
+Tabla de totales: Ingresos y gastos desglosados mes a mes.
+
+Desglose anual: Un gráfico circular con las áreas que consumieron la mayor parte de tu dinero en el año.
+
+Comparación de presupuesto: Compara tus ingresos contra tus gastos.
+
+Gastos mensuales: Muestra el gasto total de cada mes para identificar picos altos o bajos.
+
+Categorías en el tiempo: Rastrea cómo cambia tu gasto en cada categoría mes a mes.
+
+Ingreso vs. Gasto: Un gráfico de línea clave para saber si gastas más de lo que ganas (si tuviste excedente o te faltó dinero).
+
+Tabla final: Desglose de gastos totales del año por categoría.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Personalización de categorías y edición de datos
+##menu-item END
+##Contenido BEGIN
+Personalización de categorías y edición de datos:
+Todo el dashboard se basa en una hoja de cálculo y es modificable. La primera tabla contiene tus datos brutos (CSV) y las categorizaciones hechas por la IA.[2]
+
+Gestión de categorías: Aunque la IA lo hace automático, puedes cambiarlo.[5]
+
+Manual: En la vista de hoja de cálculo ("spreadsheet view"), haz doble clic en una categoría, selecciona "manage values" y podrás renombrar, borrar o crear nuevas (ej. cambiar "business" a "other").
+
+Con IA: Usa el chat para escribir comandos como "update the category dining out to food" y la IA lo hará por ti.
+
+Tareas complejas: Puedes pedirle a la IA que genere tablas dinámicas o haga cálculos sin escribir fórmulas; solo dile qué necesitas y ella escribirá y ejecutará la fórmula.[7]
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Cómo añadir nuevos gráficos y elementos
+##menu-item END
+##Contenido BEGIN
+Cómo añadir nuevos gráficos y elementos:
+Puedes personalizar el diseño cambiando colores, moviendo gráficos o añadiendo nuevos con tres métodos:
+
+Método 1 (Pedir a la IA): En la vista de cuadrícula, escribe tu petición en el chat (ej. "create a bar chart showing our expenses by category"). La IA genera el gráfico.[1][2][3][5][7][8][9] Haz clic en él, selecciona "send copy to" y elige tu rastreador para añadirlo al tablero.
+
+Método 2 (Manual desde Hoja de Cálculo): En la hoja de cálculo, resalta los datos, haz clic en el botón Bricks (arriba) y selecciona "chart". Configura los ejes y tipo de gráfico, guárdalo en la cuadrícula y envíalo al tablero como en el método 1.
+
+Método 3 (Directo desde el Tablero): En el tablero visual, haz clic en "+ add a new block" y selecciona "chart". Elige la cuadrícula con tus datos ("personal finance tracker"), selecciona el rango, pulsa "create" y ajusta el tipo de gráfico (ej. rosquilla). Puedes editarlo después con el botón "edit".
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+Se ha verificado la información técnica del tutorial contrastándola con fuentes oficiales de la herramienta "Bricks" y su documentación pública.
+
+Resumen de puntos técnicos validados:
+
+Sitio Web Oficial: Aunque el tutorial menciona "bricks.com", la web oficial de la herramienta es thebricks.com.
+
+Funcionalidad: Se confirma que Bricks es una herramienta de "hoja de cálculo con IA" capaz de generar dashboards y reportes instantáneos desde archivos CSV o Excel, tal como describe el tutorial.[1][5]
+
+Privacidad y Seguridad: La política de privacidad de Bricks confirma que los datos del usuario (User-Generated Content) NO se utilizan para entrenar modelos de IA de uso público o de terceros. Los datos se almacenan de forma segura (usando estándares como encriptación TLS y servidores AWS).
+
+Capacidades de IA: La documentación oficial valida que el "AI Data Analyst" de Bricks puede limpiar datos, categorizar transacciones y generar gráficos mediante lenguaje natural ("Ask AI").
+
+Enlaces a documentación y soporte oficial:
+
+Web Oficial: https://www.thebricks.com/[[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQFeEZx9HjvBIsddeXI896ew0P2bfWT6MAiEd4dHCvtN76_XclpK4rrDsfXQZFPhY0jhY7a7ZwZjrByOik0PSLHUrQLeQP8bnVEZUb4nsat_4abpm5cr943alj7a6Pg6hSVPlQ%3D%3D)][[9](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEPg4KxViMJ8VRB0-dbFoioZH5q2dlk6wQjRcaUQ_ABP3I5HVVt5Fo7sI0mb2-ZAMZ3fhiYQR5LJvh58kLaR6fA-vU_VklTWUvVChTg_v1wnLZ_dKOft99odS6BiwP1MsImtIQ1TQ%3D%3D)]
+
+Política de Privacidad y Uso de Datos IA: https://www.thebricks.com/privacy (Ver sección sobre "User-Generated Content and AI Model Training").
+
+Tutorial Oficial de Rastreador de Gastos: Existe documentación específica en su blog titulada "How to Create an Expense Tracker with AI" que coincide con los pasos del video.
+
+
+Sources
+help
+thebricks.com
+youtube.com
+toolcenter.ai
+thebricks.com
+thebricks.com
+thebricks.com
+thebricks.com
+youtube.com
+youtube.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+Bricks.do privacy policy AI data
+Bricks spreadsheet AI official site
+Bricks AI expense tracker features documentation
+##Contenido END

@@ -1,0 +1,140 @@
+TUTORIAL PASO A PASO (UNA SOLA ACCIÓN POR PASO)
+CLI + AUTOMATIZACIÓN CON TYPER Y SCHEDULE PYTHON
+
+OBJETIVO:
+- Crear un comando en terminal: "miapp saludar --nombre Rubén"
+- Añadir una tarea repetitiva que se ejecute cada X segundos/minutos con schedule.
+
+────────────────────────────────────
+PASO 1
+Abre tu terminal (PowerShell, CMD o terminal de VS Code) en tu carpeta de trabajo.
+
+PASO 2
+Mueve el directorio actual a tu carpeta de proyectos (ejemplo):
+cd C:\Users\rubenurbano\HIPERTEX
+
+PASO 3
+Crea un archivo nuevo llamado main.py:
+notepad main.py
+
+PASO 4
+Pega el siguiente código COMPLETO dentro de main.py y guarda el archivo:
+
+-----------------------------------
+import time
+from datetime import datetime
+
+import typer
+import schedule
+from rich import print
+
+app = typer.Typer(help="CLI de ejemplo con Typer + schedule")
+
+# 1) COMANDO CLI NORMAL -------------------------------------------------
+@app.command()
+def saludar(nombre: str = "Rubén"):
+    """
+    Saluda por consola con el nombre indicado.
+    """
+    print(f"[bold green]Hola, {nombre}![/bold green]  😎")
+
+
+# 2) FUNCION QUE QUEREMOS REPETIR --------------------------------------
+def tarea_programada():
+    """
+    Acción que se ejecutará de forma repetitiva.
+    """
+    ahora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[cyan]{ahora}[/cyan] - Ejecutando tarea programada...")
+
+
+# 3) COMANDO PARA INICIAR EL SCHEDULER ---------------------------------
+@app.command()
+def iniciar_scheduler(
+    cada_segundos: int = typer.Option(10, help="Intervalo en segundos entre cada ejecución.")
+):
+    """
+    Inicia un bucle que ejecuta 'tarea_programada' cada X segundos.
+    """
+    print(f"[yellow]Iniciando scheduler. Ejecutaré la tarea cada {cada_segundos} segundos.[/yellow]")
+    schedule.every(cada_segundos).seconds.do(tarea_programada)
+
+    # Bucle principal del scheduler
+    try:
+        while True:
+            schedule.run_pending()
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("[red]Scheduler detenido por el usuario.[/red]")
+
+
+# 4) PUNTO DE ENTRADA PRINCIPAL ----------------------------------------
+if __name__ == "__main__":
+    app()
+-----------------------------------
+
+PASO 5
+Cierra Notepad después de guardar main.py.
+
+PASO 6
+En la terminal, asegúrate de estar en la carpeta donde está main.py:
+cd C:\Users\rubenurbano\HIPERTEX
+
+PASO 7
+Ejecuta un primer comando CLI para probar Typer:
+python main.py --help
+
+PASO 8
+Observa en la terminal la ayuda generada automáticamente por Typer (no hagas nada más).
+
+PASO 9
+Prueba el comando de saludo simple:
+python main.py saludar
+
+PASO 10
+Prueba el comando de saludo con tu nombre:
+python main.py saludar --nombre "Rubén"
+
+PASO 11
+Verifica que aparece el saludo en verde con Rich (no hagas nada más).
+
+PASO 12
+Inicia ahora el scheduler para ejecutar una tarea cada 5 segundos:
+python main.py iniciar-scheduler --cada-segundos 5
+
+PASO 13
+Observa durante unos segundos cómo se imprime en la consola la hora y el mensaje:
+YYYY-MM-DD HH:MM:SS - Ejecutando tarea programada...
+
+PASO 14
+Detén el scheduler cuando quieras con la combinación de teclas:
+Ctrl + C
+
+PASO 15
+Cierra la terminal si ya no quieres seguir usando la CLI.
+
+────────────────────────────────────
+RESUMEN DE COMANDOS IMPORTANTES
+
+1) Ver ayuda general de la CLI:
+python main.py --help
+
+2) Ver ayuda de un comando concreto:
+python main.py saludar --help
+python main.py iniciar-scheduler --help
+
+3) Ejecutar saludo:
+python main.py saludar
+python main.py saludar --nombre "Rubén"
+
+4) Iniciar tarea repetitiva cada X segundos:
+python main.py iniciar-scheduler --cada-segundos 10
+
+Con esto ya tienes:
+- Un CLI propio basado en Typer.
+- Una tarea repetitiva simple usando schedule.
+- Salida coloreada gracias a rich.
+
+
+
+

@@ -1,0 +1,72 @@
+# PLANTILLA NSSM - FastAPI AutoBoot Template (Plantilla oficial para servicios FastAPI.txt)
+# Autor: Rubén Urbano
+# Ubicación recomendada: C:\nssm\
+
+# === 1. Crear servicio (reemplaza NOMBRE_SERVICIO y PUERTO) ===
+C:\nssm\nssm.exe install NOMBRE_SERVICIO
+
+# === 2. En la ventana NSSM ===
+# Application Path:
+C:\Users\rubenurbano\AppData\Local\Programs\Python\Python313\Scripts\uvicorn.exe
+
+# Startup directory:
+C:\Users\rubenurbano\HIPERTEX
+
+# Arguments:
+ARCHIVO_PY:app --host 127.0.0.1 --port PUERTO
+
+# === 3. Logs ===
+# Output (stdout):  C:\nssm\NOMBRE_SERVICIO.out.log
+# Error (stderr):   C:\nssm\NOMBRE_SERVICIO.err.log
+
+# === 4. Exit actions ===
+# Default: Restart
+# Delay: 5000 (5 segundos)
+
+# === 5. Control ===
+C:\nssm\nssm.exe start NOMBRE_SERVICIO
+C:\nssm\nssm.exe stop NOMBRE_SERVICIO
+C:\nssm\nssm.exe restart NOMBRE_SERVICIO
+C:\nssm\nssm.exe remove NOMBRE_SERVICIO confirm
+
+
+***************************************************************
+Si querés un nuevo microservicio FastAPI para el clima:
+
+Nombre: fastapi_weather
+
+Archivo: weather_api.py
+
+Puerto: 8001
+
+Solo cambiás:
+C:\nssm\nssm.exe install fastapi_weather
+# y en Arguments:
+weather_api:app --host 127.0.0.1 --port 8001
+
+
+┌────────────────────────────────────────────┐
+│          Windows Service Control Manager   │
+│                (SCM oficial)               │
+└────────────────────────────────────────────┘
+                 │
+                 ▼
+┌────────────────────────────────────────────┐
+│          NSSM.EXE (el intermediario)       │
+│--------------------------------------------│
+│ - Se registra en el SCM como servicio real │
+│ - Al iniciar, lanza tu programa/script     │
+│ - Supervisa si el proceso muere            │
+│ - Reinicia según reglas (Exit actions)     │
+│ - Redirige stdout/stderr a archivos .log   │
+└────────────────────────────────────────────┘
+                 │
+                 ▼
+┌────────────────────────────────────────────┐
+│     Tu aplicación (Python, Node, FastAPI)  │
+│--------------------------------------------│
+│ uvicorn ipc_api:app --port 8000            │
+│ weather_api:app --port 8001                │
+│ bot_telegram.py                            │
+└────────────────────────────────────────────┘
+

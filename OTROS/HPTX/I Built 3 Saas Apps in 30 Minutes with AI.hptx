@@ -1,0 +1,207 @@
+##itemID:000
+##menu-item BEGIN
+I Built 3 Saas Apps in 30 Minutes with AI
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+I Built 3 Saas Apps in 30 Minutes with AI:
+Web Original:
+I Built 3 Saas Apps in 30 Minutes with AI:
+https://youtu.be/7D6KyFZ5NyU?si=eqFUIRiidOkp-gfY
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+La nueva forma de construir software
+##menu-item END
+##Contenido BEGIN
+La nueva forma de construir software:
+Antes, si querías construir y lanzar tu propio producto o servicio de software (un SAAS), el proceso era muy costoso y difícil. Podía costar cientos de miles de dólares y tomar hasta seis meses de trabajo con un equipo grande de programadores. Por ejemplo, en 2023, construir una aplicación con un equipo pequeño costó 400 mil dólares en dos años y el avance fue limitado.
+
+Hoy en día, la situación ha cambiado radicalmente gracias a los agentes de Inteligencia Artificial. Ahora es posible construir productos funcionales y listos para vender en tan solo 10 minutos, sin necesitar grandes equipos ni presupuestos enormes.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Herramienta necesaria: Abacus AI Deep Agent
+##menu-item END
+##Contenido BEGIN
+Herramienta necesaria: Abacus AI Deep Agent:
+Para lograr estos resultados, se utiliza un agente de IA específico llamado Abacus AI Deep Agent.[1][2][3][4][5]
+
+Este agente forma parte de la suscripción "Chat LLM team".
+El precio de la suscripción comienza en 10 dólares al mes.[1]
+Si necesitas usar el agente de forma más intensiva y tener más créditos, puedes pagar 20 dólares al mes.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Aplicación 1: Tutoría en Vivo (Configuración)
+##menu-item END
+##Contenido BEGIN
+Aplicación 1: Tutoría en Vivo (Configuración):
+La primera aplicación es una página para reservar sesiones de tutoría en vivo. Requiere conexión con un calendario y un sistema de pagos como Stripe.
+
+Instrucción: Se le dio al agente una instrucción simple para crear una página web elegante y mínima para "Tech with Tim".
+Configuración: La IA preguntó sobre precios, duración de las sesiones y temas. El usuario proporcionó estos datos.
+Pagos: La IA solicitó las claves de Stripe (clave publicable y clave secreta). El agente proporcionó instrucciones para encontrarlas y configuró la conexión de pago automáticamente.
+Construcción: El agente construyó la aplicación completa en unos 10 minutos.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Aplicación 1: Despliegue y Uso
+##menu-item END
+##Contenido BEGIN
+Aplicación 1: Despliegue y Uso:
+La página resultante es simple y permite reservar sesiones personalizadas (30 o 60 minutos).
+
+Cómo ponerla en línea:
+
+Presiona el botón "poner en línea" (Deploy).
+
+Elige un dominio en Abacus AI.
+
+Espera a que la aplicación cargue.
+
+Cómo funciona para el usuario:
+
+El usuario hace clic para reservar una sesión (por ejemplo, de 60 minutos con descuento).
+
+Aparece un formulario para ingresar información personal.
+
+El usuario paga el precio establecido (por ejemplo, 250 dólares).
+
+El sistema redirige al sitio de Stripe para completar el pago de forma segura.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Capacidad de depuración del Deep Agent
+##menu-item END
+##Contenido BEGIN
+Capacidad de depuración del Deep Agent:
+Una característica destacada del Deep Agent es su capacidad para solucionar problemas (debugging).[3]
+
+Si algo no funciona (como un botón de pago), el agente puede:
+
+Entrar en su propia computadora y cargar la aplicación.
+
+Abrir un navegador real y realizar acciones como desplazarse y hacer clic en botones.
+
+Ingresar datos de prueba.
+
+Abrir la consola de errores del navegador para verificar mensajes técnicos.
+
+El agente no solo escribe código, sino que ejecuta acciones reales en la computadora para arreglar los fallos.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Aplicación 2: El Imán de Clientes (Lead Magnet)
+##menu-item END
+##Contenido BEGIN
+Aplicación 2: El Imán de Clientes (Lead Magnet):
+Esta aplicación sirve para vender un producto muy barato y atraer clientes para luego ofrecerles algo más caro.
+
+Producto: Un "Mapa de Ruta completo del Desarrollador" (ficticio para el demo) por 1 dólar.
+Funcionamiento:
+
+El usuario ingresa su correo electrónico.
+
+Presiona el botón "Conseguirlo por 1 dólar".
+
+Es redirigido a Stripe para pagar.
+
+Tras el pago, aparece una página de confirmación para descargar el mapa.
+
+Venta adicional: La página intenta vender inmediatamente un programa de entrenamiento más costoso ("Dev Launch program").
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Gestión y edición de las aplicaciones
+##menu-item END
+##Contenido BEGIN
+Gestión y edición de las aplicaciones:
+La herramienta permite administrar y modificar todo lo que el agente construye.
+
+Panel de control:
+Vista de código: Puedes ver y editar el código fuente dentro de la carpeta del proyecto.
+Base de datos: Puedes revisar la información guardada en la base de datos.
+Configuración: Puedes cambiar el dominio y las opciones de almacenamiento.
+Exportación: Puedes llevarte el código para editarlo en tu propio editor si lo prefieres.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Aplicación 3: Revisor de Currículums con IA
+##menu-item END
+##Contenido BEGIN
+Aplicación 3: Revisor de Currículums con IA:
+Esta aplicación es más avanzada porque incluye un sistema de inicio de sesión (autenticación).
+
+Configuración: Se creó con una sola instrucción al Deep Agent.
+Conexión IA: El agente solicitó una clave API de OpenAI para conectar con la inteligencia artificial avanzada.
+Funcionamiento:
+
+El usuario sube su currículum.
+
+El sistema analiza el documento y da puntuaciones sobre estructura, palabras clave y claridad.
+
+Opción Premium: El sistema ofrece mejoras adicionales a cambio de una suscripción de 9 dólares al mes.
+
+El pago de la suscripción se gestiona nuevamente a través de la conexión con Stripe.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Conclusión: La fábrica de juguetes
+##menu-item END
+##Contenido BEGIN
+Conclusión: La fábrica de juguetes:
+Construir aplicaciones hoy se compara con armar un juguete de bloques. Antes, tenías que tallar cada pieza tú mismo usando herramientas costosas y mucho esfuerzo. Ahora, el agente de IA actúa como una fábrica que te entrega el juguete ya ensamblado y listo para jugar, permitiéndote empezar a vender desde el primer día con conexiones reales y útiles.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+La información técnica presentada en el tutorial ha sido validada mediante búsqueda web en fuentes oficiales:
+
+Sobre Abacus.AI y Deep Agent:
+Existe la suscripción "ChatLLM Teams" de Abacus.AI que incluye acceso a "Deep Agent".[1][2]
+El precio base confirmado es de $10 USD por usuario/mes.[1][5][6] Existe una actualización a "Pro" por 
+10USDadicionalesqueotorgaaccesosinrestriccionesalDeepAgent,coincidiendoconlosrangosdepreciomencionados(
+10-$20).
+Fuente: Sitio web oficial de Abacus.AI (Páginas de Pricing y ChatLLM Teams).
+
+Sobre las Claves de Stripe:
+Stripe utiliza un sistema de autenticación basado en pares de claves API: "Publishable key" (Clave publicable) y "Secret key" (Clave secreta).[7]
+Estas claves se encuentran en el Dashboard de desarrolladores de Stripe, tal como describe el proceso del agente.
+Fuente: Documentación oficial de Stripe (Sección API Keys).
+
+Sobre la Clave API de OpenAI:
+Para que una aplicación externa utilice los modelos de OpenAI, se requiere una "API Key" que se genera en la configuración de la cuenta de usuario de OpenAI.
+Fuente: Documentación oficial de OpenAI (Sección API Authentication).
+
+Estos hallazgos confirman que las herramientas, precios y requisitos técnicos (claves API) mencionados en el video corresponden a servicios reales y vigentes.
+
+
+Sources
+help
+abacus.ai
+eesel.ai
+abacus.ai
+zapier.com
+abacus.ai
+abacus.ai
+paymentsplugin.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+Stripe API keys documentation
+OpenAI API keys documentation
+Abacus.AI Deep Agent ChatLLM pricing
+##Contenido END

@@ -1,0 +1,80 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "TUTORIAL RÁPIDO: Cómo usar site: en Google Chrome\nWEB ORIGINAL:",
+      "contenido": "TUTORIAL RÁPIDO: Cómo usar site: en Google Chrome:\nWeb Original:\nTUTORIAL RÁPIDO: Cómo usar site: en Google Chrome:\nSource: chatGPT\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Para qué sirve site:",
+      "contenido": "Para qué sirve site::\nEl operador site: sirve para buscar solo dentro de una web concreta, ignorando el resto de Internet.[1]\n\nEjemplo:\nsite:wikipedia.org Einstein"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Pasos básicos desde Google Chrome",
+      "contenido": "Pasos básicos desde Google Chrome:\n\nAbre una pestaña nueva en Chrome.\n\nEscribe directamente en la barra de direcciones (omnibox), como si fuera Google.\n\nTeclea tu búsqueda con site: y pulsa Enter.[2]\n\nEjemplo general:\nsite:dominio.com palabra clave\nEjemplo real:\nsite:elpais.com inteligencia artificial"
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Buscar dentro de un dominio o sección",
+      "contenido": "Buscar dentro de un dominio o sección:\nBuscar en todo un dominio:\nsite:elpais.com inteligencia artificial\n\nBuscar solo en una sección concreta (subdirectorio):\nsite:bbc.com/news climate change\n\nEsto es útil cuando una web tiene muchas secciones y solo te interesa una zona específica (blog, noticias, documentación, etc.)."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Filtrar por tipo de archivo",
+      "contenido": "Filtrar por tipo de archivo:\nPuedes combinar site: con filetype: para encontrar PDFs, presentaciones, etc.\nEjemplos:\n\nInforme en PDF dentro de un sitio oficial:\nsite:un.org filetype:pdf climate report\n\nManuales en PDF de un producto:\nsite:hp.com filetype:pdf manual"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Buscar frases exactas y excluir palabras",
+      "contenido": "Buscar frases exactas y excluir palabras:\n\nFrase exacta dentro de un dominio:\nsite:gov.es \"ayuda social\"\n\nExcluir palabras dentro del mismo sitio:\nsite:youtube.com piano -tutorial\n\nUsa comillas para localizar frases concretas y el signo menos para limpiar resultados que no te interesan."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Ver cuántas páginas de un sitio están en Google",
+      "contenido": "Ver cuántas páginas de un sitio están en Google:\nSi solo escribes el dominio con site:, Google te muestra una estimación de cuántas páginas están indexadas.[2][3][4][5]\nEjemplo:\nsite:midominio.com\n\nEsto ayuda a ver si una web está bien indexada o muy poco visible.[1]"
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Combinar múltiples filtros",
+      "contenido": "Combinar múltiples filtros:\nPuedes mezclar site:, comillas, años, exclusiones y más para búsquedas muy precisas.\nEjemplos:\n\nArtículos de machine learning recientes, sin deportes:\nsite:nytimes.com \"machine learning\" 2023 -sports\n\nEconomía reciente en un medio concreto:\nsite:elpais.com \"economía\" 2024"
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Buscar en varios sitios a la vez",
+      "contenido": "Buscar en varios sitios a la vez:\nGoogle entiende el operador OR, aunque no esté documentado como función oficial.\nEjemplo:\nsite:harvard.edu OR site:mit.edu \"research lab\"\n\nEs muy útil para comparar información entre universidades, medios o blogs a la vez."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Cuando el buscador interno de una web es malo",
+      "contenido": "Cuando el buscador interno de una web es malo:\nSi la búsqueda interna de una web funciona mal o es limitada, usa Google con site:.\nEjemplo con una universidad:\nsite:uv.es matrícula plazos\n\nEsto suele dar resultados más completos y rápidos que el buscador interno."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Páginas antiguas, 404 y contenido oculto",
+      "contenido": "Páginas antiguas, 404 y contenido oculto:\n\nLocalizar contenido antiguo o en subdominios:\nsite:archivo.midominio.com documento histórico\n\nDetectar páginas con error 404 (útil para desarrolladores y SEO):\nsite:midominio.com \"404\"\n\nEste tipo de búsquedas ayuda a limpiar webs, encontrar errores y recuperar contenido perdido."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Buscar datos y documentos en dominios específicos",
+      "contenido": "Buscar datos y documentos en dominios específicos:\nAlgunos usos prácticos:\n\nBuscar menciones de una marca o empresa en LinkedIn:\nsite:linkedin.com \"PRO-LIMP\" Valencia\n\nBuscar documentos públicos en Google Drive:\nsite:drive.google.com \"tutorial excel\""
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Atajos rápidos (cheatsheet)",
+      "contenido": "Atajos rápidos (cheatsheet):\nPuedes usar estas plantillas copiando y pegando en Chrome y rellenando los huecos.\n\nBuscar un tema en un sitio:\nsite:__________ __________[2][4][6][7]\n\nBuscar en una subcarpeta:\nsite:/ __________\n\nFrase exacta en un dominio:\nsite:__________ \"__________\"\n\nIncluir tema pero excluir palabra:\nsite:__________ __________ -__________\n\nSolo PDFs de un sitio:\nsite:__________ filetype:pdf __________\n\nBuscar en dos sitios a la vez:\nsite:__________ OR site:__________ __________"
+    },
+    {
+      "itemID": "013",
+      "menu_item": "Ejemplos aplicados a un proyecto real (PRO-LIMP)",
+      "contenido": "Ejemplos aplicados a un proyecto real (PRO-LIMP):\n\nBuscar información municipal de limpieza en un barrio concreto:\nsite:valencia.es \"limpieza\" \"Benetússer\"\n\nBuscar ayudas para autónomos en la Comunidad Valenciana:\nsite:gva.es \"ayudas\" \"autónomos\"\n\nBuscar noticias sobre una herramienta concreta:\nsite:elpais.com \"NotebookLM\"\n\nBuscar vídeos técnicos sobre un tema evitando marketing:\nsite:youtube.com \"RAG local\" -marketing\n\nSi quieres, en un siguiente mensaje se puede convertir esto en un PDF estilo chuleta de una página para que lo compartas en tus tutoriales."
+    },
+    {
+      "itemID": "014",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nPara esta sección, se han buscado fuentes oficiales de Google que validen los operadores de búsqueda descritos en el tutorial.\n\nResumen de puntos técnicos validados:\n\nEl operador \"site:\" es una función oficial documentada por Google para restringir búsquedas a dominios o prefijos de URL específicos.\n\nEl uso de \"filetype:\" es válido y está soportado para filtrar por tipos de archivo como PDF.[6][8]\n\nEl uso de comillas para coincidencia exacta y el guion \"-\" para exclusiones son operadores básicos confirmados.[5]\n\nGoogle confirma que \"site:\" se puede usar para diagnósticos básicos de indexación.\n\nEl uso de \"OR\" para combinar búsquedas es un operador lógico soportado.\n\nEnlaces directos a documentación oficial:\nCentro de la Búsqueda de Google (Operadores de búsqueda):\nLINK= https://developers.google.com/search/docs/monitor-debug/search-operators?hl=es\n\nAyuda de Búsqueda de Google (Refinar búsquedas web):\nLINK= https://support.google.com/websearch/answer/2466433?hl=es\n\n[TUTORIAL RÁPIDO: Cómo usar site: en Google Chrome]\n[Source: chatGPT]\n[PRO-LIMP AUTOMATIZACION]\n[+34 636832005]"
+    }
+  ]
+}
