@@ -1,0 +1,40 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "[TITULO_VIDEO]\nWEB ORIGINAL:",
+      "contenido": "[TITULO_VIDEO]:\nWeb Original:\n\nHow to broadcast messages on WhatsApp: Send bulk messages without getting blocked (2025) \nhttps://youtu.be/_upLw2kKxLo?si=yDOKHcORKhtgxNSY"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Qué es una lista de difusión en WhatsApp",
+      "contenido": "Qué es una lista de difusión en WhatsApp:\n\nUna lista de difusión en WhatsApp es una función que te permite enviar un mensaje a varios contactos al mismo tiempo, pero cada persona recibe el mensaje como si fuera un mensaje individual. No se crea un grupo, así que nadie ve quién más recibió el mensaje. Esta función está disponible tanto en WhatsApp normal como en WhatsApp Business.[1]"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Cómo crear una lista de difusión en WhatsApp",
+      "contenido": "Cómo crear una lista de difusión en WhatsApp:\n\n1. Abre la aplicación de WhatsApp en tu teléfono.\n2. Toca los tres puntos en la esquina superior derecha.\n3. Selecciona la opción “Nueva difusión”.\n4. Elige los contactos a los que quieres enviar el mensaje. Puedes seleccionar hasta 256 contactos.\n5. Escribe tu mensaje y presiona enviar. Cada contacto recibirá el mensaje como si fuera personal.[2][3]"
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Cómo evitar ser bloqueado al enviar mensajes masivos",
+      "contenido": "Cómo evitar ser bloqueado al enviar mensajes masivos:\n\nWhatsApp tiene reglas para evitar el spam. Si envías muchos mensajes en poco tiempo o usas herramientas automáticas, puedes ser bloqueado. Para evitarlo:\n\n- Usa solo la función oficial de listas de difusión.\n- No envíes mensajes a personas que no te tienen guardado en su agenda.\n- No envíes mensajes repetidos o spam.\n- No uses aplicaciones de terceros que prometan envíos masivos automáticos, ya que pueden violar las reglas de WhatsApp y causar bloqueos.[4][5]"
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Cómo enviar mensajes masivos con WhatsApp Business",
+      "contenido": "Cómo enviar mensajes masivos con WhatsApp Business:\n\n1. Abre la aplicación de WhatsApp Business.\n2. Ve al menú y selecciona “Listas de difusión”.\n3. Crea una nueva lista y añade los contactos.\n4. Escribe tu mensaje y envíalo.\n5. Cada contacto recibirá el mensaje como si fuera personal, y podrás ver quién respondió.[5][4]"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Cómo usar la API de WhatsApp Business para envíos masivos",
+      "contenido": "Cómo usar la API de WhatsApp Business para envíos masivos:\n\n1. Registra tu empresa y solicita acceso a la API de WhatsApp Business a través de un proveedor autorizado.\n2. Completa el proceso de verificación y vincula tu número de teléfono.\n3. Crea tu perfil de empresa y una plantilla de mensaje aprobada.\n4. Usa la API para enviar mensajes masivos a tus contactos, siguiendo las reglas de WhatsApp.[6][4]"
+    },
+    {
+      "itemID": "006",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\n- La función de listas de difusión en WhatsApp está explicada en la documentación oficial de WhatsApp: https://faq.whatsapp.com/591339899826743.[1]\n- Las reglas para evitar bloqueos y el uso de la API de WhatsApp Business están detalladas en la documentación oficial de WhatsApp Business: https://developers.facebook.com/docs/whatsapp.[4][6]\n- El límite de 256 contactos en una lista de difusión y el funcionamiento de la función están confirmados en la ayuda oficial de WhatsApp: https://faq.whatsapp.com/591339899826743.[1]"
+    }
+  ]
+}

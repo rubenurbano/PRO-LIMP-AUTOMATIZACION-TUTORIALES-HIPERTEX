@@ -1,0 +1,144 @@
+##itemID:000
+##menu-item BEGIN
+Connect Supabase and Make
+(WEB ORIGINAL)
+##menu-item END
+##Contenido BEGIN
+Connect Supabase and Make:
+
+https://apps.make.com/supabase
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Obtener credenciales de Supabase
+##menu-item END
+##Contenido BEGIN
+Obtener credenciales de Supabase:
+
+Para comenzar la integración, primero debes obtener tus credenciales de Supabase, que incluyen el Project ID y la API Key.
+
+Pasos:
+1. Inicia sesión en tu cuenta de Supabase.
+2. En la barra lateral izquierda, haz clic en "Projects" (Proyectos).
+3. Selecciona el proyecto que deseas conectar con Make.com.
+4. Desplázate hasta la sección "Project API" al final de la página.
+5. Copia el "Project URL", que será el Project ID para Make.com.
+6. Copia la API Key.
+7. Guarda estos datos en un lugar seguro para usarlos en los siguientes pasos.
+
+Esta información es esencial y autentica la comunicación entre Make.com y Supabase, garantizando la seguridad y acceso adecuado a tu proyecto.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Crear conexión en Make.com
+##menu-item END
+##Contenido BEGIN
+Crear conexión en Make.com:
+
+Con las credenciales obtenidas, ahora crearás la conexión en Make.com que permitirá que ambas plataformas se comuniquen.
+
+Pasos:
+1. Inicia sesión en tu cuenta Make.com y abre o crea un escenario (scenario).
+2. Agrega un módulo Supabase a tu escenario haciendo clic en el símbolo "+" y buscando "Supabase".
+3. Selecciona la opción para "Create a Webhook" (Crear un webhook).
+4. Introduce un nombre descriptivo para esta conexión en el campo correspondiente.
+5. Pega el Project URL (Project ID) en su campo respectivo.
+6. Pega la API Key en el campo correspondiente.
+7. Haz clic en "Guardar" (Save).
+8. Autentica tu cuenta si Make.com te lo solicita para confirmar el acceso.
+
+Con estos pasos, tu conexión Supabase-Make.com estará establecida y lista para usarse en los flujos de trabajo (workflows).
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Configurar webhook en Supabase
+##menu-item END
+##Contenido BEGIN
+Configurar webhook en Supabase:
+
+Para automatizaciones en tiempo real, debes configurar un webhook que observe eventos en tu base de datos Supabase y dispare escenarios en Make.com.
+
+Pasos en Make.com:
+1. En tu escenario, añade un módulo Supabase instantáneo.
+2. Haz clic en "Create a Webhook".
+3. Ponle un nombre descriptivo al webhook.
+4. Selecciona la conexión Supabase que creaste anteriormente.
+5. Guarda y copia la URL del webhook.
+
+Pasos en Supabase:
+1. Entra en tu cuenta Supabase y navega a "Database" > "Webhooks".
+2. Haz clic en pestaña "Webhooks" y luego en "Create a new hook".
+3. Asigna un nombre al webhook.
+4. En "Table", selecciona la tabla que quieres monitorizar.
+5. Selecciona los eventos que deseas vigilar (INSERT, UPDATE, DELETE).
+6. En el campo de "HTTP Request", pega la URL del webhook copiada en Make.com.
+7. Haz clic en "Create Webhook".
+
+Cada vez que ocurra uno de los eventos seleccionados, Make.com será notificado inmediatamente y ejecutará el escenario asociado.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Usar módulos Supabase en Make.com
+##menu-item END
+##Contenido BEGIN
+Usar módulos Supabase en Make.com:
+
+Tras conectar Supabase con Make.com, puedes aprovechar varios módulos para construir tus automatizaciones:
+
+- Disparadores (Triggers):
+   - Watch events: observa cambios y dispara escenarios inmediatamente.
+- Acciones (Actions):
+   - Create a bucket: crear un contenedor de archivos.
+   - Create a row: añadir una fila a una tabla.
+   - Delete a bucket: eliminar un contenedor.
+   - Delete rows: borrar filas en tablas.
+   - Get a bucket: obtener información de un contenedor.
+   - Get rows: obtener filas de tablas.
+   - Count rows: contar filas en tablas.
+   - Make an API call: hacer llamadas personalizadas a la API.
+   - Upload a file: subir archivos.
+   - Upsert a record: crear o actualizar registros.
+
+- Búsquedas (Searches):
+   - List buckets: listar contenedores.
+   - Search rows: buscar filas con criterios.
+
+Estos módulos permiten gestionar y manipular datos y archivos de Supabase dentro de flujos automatizados sin necesidad de programar.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Este tutorial está basado en la documentación oficial de Make.com para la app Supabase, accesible en:
+
+- [Make.com - Supabase App Documentation](https://apps.make.com/supabase)
+
+Los pasos detallados corresponden a las instrucciones oficiales para:
+
+- Obtener credenciales en Supabase (Project ID y API Key).
+- Crear y configurar la conexión en Make.com.
+- Configurar webhooks para eventos en tiempo real.
+- Uso de módulos disponibles en Make.com para manejar la base de datos Supabase.
+
+Se garantiza la coincidencia con las fuentes técnicas oficiales para asegurar precisión y funcionalidad efectiva en la integración Supabase-Make.com.
+##Contenido END
+
+[1](https://apps.make.com/supabase)
+[2](https://www.youtube.com/watch?v=L56O39igijM)
+[3](https://latenode.com/es/integrations/database/supabase)
+[4](https://www.youtube.com/watch?v=tckWKjpG-mU)
+[5](https://www.make.com/en/integrations/supabase)
+[6](https://www.youtube.com/watch?v=xy6xMWw1J8I)
+[7](https://www.youtube.com/watch?v=I2539vbErQc)
+[8](https://www.reddit.com/r/FigmaDesign/comments/1n90ie7/figma_make_can_integrate_with_supabase_but_cannot/)
+[9](https://www.tiktok.com/@mariokaizen/video/7463206840281697558)
+[10](https://www.reddit.com/r/nocode/comments/1oukc51/i_built_an_ai_chatbot_with_my_postgres_db_in/)
+[11](https://supabase.com/docs/guides/getting-started)

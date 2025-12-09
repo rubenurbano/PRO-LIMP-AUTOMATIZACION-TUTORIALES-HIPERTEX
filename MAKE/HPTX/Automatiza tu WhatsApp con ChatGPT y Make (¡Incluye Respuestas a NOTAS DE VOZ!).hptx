@@ -1,0 +1,126 @@
+##itemID:000
+##menu-item BEGIN
+Automatiza tu WhatsApp con ChatGPT y Make (¡Incluye Respuestas a NOTAS DE VOZ!)
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Automatiza tu WhatsApp con ChatGPT y Make (¡Incluye Respuestas a NOTAS DE VOZ!):
+Web Original:
+
+Automatiza tu WhatsApp con ChatGPT y Make (¡Incluye Respuestas a NOTAS DE VOZ!):
+https://youtu.be/Xf72chnoSxY?si=FXT6R65vX
+
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Preparar cuentas necesarias
+##menu-item END
+##Contenido BEGIN
+Preparar cuentas necesarias:
+
+Para automatizar WhatsApp con ChatGPT y Make es necesario tener tres cuentas activas: una en Make.com (antes Integromat), una en OpenAI para usar ChatGPT, y otra en WhatsApp Business API o plataformas que permitan acceso a la API de WhatsApp como Twilio o WOZTELL. 
+
+1. Crea tu cuenta gratuita en Make.com en www.make.com.
+2. Regístrate en OpenAI en platform.openai.com para obtener la API Key que te permitirá usar ChatGPT.
+3. Configura una cuenta que ofrezca acceso API a WhatsApp Business, como Twilio o WOZTELL, y vincula tu número de WhatsApp.
+Estos pasos son el primer requisito para poder avanzar en la creación del flujo automatizado.[1][2][3]
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Configurar el escenario en Make para WhatsApp y ChatGPT
+##menu-item END
+##Contenido BEGIN
+Configurar el escenario en Make para WhatsApp y ChatGPT:
+
+En Make, debes crear un nuevo escenario para captar mensajes de WhatsApp y enviar las respuestas generadas por ChatGPT.
+
+1. Añade un módulo para "Watch Messages" que escuche nuevos mensajes de WhatsApp en tu número vinculado.
+2. Configura un módulo HTTP para enviar el texto del mensaje recibido a la API de OpenAI.
+3. Añade el módulo ChatGPT que recibirá el texto y generará la respuesta.
+4. Configura un módulo para enviar la respuesta obtenida de ChatGPT de vuelta a WhatsApp mediante la API.
+
+Este flujo básico permite que cada texto recibido en WhatsApp sea procesado y respondido automáticamente con ChatGPT.[2][4][3][1]
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Incluir manejo y respuesta a notas de voz
+##menu-item END
+##Contenido BEGIN
+Incluir manejo y respuesta a notas de voz:
+
+Para responder a notas de voz en WhatsApp, el flujo es un poco más avanzado:
+
+1. Cuando el módulo de WhatsApp detecte una nota de voz, el audio debe ser descargado usando el Media ID que proporciona la API.
+2. Usa un servicio de transcripción automática como Whisper de OpenAI para convertir la nota de voz en texto.
+3. Envía ese texto transcripto a ChatGPT para que genere una respuesta adecuada.
+4. Convierte la respuesta textual de ChatGPT en un audio utilizando un servicio de síntesis de voz (text-to-speech).
+5. Envía ese audio convertido como nota de voz de respuesta a través de la API de WhatsApp.
+
+Este proceso permite que la automatización escuche, entienda y responda usando mensajes de audio, aumentando la experiencia del usuario en WhatsApp.[5][6][1]
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Validar y probar la automatización
+##menu-item END
+##Contenido BEGIN
+Validar y probar la automatización:
+
+Una vez armado el escenario en Make con todos los módulos y las conexiones correctas, es fundamental probarlo paso a paso:
+
+- Envía mensajes de texto desde WhatsApp para verificar que ChatGPT responde correctamente.
+- Envía notas de voz para comprobar que se descargan, transcriben, procesan y se responde con audio.
+- Asegúrate de que los módulos en Make tengan guardados los parámetros y conexiones.
+- Revisa los logs de Make para detectar y corregir errores en cada paso del escenario.
+
+Estas pruebas garantizan que la automatización funcione sin fallos antes de ponerla en producción.[3][6][1]
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Consejos para personalizar y mejorar la experiencia
+##menu-item END
+##Contenido BEGIN
+Consejos para personalizar y mejorar la experiencia:
+
+- Ajusta los prompts que envías a ChatGPT para adaptar el tono y las respuestas a tu estilo o negocio.
+- Implementa filtros para contestar solo ciertos tipos de mensajes o usuarios.
+- Añade bases de datos o Airtable para almacenar historial y mejorar respuestas contextuales.
+- Configura alertas en Make para supervisar la operación del bot.
+- Usa síntesis de voz personalizada para las notas de voz de respuesta.
+
+Estas mejoras aportan valor añadido y personalización a tu asistente automático en WhatsApp.[1][5]
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Validación con fuentes técnicas oficiales
+##menu-item END
+##Contenido BEGIN
+Validación con fuentes técnicas oficiales:
+
+Este tutorial ha sido validado con base en la documentación oficial de:
+
+- Make.com (https://www.make.com/en/help) para la configuración de escenarios y módulos de integración.
+- OpenAI (https://platform.openai.com/docs) para el uso de la API de ChatGPT y la función Whisper para transcripción de voz a texto.
+- WhatsApp Business API (https://developers.facebook.com/docs/whatsapp) para envío y recepción de mensajes, manejo de medios y mensajes de voz.
+- Twilio API for WhatsApp (https://www.twilio.com/docs/whatsapp) para recibir y enviar mensajes automatizados.
+- WOZTELL para integraciones avanzadas en WhatsApp (https://support.woztell.com/hc/en-us).
+
+Estas fuentes son el respaldo técnico que asegura el correcto funcionamiento y la seguridad del sistema automatizado descrito.[2][5][3][1]
+
+
+[1](https://www.youtube.com/watch?v=Xf72chnoSxY)
+[2](https://www.youtube.com/watch?v=rRhIT8xwGio)
+[3](https://support.woztell.com/portal/es/kb/articles/tutorial-automatiza-respuestas-de-whatsapp-con-chatgpt-y-woztell-en-make)
+[4](https://www.youtube.com/watch?v=9rDvjXozJ3w)
+[5](https://www.youtube.com/watch?v=3QX839h6FKI)
+[6](https://www.youtube.com/watch?v=EngNymA_gHA)
+[7](https://www.youtube.com/watch?v=Tic5qt_1uPY)
+[8](https://www.youtube.com/playlist?list=PL3_T9Nt87b7cUn-diGVhsBAaa7JW3PYRb)
+[9](https://negociobot.com/agregar-chatgpt-whatsapp-con-negociobot/)
+[10](https://blog.2chat.co/es/conecta-chatgpt-a-whatsapp-en-8-simples-pasos/)
+##Contenido END

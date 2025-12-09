@@ -1,0 +1,55 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Tutorial Antigravity_El Nuevo IDE Agentico de Google\nWEB ORIGINAL:",
+      "contenido": "Tutorial Antigravity: El Nuevo IDE Agéntico de Google:\nWeb Original:\nTutorial Antigravity: El Nuevo IDE Agéntico de Google:\nhttps://youtu.be/Ppvzv5wxTNs?si=F1J6FZNU76k2dK_e\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Concepto Básico de Antigravity",
+      "contenido": "Concepto Básico de Antigravity:\nAntigravity es una plataforma de desarrollo creada por Google que se basa en el uso de \"agentes\".[1][2][3][4][5][6][7][8][9] Su objetivo es ayudar a los usuarios a escribir código de manera más rápida, funcionando de forma similar a otros editores conocidos como VS Code, pero a un nivel diferente. No es simplemente un asistente que sugiere código; es una herramienta más completa.\n\nEn el desarrollo \"agentic\" (basado en agentes), los ayudantes digitales o agentes tienen la capacidad de planificar, ejecutar tareas, validar su propio trabajo y hacer mejoras de forma autónoma.[5][8] Esto cambia el rol del usuario: en lugar de escribir cada línea de código manualmente, el usuario actúa como un arquitecto que dirige a estos agentes, convirtiendo la programación en un proceso organizado.[5]\n\nAntigravity incluye Gemini 3 Pro, que es uno de los modelos de Inteligencia Artificial más potentes de Google.[2][3] En su versión de vista previa es gratuito y tiene límites generosos.[2][7] Además, la plataforma da libertad de elección, permitiendo usar otros modelos como Cloud Sonet 4.5 de Antropic o GPT OS de Open AI.[2][7]"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Componentes y Múltiples Agentes",
+      "contenido": "Componentes y Múltiples Agentes:\nLa plataforma cuenta con dos interfaces principales.[1][2][3][4][5][6][7][8][10][11][12] La primera es la Vista de Editor, que es la pantalla tradicional donde se escribe y edita código. La segunda es el Administrador de Agentes (Agent Manager), que funciona como un centro de control o \"control de misión\".[6][8] Desde aquí, el usuario puede crear, organizar y observar a varios agentes trabajando.[3][5][6][7][8][9]\n\nUna característica importante es el trabajo en paralelo. Los agentes pueden realizar tareas de forma simultánea.[3][7][8][9] Por ejemplo, si hay cinco problemas distintos, se pueden asignar cinco agentes diferentes al mismo tiempo. Mientras uno soluciona un problema de acceso, otro puede estar escribiendo pruebas y otro mejorando la base de datos. Esto permite multiplicar el rendimiento del trabajo muy rápidamente.[8]"
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Características Clave: Artefactos",
+      "contenido": "Características Clave: Artefactos:\nPara resolver el problema de la confianza en la Inteligencia Artificial, Antigravity utiliza \"Artefactos\". Cuando un agente realiza una tarea, genera estos artefactos tangibles como prueba de su trabajo.[2][7] En lugar de leer textos largos de registros, el usuario puede ver planes, resultados y validaciones claras.\n\nAlgunos ejemplos de artefactos son listas de tareas, planes de cómo se implementará algo, diferencias en el código, capturas de pantalla y videos.[2] Si el usuario ve algo que no le parece correcto en un artefacto, puede dejar una opinión o comentario directamente sobre él (similar a comentar en un documento de Google), y el agente tomará en cuenta ese comentario para corregir el trabajo.[7]"
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Integración Web y Control",
+      "contenido": "Integración Web y Control:\nLos agentes de Antigravity tienen la capacidad de usar el navegador Google Chrome para interactuar con internet. Pueden ver páginas, hacer clic, desplazarse, llenar formularios y grabar videos de lo que hacen. Esto permite que un agente cree una aplicación, la inicie, abra el navegador y la pruebe por sí mismo para confirmar que funciona, sin necesitar ayuda humana.[7]\n\nEl usuario tiene un control detallado sobre cómo actúan los agentes mediante modos y políticas. Existen dos modos principales: el \"Planning Mode\" (Modo de Planificación), donde el agente investiga y planea a fondo antes de actuar, ideal para tareas complejas; y el \"Fast Mode\" (Modo Rápido), para tareas sencillas que no requieren mucha planificación.[8] Además, se pueden configurar políticas para decidir si el agente puede ejecutar comandos o modificar archivos automáticamente o si debe pedir permiso primero."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Instalación y Configuración Inicial",
+      "contenido": "Instalación y Configuración Inicial:\nPara comenzar, se debe ingresar a antigravity.google/download y descargar la versión adecuada para el sistema operativo (Linux, Windows o Mac OS).[7][12][13] La instalación se realiza siguiendo los comandos que se muestran en la página para la terminal.\n\nAl iniciar el programa por primera vez, se solicitará personalizar las políticas de funcionamiento. Se recomienda elegir la opción donde el agente actúa como un asistente de desarrollo o copiloto. También se debe configurar cómo interactuará el agente con la terminal y si requerirá revisión por parte del usuario antes de ejecutar acciones o cambiar archivos en la computadora."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Uso del Administrador de Agentes",
+      "contenido": "Uso del Administrador de Agentes:\nEl Administrador de Agentes tiene varias secciones clave. La sección de Conversaciones se usa para pedir tareas.[8] Aquí se elige el modelo de IA (Gemini, Sonet, GPT) y el modo de trabajo (Planning o Fast).\n\nEl \"Inbox\" o bandeja de entrada es donde los agentes que trabajan al mismo tiempo se comunican para avisar que terminaron o pedir aprobación. Los \"Workspaces\" son las carpetas o repositorios a los que Antigravity tiene acceso para editar archivos. Finalmente, existe el \"Playground\", un modo libre para pedir cosas a la IA sin que esta tenga acceso real a los archivos de trabajo."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Configuración Web y Reglas",
+      "contenido": "Configuración Web y Reglas:\nPara que la plataforma interactúe con sitios web, es necesario instalar la extensión \"Antigravity Browser Extension\" en Chrome.[12] Una vez instalada, desde el Playground se puede pedir al agente que navegue, tome capturas o analice páginas web.\n\nTambién es posible implementar reglas personalizadas (Customizations) tanto a nivel global como por carpeta de trabajo. Estas reglas sirven para definir estilos o requisitos, como por ejemplo exigir que todos los comentarios incluyan emojis. Una vez guardadas, el agente respetará estas guías en todas sus tareas."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Desarrollo Robusto (Modo Planning)",
+      "contenido": "Desarrollo Robusto (Modo Planning):\nPara crear aplicaciones complejas desde cero, se utiliza el modo Planning.[1][2][3][5][7][8][12] El agente inicia creando un plan detallado de tareas, diseño y validaciones. Al finalizar, muestra todo su proceso de pensamiento, los ajustes que hizo y las pruebas realizadas, incluyendo grabaciones de pantalla de sus propias pruebas.\n\nTodos estos resultados se organizan en la pestaña de Artifacts. Si el usuario necesita corregir algo, puede comentar líneas específicas en los artefactos para dar retroalimentación. Antigravity convierte el desarrollo de software en una experiencia similar a dirigir una orquesta de ayudantes inteligentes."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nPara esta sección, se ha realizado una búsqueda de fuentes oficiales de Google y documentación técnica disponible públicamente (a fecha de noviembre de 2025 según el contexto de lanzamiento reciente) para validar la información del tutorial.\n\nResumen de puntos técnicos validados:\n\nNombre y Plataforma: Se confirma que \"Google Antigravity\" es el nombre oficial de la nueva plataforma de desarrollo agentic de Google, diseñada como un IDE \"agent-first\" (primero el agente).\n\nModelos de IA: La documentación oficial y anuncios de lanzamiento confirman que el motor principal es Gemini 3 Pro. También se valida la capacidad de \"model optionality\" (opcionalidad de modelos), permitiendo el uso de Claude Sonnet 4.5 (Anthropic) y GPT-OSS.[2][7]\n\nConceptos Clave:\n\nMission Control / Agent Manager: Se valida la existencia de una interfaz dedicada a la orquestación de múltiples agentes asíncronos.\n\nArtifacts (Artefactos): Se confirma que es la metodología oficial de Antigravity para generar confianza, produciendo elementos tangibles (planes, capturas, diffs) en lugar de solo texto.\n\nBrowser Control: Se valida la capacidad de los agentes para controlar el navegador (Chrome) para pruebas y validaciones autónomas.\n\nDisponibilidad: Se confirma la URL oficial antigravity.google y la disponibilidad en \"Public Preview\" (vista previa pública) gratuita para individuos.[7]\n\nEnlaces a documentación y fuentes consultadas:\n\nSitio web oficial del producto y descarga: antigravity.google y antigravity.google/download.[7]\n\nBlog de desarrolladores de Google (Google Developers Blog): Artículos sobre el lanzamiento de Gemini 3 Pro y su integración en Antigravity.\n\nDocumentación de soporte de Google Cloud / Vertex AI: Referencias a las capacidades agentic y los modelos soportados.\n\nLa información contenida en el documento original es precisa y coincide con las especificaciones técnicas anunciadas por Google para este producto.\n\nopenrouter.ai: https://openrouter.ai\nantigravity.google: https://antigravity.google\nblog.google: https://blog.google\ngoogle.com: https://www.google.com\nmedium.com: https://medium.com\nthenewstack.io: https://thenewstack.io\ngoogleblog.com: https://googleblog.com\ngoogle.com: https://www.google.com\nuptodown.com: https://www.uptodown.com\ngoogleblog.com: https://googleblog.com\njetbrains.com: https://www.jetbrains.com\ndeepmind.google: https://deepmind.google\nantigravity.google: https://antigravity.google\n\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\nantigravity.google IDE\nGoogle Antigravity IDE release date\nthenewstack.io\nopenrouter.ai"
+    }
+  ]
+}

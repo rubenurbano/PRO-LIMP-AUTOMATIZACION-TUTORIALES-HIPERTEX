@@ -1,0 +1,150 @@
+Escribe un tutorial completo con el siguiente título y estructura, usando ÚNICAMENTE la información contenida en el documento adjunto, sin agregar conocimiento externo:
+
+[TITULO_VIDEO] =    Claude Opus 4-5 First Test_The BEST Coding Model Ever
+[URL_WEB_YOUTUBE] = https://youtu.be/4d38Jxp33w0?si=7lz46PFTPZ_bAf
+[AUTOR] = PRO-LIMP AUTOMATIZACION
+[TELEFONO] = +34 636832005
+
+##itemID: 000
+##Contenido BEGIN
+[URL_WEB_YOUTUBE]
+##Contenido END
+
+### REGLAS OBLIGATORIAS:
+
+0. Debes entregar un documento tipo texto plano, NO Markdown. No agregues "**" ni ningún otro carácter de formato.
+
+1. **Fuente única:** Usa EXCLUSIVAMENTE la información del documento adjunto. NO agregues información de tu conocimiento previo, NO expandas conceptos, NO inventes ejemplos adicionales. Si el documento no menciona algo, no lo incluyas.
+
+2. **Lenguaje:** Mantén el estilo y tono del documento original. Explicación clara, simple y directa, comprensible para un usuario de 15 años sin conocimientos técnicos previos.
+
+3. **Fidelidad al contenido:** 
+   - Respeta el orden de los pasos tal como aparecen en el documento
+   - No omitas información que esté en el documento
+   - No agregues pasos o explicaciones que no estén en el documento
+   - Si el documento es breve en algún punto, tu tutorial también debe serlo en ese punto
+
+4. **Estructura modular obligatoria:**
+   Cada sección debe seguir EXACTAMENTE este formato:
+   ##itemID:XXX
+##menu-item BEGIN
+[Título descriptivo del paso]
+##menu-item END
+##Contenido BEGIN
+[Título descriptivo del paso]:
+[Desarrollo del paso basado ÚNICAMENTE en el documento adjunto]
+##Contenido END
+5. **Numeración itemID:**
+   - Comienza SIEMPRE en 000 para el título principal
+   - Incrementa secuencialmente: 001, 002, 003, etc.
+   - Cada paso/sección del documento adjunto = un itemID nuevo
+
+6. **Formato del título principal (itemID:000):**
+##itemID:000
+##menu-item BEGIN
+[TITULO_VIDEO]
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+[TITULO_VIDEO]:
+Web Original:
+[TITULO_VIDEO]:
+[URL_WEB_YOUTUBE]
+
+[AUTOR]
+[TELEFONO]
+##Contenido END
+7. **Espaciado:**
+   - Deja UNA línea en blanco entre ##Contenido END y el siguiente ##itemID
+   - Mantén este espaciado consistente en todo el documento
+
+8. **División de contenido:**
+   - Analiza el documento adjunto e identifica cada paso, acción o sección principal
+   - Crea un itemID separado para cada concepto o grupo lógico de acciones
+   - Si el documento tiene 12 acciones/pasos, crea aproximadamente 8-12 itemIDs agrupando lógicamente
+   - El ultimo ##Contenido END va siempre despues de la ultima linea del documento.
+
+9. **Sección final obligatoria (último itemID):**
+##itemID:XXX
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+Para esta sección, BUSCA en la web las fuentes oficiales relacionadas con el tema del tutorial. Incluye:
+
+Resumen de puntos técnicos validados
+Enlaces directos a documentación oficial
+Referencias a páginas de soporte oficiales
+
+Esta es la ÚNICA sección donde puedes usar información externa (mediante búsqueda web).
+##Contenido END
+10. **Prohibiciones estrictas:**
+    - NO uses Markdown
+    - NO uses negritas con **
+    - NO uses cursivas con *
+    - NO uses # para encabezados
+    - NO uses listas con viñetas o guiones
+    - NO agregues emojis
+    - Solo texto plano con los tags especificados
+
+### PROCESO DE TRABAJO:
+
+1. Lee completamente el documento adjunto
+2. Identifica todos los pasos, acciones y secciones principales
+3. Agrupa lógicamente el contenido en secciones (itemIDs)
+4. Para cada sección, extrae SOLO la información del documento
+5. Redacta cada sección manteniendo el tono simple y directo
+6. Al final, usa web_search para validar con fuentes oficiales
+
+### EJEMPLO DE ESTRUCTURA ESPERADA:
+
+##itemID:000
+##menu-item BEGIN
+Título del Video
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Título del Video:
+Web Original:
+Título del Video:
+URL del video
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción al tema
+##menu-item END
+##Contenido BEGIN
+Introducción al tema:
+[Contenido extraído del documento adjunto, sin agregar información externa]
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Primer paso del proceso
+##menu-item END
+##Contenido BEGIN
+Primer paso del proceso:
+[Contenido del primer paso según el documento]
+##Contenido END
+
+[... continúa con más itemIDs según el contenido del documento ...]
+
+##itemID:XXX
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+[Búsqueda web de fuentes oficiales y validación]
+##Contenido END
+
+### SALIDA FINAL:
+
+Tutorial completo en español, formato texto plano con tags, basado EXCLUSIVAMENTE en el documento adjunto (excepto la sección de validación), listo para procesamiento automático.
+Al final de todo escribes:
+[TITULO_VIDEO]
+[URL_WEB_YOUTUBE] 
+[AUTOR]
+[TELEFONO]

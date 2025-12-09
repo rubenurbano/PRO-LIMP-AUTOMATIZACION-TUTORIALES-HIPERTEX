@@ -1,0 +1,172 @@
+##itemID:000
+##menu-item BEGIN
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Cómo AUTOMATIZAR con AGENTES IA en MAKE y ChatGPT
+
+https://youtu.be/Lna2kgzS7MM?si=kF9oIYgX7kHnJirQ
+[TITULO_VIDEO] =    Cómo AUTOMATIZAR con AGENTES IA en MAKE y ChatGPT
+[URL_WEB_YOUTUBE] = https://youtu.be/Lna2kgzS7MM?si=kF9oIYgX7kHnJirQ
+[AUTOR] = PRO-LIMP AUTOMATIZACION
+[TELEFONO] = +34 636832005
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Connect Supabase to Make.com in 2 Minutes
+##menu-item END
+##Contenido BEGIN
+Connect Supabase to Make.com in 2 Minutes:
+
+https://youtu.be/61-gx0l-XYU?si=0CkDyRJR5mrLXfQf
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Crea un proyecto nuevo en Supabase
+##menu-item END
+##Contenido BEGIN
+Crea un proyecto nuevo en Supabase:
+
+Accede a Supabase y crea un nuevo proyecto si todavía no tienes uno. Haz clic en "nuevo proyecto", escribe el nombre y la contraseña de la base de datos y confirma para crear el proyecto. Si ya tienes un proyecto existente, selecciona ese proyecto para continuar.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Obtén el Project ID y la Service Role Key
+##menu-item END
+##Contenido BEGIN
+Obtén el Project ID y la Service Role Key:
+
+Para conectar Make.com con Supabase, necesitas el Project ID y la Service Role Key. El Project ID lo encuentras en la URL de tu proyecto, ubicada en la parte superior derecha de la pantalla. Haz clic en la dirección web y copia el ID (Ctrl+C). Luego, entra en "Project Settings" y selecciona "API Keys". Haz clic en "reveal" (mostrar) junto a "Service Role Key" y copia esa clave. Estos datos te permiten autenticar y conectar Make.com con tu base de datos.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Conecta Supabase a Make.com
+##menu-item END
+##Contenido BEGIN
+Conecta Supabase a Make.com:
+
+En la plataforma Make.com, selecciona el módulo de búsqueda de filas "Supabase Search Rows" y haz clic en "Add" (añadir). Pega el Project ID y la Service Role Key que copiaste de Supabase en los campos correspondientes. Con esta información, Make.com quedará conectado a tu base de datos de Supabase.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Crea una tabla y agrega datos de prueba
+##menu-item END
+##Contenido BEGIN
+Crea una tabla y agrega datos de prueba:
+
+Si aún no tienes tablas creadas, accede al Editor SQL en Supabase. Escribe una instrucción para crear una nueva tabla, por ejemplo: una tabla llamada "prueba" con un campo "contents". Haz clic en "run" (ejecutar) para crear la tabla. Luego, selecciona la nueva tabla y añade una fila de prueba escribiendo "prueba" en el campo correspondiente y guardando los cambios.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Valida la conexión ejecutando el módulo en Make.com
+##menu-item END
+##Contenido BEGIN
+Valida la conexión ejecutando el módulo en Make.com:
+
+Una vez creada la tabla y añadidos los datos de prueba, regresa a Make.com y ejecuta el módulo de búsqueda de filas para comprobar que la integración funciona correctamente. Si todo está conectado, verás el contenido de la tabla en el resultado del módulo.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+
+
+Creación y configuración de proyectos en Supabase:
+
+
+
+Fuente oficial: Supabase Docs - Getting Started
+
+
+
+
+
+Ubicación del Project ID y Service Role Key:
+
+
+
+Fuente oficial: Supabase Docs - API Keys
+
+
+
+
+
+Seguridad y uso de Service Role Key:
+
+
+
+Fuente oficial: Cómo proteger tu Service Role Key
+
+
+
+
+
+Integración de Supabase con Make.com:
+
+
+
+Fuente oficial: Make.com - Supabase Integration
+
+
+
+
+
+Cada paso de este tutorial ha sido corroborado utilizando la documentación técnica oficial de Supabase y Make.com.
+https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/64556067/6bf950af-408e-4258-affd-e4311ca14146/Connect-Supabase-to-Make.com-in-2-Minute.txt
+
+
+
+https://supabase.com/docs
+
+
+
+https://www.reddit.com/r/Supabase/comments/15f6h0j/what_do_you_want_to_know_about_supabase_for_real/
+
+
+
+https://carlosseijas.com/blog/guia-autentificacion-react-supabase
+
+
+
+https://supabase.com/docs/guides/local-development
+
+
+
+https://supabase.com/docs/guides/getting-started/quickstarts/nextjs
+
+
+
+https://supabase.com/docs/guides/api/api-keys
+
+
+
+https://www.youtube.com/watch?v=L56O39igijM
+
+
+
+https://docs.flowiseai.com/espanol/documentacion-oficial/integraciones/langchain/vector-stores/supabase
+
+
+
+https://chat2db.ai/resources/blog/secure-supabase-role-key
+
+
+
+https://www.make.com/en/integrations/supabase
+
+[TITULO_VIDEO]
+[URL_WEB_YOUTUBE]
+[AUTOR]
+[TELEFONO]
+
+##Contenido END

@@ -1,0 +1,207 @@
+##itemID:000
+##menu-item BEGIN
+How to Build AI Agents Using Make.com (FREE COURSE 2025)
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Web Original:
+
+https://youtu.be/rfonp8KiIso?si=2Yom0s9iHaqaFzL8
+
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+How to Build AI Agents Using Make.com (FREE COURSE 2025)
+##menu-item END
+##Contenido BEGIN
+How to Build AI Agents Using Make.com (FREE COURSE 2025):
+
+Bienvenido a este tutorial completo donde aprenderás a crear tus propios Agentes de Inteligencia Artificial utilizando Make.com, sin necesidad de escribir una sola línea de código. Un Agente de IA es como un asistente virtual que puede realizar tareas por sí mismo, como buscar información, analizarla y darte una respuesta.
+
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+¿Qué es un Agente de IA y qué haremos?
+##menu-item END
+##Contenido BEGIN
+¿Qué es un Agente de IA y qué haremos?:
+
+Imagina que le pides a un asistente: "Busca cuáles fueron los 3 hitos más importantes de la inteligencia artificial en 2024". Un Agente de IA no solo entiende tu pregunta, sino que puede decidir por sí mismo usar una herramienta (como Google) para buscar la información, leer los resultados, resumirlos y finalmente entregarte una respuesta coherente.
+
+En este tutorial, construiremos un agente simple que:
+1.  Recibe una pregunta o una tarea.
+2.  Utiliza la inteligencia de OpenAI (GPT-4) para pensar qué hacer.
+3.  Si es necesario, usa una herramienta de búsqueda en Google.
+4.  Procesa la información encontrada y te da una respuesta final.
+
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Requisitos Previos: Lo que necesitas para empezar
+##menu-item END
+##Contenido BEGIN
+Requisitos Previos: Lo que necesitas para empezar:
+
+Antes de comenzar, asegúrate de tener estas tres cosas. Todas tienen planes gratuitos que son suficientes para este tutorial.
+
+1.  **Una cuenta en Make.com:** Es la plataforma que usaremos para conectar todo. Es como un tablero de legos digital donde cada pieza es una aplicación. Puedes registrarte gratis en su web oficial.
+2.  **Una cuenta de API de OpenAI:** Este será el "cerebro" de nuestro agente. Necesitarás generar una "API Key" (una contraseña especial para que Make.com pueda usar OpenAI). Puedes obtenerla desde la plataforma de OpenAI.
+3.  **Una cuenta en Serper:** Para que nuestro agente pueda buscar en Google, usaremos un servicio llamado Serper. Te da una API Key para hacer búsquedas de forma sencilla y rápida. También tiene un plan gratuito.
+
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 1: Crear nuestro lienzo en blanco en Make.com
+##menu-item END
+##Contenido BEGIN
+Paso 1: Crear nuestro lienzo en blanco en Make.com:
+
+Lo primero es preparar nuestro espacio de trabajo en Make.com. A esto se le llama "Escenario".
+
+1.  Inicia sesión en tu cuenta de Make.com.
+2.  En el panel principal, busca y haz clic en el botón "+ Create a new scenario" (Crear un nuevo escenario).
+3.  Verás una pantalla en blanco con un gran signo de más (+). Este es nuestro lienzo, donde construiremos el flujo de trabajo de nuestro agente.
+
+Un escenario es simplemente una secuencia de pasos que se ejecutan automáticamente cuando algo los activa.
+
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 2: La puerta de entrada - Configurar el Webhook
+##menu-item END
+##Contenido BEGIN
+Paso 2: La puerta de entrada - Configurar el Webhook:
+
+Nuestro agente necesita una forma de recibir instrucciones. Usaremos un "Webhook", que es simplemente una URL especial que espera a que le envíen información.
+
+1.  Haz clic en el signo de más (+) en el centro del escenario.
+2.  En el buscador que aparece, escribe "Webhooks" y selecciónalo.
+3.  En la lista de opciones, elige "Custom webhook".
+4.  Haz clic en el botón "Add" para crear uno nuevo. Dale un nombre fácil de recordar, como "EntradaAgenteIA", y haz clic en "Save".
+5.  Make.com te dará una URL única. ¡Cópiala! Esta es la dirección a la que le enviaremos nuestras preguntas. No cierres esta ventana todavía.
+
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 3: El cerebro del agente - Conectar OpenAI
+##menu-item END
+##Contenido BEGIN
+Paso 3: El cerebro del agente - Conectar OpenAI:
+
+Ahora vamos a añadir la inteligencia. Conectaremos el Webhook a OpenAI para que cada pregunta que llegue sea procesada.
+
+1.  Haz clic en el signo de más (+) que aparece a la derecha del módulo de Webhook.
+2.  Busca "OpenAI" y selecciónalo.
+3.  Elige la acción "Create a Chat Completion".
+4.  **Conectar tu cuenta:** Haz clic en "Add" y, en la ventana que aparece, pega la "API Key" que obtuviste de OpenAI.
+5.  **Configurar el modelo:**
+    *   **Model:** Elige el modelo que prefieras, como `gpt-4o` o `gpt-4-turbo`.
+    *   **Messages:** Aquí es donde ocurre la magia. Añadiremos dos "items" (mensajes):
+        *   **Item 1 (Rol: System):** Este es el mensaje que le da instrucciones y personalidad al agente. Escribe algo como: `Eres un asistente de IA experto en investigación. Cuando recibas una pregunta, si no sabes la respuesta, utiliza la herramienta de búsqueda disponible para encontrar la información.`
+        *   **Item 2 (Rol: User):** Este mensaje contendrá la pregunta del usuario. Haz clic en el campo "Content" y selecciona la variable que viene del Webhook (normalmente se llama `query` o `text`).
+6.  **Definir las herramientas (Tools):**
+    *   Activa la opción de "Tools".
+    *   Haz clic en "Add a tool" y selecciona "Function".
+    *   **Name:** Dale un nombre a la herramienta, por ejemplo, `buscar_en_google`.
+    *   **Description:** Describe para qué sirve, como `Útil para buscar información actual en Google.`
+    *   **Parameters:** Añade un parámetro. Haz clic en "Add item", ponle de nombre `pregunta_de_busqueda` y en "Type" selecciona `string`. Describe el parámetro como `La pregunta exacta que se debe buscar en Google.`
+
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Paso 4: Darle manos al agente - El Router y la Búsqueda
+##menu-item END
+##Contenido BEGIN
+Paso 4: Darle manos al agente - El Router y la Búsqueda:
+
+Nuestro agente ahora puede "pensar" y "decidir" si necesita buscar en Google. Necesitamos crear dos caminos: uno si decide buscar y otro si ya tiene la respuesta.
+
+1.  **Añadir un Router:** Haz clic en el signo de más (+) a la derecha de OpenAI. Busca la herramienta "Flow Control" y selecciona "Router". Esto creará una bifurcación con dos caminos.
+2.  **Camino 1: Realizar la búsqueda:**
+    *   En uno de los caminos, añade un módulo "HTTP" y selecciona "Make a request".
+    *   **URL:** Pega la URL de la API de Serper: `https://google.serper.dev/search`.
+    *   **Method:** Déjalo en `POST`.
+    *   **Headers:** Añade un "item". En "Name" escribe `X-API-KEY` y en "Value" pega tu clave de API de Serper.
+    *   **Body type:** Elige `Raw`.
+    *   **Content type:** Elige `JSON (application/json)`.
+    *   **Request content:** Pega el siguiente código, reemplazando el texto por la variable correcta del módulo de OpenAI. Busca la variable `Arguments` dentro de `Tool Calls` que contiene la `pregunta_de_busqueda` que el modelo generó: `{ "q": "{{1.choices[].message.tool_calls[].function.arguments.pregunta_de_busqueda}}" }`
+    *   Marca la opción "Parse response".
+3.  **Filtrar el camino:** Haz clic en el icono de la llave inglesa entre el Router y el módulo HTTP. Configura un filtro para que este camino solo se ejecute si OpenAI decidió usar la herramienta.
+    *   **Label:** `Usar Búsqueda`.
+    *   **Condition:** Busca la variable `Tool Calls` del módulo de OpenAI y asegúrate de que "Exists" (existe).
+
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Paso 5: El bucle de pensamiento - Procesar los resultados
+##menu-item END
+##Contenido BEGIN
+Paso 5: El bucle de pensamiento - Procesar los resultados:
+
+Una vez que el agente ha buscado en Google, necesita leer los resultados y formular una respuesta final. Para ello, volvemos a llamar a OpenAI.
+
+1.  Añade otro módulo de "OpenAI" ("Create a Chat Completion") después del módulo HTTP.
+2.  **Configura los mensajes:**
+    *   **Item 1 (Rol: System):** El mismo mensaje de sistema que antes.
+    *   **Item 2 (Rol: User):** La pregunta original del usuario (la variable del Webhook).
+    *   **Item 3 (Rol: Assistant):** Este mensaje simula lo que el asistente "hizo". Mapea aquí la variable `Tool Calls` completa del primer módulo de OpenAI.
+    *   **Item 4 (Rol: Tool):** Aquí le entregamos los resultados de la búsqueda. En el campo "Content", mapea la variable que contiene los resultados del módulo HTTP (por ejemplo, `Data`). En "Tool call ID", mapea el `ID` de la variable `Tool Calls` del primer módulo de OpenAI.
+
+Esta segunda llamada a OpenAI usará la pregunta original y los resultados de la búsqueda para generar una respuesta final y completa.
+
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Paso 6: Entregar la respuesta final
+##menu-item END
+##Contenido BEGIN
+Paso 6: Entregar la respuesta final:
+
+Finalmente, el agente debe devolver la respuesta al usuario.
+
+1.  **Camino 2 del Router (Respuesta directa):** Vuelve al Router. El camino que quedó libre es para cuando OpenAI no necesita buscar. Haz clic en el icono de la llave inglesa de este camino y marca la casilla "The fallback route" (ruta de escape). Esto significa que si el primer camino no se ejecuta, este sí lo hará.
+2.  **Unir los caminos para la respuesta:** Para dar una respuesta final sin importar qué camino se tomó, añadiremos el módulo de respuesta al final de cada uno.
+3.  **Añadir el módulo "Webhook Response":**
+    *   Al final del camino de "Búsqueda" (después del segundo OpenAI), añade un módulo "Webhooks" y elige "Webhook Response".
+    *   **Body:** Mapea la variable de respuesta de ese módulo, usualmente `choices[].message.content`.
+    *   Haz lo mismo en el camino de "fallback": añade un "Webhook Response" y mapea la respuesta del primer módulo de OpenAI.
+
+¡Y listo! Guarda tu escenario y actívalo. Ahora puedes enviarle preguntas a la URL de tu Webhook y el agente trabajará para ti.
+
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Este tutorial ha sido creado siguiendo las mejores prácticas y funcionalidades documentadas por Make.com y OpenAI. Cada componente utilizado tiene una base técnica oficial que valida su uso.
+
+*   **Escenarios de Make.com:** La estructura fundamental de nuestro agente se basa en los escenarios, que son el núcleo de cualquier automatización en la plataforma.
+    *   Fuente: [https://www.make.com/en/help/scenarios/scenario-editor-visual-workflow-builder](https://www.make.com/en/help/scenarios/scenario-editor-visual-workflow-builder)
+
+*   **Webhooks:** Se utilizó un Webhook como disparador (trigger) para iniciar el flujo de trabajo, un método estándar para recibir datos en tiempo real y enviar respuestas.
+    *   Fuente: [https://www.make.com/en/help/tools/webhooks](https://www.make.com/en/help/tools/webhooks)
+
+*   **Módulo de OpenAI y Tool Calling:** La lógica central del agente, incluyendo la capacidad de decidir usar herramientas (Tool Calling), está implementada a través del módulo oficial de OpenAI en Make.com, que sigue las especificaciones de la API de OpenAI.
+    *   Fuente (OpenAI): [https://platform.openai.com/docs/guides/function-calling](https://platform.openai.com/docs/guides/function-calling)
+    *   Fuente (Make.com): [https://www.make.com/en/help/apps/ai/openai--gpt-3--dall-e-2--whisper-1-](https://www.make.com/en/help/apps/ai/openai--gpt-3--dall-e-2--whisper-1-)
+
+*   **Router (Flow Control):** La bifurcación de caminos para decidir si buscar información o responder directamente se gestiona con un Router, la herramienta de control de flujo estándar de Make.com.
+    *   Fuente: [https://www.make.com/en/help/tools/flow-control#router](https://www.make.com/en/help/tools/flow-control#router)
+
+*   **Módulo HTTP:** La capacidad del agente para interactuar con APIs externas (como Serper) se implementó con el módulo genérico HTTP, validado для realizar peticiones a cualquier servicio web.
+    *   Fuente: [https://www.make.com/en/help/tools/http](https://www.make.com/en/help/tools/http)
+
+##Contenido END

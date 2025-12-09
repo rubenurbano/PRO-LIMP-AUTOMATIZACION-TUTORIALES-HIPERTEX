@@ -1,0 +1,125 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Gemini 3 crea una APP que te GENERA cualquier CURSO en MINUTOS GRATIS\nWEB ORIGINAL:",
+      "contenido": "Gemini 3 crea una APP que te GENERA cualquier CURSO en MINUTOS GRATIS:\nWeb Original:\nGemini 3 crea una APP que te GENERA cualquier CURSO en MINUTOS GRATIS:\nhttps://youtu.be/TYJkEcUYEoI?si=doK64Bdqizvs4UNv\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Que vamos a crear en esta aplicacion",
+      "contenido": "Que vamos a crear en esta aplicacion:\nVamos a construir una aplicacion inteligente usando inteligencia artificial llamada Gemini 3 que es capaz de crear cursos completos y personalizados sobre cualquier tema en muy poco tiempo y de forma gratuita. Esta aplicacion puede pensar por si misma y elaborar una estrategia formativa.\n\nLa aplicacion funciona siguiendo tres pasos clave: primero, te pide un tema; luego, crea 10 temas principales; a partir de ahi, genera 10 variaciones de lecciones; y finalmente, te muestra el contenido de la leccion seleccionada."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Acceder al creador de la aplicacion Google Studio",
+      "contenido": "Acceder al creador de la aplicacion Google Studio:\nPara empezar, debes acceder a Google Studio, que es donde se construye la aplicacion. Necesitaras iniciar sesion con tu cuenta de Google. Una vez dentro, busca la seccion que dice build (construir)."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Preparar las instrucciones para la aplicacion El prompt",
+      "contenido": "Preparar las instrucciones para la aplicacion El prompt:\nPara que la inteligencia artificial sepa exactamente que aplicacion queremos que cree, necesitamos darle un conjunto de instrucciones especificas, llamado prompt.\n\nDebes pegar estas instrucciones en el espacio de trabajo de Google Studio.\n\nAsegurate de que el modelo de inteligencia artificial seleccionado sea Gemini 3 Pro, que es la version mas reciente.\n\nDebes anadir una funcion especial que permite a la aplicacion conectarse al buscador de Google en tiempo real. Esto significa que podra buscar la informacion que necesite en internet para crear el curso.\n\nFinalmente, haz clic en build (construir) para que el codigo de la aplicacion comience a generarse automaticamente."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Instrucciones que debe seguir la aplicacion",
+      "contenido": "Instrucciones que debe seguir la aplicacion:\nLas instrucciones le dicen a la aplicacion que debe:\n\n1. Generar 10 temas centrales amplios (pilares) partiendo del tema que el usuario ingreso.\n\n2. Permitir al usuario seleccionar uno de esos pilares, lo que hara que la aplicacion cree 10 variaciones de lecciones especificas para ese tema.\n\n3. Permitir al usuario seleccionar una variacion para que la aplicacion genere el curso completo. El curso debe estar dividido en bloques con una presentacion visual, incluyendo titulos, subtitulos, una estrategia de colores e imagenes relacionadas con el tema.\n\n4. Incluir ejercicios con preguntas de opcion multiple (tipo test) dentro del curso.\n\n5. Asegurarse de que todo el contenido y las preguntas generadas esten siempre en espanol.\n\n6. Incluir un boton en la leccion generada que permita volver a las 10 variaciones de leccion anteriores."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Definir una tematica para tu curso",
+      "contenido": "Definir una tematica para tu curso:\nUna vez que la aplicacion este lista, ponla en pantalla completa.\n\nEscribe el tema que quieras aprender o sobre el que quieras crear un curso (por ejemplo, Primera Guerra Mundial) y haz clic en empezar."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Obtener los temas centrales",
+      "contenido": "Obtener los temas centrales:\nLa aplicacion te mostrara 10 temas principales o \"temas troncales\" relacionados con tu tematica."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Seleccionar un tema y obtener lecciones",
+      "contenido": "Seleccionar un tema y obtener lecciones:\nElige uno de esos 10 temas (por ejemplo, La guerra total). La aplicacion generara de inmediato 10 lecciones especificas sobre ese tema central."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Seleccionar y consumir la leccion",
+      "contenido": "Seleccionar y consumir la leccion:\nElige una de las 10 lecciones generadas y haz clic para que se cree el contenido. Veras la estructura de la leccion con diferentes bloques. Podras comenzar el aprendizaje, ver la teoria y realizar una evaluacion."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Navegar y personalizar tu experiencia",
+      "contenido": "Navegar y personalizar tu experiencia:\nPuedes volver atras en cualquier momento para seleccionar otra de las 10 variaciones de leccion si la primera no te gusto.\n\nIncluso puedes ir mas atras y elegir un tema principal (pilar) completamente diferente.\n\nPuedes volver al inicio para introducir un tema totalmente nuevo."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Adaptar el publico objetivo",
+      "contenido": "Adaptar el publico objetivo:\nSi el contenido inicial parece demasiado complicado o tecnico, puedes volver al inicio y pedirle a la aplicacion que adapte el contenido. Por ejemplo, en lugar de solo poner \"Mecanica cuantica\", puedes escribir \"Mecanica cuantica para chicos de 16 anos\". Al hacer esto, la aplicacion generara titulos y contenido mucho mas sencillos, menos tecnicos y mas amigables (como \"El gato de Schrodinger, vivo y muerto a la vez\")."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\nVoy a buscar informacion oficial sobre Google AI Studio y Gemini para validar el contenido tecnico de este tutorial."
+    },
+    {
+      "itemID": "000-2",
+      "menu_item": "Gemini 3 crea una APP que te GENERA cualquier CURSO en MINUTOS GRATIS\nWEB ORIGINAL:",
+      "contenido": "Gemini 3 crea una APP que te GENERA cualquier CURSO en MINUTOS GRATIS:\nWeb Original:\nGemini 3 crea una APP que te GENERA cualquier CURSO en MINUTOS GRATIS:\nhttps://youtu.be/TYJkEcUYEoI?si=doK64Bdqizvs4UNv\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001-2",
+      "menu_item": "Que vamos a crear en esta aplicacion",
+      "contenido": "Que vamos a crear en esta aplicacion:\nVamos a construir una aplicacion inteligente usando inteligencia artificial llamada Gemini 3 que es capaz de crear cursos completos y personalizados sobre cualquier tema en muy poco tiempo y de forma gratuita. Esta aplicacion puede pensar por si misma y elaborar una estrategia formativa.\n\nLa aplicacion funciona siguiendo tres pasos clave: primero, te pide un tema; luego, crea 10 temas principales; a partir de ahi, genera 10 variaciones de lecciones; y finalmente, te muestra el contenido de la leccion seleccionada."
+    },
+    {
+      "itemID": "002-2",
+      "menu_item": "Acceder al creador de la aplicacion Google Studio",
+      "contenido": "Acceder al creador de la aplicacion Google Studio:\nPara empezar, debes acceder a Google Studio, que es donde se construye la aplicacion. Necesitaras iniciar sesion con tu cuenta de Google. Una vez dentro, busca la seccion que dice build (construir)."
+    },
+    {
+      "itemID": "003-2",
+      "menu_item": "Preparar las instrucciones para la aplicacion El prompt",
+      "contenido": "Preparar las instrucciones para la aplicacion El prompt:\nPara que la inteligencia artificial sepa exactamente que aplicacion queremos que cree, necesitamos darle un conjunto de instrucciones especificas, llamado prompt.\n\nDebes pegar estas instrucciones en el espacio de trabajo de Google Studio.\n\nAsegurate de que el modelo de inteligencia artificial seleccionado sea Gemini 3 Pro, que es la version mas reciente.\n\nDebes anadir una funcion especial que permite a la aplicacion conectarse al buscador de Google en tiempo real. Esto significa que podra buscar la informacion que necesite en internet para crear el curso.\n\nFinalmente, haz clic en build (construir) para que el codigo de la aplicacion comience a generarse automaticamente."
+    },
+    {
+      "itemID": "004-2",
+      "menu_item": "Instrucciones que debe seguir la aplicacion",
+      "contenido": "Instrucciones que debe seguir la aplicacion:\nLas instrucciones le dicen a la aplicacion que debe:\n\n1. Generar 10 temas centrales amplios (pilares) partiendo del tema que el usuario ingreso.\n\n2. Permitir al usuario seleccionar uno de esos pilares, lo que hara que la aplicacion cree 10 variaciones de lecciones especificas para ese tema.\n\n3. Permitir al usuario seleccionar una variacion para que la aplicacion genere el curso completo. El curso debe estar dividido en bloques con una presentacion visual, incluyendo titulos, subtitulos, una estrategia de colores e imagenes relacionadas con el tema.\n\n4. Incluir ejercicios con preguntas de opcion multiple (tipo test) dentro del curso.\n\n5. Asegurarse de que todo el contenido y las preguntas generadas esten siempre en espanol.\n\n6. Incluir un boton en la leccion generada que permita volver a las 10 variaciones de leccion anteriores."
+    },
+    {
+      "itemID": "005-2",
+      "menu_item": "Definir una tematica para tu curso",
+      "contenido": "Definir una tematica para tu curso:\nUna vez que la aplicacion este lista, ponla en pantalla completa.\n\nEscribe el tema que quieras aprender o sobre el que quieras crear un curso (por ejemplo, Primera Guerra Mundial) y haz clic en empezar."
+    },
+    {
+      "itemID": "006-2",
+      "menu_item": "Obtener los temas centrales",
+      "contenido": "Obtener los temas centrales:\nLa aplicacion te mostrara 10 temas principales o \"temas troncales\" relacionados con tu tematica."
+    },
+    {
+      "itemID": "007-2",
+      "menu_item": "Seleccionar un tema y obtener lecciones",
+      "contenido": "Seleccionar un tema y obtener lecciones:\nElige uno de esos 10 temas (por ejemplo, La guerra total). La aplicacion generara de inmediato 10 lecciones especificas sobre ese tema central."
+    },
+    {
+      "itemID": "008-2",
+      "menu_item": "Seleccionar y consumir la leccion",
+      "contenido": "Seleccionar y consumir la leccion:\nElige una de las 10 lecciones generadas y haz clic para que se cree el contenido. Veras la estructura de la leccion con diferentes bloques. Podras comenzar el aprendizaje, ver la teoria y realizar una evaluacion."
+    },
+    {
+      "itemID": "009-2",
+      "menu_item": "Navegar y personalizar tu experiencia",
+      "contenido": "Navegar y personalizar tu experiencia:\nPuedes volver atras en cualquier momento para seleccionar otra de las 10 variaciones de leccion si la primera no te gusto.\n\nIncluso puedes ir mas atras y elegir un tema principal (pilar) completamente diferente.\n\nPuedes volver al inicio para introducir un tema totalmente nuevo."
+    },
+    {
+      "itemID": "010-2",
+      "menu_item": "Adaptar el publico objetivo",
+      "contenido": "Adaptar el publico objetivo:\nSi el contenido inicial parece demasiado complicado o tecnico, puedes volver al inicio y pedirle a la aplicacion que adapte el contenido. Por ejemplo, en lugar de solo poner \"Mecanica cuantica\", puedes escribir \"Mecanica cuantica para chicos de 16 anos\". Al hacer esto, la aplicacion generara titulos y contenido mucho mas sencillos, menos tecnicos y mas amigables (como \"El gato de Schrodinger, vivo y muerto a la vez\")."
+    },
+    {
+      "itemID": "011-2",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\n\nPuntos tecnicos validados con fuentes oficiales de Google:\n\nGemini 3 Pro es el modelo mas avanzado de la familia Gemini 3, lanzado recientemente por Google. Este modelo destaca por sus capacidades de razonamiento avanzado, generacion de codigo y manejo de tareas multimodales complejas. El modelo se encuentra disponible de forma gratuita en Google AI Studio con limites de uso, y tambien esta accesible mediante la API de Gemini para uso en produccion.\n\nGoogle AI Studio es la plataforma oficial de Google para experimentar y construir aplicaciones con los modelos Gemini. La seccion Build permite a los desarrolladores crear aplicaciones web completas mediante prompts de texto, utilizando una funcionalidad conocida como vibe coding. El sistema genera automaticamente codigo en React o Angular, incluyendo la logica de integracion con la API de Gemini.\n\nEl modo Build en Google AI Studio permite crear aplicaciones que integran capacidades avanzadas de IA, incluyendo busqueda en Google, generacion de imagenes, procesamiento de documentos y ejecucion de codigo. Las aplicaciones generadas pueden desplegarse directamente en Google Cloud Run o exportarse a GitHub.\n\nGemini 3 Pro soporta herramientas integradas como Google Search, que permiten a las aplicaciones buscar informacion actualizada en internet en tiempo real. Esta capacidad es fundamental para crear aplicaciones educativas que necesiten acceso a contenido actualizado y verificado.\n\nEl modelo Gemini 3 Pro ha demostrado mejoras significativas en benchmarks de desarrollo de software, con un incremento del 50 por ciento en tareas resueltas comparado con Gemini 2.5 Pro. Sus capacidades incluyen comprension avanzada de documentos, razonamiento espacial y manejo eficiente de contextos largos de hasta un millon de tokens.\n\nEnlaces a documentacion oficial:\n\nDocumentacion de Gemini API:\nhttps://ai.google.dev/gemini-api/docs\n\nGuia de desarrolladores de Gemini 3:\nhttps://ai.google.dev/gemini-api/docs/gemini-3\n\nGoogle AI Studio:\nhttps://aistudio.google.com\n\nModo Build en Google AI Studio:\nhttps://ai.google.dev/gemini-api/docs/aistudio-build-mode\n\nQuickstart de Google AI Studio:\nhttps://ai.google.dev/gemini-api/docs/ai-studio-quickstart\n\nAnuncio oficial de Gemini 3:\nhttps://blog.google/products/gemini/gemini-3/\n\nPagina de referencia de la API:\nhttps://ai.google.dev/api\n\nEstas fuentes confirman que la tecnologia descrita en el tutorial esta basada en capacidades reales y disponibles de Google AI Studio y Gemini 3 Pro.\n\n\nGemini 3 crea una APP que te GENERA cualquier CURSO en MINUTOS GRATIS\nhttps://youtu.be/TYJkEcUYEoI?si=doK64Bdqizvs4UNv\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    }
+  ]
+}

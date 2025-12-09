@@ -1,0 +1,195 @@
+##itemID:000
+##menu-item BEGIN
+Qué es Open AI y cómo integrarlo a Make-Qué uso le puedes dar a Open AI con la plataforma Make
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+¿Qué es Open AI y cómo integrarlo a Make? - ¿Qué uso le puedes dar a Open AI con la plataforma Make? :
+Web Original:
+
+¿Qué es Open AI y cómo integrarlo a Make? - ¿Qué uso le puedes dar a Open AI con la plataforma Make? :
+https://youtu.be/CVcfyRGnAz0?si=n1I9QOgThL6KtbKu
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+¿Qué es OpenAI y en qué se diferencia de ChatGPT?
+##menu-item END
+##Contenido BEGIN
+¿Qué es OpenAI y en qué se diferencia de ChatGPT?:
+Antes de conectar nada, es importante que entiendas dos conceptos clave:
+
+OpenAI: Piensa en OpenAI como la empresa principal, una compañía dedicada a investigar y crear inteligencias artificiales para ayudar a la humanidad. Es la "casa productora" detrás de varias herramientas de IA.
+
+ChatGPT, DALL-E y Whisper: Son algunos de los "productos" más famosos de OpenAI.
+
+ChatGPT es un asistente de conversación que entiende y genera texto.
+
+DALL-E es una herramienta que crea imágenes a partir de descripciones de texto.
+
+Whisper es un servicio que transcribe audios a texto.
+
+En resumen, cuando quieras usar ChatGPT o cualquiera de estas herramientas en una plataforma como Make, no las buscarás por su nombre individual. En su lugar, te conectarás directamente a la empresa creadora: OpenAI.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Primeros Pasos: Crear un Escenario y Añadir el Módulo de OpenAI en Make
+##menu-item END
+##Contenido BEGIN
+Primeros Pasos: Crear un Escenario y Añadir el Módulo de OpenAI en Make:
+Para empezar a usar la inteligencia artificial en tus automatizaciones, lo primero es establecer la conexión dentro de Make.
+
+Inicia en tu cuenta de Make y crea un "nuevo escenario".
+
+Dale clic al botón gigante con el signo de más (+) que aparece en el centro de la pantalla.
+
+Se abrirá una lista de aplicaciones. En la barra de búsqueda, escribe "OpenAI".
+
+Verás que aparece el logo de OpenAI. Al seleccionarlo, se desplegarán varias acciones que puedes realizar, como "Crear una compleción (chat)", "Generar una imagen" o "Transcribir un audio".
+
+Para establecer la conexión inicial, puedes elegir cualquiera de estas opciones. La más común para empezar es "Create a Completion", que es el equivalente a iniciar una conversación con ChatGPT.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Creando la Conexión entre Make y OpenAI
+##menu-item END
+##Contenido BEGIN
+Creando la Conexión entre Make y OpenAI:
+Una vez que seleccionas una acción del módulo de OpenAI, Make te pedirá que crees una conexión. Esto es necesario para que ambas plataformas puedan comunicarse de forma segura.
+
+Al seleccionar la acción, aparecerá una ventana de configuración. Como aún no tienes una conexión, verás un botón que dice "Add" (Añadir) o "Create a connection" (Crear una conexión). Dale clic.
+
+Se abrirá una nueva ventana pidiéndote tres datos:
+
+Connection name (Nombre de la conexión): Ponle un nombre fácil de recordar, como "Mi Conexión OpenAI".
+
+API Key (Clave API): Es una especie de contraseña secreta que te dará OpenAI para permitir el acceso.
+
+Organization ID (ID de Organización): Es un código único que identifica tu cuenta en OpenAI.
+
+Estos dos últimos datos (API Key y Organization ID) son los más importantes y los obtendrás directamente desde tu cuenta de OpenAI.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 1: Cómo Obtener tu API Key de OpenAI
+##menu-item END
+##Contenido BEGIN
+Paso 1: Cómo Obtener tu API Key de OpenAI:
+La API Key es el puente que une a Make con OpenAI. Piensa en ella como un mesero que lleva tus peticiones de Make a la "cocina" de OpenAI y te trae los resultados. Sigue estos pasos para conseguirla.[1][2][3]
+
+Abre una nueva pestaña en tu navegador y ve a la página oficial de la plataforma de OpenAI: platform.openai.com.[4][5]
+
+Inicia sesión con tu cuenta. Si no tienes una, deberás crearla.
+
+Una vez dentro, busca en el menú de la izquierda la sección llamada "API Keys".[1][4]
+
+Haz clic en el botón "Create new secret key" (Crear nueva clave secreta).[2][4][6]
+
+Te pedirá que le des un nombre a tu clave (es opcional, pero ayuda a organizarte). Luego, dale al botón para crearla.
+
+¡Atención! OpenAI te mostrará la clave secreta una sola vez por seguridad.[4][6] Cópiala inmediatamente haciendo clic en el botón de copiar.
+
+Regresa a la ventana de conexión en Make y pega esta clave en el campo "API Key".
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 2: Cómo Encontrar tu Organization ID
+##menu-item END
+##Contenido BEGIN
+Paso 2: Cómo Encontrar tu Organization ID:
+El ID de Organización es un código que ayuda a OpenAI a saber qué cuenta está haciendo la solicitud.
+
+Vuelve a la plataforma de OpenAI.
+
+En el menú de la izquierda, busca una opción llamada "Settings" (Configuración).[7][8]
+
+Dentro de "Settings", verás tu "Organization ID". Es un código que generalmente empieza con "org-".[9]
+
+Cópialo.
+
+Regresa a Make y pégalo en el campo "Organization ID".[1]
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 3: Finalizar la Conexión en Make
+##menu-item END
+##Contenido BEGIN
+Paso 3: Finalizar la Conexión en Make:
+Ahora que ya tienes todos los datos en su sitio, solo queda guardar la conexión.
+
+Con el nombre de la conexión, la API Key y el Organization ID pegados en sus respectivos campos, haz clic en el botón "Save" (Guardar).[1]
+
+Si todos los datos son correctos, la ventana se cerrará y tu conexión quedará guardada y seleccionada.
+
+¡Listo! Has conectado exitosamente OpenAI con Make. Ahora tu escenario está listo para que le pidas a la inteligencia artificial que realice tareas por ti.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+¿Qué Puedes Hacer Ahora? Un Vistazo a los Módulos de OpenAI en Make
+##menu-item END
+##Contenido BEGIN
+¿Qué Puedes Hacer Ahora? Un Vistazo a los Módulos de OpenAI en Make:
+Una vez completada la integración, tendrás acceso a un abanico de posibilidades.[1][10][11] Cada módulo de OpenAI en Make tiene una función específica para tus automatizaciones. Los más utilizados son:
+
+Create a Completion (Crear una compleción): Es el módulo para chatear. Le envías un "prompt" (una instrucción o pregunta) y te devuelve una respuesta en texto, igual que harías en ChatGPT.
+
+Generate an Image (Generar una imagen): Utiliza la tecnología de DALL-E para crear imágenes a partir de una descripción que le proporciones.
+
+Transcribe an Audio (Transcribir un audio): Usa Whisper para convertir un archivo de audio en texto. Es ideal para transcribir reuniones, notas de voz, etc.
+
+Translate an Audio (Traducir un audio): También con Whisper, puedes traducir el contenido de un audio de un idioma a otro.
+
+Create an Assistant (Crear un asistente): Permite configurar asistentes de IA más avanzados y personalizados para tareas específicas.
+
+Con estos módulos, puedes diseñar automatizaciones que generen contenido, analicen datos, respondan correos, creen imágenes para redes sociales y mucho más.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+La información de este tutorial ha sido contrastada con la documentación y guías oficiales de Make y OpenAI para garantizar su precisión.
+
+Conexión de OpenAI en Make: La documentación de Make confirma que la integración se realiza a través del módulo "OpenAI (ChatGPT, Sora, DALL-E, Whisper)" y requiere una "API Key" y un "Organization ID" para la autenticación.[10][12][13]
+
+Obtención de la API Key: La documentación para desarrolladores de OpenAI detalla el proceso de creación de una clave API. Se debe iniciar sesión en platform.openai.com, navegar a la sección "API Keys" y generar una nueva "secret key". Se enfatiza que la clave solo se muestra una vez por seguridad.[4][14]
+
+Ubicación del Organization ID: Las guías de cuenta de OpenAI indican que el "Organization ID" se encuentra en la sección de "Settings" de la cuenta del usuario en la plataforma de OpenAI.[7][8][9]
+
+Módulos Disponibles: La documentación de la aplicación de OpenAI en Make describe la variedad de módulos disponibles, incluyendo acciones para la generación de texto (completions), generación de imágenes (DALL-E) y transcripción de audio (Whisper), entre otros.[10][12][15]
+
+
+Sources
+help
+youtube.com
+youtube.com
+consultoriaweb.cl
+liveconnect.chat
+youtube.com
+medium.com
+youtube.com
+texti.ai
+openai.com
+make.com
+youtube.com
+make.com
+make.com
+openai.com
+make.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+conectar Make.com con OpenAI documentación oficial
+obtener API Key OpenAI
+encontrar Organization ID OpenAI
+módulos OpenAI en Make.com
+OpenAI API documentation connect
+Make.com OpenAI integration guide
+##Contenido END

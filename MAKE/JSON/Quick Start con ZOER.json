@@ -1,0 +1,60 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Quick Start con ZOER\nWEB ORIGINAL:",
+      "contenido": "Quick Start con ZOER:\nWeb Original:\nQuick Start con ZOER:\nhttps://zoer.ai/docs/start-guide/getting-started"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción al Tutorial",
+      "contenido": "Introducción al Tutorial:\nEsta guía te enseña cómo hacer y lanzar una aplicación web usando la plataforma de Zoer que usa Inteligencia Artificial. No necesitas saber programar nada."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Describe tu idea para la aplicación",
+      "contenido": "Describe tu idea para la aplicación:\nVe a la página web https://zoer.ai. En el cuadro de texto que está en el centro, escribe qué quieres construir. Puedes decir algo sencillo como Haz un tablero para manejar a mis clientes de cuidado de piel. O algo más detallado como Quiero un sistema para manejar clientes que tenga reserva de citas, inventario de productos y seguimiento de ventas. Mientras más detalles des, mejor entenderá Zoer lo que necesitas."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Elige la configuración de tu aplicación",
+      "contenido": "Elige la configuración de tu aplicación:\nOpciones de Visibilidad: Las aplicaciones públicas pueden aparecer en la Comunidad. Las aplicaciones privadas no aparecen ni se pueden publicar en la Comunidad. Integración con Base de Datos de Zoer: La Base de Datos de Zoer es un lugar integrado donde la aplicación guarda, busca y organiza los datos. Zoer se encarga de manejarla completamente, no tienes que configurar nada. Es perfecta si eres principiante, es segura y puede crecer. Autenticación - Sistema de Usuarios: Esta función agrega un sistema completo para manejar a los usuarios de tu aplicación. Si activas la Autenticación, automáticamente se activa también la Base de Datos de Zoer, porque el sistema de usuarios necesita un lugar seguro para guardar la información de las personas."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Deja que Zoer mejore tu idea",
+      "contenido": "Deja que Zoer mejore tu idea:\nHaz clic en Enhance Prompt que significa Mejorar Solicitud. Revisa la versión mejorada que Zoer te propone. Esta versión incluye una lista completa de funciones, sugerencias de diseño como colores y tipos de letra, detalles técnicos y funciones de seguridad. Si lo necesitas, puedes cambiar o editar la descripción. Haz clic en el botón con la flecha para crear el borrador de los requisitos de tu aplicación."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Revisa y construye tu aplicación",
+      "contenido": "Revisa y construye tu aplicación:\nRevisa el borrador de requisitos propuesto. Pide cambios si quieres, por ejemplo puedes decir Agrega una barra de navegación o Usa botones azules. Haz clic en Build App que significa Construir Aplicación para empezar a crearla. Verás el progreso en tiempo real. Los pasos son Análisis de Requisitos, Construcción de la Base de Datos, Construcción de la Plantilla, Escritura del Código, Pruebas, Construcción y Lanzamiento."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Prueba tu aplicación",
+      "contenido": "Prueba tu aplicación:\nUsa la pestaña de Preview que significa Vista Previa para probar cómo funciona tu aplicación. Haz clic en el botón Open in New Tab que significa Abrir en Nueva Pestaña para verla en pantalla completa. Pide cambios diciéndole a Zoer en lenguaje sencillo qué debe cambiar, por ejemplo Cambia el fondo de la página de inicio a blanco, Agrega un formulario de contacto o Haz el botón de inicio de sesión más grande. Todos los cambios se hacen solos, reescribiendo el código automáticamente, sin que tengas que programar nada a mano."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Comparte tu aplicación (solo públicas)",
+      "contenido": "Comparte tu aplicación (solo públicas):\nSi quieres, pon un precio a tu aplicación. Haz clic en el botón Publish que significa Publicar para que aparezca en la Comunidad."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Haz que tu aplicación esté en vivo",
+      "contenido": "Haz que tu aplicación esté en vivo:\nRevisa una última vez que todo se vea perfecto. Haz clic en Deploy que significa Desplegar o Poner en Marcha en la esquina superior derecha. Espera un par de minutos mientras se lanza. Los pasos son Construcción del Código, Construcción de Docker, Carga y Despliegue. Tu aplicación ya está en vivo y cualquier persona en el mundo puede verla usando la URL o dirección web de Sitio en Vivo."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Consejo Extra: Maneja tus datos",
+      "contenido": "Consejo Extra: Maneja tus datos:\nUsa Zoer Copilot para agregar y manejar los datos en tu aplicación. Haz clic en el círculo de colores que está en la esquina inferior derecha de la Vista Previa o del Sitio en Vivo. Dile a Zoer qué datos necesitas usando un lenguaje normal. Puedes decir Agrega una nueva clienta llamada Sarah Johnson con correo sarahemail.com. Revisa los cambios que Zoer sugiere para la base de datos. Haz clic en Run que significa Ejecutar para aplicarlos."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nEl proceso de creación y despliegue de aplicaciones web con Zoer está documentado oficialmente en su guía de inicio rápido disponible en https://zoer.ai/docs/start-guide/getting-started. Este documento técnico cubre todos los pasos esenciales, desde la descripción de la idea hasta el manejo de datos con Zoer Copilot, incluyendo ejemplos y explicaciones sobre visibilidad, autenticación y despliegue. Fuentes oficiales y páginas de soporte: Guía oficial Zoer Quick Start https://zoer.ai/docs/start-guide/getting-started. Página principal oficial de Zoer https://zoer.ai. Soporte técnico oficial de Zoer https://zoer.ai/support.\n\n\n[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/64556067/930c0782-b239-4848-9d27-746889aa45ff/transcripcion-hoy.txt)"
+    }
+  ]
+}

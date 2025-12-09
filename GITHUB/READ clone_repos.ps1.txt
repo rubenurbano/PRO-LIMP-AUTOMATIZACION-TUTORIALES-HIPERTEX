@@ -1,0 +1,14 @@
+Instrucciones (rápidas, una acción por línea):
+
+Crea un archivo repos.txt con una URL o usuario/repo por línea.
+
+Guarda clone_repos.ps1 en la misma carpeta (o donde quieras).
+
+Abre PowerShell.
+
+Ejecuta: cd C:\ruta\donde\guardaste\el\script
+
+Ejecuta (ejemplo):
+PowerShell -ExecutionPolicy Bypass -File .\clone_repos.ps1 -ListFile .\repos.txt -DestFolder "C:\Users\rubenurbano\CLONADOS"
+
+Revisa el log generado en la carpeta destino (clone_log_YYYYMMDD_HHMMSS.log).

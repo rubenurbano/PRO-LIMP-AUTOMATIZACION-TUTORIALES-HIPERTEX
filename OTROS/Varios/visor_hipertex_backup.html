@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>HIPERTEX — Visor JSON (v2 numeración limpia)</title>
+<style>
+  :root{--bg:#0f172a;--panel:#0b1220;--card:#0e1a2b;--muted:#9fb3c8;--text:#e6eef7;--accent:#60a5fa}
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,Segoe UI,Roboto,Inter,Arial}
+  .app{display:grid;grid-template-columns:280px 1fr;gap:16px;min-height:100%}
+  header{grid-column:1/-1;display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--panel);position:sticky;top:0;z-index:3;border-bottom:1px solid #18273b}
+  header h1{font-size:14px;font-weight:700;margin:0;letter-spacing:.02em;opacity:.9}
+  header .file-pill{margin-left:auto;font-size:12px;color:var(--muted);opacity:.95}
+  .left{padding:10px 8px 24px;position:sticky;top:54px;height:calc(100dvh - 54px);overflow:auto;background:var(--panel);border-right:1px solid #18273b}
+  .left h2{margin:6px 8px 10px;font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.06em}
+  nav{display:flex;flex-direction:column;gap:6px}
+  nav a{padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--text);background:transparent;border:1px solid #1b2b44}
+  nav a:hover{background:#0f2137}
+  nav a.active{border-color:var(--accent);box-shadow:0 0 0 1px inset var(--accent)}
+  .right{padding:18px 18px 80px}
+  .card{background:var(--card);border:1px solid #1b2b44;border-radius:12px;padding:16px 16px 18px;margin:0 0 14px}
+  .title{margin:0 0 10px;font-size:18px}
+  .idline{margin:0 0 10px;color:var(--muted);font-size:12px}
+  pre{margin:0;white-space:pre-wrap;font-family:ui-monospace,Consolas,Menlo,monospace}
+  .toolbar{display:flex;align-items:center;gap:10px}
+  .btn{appearance:none;background:#11223a;color:var(--text);border:1px solid #1b2b44;border-radius:8px;padding:8px 10px;font:inherit;cursor:pointer}
+  .btn:hover{background:#102641}
+  input[type="file"]{display:none}
+  .file-label{display:inline-flex;align-items:center;gap:8px}
+</style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="toolbar">
+        <label class="btn file-label">
+          <input id="file" type="file" accept=".json,application/json" />
+          Seleccionar archivo
+        </label>
+        <button class="btn" id="demo">Cargar demo</button>
+      </div>
+      <h1>HIPERTEX — Visor JSON</h1>
+      <div class="file-pill" id="fname">Sin archivo</div>
+    </header>
+
+    <aside class="left">
+      <h2>Menú</h2>
+      <nav id="menu"></nav>
+    </aside>
+
+    <main class="right" id="content"></main>
+  </div>
+
+<script>
+const $file = document.getElementById('file');
+const $menu = document.getElementById('menu');
+const $content = document.getElementById('content');
+const $fname = document.getElementById('fname');
+const $demo = document.getElementById('demo');
+
+const slug = s => String(s ?? '').toLowerCase()
+  .normalize('NFD').replace(/\p{Diacritic}/gu,'')
+  .replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'') || 'item';
+
+function normalizeData(raw){
+  // Espera { items: [ { itemID?, menu_item?, contenido? } ] }
+  const items = Array.isArray(raw?.items) ? raw.items : [];
+  return items.map((it, idx) => ({
+    // id visible de ancla: si hay itemID lo usamos, si no, índice base 0
+    anchorId: (it.itemID ?? String(idx).padStart(3,'0')),
+    // título y cuerpo normalizados
+    title: (it.menu_item ?? '').trim(),
+    body: (it.contenido ?? '').toString(),
+  }));
+}
+
+function buildMenu(view){
+  // Filtrar SOLO los que tienen título y contenido no vacío
+  const visibles = view.filter(x => x.title && x.body && x.body.trim());
+  $menu.innerHTML = '';
+  visibles.forEach((x, i) => {
+    const a = document.createElement('a');
+    a.href = `#item-${slug(x.anchorId)}`;
+    a.textContent = `${i+1}. ${x.title}`;
+    a.dataset.anchor = `item-${slug(x.anchorId)}`;
+    $menu.appendChild(a);
+  });
+}
+
+function buildContent(view){
+  $content.innerHTML = '';
+  view.forEach(x => {
+    // si no hay nada que mostrar, salta
+    if (!x.title && !(x.body && x.body.trim())) return;
+
+    const sec = document.createElement('section');
+    sec.className = 'card';
+    sec.id = `item-${slug(x.anchorId)}`;
+
+    if (x.title){
+      const h = document.createElement('h3');
+      h.className = 'title';
+      h.textContent = x.title;
+      sec.appendChild(h);
+    }
+
+    if (x.body && x.body.trim()){
+      const pre = document.createElement('pre');
+      pre.textContent = x.body;
+      sec.appendChild(pre);
+    }
+
+    $content.appendChild(sec);
+  });
+}
+
+function activateMenuOnHash(){
+  const current = location.hash.replace('#','');
+  const links = [...$menu.querySelectorAll('a')];
+  links.forEach(a => a.classList.toggle('active', a.dataset.anchor === current));
+}
+
+function render(raw){
+  const view = normalizeData(raw);
+  buildMenu(view);
+  buildContent(view);
+  activateMenuOnHash();
+}
+
+addEventListener('hashchange', activateMenuOnHash);
+
+$file.addEventListener('change', e => {
+  const f = e.target.files?.[0];
+  if (!f) return;
+
+  const reader = new FileReader();
+  reader.onload = (event) => {
+    try {
+      const txt = event.target.result;
+      const json = JSON.parse(txt);
+      $fname.textContent = f.name;
+      render(json);
+    } catch (err) {
+      alert('JSON inválido: ' + err.message);
+    }
+  };
+  reader.onerror = (err) => {
+      alert('Error al leer el archivo: ' + err);
+  };
+  reader.readAsText(f, 'UTF-8');
+});
+
+$demo.addEventListener('click', () => {
+  // Demo mínima que muestra los casos clave:
+  const demo = {
+    "items":[
+      // SIN menú, CON contenido -> NO numera, sí muestra
+      { "itemID":"000", "contenido":"Bloque sin menú; aparece en el flujo, no en el menú." },
+
+      // CON menú y contenido -> numera como 1
+      { "itemID":"001", "menu_item":"Primer paso", "contenido":"Contenido del primer paso." },
+
+      // SIN contenido (o vacío) -> NO aparece ni numera
+      { "itemID":"002", "menu_item":"(sin contenido)", "contenido":"" },
+
+      // CON menú y contenido -> numera como 2
+      { "itemID":"003", "menu_item":"Segundo paso", "contenido":"Contenido del segundo paso." }
+    ]
+  };
+  $fname.textContent = 'DEMO.json';
+  render(demo);
+});
+
+// Si se abre con ?file=local.json se intenta cargarlo
+(async function bootFromQuery(){
+  const p = new URLSearchParams(location.search);
+  const name = p.get('file');
+  if(!name) return;
+  try{
+    const txt = await fetch(name).then(r=>r.text());
+    render(JSON.parse(txt));
+    $fname.textContent = name;
+  }catch(e){ console.warn('No se pudo cargar ?file=', name, e); }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+Quiero que generes una INFOGRAFÍA HTML COMPLETA a partir de un documento HPTX que adjunto.
+
+INSTRUCCIONES GENERALES
+- Idioma SIEMPRE: castellano.
+- Público objetivo: persona de 15 años, sin experiencia previa en el tema.
+- Tono: claro, didáctico, directo, sin tecnicismos innecesarios.
+- El contenido debe ser fiel al HPTX, sin inventar pasos ni conceptos que no estén en el documento.
+
+OBJETIVO
+A partir del documento HPTX que te adjunto:
+1. Extrae:
+   - Título principal del tutorial.
+   - Contexto / para qué sirve.
+   - Herramientas o elementos clave.
+   - Requisitos previos importantes.
+   - Regla(s) fundamental(es) del sistema o del proceso.
+   - Los pasos principales del flujo (en orden lógico).
+   - Una sección de pruebas (caso de éxito y caso de fallo).
+   - Un resumen final del flujo completo.
+2. Con esa información, genera una SOLA PÁGINA HTML con aspecto de infografía profesional, similar en estilo al siguiente tipo:
+   - Fondo general con degradado suave.
+   - Contenedor central blanco, con bordes redondeados y sombra.
+   - Bloques / cards con títulos, iconos emoji y listas claras.
+   - Buena jerarquía visual (títulos, subtítulos, texto normal).
+   - Diseño responsive para móvil (media queries simples).
+
+FORMATO DE RESPUESTA (MUY IMPORTANTE)
+- RESPONDE ÚNICAMENTE con un documento HTML completo.
+- Incluye todo: `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>`, etc.
+- NO uses Markdown, ni ``` ni ** ni ningún formato fuera del HTML.
+- Toda la maquetación y estilos deben ir dentro de una sola etiqueta `<style>` en el `<head>`.
+- NO uses frameworks ni CDNs (nada de Bootstrap, Tailwind, etc.).
+- NO incluyas JavaScript, solo HTML + CSS.
+- Usa solo tipografías del sistema (por ejemplo: "Segoe UI", Tahoma, sans-serif).
+- Usa emojis como iconos en los títulos de secciones (ej: 🤖, ⚙️, 📊, 🧠, ✅, 🚫, 🎯).
+
+ESTRUCTURA MÍNIMA DE LA PÁGINA
+1) ENCABEZADO
+   - Tag pequeña arriba, por ejemplo: “Automatización práctica con IA y no-code” (o equivalente según el HPTX).
+   - Título principal usando el título del tutorial del HPTX.
+   - Subtítulo corto que explique qué hace el sistema / proceso.
+   - Pequeña fila de “badges” con las herramientas o conceptos claves (3–5 como máximo).
+
+2) INTRODUCCIÓN
+   - Sección “¿Qué vas a aprender?” explicando, en 1–2 párrafos, qué consigue el usuario al final.
+   - Lista breve de resultados concretos.
+   - 2–3 “pills” o chips que resuman puntos clave (ejemplo: “Automatización real”, “Sin programar”, etc.), adaptados al contenido del HPTX.
+
+3) HERRAMIENTAS / ELEMENTOS PRINCIPALES
+   - Bloque con tarjetas para cada herramienta o elemento importante del HPTX (por ejemplo: Google Sheets, Make.com, ChatGPT, API, etc.).
+   - Cada tarjeta debe incluir:
+     - Nombre con emoji.
+     - Un breve párrafo explicando el rol de esa herramienta en el sistema.
+     - Una pequeña lista de puntos o chips con funciones clave.
+
+4) REQUISITOS PREVIOS
+   - Card diferenciada con título “Requisitos previos antes de empezar”.
+   - Lista clara de lo que el usuario necesita (cuentas, configuraciones, columnas, datos, etc.) extraídos del HPTX.
+   - Si aplica, bloque interno con las columnas mínimas o estructura de datos necesaria.
+
+5) REGLA FUNDAMENTAL (SI EXISTE EN EL HPTX)
+   - Bloque llamativo (fondo con otro color) con la o las reglas fundamentales del sistema.
+   - Explica qué pasa cuando se cumple y cuando no se cumple esa regla.
+   - Usa un texto corto, contundente y comprensible.
+
+6) PASOS DEL FLUJO COMPLETO
+   - Sección “Pasos del flujo completo” o similar.
+   - Cada paso debe ir en un bloque tipo card, con:
+     - Un círculo numerado (1, 2, 3, …).
+     - Título corto del paso.
+     - Descripción en 1–3 párrafos como máximo, en lenguaje muy claro.
+     - Una lista de sub-pasos dentro de un bloque más suave (“Sub-pasos:”).
+   - Respeta el orden lógico del HPTX y sus pasos principales.
+
+7) PRUEBAS DEL SISTEMA (TESTING)
+   - Sección “Pruebas del sistema” con al menos:
+     - Un caso de éxito (qué se ingresa, qué debería pasar, resultado esperado).
+     - Un caso de fallo (qué falta o está mal, y cómo se comporta el sistema).
+   - Cada caso en una tarjeta (éxito vs fallo) con título, descripción y resultado esperado.
+
+8) VALIDACIÓN (SI EN EL HPTX SE CITA DOCUMENTACIÓN)
+   - Pequeño bloque que mencione, en forma general, que el flujo está alineado con documentación oficial o fuentes técnicas (por ejemplo: documentación oficial de las herramientas usadas), si eso está en el HPTX.
+   - NO inventes validaciones si el HPTX no las menciona.
+
+9) RESUMEN FINAL
+   - Sección final “Resumen del flujo completo”.
+   - Texto corto que describa en 4–6 líneas el recorrido del dato desde el inicio hasta el final.
+   - Lista compacta tipo “1 → 2 → 3 → 4…” explicando el viaje del dato según el HPTX.
+   - Una frase final que deje claro qué podría reutilizarse o escalarse de este patrón.
+
+ESTILO VISUAL (ORIENTACIÓN GENERAL)
+- Fondo general: degradado suave (por ejemplo, tonos azules / violetas).
+- Contenedor central: blanco, con bordes redondeados y sombra notable.
+- Cards interiores: fondos suaves (gris claro / azul muy claro), bordes suaves, sombras ligeras.
+- Buena separación entre secciones (márgenes y padding generosos).
+- Diseño responsive: en pantallas pequeñas los grids deben volverse una sola columna.
+
+MUY IMPORTANTE
+- No inventes contenido que no esté en el HPTX.
+- Sí puedes reordenar, resumir y clarificar para que la explicación sea más pedagógica.
+- Toda la semántica (títulos de secciones, pasos, herramientas, resumen) debe estar basada en el documento HPTX que te adjunto.
+- Devuelve SOLO el HTML completo, SIN ningún comentario ni explicación fuera del propio código.

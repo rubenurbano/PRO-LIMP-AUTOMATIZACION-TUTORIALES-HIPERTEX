@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cómo funcionan Routers y Filtros en Make.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.12);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #1e293b, #020617 55%);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 24px 12px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 960px; /* formato cómodo tipo 4:5 en vertical */
+      background: linear-gradient(180deg, var(--bg-soft), #020617);
+      border-radius: 24px;
+      padding: 24px 20px 32px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 30px 80px rgba(15, 23, 42, 0.75);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(56,189,248,0.3);
+    }
+
+    h1 {
+      margin: 12px 0 4px;
+      font-size: 28px;
+      letter-spacing: 0.04em;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 18px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.92);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 14px 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.06), transparent 55%);
+      pointer-events: none;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #bfdbfe;
+      margin-bottom: 6px;
+    }
+
+    .card p,
+    .card ul {
+      margin: 4px 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .badge-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      margin-right: 6px;
+      border: 1px solid rgba(56,189,248,0.5);
+    }
+
+    .section {
+      margin-top: 10px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: rgba(15,23,42,0.95);
+      overflow: hidden;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .section-header h2 {
+      font-size: 14px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-header small {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .toggle-btn {
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.9);
+      color: var(--muted);
+      cursor: pointer;
+    }
+
+    .toggle-btn span {
+      margin-left: 3px;
+    }
+
+    .section-body {
+      padding: 8px 16px 12px;
+      border-top: 1px solid var(--border);
+      display: none;
+    }
+
+    .section-body.open {
+      display: block;
+    }
+
+    .section-body ul {
+      padding-left: 18px;
+      margin: 6px 0;
+      font-size: 13px;
+    }
+
+    .highlight {
+      color: #fbbf24;
+      font-weight: 500;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="pill">Make.com · Routers &amp; Filtros</div>
+      <h1>Cómo funcionan Routers y Filtros en Make.com</h1>
+      <p class="subtitle">
+        Tutorial visual paso a paso: de Google Form a dos Google Sheets (USA y Francia),
+        usando routers, filtros simples y filtros compuestos.
+      </p>
+    </header>
+
+    <!-- Resumen rápido -->
+    <section class="grid">
+      <article class="card">
+        <div class="card-title">Ruta de aprendizaje</div>
+        <p><span class="badge-step">1</span>Entender qué son routers y filtros (analogía del correo).</p>
+        <p><span class="badge-step">2</span>Configurar el formulario y el escenario básico en Make.com.</p>
+        <p><span class="badge-step">3</span>Ramificar con un router y conectar hojas USA/Francia.</p>
+        <p><span class="badge-step">4</span>Aplicar filtros simples y compuestos, y probar el escenario.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-title">Resultado esperado</div>
+        <ul>
+          <li>Las respuestas de Google Forms llegan a Make.com.</li>
+          <li>Según el país (USA o Francia), cada fila va a su Google Sheet.</li>
+          <li>Solo se guardan los datos que cumplen las condiciones de los filtros.</li>
+          <li>Toda la lógica queda validada con fuentes técnicas oficiales.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Secciones colapsables -->
+    <section class="section">
+      <div class="section-header" data-target="sec1">
+        <h2><span class="badge-step">1</span>Introducción: Routers y Filtros</h2>
+        <button class="toggle-btn">Mostrar<span>▼</span></button>
+      </div>
+      <div id="sec1" class="section-body">
+        <ul>
+          <li><span class="highlight">¿Qué son?</span> Herramientas de Make.com que automatizan el envío de información según condiciones.</li>
+          <li><span class="highlight">Router:</span> desvía el “correo” (los bundles de datos) hacia caminos diferentes.</li>
+          <li><span class="highlight">Filtros:</span> deciden a qué mesa llega cada carta, es decir, qué datos pasan por cada camino.</li>
+          <li>Piensa en una oficina de correos: el router reparte sacos; los filtros separan por país, tamaño, prioridad, etc.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec2">
+        <h2><span class="badge-step">2</span>Configuración del Escenario y del Formulario</h2>
+        <button class="toggle-btn">Mostrar<span>▼</span></button>
+      </div>
+      <div id="sec2" class="section-body">
+        <ul>
+          <li><span class="highlight">Objetivo:</span> recibir datos desde un Google Form y enviarlos a dos hojas de Google Sheets (USA y Francia).</li>
+          <li>En Google Forms, crea un <strong>menú desplegable de País</strong> con al menos estas opciones: “USA” y “France”.</li>
+          <li>En Make.com, usa el <strong>módulo Google Forms</strong> para conectar el formulario.</li>
+          <li>Copia y pega el <strong>ID del formulario</strong> cuando lo pida Make.</li>
+          <li>Ejecuta una <strong>prueba inicial</strong> enviando una respuesta de ejemplo y revisa el <strong>bundle de datos</strong> para ver los campos disponibles.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec3">
+        <h2><span class="badge-step">3</span>Agregar el Router (Enrutador)</h2>
+        <button class="toggle-btn">Mostrar<span>▼</span></button>
+      </div>
+      <div id="sec3" class="section-body">
+        <ul>
+          <li><span class="highlight">Función:</span> ramificar el flujo de trabajo y enviar los datos a destinos separados.</li>
+          <li>En Make.com ve a la sección <strong>“Tools” → “Flow control” → “Router”</strong> y añádelo después del módulo de Google Forms.</li>
+          <li>También puedes añadirlo con clic derecho sobre la línea entre módulos y elegir <strong>“Add router”</strong>.</li>
+          <li>Con esto creas varios caminos de salida desde un mismo gatillo (el formulario).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec4">
+        <h2><span class="badge-step">4</span>Conectar Hojas de Google (USA y Francia)</h2>
+        <button class="toggle-btn">Mostrar<span>▼</span></button>
+      </div>
+      <div id="sec4" class="section-body">
+        <ul>
+          <li>En cada rama del router, agrega módulos de <strong>Google Sheets</strong> (uno para USA y otro para Francia).</li>
+          <li>Acción sugerida: <strong>“Add a row”</strong>, para insertar cada respuesta como una nueva fila.</li>
+          <li>Configura la conexión a Google con tu cuenta (Gmail).</li>
+          <li>En la rama de USA, selecciona el archivo y la pestaña <strong>“client’s USA”</strong> (o el nombre que uses).</li>
+          <li>Verifica los encabezados de la hoja: deben corresponder a los campos que vas a mapear.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec5">
+        <h2><span class="badge-step">5</span>Mapear Valores para la Hoja USA</h2>
+        <button class="toggle-btn">Mostrar<span>▼</span></button>
+      </div>
+      <div id="sec5" class="section-body">
+        <ul>
+          <li><span class="highlight">Proceso de mapeo:</span> indica en qué columna se guardará cada dato del bundle.</li>
+          <li>Campos típicos a mapear:
+            <ul>
+              <li><strong>Name</strong></li>
+              <li><strong>Email</strong></li>
+              <li><strong>Company size</strong> (desde <code>answers → text answers → value</code>)</li>
+            </ul>
+          </li>
+          <li>En el campo <strong>Source</strong>, escribe algo como <code>form</code> para recordar el origen del dato.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec6">
+        <h2><span class="badge-step">6</span>Agregar los Filtros entre Router y Hojas</h2>
+        <button class="toggle-btn">Mostrar<span>▼</span></button>
+      </div>
+      <div id="sec6" class="section-body">
+        <ul>
+          <li><span class="highlight">Función:</span> restringen el flujo; solo pasan los bundles que cumplen ciertas condiciones.</li>
+          <li>Los filtros se colocan <strong>en el camino entre el router y cada módulo de Google Sheets</strong>.</li>
+          <li>Para añadir un filtro:
+            <ul>
+              <li>Clic izquierdo sobre la línea entre módulos y elegir <strong>“Set up a filter”</strong>, o</li>
+              <li>Clic derecho sobre la línea y seleccionar la opción de filtro.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec7">
+        <h2><span class="badge-step">7</span>Configurar Filtros para USA y Francia</h2>
+        <button class="toggle-btn">Mostrar<span>▼</span></button>
+      </div>
+      <div id="sec7" class="section-body">
+        <ul>
+          <li><span class="highlight">Filtro USA</span>
+            <ul>
+              <li>Etiqueta del filtro: <strong>“USA”</strong>.</li>
+              <li>Condición principal: campo <strong>Country</strong> <code>equal to</code> <strong>“USA”</strong>.</li>
+            </ul>
+          </li>
+          <li><span class="highlight">Filtro Francia</span>
+            <ul>
+              <li>Etiqueta del filtro: <strong>“France”</strong>.</li>
+              <li>Condición principal: campo <strong>Country</strong> <code>equal to</code> <strong>“France”</strong>.</li>
+            </ul>
+          </li>
+          <li>Con esto cada hoja solo recibe filas del país correcto.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec8">
+        <h2><span class="badge-step">8</span>Prueba del Escenario</h2>
+        <button class="toggle-btn">Mostrar<span>▼</span></button>
+      </div>
+      <div id="sec8" class="section-body">
+        <ul>
+          <li><span class="highlight">Prueba USA:</span>
+            <ul>
+              <li>Envía un formulario con país “USA”.</li>
+              <li>Ejecuta el escenario (si no está en modo automático).</li>
+              <li>Verifica que solo se haya escrito en la hoja de Google Sheets USA.</li>
+            </ul>
+          </li>
+          <li><span class="highlight">Prueba Francia:</span>
+            <ul>
+              <li>Repite el proceso con país “France”.</li>
+              <li>Comprueba que la hoja de Francia sea la única que reciba los datos.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec9">
+        <h2><span class="badge-step">9</span>Filtros Compuestos (Regla AND)</h2>
+        <button class="toggle-btn">Mostrar<span>▼</span></button>
+      </div>
+      <div id="sec9" class="section-body">
+        <ul>
+          <li><span class="highlight">Función:</span> aplicar filtros más estrictos añadiendo varias condiciones.</li>
+          <li>En el filtro USA, usa la opción <strong>“Add and rule”</strong> para agregar otra condición.</li>
+          <li>Ejemplo de nueva condición: campo <strong>Company size</strong> <code>equal to</code> <strong>“large”</strong>.</li>
+          <li>Pruebas:
+            <ul>
+              <li>Si envías “USA / small”, el registro <strong>no pasa</strong>.</li>
+              <li>Si envías “USA / large”, el registro <strong>pasa</strong> y se llena la hoja USA.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec10">
+        <h2><span class="badge-step">10</span>Conectar y Mapear la Hoja Francia</h2>
+        <button class="toggle-btn">Mostrar<span>▼</span></button>
+      </div>
+      <div id="sec10" class="section-body">
+        <ul>
+          <li>Sigue los mismos pasos de conexión que en la hoja USA: acción <strong>“Add a row”</strong>.</li>
+          <li>Selecciona la pestaña de hoja correspondiente, por ejemplo <strong>“client France”</strong>.</li>
+          <li>Configura el mapeo de columnas con los mismos campos: Name, Email, Company size, Source, etc.</li>
+          <li>Comprueba que los nombres de columnas coincidan con los de la hoja USA para facilitar mantenimiento.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-target="sec11">
+        <h2><span class="badge-step">11</span>Validación con Fuentes Técnicas Oficiales</h2>
+        <button class="toggle-btn">Mostrar<span>▼</span></button>
+      </div>
+      <div id="sec11" class="section-body">
+        <ul>
+          <li><span class="highlight">Puntos técnicos validados:</span>
+            <ul>
+              <li>Uso correcto de <strong>routers</strong> para dividir el flujo.</li>
+              <li>Uso de <strong>filtros</strong> como guardianes de datos.</li>
+              <li>Operadores tipo <code>equal to</code> en las condiciones.</li>
+              <li>Mapeo por arrastrar y soltar (“drag &amp; drop mapping”).</li>
+            </ul>
+          </li>
+          <li><span class="highlight">Enlaces recomendados de ayuda de Make.com:</span>
+            <ul>
+              <li>Documentación de Routers.</li>
+              <li>Documentación de Filtering.</li>
+              <li>Documentación de Mapping.</li>
+            </ul>
+          </li>
+          <li>Usar siempre estas fuentes para confirmar comportamiento y límites de cada módulo.</li>
+        </ul>
+      </div>
+    </section>
+
+    <p class="footer-note">
+      Material educativo generado a partir del mapa mental “Cómo funcionan Routers y Filtros en Make.com”.
+    </p>
+  </main>
+
+  <script>
+    document.querySelectorAll(".section-header").forEach((header) => {
+      const targetId = header.getAttribute("data-target");
+      const body = document.getElementById(targetId);
+      const btn = header.querySelector(".toggle-btn");
+
+      // abrir por defecto la primera sección
+      if (targetId === "sec1") {
+        body.classList.add("open");
+        btn.textContent = "Ocultar";
+      }
+
+      header.addEventListener("click", (e) => {
+        // evitar doble disparo si se hace clic justo en el botón
+        e.stopPropagation();
+        const isOpen = body.classList.contains("open");
+        document.getElementById(targetId).classList.toggle("open");
+        btn.textContent = isOpen ? "Mostrar" : "Ocultar";
+      });
+    });
+  </script>
+</body>
+</html>

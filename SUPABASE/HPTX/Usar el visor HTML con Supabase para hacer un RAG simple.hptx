@@ -1,0 +1,168 @@
+##itemID:000
+##menu-item BEGIN
+Usar el visor HTML con Supabase para hacer un RAG simple
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Usar el visor HTML con Supabase para hacer un RAG simple:
+Web Original:
+Usar el visor HTML con Supabase para hacer un RAG simple:
+Generado por chatGTP
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Objetivo del tutorial
+##menu-item END
+##Contenido BEGIN
+Objetivo del tutorial:
+El objetivo es que tu visor HTML pueda hablar con tu tutorial usando RAG en Supabase, sin entrar en detalles tecnicos raros. Solo pasos claros, de una sola accion por paso.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Comprobar que el JSON esta listo en Supabase
+##menu-item END
+##Contenido BEGIN
+Comprobar que el JSON esta listo en Supabase:
+Abre el navegador y entra en https://supabase.com.
+Haz clic en Sign in e inicia sesion con tu cuenta.
+Haz clic en tu proyecto donde vive el JSON del tutorial.
+Haz clic en el menu Table editor del lado izquierdo.
+Haz clic en la tabla donde esta guardado el JSON del tutorial.
+Busca una fila y comprueba que la columna del JSON tiene el contenido del tutorial aunque sea una muestra.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Preparar Supabase para usar RAG con extensiones de vectores
+##menu-item END
+##Contenido BEGIN
+Preparar Supabase para usar RAG con extensiones de vectores:
+Haz clic en el menu SQL Editor en el panel izquierdo de Supabase.
+Haz clic en mas New query para abrir una consulta nueva.
+Activa la extension de vectores ejecutando la consulta oficial de Supabase para pgvector solo una vez por proyecto.
+Haz clic en Run para que la extension de vectores quede instalada.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Crear la tabla para los trozos de texto del tutorial
+##menu-item END
+##Contenido BEGIN
+Crear la tabla para los trozos de texto del tutorial:
+Haz clic en Table editor otra vez para volver a la vista de tablas.
+Haz clic en New table para crear una tabla nueva para los trozos de texto del tutorial.
+Escribe el nombre de la tabla, por ejemplo: tutorial_chunks.
+Anade una columna de texto para el trozo de contenido, por ejemplo: chunk_text tipo text.
+Anade una columna para guardar el embedding, por ejemplo: embedding tipo vector, segun la guia de Supabase.
+Guarda la nueva tabla haciendo clic en Save o en el boton equivalente.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Llenar la tabla de trozos con el contenido del tutorial
+##menu-item END
+##Contenido BEGIN
+Llenar la tabla de trozos con el contenido del tutorial:
+Abre tu herramienta favorita puede ser un script, una funcion o la consola de Supabase para leer el JSON del tutorial.
+Divide el contenido del JSON en trozos pequenos de texto por ejemplo, por secciones o por parrafos.
+Por cada trozo, genera un embedding usando la API de embeddings que prefieras OpenAI, Gemini, etc.
+Por cada trozo, inserta una fila en la tabla tutorial_chunks con el texto en chunk_text.
+En la misma fila, guarda el embedding generado en la columna embedding.
+Repite el proceso hasta que todos los trozos importantes del tutorial esten guardados con su embedding.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Crear una consulta RAG sencilla en Supabase
+##menu-item END
+##Contenido BEGIN
+Crear una consulta RAG sencilla en Supabase:
+Abre otra vez el menu SQL Editor en Supabase.
+Haz clic en mas New query para crear una nueva consulta.
+Escribe una consulta que, dado un embedding de la pregunta del usuario, busque los trozos mas parecidos en la tabla tutorial_chunks usando la funcion de distancia de vectores de pgvector.
+Haz clic en Run para probar la consulta con un embedding de prueba.
+Comprueba que la consulta devuelve los trozos de texto que tienen sentido para la pregunta de prueba.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Anadir campo de entrada para preguntas en el visor HTML
+##menu-item END
+##Contenido BEGIN
+Anadir campo de entrada para preguntas en el visor HTML:
+Abre el proyecto del visor HTML que ya tienes en tu editor o en tu carpeta de trabajo.
+Localiza la parte del codigo donde el visor HTML recibe la informacion del tutorial la llamada actual a Supabase.
+Anade una entrada de texto en el HTML para que el usuario pueda escribir una pregunta por ejemplo, un campo de input.
+Anade un boton que diga algo como Preguntar al tutorial en el visor HTML.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Conectar el boton de pregunta con la funcion RAG
+##menu-item END
+##Contenido BEGIN
+Conectar el boton de pregunta con la funcion RAG:
+Haz que, cuando el usuario pulse el boton, el visor HTML envie la pregunta a tu backend o a una funcion de Supabase que genere el embedding de la pregunta.
+Haz que esa funcion use la consulta RAG de Supabase para obtener los trozos de texto mas parecidos.
+Haz que la funcion devuelva al visor HTML una respuesta formada a partir de esos trozos por ejemplo, pegando el texto o usando un LLM para redactar una respuesta corta.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Mostrar la respuesta en el visor HTML y probar el flujo completo
+##menu-item END
+##Contenido BEGIN
+Mostrar la respuesta en el visor HTML y probar el flujo completo:
+Haz que el visor HTML muestre la respuesta debajo del tutorial, en una zona de Respuesta del tutorial o similar.
+Prueba todo el flujo haciendo una pregunta sencilla al tutorial desde el visor HTML.
+Comprueba que la respuesta que llega tiene sentido con respecto al contenido del JSON original.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Revision final del sistema RAG
+##menu-item END
+##Contenido BEGIN
+Revision final del sistema RAG:
+Cuando estos pasos funcionan sin errores, ya tienes un visor HTML que habla con tu tutorial usando RAG en Supabase. Si algo falla, revisa siempre primero: la tabla de chunks, los embeddings y la consulta SQL de busqueda por vectores.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES:
+
+Resumen de puntos tecnicos validados:
+
+La implementacion de RAG con Supabase usando pgvector es una practica documentada oficialmente. Supabase proporciona soporte nativo para busqueda vectorial mediante la extension pgvector de PostgreSQL. El proceso descrito en el tutorial sigue las mejores practicas de implementacion de sistemas RAG que incluyen la division de contenido en chunks, generacion de embeddings y busqueda por similaridad vectorial.
+
+Enlaces directos a documentacion oficial:
+
+Documentacion oficial de Supabase sobre Vector Search y pgvector:
+https://supabase.com/docs/guides/ai/vector-columns
+
+Documentacion de Supabase sobre almacenamiento y consulta de embeddings:
+https://supabase.com/docs/guides/ai/quickstarts/generate-text-embeddings
+
+Guia de Supabase para construir aplicaciones AI con Vector Search:
+https://supabase.com/docs/guides/ai
+
+Repositorio oficial de pgvector en GitHub:
+https://github.com/pgvector/pgvector
+
+Referencias a paginas de soporte oficiales:
+
+Supabase proporciona ejemplos completos de implementacion RAG en su documentacion de AI y Machine Learning. La plataforma soporta integraciones con multiples proveedores de embeddings como OpenAI, Hugging Face y Cohere. El metodo de busqueda por similaridad de coseno o distancia euclidiana esta completamente soportado a traves de funciones SQL nativas una vez instalada la extension pgvector.
+
+Usar el visor HTML con Supabase para hacer un RAG simple
+Generado por chatGTP
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END

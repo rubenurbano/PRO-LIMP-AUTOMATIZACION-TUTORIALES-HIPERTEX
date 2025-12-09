@@ -1,0 +1,236 @@
+##itemID:000
+##menu-item BEGIN
+[TITULO_VIDEO]
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+[TITULO_VIDEO]:
+Crear un sistema de registro de asistencia con códigos QR y Google Sheets
+Web Original:
+[TITULO_VIDEO]:
+Crear un sistema de registro de asistencia con códigos QR y Google Sheets
+[URL_WEB_YOUTUBE]
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción y objetivo del sistema
+##menu-item END
+##Contenido BEGIN
+Introducción y objetivo del sistema:
+Existen muchas formas de pasar lista de asistencia en oficinas o salones de clases. La forma más práctica es aquella que permite que las personas registren su propia asistencia automáticamente sin complicaciones.
+
+El uso de un código QR es ideal para esto, ya que las personas solo necesitan escanearlo y no tienen que escribir ni validar nada más. En este tutorial combinaremos códigos QR para escribir información automáticamente en una hoja de Google Sheets. El objetivo es tener un sistema donde la hoja se llene sola cada vez que alguien escanee el código.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Preparación de las hojas de cálculo
+##menu-item END
+##Contenido BEGIN
+Preparación de las hojas de cálculo:
+Lo primero es preparar la hoja de cálculo con las columnas necesarias. Usaremos dos hojas (pestañas) dentro del documento:
+
+Hoja "QR": Aquí irá la información de cada persona.
+
+Columnas sugeridas: Identificador (número), Nombre, Correo y una columna para el Código QR.
+
+Sugerencia: Mantén al mínimo la información que se codificará en el QR.
+
+Hoja "Asistencia": Aquí se registrarán los datos automáticamente.
+
+Esta hoja almacenará la información de la persona asociada a una hora y fecha del registro, así como el correo que registró la asistencia para llevar control.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Configuración de parámetros para la URL
+##menu-item END
+##Contenido BEGIN
+Configuración de parámetros para la URL:
+En la hoja "QR", necesitamos una columna llamada "Parámetros". Esta columna tendrá la información que queremos codificar en el QR pero en un formato específico para URL.
+
+El formato debe ser: ?parametro1=valor1&parametro2=valor2
+
+Se empieza con un signo de interrogación (?).[1][2][3]
+
+Se pone el nombre del parámetro, un signo de igual (=) y el valor de la celda.
+
+Los siguientes parámetros se separan con un signo de ampersand (&).
+
+Ejemplo de fórmula para la columna D (uniendo ID, nombre y correo):
+="?id="&A2&"&nombre="&B2&"&correo="&C2
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Creación de la Web App en Apps Script
+##menu-item END
+##Contenido BEGIN
+Creación de la Web App en Apps Script:
+Para procesar la información, usaremos una funcionalidad de Google Sheets llamada "Web Apps" (aplicaciones web).[4] Necesitamos ir al menú "Extensiones" y seleccionar "Apps Script".
+
+Debemos reemplazar el código por defecto con el siguiente código que usa la función doGet y registrarAsistencia:
+
+function doGet(e) {
+// Cambia aquí tu idioma-país y zona horaria
+const fecha = new Date().toLocaleString("es-MX", {timeZone:"America/Mexico_City"});
+
+// Registramos la asistencia usando el correo y los parámetros que vienen en la URL
+registrarAsistencia(e.parameter.correo, e.parameter.id, e.parameter.nombre);
+
+// Damos retroalimentación sobre lo que sucedió:
+return HtmlService.createHtmlOutput(Asistencia registrada correctamente. <br><br> Correo que registró: ${e.parameter.correo}<br> Fecha: ${fecha}<br> ID: ${e.parameter.id}<br> Nombre: ${e.parameter.nombre});
+}
+
+function registrarAsistencia(correo, id, nombre) {
+// Debes cambiar este identificador por el de tu documento de hoja de cálculo
+const sheet = SpreadsheetApp.openById("AQUÍ_VA_TU_ID_DE_DOCUMENTO");
+const asistencia = sheet.getSheetByName("Asistencia");
+const lastRow = asistencia.getLastRow() + 1;
+asistencia.getRange(lastRow, 1).setValue(correo);
+asistencia.getRange(lastRow, 2).setValue(id);
+asistencia.getRange(lastRow, 3).setValue(nombre);
+asistencia.getRange(lastRow, 4).setValue(new Date());
+}
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Explicación del código y ajuste del ID
+##menu-item END
+##Contenido BEGIN
+Explicación del código y ajuste del ID:
+El código tiene dos partes principales:
+
+Función doGet(e): Recibe los parámetros de la URL del código QR (correo, ID, nombre). Define la fecha con tu zona horaria y genera un mensaje HTML de confirmación que verá el usuario al escanear.
+
+Función registrarAsistencia: Abre la hoja de cálculo y escribe los datos.
+
+Importante: Debes obtener el ID de tu documento desde la URL de tu hoja de cálculo (el código que está entre "/d/" y "/edit").[5]
+
+Pega ese ID en la línea que dice: SpreadsheetApp.openById("...").
+
+El código busca la última fila vacía en la hoja "Asistencia" y escribe el correo, ID, nombre y la fecha/hora actual.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Publicación de la Web App
+##menu-item END
+##Contenido BEGIN
+Publicación de la Web App:
+Para que el código se ejecute cuando alguien visite la URL, debemos publicarlo:
+
+Guarda el código.[6]
+
+Haz clic en el botón "Implementar" y selecciona "Nueva implementación".[7]
+
+Selecciona el tipo "Aplicación web".[8]
+
+En descripción puedes poner lo que quieras.[6][7][9]
+
+En "Quién tiene acceso", selecciona "Cualquier usuario" (para que se pueda registrar desde cualquier celular).
+
+Haz clic en "Implementar" y autoriza el acceso a los datos cuando te lo pida.
+
+Al terminar, obtendrás la "URL de la aplicación web".[8]
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Construcción de la URL final (doGet)
+##menu-item END
+##Contenido BEGIN
+Construcción de la URL final (doGet):
+Copia la URL de la aplicación web que obtuviste en el paso anterior.[8] Regresa a tu hoja de cálculo "QR".[10][11]
+
+En una nueva columna llamada "URL doGet", debes concatenar (unir) la URL de la web app con la columna de parámetros que creamos antes.
+
+La fórmula se verá así:
+="https://script.google.com/macros/s/TU_URL_DE_WEB_APP/exec"&D2
+
+Si copias y pegas esta URL resultante en un navegador, debería ejecutarse el código y mostrarte el mensaje de "Asistencia registrada correctamente".
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Generación de los códigos QR
+##menu-item END
+##Contenido BEGIN
+Generación de los códigos QR:
+Ahora debemos convertir esa URL final en una imagen de código QR.
+
+Usaremos el servicio api.qrserver.com (ya que Google retiró el servicio chart.googleapis.com).
+
+Debemos encapsular la URL doGet dentro de la fórmula ENCODEURL para evitar errores con caracteres especiales. La fórmula final para generar la imagen es:
+
+="https://api.qrserver.com/v1/create-qr-code/?size=500x500&data="&ENCODEURL(E2)
+
+Luego, usa la función IMAGE para ver el código en la celda:
+=IMAGE(celda_con_url_qr)
+
+Estos códigos se pueden imprimir. Al ser escaneados, crearán un nuevo registro en la hoja "Asistencia".
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Consideraciones importantes sobre cambios
+##menu-item END
+##Contenido BEGIN
+Consideraciones importantes sobre cambios:
+Si necesitas cambiar el código más adelante (por ejemplo, para registrar un dato extra), tendrás que crear una "Nueva implementación" de la web app.
+
+Esto cambiará la URL base de tu aplicación web. Como resultado, las URLs de los códigos QR cambiarán y tendrás que imprimir los códigos QR nuevamente. Esto es necesario para controlar qué versión del código ejecutan los usuarios.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+Se ha verificado la información técnica del tutorial con documentación oficial de Google y recursos de desarrollo:
+
+Función doGet(e):
+
+Validación: Confirmado. La documentación oficial de Google Apps Script establece que un script puede publicarse como aplicación web si contiene una función doGet(e) o doPost(e).
+
+El parámetro e recupera los parámetros de consulta de la URL, tal como se indica en el tutorial (e.parameter).
+
+Fuente: Google Developers - Web Apps.
+
+Servicio de Gráficos (QR):
+
+Validación: Confirmado. El tutorial menciona correctamente que chart.googleapis.com (Google Image Charts) ha sido retirado.
+
+El uso de alternativas externas como api.qrserver.com o quickchart.io es la práctica estándar actual recomendada en foros técnicos tras la depreciación oficial de Google en 2019/2024.
+
+SpreadsheetApp.openById:
+
+Validación: Confirmado. Es el método estándar de la clase SpreadsheetApp para abrir un archivo específico de Google Sheets usando su ID único.
+
+Permisos de implementación:
+
+Validación: Confirmado. Para que una Web App sea accesible públicamente sin requerir inicio de sesión específico del usuario final en el script, se debe configurar "Quién tiene acceso" como "Cualquier usuario" (Anyone).
+
+
+Sources
+help
+stackoverflow.com
+github.com
+google.com
+youtube.com
+stackoverflow.com
+youtube.com
+basescripts.com
+google.com
+trevorfox.com
+google.com
+stackoverflow.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+Google Apps Script doGet web app documentation
+Google Apps Script SpreadsheetApp openById documentation
+Google Charts QR code API deprecation alternative api.qrserver.com
+##Contenido END

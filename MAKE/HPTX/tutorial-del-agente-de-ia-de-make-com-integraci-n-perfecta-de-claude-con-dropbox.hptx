@@ -1,0 +1,293 @@
+##itemID: 000
+##menu-item BEGIN
+Tutorial del agente de IA de Make.com - Integración perfecta de Claude con Dropbox
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Tutorial del agente de IA de Make.com - Integración perfecta de Claude con Dropbox:
+Web Original:
+
+Tutorial del agente de IA de Make.com - Integración perfecta de Claude con Dropbox
+(Sin URL disponible)
+##Contenido END
+
+##itemID: 001
+##menu-item BEGIN
+Introducción: Resuelve el problema de la gestión de conversaciones de IA
+##menu-item END
+##Contenido BEGIN
+Introducción: Resuelve el problema de la gestión de conversaciones de IA:
+
+¿Alguna vez has perdido horas de trabajo valioso porque olvidaste guardar una conversación importante de Claude AI en un lugar accesible? El proceso manual de copiar, pegar y cambiar entre aplicaciones como Claude y Dropbox no solo es tedioso, sino que también interrumpe tu flujo de pensamiento y reduce drásticamente tu productividad. Este cambio de contexto constante puede hacer que pierdas datos cruciales y, francamente, te arranques el pelo de frustración.
+
+Este tutorial te mostrará una solución elegante y eficiente: cómo decirle a Claude "guarda esto en Dropbox" con un lenguaje natural y sencillo, dejando que Make.com se encargue del resto. Olvídate de la copia y pega, de cambiar de aplicación o de perder información. Utilizo esta automatización a diario y es un verdadero cambio de juego, especialmente dado que la documentación de calidad sobre los agentes de IA de Make es escasa, lo que hizo que su configuración fuera un desafío inicial.
+
+Al final de esta guía, podrás interactuar con Claude de forma natural, diciendo frases como "guarda esto como mis notas de proyecto" o simplemente "guarda esto" para que tu trabajo se archive automáticamente en la carpeta de Dropbox de tu elección. Di adiós a las conversaciones perdidas y al constante cambio de contexto.
+##Contenido END
+
+##itemID: 002
+##menu-item BEGIN
+Herramientas Necesarias para la Integración
+##menu-item END
+##Contenido BEGIN
+Herramientas Necesarias para la Integración:
+
+Para implementar esta potente automatización, necesitaremos familiarizarnos con las siguientes herramientas clave:
+
+1.  **Claude AI:** Este es el asistente de IA desarrollado por Anthropic. Si estás leyendo esto, es muy probable que ya lo estés utilizando para investigación, creación de contenido o al menos estés familiarizado con otras IA conversacionales como ChatGPT. Claude será nuestra interfaz principal para interactuar con la automatización.
+2.  **Make.com:** Anteriormente conocido como Integromat, Make.com es una plataforma de automatización visual que te permite conectar diferentes aplicaciones y servicios sin necesidad de escribir código. Será el cerebro detrás de nuestra automatización, gestionando el flujo de datos entre Claude y Dropbox.
+3.  **Agente de IA de Make:** Esta es la pieza central que une a Claude y Make. Actúa como un puente, permitiendo que las interacciones de lenguaje natural en Claude activen escenarios específicos en Make.com. Esto nos permitirá invocar la función de guardar archivos en Dropbox bajo demanda, directamente desde nuestro chat con Claude.
+4.  **Dropbox:** Nuestro destino final para los archivos guardados. Necesitarás una cuenta de Dropbox donde Claude, a través de Make.com, subirá tus conversaciones y documentos.
+
+Asegúrate de tener acceso a estas herramientas o de estar listo para configurar cuentas si aún no las tienes. Con ellas, transformaremos la forma en que gestionas tu producción de IA.
+##Contenido END
+
+##itemID: 003
+##menu-item BEGIN
+Comprendiendo la Automatización: El Flujo General
+##menu-item END
+##Contenido BEGIN
+Comprendiendo la Automatización: El Flujo General:
+
+Para entender lo que vamos a construir, visualicemos el proceso. Imagina que estás investigando sobre un tema, por ejemplo, elefantes africanos, en Claude. Después de obtener la información deseada, simplemente dirás: "Guarda en Dropbox como investigación de elefantes africanos".
+
+Este es el proceso paso a paso que ocurrirá:
+
+1.  **Tu Comando en Lenguaje Natural:** Le dices a Claude, de forma sencilla y directa, que guarde la conversación y le das un nombre de archivo. Por ejemplo: "Guarda en Dropbox como investigación de elefantes africanos".
+2.  **Claude Prepara los Datos:** Claude reconoce tu intención, prepara el contenido de la conversación actual y el nombre del archivo que has especificado.
+3.  **Llamada al Agente de IA de Make:** Claude envía estos datos (el contenido y el nombre del archivo) al agente de IA que tenemos configurado en Make.com.
+4.  **Ejecución del Escenario de Make:** El agente de IA de Make activa un escenario específico. Este escenario, que construiremos, es muy simple: toma los datos de Claude, los sube a tu carpeta de Dropbox designada como un archivo Markdown.
+5.  **Confirmación de Make a Claude:** Una vez que el archivo se ha subido con éxito a Dropbox, el escenario de Make envía una confirmación de vuelta a Claude.
+6.  **Respuesta de Claude:** Claude te informa que tu archivo ha sido guardado con éxito en Dropbox.
+
+Todo esto sucede sin que tengas que copiar, pegar o cambiar de ventana. El sistema se encargará de crear un archivo Markdown, que es un formato de texto plano muy versátil y fácil de leer.
+##Contenido END
+
+##itemID: 004
+##menu-item BEGIN
+Paso 1: Construcción del System Prompt para el Agente de IA de Make (con ayuda de Claude)
+##menu-item END
+##Contenido BEGIN
+Paso 1: Construcción del System Prompt para el Agente de IA de Make (con ayuda de Claude):
+
+Uno de los mayores obstáculos para mí fue obtener el "System Prompt" correcto para el agente de IA de Make.com. Afortunadamente, podemos usar Claude para ayudarnos a construirlo. Este prompt es crucial porque le dice al agente de Make qué hacer y cómo interpretar los comandos de Claude.
+
+Sigue estos pasos para crear tu System Prompt:
+
+1.  **Investiga sobre Agentes de IA y Prompts:** Comienza un nuevo chat en Claude y pídele que te ayude a investigar sobre "cómo escribir System Prompts efectivos para agentes de IA de make.com" o "investigación sobre agentes de IA con prompts". Recopila toda la información que puedas.
+2.  **Crea un Proyecto en Claude para Generar Prompts:** Utiliza la información recopilada para instruir a Claude a que te ayude a crear un System Prompt. Podrías decirle algo como: "Quiero que me ayudes a escribir estos prompts para que funcionen mejor de lo que yo puedo escribirlos. Quiero crear un agente de IA que llame a un escenario de make.com y guarde los datos en Dropbox. Si se proporciona un nombre de archivo, úsalo; de lo contrario, nombra el archivo automáticamente."
+3.  **Define la Funcionalidad Deseada:** Es importante que Claude entienda el "blueprint" del escenario que vas a llamar en Make.com. Aunque aún no lo hemos construido, puedes describirle lo que hará. Por ejemplo: "El escenario en Make.com recibirá dos parámetros: `file_name` y `document_data`. El `file_name` será el nombre que el usuario especifique para el archivo, y `document_data` será el contenido de la conversación que se debe guardar. El escenario subirá estos datos a una carpeta específica en Dropbox."
+4.  **Genera el System Prompt:** Basado en estas instrucciones, Claude debería generar un System Prompt bastante bueno. Este será el texto que pegarás en la configuración de tu agente de IA de Make.com. Este prompt instruirá a Claude sobre cómo usar la herramienta que le estás proporcionando, especificando que debe "llamar a la herramienta `guardar_en_Dropbox` con dos parámetros: `file_name` y `document_data`".
+5.  **Recursos Adicionales:** Puedes encontrar un repositorio público de Github con ejemplos de prompts y recursos relacionados, que te servirá de base para este proceso. (Nota: busca "Make.com AI Agent Github repository" para recursos).
+
+Este paso es fundamental para que Claude sepa cómo interactuar con tu agente de Make y cómo estructurar la información que le enviará.
+##Contenido END
+
+##itemID: 005
+##menu-item BEGIN
+Paso 2: Construcción del Escenario de Make.com
+##menu-item END
+##Contenido BEGIN
+Paso 2: Construcción del Escenario de Make.com:
+
+El escenario de Make.com es el corazón de nuestra automatización. Es la secuencia de acciones que se ejecutarán cuando Claude le pida al agente de Make que guarde un archivo. Lo mantendremos lo más simple posible para empezar.
+
+Sigue estos pasos para construir tu escenario:
+
+1.  **Crea un Nuevo Escenario en Make.com:**
+    *   Ve a tu panel de Make.com.
+    *   Haz clic en "Create a new scenario" (Crear un nuevo escenario).
+    *   Busca y selecciona el módulo "Webhooks".
+    *   Elige el tipo de webhook "Custom webhook". Esto generará una URL que Claude usará para enviar datos.
+    *   **Importante:** Cuando añadas este escenario a tu agente de IA, debe ser configurado como "On Demand" (Bajo Demanda) o un "Web Hook", no un escenario programado. Una pequeña flecha junto al módulo indica que es bajo demanda.
+
+2.  **Define las Entradas (Inputs) del Escenario:**
+    *   El módulo "Webhooks" actuará como el punto de entrada. Aquí es donde definimos qué datos esperamos recibir de Claude.
+    *   Dentro de la configuración del webhook, debes definir las "Data Structure" (Estructura de Datos).
+    *   Asegúrate de que los nombres de los parámetros coincidan exactamente con lo que tu System Prompt le dice a Claude que envíe. En nuestro caso, son `file_name` y `document_data`.
+    *   **file_name:**
+        *   Tipo: Text
+        *   Requerido: Sí (Required)
+        *   Sin espacios: Si necesitas un separador, usa un guion bajo (`_`) en lugar de un espacio.
+    *   **document_data:**
+        *   Tipo: Text
+        *   Requerido: Sí (Required)
+        *   Multiline: Sí (para acomodar el contenido completo de la conversación)
+    *   Estos nombres son cruciales porque Claude usará exactamente estas etiquetas para enviar la información.
+
+3.  **Añade el Módulo de Dropbox:**
+    *   Después del módulo "Webhooks", haz clic en el signo `+` para añadir otro módulo.
+    *   Busca "Dropbox" y selecciónalo.
+    *   Elige la acción "Upload a File" (Subir un archivo).
+    *   Conecta tu cuenta de Dropbox si aún no lo has hecho.
+    *   **Configura el módulo Dropbox:**
+        *   **Enter a File Name (Nombre del archivo):** Arrastra el elemento `file_name` del módulo "Webhooks" aquí.
+        *   **Source File (Archivo de origen):** Selecciona "Enter a text content" (Introducir contenido de texto).
+        *   **Content (Contenido):** Arrastra el elemento `document_data` del módulo "Webhooks" aquí.
+        *   **Folder (Carpeta):** Especifica la ruta de la carpeta de Dropbox donde quieres guardar los archivos (por ejemplo, `/AI_Conversations/Claude_Exports`). Para simplificar, puedes usar una carpeta fija inicialmente.
+
+4.  **Añade el Módulo de Respuesta de Webhook (Opcional pero recomendado):**
+    *   Después del módulo de Dropbox, añade otro módulo "Webhooks".
+    *   Elige la acción "Webhook Response".
+    *   En "Body", puedes poner un mensaje de éxito para Claude. Por ejemplo: `{"status": "success", "message": "Archivo guardado en Dropbox"}`.
+    *   Este módulo envía una respuesta de vuelta a Claude, confirmando que la acción se completó.
+
+5.  **Guarda y Prueba el Escenario (Manual):**
+    *   Guarda tu escenario.
+    *   Haz clic en "Run once" (Ejecutar una vez) y luego usa la herramienta "JSON" para simular la entrada de Claude (con `file_name` y `document_data`) para asegurarte de que funciona correctamente y sube un archivo de prueba a Dropbox.
+
+Este escenario es de un solo módulo principal (subida a Dropbox) con la gestión de entradas y salidas para Claude.
+##Contenido END
+
+##itemID: 006
+##menu-item BEGIN
+Paso 3: Configuración del Agente de IA en Make.com
+##menu-item END
+##Contenido BEGIN
+Paso 3: Configuración del Agente de IA en Make.com:
+
+Ahora que tenemos nuestro System Prompt y nuestro escenario de Make.com listos, es el momento de configurar el agente de IA que actuará como el puente entre Claude y Make.
+
+Sigue estos pasos para configurar tu Agente de IA:
+
+1.  **Crea un Nuevo Agente de IA:**
+    *   En Make.com, ve a la sección "AI Agents" (Agentes de IA).
+    *   Haz clic en "Create new agent" (Crear nuevo agente).
+    *   Dale un nombre descriptivo a tu agente (por ejemplo, "Agente de Claude para Dropbox").
+
+2.  **Copia el System Prompt:**
+    *   Pega el System Prompt que generaste con Claude (en el Paso 1) en el campo "System Instructions" (Instrucciones del sistema) o "System Prompt" de tu agente de IA. Este texto le dirá al agente cómo interpretar los comandos de Claude y qué herramienta usar.
+
+3.  **Añade el Escenario al Agente de IA:**
+    *   Dentro de la configuración del agente de IA, busca la sección para añadir escenarios o herramientas.
+    *   Haz clic en "Add scenario" (Añadir escenario) o "Add tool" (Añadir herramienta).
+    *   Aquí es donde conectarás el escenario de Make.com que creaste en el Paso 2.
+    *   Selecciona el escenario que deseas vincular.
+
+4.  **Configura los Parámetros del Escenario en el Agente:**
+    *   Cuando añades el escenario, deberás definir cómo el agente mapea los datos de Claude a los parámetros de entrada de tu escenario.
+    *   **Function Name (Nombre de la función):** Dale un nombre descriptivo, por ejemplo, `guardar_en_Dropbox`. Este nombre será el que tu System Prompt le indique a Claude que "llame".
+    *   **Parameters (Parámetros):** Define los parámetros que tu escenario espera. Estos deben coincidir con las entradas del webhook que configuraste en el escenario:
+        *   **file_name:**
+            *   Type: string
+            *   Description: The name of the file to save in Dropbox.
+            *   Required: true
+        *   **document_data:**
+            *   Type: string
+            *   Description: The content of the document/conversation to save.
+            *   Required: true
+            *   Multiline: true (si hay opción)
+    *   Asegúrate de que la descripción sea clara para que Claude entienda qué esperar de cada parámetro.
+
+5.  **Guarda el Agente de IA:**
+    *   Guarda la configuración de tu agente de IA.
+
+Con el agente de IA configurado, ya tiene la inteligencia para entender tus comandos y la conexión con el escenario que realizará la acción.
+##Contenido END
+
+##itemID: 007
+##menu-item BEGIN
+Paso 4: Conectando el Agente de IA de Make con Claude
+##menu-item END
+##Contenido BEGIN
+Paso 4: Conectando el Agente de IA de Make con Claude:
+
+El último paso crítico es establecer la conexión entre Claude AI y tu agente de IA de Make.com. Esto se hace a través de los "Connectors" (Conectores) en Claude.
+
+Sigue estos pasos para establecer la conexión:
+
+1.  **Obtén la URL del Servidor MCP de Make.com:**
+    *   En Make.com, ve a la configuración de tu agente de IA.
+    *   Busca la sección de "Connectors" o "Connections".
+    *   Aquí encontrarás la "MCP Server URL". Esta es la dirección a la que Claude enviará las solicitudes para interactuar con tu agente.
+
+2.  **Restringe el Acceso (¡Muy Importante!):**
+    *   Si usas la URL del servidor MCP completa sin restricciones, Claude podría ver *todos* tus escenarios de Make.com, incluidos los de otros equipos o clientes, lo cual es indeseable.
+    *   Para restringir el acceso y mostrar solo los escenarios relevantes para esta integración, debes añadir el ID de tu escenario de Make.com a la URL.
+    *   La URL restringida tendrá este formato:
+        `[URL_del_servidor_MCP]/sse?scenario_id=[ID_de_tu_escenario]`
+    *   Para encontrar el ID de tu escenario: Abre tu escenario en Make.com. El ID es un número largo que se encuentra en la URL de tu navegador (por ejemplo, `https://eu.make.com/scenarios/[ID_de_tu_escenario]/edit`).
+    *   **Para incluir múltiples escenarios:** Si decides agrupar varios escenarios de funciones similares bajo un mismo agente (por ejemplo, "guardar en Dropbox", "enviar email"), puedes añadir varios IDs de escenario usando un ampersand (`&`):
+        `[URL_del_servidor_MCP]/sse?scenario_id=[ID_Escenario_1]&scenario_id=[ID_Escenario_2]`
+
+3.  **Añade el Conector Personalizado en Claude:**
+    *   Abre Claude AI.
+    *   Ve a la configuración (Settings) y busca la sección "Connectors" (Conectores).
+    *   Haz clic en "Add custom connector" (Añadir conector personalizado).
+    *   Pega la URL del servidor MCP *restringida* que acabas de crear.
+    *   Sigue las instrucciones en pantalla para nombrar el conector y darle los permisos necesarios.
+
+4.  **Conecta en el Chat de Claude:**
+    *   Ahora, cuando inicies un nuevo chat en Claude o continúes uno, deberías ver un botón o una opción para "conectar" o "añadir herramientas".
+    *   Al hacer clic, solo debería aparecer el escenario (o los escenarios específicos) que incluiste en tu URL restringida.
+    *   Selecciona tu conector. Esto permitirá a Claude utilizar la herramienta de guardar en Dropbox a través de Make.com.
+
+Este proceso garantiza que Claude solo tenga acceso a las funcionalidades que tú deseas, manteniendo la seguridad y la organización. Se recomienda agrupar escenarios similares bajo un mismo conector para una gestión más eficiente.
+##Contenido END
+
+##itemID: 008
+##menu-item BEGIN
+Ejemplo Práctico y Ajustes Finales
+##menu-item END
+##Contenido BEGIN
+Ejemplo Práctico y Ajustes Finales:
+
+Con todo configurado, es hora de poner a prueba nuestra integración. Utilicemos un ejemplo para ver cómo funciona en la práctica.
+
+1.  **Realiza una Investigación en Claude:**
+    *   Inicia una conversación con Claude.
+    *   Pídele que investigue sobre un tema, por ejemplo, "investiga sobre la perca americana". Claude te devolverá información relevante.
+
+2.  **Usa el Comando de Guardado:**
+    *   Una vez que estés satisfecho con la investigación, usa tu comando de lenguaje natural para guardar:
+        "Guarda esto en Dropbox como investigación de perca americana para youtube"
+    *   Claude interpretará este comando y preparará los datos para enviarlos al agente de IA de Make.com.
+
+3.  **Permite la Ejecución del Conector:**
+    *   Claude te pedirá confirmación antes de llamar a la herramienta externa. Verás un mensaje como "¿Permitir que la herramienta 'guardar_en_Dropbox' se ejecute con estos parámetros?".
+    *   Haz clic en "Allow once" (Permitir una vez) o "Always allow" (Permitir siempre), según tu preferencia.
+    *   En este punto, Claude crea el JSON y se comunica con tu agente de Make.com, que a su vez activa tu escenario de Make.
+
+4.  **Verificación de la Ejecución y Confirmación de Claude:**
+    *   Make.com ejecuta el escenario: recibe los datos, sube el archivo a Dropbox y envía una respuesta de vuelta a Claude.
+    *   Claude te informará del éxito: "Guardó con éxito tu proyecto de perca americana en Dropbox".
+    *   Ve a la carpeta de Dropbox que especificaste en tu escenario. Deberías encontrar un nuevo archivo Markdown con el nombre "investigación de perca americana para youtube.md" (o el nombre exacto que especificaste).
+
+**Ajustes y Mejoras:**
+
+*   **Formato de Nombre de Archivo:** Puede que notes que el nombre del archivo no siempre se guarda en minúsculas o con guiones como quizás esperabas. Se guarda exactamente como lo escribiste en el comando. Esto es un detalle menor, pero puedes ajustar tu System Prompt para pedir a Claude que formatee el nombre de archivo de una manera específica (por ejemplo, con guiones bajos o todo en minúsculas).
+*   **Añadir Fecha al Nombre de Archivo:** Para una mejor organización, podrías modificar tu escenario de Make.com para añadir automáticamente la fecha al principio del nombre del archivo. Esto se puede hacer fácilmente utilizando una función de fecha y hora dentro de Make.com antes de que se use el nombre de archivo final en el módulo de Dropbox.
+
+Configurar esta integración completa, incluyendo la creación del System Prompt, el escenario de Make y la conexión con Claude, generalmente toma entre 30 y 60 minutos, dependiendo de tu familiaridad con las plataformas y de los pequeños obstáculos que puedas encontrar. ¡Disfruta de tu nueva productividad!
+##Contenido END
+
+##itemID: 009
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Este tutorial ha delineado un proceso robusto para integrar Claude AI con Dropbox a través de un agente de IA de Make.com. Los puntos clave de la integración incluyen:
+
+*   **Uso de Lenguaje Natural:** Permitir que Claude interprete comandos como "guardar esto en Dropbox" mediante un System Prompt bien diseñado.
+*   **Agentes de IA de Make.com:** Actúan como intermediarios inteligentes, traduciendo las intenciones de Claude en acciones específicas de Make.com.
+*   **Escenarios "On-Demand" o "Webhook" en Make.com:** Los escenarios deben estar configurados para activarse por una llamada externa (Webhook) o bajo demanda, y no programados, para que el agente de IA pueda invocarlos.
+*   **Estructura de Datos Clara:** La definición precisa de los parámetros de entrada (`file_name`, `document_data`) en el webhook del escenario de Make.com es fundamental para que Claude sepa cómo formatear la información que envía.
+*   **Restricción de Conectores en Claude:** Es crucial limitar el acceso de Claude a escenarios específicos de Make.com utilizando IDs de escenario en la URL del conector, evitando la exposición innecesaria de otros proyectos.
+*   **Integración de Dropbox:** El módulo de Dropbox en Make.com facilita la subida de archivos con contenido y nombres definidos dinámicamente.
+
+Este flujo de trabajo se basa en principios de automatización sin código y la interacción con modelos de lenguaje grandes (LLMs) que pueden extender su funcionalidad mediante el uso de herramientas externas. La capacidad de los LLMs para realizar llamadas a funciones (o "Tool Use") es una característica clave que permite este tipo de integraciones.
+
+**Referencias y Fuentes Técnicas Razonables:**
+
+*   **Documentación oficial de Make.com:**
+    *   Ayuda de Make.com sobre Webhooks: [https://www.make.com/en/help/modules/webhook](https://www.make.com/en/help/modules/webhook) (Aunque no hay una URL directa para Agentes de IA en la ayuda genérica, los principios de Webhooks son fundamentales).
+    *   Sección de Agentes de IA en la plataforma Make.com (dentro del panel de usuario): Acceso a la creación y gestión de agentes de IA, definición de System Prompts y conexión de escenarios.
+*   **Documentación de la API de Anthropic (Claude):**
+    *   Anthropic Tool Use Documentation: Explica cómo Claude puede interactuar con herramientas externas definidas por el usuario, lo que subyace a la funcionalidad del agente de IA de Make.com. (Referencia conceptual, no URL directa del producto Make.com).
+*   **Documentación de Dropbox para desarrolladores (API):**
+    *   La API de Dropbox permite la subida de archivos, lo que Make.com abstrae con su módulo de Dropbox. (Referencia conceptual a la tecnología subyacente que Make.com utiliza).
+*   **GitHub Repositorios Comunitarios/Ejemplos:**
+    *   Aunque no se proporciona una URL específica en la transcripción, es común que haya repositorios de código abierto o ejemplos de la comunidad que demuestran la implementación de agentes de IA con Make.com y otros LLMs. Buscar "Make.com AI Agent examples" o "Claude Tool Use with Make.com" en GitHub puede revelar recursos útiles. (La transcripción menciona un "repositorio público de Github" para los prompts).
+##Contenido END

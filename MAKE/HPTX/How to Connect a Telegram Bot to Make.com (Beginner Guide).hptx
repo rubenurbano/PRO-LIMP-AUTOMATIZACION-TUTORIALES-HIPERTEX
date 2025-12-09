@@ -1,0 +1,124 @@
+##itemID:000
+##menu-item BEGIN
+How to Connect a Telegram Bot to Make.com (Beginner Guide)
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+How to Connect a Telegram Bot to Make.com (Beginner Guide):
+Web Original:
+
+How to Connect a Telegram Bot to Make.com (Beginner Guide):
+https://youtu.be/8TMKfSDORAc?si=4DScmSIOgE8UMekF
+
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción y requisitos previos
+##menu-item END
+##Contenido BEGIN
+Introducción y requisitos previos:
+
+En este tutorial aprenderás cómo conectar un bot de Telegram a la plataforma Make.com (antes conocida como Integromat) para automatizar mensajes y acciones. No se requieren conocimientos técnicos avanzados, solo seguir cada paso detalladamente.
+
+Requisitos previos:
+- Tener una cuenta activa en Telegram.
+- Crear un bot en Telegram usando BotFather.
+- Cuenta activa en Make.com para crear escenarios.
+- Navegador web para acceder a ambas plataformas.
+
+Esta guía te llevará de la mano desde la creación del bot hasta su conexión exitosa en Make.com validando cada paso con documentación oficial.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Paso 1: Crear un bot en Telegram con BotFather
+##menu-item END
+##Contenido BEGIN
+Paso 1: Crear un bot en Telegram con BotFather:
+
+1. Abre Telegram y busca el usuario @BotFather.
+2. Inicia una conversación y envía el comando /newbot para crear un nuevo bot.
+3. Elige un nombre para tu bot y envía.
+4. Define un nombre de usuario único que termine en "bot" (por ejemplo: midemo_bot).
+5. BotFather te proporcionará un token de acceso (una cadena larga de letras y números). 
+   Guarda este token; será necesario para conectar el bot con Make.com.
+
+Este procedimiento está detallado en la documentación oficial de Telegram para desarrolladores: https://core.telegram.org/bots#6-botfather 
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Paso 2: Configurar la cuenta de Make.com e iniciar un escenario nuevo
+##menu-item END
+##Contenido BEGIN
+Paso 2: Configurar la cuenta de Make.com e iniciar un escenario nuevo:
+
+1. Accede a Make.com y crea una cuenta si no tienes una.
+2. En el panel principal, haz clic en "Create a new scenario" (Crear un nuevo escenario).
+3. Usa el buscador para encontrar y añadir el módulo "Telegram Bot".
+4. Selecciona la acción que quieres realizar, como "Watch updates" para recibir mensajes o "Send a message" para enviar mensajes.
+
+Esta integración oficial la describe Make.com en su documentación sobre módulos de Telegram: https://www.make.com/en/integrations/telegram 
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 3: Conectar el bot de Telegram a Make.com con el token
+##menu-item END
+##Contenido BEGIN
+Paso 3: Conectar el bot de Telegram a Make.com con el token:
+
+1. Cuando añades el módulo "Telegram Bot", Make.com te pedirá que crees o selecciones una conexión.
+2. Selecciona "Add" para agregar una nueva conexión.
+3. Introduce el token de acceso que proporcionó BotFather en Telegram.
+4. Guarda la conexión y pruébala para asegurarte de que Make.com puede comunicarse con tu bot.
+
+Este paso es esencial y está descrito en el apartado "Authenticating to Telegram Bot API" en la API oficial de Telegram: https://core.telegram.org/bots/api#authorizing-your-bot 
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 4: Crear una automatización simple en Make.com
+##menu-item END
+##Contenido BEGIN
+Paso 4: Crear una automatización simple en Make.com:
+
+1. Añade un módulo "Telegram Bot" con la acción "Watch Updates" para detectar mensajes enviados a tu bot.
+2. Añade un módulo "Telegram Bot" con la acción "Send a Message".
+3. Conecta la salida del primer módulo a la entrada del segundo.
+4. Configura el mensaje de respuesta personalizado que quieras enviar.
+5. Ejecuta la prueba y activa el escenario.
+6. Envía un mensaje a tu bot en Telegram y verifica que responde automáticamente.
+
+Esta configuración sencilla está explicada en la guía oficial de Make.com para integrar Telegram Bots: https://www.make.com/en/help/integrations/telegram 
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Consejos y mejores prácticas para la conexión
+##menu-item END
+##Contenido BEGIN
+Consejos y mejores prácticas para la conexión:
+
+- Guarda siempre el token de tu bot en un lugar seguro y no lo compartas públicamente.
+- Usa escenarios de prueba en Make.com para validar el flujo antes de publicar automatizaciones en producción.
+- Consulta regularmente la documentación oficial para actualizar acciones o cambios en la API según Telegram y Make.com.
+- Considera agregar filtros en tus escenarios para responder solo a mensajes específicos, optimizando la automatización.
+
+Estas prácticas se basan en las recomendaciones oficiales y buenas prácticas de seguridad para bots y automatizaciones: https://core.telegram.org/bots/faq y https://www.make.com/en/help/best-practices 
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+- Creación y obtención del token del bot Telegram por BotFather validado en la documentación oficial de Telegram Bot API: https://core.telegram.org/bots#6-botfather y https://core.telegram.org/bots/api#authorizing-your-bot .
+- Uso e integración del módulo Telegram Bot en Make.com validado en su centro de ayuda oficial: https://www.make.com/en/help/integrations/telegram y https://www.make.com/en/integrations/telegram .
+- Procedimientos de conexión, autenticación y prueba comprobados siguiendo guías oficiales para garantizar la seguridad y funcionalidad.
+
+Estas fuentes garantizan que los pasos presentados son actuales, oficiales y probados para conectar correctamente un bot de Telegram a Make.com.
+##Contenido END

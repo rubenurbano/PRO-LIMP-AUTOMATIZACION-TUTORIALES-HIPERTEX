@@ -1,0 +1,169 @@
+##itemID:000
+##menu-item BEGIN
+This Hidden Excel Button Saves HOURS
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+This Hidden Excel Button Saves HOURS:
+Web Original:
+This Hidden Excel Button Saves HOURS:
+https://youtu.be/zEbbB_al47M?si=ftbEI22T4a01Q7Pq
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción a la grabadora de macros
+##menu-item END
+##Contenido BEGIN
+Introducción a la grabadora de macros:
+Excel tiene un botón especial que te ayuda a hacer cosas automáticamente y ahorra mucho tiempo. Se llama la grabadora de macros. Puedes usarla con un programa de inteligencia artificial como ChatGPT para quitar tareas aburridas en Excel y trabajar como un experto. Por ejemplo, si tienes datos de pedidos cada semana, puedes limpiar los datos y hacer un informe bonito con solo un clic. El informe tiene un título, una fecha, una tabla con datos y un formato especial si la cantidad es mayor a cierto número. Limpiar datos manualmente toma tiempo, es aburrido y puede tener errores. Con la grabadora, haces todo automático.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Activar la pestaña Desarrollador
+##menu-item END
+##Contenido BEGIN
+Activar la pestaña Desarrollador:
+Hay una pestaña escondida en Excel llamada Desarrollador. Si no la ves, está apagada por defecto. Para encenderla, haz clic derecho en cualquier parte de la barra de arriba donde están las opciones, y elige personalizar la cinta. Busca la casilla de Desarrollador, que probablemente no está marcada. Márcala y haz clic en aceptar. Ahora verás la pestaña Desarrollador con botones para macros.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Qué es una macro
+##menu-item END
+##Contenido BEGIN
+Qué es una macro:
+Una macro es como una lista de pasos automáticos que Excel hace por ti. Puedes escribir el código tú mismo o usar la grabadora para que Excel grabe lo que haces. Vamos a usar la grabadora primero.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Grabar una macro
+##menu-item END
+##Contenido BEGIN
+Grabar una macro:
+Ve a la hoja con los datos. En la pestaña Desarrollador, haz clic en grabar macro. Sale una ventana. Dale un nombre a la macro, como preparar_datos. No uses espacios, usa guion bajo. Elige guardar en el libro de macros personal. Haz clic en aceptar. Ahora el botón dice detener grabación, y Excel graba todo lo que hagas.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Convertir datos en tabla
+##menu-item END
+##Contenido BEGIN
+Convertir datos en tabla:
+Selecciona una celda en los datos. Ve a la pestaña Insertar y elige Tabla. Confirma el rango y haz clic en aceptar. Esto hace una tabla de Excel.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Insertar filas para título
+##menu-item END
+##Contenido BEGIN
+Insertar filas para título:
+Para dejar espacio arriba, selecciona la primera fila, haz clic derecho y elige insertar. Hazlo tres veces para tener tres filas vacías.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Añadir título y fecha
+##menu-item END
+##Contenido BEGIN
+Añadir título y fecha:
+En la celda A1, escribe el título. Cambia la fuente a tamaño 16 y negrita. En otra celda, escribe fecha. Al lado, usa la fórmula =TODAY() para la fecha de hoy. Copia con Control C, y pega solo valores con Control Shift V para que quede fija.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Ordenar la tabla
+##menu-item END
+##Contenido BEGIN
+Ordenar la tabla:
+Ordena por la columna que quieras, como ID de producto. Elige de A a Z.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Aplicar formato condicional
+##menu-item END
+##Contenido BEGIN
+Aplicar formato condicional:
+Selecciona la columna Cantidad. En la pestaña Inicio, elige Formato Condicional, Resaltar Reglas de Celdas, Mayor que. Escribe 8, elige un color como rojo, y acepta.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Detener la grabación
+##menu-item END
+##Contenido BEGIN
+Detener la grabación:
+Ve a la pestaña Desarrollador y haz clic en detener grabación.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Ver el código
+##menu-item END
+##Contenido BEGIN
+Ver el código:
+Haz clic en Visual Basic o Alt F11. En el editor, busca el libro personal.xlsb, módulo uno, y verás el código de la macro.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Probar la macro
+##menu-item END
+##Contenido BEGIN
+Probar la macro:
+Abre otro archivo con datos nuevos. En Desarrollador, haz clic en macros o Alt F8. Elige la macro y ejecuta. Hace todo automático.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+Problemas con referencias fijas
+##menu-item END
+##Contenido BEGIN
+Problemas con referencias fijas:
+La macro puede no incluir todas las filas nuevas porque usa números fijos en el código, como hasta fila 64. También depende del nombre de la hoja.
+##Contenido END
+
+##itemID:014
+##menu-item BEGIN
+Usar IA para mejorar el código
+##menu-item END
+##Contenido BEGIN
+Usar IA para mejorar el código:
+Copia el código. Ve a ChatGPT o similar. Dile que tienes código de macro y quieres hacerlo flexible. Responde sus preguntas. Pega el nuevo código en el editor, cambia el nombre si es igual. Prueba en datos nuevos, ahora incluye todo.
+##Contenido END
+
+##itemID:015
+##menu-item BEGIN
+Libro de macros personal
+##menu-item END
+##Contenido BEGIN
+Libro de macros personal:
+Este libro se abre siempre con Excel, así las macros están disponibles en cualquier archivo. Puedes añadir botones a la cinta para ejecutarlas.
+##Contenido END
+
+##itemID:016
+##menu-item BEGIN
+Conclusión
+##menu-item END
+##Contenido BEGIN
+Conclusión:
+Usa la grabadora primero, luego IA para limpiar el código. Ahorra tiempo y es flexible. No es perfecto, pero ayuda mucho.
+
+
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+- Activar pestaña Desarrollador: Validado en documentación oficial de Microsoft. Enlace: https://support.microsoft.com/en-us/office/show-the-developer-tab-e1192344-5e56-4d45-931b-e5fd9bea2d45
+- Grabar una macro: Validado en documentación oficial de Microsoft. Enlace: https://support.microsoft.com/en-us/office/automate-tasks-with-the-macro-recorder-974ef220-f716-4e01-b015-3ea70e64937b
+- Libro de macros personal: Validado en documentación oficial de Microsoft. Enlace: https://support.microsoft.com/en-us/office/create-and-save-all-your-macros-in-a-single-workbook-66c97ab3-11c2-44db-b021-ae005a9bc790
+- Ver y editar código VBA: Validado en documentación oficial de Microsoft. Enlace: https://support.microsoft.com/en-us/office/edit-a-macro-ed9e8c3d-58fd-47a1-83eb-bdee680376bb
+- Formato condicional: Validado en documentación oficial de Microsoft. Enlace: https://support.microsoft.com/en-us/office/use-conditional-formatting-to-highlight-information-in-excel-fed60dfa-1d3f-4e13-9ecb-f1951ff89d7f
+- Convertir datos en tabla: Validado en documentación oficial de Microsoft. Enlace: https://support.microsoft.com/en-us/office/create-and-format-tables-e81aa349-b006-4f8a-9806-5af9df0ac664
+- Ordenar datos: Validado en documentación oficial de Microsoft. Enlace: https://support.microsoft.com/en-us/office/sort-data-in-a-range-or-table-in-excel-62d0b95d-2a90-4610-a6ae-2e545c4a4654
+- Fórmula TODAY: Validado en documentación oficial de Microsoft. Enlace: https://support.microsoft.com/en-us/office/today-function-5eb3078d-a82c-4736-8930-2f51a028fdd9
+- Pegar valores: Validado en documentación oficial de Microsoft. Enlace: https://support.microsoft.com/en-us/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad
+- Ejecutar macro: Validado en documentación oficial de Microsoft. Enlace: https://support.microsoft.com/en-us/office/run-a-macro-in-excel-5e855fd2-02d1-45f5-90a3-50e645fe3155
+- Uso de IA con Excel: Microsoft ofrece herramientas como Copilot para asistir en VBA, validado en: https://www.microsoft.com/en-us/microsoft-365/excel/ai-for-excel
+##Contenido END

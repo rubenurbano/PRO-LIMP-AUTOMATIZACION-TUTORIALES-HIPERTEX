@@ -1,0 +1,96 @@
+##itemID:000
+##menu-item BEGIN
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+How to Bulk Add Rows to Google Sheets with Make.com
+Web Original:
+
+[https://youtu.be/wWcqUdCBYCo?si=3EqsDrTBJ7yoB_Cx](https://youtu.be/wWcqUdCBYCo?si=3EqsDrTBJ7yoB_Cx)
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción al método de bulk add
+##menu-item END
+##Contenido BEGIN
+Introducción al método de bulk add:
+
+El método de "bulk add" permite agregar múltiples filas a una hoja de Google Sheets en una sola operación, lo que reduce el número de llamadas a la API y mejora la eficiencia y velocidad de las automatizaciones en Make.com.[1]
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Configuración inicial: Buscar filas en Google Sheets
+##menu-item END
+##Contenido BEGIN
+Configuración inicial: Buscar filas en Google Sheets:
+
+1. Agrega un módulo de Google Sheets en tu escenario.
+2. Selecciona la acción "Search rows".
+3. Elige la hoja de donde deseas obtener los datos (por ejemplo, "orders").
+4. Asegúrate de que la opción "Table contains headers" esté activada si tu hoja tiene encabezados.[1]
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Uso del Array Aggregator
+##menu-item END
+##Contenido BEGIN
+Uso del Array Aggregator:
+
+1. Agrega un módulo de "Array Aggregator" en el flujo.
+2. El Array Aggregator toma todas las filas obtenidas y las agrupa en un solo conjunto de datos (bundle).
+3. Esto evita que cada fila se procese individualmente, reduciendo el número de operaciones y llamadas a la API.[1]
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Configuración del módulo Bulk Add Rows
+##menu-item END
+##Contenido BEGIN
+Configuración del módulo Bulk Add Rows:
+
+1. Agrega un módulo de Google Sheets y selecciona la acción "Bulk add rows".
+2. Elige la hoja de destino donde quieres agregar los datos.
+3. Configura el rango de columnas (por ejemplo, A:Z) y asegúrate de que la estructura de datos coincida con la hoja de destino.
+4. Mapea los datos desde el Array Aggregator al módulo Bulk Add Rows, asegurándote de que la estructura de columnas sea correcta.[1]
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Ejecutar la automatización
+##menu-item END
+##Contenido BEGIN
+Ejecutar la automatización:
+
+1. Guarda y ejecuta el escenario.
+2. Todos los datos se agregarán a la hoja de destino en una sola operación, lo que es más rápido y eficiente que agregar filas individualmente.[1]
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Ventajas del método bulk add
+##menu-item END
+##Contenido BEGIN
+Ventajas del método bulk add:
+
+- Reduce el número de operaciones y llamadas a la API.
+- Ahorra costos en planes de Make.com.
+- Disminuye el riesgo de errores por límite de tasa de API.
+- Mejora la velocidad y confiabilidad de las automatizaciones.[1]
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+- La documentación oficial de Make.com sobre el módulo "Bulk add rows" en Google Sheets confirma que permite agregar múltiples filas en una sola operación: [Make.com Google Sheets Bulk Add Rows](https://www.make.com/en/help/app/google-sheets#bulk-add-rows).[1]
+- La documentación de Make.com sobre el Array Aggregator explica cómo agrupar múltiples datos en un solo bundle: [Make.com Array Aggregator](https://www.make.com/en/help/module/array-aggregator).[1]
+- El video tutorial original y la documentación de Make.com validan el proceso descrito: [How to Bulk Add Rows to Google Sheets with Make.com](https://youtu.be/wWcqUdCBYCo?si=3EqsDrTBJ7yoB_Cx).[1]
+##Contenido END
+
+[1](https://www.youtube.com/watch?v=wWcqUdCBYCo)

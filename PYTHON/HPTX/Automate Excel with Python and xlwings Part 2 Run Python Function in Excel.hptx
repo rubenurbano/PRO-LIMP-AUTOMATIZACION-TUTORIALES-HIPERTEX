@@ -1,0 +1,49 @@
+##itemID:000 ##menu-item BEGIN Automate Excel with Python and xlwings Part 2 Run Python Function in Excel WEB ORIGINAL: ##menu-item END ##Contenido BEGIN Automate Excel with Python and xlwings Part 2 Run Python Function in Excel: Web Original: Automate Excel with Python and xlwings Part 2 Run Python Function in Excel: https://youtu.be/uFJ8wpgoq_E?si=Q3HjvJbLdG0FrdrY
+
+PRO-LIMP AUTOMATIZACION +34 636832005 ##Contenido END
+
+##itemID:001 ##menu-item BEGIN Introducción y contexto ##menu-item END ##Contenido BEGIN Introducción y contexto: En el video anterior aprendimos a instalar la librería Excel wings y a poner o leer datos sencillos. En este video vamos a escribir una función en Python usando Excel para ejecutarla. Antes de usar una función de Python desde Excel, es necesario instalar un complemento de excelwings. ##Contenido END
+
+##itemID:002 ##menu-item BEGIN Descarga de archivos necesarios ##menu-item END ##Contenido BEGIN Descarga de archivos necesarios: Debes ir a la página web del repositorio de GitHub de la empresa Zuma Analects, que creó la librería. Busca el enlace latest link y baja hasta encontrar la descarga de la versión de excel wings. Para saber qué versión usas, escribe pip list en tu consola; por ejemplo, la versión 15.4. Descarga el archivo de complemento (excelam) a la misma carpeta donde tienes tu código de Python. ##Contenido END
+
+##itemID:003 ##menu-item BEGIN Ubicación de los archivos DLL ##menu-item END ##Contenido BEGIN Ubicación de los archivos DLL: Cuando descargaste la librería, también vinieron dos archivos DLL. Debes mover el archivo DLL a la misma carpeta donde está el intérprete de Python, que es el archivo exe de Python. Asegúrate de que el archivo DLL esté en esa misma ubicación. ##Contenido END
+
+##itemID:004 ##menu-item BEGIN Activación de la pestaña Programador ##menu-item END ##Contenido BEGIN Activación de la pestaña Programador: Abre un archivo de Excel. Si la pestaña Programador no está activa, ve a Archivo y luego a Opciones. Haz clic en Personalizar cinta de opciones y asegúrate de que la casilla de la pestaña Programador esté marcada. ##Contenido END
+
+##itemID:005 ##menu-item BEGIN Instalación del complemento en Excel ##menu-item END ##Contenido BEGIN Instalación del complemento en Excel: Con la pestaña Programador activa, haz clic en Complementos de Excel. Busca el archivo del complemento que descargaste anteriormente. Para facilitar esto, puedes mover el archivo a tu carpeta de complementos. Haz clic en Aceptar para añadir el archivo a tu lista. Deberías ver la pestaña del complemento de Excel disponible. Excel wings detecta automáticamente si usas un entorno especial o normal. ##Contenido END
+
+##itemID:006 ##menu-item BEGIN Configuración de referencias en VBA ##menu-item END ##Contenido BEGIN Configuración de referencias en VBA: Para escribir el código de la función, abre la ventana de VBA (Visual Basic for Applications). Antes de usar la función Run Python, ve a Herramientas y luego a Referencias. Asegúrate de que la referencia de Excel wings esté en tu lista de referencias disponibles y haz clic en Aceptar. Esto te permite usar todas las funciones del complemento. ##Contenido END
+
+##itemID:007 ##menu-item BEGIN Creación de la función en Python ##menu-item END ##Contenido BEGIN Creación de la función en Python: Abre tu editor de Python y crea un archivo llamado hello.py. Dentro, crea una función sencilla llamada hello que trabaje en el libro de Excel actual. Configura la función para que escriba el valor hello world en la celda A1 de la hoja de datos. Asegúrate de importar la librería excel wings en tu código. ##Contenido END
+
+##itemID:008 ##menu-item BEGIN Ejecución con RunPython ##menu-item END ##Contenido BEGIN Ejecución con RunPython: Vuelve a la ventana VBA de Excel. Para llamar a la función, usa RunPython. Debes indicar el módulo (nombre del archivo sin .py) y la función específica, por ejemplo hello.say_hello. Ve a la pestaña Vista, luego a Macros, selecciona tu macro y ejecútala. VBA buscará el archivo y la función, ejecutará el código y verás hello world en la celda A1. ##Contenido END
+
+##itemID:009 ##menu-item BEGIN Funciones definidas por el usuario (UDF) ##menu-item END ##Contenido BEGIN Funciones definidas por el usuario (UDF): Para crear una función que se use como las de Excel pero escrita en Python, usa el decorador XW.defunc seguido del nombre de la función. Por ejemplo, una función hello que tome un dato name y devuelva hello más el nombre. En Excel, ve a la pestaña del complemento excel wings, escribe el nombre de tu archivo Python sin extensión y haz clic en Import Functions. Si no hay errores, puedes usar la fórmula =hello(nombre) en una celda (recuerda usar comillas dobles para texto). ##Contenido END
+
+##itemID:010 ##menu-item BEGIN Acceso al código fuente del complemento ##menu-item END ##Contenido BEGIN Acceso al código fuente del complemento: Si necesitas revisar el código del complemento para solucionar problemas, haz doble clic en él. Te pedirá una contraseña. La contraseña es xlwings (todo en minúsculas). Esto te permitirá ver el código fuente del archivo del complemento. ##Contenido END
+
+##itemID:011 ##menu-item BEGIN VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES ##menu-item END ##Contenido BEGIN VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES: Se ha validado la información con la documentación oficial de xlwings y recursos técnicos relacionados.
+
+Puntos técnicos validados:
+
+Instalación: La documentación oficial confirma que xlwings requiere una instalación de Python y Excel. Se puede instalar vía pip (pip install xlwings).
+
+Complemento (Add-in): Es necesario para usar RunPython y UDFs desde Excel. Aunque el video muestra una instalación manual moviendo archivos, la documentación oficial también ofrece el comando "xlwings addin install" para automatizar este proceso.
+
+UDFs (User Defined Functions): Se confirma el uso del decorador "@xw.func" (mencionado como XW.defunc en el video) para importar funciones de Python a Excel.
+
+Referencias VBA: Para usar la librería desde VBA es necesario activar la referencia a xlwings en el editor de VBA, tal como se describe.
+
+Enlaces a documentación oficial:
+
+Instalación y Prerrequisitos: https://docs.xlwings.org/en/stable/installation.html
+
+Configuración del Add-in: https://docs.xlwings.org/en/stable/addin.html
+
+User Defined Functions (UDFs): https://docs.xlwings.org/en/stable/udfs.html
+
+API Reference (RunPython): https://docs.xlwings.org/en/stable/api.html 
+
+Automate Excel with Python and xlwings Part 2 Run Python Function in Excel https://youtu.be/uFJ8wpgoq_E?si=Q3HjvJbLdG0FrdrY PRO-LIMP AUTOMATIZACION +34 636832005
+
+##Contenido END

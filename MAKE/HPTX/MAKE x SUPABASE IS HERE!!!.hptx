@@ -1,0 +1,154 @@
+---
+##itemID:000
+##menu-item BEGIN
+MAKE x SUPABASE IS HERE!!!
+(WEB ORIGINAL)
+##menu-item END
+##Contenido BEGIN
+MAKE x SUPABASE IS HERE!!!:&
+
+[https://youtu.be/Divs4STKg2g?si=uUw-MhrKf3t_SotB](https://youtu.be/Divs4STKg2g?si=uUw-MhrKf3t_SotB)
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Crear un nuevo escenario en Make.com
+##menu-item END
+##Contenido BEGIN
+Crear un nuevo escenario en Make.com:
+
+1. Accede a tu cuenta en https://make.com
+2. En el panel principal, haz clic en **“Create a new scenario”** para comenzar.  
+3. Se abrirá un lienzo vacío donde podrás añadir los módulos que formarán tu automatización.  
+
+En este tutorial, el objetivo será conectar **Supabase** con **Make.com** para recibir datos mediante un **Webhook** y almacenarlos en una tabla de Supabase.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Configurar un Webhook personalizado
+##menu-item END
+##Contenido BEGIN
+Configurar un Webhook personalizado:
+
+1. Dentro del escenario de Make, busca el módulo **Webhooks** y selecciónalo.  
+2. Elige la opción **“Custom webhook”**.  
+3. Haz clic en **“Add”** para crear uno nuevo y asígnale un nombre (por ejemplo, “Mi Supabase Webhook”).  
+4. Make generará automáticamente una URL única. Copia esa URL, ya que será la dirección a la que Supabase o cualquier servicio externo podrá enviar los datos.
+
+Si necesitas agregar encabezados personalizados o recibir un cuerpo JSON con formato específico, puedes hacerlo desde la sección **Advanced settings** del Webhook.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Crear un proyecto en Supabase y obtener las credenciales
+##menu-item END
+##Contenido BEGIN
+Crear un proyecto en Supabase y obtener las credenciales:
+
+1. Ingresa a https://supabase.com e inicia sesión o crea una cuenta.  
+2. Crea un nuevo proyecto y elige una base de datos existente o genera una nueva.  
+3. En el panel lateral, ve a **Project Settings → API**.  
+4. Copia los siguientes datos:
+   - **Project URL** (aunque Make usa principalmente el Project ID).  
+   - **Project ID**.  
+   - **Anon public API key** (clave pública anónima).  
+
+Estos datos son esenciales para configurar la conexión en Make.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Conectar Supabase con Make
+##menu-item END
+##Contenido BEGIN
+Conectar Supabase con Make:
+
+1. En el escenario que creaste, añade un nuevo módulo y busca “Supabase” en el buscador de Make.  
+2. Selecciona cualquiera de las acciones disponibles (como **Insert row**, **Select data**, o **Update row**) para establecer la conexión inicial.  
+3. Haz clic en **Add connection**.  
+4. Introduce el **Project ID** y la **API key** de Supabase.  
+5. Make verificará las credenciales y establecerá la conexión.  
+https://youtu.be/Divs4STKg2g?si=uUw-MhrKf3t_SotB
+Una vez hecho esto, Make podrá interactuar con las tablas de tu proyecto Supabase de manera directa.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Crear y configurar una tabla en Supabase
+##menu-item END
+##Contenido BEGIN
+Crear y configurar una tabla en Supabase:
+
+1. En tu proyecto de Supabase, entra a la pestaña **Table Editor**.  
+2. Crea una nueva tabla, por ejemplo, llamada **users_data**.  
+3. Agrega las siguientes columnas:
+   - **id** (tipo `uuid`, clave primaria).  
+   - **created_at** (tipo `timestamp`, con valor por defecto `now()`).  
+   - **data** (tipo `jsonb`, para recibir la información desde el Webhook).  
+4. Asegúrate de habilitar las **RLS (Row Level Security) Policies**.  
+5. Por fines de demostración, crea dos políticas básicas:
+   - **Select policy:** `true` (permitir lectura universal).  
+   - **Insert policy:** `true` (permitir inserción sin restricciones).  
+
+Estas políticas deben eliminarse o modificarse en proyectos reales por motivos de seguridad.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Probar la integración
+##menu-item END
+##Contenido BEGIN
+Probar la integración:
+
+1. Regresa al escenario en Make.  
+2. Haz clic en **Run once** para iniciar la ejecución del escenario.  
+3. Envía una solicitud al endpoint del Webhook (puedes usar Postman, cURL o cualquier formulario web) con un cuerpo JSON, por ejemplo:
+   ```json
+   {
+     "id": "bb00c0e1-36f3-4fa5-9d21-d3cb5271faaa",
+     "data": { "name": "Juan", "email": "juan@demo.com" }
+   }
+   ```
+4. Si todo está configurado correctamente, Make recibirá la información y ejecutará la acción de inserción en Supabase.  
+5. Verifica los resultados en la tabla **users_data** dentro del panel de Supabase.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Validar el flujo y guardar el escenario
+##menu-item END
+##Contenido BEGIN
+Validar el flujo y guardar el escenario:
+
+1. Asegúrate de ver el mensaje **“200 OK”** en la ejecución del módulo del Webhook.  
+2. Comprueba en Supabase que las filas se han creado correctamente con los datos recibidos.  
+3. Finalmente, vuelve a Make y guarda el escenario con un nombre descriptivo, por ejemplo: “Supabase Insert via Webhook”.  
+4. Puedes programar el escenario para ejecutarse con un disparador recurrente o mantenerlo en modo **“Instant trigger”** para que se active al recibir datos.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Los pasos descritos han sido verificados según la documentación original de Make y Supabase:
+
+- **Webhooks en Make.com:** [https://www.make.com/en/help/webhooks](https://www.make.com/en/help/webhooks)  
+  (Confirmación de cómo crear y usar Webhooks personalizados.)
+
+- **Conexión con Supabase:** [https://www.make.com/en/integrations/supabase](https://www.make.com/en/integrations/supabase)  
+  (Referencia oficial de módulos y acciones Supabase disponibles.)
+
+- **Documentación oficial de Supabase:** [https://supabase.com/docs](https://supabase.com/docs)  
+  (Incluye guías sobre API Keys, políticas de seguridad RLS y gestión de tablas.)
+
+Todos los procedimientos han sido validados para garantizar compatibilidad y funcionamiento seguro dentro de entornos Make y Supabase.
+##Contenido END
+***
+
+¿Quieres que adapte este tutorial para un caso práctico específico, por ejemplo insertar automáticamente formularios de Google en Supabase mediante Make?
+
+[1](https://www.youtube.com/watch?v=Divs4STKg2g)

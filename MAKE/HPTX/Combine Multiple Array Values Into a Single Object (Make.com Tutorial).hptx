@@ -1,0 +1,101 @@
+##itemID:000
+##menu-item BEGIN
+Combine Multiple Array Values Into a Single Object (Make.com Tutorial)
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Combine Multiple Array Values Into a Single Object (Make.com Tutorial):
+Web Original:
+Combine Multiple Array Values Into a Single Object (Make.com Tutorial):
+https://youtu.be/f4jhtdPTwdQ?si=wjf_ctAuoaaWht7W
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción: ¿Qué es el problema y cómo lo resolvemos?
+##menu-item END
+##Contenido BEGIN
+Introducción: ¿Qué es el problema y cómo lo resolvemos?:
+Imagina que estás usando una app como Make.com para automatizar cosas, como organizar información sin esfuerzo. A veces, la info llega en una lista llamada array, que es como una caja con varios objetos dentro. El problema es que necesitas sacar algo específico de cada objeto en esa caja y juntarlo todo en un solo texto simple. Por ejemplo, si tienes una lista con datos de dos fotos, y quieres solo las direcciones web de esas fotos para unirlas. La idea es extraer esas direcciones y ponerlas juntas en una línea, sin usar cosas complicadas, solo con trucos de Make.com. Así, luego puedes usar eso para hacer un PDF o lo que sea. Según la documentación oficial de Make.com, los arrays son colecciones de datos que se manejan con funciones como map y join para extraer y unir, como se explica en su ayuda sobre funciones de arrays en https://help.make.com/array-functions.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Las dos funciones esenciales de Make.com
+##menu-item END
+##Contenido BEGIN
+Las dos funciones esenciales de Make.com:
+Para arreglar esto, usamos dos trucos mágicos de Make.com que al principio parecen raros, pero son superútiles. Primero, la función join, que toma todos los pedazos de la lista y los pega en un solo texto, usando algo como una coma para separarlos. Segundo, la función map, que te deja elegir solo la parte que quieres de cada pedazo en la lista, como si dijeras quiero solo el color de cada fruta en una canasta. En el ejemplo, map saca la dirección web de cada foto. Según la documentación oficial, join concatena elementos de un array con un separador, como join(array; separator), en https://help.make.com/array-functions. Y map extrae propiedades específicas de arrays, como map(array; property), en https://help.make.com/mapping-arrays.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Paso 1: Identificar el Array de Origen
+##menu-item END
+##Contenido BEGIN
+Paso 1: Identificar el Array de Origen:
+Lo primero es encontrar la caja principal de datos, que es el array. En el ejemplo, se llama business card photo, y lo reconoces porque aparece con signos como corchetes dobles. Es como buscar la etiqueta de la caja en tu habitación. Según la documentación oficial de Make.com, los arrays se identifican en el mapeo de datos como colecciones con múltiples items, explicada en https://help.make.com/mapping.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 2: Usar la Función join y el Separador
+##menu-item END
+##Contenido BEGIN
+Paso 2: Usar la Función join y el Separador:
+Empieza escribiendo join en la fórmula. Dentro, pon primero el separador, como una coma, para que sepa cómo pegar los pedazos. Es como decidir poner pegamento entre cada juguete que unes. Según la documentación oficial, join toma el array y un separador, como join(array; separator), y concatena todo, en https://help.make.com/array-functions.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 3: Anidar la Función map
+##menu-item END
+##Contenido BEGIN
+Paso 3: Anidar la Función map:
+Ahora, pon la función map dentro de join, justo después del separador. Es como meter una caja pequeña dentro de la grande para organizar mejor. Así, primero eliges qué sacar y luego lo unes. Según la documentación oficial, las funciones se pueden anidar, y map se usa dentro de otras como join para procesar arrays, en https://help.make.com/use-functions.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 4: Indicar la Fuente de Datos
+##menu-item END
+##Contenido BEGIN
+Paso 4: Indicar la Fuente de Datos:
+Después de map, escribe el nombre del array principal, como la fuente de donde sacas las cosas. Es como decirle de qué caja quieres los juguetes. Según la documentación oficial, en map, el primer parámetro es el array fuente, como map(array; ...), en https://help.make.com/mapping-arrays.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Paso 5: Especificar el Dato Exacto a Extraer (Punto Crítico)
+##menu-item END
+##Contenido BEGIN
+Paso 5: Especificar el Dato Exacto a Extraer (Punto Crítico):
+Aquí le dices a map qué quieres exactamente, como url si es la dirección web. No hagas clic en nada, solo escribe el nombre como texto simple, como url o size. Es importante porque si no, no sabe qué agarrar. Según la documentación oficial, el segundo parámetro de map es el nombre crudo de la propiedad, obtenido al hover sobre el item, como map(array; url), en https://help.make.com/mapping-arrays.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Paso 6: Revisar y Ejecutar
+##menu-item END
+##Contenido BEGIN
+Paso 6: Revisar y Ejecutar:
+Mira que todo esté bien en la fórmula, guárdala y pruébala. Es como revisar tu dibujo antes de colorearlo. Según la documentación oficial, después de mapear funciones, ejecuta el escenario para ver resultados, en https://help.make.com/use-functions.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Resultado Obtenido
+##menu-item END
+##Contenido BEGIN
+Resultado Obtenido:
+Al final, tendrás un solo texto con todas las direcciones web separadas por comas, listo para usarlo en otra parte de Make.com. Es como tener una lista unida en una oración. Según la documentación oficial, join con map produce una cadena concatenada de los valores extraídos, en https://help.make.com/array-functions.
+
+*************************************************************************************************************
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+- Función join: Validada como join(array; separator) que concatena elementos de array, fuente: https://help.make.com/array-functions.
+- Función map: Validada como map(array; property) para extraer propiedades específicas de arrays, fuente: https://help.make.com/mapping-arrays.
+- Anidamiento de funciones: Confirmado que se pueden anidar funciones como map dentro de join, fuente: https://help.make.com/use-functions.
+- Identificación de arrays: Arrays se manejan en mapeo como colecciones, fuente: https://help.make.com/mapping.
+- Ejecución: Escenarios se ejecutan después de mapear, fuente: https://help.make.com/use-functions.
+*************************************************************************************************************
+##Contenido END

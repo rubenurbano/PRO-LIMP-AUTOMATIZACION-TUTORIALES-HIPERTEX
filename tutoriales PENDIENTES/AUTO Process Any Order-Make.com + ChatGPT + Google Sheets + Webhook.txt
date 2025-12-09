@@ -1,0 +1,90 @@
+### **Outline del Video**
+
+**Nombre del video:**   AUTO Process Any Order-Make.com + ChatGPT + Google Sheets + Webhook
+
+**URL del video:**   https://youtu.be/X_Xd82jFsns?si=CConzWNYM8WB2Juf
+
+---
+
+### **I. Introducción: ¿Qué vamos a automatizar?**
+
+El objetivo principal de este proyecto es crear un sistema que pueda **analizar un mensaje de un cliente** (por ejemplo, "Cuál es el estado de mi pedido 10,08"), **encontrar la información** necesaria, **escribir una respuesta** profesional (ej. "El pedido está en proceso"), y enviarla de vuelta automáticamente.
+
+Las herramientas clave que se conectan para lograr esto son: **Make.com** (que conecta las herramientas), **ChatGPT** (que entiende y escribe), **Google Sheets** (donde guardamos los datos de los pedidos) y **Webhook** (el método para recibir la pregunta).
+
+### **II. El Punto de Inicio: Recibir la Pregunta (Webhook en Make.com)**
+
+1.  **¿Qué es un Webhook?**
+    *   Imagina que un Webhook es como **una dirección de correo única** que Make.com te da. Permite que la información sea enviada a Make.com desde cualquier otro lugar o plataforma.
+    *   Se configura un módulo llamado *Custom Webhook* dentro de Make.com para iniciar el escenario.
+
+2.  **Prueba de Conexión:**
+    *   Al copiar la dirección del Webhook (que parece un enlace) y "dispararla" (ejecutarla) en un navegador o una herramienta de prueba, se activa el escenario en Make.com.
+    *   Para enviar datos reales (como la pregunta del cliente), se puede usar una herramienta externa (como reqbin.com).
+
+3.  **Envío de Datos:**
+    *   Se cambia el método de envío a **"POST"** porque "POST" permite enviar información al Webhook, mientras que "GET" solo sirve para llamar o obtener información.
+    *   Se simula la pregunta del cliente enviándola al Webhook. El dato que se envía tiene una "clave" (key), que se llama `question`, y un "valor" (value), que es la pregunta real (ej. "¿Cuál es mi estado en el pedido 10,08?").
+
+### **III. Procesamiento Inteligente: Entender la Pregunta (ChatGPT)**
+
+El objetivo aquí es que ChatGPT **extraiga el número de pedido** de la pregunta del cliente para poder buscarlo después en la base de datos.
+
+1.  **Configuración de ChatGPT (OpenAI):**
+    *   Se añade un módulo de OpenAI y se selecciona la acción "Create a completion".
+    *   Se requiere una **API Key** (una especie de contraseña de desarrollador) para conectar Make.com con los servicios de ChatGPT.
+
+2.  **Paso 1: Extraer el ID y Razonar (Primer Llamado a GPT):**
+    *   Se elige un modelo, como GPT-4o.
+    *   Se le dan **instrucciones muy específicas** a ChatGPT (a través del "mensaje del sistema"):
+        *   "Extrae el ID del pedido de la pregunta del usuario".
+        *   Se le describe cómo se ve el ID (ej. "tiene cinco dígitos y empieza con 10...").
+        *   **Instrucción Clave:** Se le pide que **"piense paso a paso"** y luego escriba la "respuesta final" con el número.
+    *   *Resultado:* GPT razona y devuelve un texto que incluye tanto su proceso de pensamiento como el número de pedido.
+
+3.  **Paso 2: Limpiar el ID (Segundo Llamado a GPT):**
+    *   Se usa un segundo módulo de ChatGPT.
+    *   **Propósito:** Este paso es crucial porque necesitamos **solo el número puro** del ID del pedido para buscarlo en la hoja de cálculo.
+    *   **Instrucción:** Se le dice a GPT que mire el texto del paso anterior y que **"solo debe extraer el ID del pedido sin ninguna otra letra o palabra"**.
+    *   *Resultado:* El output es solo la cadena numérica limpia (ej. `10008`).
+
+### **IV. Buscar la Información (Google Sheets)**
+
+1.  **Conexión a la Base de Datos:**
+    *   Se añade un módulo de Google Sheets y se selecciona la acción **"Search rows"** (Buscar filas).
+    *   Se conecta la cuenta de Google y se selecciona la hoja de cálculo que contiene los datos de los pedidos.
+
+2.  **El Filtro de Búsqueda:**
+    *   Se configura un filtro para buscar la información del pedido.
+    *   El filtro debe establecer que la columna de **"Order number"** (Número de pedido) en Google Sheets debe ser igual al **resultado puro** que salió del Segundo Llamado a ChatGPT.
+    *   *Resultado:* Una vez que se encuentra el número, el sistema recupera todos los datos asociados a ese pedido (nombre del cliente, estado, fecha de entrega estimada, etc.).
+
+### **V. Escribir la Respuesta (ChatGPT Final)**
+
+1.  **Tercer Llamado a GPT:**
+    *   Se usa un tercer módulo de ChatGPT para que escriba el mensaje final dirigido al cliente.
+
+2.  **Entrada de Datos:**
+    *   Se alimenta a este módulo con dos tipos de información:
+        1.  La **pregunta original** del usuario (para contexto).
+        2.  **Todos los datos del pedido** recuperados de Google Sheets (estado, nombre, fecha estimada, número de seguimiento, etc.).
+
+3.  **Instrucción de Respuesta:**
+    *   Se le pide a GPT que **escriba la respuesta al usuario**.
+    *   Se le indica que **"comience directamente con el texto de la respuesta y no dé ninguna otra salida"**. Esto asegura que el resultado sea solo el mensaje listo para enviar (ej. "Su pedido 10,08 está procesando...").
+
+### **VI. Enviar el Mensaje (Respuesta Webhook)**
+
+1.  **Respuesta Directa:**
+    *   El módulo final es **Webhook response**.
+    *   El "cuerpo" (body) de la respuesta se llena con el texto generado por el último módulo de ChatGPT.
+    *   Esto permite enviar la respuesta de vuelta directamente al lugar que hizo la solicitud inicial (el Webhook).
+
+2.  **Opciones Alternativas de Envío:**
+    *   En lugar de usar la respuesta del Webhook, la información también podría enviarse a través de otros módulos como **Gmail** (para enviar un email) o **Telegram**.
+
+### **VII. Consejo Adicional: Optimización de Modelos**
+
+*   Se recomienda usar modelos como **GPT-4o** (que es rápido) o, mejor aún, un modelo **Mini** (como 03 mini), ya que es más económico y puede ser más preciso e inteligente.
+*   **Si usas Mini:** Si seleccionas un modelo "Mini" (que ya razona por defecto), **no necesitas pedirle que "piense paso a paso"**. Simplemente se le indica que devuelva solo el número de pedido.
+*   **Ahorro de Pasos:** Usando el modelo Mini de esta forma, **puedes eliminar el Segundo Llamado a ChatGPT** (el de limpieza), ya que el primer módulo entregará el número limpio directamente, simplificando el escenario.

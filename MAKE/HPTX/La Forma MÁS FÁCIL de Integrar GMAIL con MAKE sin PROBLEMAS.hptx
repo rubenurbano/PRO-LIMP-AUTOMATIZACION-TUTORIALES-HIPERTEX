@@ -1,0 +1,114 @@
+##itemID:000
+##menu-item BEGIN
+La Forma MÁS FÁCIL de Integrar GMAIL con MAKE sin PROBLEMAS
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+La Forma MÁS FÁCIL de Integrar GMAIL con MAKE sin PROBLEMAS:
+Web Original:
+La Forma MÁS FÁCIL de Integrar GMAIL con MAKE sin PROBLEMAS:
+https://youtu.be/-WBPe6fx34M?si=IjSy2zou1wZh6AeR
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción
+##menu-item END
+##Contenido BEGIN
+Introducción:
+Hola, amigo. Imagina que quieres que una herramienta llamada Make use tu correo de Gmail para enviar mensajes automáticamente. Esto es genial para hacer tareas repetidas más fáciles. Si tu correo es uno gratis que termina en @gmail.com o @googlemail.com, hay unos pasos especiales que debes seguir solo una vez para que todo funcione bien sin errores. Vamos a explicarlo paso a paso como si fueras nuevo en esto. Según la documentación oficial de Make, esto se necesita para cuentas personales de Google.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+I. Intento Inicial en Make y la Necesidad de Configuración
+##menu-item END
+##Contenido BEGIN
+I. Intento Inicial en Make y la Necesidad de Configuración:
+Cuando intentas agregar tu Gmail en Make, pones tus datos y das clic en añadir. Make te dice que para cuentas personales de Google, sigas una guía especial, o saldrá un error. Da clic en el botón de la guía y se abre una pestaña nueva con instrucciones. Según la documentación oficial de Make en su centro de ayuda, este aviso aparece para guiarte en la conexión segura con OAuth.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+II. Configuración Principal en Google Cloud Console
+##menu-item END
+##Contenido BEGIN
+II. Configuración Principal en Google Cloud Console:
+Este es el lugar donde le pides permiso a Google para que Make use tu Gmail. Es como pedir una llave especial. Vamos a los pasos uno por uno. Según la documentación oficial de Google Cloud, este console es donde manejas proyectos y APIs para tus apps.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+A. Crear un Proyecto Nuevo
+##menu-item END
+##Contenido BEGIN
+A. Crear un Proyecto Nuevo:
+Abre una pestaña nueva en tu navegador y busca Google Cloud Console. Entra al primer resultado. Inicia sesión con tu cuenta de Google. En el menú de arriba, elige o crea un proyecto nuevo. Ponle un nombre simple como make.com. Si ya tienes uno viejo de Integromat, úsalo. Asegúrate de que aparezca seleccionado arriba. Según la documentación oficial de Google, crear un proyecto es el primer paso para usar APIs como Gmail.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+B. Habilitar la API de Gmail
+##menu-item END
+##Contenido BEGIN
+B. Habilitar la API de Gmail:
+En el menú izquierdo, ve a APIs and Services y luego a Library. Busca Gmail y entra. Da clic en Enable si no está activado. Si ves un check, ya está listo. Según la documentación oficial de Google para Gmail API, habilitar la API permite que tu proyecto use funciones como enviar correos.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+C. Configurar la Pantalla de Consentimiento
+##menu-item END
+##Contenido BEGIN
+C. Configurar la Pantalla de Consentimiento:
+Vuelve a APIs and Services y elige OAuth Consent Screen. Selecciona External porque es una cuenta gratis, no de pago. Pon Make como nombre de la app. Agrega tu email en contacto del desarrollador. En dominios autorizados, añade make.com e integrat.com como dice la guía. Guarda y continúa. Según la documentación oficial de Google sobre OAuth, esta pantalla es para que los usuarios vean qué permisos das a la app.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+D. Añadir los Permisos
+##menu-item END
+##Contenido BEGIN
+D. Añadir los Permisos:
+En Scopes, da clic en Add or remove scopes. Copia los permisos de la guía y búscalos: uno para Gmail como https://mail.google.com, uno para info de usuario como https://www.googleapis.com/auth/userinfo.email, y dos para Google Drive como https://www.googleapis.com/auth/drive y https://www.googleapis.com/auth/drive.readonly. Marca los cuatro, actualiza y guarda. La parte de test no es нужна. Según la documentación oficial de Google para scopes de Gmail API, estos permisos permiten enviar correos y acceder a info básica.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+E. Crear Credenciales
+##menu-item END
+##Contenido BEGIN
+E. Crear Credenciales:
+En la barra lateral, ve a Credentials. Da clic en Create Credentials y elige OAuth client ID. Selecciona Web application. Pon un nombre como make.com. En Authorized redirect URIs, pega la dirección de la guía. Crea y guarda el Client ID y Client Secret en un lugar seguro. No los compartas. Según la documentación oficial de Google sobre setup de OAuth, estas credenciales son claves para conectar apps como Make.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+III. Conexión Final en Make
+##menu-item END
+##Contenido BEGIN
+III. Conexión Final en Make:
+Vuelve a Make y crea la conexión de Gmail. Pega el Client ID y Client Secret. Da clic en Sign in with Google, elige tu cuenta y listo. Aparecerá tu email en el módulo. Según la documentación oficial de Make, con estas credenciales, la conexión OAuth funciona sin problemas.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+IV. Resultado
+##menu-item END
+##Contenido BEGIN
+IV. Resultado:
+Ahora puedes usar Gmail en Make para enviar correos en automatizaciones. No repites los pasos. Según la documentación oficial, esta setup es permanente para tu cuenta.
+
+*************************************************************************************************************
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+*****************************************
+Resumen de puntos validados:
+- Crear proyecto: Validado con https://support.google.com/googleapi/answer/6158849?hl=en
+- Habilitar API: Validado con https://developers.google.com/gmail/api/guides
+- Consent Screen: Validado con https://developers.google.com/identity/protocols/oauth2
+- Scopes: Validado con https://developers.google.com/workspace/gmail/api/auth/scopes y https://developers.google.com/identity/protocols/oauth2/scopes
+- Credenciales: Validado con https://support.google.com/googleapi/answer/6158849?hl=en
+- Conexión en Make: Validado con https://make.com/en/help/connections/connecting-google-services-with-limited-oauth-scopes-to-make
+- Scopes específicos: Validado con https://developers.google.com/identity/protocols/oauth2/scopes
+*************************************************************************************************************
+##Contenido END

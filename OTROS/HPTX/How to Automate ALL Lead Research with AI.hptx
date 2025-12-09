@@ -1,0 +1,151 @@
+##itemID:000
+##menu-item BEGIN
+How to Automate ALL Lead Research with AI
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+How to Automate ALL Lead Research with AI:
+Web Original:
+How to Automate ALL Lead Research with AI
+https://youtu.be/okVW2-SYcUQ?si=lrsO7VGVlgUqqHXx
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Descripción general del sistema de automatización
+##menu-item END
+##Contenido BEGIN
+Descripción general del sistema de automatización:
+Este es un sistema de automatización que utiliza la Inteligencia Artificial IA para investigar a las personas que llenan un formulario de contacto. Imagina que en lugar de pasar tiempo buscando información sobre un cliente en LinkedIn y en su página web, un robot lo hace automáticamente y te entrega un resumen listo para usar. El propósito principal es que, si tienes una reunión importante, por ejemplo, en 15 minutos, puedas entender rápidamente quién es la persona y si van a tener una comunicación productiva. 
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Herramientas clave utilizadas en el sistema
+##menu-item END
+##Contenido BEGIN
+Herramientas clave utilizadas en el sistema:
+El sistema completo fue construido en la plataforma make.com. 
+1. Tally o Formulario Inicial: Es el punto de partida, donde el cliente potencial ingresa su información como su nombre, email, y enlaces a LinkedIn y su empresa. 
+2. Bot de Telegram: Es donde tú el usuario interactúas. Puedes chatear con el bot o solicitarle el resumen de la investigación. Este bot se crea usando Bot Father en Telegram. 
+3. Airtable: Se usa como una base de datos para guardar dos cosas, la información original del formulario y el resumen final que la IA crea. 
+4. OpenAI: Es el cerebro del sistema. Se encarga de responder en modo conversacional, crear el email de seguimiento personalizado, y generar el resumen completo de la investigación. 
+5. Gmail: Se usa para enviar un correo electrónico de seguimiento inmediato al cliente potencial después de que llena el formulario. 
+6. Módulos HTTP make request conectados a realms.ai: Estos son los investigadores principales. Son los encargados de ir a buscar la información en la URL de LinkedIn y en el sitio web de la empresa.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Flujo de trabajo paso a paso
+##menu-item END
+##Contenido BEGIN
+Flujo de trabajo paso a paso:
+El sistema tiene dos caminos que pueden activarse dependiendo de lo que hagas con el bot de Telegram. 
+
+I. CAMINO CONVERSACIONAL Para chatear
+1. Tú envías un mensaje de texto al bot de Telegram, por ejemplo, Hola, cómo estás? 
+2. Ese mensaje se envía al módulo de IA OpenAI. 
+3. La IA piensa en una respuesta adecuada. 
+4. El bot te envía la respuesta de vuelta, actuando como un asistente de conversación. 
+
+II. CAMINO DE INVESTIGACIÓN Para crear el resumen automático
+Este camino es el más complejo y se activa cuando el cliente llena el formulario o cuando tú le pides el resumen al bot.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 1: Inicio con el formulario
+##menu-item END
+##Contenido BEGIN
+Paso 1: Inicio con el formulario:
+El cliente potencial llena el formulario con sus datos, incluyendo su email, LinkedIn y el sitio de su empresa.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 2: Guardado de datos en Airtable
+##menu-item END
+##Contenido BEGIN
+Paso 2: Guardado de datos en Airtable:
+Toda la información que el cliente llena se guarda inmediatamente en Airtable.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 3: Envío de email de seguimiento inmediato
+##menu-item END
+##Contenido BEGIN
+Paso 3: Envío de email de seguimiento inmediato:
+En este momento, los módulos de OpenAI y Gmail trabajan juntos en secuencia. 
+a. OpenAI recibe los datos y crea un correo electrónico de seguimiento. La IA puede crear un email personalizado para cada cliente potencial. 
+b. El email se envía inmediatamente a través de Gmail al cliente, agradeciéndole y pidiéndole que agende una llamada, por ejemplo, en Calendarly.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Paso 4: Investigación profunda usando HTTP make request y realms.ai
+##menu-item END
+##Contenido BEGIN
+Paso 4: Investigación profunda usando HTTP make request y realms.ai:
+Aquí es donde ocurre la investigación del cliente. Estos módulos actúan como si estuvieran pidiendo información a un lugar llamado realms.ai. 
+a. Investigación de LinkedIn: Se usa un módulo HTTP make request que toma la URL de LinkedIn que el cliente proporcionó. Este módulo llama a realms.ai, le da la URL, y pide por favor investigar a este cliente. realms.ai hace la investigación y devuelve la información ya resumida y lista. 
+b. Investigación del Sitio Web de la Empresa: Se usa otro módulo HTTP make request para hacer exactamente lo mismo, pero con la URL de la compañía.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Paso 5: Creación del resumen final con OpenAI
+##menu-item END
+##Contenido BEGIN
+Paso 5: Creación del resumen final con OpenAI:
+Los resultados de estas dos investigaciones, LinkedIn y sitio web, se envían al módulo de OpenAI. 
+a. La IA utiliza una instrucción (prompt) para actuar como un asistente profesional y eficiente de investigación de ventas. 
+b. La IA combina todos los datos y crea el resumen final. 
+c. El resumen contiene información crucial, como el nombre, ubicación, puesto actual, duración en el rol, experiencias previas como ser fundador o CEO e ideas clave para la llamada con el cliente.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Paso 6: Almacenamiento y entrega del resumen
+##menu-item END
+##Contenido BEGIN
+Paso 6: Almacenamiento y entrega del resumen:
+a. Almacenamiento: El resumen generado por la IA se guarda una vez más en Airtable para que siempre lo puedas consultar. 
+b. Entrega: El resumen se envía de vuelta al bot de Telegram. 
+c. Activación del resumen: Para obtener el resultado, tú debes enviar el comando "recent leads summary" al bot de Telegram. El bot tarda aproximadamente uno o dos minutos en correr todo este proceso y darte la respuesta.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Nota final sobre la automatización
+##menu-item END
+##Contenido BEGIN
+Nota final sobre la automatización:
+Esta automatización es muy eficiente y fue creada en solo unas pocas horas. El creador planea compartir los detalles técnicos raw build para quienes estén interesados en replicarla.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+La automatización presentada utiliza herramientas reconocidas y documentadas oficialmente:
+
+1. Make.com: Plataforma líder para la automatización de flujos de trabajo con documentación oficial en https://www.make.com/en/help 
+
+2. OpenAI: Proveedor oficial de modelos de IA conversacional y generación de texto, con documentación en https://platform.openai.com/docs 
+
+3. Airtable: Plataforma para bases de datos no relacionales, con guías oficiales en https://support.airtable.com/hc/en-us 
+
+4. Telegram Bots: Creación de bots con documentación oficial en https://core.telegram.org/bots 
+
+5. Gmail API: Para envío automatizado de correos, información oficial en https://developers.google.com/gmail/api 
+
+6. HTTP Requests y Realms.ai: La ejecución de llamadas HTTP está documentada en la guía de Make.com, realms.ai funciona como un proveedor externo de datos.
+
+Estos enlaces y plataformas son las fuentes oficiales que validan la arquitectura y funcionamiento descrito en este tutorial.
+
+
+[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/64556067/2c56f429-8543-49ac-8e5d-37aed078ed64/transcripcion-hoy.txt)
+##Contenido END

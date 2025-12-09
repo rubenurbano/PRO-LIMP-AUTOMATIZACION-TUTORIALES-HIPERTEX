@@ -1,0 +1,87 @@
+# =====================================================
+# 📘 Plantilla Base FASTAPI — RubénWare Edition
+# =====================================================
+
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from datetime import datetime
+import uvicorn
+
+app = FastAPI(
+    title="RubénWare API Template",
+    description="Plantilla base de FastAPI lista para expandir",
+    version="1.0.0"
+)
+
+# =========================
+# 📦 MODELOS DE DATOS
+# =========================
+class Item(BaseModel):
+    id: int | None = None
+    name: str
+    description: str | None = None
+    price: float
+    tax: float | None = None
+
+
+# =========================
+# 📚 ENDPOINTS DE SISTEMA
+# =========================
+@app.get("/")
+async def root():
+    return {"message": "Bienvenido a tu API RubénWare", "timestamp": datetime.now().isoformat()}
+
+@app.get("/info")
+async def info():
+    return {
+        "status": "online",
+        "framework": "FastAPI",
+        "version": "1.0.0",
+        "author": "RubénWare",
+        "timestamp": datetime.now().isoformat()
+    }
+
+# =========================
+# 🧩 CRUD DE EJEMPLO
+# =========================
+fake_db: list[Item] = []
+
+@app.post("/items/", response_model=Item)
+async def create_item(item: Item):
+    item.id = len(fake_db) + 1
+    fake_db.append(item)
+    return item
+
+@app.get("/items/", response_model=list[Item])
+async def read_items():
+    return fake_db
+
+@app.get("/items/{item_id}", response_model=Item)
+async def read_item(item_id: int):
+    for item in fake_db:
+        if item.id == item_id:
+            return item
+    raise HTTPException(status_code=404, detail="Item no encontrado")
+
+@app.put("/items/{item_id}", response_model=Item)
+async def update_item(item_id: int, updated_item: Item):
+    for index, item in enumerate(fake_db):
+        if item.id == item_id:
+            updated_item.id = item_id
+            fake_db[index] = updated_item
+            return updated_item
+    raise HTTPException(status_code=404, detail="Item no encontrado")
+
+@app.delete("/items/{item_id}")
+async def delete_item(item_id: int):
+    for index, item in enumerate(fake_db):
+        if item.id == item_id:
+            del fake_db[index]
+            return {"message": f"Item {item_id} eliminado correctamente"}
+    raise HTTPException(status_code=404, detail="Item no encontrado")
+
+# =========================
+# 🚀 EJECUCIÓN LOCAL
+# =========================
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)

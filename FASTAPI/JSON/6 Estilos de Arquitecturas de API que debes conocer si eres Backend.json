@@ -1,0 +1,65 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "6 Estilos de Arquitecturas de API que debes conocer si eres Backend",
+      "contenido": "6 Estilos de Arquitecturas de API que debes conocer si eres Backend\nURL del video: https://youtu.be/oEelu8QMA1g?si=RPucve8WjEZVyLvD"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción a los estilos de arquitectura Backend",
+      "contenido": "Cuando se desarrollan aplicaciones para el lado del servidor (backend), es común pensar solo en respuestas de páginas web (HTML). Sin embargo, existen múltiples estilos de arquitectura disponibles, como REST API, WebSockets, gRPC, entre otros. En este contenido se explorarán estos estilos utilizando gráficos simples para facilitar la comprensión de conceptos como Webhooks o GraphQL, con el objetivo de ofrecer un panorama general que permita decidir cuáles estudiar a fondo."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Plataforma recomendada: Cynote",
+      "contenido": "Si buscas desplegar una aplicación web completa (full stack) con lenguajes como Node, Python, Go o Elixir, Cynote es una plataforma recomendada. Permite conectar código directamente desde GitHub o GitLab y desplegar proyectos en segundos con dirección pública, dominios propios, HTTPS automático y soporte para WebSockets y HTTP2. Ofrecen precios competitivos, con bases de datos (PostgreSQL o MySQL) desde 2 dólares al mes y servidores backend desde 5 dólares al mes, además de una prueba gratuita de 7 días. Es ideal para proyectos pequeños o con presupuesto limitado."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "\nEstilo REST (Representational State Transfer)",
+      "contenido": "REST es el estilo de arquitectura más común. Funciona sobre el protocolo HTTP, donde el cliente (ej. navegador) realiza una petición y el servidor responde.[1] Utiliza métodos HTTP específicos para indicar la acción deseada:\n\nPOST: Crear algo nuevo.\n\nDELETE: Eliminar algo.[1]\n\nPUT: Actualizar un objeto completo.\n\nGET: Obtener datos.\n\nPATCH: Actualizar parcialmente un objeto.\n\nOPTIONS: Pedir información sobre la petición antes de hacerla.\n\nLos datos se envían usualmente en formato JSON dentro del cuerpo (body) de la petición. Una característica fundamental de REST es que es \"sin estado\" (stateless): el servidor no recuerda las peticiones anteriores; cada interacción es independiente. Aunque existe el concepto purista de \"RESTful\", en la práctica las reglas se adaptan a las necesidades del negocio."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Limitaciones de REST y la necesidad de comunicación bidireccional",
+      "contenido": "La principal limitación de REST es que la comunicación siempre la inicia el cliente; el servidor solo escucha y responde. Esto es problemático para aplicaciones que requieren que el servidor notifique al cliente por iniciativa propia (como la llegada de un nuevo correo). Para resolver esto, donde el servidor necesita avisar al cliente sin una petición previa, se requiere un estilo diferente."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "2. Estilo WebSockets",
+      "contenido": "WebSockets permite una comunicación bidireccional. A diferencia de REST, aquí la conexión se mantiene abierta después de la respuesta inicial. Esto permite que tanto el cliente como el servidor envíen mensajes en cualquier momento. Es ideal para:\n\nChats (el servidor avisa cuando llega un mensaje).\n\nAplicaciones en tiempo real (notificaciones inmediatas).\n\nPaneles de control que se actualizan solos.\n\nPara implementarlo, se utilizan bibliotecas que gestionan la apertura de la conexión, la escucha de eventos y el manejo de errores."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "3. Estilo GraphQL",
+      "contenido": "GraphQL resuelve problemas comunes de REST conocidos como \"Overfetch\" (traer más datos de los necesarios) y \"Underfetch\" (traer menos datos y tener que hacer múltiples peticiones).\n\nFuncionamiento: Usa usualmente un solo método (POST) y un lenguaje de consulta propio en el cuerpo de la petición.\n\nVentaja: El cliente especifica exactamente qué campos necesita (por ejemplo, solo el nombre de un usuario y no toda su ficha).\n\nEficiencia: Permite obtener datos relacionados (como un usuario y sus \"likes\") en una sola consulta, evitando múltiples llamadas al servidor.\nEl servidor interpreta la consulta y devuelve únicamente la información solicitada."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "4. Estilo Webhooks",
+      "contenido": "Los Webhooks funcionan como una \"API inversa\" para notificaciones entre sistemas. Se usan cuando un sistema externo necesita avisar a tu backend que algo ocurrió.\n\nEjemplo: Si usas una pasarela de pagos como PayPal y un usuario pide un reembolso directamente en PayPal, tu sistema no se enteraría. PayPal usa un Webhook (una petición POST que ellos envían a tu servidor) para notificarte del evento.\nTu servidor recibe esa petición y procesa la información (ej. actualiza la base de datos). Es el estándar para reaccionar a eventos de terceros."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "5. Estilo SOAP (Simple Object Access Protocol)",
+      "contenido": "SOAP es un protocolo utilizado principalmente en grandes organizaciones (bancos, gobiernos) para la comunicación entre servidores (backend a backend).\n\nFormato: Usa XML, que es más estricto y verboso que JSON.\n\nSeguridad: Es su punto fuerte; permite firmar y encriptar mensajes a nivel del mensaje mismo, lo cual es vital en sectores regulados.\n\nCaracterísticas: Es un estándar robusto y confiable, aunque se considera \"pesado\" y menos flexible que las opciones modernas. No se suele usar para comunicación con el frontend (navegador) debido a su complejidad y peso."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "6. Estilo gRPC (Google Remote Procedure Call)",
+      "contenido": "gRPC es un estilo moderno creado por Google, diseñado para la comunicación interna entre microservicios (servidores pequeños que forman una aplicación mayor).[2]\n\nVelocidad: Es mucho más rápido que REST porque usa Protobuffer, un formato binario, en lugar de texto (JSON).\n\nUso: Permite llamar a procedimientos en otro servidor como si fueran locales. Es agnóstico al lenguaje (funciona entre Python, Java, Go, etc.).\n\nContexto: Grandes empresas como Netflix o Cisco lo usan para optimizar el rendimiento de la comunicación interna entre sus servidores."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Conclusión y Recomendación de Aprendizaje",
+      "contenido": "Estos estilos de arquitectura no compiten entre sí, sino que coexisten y se complementan según la necesidad. En un mismo servidor podrías tener:\n\nREST para la API pública.\n\nGraphQL para consultas complejas de datos.\n\nWebSockets para funciones en tiempo real.\n\nWebhooks para recibir pagos.\n\nSOAP para conectarse con entidades gubernamentales.\n\ngRPC para la comunicación interna si usas microservicios.\n\nLa ruta de aprendizaje recomendada es: REST API -> WebSockets -> GraphQL -> Webhooks -> SOAP -> gRPC."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "Resumen de puntos técnicos validados:\n\nREST: Confirmado como estilo arquitectónico (no protocolo) definido por Roy Fielding.[3] Se valida el uso de métodos HTTP (GET, POST, PUT, DELETE) y la restricción de \"stateless\" (sin estado).[4]\n\nWebSockets: Validado por MDN como protocolo para sesiones de comunicación bidireccional persistente entre cliente y servidor.\n\nGraphQL: La documentación oficial confirma que es un lenguaje de consulta que permite al cliente pedir exactamente lo que necesita, solucionando el overfetching y underfetching.\n\nWebhooks: Documentación de plataformas mayores (GitHub, Stripe) valida la definición técnica: peticiones HTTP POST enviadas desde un servicio externo a una URL configurada por el usuario tras un evento.\n\nSOAP: W3C valida SOAP como un protocolo ligero basado en XML para intercambio de información estructurada, con énfasis en extensibilidad y neutralidad de transporte (aunque usa HTTP comúnmente).\n\ngRPC: El sitio oficial valida el uso de Protocol Buffers (binario) por defecto para serialización de alto rendimiento y su enfoque en conectar servicios políglotas.\n\nEnlaces directos a documentación oficial:\n\nREST (Conceptos): https://restfulapi.net/ (Recurso educativo estándar) y https://www.w3.org/2001/sw/wiki/REST\n\nWebSockets API (MDN): https://developer.mozilla.org/es/docs/Web/API/WebSockets_API\n\nGraphQL (Oficial): https://graphql.org/learn/\n\nWebhooks (Ejemplo técnico GitHub): https://docs.github.com/es/webhooks\n\nSOAP (Especificación W3C): https://www.w3.org/TR/soap/\n\ngRPC (Oficial): https://grpc.io/docs/what-is-grpc/\n\nReferencias a páginas de soporte oficiales:\n\nGoogle Protocol Buffers (para gRPC): https://protobuf.dev/\n\nStripe Webhooks (Referencia de industria): https://stripe.com/docs/webhooks\n\nMozilla Developer Network (HTTP Methods): https://developer.mozilla.org/es/docs/Web/HTTP/Methods\n\n\nSources\nhelp\nbaeldung.com\nwikipedia.org\nmedium.com\ngeeksforgeeks.org\nmozilla.org\ngraphql.org\ncach3.com\nrestfulapi.net\ngraphql.org\ngrpc.io\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\nWebSockets MDN documentation\nSOAP protocol W3C specification\nREST architectural style definition official documentation\nGraphQL official documentation definition\ngRPC official documentation protocol buffers\nWebhooks definition GitHub Stripe documentation"
+    }
+  ]
+}

@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>HIPERTEX — Visor Moderno</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-secondary: #0f1420;
+            --bg-tertiary: #141824;
+            --surface: rgba(30, 41, 59, 0.4);
+            --surface-hover: rgba(51, 65, 85, 0.5);
+            --surface-active: rgba(59, 130, 246, 0.15);
+            --border: rgba(71, 85, 105, 0.3);
+            --border-light: rgba(100, 116, 139, 0.2);
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --accent-primary: #3b82f6;
+            --accent-secondary: #8b5cf6;
+            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --glow-blue: rgba(59, 130, 246, 0.4);
+            --glow-purple: rgba(139, 92, 246, 0.3);
+
+            /* Approximate height of the header (including padding and borders).  This
+             * value is used to position the sidebar and content so that they
+             * occupy the remaining viewport height beneath the fixed header.
+             */
+            --header-height: 72px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #0a0e1a 0%, #1a1f35 50%, #0a0e1a 100%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            /*
+             * Prevent the entire page from scrolling.  The sidebar and main
+             * content areas manage their own scrollbars independently.
+             */
+            overflow: hidden;
+        }
+
+        /* Animated background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+            animation: bgPulse 15s ease-in-out infinite alternate;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes bgPulse {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(-10px, -10px) scale(1.05);
+            }
+        }
+
+        .app {
+            /* Reset layout to a block container.  The header and sidebar will
+             * be positioned independently via fixed positioning, while the
+             * content flows naturally.  This prevents CSS grid/flex bugs with
+             * scrollable children and simplifies the scroll behaviour.
+             */
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        header {
+            padding: 16px 24px;
+            background: rgba(10, 14, 26, 0.8);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            z-index: 100;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        header h1 {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+        }
+
+        .file-pill {
+            padding: 8px 16px;
+            border-radius: 24px;
+            background: var(--surface);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-light);
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+            max-width: 420px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+
+        .file-pill:hover {
+            border-color: var(--accent-primary);
+            color: var(--text-secondary);
+        }
+
+        .toolbar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Modern Buttons */
+        .btn {
+            appearance: none;
+            border-radius: 12px;
+            border: 1px solid transparent;
+            padding: 10px 20px;
+            background: var(--accent-gradient);
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3),
+                0 0 20px rgba(59, 130, 246, 0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn:hover::before {
+            opacity: 1;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4),
+                0 0 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-ghost {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            box-shadow: none;
+        }
+
+        .btn-ghost:hover {
+            background: var(--surface-hover);
+            border-color: var(--accent-primary);
+            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.15);
+        }
+
+        .file-label {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .file-label input[type=file] {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        /* Hamburger menu toggle button */
+        .menu-toggle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            font-size: 20px;
+            line-height: 1;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            background: var(--surface);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .menu-toggle:hover {
+            background: var(--surface-hover);
+        }
+
+        /* When the sidebar is visible, push the content to the right */
+        body.sidebar-visible main.content {
+            margin-left: 320px;
+        }
+
+        /* When the sidebar is hidden, remove left margin from content */
+        body:not(.sidebar-visible) main.content {
+            margin-left: 0;
+        }
+
+        /* Slide-in animation for the sidebar when toggled */
+        body.sidebar-visible aside.sidebar {
+            transform: translateX(0);
+        }
+
+        /* Sidebar */
+        aside.sidebar {
+            background: rgba(15, 20, 32, 0.5);
+            backdrop-filter: blur(10px);
+            border-right: 1px solid var(--border);
+            padding: 20px 16px;
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            bottom: 0;
+            width: 320px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            /* Start hidden off-canvas; will slide in when .sidebar-visible is applied to the body */
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 101;
+        }
+
+        aside.sidebar h2 {
+            margin: 0 0 16px 8px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        nav#menu {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            /* Fill the available height within the sidebar */
+            flex: 1;
+            padding-right: 8px;
+            padding-bottom: 20px;
+            scrollbar-width: auto;
+            scrollbar-color: rgba(59, 130, 246, 0.9) rgba(15, 20, 32, 0.9);
+        }
+
+        nav#menu::-webkit-scrollbar {
+            width: 14px;
+        }
+
+        nav#menu::-webkit-scrollbar-track {
+            background: rgba(15, 20, 32, 0.9);
+            border-radius: 10px;
+            margin: 4px 0;
+            border: 1px solid rgba(71, 85, 105, 0.5);
+        }
+
+        nav#menu::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, rgba(59, 130, 246, 0.9), rgba(139, 92, 246, 0.9));
+            border-radius: 10px;
+            border: 2px solid rgba(15, 20, 32, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        nav#menu::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+            border-color: rgba(15, 20, 32, 1);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+        }
+
+        nav#menu::-webkit-scrollbar-thumb:active {
+            background: linear-gradient(180deg, #60a5fa, #a78bfa);
+        }
+
+        /* Menu Items */
+        .menu-item {
+            position: relative;
+            border-radius: 12px;
+            padding: 12px 16px 12px 20px;
+            font-size: 14px;
+            line-height: 1.4;
+            color: var(--text-secondary);
+            background: transparent;
+            border: 1px solid transparent;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .menu-item small {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .menu-item span {
+            display: block;
+            font-weight: 500;
+        }
+
+        .menu-item::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            opacity: 0.4;
+            transition: all 0.3s ease;
+        }
+
+        .menu-item.active {
+            background: var(--surface-active);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: var(--text-primary);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.15),
+                inset 0 0 20px rgba(59, 130, 246, 0.05);
+        }
+
+        .menu-item.active::before {
+            width: 6px;
+            height: 6px;
+            background: var(--accent-primary);
+            opacity: 1;
+            box-shadow: 0 0 10px var(--glow-blue);
+        }
+
+        .menu-item:hover:not(.active) {
+            background: var(--surface);
+            border-color: var(--border);
+            transform: translateX(4px);
+        }
+
+        /* Main Content */
+        main.content {
+            padding: 24px 32px 120px 32px;
+            margin-top: var(--header-height);
+            /* Default content has no left margin; it is added dynamically when
+             * the sidebar is visible via the body.sidebar-visible class. */
+            margin-left: 0;
+            height: calc(100vh - var(--header-height));
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        main.content::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        main.content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        main.content::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 10px;
+        }
+
+        main.content::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
+
+        /* Card */
+        .card {
+            background: var(--surface);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            margin: 0 0 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(59, 130, 246, 0.1);
+        }
+
+        .title {
+            margin: 0 0 20px;
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+        }
+
+        /* Body Content */
+        .body-block {
+            font-family: 'JetBrains Mono', 'Consolas', monospace;
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .body-block p {
+            margin: 0 0 16px;
+        }
+
+        .body-block a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .body-block a:hover {
+            color: #60a5fa;
+            border-bottom-color: #60a5fa;
+            text-shadow: 0 0 10px rgba(96, 165, 250, 0.3);
+        }
+
+        /* Images */
+        .img-block {
+            margin: 24px auto;
+            text-align: center;
+        }
+
+        .img-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .img-block img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.5),
+                0 0 30px rgba(59, 130, 246, 0.15);
+        }
+
+        /* Audio */
+        .audio-block {
+            margin: 24px 0;
+            padding: 16px;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+        }
+
+        .audio-block audio {
+            width: 100%;
+            outline: none;
+            filter: brightness(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .app {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "content";
+            }
+
+            aside.sidebar {
+                display: none;
+            }
+
+            main.content {
+                padding: 16px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 16px;
+            }
+
+            .file-pill {
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <button id="menuToggle" class="menu-toggle" type="button" aria-label="Mostrar u ocultar menú">
+                ☰
+            </button>
+            <div class="toolbar">
+                <label class="btn file-label">
+                    <input id="file" type="file" accept=".json,application/json" />
+                    <span>📂</span>
+                    Cargar JSON
+                </label>
+                <button class="btn btn-ghost" id="demo" type="button">
+                    <span>✨</span>
+                    Demo
+                </button>
+            </div>
+            <h1>HIPERTEX — Visor Moderno</h1>
+            <div class="file-pill" id="fname">Sin archivo</div>
+        </header>
+
+        <aside class="sidebar">
+            <h2>Menú</h2>
+            <nav id="menu"></nav>
+        </aside>
+
+        <main class="content" id="content"></main>
+    </div>
+
+    <script>
+        const $file = document.getElementById('file');
+        const $menu = document.getElementById('menu');
+        const $content = document.getElementById('content');
+        const $fname = document.getElementById('fname');
+        const $demo = document.getElementById('demo');
+        const $menuToggle = document.getElementById('menuToggle');
+
+        // Toggle the sidebar (hamburger menu).  When the toggle button is clicked,
+        // we add or remove the `sidebar-visible` class on the body element.
+        // CSS rules respond to this class to slide the sidebar in and out and
+        // adjust the content margin accordingly.  The aria-label on the button
+        // helps accessibility by describing its purpose.
+        $menuToggle.addEventListener('click', () => {
+            // Toggle the visibility class on the body
+            const visible = document.body.classList.toggle('sidebar-visible');
+            // Always display the same hamburger icon regardless of state.  Users can
+            // click the button to open or close the menu, but the icon stays as
+            // three lines to maintain a consistent look.
+            $menuToggle.textContent = '☰';
+            // Update accessible label to reflect the current action
+            $menuToggle.setAttribute('aria-label', visible ? 'Ocultar menú' : 'Mostrar menú');
+        });
+
+        // ---------------------------------------------------------------------------
+        // Improve menu scrolling behaviour.
+        //
+        // When the menu contains many items, browsers sometimes fail to deliver
+        // scroll wheel events to the nested <nav> because the event bubbles
+        // through the flexbox hierarchy.  To guarantee consistent scrolling, we
+        // explicitly listen for wheel events on the menu element and adjust the
+        // scrollTop property.  This handler prevents the default action and
+        // adds the deltaY to scrollTop, ensuring the scrollbar moves even when
+        // the pointer is over child elements.
+        $menu.addEventListener('wheel', (ev) => {
+            // Do not allow the event to scroll the page; instead scroll the menu.
+            ev.preventDefault();
+            $menu.scrollTop += ev.deltaY;
+        }, { passive: false });
+
+        const slug = s => String(s ?? '').toLowerCase()
+            .normalize('NFD').replace(/\p{Diacritic}/gu, "")
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-+|-+$/g, "") || "item";
+
+        function linkify(text) {
+            const escaped = String(text)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+
+            const urlRegex = /(https?:\/\/[^\s]+)/g;
+            return escaped.replace(urlRegex, (url) => {
+                const safeUrl = url.replace(/&amp;/g, "&");
+                return `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer">${url}</a>`;
+            });
+        }
+
+        // Renderiza cuerpo con soporte para [IMAGEN: URL], [AUDIO: URL] y links
+        function renderBodyWithImages(text) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'body-block';
+
+            const lines = String(text).split(/\r?\n/);
+
+            lines.forEach((line) => {
+                const trimmed = line.trim();
+
+                if (!trimmed) {
+                    wrapper.appendChild(document.createElement('br'));
+                    return;
+                }
+
+                // Patrón [IMAGEN: https://...]
+                const imgMatch = trimmed.match(/^\[IMAGEN:\s*(https?:[^\]\s]+)\s*\]$/i);
+                if (imgMatch) {
+                    const url = imgMatch[1];
+                    const imgWrap = document.createElement('div');
+                    imgWrap.className = 'img-block';
+                    const img = document.createElement('img');
+                    img.src = url;
+                    img.loading = 'lazy';
+                    img.alt = 'Infografía del tutorial';
+                    imgWrap.appendChild(img);
+                    wrapper.appendChild(imgWrap);
+                    return;
+                }
+
+                // Patrón [AUDIO: https://...]
+                const audMatch = trimmed.match(/^\[AUDIO:\s*(https?:[^\]\s]+)\s*\]$/i);
+                if (audMatch) {
+                    const url = audMatch[1];
+                    const audioWrap = document.createElement('div');
+                    audioWrap.className = 'audio-block';
+                    const audio = document.createElement('audio');
+                    audio.controls = true;
+                    audio.src = url;
+                    audioWrap.appendChild(audio);
+                    wrapper.appendChild(audioWrap);
+                    return;
+                }
+
+                // Resto: texto normal con links
+                const p = document.createElement('p');
+                p.innerHTML = linkify(line);
+                wrapper.appendChild(p);
+            });
+
+            return wrapper;
+        }
+
+        function buildMenu(viewModel) {
+            $menu.innerHTML = '';
+            if (!Array.isArray(viewModel.items) || !viewModel.items.length) {
+                const empty = document.createElement('div');
+                empty.textContent = 'Sin items en "items[]"';
+                empty.style.color = '#9ca3af';
+                empty.style.fontSize = '13px';
+                $menu.appendChild(empty);
+                $content.innerHTML = '';
+                return;
+            }
+
+            viewModel.items.forEach((item, idx) => {
+                const id = item.itemID ?? String(idx).padStart(3, '0');
+                const menuText = item.menu_item ?? '(sin título)';
+                const cardTitle = menuText.split('\n')[0];
+
+                const btn = document.createElement('button');
+                btn.className = 'menu-item';
+                btn.dataset.targetId = id;
+
+                // Only display the menu text (card title).  Do not show
+                // the itemID in the sidebar.  The itemID is still stored
+                // in data-target-id for internal use, but not rendered
+                // as visible text.
+                const span = document.createElement('span');
+                span.textContent = cardTitle;
+
+                btn.appendChild(span);
+
+                btn.addEventListener('click', () => {
+                    // Clear the previously active state
+                    document.querySelectorAll('.menu-item').forEach(el => el.classList.remove('active'));
+                    btn.classList.add('active');
+                    // Render the selected card
+                    renderCard(item);
+                    // Ensure the clicked button is brought into view within the sidebar
+                    // This helps keep the menu and content synchronized when there are many items.
+                    try {
+                        btn.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                    } catch (e) {
+                        // fallback for older browsers: simply call scrollIntoView without options
+                        btn.scrollIntoView();
+                    }
+                    // On small screens hide the sidebar after selecting an item.  Removing
+                    // the class triggers CSS to slide the menu off canvas and gives more
+                    // space to the content.  If the menu is already hidden this is a no-op.
+                    document.body.classList.remove('sidebar-visible');
+                });
+
+                if (idx === 0) {
+                    btn.classList.add('active');
+                }
+
+                $menu.appendChild(btn);
+            });
+
+            renderCard(viewModel.items[0]);
+        }
+
+        function renderCard(item) {
+            $content.innerHTML = '';
+            if (!item) return;
+
+            const card = document.createElement('article');
+            card.className = 'card';
+
+            const title = document.createElement('h2');
+            title.className = 'title';
+            title.textContent = item.menu_item ?? '(sin título)';
+            card.appendChild(title);
+
+            const body = renderBodyWithImages(item.contenido ?? '');
+            card.appendChild(body);
+
+            $content.appendChild(card);
+
+            // Ensure the newly rendered card starts at the top of the scrollable area.
+            // Without resetting scrollTop, selecting an item while scrolled may
+            // leave the content area blank because the user is positioned
+            // midway down the previous card.
+            try {
+                $content.scrollTop = 0;
+            } catch (err) {
+                // graceful fallback: scroll into view
+                card.scrollIntoView({ block: 'start' });
+            }
+        }
+
+        function loadJsonObject(obj, fileName = "(sin nombre)") {
+            const viewModel = {
+                meta: obj.meta || {},
+                items: Array.isArray(obj.items) ? obj.items : []
+            };
+            $fname.textContent = fileName;
+            buildMenu(viewModel);
+        }
+
+        $file.addEventListener('change', (ev) => {
+            const [file] = ev.target.files || [];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = e => {
+                try {
+                    const json = JSON.parse(e.target.result);
+                    loadJsonObject(json, file.name);
+                } catch (err) {
+                    console.error(err);
+                    alert('Error al leer JSON: ' + err.message);
+                }
+            };
+            reader.readAsText(file, 'utf-8');
+        });
+
+        $demo.addEventListener('click', () => {
+            const demo = {
+                meta: {},
+                items: [
+                    {
+                        itemID: "000",
+                        menu_item: "Demo: Texto simple",
+                        contenido: "Este es un ejemplo mínimo de item.\n\nIncluye links como https://www.make.com y https://supabase.com\n\nY se muestran automáticamente como enlaces clicables."
+                    },
+                    {
+                        itemID: "001",
+                        menu_item: "Demo: Imagen externa",
+                        contenido: "Puedes incrustar una imagen usando la sintaxis:\n\n[IMAGEN: https://placehold.co/600x400/png]\n\nY también puedes combinarlo con texto y enlaces."
+                    },
+                    {
+                        itemID: "002",
+                        menu_item: "Demo: Audio integrado",
+                        contenido: "Ejemplo de reproductor de audio con la sintaxis:\n\n[AUDIO: https://www2.cs.uic.edu/~i101/SoundFiles/StarWars3.wav]\n\nPuedes usar cualquier URL directa a un archivo .mp3, .m4a, etc."
+                    }
+                ]
+            };
+            loadJsonObject(demo, 'demo.json');
+        });
+    </script>
+</body>
+
+</html>

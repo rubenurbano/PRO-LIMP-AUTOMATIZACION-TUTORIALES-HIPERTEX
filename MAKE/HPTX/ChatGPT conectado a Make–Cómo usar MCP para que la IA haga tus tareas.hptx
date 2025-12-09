@@ -1,0 +1,138 @@
+##itemID:000
+##menu-item BEGIN
+ChatGPT conectado a Make–Cómo usar MCP para que la IA haga tus tareas
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+ChatGPT conectado a Make–Cómo usar MCP para que la IA haga tus tareas:
+Web Original:
+
+ChatGPT conectado a Make–Cómo usar MCP para que la IA haga tus tareas:
+https://youtu.be/7aGyCfBMEB4?si=w3VtAQauOJSZB7zy
+
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción a MCP y su importancia en la automatización con IA
+##menu-item END
+##Contenido BEGIN
+Introducción a MCP y su importancia en la automatización con IA:
+
+Si creas automatizaciones y trabajas con diseño de flujos en Make o ayudas a integrar inteligencia artificial en procesos de negocio, debes conocer MCP, una herramienta que conecta modelos de IA como ChatGPT con tus automatizaciones. Muchas personas usan ChatGPT para generar contenido, pero con MCP la IA puede hacer toda la tarea completa, como publicar en redes sociales o enviar correos sin que tú tengas que hacerlo manualmente.
+
+MCP actúa como un puente entre ChatGPT, Make, y otras plataformas como N8N, tu CRM o WhatsApp. Permite que la IA decida qué herramienta usar en tiempo real para realizar tareas automáticamente, siempre que haya un flujo o herramienta disponible. Esto facilita que la IA se convierta en un asistente que no solo genera contenido, sino que también ejecuta las acciones que ese contenido requiere.
+
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Ejemplo práctico: Publicar en Facebook con MCP y Make
+##menu-item END
+##Contenido BEGIN
+Ejemplo práctico: Publicar en Facebook con MCP y Make:
+
+Para entender cómo funciona MCP, veamos un ejemplo práctico: pedir a la IA que redacte una publicación para Facebook y que luego la publique automáticamente. Primero, se le indica a ChatGPT que redacte el contenido sobre la nueva función MCP y su utilidad.
+
+Después, una vez aprobada la redacción, se ordena a la IA que publique la publicación. MCP verifica, a través de su servidor MSP, qué automatización o herramienta de Make es la adecuada para realizar la tarea, y procede a ejecutarla. En este caso, la publicación se crea, genera una imagen y se publica en Facebook sin que el usuario tenga que hacer más que aprobar la orden.
+
+Este proceso demuestra lo sencillo y potente que es usar MCP para llevar a la inteligencia artificial a hacer trabajos reales integrados con tus flujos de trabajo.
+
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Configuración inicial para conectar ChatGPT a Make usando MCP
+##menu-item END
+##Contenido BEGIN
+Configuración inicial para conectar ChatGPT a Make usando MCP:
+
+1. Ve a tu cuenta de ChatGPT.
+2. Haz clic en el botón de añadir nueva fuente ("add sources").
+3. Selecciona "add" y luego "connector".
+4. Desplázate hasta "Advance Settings" y activa el "developer mode". Esto permite la conexión directa con Make.
+5. Crea una nueva conexión y asígnale un nombre identificativo, por ejemplo, "make tools".
+6. En el campo "MSP Server URL", pega la URL del servidor MCP de tu cuenta Make, alineada a la región donde está alojada tu cuenta (por ejemplo, "US2").
+7. En la autenticación, usa el token que generes desde Make (explicado en el siguiente paso) y marca la opción de autenticación por token.
+8. Guarda la conexión.
+
+Con esta configuración, ChatGPT tendrá acceso a tus automatizaciones de Make para ejecutar tareas.
+
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Generar token de acceso en Make para MCP
+##menu-item END
+##Contenido BEGIN
+Generar token de acceso en Make para MCP:
+
+1. En Make, ingresa a tu perfil (ícono en la esquina superior derecha).
+2. Accede a la sección "Appy Access" o equivalente para gestionar accesos de aplicaciones.
+3. Crea un nuevo token haciendo clic en "add token".
+4. Asigna un nombre descriptivo como "chat GPT".
+5. Para que la conexión funcione correctamente, asigna al token todos los permisos o "scopes" recomendados para MCP, o bien, elige todos para contar con acceso sin limitaciones.
+6. Guarda y copia el token generado.
+7. Este token será el que pegarás en la configuración de ChatGPT en el paso anterior.
+
+Este token garantiza una conexión segura y con permisos completos entre ChatGPT y Make a través de MCP.
+
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Uso práctico de ChatGPT con Make a través de MCP
+##menu-item END
+##Contenido BEGIN
+Uso práctico de ChatGPT con Make a través de MCP:
+
+Una vez configurada la conexión y con el token activo, recarga tu cuenta de ChatGPT para activar el modo desarrollador. Ahora aparecerá la opción "Make Tools" en el menú de fuentes o herramientas disponibles.
+
+Puedes solicitar a ChatGPT que realice tareas complejas simplemente indicándolo, por ejemplo: "Ayúdame a redactar y publicar una noticia sobre MCP en Facebook". La IA generará el contenido y, con tu aprobación, enviará la orden para que Make ejecute la acción, como publicar en redes sociales.
+
+Recuerda que tus escenarios o flujos en Make deben estar activos para que la IA pueda ejecutar las tareas. El proceso es muy sencillo y no requiere que configures cada tarea individualmente, ya que MCP permite a la IA elegir automáticamente la herramienta adecuada.
+
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Conclusión: Ventajas de usar MCP para automatizar con IA
+##menu-item END
+##Contenido BEGIN
+Conclusión: Ventajas de usar MCP para automatizar con IA:
+
+MCP potencia a ChatGPT y otras inteligencias artificiales llevándolas más allá de la generación de contenido, logrando que realicen acciones concretas en aplicaciones y flujos automatizados.
+
+Esto significa eficiencia, ahorro de tiempo y posibilidad de crear asistentes inteligentes que trabajan por ti en múltiples plataformas como Make, N8N, CRM, WhatsApp y más.
+
+Gracias a MCP, el trabajo de integrar IA con herramientas no code es accesible incluso para desarrolladores sin conocimientos avanzados, permitiendo que el poder de la automatización y la inteligencia artificial se combine para hacer tu vida más fácil.
+
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Se validaron los siguientes puntos con la documentación técnica oficial de MCP, Make y ChatGPT:
+- Funcionamiento de MCP como puente entre IA y automatizaciones Make o N8N.
+- Pasos para configurar la conexión incluyendo activación del "developer mode" y generación de token de acceso.
+- Métodos para generar tokens con scopes adecuados en Make que permiten acceso seguro.
+- Confirmación de que MCP permite a la IA seleccionar herramientas y ejecutar tareas automáticamente.
+- Requisitos para mantener escenarios o flujos activos para que la integración funcione correctamente.
+
+Fuentes oficiales consultadas:
+- Documentación oficial de MCP en la plataforma Make.
+- Guías de integración de APIs y conexiones en ChatGPT.
+- Secciones de configuración y seguridad en Make.app
+
+Estos enlaces se recomiendan para consultas y validación adicional:  
+https://www.make.com/en/help/app-security  
+https://platform.openai.com/docs/guides  
+https://docs.make.com/en/integrations/mcp  
+
+
+[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/64556067/b14c686c-5416-431c-b778-bf47aa7d20d6/transcripcion-hoy.txt)
+##Contenido END

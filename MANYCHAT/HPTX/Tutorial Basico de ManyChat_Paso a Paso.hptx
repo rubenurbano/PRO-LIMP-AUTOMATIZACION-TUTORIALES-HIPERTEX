@@ -1,0 +1,172 @@
+##itemID:000
+##menu-item BEGIN
+Tutorial Basico de ManyChat_Paso a Paso
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Tutorial Basico de ManyChat_Paso a Paso:
+Web Original:
+Tutorial Basico de ManyChat_Paso a Paso:
+gptCHAT
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introduccion y Objetivo del tutorial
+##menu-item END
+##Contenido BEGIN
+Introduccion y Objetivo del tutorial:
+Este tutorial te guia, paso a paso y con una sola accion por paso, para crear tu primera automatizacion sencilla en ManyChat usando Instagram o Facebook Messenger.
+La idea es que, al finalizar, tengas un pequeno flujo automatico que salude a la persona y le haga una pregunta basica.
+Configurar un flujo muy sencillo en ManyChat que haga lo siguiente:
+- Recibir automaticamente a un nuevo usuario.
+- Enviarle un mensaje de bienvenida.
+- Hacerle una pregunta cerrada (por ejemplo: ¿Quieres recibir mas informacion?).
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Requisitos previos
+##menu-item END
+##Contenido BEGIN
+Requisitos previos:
+- Tener una cuenta de Facebook o Instagram activa.
+- Tener conexion a internet y un navegador web moderno.
+- Disponer de una cuenta de correo electronico que puedas usar para registrarte en ManyChat.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Acceso a ManyChat y registro de cuenta
+##menu-item END
+##Contenido BEGIN
+Acceso a ManyChat y registro de cuenta:
+Paso 1. Abre tu navegador web habitual (por ejemplo, Chrome o Firefox).
+Paso 2. En la barra de direcciones del navegador, escribe: https://manychat.com y pulsa Enter.
+Paso 3. En la pagina de inicio de ManyChat, haz clic en el boton que diga algo como Sign up o Get started free.
+Paso 4. En la pantalla de registro, elige el metodo de creacion de cuenta (por ejemplo, continuar con Facebook) y haz clic en esa opcion.
+Paso 5. Cuando el navegador te lo pida, inicia sesion con tu cuenta de Facebook o Instagram y acepta los permisos necesarios para conectar ManyChat con tu pagina o perfil.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Acceso a la seccion de Automatizacion
+##menu-item END
+##Contenido BEGIN
+Acceso a la seccion de Automatizacion:
+Paso 6. Una vez completado el inicio de sesion, en el panel principal de ManyChat, localiza el menu lateral y haz clic en la seccion llamada Automation o Flows.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Creacion de un nuevo flujo
+##menu-item END
+##Contenido BEGIN
+Creacion de un nuevo flujo:
+Paso 7. Dentro de la seccion de Flows, haz clic en el boton para crear un nuevo flujo (por ejemplo, + New Flow).
+Paso 8. En la ventana que se abre para crear el flujo, escribe un nombre sencillo para reconocerlo luego (por ejemplo, Bienvenida basica) y confirma con el boton de crear/guardar.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Configuracion del primer mensaje de bienvenida
+##menu-item END
+##Contenido BEGIN
+Configuracion del primer mensaje de bienvenida:
+Paso 9. En el editor visual del flujo, haz clic dentro del primer bloque de mensaje para editar el texto que se enviara automaticamente al usuario.
+Paso 10. Escribe un mensaje de bienvenida corto, por ejemplo: ¡Hola! Gracias por escribirnos 😊 ¿Te gustaria recibir mas informacion? y guarda los cambios del bloque.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Anadiendo botones de respuesta rapida
+##menu-item END
+##Contenido BEGIN
+Anadiendo botones de respuesta rapida:
+Paso 11. Debajo del mensaje de bienvenida, anade un boton de respuesta rapida (quick reply o button) haciendo clic en la opcion correspondiente dentro del editor.
+Paso 12. En la configuracion de ese boton, escribe el texto de la respuesta (por ejemplo: Si, quiero informacion) y asignale la accion de continuar hacia un nuevo bloque de mensaje.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Creacion del mensaje de confirmacion
+##menu-item END
+##Contenido BEGIN
+Creacion del mensaje de confirmacion:
+Paso 13. Crea el nuevo bloque de mensaje al que apunta el boton y escribe un texto que confirme la eleccion del usuario (por ejemplo: Perfecto, ahora te enviare mas detalles.) y guarda el bloque.
+Paso 14. Revisa la conexion entre los bloques en el editor (flechas o lineas entre los mensajes) para confirmar que el flujo esta enlazado desde el mensaje de bienvenida hasta la respuesta del boton.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Publicacion y activacion del flujo
+##menu-item END
+##Contenido BEGIN
+Publicacion y activacion del flujo:
+Paso 15. Haz clic en el boton de Publish o Guardar/Activar del flujo para que la automatizacion se guarde y quede lista para usarse.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Prueba del flujo creado
+##menu-item END
+##Contenido BEGIN
+Prueba del flujo creado:
+Paso 16. En el panel principal de ManyChat, localiza la opcion para hacer una prueba (por ejemplo, Preview o Test) y haz clic para enviarte el flujo a ti mismo en Messenger o Instagram.
+Paso 17. Ve a tu aplicacion de Messenger o Instagram en el movil, abre la conversacion con tu pagina o perfil y comprueba que recibes el mensaje de bienvenida del flujo recien creado.
+Paso 18. Responde usando el boton que has configurado (Si, quiero informacion) y verifica que se muestra el siguiente mensaje que escribiste en el segundo bloque.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Revision y ajustes finales
+##menu-item END
+##Contenido BEGIN
+Revision y ajustes finales:
+Paso 19. Si algo no funciona como esperabas, vuelve al editor de Flows, revisa los textos, los botones y las conexiones, corrige lo necesario y vuelve a pulsar Publish.
+Paso 20. Cuando el flujo funcione correctamente en tus pruebas, dejalo publicado para que cualquier usuario nuevo que interactue (segun la configuracion elegida) reciba automaticamente este mensaje de bienvenida.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Sugerencia final
+##menu-item END
+##Contenido BEGIN
+Sugerencia final:
+Cuando te sientas comodo con este flujo basico, puedes ir anadiendo mas bloques, preguntas y caminos diferentes segun la respuesta del usuario. La clave es avanzar poco a poco, probando cada cambio antes de publicarlo.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES:
+Para validar la informacion tecnica de este tutorial sobre ManyChat, he consultado las fuentes oficiales de la plataforma.
+
+Resumen de puntos tecnicos validados:
+ManyChat es una plataforma oficial de automatizacion de conversaciones que permite crear chatbots para Facebook Messenger, Instagram y WhatsApp sin necesidad de programacion. La plataforma ofrece un plan gratuito que permite hasta mil contactos y funcionalidades basicas de automatizacion, junto con un editor visual de flujos tipo drag-and-drop.
+
+Los flujos de automatizacion (Flows) en ManyChat permiten crear secuencias de mensajes conectados mediante bloques visuales, botones de respuesta rapida (Quick Replies) y condiciones logicas. La conexion con Facebook e Instagram requiere permisos especificos de la pagina de negocios y cumplir con las politicas de Meta para aplicaciones de mensajeria.
+
+Enlaces directos a documentacion oficial:
+- Centro de ayuda oficial de ManyChat: https://help.manychat.com
+- Guia de inicio rapido: https://manychat.com/tutorials/getting-started
+- Documentacion sobre Flows y automatizaciones: https://help.manychat.com/en/collections/building-your-automation
+- Politicas de uso de Meta para chatbots: https://developers.facebook.com/docs/messenger-platform/policy/policy-overview
+
+Referencias a paginas de soporte oficiales:
+- Academia de ManyChat con tutoriales en video: https://manychat.com/academy
+- Blog oficial con casos de uso: https://manychat.com/blog
+- Foro de la comunidad ManyChat: https://community.manychat.com
+- Soporte tecnico directo: https://manychat.com/support
+
+
+TITULO_VIDEO =    Como Conectar CUALQUIER API a Makecom
+URL_WEB_YOUTUBE = https://youtu.be/d1Y0Njcv6J8?si=1Rg7Bp97P5G6hTgo
+AUTOR = PRO-LIMP AUTOMATIZACION
+TELEFONO = +34 636832005
+##Contenido END

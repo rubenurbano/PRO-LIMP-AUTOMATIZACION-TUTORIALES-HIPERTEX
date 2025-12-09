@@ -1,0 +1,221 @@
+
+# 📘 PLANTILLA DE PLAN TÉCNICO React — Rubén Urbano / Orion
+
+---
+
+## 🧠 1. CONTEXTO GENERAL
+**Nombre del proyecto:**  
+_(Ejemplo: FastAPI Video Downloader / React Dashboard / Script de Automatización PRO-LIMP)_
+
+**Objetivo principal:**  
+_(Explica en una frase qué resuelve y para quién)_
+
+**Resultado esperado:**  
+_(Qué debe generar, mostrar o ejecutar al finalizar)_
+
+---
+
+## 🧩 2. ARQUITECTURA GENERAL
+**Tipo de proyecto:**  
+- [ ] Script Python  
+- [ ] API con FastAPI  
+- [ ] App React  
+- [ ] Otro: ________
+
+**Estructura general (carpetas / módulos / componentes):**
+
+/src
+/components
+/routes
+/services
+/assets
+main.py / app.js
+
+
+**Flujo lógico general:**
+1. (Entrada de datos / parámetros)
+2. (Procesamiento principal)
+3. (Salida o render final)
+
+---
+
+## ⚙️ 3. DEPENDENCIAS
+**Lenguajes / frameworks:**  
+_(Ejemplo: Python 3.13, React 18, FastAPI, Tailwind, yt-dlp, ffmpeg)_
+
+**Paquetes / librerías clave:**  
+_(Escribir con precisión los nombres pip/npm exactos)_
+
+---
+
+## 🔌 4. INTEGRACIONES EXTERNAS
+**APIs o servicios conectados:**  
+_(Ejemplo: YouTube API, Firebase, Gemini, Make, n8n, etc.)_
+
+**Método de conexión:**  
+_(HTTP, SDK, WebSocket, OAuth2, etc.)_
+
+**Endpoints principales o flujos:**
+| Endpoint | Método | Descripción |
+|-----------|---------|-------------|
+| /api/video | GET | Devuelve datos de video |
+| /api/download | POST | Descarga y procesa |
+
+---
+
+## 🧮 5. LÓGICA PRINCIPAL DEL SISTEMA
+**Descripción paso a paso:**
+1. (Qué hace el sistema al iniciar)
+2. (Qué entradas recibe)
+3. (Qué cálculos / validaciones realiza)
+4. (Qué devuelve / renderiza)
+
+---
+
+## 🧱 6. INTERFAZ / FRONTEND (si aplica)
+**Diseño general:**  
+_(Estructura visual, layout, componentes React o HTML)_
+
+**Elementos clave:**  
+- Botones principales  
+- Inputs  
+- Tablas / Listas  
+- Modales  
+
+**Eventos previstos (onClick, onSubmit, etc.):**
+_(Ejemplo: botón “Descargar” ejecuta fetch() a /api/download)_
+
+---
+
+## 🧰 7. GESTIÓN DE ERRORES Y LOGS
+**Comportamiento esperado ante fallos:**
+- Qué debe mostrar si falla una conexión
+- Cómo se registra el error (print, logger, archivo .log)
+
+---
+
+## ⏱️ 8. RENDIMIENTO Y MEDIDAS DE OPTIMIZACIÓN
+- Control de tiempo (import time)
+- Caching, throttling o lazy loading
+- Uso eficiente de memoria o threads
+
+---
+
+## 📦 9. OUTPUT FINAL / ENTREGABLES
+**Formato esperado:**  
+- [ ] Archivo .mp4  
+- [ ] JSON  
+- [ ] HTML  
+- [ ] Documento .docx  
+- [ ] Otro: ________
+
+**Ruta de salida:**  
+_(Ejemplo: C:\Users\rubenurbano\videosyt)_
+
+---
+
+## 🧾 10. VALIDACIÓN FINAL
+**Criterios de éxito:**
+1. Funciona sin errores
+2. Entrega el resultado correcto
+3. Se ejecuta dentro del tiempo esperado
+4. Código limpio, comentado y sin warnings
+
+---
+
+## 🧭 11. OBSERVACIONES DE RUBÉN
+_(Aquí va tu toque personal, conclusiones o ideas futuras)_
+
+---
+
+## ✅ 12. INSTRUCCIONES PARA LA LLM
+**Prompt de arranque sugerido:**
+> “Basándote en el siguiente Plan Técnico, genera el código completo en [lenguaje/framework] respetando estructura, dependencias y flujo definidos. Sé limpio, comenta cada bloque y no improvises fuera del plan.”
+
+---
+
+💡 _Esta plantilla define antes de escribir una sola línea de código qué debe hacerse, cómo y por qué.  
+Con esto, una LLM deja de ser un mago borracho y se convierte en un ingeniero asistente._
+
+************************************************************************************
+🧭 PROTOCOLO ORION–RUBÉN PARA USAR PLANES TÉCNICOS CON LLM
+1️⃣ Siempre: Plan primero, código después
+************************************************************************************
+
+Regla sagrada:
+
+Primero rellenas la plantilla de Plan Técnico (aunque sea rápido / incompleto).
+
+Luego se la das a la LLM.
+
+Solo después pides código.
+
+Nunca al revés.
+Sin plan → es “mago borracho”.
+Con plan → es “ingeniero junior obediente”.
+
+2️⃣ Cómo hablarle a la LLM cuando uses el plan
+
+Flujo básico:
+
+Adjuntas el .txt o .md del plan (como el que acabas de hacer).
+
+Escribes algo tipo (en corto):
+
+“Este es el PLAN TÉCNICO. No escribas código todavía.
+Primero revísalo, dime si ves lagunas o incoherencias.”
+
+Cuando esté bien:
+
+“Ahora sí: genera el código completo respetando EXACTAMENTE este plan.
+No inventes endpoints, funciones ni componentes fuera del documento.”
+
+Esto te garantiza que el modelo no se ponga creativo donde no toca.
+
+3️⃣ Versionado mental (para no hacer ensalada rusa)
+
+Para cualquier proyecto:
+
+PLAN_v1.md → primer diseño.
+
+PLAN_v2.md → solo si cambias algo gordo (arquitectura, flujos, API).
+
+Código SIEMPRE debe decir a qué plan responde, por ejemplo en el header:
+
+# Proyecto: Downloader PRO
+# Plan técnico: PLAN_DOWNLOADER_v2.md
+
+
+Así, dentro de 6 meses sabes qué narices estabas pensando cuando lo escribiste.
+
+4️⃣ Uso en proyectos distintos (FastAPI / React / Scripts)
+
+Scripts Python
+→ Secciones clave: contexto, lógica principal, entradas/salidas, logs, TIME ELAPSED.
+
+FastAPI
+→ Muy importante: endpoints, modelos de datos, status codes, errores.
+
+React
+→ Layout, componentes, props, estado global, eventos (onClick, onSubmit…), API calls.
+
+Siempre el mismo protocolo:
+Plan + Revisión + Código.
+
+5️⃣ Cómo lo usaríamos tú y yo
+
+Cuando vengas con algo nuevo, lo ideal:
+
+Me dices:
+
+“Orion, vamos a rellenar el PLAN TÉCNICO para este proyecto.”
+
+Lo completamos juntos (rápido pero bien).
+
+Luego:
+
+“Ahora, genera el código base respetando el plan. Nada fuera del documento.”
+
+Y desde ahí iteramos como desarrolladores, no como apretadores de botones.
+
+Si quieres, el siguiente paso puede ser: cogemos un proyecto real tuyo (por ejemplo: “Dashboard React para ver tutoriales JSON”) y rellenamos juntos el plan técnico línea por línea.

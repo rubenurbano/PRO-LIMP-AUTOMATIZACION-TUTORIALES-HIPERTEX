@@ -1,0 +1,79 @@
+Nombre del video:
+How to Store Data in Make.com No Code Automation A Step-by-Step Guide
+
+URL del video:
+https://youtu.be/zM3SJBwdBrk?si=0z2EHoc57FRAg82g
+
+ESQUEMA COMPLETO DEL TUTORIAL: ALMACENAMIENTO DE DATOS EN MAKE.COM
+
+I. CONCEPTO GENERAL DE TRABAJO CON DATOS EN MAKE
+
+ 1. La necesidad de trabajar con datos
+  En la mayoría de los casos, las automatizaciones de Make implican el trabajo con algún tipo de datos.
+
+ 2. El principio fundamental de las bases de datos (Search/Update/Create)
+  El concepto general para trabajar con bases de datos es siempre buscar la entrada primero.
+  Si el registro existe, se actualiza.
+  Si el registro no existe, se crea uno nuevo.
+  Este proceso evita la creación de duplicados.
+  Este concepto es aplicable a Google Sheets, Airtable, Smart Suite, Data Stores dentro de Make y cualquier tipo de base de datos.
+
+II. ESCENARIO DE EJEMPLO: GESTIÓN DE VOUCHERS (CUPONES) EN GOOGLE SHEETS
+
+ 1. Objetivo: Garantizar que cada persona (correo electrónico) obtenga solo un voucher y no pueda obtener otro más tarde.
+
+ 2. Paso 1: Configuración de la entrada de datos
+  Utilizar el módulo Set Variable (Establecer Variable) para definir el correo electrónico de prueba (ejemplo: info@techflow.ai).
+
+ 3. Paso 2: Búsqueda del registro existente
+  Utilizar el módulo Google Sheets 'Search Rows' (Buscar Filas) para verificar si el correo electrónico ya existe en la base de datos.
+   a. Configuración del módulo: Insertar el ID de la hoja de cálculo (Spreadsheet ID).
+   b. Criterio de búsqueda: Buscar en la Columna C (que contiene la dirección de correo electrónico).
+   c. Condición: La Columna C debe ser igual al correo electrónico de entrada.
+   d. Configuración avanzada: Establecer la búsqueda como "case insensitive" (sin distinción de mayúsculas/minúsculas) para evitar errores si el usuario ingresa el correo con mayúsculas.
+   e. Resultados: Limitar la búsqueda para obtener solo un resultado, ya que el correo debe ser único.
+
+ 4. Paso 3: Decisión de enrutamiento (Router)
+  Añadir un módulo Router para crear dos ramas de flujo. La decisión de qué ruta tomar se basa en si se encontró una fila o no.
+
+  4A. RAMA 1: Registro Encontrado (Actualizar)
+
+   a. Condición del Filtro: La fila se actualiza si se encontró un número de fila (Row number exists, Found).
+   b. Módulo: Utilizar el módulo Google Sheets 'Update a Row' (Actualizar una Fila).
+   c. Mapeo de datos: Mapear el nombre de la hoja (Sheet name) y el número de fila (Row number) que fueron devueltos por el módulo 'Search Rows' anterior.
+   d. Actualización de campos de seguimiento:
+    i. Conteo de Solicitudes (Count of requests): Utilizar la función Sum para sumar 1 al valor existente en la celda. Esto rastrea cuántas veces un usuario existente solicita un voucher.
+    ii. Nota importante: Se usa la función Sum en lugar de una simple suma (+1) porque Sum analiza el formato de texto de la celda como un número, evitando tener que usar la función 'parse number'.
+    iii. Marca de tiempo (Last requested timestamp): Usar la función 'now' (ahora) y opcionalmente darle formato con 'format date'.
+
+  4B. RAMA 2: Registro No Encontrado (Crear/Añadir)
+
+   a. Condición del Filtro: La fila se añade si el número de fila no existe (Row number does not exist, Not found).
+
+   b. Opción A (Generar código de voucher aleatorio sobre la marcha)
+
+    i. Módulo: Utilizar Google Sheets 'Add a Row' (Añadir una Fila).
+    ii. Datos de entrada: Insertar la dirección de correo electrónico.
+    iii. Generación de código de voucher:
+     1. Usar el 'unique user ID' (ID de usuario único) para generar un valor aleatorio.
+     2. Modificar la cadena generada: Reemplazar los guiones (-) con una cadena vacía.
+     3. Substring: Recortar la cadena resultante a los primeros caracteres (ej. 6).
+     4. Capitalización: Usar la función Upper para convertir el código a mayúsculas (se debe usar Upper en lugar de capitalize, ya que 'capitalize' solo pone la primera letra en mayúscula).
+    iv. Campos de seguimiento: Establecer 'Voucher Code Send' a 'Yes'. Establecer 'Count of Request' a 1. Establecer la marca de tiempo (copiando la fórmula de la Rama 1).
+
+   c. Opción B (Asignar un código de voucher predefinido — Flujo avanzado)
+
+    Contexto: Esta opción se utiliza cuando se tiene un conjunto predefinido de vouchers que deben distribuirse, en lugar de generar uno nuevo.
+
+    i. Búsqueda de un voucher disponible: Utilizar un módulo Google Sheets 'Search Rows' adicional.
+    ii. Criterio de búsqueda: Buscar la primera fila que ya tiene un código de voucher, pero donde el campo de correo electrónico no existe (está vacío).
+    iii. Configuración de búsqueda: Ordenar de forma ascendente por número de fila. Esto asegura que se obtenga el próximo voucher no distribuido.
+
+    iv. Actualización de la fila existente: En lugar de usar 'Add a Row', usar el módulo 'Update a Row'.
+    v. Mapeo de datos: Usar el número de fila devuelto por el segundo módulo 'Search Rows' (el que encontró el voucher no usado).
+    vi. Datos de entrada: Insertar la dirección de correo electrónico de entrada. El código de voucher existente no necesita actualización.
+    vii. Campos de seguimiento: Establecer 'Voucher Code Send' a 'Yes'. Establecer el 'Count' a 1. Actualizar la marca de tiempo.
+
+III. CONCLUSIÓN DEL CONCEPTO
+
+ El concepto clave de la gestión de datos es siempre Buscar (Search) un registro, y luego, dependiendo de si se encuentra, actualizar (Update) el registro existente o crear (Create) uno nuevo. Opcionalmente, si se utilizan conjuntos de datos predefinidos, se requiere una búsqueda adicional para encontrar la entrada predefinida y luego actualizarla.

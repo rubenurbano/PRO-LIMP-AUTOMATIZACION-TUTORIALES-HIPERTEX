@@ -1,0 +1,76 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "COMO USAR LOS ACORDES 6-7-9-11-13 EN TUS CANCIONES\nWEB ORIGINAL:",
+      "contenido": "COMO USAR LOS ACORDES 6-7-9-11-13 EN TUS CANCIONES:\nWeb Original:\nCOMO USAR LOS ACORDES 6-7-9-11-13 EN TUS CANCIONES:\nhttps://youtu.be/0rfqDzCBZ0Y?si=ToOk_NDY50ICjVLs\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introduccion a los acordes extendidos",
+      "contenido": "Introduccion a los acordes extendidos:\nEste es un tutorial paso a paso para aprender a usar acordes extendidos con numeros como 6, 7, 9, 11 y 13 para hacer que tu musica suene mas interesante y moderna. Si eres nuevo en la musica, imagina que estas notas extra son como especias que anades a una receta basica para darle un sabor especial."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Acordes con Sexta",
+      "contenido": "Acordes con Sexta:\nLa funcion principal de un acorde con sexta es reemplazar o sustituir un acorde llamado Max 7 (Septima Mayor), sobre todo cuando la melodia de tu cancion termina o se apoya en la nota principal (tonica) del acorde. Esto ayuda a que el sonido sea mas suave.\n\nUn acorde de sexta es basicamente un acorde mayor al que le anades la sexta nota de la escala. Tambien puedes pensar en esa sexta nota como una segunda mayor a partir de la quinta nota del acorde.\n\nSi estas en Do Mayor, tocas Do Mayor y anades la nota La (la sexta nota) para formar un Do 6.\n\nPuedes anadir la sexta a cualquier acorde mayor de la escala. Se usa en lugar del Max 7 cuando la septima del Max 7 podria chocar con la melodia de la cancion si esta termina en la tonica."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Acordes con Septima tipos comunes",
+      "contenido": "Acordes con Septima tipos comunes:\nHay muchos tipos de acordes con septima (como Do7, Do Max 7, Do menor con septima mayor, Do disminuido 7, etc.), pero nos centraremos en los mas comunes: el Max 7 y el Septima de Dominante."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Acordes Max 7 Septima Mayor",
+      "contenido": "Acordes Max 7 Septima Mayor:\nEstos acordes tienen un sonido un poco disonante (como si no encajaran perfectamente, pero de una manera agradable) y se usan para embellecer y decorar los acordes mayores, dandoles un toque mas brillante y estilo jazz.\n\nPuedes anadir el Max 7 a cualquier acorde mayor. En la tonalidad de Do Mayor, puedes usarlo sobre el Do, el Fa o el Sol."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Acordes de Septima de Dominante uso como acorde de paso",
+      "contenido": "Acordes de Septima de Dominante uso como acorde de paso:\nEstos acordes se usan de dos maneras: como acordes de paso y como acordes sustitutos.\n\nEl acorde dominante (el quinto grado de la escala, por ejemplo, Sol 7 en Do Mayor) siempre quiere volver a la tonica (Do Mayor). Puedes usar esta idea para moverte entre acordes. Por ejemplo, si haces un Re 7, te hara caer en Sol Mayor. Si haces un La 7, te hara caer en Re Mayor. En una progresion (como Do Mayor - La menor - Re menor), puedes convertir rapidamente el Re menor en Re 7 (acorde de paso) para caer en Sol Mayor, y luego volver a Do."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Acordes de Septima de Dominante uso como acorde sustituto",
+      "contenido": "Acordes de Septima de Dominante uso como acorde sustituto:\nEl acorde dominante (por ejemplo, Sol 7) puede ser reemplazado por otro acorde dominante que se encuentra a un tritono de distancia (tres tonos enteros). Por ejemplo, en lugar de usar Sol 7 para ir a Do, puedes usar Do sostenido 7 (C#7) o Re bemol 7 (Db7), el cual tambien cae en Do Mayor. Esta sustitucion se llama sustitucion de tritono y se puede aplicar tambien a las teclas negras (Mi bemol 7 para caer a Re, La bemol 7 para caer a Sol, etc.)."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Acordes con Novena aplicacion basica",
+      "contenido": "Acordes con Novena aplicacion basica:\nAnadir la novena a un acorde mayor le da un toque mas tierno o sentimental. Si lo anades a un acorde menor, le da un toque mas misterioso.\n\nPuedes anadir la novena a casi cualquier acorde mayor o menor.\n\nNo es recomendable usar la novena sobre el tercer grado y el septimo grado de una escala mayor, porque la novena de esos acordes (por ejemplo, el Fa sostenido en Mi) choca con las notas de la escala.\n\nEn Do Mayor se puede usar en Do 9 (grado 1), Re menor 9 (grado 2), Fa Max 9 (grado 4), Sol 9 (grado 5) y La menor 9 (grado 6)."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Tipos especiales de Novena",
+      "contenido": "Tipos especiales de Novena:\nNovena Bemol: Generalmente se usa sobre acordes dominantes. Por ejemplo, Sol 7 con Novena Bemol (G7b9) antes de caer a Do Mayor. Tambien se puede aplicar al acorde sustituto de tritono (Do sostenido 7 con Novena Bemol).\n\nNovena Aumentada: Se usa en acordes dominantes que van a resolver (caer) a un acorde menor. Por ejemplo, Sol 7 con Novena Aumentada (G7#9) antes de caer a Do menor 7."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Acordes con Oncena",
+      "contenido": "Acordes con Oncena:\nEl uso de la oncena (o cuarta adherida) se hace especialmente sobre acordes menores.\n\nSe aplica sobre los grados menores de la escala (en Do Mayor, sobre Re menor 7, Mi menor 7 y La menor 7)."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Oncena Sostenida",
+      "contenido": "Oncena Sostenida:\nSe utiliza usualmente sobre el cuarto y quinto grado de la escala mayor (Fa y Sol en Do Mayor).\n\nSe anade la oncena (o la cuarta) subida medio tono (sostenida). Por ejemplo, Fa Max 7 con Oncena Aumentada (Fmaj7#11) y Sol Max 7 con Oncena Aumentada (Gmaj7#11). Esto se usa para decorar estos acordes cuando se tocan en una progresion."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Acordes con Treceava",
+      "contenido": "Acordes con Treceava:\nSe utiliza sobre acordes mayores y dominantes, pero el uso mas comun es sobre acordes dominantes.\n\nSe usa en el acorde dominante (Sol 7 en Do Mayor) para convertirlo en Sol 13, justo antes de caer a la tonica (Do Mayor). Esto se suele aplicar al finalizar una progresion de acordes."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:Resumen de puntos tecnicos validados:\n\nLos acordes extendidos son estructuras armonicas que incluyen notas mas alla de la septima, denominadas tensiones o extensiones. Estos acordes se nombran segun el mayor de los intervalos presentes. Las tensiones disponibles para cada tipo de acorde son:\n\nPara acordes Maj7: las tensiones normales son 9, 11 aumentada y 13\nPara acordes menores 7: las tensiones normales son 9, 11 y 13\nPara acordes dominantes 7: pueden llevar practicamente cualquier tension, incluyendo alteradas como b9, 9 aumentada, 11 aumentada, y b13\n\nLa regla fundamental para determinar tensiones disponibles es que una tension no puede estar medio tono por encima de las notas del acorde (no puede ser b9 de ninguna nota de la cuatriada), excepto en acordes dominantes que admiten mayor libertad.\n\nEl acorde de sexta puede funcionar como sustituto del acorde Maj7, especialmente cuando la melodia termina en la tonica, evitando conflictos con la septima mayor.\n\nLa sustitucion tritonal es un recurso armonico donde un acorde de septima de dominante puede ser sustituido por otro acorde dominante ubicado a distancia de tritono (tres tonos enteros). Ambos acordes comparten el mismo tritono entre su tercera y septima, aunque invertido. Por ejemplo, G7 puede ser sustituido por Db7 o C#7, ambos resolviendo a C mayor. Esta sustitucion funciona porque ambos acordes contienen las mismas notas del tritono: en G7 son B y F, mientras que en Db7 son F y B (enarmonicamente Cb).\n\nLa escala mas utilizada para improvisar sobre acordes dominantes sustitutos es la Lidia b7, que surge del cuarto grado de la escala menor melodica.\n\nEnlaces directos a documentacion oficial y fuentes tecnicas:\n\nteoria.com Sustitucion del tritono\nhttps://www.teoria.com/es/aprendizaje/funciones/sus_tritono.php\n\nWikipedia Sustitucion tritonal\nhttps://es.wikipedia.org/wiki/Sustituci%C3%B3n_tritonal\n\nClases de Guitarra Online Acordes de guitarra jazz: tensiones y extensiones\nhttps://www.clasesguitarraonline.com/armonia-para-guitarra/2016/3/9/acordes-guitarra-jazz-tensiones\n\nClasesdeguitarra.com.co Tensiones y extensiones en acordes 9, 11 y 13\nhttps://clasesdeguitarra.com.co/la-sustitucion-tritonal/\n\nGuitarristas.info Tensiones en los acordes 9, 11 y 13\nhttps://www.guitarristas.info/foros/tensiones-acordes-9-11-13/207133\n\nWikipedia Acorde definicion y teoria\nhttps://es.wikipedia.org/wiki/Acorde\n\nEstas fuentes validan los conceptos presentados en el tutorial sobre el uso de acordes extendidos y sus aplicaciones practicas en composicion musical."
+    },
+
+    {
+      "itemID": "013",
+      "menu_item": "MAPA MENTAL DEL PROCESO",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/ACORDES%20EXTENDIDOS%20(6,%207,%209,%2011,%2013).png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

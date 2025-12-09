@@ -1,0 +1,56 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Parte 3_Gestion de Citas con Appsheet y Google Calendar + Múltiples Asesores y Horarios\nWEB ORIGINAL:",
+      "contenido": "Parte 3_Gestion de Citas con Appsheet y Google Calendar + Múltiples Asesores y Horarios:\nWeb Original:\nParte 3_Gestion de Citas con Appsheet y Google Calendar + Múltiples Asesores y Horarios:\nhttps://youtu.be/i7-Jh6Nkf1o?si=Zu8hRA_Le8RGkoZv"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción: El Objetivo del Proyecto",
+      "contenido": "Introducción: El Objetivo del Proyecto:\nEl propósito de este tutorial es mejorar una aplicación de gestión de citas creada con AppSheet. El objetivo principal es que el sistema pueda manejar múltiples asesores (las personas que dan las citas) y asignarles diferentes horarios de disponibilidad.\n\nAnteriormente, la aplicación solo tenía una lista de asesores, pero no era posible saber en qué horarios específicos estaba disponible cada uno de ellos. Ahora se busca resolver esta limitación."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Paso 1: Crear la Tabla de Horario Asesores",
+      "contenido": "Paso 1: Crear la Tabla de Horario Asesores:\nPara vincular qué asesor está libre en qué hora, es necesario crear una nueva tabla en la hoja de cálculo que funciona como base de datos.[1] Esta tabla se debe llamar Horario Asesores.\n\nEsta tabla debe contener tres campos o columnas necesarios:\n\nID de nuestra tabla: servirá como identificador único.[2][3]\n\nID de horario: para identificar de qué horario se trata.\n\nID del asesor: para identificar quién es el asesor correspondiente.[1]\n\nEl propósito de esta tabla es permitir el ingreso de diferentes asesores en un horario específico."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Paso 2: Configuración de la Tabla en AppSheet",
+      "contenido": "Paso 2: Configuración de la Tabla en AppSheet:\nUna vez que la tabla existe en la hoja de cálculo, se debe configurar dentro de AppSheet siguiendo estos pasos:\n\nPrimero, agregar la tabla Horario Asesores a la aplicación.\nSegundo, crear las referencias necesarias: asignar la tabla de horarios al campo ID horario y la tabla de asesores al campo ID asesor.\nTercero, crear una nueva vista (pantalla) llamada Horarios Asesores. Esta vista debe ser de tipo tabla y ubicarse en el menú de la aplicación."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Paso 3: Visualización Clara de los Horarios",
+      "contenido": "Paso 3: Visualización Clara de los Horarios:\nPara facilitar la lectura de los horarios en el formulario, es útil combinar la hora de inicio y fin. Se debe agregar una columna virtual en la tabla de Horarios con una fórmula que combine los campos Inicio y Fin (ejemplo: 8:00 a 9:00). Esta columna virtual se debe asignar como la etiqueta.[1]\n\nEn la vista de Horarios Asesores, se debe modificar el orden para que primero se muestre el campo Asesor y luego el campo Horario. Esto ayuda a visualizar la asignación (ejemplo: Asignar a Marta Mejía el horario de 8 a 9). También es posible agrupar los datos por asesor para ver sus horarios disponibles de forma ordenada."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Paso 4: Evitar Duplicados con la Llave Primaria",
+      "contenido": "Paso 4: Evitar Duplicados con la Llave Primaria:\nPara evitar que el sistema permita asignar el mismo horario al mismo asesor varias veces, se debe configurar una restricción.\n\nEn la tabla Horario Asesores, se debe indicar que los campos ID de horario y ID del asesor funcionen juntos como la Llave Primaria (Primary Key). Al hacer esto, si se intenta agregar un horario que ya está asignado a ese asesor, el sistema mostrará un mensaje de error indicando que no se puede duplicar la llave principal, evitando así registros incorrectos."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Paso 5: Filtrado de Horarios por Asesor",
+      "contenido": "Paso 5: Filtrado de Horarios por Asesor:\nEste es el paso más importante para que, al seleccionar un asesor, solo aparezcan sus horarios disponibles.\n\nPrimero, al crear o inicializar las citas en Google Calendar, se debe incluir el ID del asesor en el título del evento. Esto permite extraer la información de disponibilidad de esa persona.[1]\n\nSegundo, se debe acceder a la tabla de Citas Diarias y modificar la fórmula que sugiere los valores disponibles. La nueva lógica del filtro debe indicar que se busque en el título del evento de Google Calendar (donde ahora está el ID del asesor) y solo muestre los horarios que coincidan con el ID del asesor seleccionado en el formulario de la cita. De esta forma, si se selecciona a un asesor específico, solo se verán sus horarios configurados."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Paso 6: Prueba Final del Sistema",
+      "contenido": "Paso 6: Prueba Final del Sistema:\nPara concluir, se debe verificar que el sistema gestiona correctamente la disponibilidad y los traslapes.[1]\n\nSe debe crear una cita, asignar un asesor y elegir un horario. Después de guardar, si se intenta crear otra cita para el mismo asesor, el horario recién usado debe haber desaparecido de la lista porque el ID del asesor ya no se visualiza en el título del calendario como disponible.\n\nAdemás, si otro asesor tenía ese mismo horario disponible, al asignar la cita al primer asesor, el sistema también debe quitar esa disponibilidad de la lista del segundo asesor, asegurando que el horario reservado desaparezca para quien lo tomó."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nSe han consultado fuentes técnicas oficiales de AppSheet y Google Cloud para validar los conceptos clave presentados en este tutorial.\n\nLlaves Primarias Compuestas (Multi-column keys):\nLa documentación oficial de AppSheet confirma el concepto de \"Natural multi-column keys\". Es posible usar dos o más campos que juntos identifican de forma única una fila.[1][2] Esto valida el paso de usar \"ID Horario\" y \"ID Asesor\" combinados como llave primaria para evitar duplicados.\nFuente: AppSheet Help - What is a key?\n\nListas Desplegables Dependientes (Dependent Dropdowns):\nEl tutorial utiliza lógica para filtrar horarios basándose en el asesor seleccionado.[1] Esto se valida con la función \"Dependent Dropdowns\" de AppSheet, que utiliza expresiones en la restricción Valid_If para limitar los valores mostrados en una lista basándose en la selección de otra columna.[1][4]\nFuente: AppSheet Help - Dependent drop-downs[1]\n\nIntegración con Google Calendar como Fuente de Datos:\nAppSheet permite oficialmente usar Google Calendar como fuente de datos.[5] Las tablas generadas a partir de calendarios incluyen columnas como \"Title\", \"Start\" y \"End\".[6] Esto valida la técnica de usar el campo \"Title\" del evento para almacenar y filtrar el ID del asesor.\nFuente: AppSheet Help - Use data from Google Calendar\n\n\nSources\nhelp\nyoutube.com\ngoogle.com\ngoogle.com\ngoogle.com\ngoogle.com\ngoogle.com\nzapier.com\ncdata.com\nmedium.com\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\nAppSheet Google Calendar data source integration\nAppSheet dependent dropdowns valid_if documentation\nAppSheet composite primary key documentation"
+    },
+
+    {
+      "itemID": "009",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN: https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Parte%203_Gestion%20de%20Citas%20con%20Appsheet%20y%20Google%20Calendar_Multiples%20Asesores%20y%20Horarios.jpeg]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

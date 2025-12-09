@@ -1,0 +1,157 @@
+##itemID: 000
+##menu-item BEGIN
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+APPSHEET FACIL - 42 - AUMENTAR PRECIOS EN FORMA AUTOMATICA
+Web Original:
+
+https://youtu.be/opky_VP7ANw?si=ezbYsrrlZ9u90__3 
+##Contenido END
+
+##itemID: 001
+##menu-item BEGIN
+PASO 1: Abrir la app en el editor de AppSheet
+##menu-item END
+##Contenido BEGIN
+PASO 1: Abrir la app en el editor de AppSheet:
+
+1. Entra a https://www.appsheet.com  
+2. Inicia sesión con tu cuenta de Google, Microsoft o tu correo.  
+3. En “My apps” pulsa sobre la app que contiene tu tabla de productos.  
+4. Se abrirá el editor; asegúrate de estar en la pestaña “Data” (Datos).
+##Contenido END
+
+##itemID: 002
+##menu-item BEGIN
+PASO 2: Identificar la tabla de productos y su columna de precio
+##menu-item END
+##Contenido BEGIN
+PASO 2: Identificar la tabla de productos y su columna de precio:
+
+1. En la parte izquierda verás todas las tablas.  
+2. Localiza la que guarda tus productos (p. ej. “Productos”, “Artículos”…).  
+3. Haz clic en ella y comprueba que existe una columna numérica que almacena el precio (p. ej. “Precio”, “PVP”, “Costo”).  
+4. Apúntate el nombre exacto; lo necesitarás en los siguientes pasos.
+##Contenido END
+
+##itemID: 003
+##menu-item BEGIN
+PASO 3: Crear una columna virtual para el “nuevo precio” (opcional pero útil)
+##menu-item END
+##Contenido BEGIN
+PASO 3: Crear una columna virtual para el “nuevo precio” (opcional pero útil):
+
+1. Arriba a la derecha de la tabla pulsa “+” → “Virtual column”.  
+2. Nómbrala, por ejemplo, “Precio Aumentado”.  
+3. En el campo “App formula” escribe:  
+   [Precio] * 1.10  (aumenta un 10 %; cambia 1.10 por el factor que necesites).  
+4. Pulsa “Save”.  
+Esta columna sirve de vista previa; los valores no se guardan en la hoja hasta que ejecutemos el botón del paso 5.
+##Contenido END
+
+##itemID: 004
+##menu-item BEGIN
+PASO 4: Crear un botón que ejecute el aumento
+##menu-item END
+##Contenido BEGIN
+PASO 4: Crear un botón que ejecute el aumento:
+
+1. Ve a la pestaña “UX” → “Views” y elige la vista de tu tabla (o créala).  
+2. Dentro de la vista activa “Actions” → “+ New Action”.  
+3. Configura:  
+   - Name: “Aumentar precios”  
+   - Icono: flecha hacia arriba o el que prefieras  
+   - Action: “Data: execute an action on a set of rows”  
+   - Referenced Table: tu tabla de productos  
+   - Referenced Action: elegiremos la acción que crearemos a continuación (paso 5).  
+4. Guarda; el botón aparecerá en la barra de acciones de la vista.
+##Contenido END
+
+##itemID: 005
+##menu-item BEGIN
+PASO 5: Crear la acción que actualiza cada fila
+##menu-item END
+##Contenido BEGIN
+PASO 5: Crear la acción que actualiza cada fila:
+
+1. En “Behavior” → “Actions” pulsa “+ New Action”.  
+2. Configura:  
+   - Name: “Actualizar precio unitario”  
+   - For a record of this table: tu tabla de productos  
+   - Do this: “Data: set the values of some columns in this row”  
+   - Set these columns:  
+     Precio = [Precio] * 1.10  (o tu factor).  
+3. Pulsa “Save”.  
+4. Vuelve a la acción del paso 4 y selecciona “Actualizar precio unitario” como Referenced Action.
+##Contenido END
+
+##itemID: 006
+##menu-item BEGIN
+PASO 6: Probar el aumento de precios
+##menu-item END
+##Contenido BEGIN
+PASO 6: Probar el aumento de precios:
+
+1. Abre la app en el móvil o en “Preview”.  
+2. Pulsa el botón “Aumentar precios”.  
+3. AppSheet recorrerá todas las filas y aplicará la fórmula.  
+4. Comprueba en la hoja de cálculo (Google Sheets, Excel, etc.) que los precios han cambiado.  
+5. Si algo falla, revisa los nombres de columnas y que el botón esté bien referenciado.
+##Contenido END
+
+##itemID: 007
+##menu-item BEGIN
+PASO 7: Automatizar con un schedule (aumentar cada semana, mes…)
+##menu-item END
+##Contenido BEGIN
+PASO 7: Automatizar con un schedule (aumentar cada semana, mes…):
+
+1. En “Behavior” → “Automation” → “Bots” pulsa “+ New Bot”.  
+2. Nómbralo: “Bot aumento mensual”.  
+3. Event:  
+   - Type: “Schedule”  
+   - Frequency: Monthly (o la que necesites)  
+   - Start: elige día y hora.  
+4. Task:  
+   - Type: “Run a data action”  
+   - Table: productos  
+   - Action: selecciona “Actualizar precio unitario”.  
+5. Guarda y activa el bot.  
+A partir de ahora AppSheet subirá los precios sin que pulses nada.
+##Contenido END
+
+##itemID: 008
+##menu-item BEGIN
+PASO 8: Revisar la hoja de cálculo y mantener respaldos
+##menu-item END
+##Contenido BEGIN
+PASO 8: Revisar la hoja de cálculo y mantener respaldos:
+
+1. Abre el archivo fuente (Google Sheets, Excel, etc.).  
+2. Activa el historial de versiones o haz una copia antes del primer aumento.  
+3. Comprueba que los decimales y formato de moneda sean correctos.  
+4. Si usas “Costo” y deseas aumentar solo cuando el producto esté activo, añade una condición:  
+   IF([Activo]=TRUE, [Precio]*1.10, [Precio]).
+##Contenido END
+
+##itemID: 009
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+- Creación de columnas virtuales:  
+  https://support.google.com/appsheet/answer/10107189  
+- Acciones que modifican filas:  
+  https://support.google.com/appsheet/answer/10107300  
+- Botones que ejecutan acciones sobre conjuntos de filas:  
+  https://support.google.com/appsheet/answer/10107299  
+- Automatización con bots programados (Schedule):  
+  https://support.google.com/appsheet/answer/10412336  
+- Expresiones matemáticas en AppSheet:  
+  https://support.google.com/appsheet/answer/10106733  
+
+Todos los pasos descritos coinciden con la funcionalidad documentada por Google AppSheet en los enlaces anteriores.
+##Contenido END

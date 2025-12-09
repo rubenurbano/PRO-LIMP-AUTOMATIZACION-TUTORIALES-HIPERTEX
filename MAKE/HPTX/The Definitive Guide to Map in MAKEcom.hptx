@@ -1,0 +1,250 @@
+##itemID:000
+##menu-item BEGIN
+The Definitive Guide to Map in MAKEcom
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+The Definitive Guide to Map in MAKEcom:
+Web Original:
+The Definitive Guide to Map in MAKEcom:
+https://youtu.be/iA3R-D7N0Xw?si=_wEW9RnzOHIfAKYc
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción a la Función Map
+##menu-item END
+##Contenido BEGIN
+Introducción a la Función Map:
+El mapeo (mapping) en Make.com es una herramienta extremadamente poderosa para la gestión de datos.[1][2][3] Su utilidad se aprecia cuando tienes una lista grande de clientes (por ejemplo, 500 o 50,000) y necesitas encontrar información de un grupo específico.
+
+La función map permite realizar esta búsqueda y filtrado con una sola instrucción.[4] La ventaja principal es que el trabajo es idéntico sin importar si tu lista tiene 5 elementos o 5 millones; solo necesitas escribir la lógica una vez.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Conceptos Fundamentales
+##menu-item END
+##Contenido BEGIN
+Conceptos Fundamentales:
+Para usar esta función correctamente, debes tener en cuenta dos conceptos básicos:
+
+La función map solo funciona con arrays (listas ordenadas de datos).
+
+No funcionará si intentas usarla en otros tipos de datos, como colecciones u objetos.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+La Regla de Oro (Fórmula Mnemotécnica)
+##menu-item END
+##Contenido BEGIN
+La Regla de Oro (Fórmula Mnemotécnica):
+Para memorizar cómo funciona el mapeo, usa la siguiente frase como fórmula:
+
+"De A necesito B donde C es igual a D."
+
+Significado de cada letra:
+
+A (Array): La lista principal de datos de origen.
+
+B: El dato específico que quieres extraer (ej: el correo electrónico).
+
+C: La clave o criterio que usarás para filtrar (ej: el estado de suscripción).
+
+D: El valor que esa clave debe tener para ser seleccionada (ej: "pendiente").
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 1: Preparación del Escenario
+##menu-item END
+##Contenido BEGIN
+Paso 1: Preparación del Escenario:
+Para practicar antes de empezar, puedes configurar tu escenario de la siguiente manera:
+
+Usa un módulo "Parse JSON" para generar una estructura de datos que contenga arrays.
+
+Utiliza un módulo de Herramientas llamado "Set Variable" (Establecer Variable).[5] En este módulo es donde escribirás la lógica de mapeo.[4]
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 2: Filtrar Correos por Estado (Ejemplo Básico)
+##menu-item END
+##Contenido BEGIN
+Paso 2: Filtrar Correos por Estado (Ejemplo Básico):
+Tarea: Extraer los correos electrónicos (B) que tienen un estado de suscripción (C) igual a "pending" (D).
+
+Instrucción a escribir:
+map(Array, "email", "subscription status", "pending")
+
+Explicación:
+
+Array: Origen de los datos (A).[4]
+
+"email": Lo que extraes (B).
+
+"subscription status": La clave de filtro (C).
+
+"pending": El valor buscado (D).
+
+Resultado: Una lista con solo los correos de personas con ese estado. Puedes cambiar "email" por "full name" si prefieres extraer los nombres.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 3: Filtrar por Ubicación (Flexibilidad)
+##menu-item END
+##Contenido BEGIN
+Paso 3: Filtrar por Ubicación (Flexibilidad):
+Tarea: Extraer correos (B) donde el país (C) es igual a "Morocco" (D).
+
+Instrucción a escribir:
+map(Array, "email", "country", "Morocco")
+
+Flexibilidad:
+Puedes cambiar los criterios C y D fácilmente. Si buscas por ciudad en lugar de país:
+map(Array, "email", "city", "New York")
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Paso 4: Arrays Anidados y Función Flatten
+##menu-item END
+##Contenido BEGIN
+Paso 4: Arrays Anidados y Función Flatten:
+Tarea: Extraer una lista de intereses (B), que es un array dentro del array principal, solo para usuarios de tipo "High ticket".
+
+Aplicar la fórmula:
+map(Array, "interests", "type", "high ticket")
+Resultado: Obtendrás un array principal que contiene varios sub-arrays de intereses dentro.
+
+Uso de Flatten (Aplanar):
+Si necesitas una única lista maestra combinada, usa la función flatten.[6]
+Instrucción: flatten(Resultado del Mapeo)
+Resultado: Una sola lista con todos los intereses mezclados.
+
+Nota: Otras funciones útiles para arrays son reverse (invertir), slice (cortar) y deduplicate (eliminar duplicados).
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Paso 5: Mapeo con Claves Anidadas (Dot Indexing)
+##menu-item END
+##Contenido BEGIN
+Paso 5: Mapeo con Claves Anidadas (Dot Indexing):
+Tarea: Extraer el correo (B) de usuarios cuya clave "read", que está dentro de la colección "permissions", sea "false" (D).
+
+Problema: La clave de filtrado está dentro de otra colección.
+
+Solución (Indexación de Puntos):
+Usa un punto para navegar la jerarquía "padre.hijo".[4]
+
+Instrucción a escribir:
+map(Array, "email", "permissions.read", "false")
+
+Esto le indica al sistema que busque la clave "read" dentro de "permissions". Puedes ir tan profundo como sea necesario (padre.hijo.nieto).
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Paso 6: Extracción de Múltiples Claves (Avanzado)
+##menu-item END
+##Contenido BEGIN
+Paso 6: Extracción de Múltiples Claves (Avanzado):
+Desafío: La función map solo permite extraer un dato a la vez (B). Si necesitas extraer tanto el ID como el Precio de productos vendidos el mes pasado, debes hacerlo en pasos separados.
+
+Solución:
+
+Usa el módulo "Set Multiple Variables".[6]
+
+Crea una variable para IDs:
+map(Array, "ID", "sales info.sold in last month", "true")
+
+Crea una variable para Precios:
+map(Array, "price", "sales info.sold in last month", "true")
+
+Resultado: Tendrás dos arrays separados que se corresponden línea por línea.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Paso 7: Combinar Arrays con Iterador y Agregador
+##menu-item END
+##Contenido BEGIN
+Paso 7: Combinar Arrays con Iterador y Agregador:
+Para volver a unir los datos (ID y Precio) en una sola estructura:
+
+Iterador: Introduce el array de IDs en un módulo Iterador. Esto genera la "bundle order position" (posición 1, 2, 3...).
+
+Agregador de Texto: Usa este módulo para combinar los datos.[2][4][7][8]
+
+Sincronización:
+
+Dentro del Agregador, crea una estructura (ej.[1][2][6][8] JSON).
+
+Para el ID: Usa el valor directo del Iterador.
+
+Para el Precio: Usa el array de Precios creado anteriormente, pero indícale que extraiga el elemento correspondiente a la "bundle order position" del Iterador.
+
+Parse JSON: Pasa el resultado del Agregador (texto) por un módulo Parse JSON para obtener la estructura de datos final utilizable.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Resumen Final
+##menu-item END
+##Contenido BEGIN
+Resumen Final:
+Para resolver cualquier problema de mapeo con facilidad, simplemente recuerda siempre la mnemotécnica:
+
+"De A necesito B donde C es igual a D."
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Para validar la información de este tutorial, se han consultado las siguientes fuentes oficiales de Make (anteriormente Integromat):
+
+1. Función Map y Sintaxis:
+La documentación oficial confirma que la función map() se utiliza para transformar arrays complejos en arrays simples o filtrar valores. La sintaxis validada es map(complex array; key; [key for filtering]; [possible values for filtering]), lo cual coincide exactamente con la fórmula "A, B, C, D" explicada en el tutorial.
+
+Referencia: Make Help Center - Item mapping (Array functions).
+
+2. Función Flatten:
+Se verifica que flatten() es una función de array diseñada para crear un nuevo array concatenando todos los elementos de los sub-arrays de forma recursiva, tal como se describe en el paso de "Aplanar".[6][9][10]
+
+Referencia: Make Help Center - Array functions (Flatten).[6][10]
+
+3. Iteradores y Agregadores:
+La documentación técnica ratifica el uso de Iteradores para dividir arrays en "bundles" individuales y Agregadores (como Array Aggregator o Text Aggregator) para recombinarlos.[8] El uso de la variable bundle order position es el método estándar documentado para sincronizar datos procesados en paralelo antes de una agregación.
+
+Referencia: Make Help Center - Iterator / Aggregator modules.
+
+Conclusión:
+La estructura y lógica presentadas en el tutorial (Mapeo básico, filtrado, manejo de arrays anidados y sincronización avanzada) son técnicamente correctas y están alineadas con las mejores prácticas documentadas por la plataforma Make.
+
+
+Sources
+help
+make.com
+theaiautomators.com
+make.com
+youtube.com
+joshthompson.co.uk
+make.com
+youtube.com
+make.com
+make.com
+make.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+Make.com array functions flatten documentation
+Make.com map function documentation official
+Make.com iterator aggregator array synchronization documentation
+##Contenido END

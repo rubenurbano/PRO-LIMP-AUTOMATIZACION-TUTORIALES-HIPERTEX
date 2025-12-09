@@ -1,0 +1,75 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Como montar tu propio sistema de marketing con IA\nWEB ORIGINAL:",
+      "contenido": "Como montar tu propio sistema de marketing con IA:\nWeb Original:\nComo montar tu propio sistema de marketing con IA:\nhttps://youtu.be/vZcrnH3TX2Q?si=UWIQGOl6MQG_4YWn\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción y Objetivo del Sistema",
+      "contenido": "Introducción y Objetivo del Sistema:\nGoogle ha lanzado nuevas herramientas de inteligencia artificial como Gemini 3.0, Nano Banana Pro y otras. El objetivo de este tutorial es utilizar estas herramientas para llevar una idea, como un curso online o un servicio, desde el inicio hasta una experiencia interactiva completa.\n\nEl resultado final que buscaremos es convertir una simple pregunta en una mini-aplicación guiada llamada vista dinámica. Una vista dinámica es una función dentro de Gemini que transforma una respuesta de texto en una experiencia visual e interactiva, similar a una mini-página web con botones, secciones y calculadoras.[1][2] Para activarla, debes entrar a Gemini, ir al menú de herramientas y elegir la opción de vista dinámica.[2]"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Ejemplo Práctico y Pilares del Sistema",
+      "contenido": "Ejemplo Práctico y Pilares del Sistema:\nPara este tutorial usaremos el ejemplo de lanzar un servicio de automatización para negocios online, cobrando una tarifa mensual. Este modelo se basa en tres pilares fundamentales que alimentan la vista dinámica:\n\nLa Estrategia: Define quién es el cliente y qué problema resuelves. Alimenta el mapa de trabajo.\n\nLos Números: Define precios, costos y cantidad de clientes. Alimenta la calculadora de rentabilidad.\n\nLa Creatividad: Define imágenes, diseño y lenguaje.\n\nLa vista dinámica resultante tendrá un menú con secciones como inicio, estrategia, mapa de trabajo (roadmap) y rentabilidad."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Herramienta de Automatización: Make",
+      "contenido": "Herramienta de Automatización: Make:\nPara automatizar tareas repetitivas sin escribir código, utilizaremos Make.[3][4][5][6][7][8][9] Esta plataforma permite conectar programas como Google Drive o el correo electrónico.[3] Make incluye agentes de IA que pueden tomar decisiones, como clasificar correos o buscar videos en YouTube para hacer resúmenes y enviarlos por email. Es una herramienta gratuita para empezar.[3][10][11]\nLINK= https://www.make.com/"
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Paso 1: Definir la Estrategia con Gemini",
+      "contenido": "Paso 1: Definir la Estrategia con Gemini:\nDebes construir la estrategia usando Gemini en modo chat.[13] Pídele que actúe como un experto en marketing especializado en servicios con IA. Solicita que te ayude a definir en un documento los siguientes puntos: cliente ideal, problema a resolver, oferta, posibles nichos y una meta para 90 días.\n\nGemini te hará unas cinco preguntas clave para fundamentar el plan. Una vez respondas, te entregará un documento con tu estrategia inicial.\nLINK= https://gemini.google.com/"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Paso 2: Memoria del Proyecto con Notebook LM",
+      "contenido": "Paso 2: Memoria del Proyecto con Notebook LM:\nUtiliza la opción de investigación profunda (deep research) en Gemini, sube el documento de estrategia y exporta el análisis a Google Docs. Luego, lleva esta información a Notebook LM.\n\nCrea un cuaderno nuevo en Notebook LM (por ejemplo, Agencia de IA plan A 90 días) y sube:\n\nEl documento de estrategia y cliente ideal.\n\nEl informe de investigación con datos de competencia y precios.\n\nOtros recursos disponibles.[3][10][11][17]\n\nConfigura el chat de Notebook LM para que actúe como tu estratega personal usando solo esos documentos. Pídele que cree un plan de estrategia para 90 días que incluya nicho recomendado, mensaje principal, fases con metas y cinco puntos de vigilancia.\nLINK= https://notebooklm.google.com/"
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Paso 3: Definir los Números con Google Sheets",
+      "contenido": "Paso 3: Definir los Números con Google Sheets:\nCrea una hoja de cálculo en Google Sheets con las variables importantes: precio inicial, tarifa mensual, costo del software, costo de adquisición de cliente y meta de cantidad de clientes. Crea tres escenarios: conservador, realista y agresivo.\n\nSube esta hoja a Notebook LM junto con la estrategia. Pregúntale qué combinación de precios tiene sentido para tu nicho, qué plan tiene márgenes peligrosos y cuántos clientes necesitas para tu meta mensual.\nLINK= https://docs.google.com/spreadsheets/"
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Paso 4: Crear Imágenes y Videos",
+      "contenido": "Paso 4: Crear Imágenes y Videos:\nPara la apariencia visual, usa Nano Banana Pro para crear las imágenes. Genera una imagen principal para el servicio y cuatro imágenes distintas para cada nicho (como inmobiliarias o tiendas online).\n\nSi tienes página web, puedes usar Pomeli para analizarla y sugerir diseños. También puedes usar Google Flow o BO3 desde Gemini para generar videos cortos de 6 o 7 segundos para usar como fondo en anuncios o en la vista dinámica."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Paso 5: Crear un Escritor Personal (Gem)",
+      "contenido": "Paso 5: Crear un Escritor Personal (Gem):\nPara mantener consistencia en los textos, crea un Gem (versión personalizada de Gemini).[5] Sube el resumen de estrategia de Notebook LM y el plan de 90 días. Configura las instrucciones con tu tono de voz (cercano, serio, etc.) y dale una descripción como Genera textos de venta para mi agencia. Este Gem escribirá correos, posts y textos web basándose en tu estrategia."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Paso 6: Crear Flujos Reutilizables con Google Opal",
+      "contenido": "Paso 6: Crear Flujos Reutilizables con Google Opal:\nUsa Google Opal para empaquetar el proceso en un flujo reutilizable que actúe como asistente en piloto automático.[3][6][18] Crea una mini-aplicación que pida cuatro datos: tipo de cliente, meta, canal principal y tono.\n\nPídele que genere una propuesta de campaña y el texto completo para el canal elegido. Al probarlo, Opal te entregará el contenido listo para usar según los datos que ingreses."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Paso 7: Crear Herramienta Visual con Gemini Canvas",
+      "contenido": "Paso 7: Crear Herramienta Visual con Gemini Canvas:\nActiva la función canvas dentro de Gemini para crear una herramienta visual.[4][7][13] Pide a Gemini que construya una mini-aplicación llamada Automator Campaign Hub.\n\nDebe tener un formulario a la izquierda para elegir cliente, objetivo, canal y tono. A la derecha debe mostrar los resultados en español: resumen, mensajes clave y contenido completo. Esto permite generar campañas adaptadas a diferentes clientes y canales rápidamente."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Resumen y Consejos para Empezar",
+      "contenido": "Resumen y Consejos para Empezar:\nEl sistema completo alimenta la vista dinámica final. Notebook LM actúa como cerebro, Nano Banana Pro y BO3 se encargan de lo visual, el Gem de Gemini maneja los textos, Opal crea flujos reutilizables y Canvas ofrece la interfaz visual.\n\nPara empezar, no montes todo a la vez.[1] Elige un solo servicio y tipo de cliente. Crea una versión pequeña con un documento en Notebook LM, un par de imágenes y un Gem simple. Si funciona, expande el sistema con Opal y Canvas."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Preguntas y Respuestas",
+      "contenido": "Preguntas y Respuestas:\n¿Qué es este video?\nEs un proceso para crear un sistema de marketing completo usando herramientas de inteligencia artificial de Google. El objetivo es tomar una idea de negocio y convertirla en una experiencia interactiva.\n\n¿Qué es una vista dinámica de Gemini?\nEs una función nueva de Gemini que convierte una respuesta simple en algo visual e interactivo, como una mini-aplicación con botones y pasos claros.[2]\n\n¿Cuáles son los tres pilares necesarios para construir el sistema?\nSon la Estrategia (saber a quién vendes), los Números (precios y costos) y la Creatividad (imágenes y el lenguaje).\n\n¿Qué herramienta ayuda a automatizar tareas?\nMake es una herramienta que permite automatizar tareas conectando aplicaciones sin escribir código.[3][10]\n\n¿Cómo se define la estrategia del negocio?\nSe usa Gemini en modo chat para definir el cliente ideal, el problema, la propuesta de valor y las metas para 90 días.\n\n¿Cómo se guarda la información del proyecto?\nSe usa Notebook LM.[19][20] Se suben los documentos de la estrategia y el análisis de investigación (competidores y precios) para que sirvan como \"memoria\" del proyecto.\n\n¿Cómo se crea un plan de 90 días?\nSe le pide a Notebook LM que analice la estrategia que subimos y genere el plan, incluyendo el nicho recomendado, las fases con metas y las cosas clave a vigilar.\n\n¿Cómo se definen los números y la rentabilidad?\nSe crea una hoja de cálculo en Google Sheets con los precios y costos clave. Luego se sube a Notebook LM para que analice qué precios tienen más sentido y cuántos clientes se necesitan para ganar una meta mensual.\n\n¿Cómo se hacen las imágenes para el servicio?\nSe usa Nano Banana Pro para generar una imagen general y cuatro imágenes específicas para cada tipo de cliente (nicho). También se pueden generar videos cortos con BO3 o Google Flow.\n\n¿Cómo se escriben los textos (copy) de forma constante?\nSe crea un Gem personalizado en Gemini.[11][18] Se le sube el plan de estrategia de Notebook LM para que actúe como un escritor personal que genera correos, posts de LinkedIn o guiones de video con el tono adecuado.\n\n¿Qué es Google Opal y para qué se usa?\nOpal es un asistente que permite crear un flujo que se puede usar muchas veces. Se usa para generar propuestas de campaña y textos completos solo cambiando unos pocos datos de entrada.\n\n¿Cómo se crea la herramienta visual de campañas?\nSe usa la función \"canvas\" dentro de Gemini.[2][4][13][18] Se le pide que construya una mini-aplicación con un formulario a la izquierda (para elegir cliente y canal) y los resultados (resumen y textos) a la derecha.\n\n¿Cómo se recomienda empezar a construir este sistema?\nSe recomienda empezar poco a poco. Primero, elige solo un servicio y un cliente. Luego, crea una versión mínima usando un documento en Notebook LM, unas pocas imágenes y un Gem simple. Si funciona, lo haces más avanzado con Opal y Canvas."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nSe han validado los siguientes conceptos y herramientas mencionados en el tutorial mediante fuentes oficiales de Google y plataformas relacionadas:\n\nGemini Dynamic Views (Vistas Dinámicas):\nFunción confirmada que genera interfaces interactivas (UI) a partir de prompts.[2]\nEnlace oficial de soporte: LINK= https://support.google.com/gemini/answer/14566276?hl=en\n\nGoogle NotebookLM:\nHerramienta validada para investigación y gestión de documentos con IA.\nWeb oficial: LINK= https://notebooklm.google.com/[[21](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGr2oG9N-YaIrF6xcCBlPTahcqJMxhSsyK_RuHsINWZSXWyJon_22tieOxASBur-gXmJZE6KuATQHD7wQ1P2HXad3DXyqO1JoAgto--EDc9Y7901CMBHxpOQz7B7Y02rpy1WrNo)]\n\nGemini Canvas:\nInterfaz confirmada para escritura y codificación colaborativa con IA.[4]\nBlog oficial de Google: LINK= https://blog.google/technology/ai/google-gemini-update-october-2024/\n\nGoogle Opal:\nValidado como una herramienta experimental de Google Labs para construir agentes de IA y mini-aplicaciones sin código.\nSitio relacionado (Google Labs): LINK= https://labs.google/[[16](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQEQrIGda5G_ObtkJ3Vjq1EMfTUaeDwOzpiI2R3gLTpcB71Mv-PeD6evKTq9ws8fJZnyertPtykhEi1Fb8pM4HvN7VuIxeXKS6nv9kRpmaoAKgQ6udRAK8onO6hpQNpR1U56JQznfiqnctP-KLe7ug%3D%3D)]\n\nGemini Gems:\nConfirmado como la funcionalidad para crear versiones personalizadas de Gemini.\nBlog oficial de Google: LINK= https://blog.google/products/gemini/gemini-gems-imagen-3/\n\nMake:\nPlataforma de automatización validada (anteriormente Integromat).\nWeb oficial: LINK= https://www.make.com/[[10](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQFWr30cZKiEDNKBB3BPKl3i5PuJhOABWC4WP1p-CScUB9qhz50f_DtmMch2Goi1oMUE9-IExuEbmSf4oxgpatP9nk8Jp0rqnBrxfcqORE0ro6wTkKqg4Cr2I5Ue1VEWGET-fAYm6sQ%3D)]\n\nNota técnica: No se encontraron referencias oficiales directas bajo los nombres exactos \"Nano Banana Pro\" o \"Pomeli\" en la documentación pública actual de Google. Es posible que hagan referencia a modelos internos o sean nombres coloquiales para herramientas como Imagen 3 (generación de imágenes) o modelos de la familia Gemini Nano/PaLM. \"BO3\" podría referirse a \"Veo\" (generación de video) o una versión específica de modelo (V3).\n\n\n\nglbgpt.com LINK= https://glbgpt.com/\naicerts.ai LINK= https://aicerts.ai/\nmake.com LINK= https://www.make.com/\nmedium.com LINK= https://medium.com/\nblog.google LINK= https://blog.google/\nkdnuggets.com LINK= https://www.kdnuggets.com/\ngoogleblog.com LINK= https://googleblog.com/\nblog.google LINK= https://blog.google/\nlearnprompting.org LINK= https://learnprompting.org/\nyoutube.com LINK= https://www.youtube.com/\ntechradar.com LINK= https://www.techradar.com/\nmake.com LINK= https://www.make.com/\ngoogle.com LINK= https://www.google.com/\nmedium.com LINK= https://medium.com/\ngoogle.com LINK= https://www.google.com/\ngoogleblog.com LINK= https://googleblog.com/\ntoolfolio.io LINK= https://toolfolio.io/\ngoogle.dev LINK= https://google.dev/\ngoogle.com LINK= https://www.google.com/\ngoogle.com LINK= https://www.google.com/\ngoogle.com LINK= https://www.google.com/\n\n\n\nComo montar tu propio sistema de marketing con IA\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    }
+  ]
+}

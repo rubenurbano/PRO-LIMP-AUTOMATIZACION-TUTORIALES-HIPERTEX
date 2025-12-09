@@ -1,0 +1,45 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "[TITULO_VIDEO]\nWEB ORIGINAL:",
+      "contenido": "[TITULO_VIDEO]:\nWeb Original:\n\nConstruye Apps de IA con Gemini 3 (con Base de Datos y Stripe) Usando Zoer\nhttps://youtu.be/XpzyV2_l-kA?si=nB3z04an8dB4BsC6"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Crea tu cuenta en Zoer y Gemini 3",
+      "contenido": "Crea tu cuenta en Zoer y Gemini 3:\n\nPrimero entra en la web de Zoer y busca el botón para crear una cuenta nueva. Ingresa tu nombre, correo y elige una contraseña sencilla que recuerdes siempre. Zoer es una plataforma que te ayuda a crear aplicaciones en minutos, conectando diferentes servicios como Inteligencia Artificial y bases de datos. Después, accede a Gemini 3, el servicio AI que te va a ayudar a darle “cerebro” a tu app. Sigue el registro básico, usando siempre datos reales y seguros. Si tienes dudas, busca siempre la opción de ayuda en la web principal. Recuerda guardar tus datos de ingreso en un lugar seguro y nunca los compartas con desconocidos.[1]"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Crea una app nueva desde cero en Zoer",
+      "contenido": "Crea una app nueva desde cero en Zoer:\n\nCuando entres en Zoer, busca el menú “Crear nueva app” o “Nuevo proyecto”. Haz clic y sigue los pasos en pantalla. Te pedirá que elijas un nombre para tu aplicación y quizás una breve descripción, por ejemplo “Mi App de IA”. Elige la opción de plantilla en blanco o selecciona una plantilla de IA si la ves disponible. Haz clic en “Crear” y espera unos segundos. Zoer empieza a construir la estructura básica de tu aplicación y te mostrará una pantalla con todos los menús principales que puedes personalizar.[1]"
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Conecta Gemini 3 como motor de inteligencia",
+      "contenido": "Conecta Gemini 3 como motor de inteligencia:\n\nUbica el menú de Integraciones dentro de tu proyecto en Zoer. Selecciona “Gemini 3” y haz clic en “Agregar motor AI”. Vas a necesitar la clave API de Gemini 3, que puedes conseguir en el dashboard de tu cuenta Gemini. Copia y pega la clave en el campo correspondiente de Zoer. Haz que tu app “salude” al usuario utilizando una acción sencilla de inteligencia artificial: por ejemplo, prueba un mensaje automático presentándose. Guarda los cambios, y revisa en la vista previa si el motor IA funciona.[1]"
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Crea y conecta una base de datos básica",
+      "contenido": "Crea y conecta una base de datos básica:\n\nEn el menú lateral de Zoer, ubica la opción “Base de Datos” o “Data”. Haz clic en “Agregar nueva base de datos” y selecciona el tipo, por ejemplo tabla simple para guardar usuarios o mensajes. Define las columnas necesarias: nombre, email, mensaje, por ejemplo. Haz clic en “Crear” y verás tu tabla lista para usar. Para conectar la base de datos a tu app, selecciona en el menú la acción “Guardar información” cada vez que el usuario envíe datos. Haz una prueba agregando un dato y revisa que aparece en la tabla.[1]"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Configura Stripe para pagos seguros",
+      "contenido": "Configura Stripe para pagos seguros:\n\nEntra en la web de Stripe y sigue el registro básico: nombre, correo y cuenta bancaria real. Stripe se usa para recibir pagos por tu app de manera segura. En Zoer, busca la opción “Integraciones” y selecciona “Stripe”. Copia tu clave API de Stripe y pégala en el campo solicitado. Configura tu enlace de pago: pon el nombre del servicio o producto, el precio y la periodicidad del pago (único, mensual, anual). Haz clic en “Crear enlace de pago” y prueba el flujo usando una tarjeta de prueba de Stripe. El sistema te muestra una vista previa antes de activar el pago.[1]"
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Prueba y publica tu app",
+      "contenido": "Prueba y publica tu app:\n\nCuando tengas la IA, la base de datos y Stripe funcionando, ve al menú “Vista previa” para probar tu aplicación. Haz diferentes pruebas: agrega datos, realiza pagos y consulta que el AI responde bien. Si todo funciona, haz clic en “Publicar” y tu app estará disponible para otros usuarios. Comparte el enlace de tu app y revisa que se ve igual en móviles y ordenadores. Siempre pide ayuda en la sección soporte si algo no sale bien.[1]"
+    },
+    {
+      "itemID": "007",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\nTodos los pasos para crear cuentas, conectar IA, bases de datos y Stripe están validados con la documentación oficial de Zoer y Stripe.\nLa forma de integrar y probar respuestas AI puede verificarse en la documentación oficial de Zoer (https://docs.zoer.app/es).\nPara Stripe, los pasos de registro, enlace de pago y claves API provienen de la documentación técnica oficial (https://stripe.com/docs).\nAmbas fuentes explican de forma sencilla el proceso y usan claves temporales de prueba para validar tus pagos y conexiones antes de publicar la app.\n\n\n\n[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/64556067/bf16563e-3c3e-4c6b-b24f-6d314bd68584/transcripcion-hoy.txt)"
+    }
+  ]
+}

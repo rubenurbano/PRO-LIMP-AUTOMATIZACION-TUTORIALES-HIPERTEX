@@ -1,0 +1,198 @@
+##itemID: 000
+##Contenido BEGIN
+"TUTORIAL P&P - APRENDE FASTAPI DESDE CERO"
+
+https://cosasdedevs.com/fastapi"
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Web Original:
+
+https://cosasdedevs.com/fastapi
+
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Paso 1: Entendiendo qué es FastAPI y por qué usarlo
+##menu-item END
+##Contenido BEGIN
+**FastAPI** es un *framework* (marco de trabajo) moderno y de **alto rendimiento** que se utiliza para crear **APIs** (Interfaces de Programación de Aplicaciones) usando el lenguaje Python 3.6+.
+
+Este *framework* se apoya en otros "gigantes": **Starlette** para las partes web y **Pydantic** para la gestión de datos.
+
+**¿Por qué usar FastAPI?**
+
+1.  **Rápido y eficiente:** Es muy rápido, con un rendimiento a la par de lenguajes como **NodeJS** y **Go**.
+2.  **Acelera la programación:** Aumenta la velocidad de desarrollo de funcionalidades entre un 200% y un 300%.
+3.  **Reduce errores:** Ayuda a reducir aproximadamente un **40% de los errores** inducidos por el desarrollador.
+4.  **Intuitivo y Corto:** Está diseñado para ser fácil de usar y aprender. Minimiza la duplicación de código y ofrece un gran soporte para autocompletado en editores de código, lo que reduce el tiempo de depuración.
+5.  **Documentación automática:** Es totalmente compatible con los estándares abiertos para APIs, como **OpenAPI** (antes Swagger) y **JSON Schema**. Esto significa que genera **documentación interactiva automática** y código listo para producción.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Paso 2: Instalación del framework
+##menu-item END
+##Contenido BEGIN
+Para empezar a desarrollar con FastAPI, necesitas instalar el *framework* usando `pip` (el gestor de paquetes de Python).
+
+**Recomendación:** Siempre crea y activa un **entorno virtual** antes de instalar las dependencias de tu proyecto.
+
+El comando recomendado incluye el grupo de dependencias *standard*:
+
+`$ pip install "fastapi[standard]"`
+
+**Nota importante:** Es fundamental poner `"fastapi[standard]"` entre comillas para asegurar que el comando funcione correctamente en todas las terminales.
+
+La instalación `[standard]` incluye dependencias opcionales clave, como:
+*   **Uvicorn:** El servidor que cargará y servirá tu aplicación.
+*   **fastapi-cli:** El comando que te permite ejecutar la aplicación fácilmente.
+*   Otras utilidades requeridas por Starlette y Pydantic.
+
+Si no deseas las dependencias opcionales estándar, puedes instalar solo con `$ pip install fastapi`.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 3: Creación de la aplicación de ejemplo inicial
+##menu-item END
+##Contenido BEGIN
+Después de la instalación, crea un archivo llamado `main.py`. Este archivo contendrá el código base de tu API.
+
+En este archivo, debes:
+1.  Importar la clase `FastAPI`.
+2.  Crear una instancia del objeto principal de la aplicación (`app = FastAPI()`).
+3.  Definir rutas (*paths*) usando decoradores, como `@app.get("/")`, que indican qué función debe ejecutarse cuando se recibe una petición HTTP (en este caso, una petición **GET**).
+
+**Código de ejemplo básico (main.py):**
+
+```python
+from typing import Union
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+@app.get("/items/{item_id}")
+def read_item(item_id: int, q: Union[str, None] = None):
+    return {"item_id": item_id, "q": q}
+```
+En este ejemplo, la segunda ruta (`/items/{item_id}`) ya demuestra cómo FastAPI usa las anotaciones de tipos de Python (`item_id: int`) para validar que el parámetro de ruta sea un número entero y maneja un parámetro de consulta (`q`) opcional, que puede ser un *string* o `None`.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 4: Ejecución de la API y el servidor Uvicorn
+##menu-item END
+##Contenido BEGIN
+Para que tu API sea accesible, debes correr un servidor. Usaremos el comando `fastapi dev`.
+
+Ejecuta el siguiente comando en la terminal donde creaste `main.py`:
+
+`$ fastapi dev main.py`
+
+Este comando realiza varios procesos:
+1.  Lee el archivo `main.py` y detecta la instancia de la aplicación `app` de FastAPI.
+2.  Arranca un servidor utilizando **Uvicorn**.
+3.  Por defecto, inicia en modo de desarrollo con **auto-recarga** habilitada, lo que significa que el servidor se reiniciará automáticamente al guardar cambios en tu código.
+
+Una vez iniciado, verás la dirección de acceso y de la documentación en la terminal:
+*   **Servicio activo en:** `http://127.0.0.1:8000`
+*   **Documentación de la API en:** `http://127.0.0.1:8000/docs`
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 5: Verificación de *endpoints* y documentación interactiva
+##menu-item END
+##Contenido BEGIN
+Con el servidor corriendo (Paso 4), puedes probar tu API y acceder a la documentación automática.
+
+**Prueba de la ruta:**
+Navega a la URL que incluye la ruta y un parámetro de consulta, por ejemplo: `http://127.0.0.1:8000/items/5?q=somequery`.
+
+FastAPI procesará la petición, validará que `5` es un entero, y el navegador te devolverá una respuesta JSON:
+`{ "item_id" : 5 , "q" : "somequery" }`
+
+**Documentación Interactiva (Swagger UI):**
+FastAPI usa el estándar OpenAPI para generar automáticamente una interfaz de documentación interactiva.
+
+*   Accede a `http://127.0.0.1:8000/docs`.
+*   Esta interfaz, provista por **Swagger UI**, te permite ver todas tus rutas, sus parámetros y probar las peticiones directamente haciendo clic en el botón **"Try it out"** y luego **"Execute"**.
+
+**Documentación Alternativa (ReDoc):**
+También se genera una documentación alternativa, limpia y organizada:
+*   Accede a `http://127.0.0.1:8000/redoc`.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Paso 6: Uso de Pydantic para el cuerpo de la petición (Request Body)
+##menu-item END
+##Contenido BEGIN
+Cuando necesitas recibir datos complejos (como un objeto JSON) en operaciones como **PUT** o **POST**, FastAPI utiliza **Pydantic** para definir la estructura de los datos esperados (el *Request Body*).
+
+Al declarar un modelo de Pydantic, FastAPI obtiene automáticamente: validación, conversión de tipos, soporte de autocompletado para editores y actualización de la documentación.
+
+**Ejemplo de modelo Pydantic e integración PUT:**
+
+Debes importar `BaseModel` de Pydantic y definir tu modelo de datos (`Item`):
+
+```python
+from pydantic import BaseModel # Importar
+
+class Item (BaseModel):
+    name: str # string, requerido
+    price: float # float, requerido
+    is_offer: Union[bool, None] = None # bool, opcional
+
+# ... (en la app) ...
+@app.put("/items/{item_id}")
+def update_item (item_id: int, item: Item): # Se usa el modelo Pydantic
+    return {"item_name": item.name, "item_id": item_id}
+```
+Al hacer esto, si un cliente envía un JSON inválido (por ejemplo, sin `name` o `price`), FastAPI enviará un error claro automáticamente. Además, la documentación interactiva se actualizará para mostrar exactamente qué campos (`name`, `price`, `is_offer`) espera recibir la API en el *body* de la petición.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Paso 7: Hoja de ruta para aplicaciones completas
+##menu-item END
+##Contenido BEGIN
+Para construir una aplicación robusta, FastAPI ofrece herramientas para manejar todas las complejidades de un sistema en producción. La guía avanzada del usuario y el blog original cubren estos temas clave:
+
+*   **Bases de Datos (DB):** Aprenderás a crear modelos y conectarte a bases de datos relacionales, como **PostgreSQL**.
+*   **CRUD Completo:** Generar las operaciones esenciales para interactuar con los datos: Creación, Lectura, Actualización y Eliminación.
+*   **Seguridad y Autenticación:** Integración de sistemas de autenticación vía token, incluyendo el uso de **JWT** (JSON Web Tokens) y la gestión de contraseñas codificadas (hashing). También existe soporte para **OAuth2** y **HTTP Basic Auth**.
+*   **Manejo de Errores:** Controlar excepciones no controladas y usar el tipo de excepción propia de FastAPI, `HTTPException`, para generar respuestas de error claras al usuario.
+*   **Desarrollo Fullstack:** La posibilidad de retornar **HTML** usando plantillas **Jinja2** para construir interfaces web completas.
+*   **Datos de Formularios:** Cómo recuperar datos enviados a través de formularios (`Form Data`) y el manejo de archivos.
+*   **Testing:** Aprender a realizar pruebas (*tests*) unitarias y de integración de la API.
+##Contenido END
+
+### VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+
+**NOTA DE VALIDACIÓN (Conflicto de Fuentes):**
+
+El proceso de validación solicitó obligatoriamente el uso de la **documentación técnica oficial de Google Apps Script** [Regla 2] y enlaces directos a **fuentes oficiales de Google** [Regla 5].
+
+Dado que los temas tratados (FastAPI, Uvicorn, Pydantic, OpenAPI, JWT) son específicos de un *framework* de Python y no están relacionados con Google Apps Script, fue imposible realizar la validación con fuentes de Google.
+
+En cumplimiento de proveer una validación con fuentes técnicas, la tabla a continuación utiliza la documentación oficial del *framework* **FastAPI** (Tiangolo) y el blog de origen, los cuales fueron proporcionados en los fuentes.
+
+| Concepto Validado | Resumen de Validación (Fuente Oficial FastAPI) | Enlaces de Soporte (FastAPI Oficial) |
+| :--- | :--- | :--- |
+| **Definición y Rendimiento** | FastAPI es un *framework* de alto rendimiento para APIs con Python, basado en Starlette y Pydantic, que se compara en velocidad con NodeJS y Go. | https://fastapi.tiangolo.com/ |
+| **Instalación Estándar** | La instalación recomendada es `pip install "fastapi[standard]"`. Esta incluye dependencias esenciales como Uvicorn para servir la aplicación. | https://fastapi.tiangolo.com/ |
+| **Ejecución y Modo Desarrollo** | El servidor de desarrollo se corre con `$ fastapi dev main.py`. Esto usa Uvicorn y habilita la auto-recarga (*hot-reload*) por defecto. | https://fastapi.tiangolo.com/tutorial/first-steps/ |
+| **Documentación Automática** | FastAPI genera automáticamente documentación interactiva basada en el estándar OpenAPI. Esta está disponible en `/docs` (Swagger UI) y `/redoc`. | https://fastapi.tiangolo.com/tutorial/first-steps/ |
+| **Uso de Pydantic** | Pydantic (`BaseModel`) es la herramienta utilizada para declarar la estructura de los datos del *Request Body*, lo que proporciona validación, conversión de tipos y soporte avanzado para editores. | https://fastapi.tiangolo.com/tutorial/first-steps/#actualización-del-ejemplo |
+| **Temas Avanzados** | La documentación guía al usuario hacia temas avanzados, incluyendo **Seguridad (OAuth2 y JWT)**, **Bases de Datos SQL**, **Manejo de Errores** y **Templates (Jinja2)**. | https://fastapi.tiangolo.com/tutorial/user-guide/ |

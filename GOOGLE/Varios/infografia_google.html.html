@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Automatización con Google Sheets, Make.com y ChatGPT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #4b6cb7;
+      --primary-dark: #182848;
+      --accent: #ff6b6b;
+      --accent-soft: #ffe3e3;
+      --success: #2ecc71;
+      --danger: #e74c3c;
+      --warning: #f39c12;
+      --text-main: #1f2933;
+      --text-soft: #6b7280;
+      --bg-card: #ffffff;
+      --bg-soft: #f5f7fb;
+    }
+
+```
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--text-main);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+  padding: 32px 24px 28px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+  color: #1d4ed8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 4px 0 8px;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.header h1 span {
+  color: var(--primary);
+}
+
+.header p {
+  margin: 6px 0 0;
+  font-size: 0.98rem;
+  color: var(--text-soft);
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 0.8rem;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #eff3ff;
+  color: #1d4ed8;
+  font-weight: 500;
+}
+
+.layout-two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.6fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: var(--bg-soft);
+  border-radius: 14px;
+  padding: 18px 18px 16px;
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card h2 span,
+.card h3 span {
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+
+.card ul {
+  margin: 6px 0 0 18px;
+  padding: 0;
+  font-size: 0.94rem;
+  color: var(--text-soft);
+}
+
+.card ul li {
+  margin-bottom: 4px;
+}
+
+.intro-section {
+  margin-bottom: 8px;
+}
+
+.intro-key-points {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.pill {
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  color: var(--text-soft);
+}
+
+.pill strong {
+  color: #111827;
+  font-size: 0.86rem;
+}
+
+.tools-section {
+  margin-bottom: 22px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.tool-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 14px 12px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 12px 22px rgba(15, 23, 42, 0.08);
+}
+
+.tool-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.tool-name {
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tool-name span {
+  font-size: 1.15rem;
+}
+
+.tool-tag {
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.tool-card p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.tool-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.chip {
+  font-size: 0.78rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #f3f4ff;
+  color: #4f46e5;
+  font-weight: 500;
+}
+
+.requirements {
+  margin-bottom: 22px;
+}
+
+.requirements-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 14px 12px;
+  border-left: 4px solid #3b82f6;
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+  border-right: 1px solid rgba(148, 163, 184, 0.2);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.requirements-box h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #111827;
+}
+
+.requirements-box h3 span {
+  font-size: 1.2rem;
+}
+
+.requirements-box ul {
+  margin: 0 0 0 18px;
+  padding: 0;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+}
+
+.requirements-box ul li {
+  margin-bottom: 5px;
+}
+
+.columns-list {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #f9fafb;
+  border: 1px dashed rgba(148, 163, 184, 0.7);
+  font-size: 0.88rem;
+}
+
+.columns-list strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #111827;
+}
+
+.rule-box {
+  margin-bottom: 24px;
+  border-radius: 16px;
+  padding: 16px 16px 14px;
+  background: linear-gradient(135deg, #f97373, #f43f5e);
+  color: #fefefe;
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 2fr);
+  gap: 16px;
+}
+
+.rule-main h2 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rule-main h2 span {
+  font-size: 1.3rem;
+}
+
+.rule-main p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.rule-main strong {
+  font-weight: 700;
+}
+
+.rule-side {
+  background: rgba(15, 23, 42, 0.25);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+}
+
+.rule-side-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.rule-side-title span {
+  font-size: 1.2rem;
+}
+
+.rule-side ul {
+  margin: 4px 0 0 16px;
+  padding: 0;
+}
+
+.rule-side ul li {
+  margin-bottom: 3px;
+}
+
+.steps-section {
+  margin-bottom: 24px;
+}
+
+.steps-section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.steps-section-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #111827;
+}
+
+.steps-section-header h2 span {
+  font-size: 1.3rem;
+}
+
+.steps-section-header p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f9fafb;
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.65);
+}
+
+.step-number {
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 20%, #ffffff, #3b82f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.5);
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.step-title {
+  font-weight: 600;
+  font-size: 0.98rem;
+  margin-bottom: 4px;
+  color: #111827;
+}
+
+.step-desc {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin-bottom: 6px;
+}
+
+.sub-steps {
+  background: #eef2ff;
+  border-radius: 10px;
+  padding: 7px 9px;
+  font-size: 0.86rem;
+  border: 1px dashed rgba(129, 140, 248, 0.9);
+}
+
+.sub-steps strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #4338ca;
+}
+
+.sub-steps ul {
+  margin: 0 0 0 16px;
+  padding: 0;
+}
+
+.sub-steps ul li {
+  margin-bottom: 3px;
+}
+
+.highlight-box {
+  margin-top: 8px;
+  background: #fef3c7;
+  border-left: 4px solid var(--warning);
+  border-radius: 10px;
+  padding: 7px 9px;
+  font-size: 0.86rem;
+  color: #92400e;
+}
+
+.highlight-box strong {
+  font-weight: 600;
+}
+
+.highlight-box.small {
+  margin-top: 10px;
+  background: #ecfeff;
+  border-left-color: #06b6d4;
+  color: #0f766e;
+}
+
+.testing-section {
+  margin-bottom: 20px;
+}
+
+.testing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.testing-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #111827;
+}
+
+.testing-header h2 span {
+  font-size: 1.3rem;
+}
+
+.testing-header p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.testing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.test-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+  font-size: 0.9rem;
+}
+
+.test-card.success {
+  border-top: 4px solid var(--success);
+}
+
+.test-card.fail {
+  border-top: 4px solid var(--danger);
+}
+
+.test-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #111827;
+}
+
+.test-title span {
+  font-size: 1.2rem;
+}
+
+.test-line {
+  margin-bottom: 3px;
+}
+
+.test-label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.test-result {
+  margin-top: 6px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  background: #f3f4ff;
+  color: #4338ca;
+  font-size: 0.86rem;
+}
+
+.validation-box {
+  margin-top: 12px;
+  background: #eff6ff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  border: 1px solid rgba(59, 130, 246, 0.6);
+  font-size: 0.88rem;
+  color: #1e40af;
+}
+
+.validation-box strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.footer {
+  border-top: 1px dashed rgba(148, 163, 184, 0.9);
+  padding-top: 12px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.footer h2 {
+  font-size: 1rem;
+  margin: 0 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #111827;
+}
+
+.footer h2 span {
+  font-size: 1.1rem;
+}
+
+.footer p {
+  margin: 4px 0;
+}
+
+.footer-flow {
+  margin-top: 6px;
+  padding: 7px 9px;
+  border-radius: 10px;
+  background: #f9fafb;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 16px 10px;
+  }
+
+  .container {
+    padding: 22px 16px 18px;
+    border-radius: 14px;
+  }
+
+  .layout-two-col {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rule-box {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .steps-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .step {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .step-number {
+    min-width: 34px;
+    min-height: 34px;
+    font-size: 1rem;
+  }
+
+  .testing-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+  }
+}
+```
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="tag">
+        <span>🤖</span>
+        <span>Automatización práctica con IA y no-code</span>
+      </div>
+      <h1><span>Google Sheets</span>, Make.com y ChatGPT</h1>
+      <p>
+        Convierte una hoja de cálculo en un robot que lee anuncios de pisos,
+        detecta teléfonos y decide si la persona es <strong>vendedora</strong> o <strong>compradora</strong>, sin tocar una sola fórmula complicada.
+      </p>
+      <div class="badge-row">
+        <div class="badge">Google Sheets</div>
+        <div class="badge">Make.com</div>
+        <div class="badge">ChatGPT / OpenAI</div>
+        <div class="badge">Flujos automáticos</div>
+      </div>
+    </div>
+
+```
+<div class="layout-two-col">
+  <div class="card intro-section">
+    <h2><span>🧠</span> ¿Qué vas a aprender?</h2>
+    <p>
+      Este tutorial te guía, paso a paso, para conectar <strong>Google Sheets</strong>, <strong>Make.com</strong> y <strong>ChatGPT</strong>.
+    </p>
+    <p>
+      Al final, tendrás un sistema donde:
+    </p>
+    <ul>
+      <li>Escribes anuncios de pisos en una hoja de Google Sheets.</li>
+      <li>El robot busca si hay un <strong>número de teléfono</strong> en la descripción.</li>
+      <li>Si hay teléfono, la IA decide si la persona es <strong>vendedor</strong> o <strong>comprador</strong>.</li>
+      <li>La respuesta se escribe automáticamente en la columna <em>“Vendedor o Comprador”</em>.</li>
+    </ul>
+    <div class="intro-key-points">
+      <div class="pill">
+        <span>⚙️</span>
+        <strong>Automatización real</strong>
+        <span>– un flujo completo, no solo teoría.</span>
+      </div>
+      <div class="pill">
+        <span>📊</span>
+        <strong>Google Sheets como base</strong>
+        <span>– todo empieza en tu hoja.</span>
+      </div>
+      <div class="pill">
+        <span>🤝</span>
+        <strong>Make.com + ChatGPT</strong>
+        <span>– el cerebro del sistema.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><span>📌</span> Contexto del caso de uso</h3>
+    <p>
+      Imagina que recibes muchos mensajes o anuncios sobre pisos y casas, como:
+    </p>
+    <ul>
+      <li>“Estoy comprando un piso en esta zona…”</li>
+      <li>“Vendo casa con tres habitaciones…”</li>
+    </ul>
+    <p>
+      Tu objetivo es que el sistema:
+    </p>
+    <ul>
+      <li>Revise cada descripción automáticamente.</li>
+      <li>Solo actúe si hay un número de teléfono en el texto.</li>
+      <li>Clasifique a la persona como <strong>vendedor</strong> o <strong>comprador</strong>.</li>
+    </ul>
+    <p>
+      Todo esto sucederá sin que tengas que leer uno por uno los anuncios.
+    </p>
+  </div>
+</div>
+
+<div class="tools-section">
+  <div class="card">
+    <h2><span>🧰</span> Herramientas principales del sistema</h2>
+    <p>
+      El tutorial trabaja con tres piezas clave. Cada una cumple un rol muy concreto dentro de la automatización.
+    </p>
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-card-header">
+          <div class="tool-name">
+            <span>📊</span>
+            <span>Google Sheets</span>
+          </div>
+          <div class="tool-tag">Base de datos ligera</div>
+        </div>
+        <p>
+          Guarda los anuncios y los resultados. Tendrás al menos tres columnas:
+        </p>
+        <ul>
+          <li>Descripción del anuncio (por ejemplo, “vendo piso o una casa”).</li>
+          <li>Columna <em>“¿Tiene número de teléfono?”</em>.</li>
+          <li>Columna <em>“Vendedor o Comprador”</em>.</li>
+        </ul>
+        <div class="tool-chip-row">
+          <div class="chip">Hoja central del flujo</div>
+          <div class="chip">Datos fáciles de editar</div>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-header">
+          <div class="tool-name">
+            <span>⚙️</span>
+            <span>Make.com</span>
+          </div>
+          <div class="tool-tag">Motor de automatización</div>
+        </div>
+        <p>
+          Es el “cerebro” que conecta todo. Aquí crearás un <strong>escenario</strong> con módulos que:
+        </p>
+        <ul>
+          <li>Leen filas de Google Sheets (El Lector).</li>
+          <li>Llaman a ChatGPT para analizar la descripción.</li>
+          <li>Aplican un filtro (El Guardián).</li>
+          <li>Actualizan la hoja (El Escritor).</li>
+        </ul>
+        <div class="tool-chip-row">
+          <div class="chip">Escenarios visuales</div>
+          <div class="chip">Filtros entre módulos</div>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-header">
+          <div class="tool-name">
+            <span>🤖</span>
+            <span>ChatGPT (OpenAI)</span>
+          </div>
+          <div class="tool-tag">IA analista</div>
+        </div>
+        <p>
+          Recibe la descripción del anuncio y decide si la persona que escribe es un
+          <strong>vendedor</strong> o un <strong>comprador</strong>.
+        </p>
+        <p>
+          El tutorial recomienda un modelo de la familia <strong>GPT-3.5 Turbo</strong> para esta tarea.
+        </p>
+        <div class="tool-chip-row">
+          <div class="chip">Comprensión de texto</div>
+          <div class="chip">Respuesta corta y directa</div>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-card-header">
+          <div class="tool-name">
+            <span>🔑</span>
+            <span>Cuenta OpenAI + API Key</span>
+          </div>
+          <div class="tool-tag">Conexión segura</div>
+        </div>
+        <p>
+          Para que Make.com pueda hablar con ChatGPT, necesitas:
+        </p>
+        <ul>
+          <li>Cuenta en la plataforma de OpenAI.</li>
+          <li>Una <strong>clave API</strong> creada en tu panel de usuario.</li>
+          <li>Créditos disponibles, porque el uso se factura por tokens.</li>
+        </ul>
+        <div class="tool-chip-row">
+          <div class="chip">Configuras la conexión en Make.com</div>
+          <div class="chip">Sin organización extra obligatoria</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="requirements">
+  <div class="requirements-box">
+    <h3><span>📋</span> Requisitos previos antes de empezar</h3>
+    <ul>
+      <li>Una cuenta de <strong>Google</strong> con acceso a Google Sheets.</li>
+      <li>Una cuenta en <strong>Make.com</strong> y la posibilidad de crear un escenario nuevo.</li>
+      <li>Una cuenta en <strong>OpenAI</strong> y una clave API activa con créditos disponibles.</li>
+      <li>Conocimientos básicos de “clic y conectar” en interfaces visuales (no necesitas programar).</li>
+    </ul>
+    <div class="columns-list">
+      <strong>Tu hoja de Google Sheets debe tener al menos estas 3 columnas:</strong>
+      <ul>
+        <li><strong>Descripción</strong> del anuncio (ejemplo: “vendo piso o una casa”).</li>
+        <li><strong>“¿Tiene número de teléfono?”</strong>, donde indicarás “Sí” o “No”.</li>
+        <li><strong>“Vendedor o Comprador”</strong>, que rellenará el robot con la decisión de la IA.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="rule-box">
+  <div class="rule-main">
+    <h2><span>⚠️</span> Regla fundamental de la automatización</h2>
+    <p>
+      <strong>Solo queremos que el robot piense si hay un número de teléfono en la descripción.</strong>
+    </p>
+    <p>
+      Si en el texto del anuncio no aparece ningún número de teléfono, el sistema <strong>debe ignorar esa fila</strong> y no llamar a ChatGPT.
+    </p>
+    <p>
+      Esta regla protege tu tiempo y tu dinero: así no gastas recursos analizando mensajes que no tienen contacto útil.
+    </p>
+  </div>
+  <div class="rule-side">
+    <div class="rule-side-title">
+      <span>🧱</span>
+      <span>En la práctica significa que…</span>
+    </div>
+    <ul>
+      <li>La columna “¿Tiene número de teléfono?” será el <strong>disparador</strong> del análisis.</li>
+      <li>Si es “Sí”, el flujo continúa hacia ChatGPT.</li>
+      <li>Si es “No”, el flujo se detiene en el filtro de Make.com.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="steps-section">
+  <div class="steps-section-header">
+    <h2><span>🪜</span> Pasos del flujo completo</h2>
+    <p>
+      Cada paso construye una parte del robot: lector, analista, guardián y escritor.
+    </p>
+  </div>
+
+  <div class="step">
+    <div class="step-number">1</div>
+    <div class="step-content">
+      <div class="step-title">Crear el escenario en Make.com</div>
+      <div class="step-desc">
+        Entra en <strong>make.com</strong> y crea un nuevo <strong>escenario</strong>. Este escenario será el lugar donde vas a añadir todos los módulos
+        (bloques) del flujo: lectura de Google Sheets, llamada a ChatGPT, filtro y actualización de la hoja.
+      </div>
+      <div class="sub-steps">
+        <strong>Sub-pasos:</strong>
+        <ul>
+          <li>Abre Make.com y ve a la sección de escenarios.</li>
+          <li>Pulsa para crear un escenario nuevo en blanco.</li>
+          <li>Guarda el escenario con un nombre claro (por ejemplo, “Clasificar vendedor/comprador”).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">2</div>
+    <div class="step-content">
+      <div class="step-title">Configurar el módulo de Google Sheets (El Lector)</div>
+      <div class="step-desc">
+        El primer módulo será el <strong>Lector</strong>. Es el que se conecta a tu hoja de cálculo para leer filas.
+        Debes elegir Google Sheets y usar una acción que obtenga las filas de la hoja donde tienes las columnas
+        “Descripción”, “¿Tiene número de teléfono?” y “Vendedor o Comprador”.
+      </div>
+      <div class="sub-steps">
+        <strong>Sub-pasos:</strong>
+        <ul>
+          <li>En el escenario, añade un módulo y busca “Google Sheets”.</li>
+          <li>Selecciona la acción que lee u observa filas de la hoja de cálculo.</li>
+          <li>Conecta tu cuenta de Google y elige el archivo y la hoja correctos.</li>
+          <li>Ejecuta el escenario una vez (“run once”) para que Make.com detecte las columnas existentes.</li>
+        </ul>
+      </div>
+      <div class="highlight-box small">
+        <strong>Nota:</strong> Esta ejecución de prueba sirve para que Make.com “vea” los nombres de las columnas y puedas usarlos después.
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">3</div>
+    <div class="step-content">
+      <div class="step-title">Añadir el módulo de OpenAI (ChatGPT)</div>
+      <div class="step-desc">
+        Después del Lector, añade un módulo de <strong>OpenAI</strong>. Este módulo será el “analista” que lee la descripción
+        del anuncio y decide si quien escribe es vendedor o comprador.
+      </div>
+      <div class="sub-steps">
+        <strong>Sub-pasos:</strong>
+        <ul>
+          <li>Añade un nuevo módulo a la derecha del módulo de Google Sheets.</li>
+          <li>Busca OpenAI / ChatGPT y elige la acción de <strong>Chat Completion</strong> (crear una respuesta de chat).</li>
+          <li>Conecta tu cuenta de OpenAI (usarás la API Key que obtendrás en el siguiente paso).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">4</div>
+    <div class="step-content">
+      <div class="step-title">Configurar la conexión de API con OpenAI</div>
+      <div class="step-desc">
+        Para que Make.com pueda usar ChatGPT, necesitas una <strong>clave API</strong>. Esta se obtiene en la plataforma de OpenAI
+        y se introduce en la configuración del módulo.
+      </div>
+      <div class="sub-steps">
+        <strong>Sub-pasos:</strong>
+        <ul>
+          <li>Entra en la zona de usuario de OpenAI y ve a la sección de <em>API Keys</em>.</li>
+          <li>Crea una nueva clave API, ponle un nombre y cópiala.</li>
+          <li>En Make.com, pega esa clave en la configuración de la conexión con OpenAI.</li>
+          <li>No es necesario rellenar el campo de <em>organization ID</em> para este flujo.</li>
+        </ul>
+      </div>
+      <div class="highlight-box">
+        <strong>Importante sobre costos:</strong>
+        El uso de la API de OpenAI se cobra por <em>tokens</em> (fragmentos de texto). Se cuentan tanto los tokens
+        que envías en la petición como los que recibes en la respuesta, así que conviene mantener los mensajes cortos y claros.
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">5</div>
+    <div class="step-content">
+      <div class="step-title">Seleccionar el modelo de IA adecuado</div>
+      <div class="step-desc">
+        El tutorial recomienda usar un modelo de la serie <strong>GPT-3.5 Turbo</strong>, que es rápido y suficiente
+        para leer textos cortos y decidir entre “vendedor” o “comprador”.
+      </div>
+      <div class="sub-steps">
+        <strong>Sub-pasos:</strong>
+        <ul>
+          <li>En el módulo de OpenAI, abre la lista de modelos disponibles.</li>
+          <li>Selecciona un modelo de tipo <strong>Chat</strong> de la familia GPT-3.5 Turbo.</li>
+          <li>Evita modelos más pesados si no los necesitas; consumen más tokens y pueden ser más caros.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">6</div>
+    <div class="step-content">
+      <div class="step-title">Configurar los mensajes para ChatGPT</div>
+      <div class="step-desc">
+        El módulo de Chat tiene dos tipos de mensaje principales: uno de <strong>“system”</strong> (instrucción general)
+        y uno de <strong>“user”</strong> (el caso concreto que se analiza). Aquí le explicas a la IA qué tarea debe hacer
+        y qué texto debe leer.
+      </div>
+      <div class="sub-steps">
+        <strong>Sub-pasos:</strong>
+        <ul>
+          <li>
+            En el mensaje de <strong>system</strong>, escribe en castellano qué debe hacer ChatGPT:
+            leer la descripción del anuncio y responder si la persona es vendedor o comprador, usando una respuesta corta.
+          </li>
+          <li>
+            En el mensaje de <strong>user</strong>, dile a Make.com que envíe el contenido de la columna
+            <strong>“Descripción”</strong> de la fila actual de Google Sheets.
+          </li>
+          <li>
+            Revisa que el idioma y las instrucciones sean claros, sencillos y sin frases ambiguas.
+          </li>
+        </ul>
+      </div>
+      <div class="highlight-box small">
+        <strong>Consejo:</strong> Mientras más claro sea el mensaje de “system”, más consistentes serán las respuestas de la IA.
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">7</div>
+    <div class="step-content">
+      <div class="step-title">Aplicar el filtro (El Guardián)</div>
+      <div class="step-desc">
+        El filtro es el <strong>Guardián</strong> del sistema. Decide si la fila debe llegar o no a ChatGPT,
+        según lo que haya en la columna <em>“¿Tiene número de teléfono?”</em>.
+      </div>
+      <div class="sub-steps">
+        <strong>Sub-pasos:</strong>
+        <ul>
+          <li>Añade un filtro entre el módulo de Google Sheets y el módulo de OpenAI.</li>
+          <li>Configura la condición para que el flujo solo continúe si “¿Tiene número de teléfono?” es “Sí”.</li>
+          <li>Si la condición no se cumple (por ejemplo, “No”), el escenario se detiene en este punto.</li>
+        </ul>
+      </div>
+      <div class="highlight-box">
+        <strong>Clave del flujo:</strong> Gracias a este filtro, la IA solo se usa cuando realmente hay un dato de contacto.
+        Así ahorras tokens, tiempo y evitas clasificar mensajes incompletos.
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">8</div>
+    <div class="step-content">
+      <div class="step-title">Añadir el módulo de actualización de Google Sheets (El Escritor)</div>
+      <div class="step-desc">
+        Ahora necesitas un módulo que escriba en la hoja el resultado de la IA. Este será el <strong>Escritor</strong>:
+        un módulo de Google Sheets que actualiza una fila concreta.
+      </div>
+      <div class="sub-steps">
+        <strong>Sub-pasos:</strong>
+        <ul>
+          <li>Añade un tercer módulo después del módulo de OpenAI.</li>
+          <li>Selecciona Google Sheets y la acción <strong>“Actualizar una fila”</strong> (update a row).</li>
+          <li>Conecta el mismo archivo y la misma hoja que usaste en el Lector.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">9</div>
+    <div class="step-content">
+      <div class="step-title">Configurar la actualización de la hoja</div>
+      <div class="step-desc">
+        Para que el Escritor sepa qué fila cambiar y qué valor poner, debe recibir el número de fila y la respuesta
+        que viene de ChatGPT.
+      </div>
+      <div class="sub-steps">
+        <strong>Sub-pasos:</strong>
+        <ul>
+          <li>Usa el <strong>número de fila</strong> (row number) que sale del módulo de Google Sheets para indicar qué registro actualizar.</li>
+          <li>
+            En el campo “Vendedor o Comprador”, mapea el contenido del módulo de OpenAI. De forma típica se accede a la estructura:
+            <em>choices → message → content</em>.
+          </li>
+          <li>Guarda la configuración y ejecuta de nuevo el escenario en modo prueba.</li>
+        </ul>
+      </div>
+      <div class="highlight-box small">
+        <strong>Revisión rápida:</strong> Tras la prueba, deberías ver cómo la columna “Vendedor o Comprador” se rellena sola
+        con la decisión de la IA.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="testing-section">
+  <div class="testing-header">
+    <h2><span>🧪</span> Pruebas del sistema</h2>
+    <p>Probar tanto el caso de éxito como el de fallo te asegura que el flujo está bien montado.</p>
+  </div>
+  <div class="testing-grid">
+    <div class="test-card success">
+      <div class="test-title">
+        <span>✅</span>
+        <span>Prueba de éxito</span>
+      </div>
+      <div class="test-line">
+        <span class="test-label">Descripción:</span>
+        <span>“Estoy comprando una propiedad en esta zona, busco piso…”</span>
+      </div>
+      <div class="test-line">
+        <span class="test-label">¿Tiene número de teléfono?</span>
+        <span>“Sí”</span>
+      </div>
+      <div class="test-line">
+        <span class="test-label">Paso del flujo:</span>
+        <span>La fila pasa el filtro y llega a ChatGPT.</span>
+      </div>
+      <div class="test-result">
+        Resultado esperado: ChatGPT responde algo equivalente a <strong>“comprador”</strong> y la columna
+        “Vendedor o Comprador” se actualiza automáticamente con esa palabra.
+      </div>
+    </div>
+
+    <div class="test-card fail">
+      <div class="test-title">
+        <span>🚫</span>
+        <span>Prueba de fallo en el filtro</span>
+      </div>
+      <div class="test-line">
+        <span class="test-label">Descripción:</span>
+        <span>Texto de venta de un piso, pero sin número de teléfono.</span>
+      </div>
+      <div class="test-line">
+        <span class="test-label">¿Tiene número de teléfono?</span>
+        <span>“No”</span>
+      </div>
+      <div class="test-line">
+        <span class="test-label">Paso del flujo:</span>
+        <span>La fila se detiene en el filtro de Make.com.</span>
+      </div>
+      <div class="test-result">
+        Resultado esperado: el escenario <strong>no llama a ChatGPT</strong> y la columna
+        “Vendedor o Comprador” permanece vacía para esa fila.
+      </div>
+    </div>
+  </div>
+
+  <div class="validation-box">
+    <strong>VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES</strong>
+    El tutorial indica que todo el flujo está respaldado por la documentación oficial de:
+    Make.com (integración con Google Sheets y OpenAI), la API de Chat Completions de OpenAI y
+    el uso de filtros entre módulos en Make.com. Esto confirma que el diseño sigue prácticas
+    estándar y soportadas por las tres plataformas.
+  </div>
+</div>
+
+<div class="footer">
+  <h2><span>🎯</span> Resumen final del flujo completo</h2>
+  <p>
+    Has construido una automatización donde Google Sheets almacena los anuncios,
+    Make.com coordina los pasos y ChatGPT decide si la persona es vendedora o compradora.
+  </p>
+  <div class="footer-flow">
+    <p>
+      <strong>Recorrido de cada fila:</strong>
+    </p>
+    <ul>
+      <li>La fila entra desde la hoja de Google Sheets (Descripción + “¿Tiene número de teléfono?”).</li>
+      <li>El filtro comprueba la columna “¿Tiene número de teléfono?”.</li>
+      <li>Si es “Sí”, la descripción viaja al módulo de OpenAI (ChatGPT).</li>
+      <li>La IA analiza el texto y responde “vendedor” o “comprador”.</li>
+      <li>El módulo Escritor actualiza la columna “Vendedor o Comprador” en la misma fila.</li>
+    </ul>
+  </div>
+  <p>
+    Con este patrón ya puedes adaptar el flujo a otros casos: clasificar leads, etiquetar mensajes
+    o filtrar contactos, siempre combinando una hoja sencilla con un escenario en Make.com y la
+    inteligencia de ChatGPT.
+  </p>
+</div>
+```
+
+  </div>
+</body>
+</html>

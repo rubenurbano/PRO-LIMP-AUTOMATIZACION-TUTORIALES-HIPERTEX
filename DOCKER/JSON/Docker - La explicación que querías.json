@@ -1,0 +1,55 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "WEB ORIGINAL:",
+      "contenido": "Docker - La explicación que querías:\n(Web Original)\n\nhttps://youtu.be/9eTVZwMZJsA?si=jHgsmgnI3Qs7jRp3\n\nDOCUMENTACIÓN OFICIAL DOCKER:\n\nhttps://docs.docker.com/manuals/\n\nhttps://docs.docker.com/\n\nhttps://docs.docker.com/get-started/\n\nhttps://docs.docker.com/get-started/workshop/"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "El Problema: \"En mi máquina funciona\"",
+      "contenido": "El Problema: \"En mi máquina funciona\":\n\nImagina que creas una aplicación en tu ordenador. Todo va perfecto. Se la pasas a un compañero o la subes a un servidor y... no funciona. Faltan programas, las versiones son distintas, o la configuración es diferente. Este es un problema muy común llamado \"el síndrome de 'en mi máquina funciona'\".\n\nDocker nace para solucionar exactamente esto, garantizando que tu aplicación funcione igual en cualquier lugar."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "La Solución Antigua: Máquinas Virtuales (VMs)",
+      "contenido": "La Solución Antigua: Máquinas Virtuales (VMs):\n\nAntes de Docker, la solución era usar Máquinas Virtuales. Una Máquina Virtual (VM) es como tener un ordenador completo dentro de tu ordenador. Incluye su propio sistema operativo (Windows, Linux, etc.), lo que la hace muy pesada, lenta para arrancar y consume muchos recursos (memoria RAM, disco duro).\n\nSi tenías 3 aplicaciones, necesitabas 3 VMs, cada una con su sistema operativo completo, malgastando recursos."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "La Solución Moderna: Contenedores Docker",
+      "contenido": "La Solución Moderna: Contenedores Docker:\n\nDocker utiliza una tecnología llamada \"contenedores\". Un contenedor es como una caja ligera y aislada donde metes tu aplicación y solo lo estrictamente necesario para que funcione (librerías, dependencias, etc.).\n\nLa gran diferencia es que todos los contenedores que se ejecutan en una máquina comparten el mismo sistema operativo base del anfitrión. No necesitan instalar un sistema operativo completo cada vez. Esto los hace:\n- **Ligeros:** Ocupan mucho menos espacio.\n- **Rápidos:** Arrancan en segundos, no en minutos.\n- **Eficientes:** Consumen muchos menos recursos."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "La Mejor Analogía: El Contenedor de Barco",
+      "contenido": "La Mejor Analogía: El Contenedor de Barco:\n\nPiensa en Docker como los contenedores de metal que ves en los barcos de carga. Antes de ellos, transportar productos distintos (coches, plátanos, ropa) era un caos. Con la invención del contenedor estándar, ya no importa lo que haya dentro. Todos se manejan, apilan y transportan de la misma manera.\n\nUn contenedor de Docker hace lo mismo con el software: \"empaqueta\" tu aplicación en una caja estándar que se puede ejecutar en cualquier máquina que tenga Docker, sin importar qué haya dentro de la caja o cómo sea la máquina."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Conceptos Clave: Imagen vs. Contenedor",
+      "contenido": "Conceptos Clave: Imagen vs. Contenedor:\n\nEste es el punto más importante para entender Docker.\n\n1.  **Imagen Docker (La Plantilla):** Es un paquete de solo lectura, como una plantilla o una receta para hacer un pastel. Contiene todas las instrucciones y los ingredientes necesarios: el código de la aplicación, las librerías, las variables de entorno, etc. La imagen no se ejecuta, es un molde estático.\n\n2.  **Contenedor Docker (La Aplicación en Ejecución):** Es una instancia viva y en ejecución de una imagen. Usando la analogía anterior, si la imagen es la receta del pastel, el contenedor es el pastel ya horneado y listo para comer. Puedes crear, iniciar, detener y eliminar muchos contenedores a partir de la misma imagen."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "La Receta: ¿Qué es un Dockerfile?",
+      "contenido": "La Receta: ¿Qué es un Dockerfile?:\n\nUn `Dockerfile` es un simple archivo de texto donde escribes, paso a paso, las instrucciones para construir una Imagen Docker. Es literalmente la receta.\n\nUn ejemplo simple diría algo como:\n1.  Usa una base de Python.\n2.  Copia los archivos de mi aplicación dentro.\n3.  Instala las dependencias que necesita.\n4.  Define el comando que se ejecutará cuando el contenedor arranque.\n\nCon este archivo, Docker puede construir tu imagen de forma automática y predecible."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "El Almacén: ¿Qué es Docker Hub?",
+      "contenido": "El Almacén: ¿Qué es Docker Hub?:\n\nDocker Hub es un registro público (un gran almacén en la nube) donde la gente y las empresas guardan y comparten sus Imágenes Docker. Es como un GitHub para imágenes de Docker.\n\nPuedes descargar imágenes oficiales listas para usar (como Python, Ubuntu, MySQL, etc.) o subir tus propias imágenes para compartirlas con tu equipo o desplegarlas en tus servidores."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Resumen del Flujo de Trabajo con Docker",
+      "contenido": "Resumen del Flujo de Trabajo con Docker:\n\nEl proceso típico para usar Docker es muy sencillo:\n\n1.  **Escribes el código** de tu aplicación.\n2.  **Escribes un `Dockerfile`** con las instrucciones para empaquetar tu aplicación.\n3.  **Construyes la Imagen** a partir del `Dockerfile` con el comando `docker build`. Esto crea tu \"plantilla\" o \"molde\".\n4.  **Ejecutas el Contenedor** a partir de la Imagen con el comando `docker run`. Esto \"enciende\" tu aplicación dentro de su caja aislada.\n5.  **(Opcional) Subes tu Imagen** a un registro como Docker Hub para compartirla o usarla en otros sistemas."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\nCada uno de los conceptos explicados en este tutorial se basa en la documentación oficial de Docker, garantizando su precisión técnica.\n\n- **Diferencia entre Contenedores y Máquinas Virtuales:** La explicación sobre las VMs y los contenedores que comparten el kernel del anfitrión está validada en la sección \"What is a container?\" de la documentación oficial.\n  - *Fuente:* https://docs.docker.com/get-started/overview/#what-is-a-container\n\n- **Concepto de Imagen y Contenedor:** La distinción fundamental entre una imagen (plantilla inerte) y un contenedor (instancia en ejecución) es el pilar de Docker y se detalla en su guía de inicio.\n  - *Fuente:* https://docs.docker.com/get-started/overview/#images-and-containers\n\n- **Dockerfile:** La descripción del `Dockerfile` como un archivo de texto con instrucciones para construir una imagen de forma automática se corresponde con la referencia oficial del constructor de Docker.\n  - *Fuente:* https://docs.docker.com/engine/reference/builder/\n\n- **Docker Hub y Registros:** El rol de Docker Hub como un servicio de registro para almacenar y distribuir imágenes está documentado en su sección dedicada.\n  - *Fuente:* https://docs.docker.com/docker-hub/\n\n- **Flujo de Trabajo General:** El ciclo de `build`, `run` y `share` (construir, ejecutar y compartir) es el flujo de trabajo estándar que se promueve en las guías \"Get Started\" de Docker.\n  - *Fuente:* https://docs.docker.com/get-started/"
+    }
+  ]
+}

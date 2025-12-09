@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Visor HIPERTEX (JSON)</title>
+<style>
+  :root{--bg:#0f172a;--panel:#111827;--fg:#e5e7eb;--muted:#94a3b8;--accent:#38bdf8}
+  html,body{height:100%;margin:0;background:#0b1220;color:var(--fg);font:15px/1.5 system-ui,Segoe UI,Roboto}
+  header{display:flex;gap:.5rem;align-items:center;padding:.75rem 1rem;background:var(--panel);position:sticky;top:0;z-index:10}
+  header h1{font-size:16px;margin:0;color:var(--muted);font-weight:600}
+  #wrap{display:grid;grid-template-columns:280px 1fr;height:calc(100% - 56px)}
+  aside{border-right:1px solid #1f2937;background:#0e1628;overflow:auto}
+  main{overflow:auto}
+  .sidebar{padding:1rem}
+  .sidebar h2{font-size:14px;margin:.25rem 0 1rem;color:var(--accent)}
+  .nav{display:flex;flex-direction:column;gap:.25rem}
+  .nav a{color:var(--fg);text-decoration:none;padding:.5rem .6rem;border-radius:.5rem}
+  .nav a:hover{background:#0b2236}
+  .card{margin:1rem;padding:1rem;border:1px solid #1f2937;border-radius:10px;background:#0e1628}
+  .title{font-size:20px;margin:0 0 .5rem}
+  pre{white-space:pre-wrap;word-break:break-word;background:#0b1220;border:1px solid #1f2937;border-radius:8px;padding:1rem;overflow:auto}
+  .hint{color:var(--muted);font-size:13px;margin-top:1rem}
+  .uploader{margin-left:auto}
+  input[type=file]{color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <h1>HIPERTEX — Visor JSON</h1>
+  <div class="uploader"><input id="file" type="file" accept=".json"/></div>
+</header>
+<div id="wrap">
+  <aside><div class="sidebar"><h2>Menú</h2><div id="menu" class="nav"></div>
+    <div class="hint">• Solo lista ítems con <code>menu_item</code>.<br/>• El contenido se conserva 1:1.</div>
+  </div></aside>
+  <main id="content"></main>
+</div>
+
+<script>
+const $menu = document.getElementById('menu');
+const $content = document.getElementById('content');
+const $file = document.getElementById('file');
+
+$file.addEventListener('change', async (e)=>{
+  const f = e.target.files[0];
+  if (!f) return;
+  const text = await f.text();
+  let data;
+  try { data = JSON.parse(text); }
+  catch { alert("El archivo no es JSON válido."); return; }
+  render(data);
+  history.replaceState(null,"",location.pathname+"#");
+});
+
+function slug(s){ return String(s||'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,'-').replace(/^-+|-+$/g,''); }
+
+function render(data){
+  const items = (data.items||[]).map((it,i)=>({
+    id: it.itemID || it.itemID_raw || String(i+1).padStart(2,'0'),
+    title: it.menu_item || null,
+    body: it.contenido || ""
+  }));
+
+  // Menú lateral: solo los que tienen título
+  $menu.innerHTML = "";
+  items.filter(x=>x.title).forEach(x=>{
+    const a = document.createElement('a');
+    a.textContent = x.title;
+    a.href = "#item-"+slug(x.id);
+    $menu.appendChild(a);
+  });
+
+  // Contenido central
+  $content.innerHTML = "";
+  items.forEach(x=>{
+    const card = document.createElement('section');
+    card.className = "card";
+    card.id = "item-"+slug(x.id);
+
+    if (x.title){
+      const h = document.createElement('h3');
+      h.className = "title";
+      h.textContent = x.title;
+      card.appendChild(h);
+    }
+
+    if (x.body && x.body.trim()){
+      const pre = document.createElement('pre');
+      pre.textContent = x.body;
+      card.appendChild(pre);
+    }
+
+    if (card.children.length) $content.appendChild(card);
+  });
+}
+</script>
+</body>
+</html>

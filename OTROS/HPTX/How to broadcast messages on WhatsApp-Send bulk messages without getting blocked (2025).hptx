@@ -1,0 +1,108 @@
+##itemID:000
+##menu-item BEGIN
+[TITULO_VIDEO]
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+[TITULO_VIDEO]:
+Web Original:
+
+How to broadcast messages on WhatsApp: Send bulk messages without getting blocked (2025) 
+https://youtu.be/_upLw2kKxLo?si=yDOKHcORKhtgxNSY
+
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Qué es una lista de difusión en WhatsApp
+##menu-item END
+##Contenido BEGIN
+Qué es una lista de difusión en WhatsApp:
+
+Una lista de difusión en WhatsApp es una función que te permite enviar un mensaje a varios contactos al mismo tiempo, pero cada persona recibe el mensaje como si fuera un mensaje individual. No se crea un grupo, así que nadie ve quién más recibió el mensaje. Esta función está disponible tanto en WhatsApp normal como en WhatsApp Business.[1]
+
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Cómo crear una lista de difusión en WhatsApp
+##menu-item END
+##Contenido BEGIN
+Cómo crear una lista de difusión en WhatsApp:
+
+1. Abre la aplicación de WhatsApp en tu teléfono.
+2. Toca los tres puntos en la esquina superior derecha.
+3. Selecciona la opción “Nueva difusión”.
+4. Elige los contactos a los que quieres enviar el mensaje. Puedes seleccionar hasta 256 contactos.
+5. Escribe tu mensaje y presiona enviar. Cada contacto recibirá el mensaje como si fuera personal.[2][3]
+
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Cómo evitar ser bloqueado al enviar mensajes masivos
+##menu-item END
+##Contenido BEGIN
+Cómo evitar ser bloqueado al enviar mensajes masivos:
+
+WhatsApp tiene reglas para evitar el spam. Si envías muchos mensajes en poco tiempo o usas herramientas automáticas, puedes ser bloqueado. Para evitarlo:
+
+- Usa solo la función oficial de listas de difusión.
+- No envíes mensajes a personas que no te tienen guardado en su agenda.
+- No envíes mensajes repetidos o spam.
+- No uses aplicaciones de terceros que prometan envíos masivos automáticos, ya que pueden violar las reglas de WhatsApp y causar bloqueos.[4][5]
+
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Cómo enviar mensajes masivos con WhatsApp Business
+##menu-item END
+##Contenido BEGIN
+Cómo enviar mensajes masivos con WhatsApp Business:
+
+1. Abre la aplicación de WhatsApp Business.
+2. Ve al menú y selecciona “Listas de difusión”.
+3. Crea una nueva lista y añade los contactos.
+4. Escribe tu mensaje y envíalo.
+5. Cada contacto recibirá el mensaje como si fuera personal, y podrás ver quién respondió.[5][4]
+
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Cómo usar la API de WhatsApp Business para envíos masivos
+##menu-item END
+##Contenido BEGIN
+Cómo usar la API de WhatsApp Business para envíos masivos:
+
+1. Registra tu empresa y solicita acceso a la API de WhatsApp Business a través de un proveedor autorizado.
+2. Completa el proceso de verificación y vincula tu número de teléfono.
+3. Crea tu perfil de empresa y una plantilla de mensaje aprobada.
+4. Usa la API para enviar mensajes masivos a tus contactos, siguiendo las reglas de WhatsApp.[6][4]
+
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+- La función de listas de difusión en WhatsApp está explicada en la documentación oficial de WhatsApp: https://faq.whatsapp.com/591339899826743.[1]
+- Las reglas para evitar bloqueos y el uso de la API de WhatsApp Business están detalladas en la documentación oficial de WhatsApp Business: https://developers.facebook.com/docs/whatsapp.[4][6]
+- El límite de 256 contactos en una lista de difusión y el funcionamiento de la función están confirmados en la ayuda oficial de WhatsApp: https://faq.whatsapp.com/591339899826743.[1]
+
+##Contenido END
+
+[1](https://faq.whatsapp.com/es/android/23130793)
+[2](https://whaticket.com/blog/como-enviar-mensajes-masivos-whatsapp-2023/)
+[3](https://treble.ai/blog/mensajes-masivos-en-whatsapp/)
+[4](https://www.brevo.com/es/blog/como-enviar-mensajes-masivos-por-whatsapp/)
+[5](https://controlhippo.com/blog/es/whatsapp/whatsapp-bulk-messages/)
+[6](https://respond.io/es/blog/whatsapp-bulk-message)
+[7](https://leadsales.io/blog/como-enviar-mensajes-masivos-con-whatsapp-api/)
+[8](https://www.youtube.com/watch?v=6Uaqkp7UtaQ)
+[9](https://www.youtube.com/watch?v=1ttJosLDI7o)
+[10](https://www.youtube.com/watch?v=fUhyg-Lh0J4)

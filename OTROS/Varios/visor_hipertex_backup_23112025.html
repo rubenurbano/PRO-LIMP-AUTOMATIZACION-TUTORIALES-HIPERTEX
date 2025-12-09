@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>HIPERTEX — Visor JSON (v2 numeración limpia + imágenes)</title>
+<style>
+  :root{
+    --bg:#0f172a;
+    --panel:#0b1220;
+    --card:#0e1a2b;
+    --muted:#9fb3c8;
+    --text:#e6eef7;
+    --accent:#60a5fa
+  }
+  html,body{height:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font:15px/1.45 system-ui,Segoe UI,Roboto,Inter,Arial
+  }
+  .app{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:16px;
+    min-height:100%
+  }
+  header{
+    grid-column:1/-1;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 16px;
+    background:var(--panel);
+    position:sticky;
+    top:0;
+    z-index:3;
+    border-bottom:1px solid #18273b
+  }
+  header h1{
+    font-size:14px;
+    font-weight:700;
+    margin:0;
+    letter-spacing:.02em;
+    opacity:.9
+  }
+  header .file-pill{
+    margin-left:auto;
+    font-size:12px;
+    color:var(--muted);
+    opacity:.95
+  }
+  .left{
+    padding:10px 8px 24px;
+    position:sticky;
+    top:54px;
+    height:calc(100dvh - 54px);
+    overflow:auto;
+    background:var(--panel);
+    border-right:1px solid #18273b
+  }
+  .left h2{
+    margin:6px 8px 10px;
+    font-size:12px;
+    color:var(--muted);
+    font-weight:700;
+    letter-spacing:.06em
+  }
+  nav{
+    display:flex;
+    flex-direction:column;
+    gap:6px
+  }
+  nav a{
+    padding:10px 12px;
+    border-radius:8px;
+    text-decoration:none;
+    color:var(--text);
+    background:transparent;
+    border:1px solid #1b2b44
+  }
+  nav a:hover{background:#0f2137}
+  nav a.active{
+    border-color:var(--accent);
+    box-shadow:0 0 0 1px inset var(--accent)
+  }
+  .right{
+    padding:18px 18px 80px
+  }
+  .card{
+    background:var(--card);
+    border:1px solid #1b2b44;
+    border-radius:12px;
+    padding:16px 16px 18px;
+    margin:0 0 14px
+  }
+  .title{
+    margin:0 0 10px;
+    font-size:18px
+  }
+  pre{
+    margin:0;
+    white-space:pre-wrap;
+    font-family:ui-monospace,Consolas,Menlo,monospace
+  }
+  .toolbar{
+    display:flex;
+    align-items:center;
+    gap:10px
+  }
+  .btn{
+    appearance:none;
+    background:#11223a;
+    color:var(--text);
+    border:1px solid #1b2b44;
+    border-radius:8px;
+    padding:8px 10px;
+    font:inherit;
+    cursor:pointer
+  }
+  .btn:hover{background:#102641}
+  input[type="file"]{display:none}
+  .file-label{
+    display:inline-flex;
+    align-items:center;
+    gap:8px
+  }
+
+  /* Bloque de cuerpo cuando hay imágenes */
+  .body-block{
+    margin:0;
+    font-family:ui-monospace,Consolas,Menlo,monospace;
+    white-space:normal
+  }
+  .body-block p{
+    margin:0 0 .4rem
+  }
+  .body-block br{
+    line-height:0.7
+  }
+  .img-block{
+    margin:12px auto 10px;
+    text-align:center
+  }
+  .img-block img{
+    max-width:100%;
+    height:auto;
+    border-radius:12px;
+    border:1px solid #1b2b44;
+    display:block;
+    margin:0 auto;
+  }
+</style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="toolbar">
+        <label class="btn file-label">
+          <input id="file" type="file" accept=".json,application/json" />
+          Seleccionar archivo
+        </label>
+        <button class="btn" id="demo">Cargar demo</button>
+      </div>
+      <h1>HIPERTEX — Visor JSON</h1>
+      <div class="file-pill" id="fname">Sin archivo</div>
+    </header>
+
+    <aside class="left">
+      <h2>Menú</h2>
+      <nav id="menu"></nav>
+    </aside>
+
+    <main class="right" id="content"></main>
+  </div>
+
+<script>
+const $file = document.getElementById('file');
+const $menu = document.getElementById('menu');
+const $content = document.getElementById('content');
+const $fname = document.getElementById('fname');
+const $demo = document.getElementById('demo');
+
+const slug = s => String(s ?? '').toLowerCase()
+  .normalize('NFD').replace(/\p{Diacritic}/gu,'')
+  .replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'') || 'item';
+
+function normalizeData(raw){
+  // Espera { items: [ { itemID?, menu_item?, contenido? } ] }
+  const items = Array.isArray(raw?.items) ? raw.items : [];
+  return items.map((it, idx) => ({
+    // id visible de ancla: si hay itemID lo usamos, si no, índice base 0
+    anchorId: (it.itemID ?? String(idx).padStart(3,'0')),
+    // título y cuerpo normalizados
+    title: (it.menu_item ?? '').trim(),
+    body: (it.contenido ?? '').toString(),
+  }));
+}
+
+// Renderiza cuerpo con soporte para [IMAGEN: URL]
+function renderBodyWithImages(text){
+  const wrapper = document.createElement('div');
+  wrapper.className = 'body-block';
+
+  const lines = String(text).split(/\r?\n/);
+
+  lines.forEach((line) => {
+    const trimmed = line.trim();
+
+    // Línea vacía -> salto
+    if (!trimmed){
+      wrapper.appendChild(document.createElement('br'));
+      return;
+    }
+
+    // Patrón [IMAGEN: https://...]
+    const m = trimmed.match(/^\[IMAGEN:\s*(https?:[^\]\s]+)\s*\]$/i);
+    if (m){
+      const url = m[1];
+      const imgWrap = document.createElement('div');
+      imgWrap.className = 'img-block';
+      const img = document.createElement('img');
+      img.src = url;
+      img.loading = 'lazy';
+      img.alt = 'Infografía del tutorial';
+      imgWrap.appendChild(img);
+      wrapper.appendChild(imgWrap);
+    } else {
+      const p = document.createElement('p');
+      p.textContent = line;
+      wrapper.appendChild(p);
+    }
+  });
+
+  return wrapper;
+}
+
+function buildMenu(view){
+  // Filtrar SOLO los que tienen título y contenido no vacío
+  const visibles = view.filter(x => x.title && x.body && x.body.trim());
+  $menu.innerHTML = '';
+  visibles.forEach((x, i) => {
+    const a = document.createElement('a');
+    a.href = `#item-${slug(x.anchorId)}`;
+    a.textContent = `${i+1}. ${x.title}`;
+    a.dataset.anchor = `item-${slug(x.anchorId)}`;
+    $menu.appendChild(a);
+  });
+}
+
+function buildContent(view){
+  $content.innerHTML = '';
+  view.forEach(x => {
+    // si no hay nada que mostrar, salta
+    if (!x.title && !(x.body && x.body.trim())) return;
+
+    const sec = document.createElement('section');
+    sec.className = 'card';
+    sec.id = `item-${slug(x.anchorId)}`;
+
+    if (x.title){
+      const h = document.createElement('h3');
+      h.className = 'title';
+      h.textContent = x.title;
+      sec.appendChild(h);
+    }
+
+    if (x.body && x.body.trim()){
+      // Si detectamos patrón [IMAGEN:], usamos el renderizado especial
+      if (/\[IMAGEN:\s*https?:/i.test(x.body)){
+        const bodyNode = renderBodyWithImages(x.body);
+        sec.appendChild(bodyNode);
+      } else {
+        const pre = document.createElement('pre');
+        pre.textContent = x.body;
+        sec.appendChild(pre);
+      }
+    }
+
+    $content.appendChild(sec);
+  });
+}
+
+function activateMenuOnHash(){
+  const current = location.hash.replace('#','');
+  const links = [...$menu.querySelectorAll('a')];
+  links.forEach(a => a.classList.toggle('active', a.dataset.anchor === current));
+}
+
+function render(raw){
+  const view = normalizeData(raw);
+  buildMenu(view);
+  buildContent(view);
+  activateMenuOnHash();
+}
+
+addEventListener('hashchange', activateMenuOnHash);
+
+$file.addEventListener('change', e => {
+  const f = e.target.files?.[0];
+  if (!f) return;
+
+  const reader = new FileReader();
+  reader.onload = (event) => {
+    try {
+      const txt = event.target.result;
+      const json = JSON.parse(txt);
+      $fname.textContent = f.name;
+      render(json);
+    } catch (err) {
+      alert('JSON inválido: ' + err.message);
+    }
+  };
+  reader.onerror = (err) => {
+    alert('Error al leer el archivo: ' + err);
+  };
+  reader.readAsText(f, 'UTF-8');
+});
+
+$demo.addEventListener('click', () => {
+  // Demo mínima que muestra los casos clave, incluyendo imagen
+  const demo = {
+    "items":[
+      { "itemID":"000", "contenido":"Bloque sin menú; aparece en el flujo, no en el menú." },
+      { "itemID":"001", "menu_item":"Paso con texto", "contenido":"Contenido del primer paso.\nSegunda línea de texto." },
+      { "itemID":"002", "menu_item":"Paso con imagen", "contenido":"[IMAGEN: https://i.imgur.com/YmrcLV9.jpeg]\n\nEsta imagen se muestra centrada debajo del título." }
+    ]
+  };
+  $fname.textContent = 'DEMO.json';
+  render(demo);
+});
+
+// Si se abre con ?file=local.json se intenta cargarlo
+(async function bootFromQuery(){
+  const p = new URLSearchParams(location.search);
+  const name = p.get('file');
+  if(!name) return;
+  try{
+    const txt = await fetch(name).then(r=>r.text());
+    render(JSON.parse(txt));
+    $fname.textContent = name;
+  }catch(e){ console.warn('No se pudo cargar ?file=', name, e); }
+})();
+</script>
+</body>
+</html>

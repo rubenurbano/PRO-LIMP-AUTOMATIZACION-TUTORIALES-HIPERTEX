@@ -1,0 +1,310 @@
+Voy a crear el tutorial completo siguiendo exactamente las instrucciones del prompt y usando únicamente la información del documento de transcripción.
+
+##itemID:000
+##menu-item BEGIN
+MAKEcom_How To Automate Anything
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+MAKEcom_How To Automate Anything:
+Web Original:
+MAKEcom_How To Automate Anything:
+https://youtu.be/hinLebdX8aM?si=gr3GlI6TGVSngG5B
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Que es make.com y como puede ayudarte
+##menu-item END
+##Contenido BEGIN
+Que es make.com y como puede ayudarte:
+make.com te ayuda a que casi todo en tu negocio se haga solo (automatizar). Tambien puedes usarlo para vender estas "recetas" de trabajo en linea por mucho dinero. make.com conecta muchas aplicaciones que ya usas, como Air Table, OpenAI, HubSpot, Google Sheets, Gmail o Google Drive.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Ejemplos reales de automatizacion con make.com
+##menu-item END
+##Contenido BEGIN
+Ejemplos reales de automatizacion con make.com:
+Contratacion automatica: make.com puede hacer el trabajo de contratar gente automaticamente. Cuando la gente aplica (incluso si son 4.000 personas), sus datos llegan a una hoja de Google. make.com se encarga de que respondan preguntas, pasen pruebas e incluso lleguen a entrevistas. Esto ahorra unos 20 o 30 minutos por persona al no tener que enviar correos o documentos a mano.
+
+Contratos y Facturas: make.com crea automaticamente contratos, facturas y propuestas en un solo documento usando PandaDoc. Agrega automaticamente detalles como el nombre del cliente y los descuentos. Esto se hace con un solo clic. Este proceso automatico ahorra al equipo de Jono unas 8 horas al dia.
+
+Organizacion de proyectos: make.com crea sistemas de organizacion en ClickUp. Si llega un cliente nuevo, make.com programa automaticamente 7 llamadas para contactar a esa persona durante un mes.
+
+Analisis de datos: make.com junta informacion (datos) en tiempo real y la muestra en graficos bonitos para ver como va el negocio.
+
+Creacion de blogs con Inteligencia Artificial (IA): make.com genera miles de publicaciones de blog usando IA. La IA crea los titulos, escribe los articulos, revisa la gramatica y los publica en WordPress sin ayuda.
+
+Propuestas personalizadas: make.com busca negocios en internet y crea propuestas personalizadas para atraerlos a trabajar con ellos.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+El mejor truco: Llamar rapido
+##menu-item END
+##Contenido BEGIN
+El mejor truco: Llamar rapido:
+Hoy vamos a construir un sistema muy simple de tres pasos para capturar nuevos clientes. Es importante llamar a un cliente potencial en menos de 60 segundos porque esto hace que las posibilidades de vender aumenten por cuatro veces.
+
+Antes de usar estos sistemas, Jono trabajaba 14 horas al dia, casi todos los dias. Ahora, solo trabaja 30 minutos al dia gracias a la automatizacion.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Crear tu cuenta en make.com
+##menu-item END
+##Contenido BEGIN
+Crear tu cuenta en make.com:
+Ve a make.com y crea una cuenta gratuita.
+
+Ingresa tu informacion basica y verifica tu correo electronico.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Entender el panel de control
+##menu-item END
+##Contenido BEGIN
+Entender el panel de control:
+Casi todo lo que ves en el panel no lo usaras. Pasaras el 90% de tu tiempo en la pestana llamada "Scenarios" (Escenarios).
+
+Planes: Al principio, usa la cuenta gratuita. Si necesitas mas, el plan "Core" es bueno.
+
+Operaciones extra: Si tu trabajo se detiene porque has usado demasiadas "operaciones" (tareas), puedes comprar operaciones extra sin tener que pagar por un plan mas grande.
+
+Organizacion: En la pestana "Scenarios" puedes crear carpetas para guardar tus trabajos automaticos y encontrarlos facilmente.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Conexiones y Web Hooks
+##menu-item END
+##Contenido BEGIN
+Conexiones y Web Hooks:
+Connections: Aqui conectas make.com a otras aplicaciones, como tu Google Drive. Necesitas dar permiso (autenticarte).
+
+Arreglar conexiones: Si una conexion se rompe o deja de funcionar, debes usar la opcion de "reauthorization" (reautorizacion) para darle permiso de nuevo a make.com.
+
+Web Hooks: Son muy potentes. Si una aplicacion no se conecta facilmente a make.com, casi siempre puedes usar un Web Hook. Un Web Hook simplemente envia informacion de una aplicacion a otra. Por ejemplo, envia los datos de un formulario a make.com.
+
+Datos: La informacion se organiza con algo llamado JSON, que es solo una forma de formatear los datos (como decir: Nombre es Richard).
+
+Zona Horaria: Asegurate de que tu zona horaria este correcta en tu perfil para que puedas entender cuando ocurrieron los errores si revisas los registros.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Como funciona un trabajo automatico
+##menu-item END
+##Contenido BEGIN
+Como funciona un trabajo automatico:
+Vamos a crear un trabajo para recolectar clientes potenciales y que te avise de inmediato.
+
+En un trabajo automatico siempre hay un "Trigger" (Disparador) y "Actions" (Acciones). El Disparador es lo que inicia el trabajo, y las Acciones son lo que sucede despues.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Paso 1: Crear el Disparador con Google Forms
+##menu-item END
+##Contenido BEGIN
+Paso 1: Crear el Disparador con Google Forms:
+En la pestana "Scenarios", haz clic en "Create a new scenario" (Crear un nuevo escenario).
+
+Haz clic en el gran signo de mas (+) de color morado para agregar el primer modulo (el Disparador).
+
+Busca y selecciona "Google Forms".
+
+Selecciona la opcion "Watch responses" (Observar respuestas). Esto hara que el sistema se active cuando se envie un formulario.
+
+Crea una conexion a Google Forms y dale permiso a make.com para que acceda a tus archivos de Google Drive.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Paso 2: Crear el formulario y obtener el ID
+##menu-item END
+##Contenido BEGIN
+Paso 2: Crear el formulario y obtener el ID:
+Ve a forms.google.com y crea un formulario nuevo.
+
+Agrega preguntas como nombre, apellido, correo electronico, telefono y presupuesto.
+
+Haz clic en "Preview" (Vista previa).
+
+Copia el ID largo del formulario (los 20 o 30 digitos que estan en la direccion de internet).
+
+Pega el ID en make.com y selecciona "from now on" (de ahora en adelante).
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Paso 3: Probar el Disparador
+##menu-item END
+##Contenido BEGIN
+Paso 3: Probar el Disparador:
+Haz clic en "Run once" (Ejecutar una vez) en make.com.
+
+Ve al formulario que creaste y llenalo con informacion de prueba.
+
+Vuelve a hacer clic en "Run once".
+
+Resultado: make.com debe haber recibido la informacion que acabas de enviar.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Paso 4: Agregar la primera Accion con Google Sheets
+##menu-item END
+##Contenido BEGIN
+Paso 4: Agregar la primera Accion con Google Sheets:
+Agrega un nuevo modulo haciendo clic en el circulo grande y selecciona "Google Sheets".
+
+Selecciona "Add a row" (Agregar una fila).
+
+Dale permiso a make.com para que acceda y edite tus hojas de calculo de Google Sheets (tendras que actualizar los permisos, ya que antes solo tenias permiso para Google Forms).
+
+Ve a sheets.google.com y crea una hoja nueva.
+
+En la primera fila, escribe los titulos (encabezados): nombre, apellido, correo, telefono, presupuesto y fecha.
+
+Copia el ID de esta hoja de calculo desde la direccion de internet (URL).
+
+Pega el ID en make.com y selecciona el nombre de la hoja.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Paso 5: Mapear la informacion
+##menu-item END
+##Contenido BEGIN
+Paso 5: Mapear la informacion:
+Mapear: Esto es conectar la informacion que make.com recibio del formulario con la columna correcta en Google Sheets.
+
+Para cada columna (nombre, apellido, etc.), debes hacer clic en la casilla de make.com hasta que encuentres el "value" (valor) que viene de la respuesta del formulario.
+
+Para la columna de "fecha", haz clic en las funciones (el calendario) y selecciona "now" (ahora) para que ponga la fecha y hora exactas.
+
+Haz clic en "OK" y "Save".
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+Paso 6: Agregar la segunda Accion con Gmail
+##menu-item END
+##Contenido BEGIN
+Paso 6: Agregar la segunda Accion con Gmail:
+Agrega un tercer modulo y selecciona "Gmail".
+
+Selecciona "Send an email" (Enviar un correo electronico).
+
+Conecta tu correo electronico de negocios (no uses uno personal).
+
+Pon tu correo electronico como destinatario. El asunto puede ser "New lead" (Nuevo cliente potencial).
+
+En el contenido, mapea el nombre, el correo electronico, el telefono y el presupuesto, igual que lo hiciste con Google Sheets.
+
+Nota: Si usas Gmail, debes agregar el codigo de HTML al final de cada linea en el contenido para que el texto se vea separado en el correo.
+
+Haz clic en "OK" y "Save".
+##Contenido END
+
+##itemID:014
+##menu-item BEGIN
+Paso 7: Probar el escenario final
+##menu-item END
+##Contenido BEGIN
+Paso 7: Probar el escenario final:
+Vuelve a enviar el formulario.
+
+Haz clic en "Run once".
+
+Resultado: La informacion se guardara en Google Sheets y recibiras un correo electronico al instante.
+##Contenido END
+
+##itemID:015
+##menu-item BEGIN
+Opciones de personalizacion: Filtros
+##menu-item END
+##Contenido BEGIN
+Opciones de personalizacion: Filtros:
+Haz clic en la llave inglesa (wrench) entre dos modulos para agregar un "filter" (filtro).
+
+Uso: Un filtro permite detener el trabajo si se cumple una condicion. Por ejemplo, puedes detenerlo si el presupuesto del cliente potencial es muy bajo (como 0 a 1.000 dolares), para no perder tiempo en enviarte el correo.
+##Contenido END
+
+##itemID:016
+##menu-item BEGIN
+Opciones de personalizacion: Routers
+##menu-item END
+##Contenido BEGIN
+Opciones de personalizacion: Routers:
+Un "router" (enrutador) te permite enviar el trabajo por varios caminos diferentes.
+
+Uso: Puedes usar filtros en cada camino para que el trabajo vaya al lugar correcto. Por ejemplo, puedes decir que si el presupuesto es de 1.000 a 10.000 dolares, el correo se envie al Vendedor A, y si es de mas de 10.000 dolares, se envie al Vendedor B.
+
+Este proceso cubre lo basico para que make.com pueda obtener datos, usarlos y realizar acciones.
+##Contenido END
+
+##itemID:017
+##menu-item BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES:Para validar la informacion del tutorial sobre Make.com, he realizado busquedas en fuentes oficiales y documentacion tecnica. A continuacion, presento la validacion de los puntos tecnicos principales:
+
+PUNTOS TECNICOS VALIDADOS:
+
+Make.com es una plataforma de automatizacion de flujos de trabajo que permite crear automatizaciones sin codigo mediante una interfaz visual. El sistema proporciona acceso a miles de integraciones de aplicaciones populares y permite construir escenarios desde pasos basicos hasta funciones avanzadas.
+
+Sobre Escenarios y Operaciones:
+En Make.com, cada accion de modulo en un escenario, como agregar una fila en Google Sheets o recuperar datos de Gmail, cuenta como un credito u operacion. Una operacion es cualquier solicitud o accion individual realizada por un modulo en un escenario, incluyendo consultas a APIs, transformacion de datos o envio de correos electronicos.
+
+Sobre Google Forms:
+Con los modulos de Google Forms en Make, puedes buscar, crear, recuperar y actualizar formularios, asi como observar, listar y recuperar respuestas. Para usar los modulos de Google Forms, debes tener una cuenta de Google y crear una conexion en Make autenticandote con tus credenciales.
+
+Sobre Webhooks:
+Los webhooks permiten enviar datos a Make a traves de HTTPS y crean una URL que puedes llamar desde una aplicacion externa o servicio. Los webhooks funcionan como disparadores instantaneos y ejecutan el escenario inmediatamente despues de que la URL del webhook recibe una solicitud, a diferencia de los disparadores programados que periodicamente consultan un servicio para obtener nuevos datos.
+
+Sobre Planes de Precios:
+Make.com ofrece un plan gratuito con 1,000 operaciones mensuales y planes pagos que comienzan desde $9 al mes con 10,000 operaciones. Si excedes el limite de operaciones de tu plan, puedes comprar operaciones adicionales a $10 por cada 10,000 operaciones.
+
+ENLACES A DOCUMENTACION OFICIAL:
+
+Documentacion oficial de Make.com: https://www.make.com/en/help
+
+Centro de ayuda principal: https://help.make.com/
+
+Documentacion de API: https://developers.make.com/api-documentation
+
+Documentacion de Google Forms en Make: https://www.make.com/en/help/app/google-forms
+
+Documentacion de Webhooks: https://help.make.com/webhooks
+
+Pagina oficial de Make.com: https://www.make.com
+
+Informacion de precios: https://www.make.com/en/pricing
+
+REFERENCIAS A PAGINAS DE SOPORTE OFICIALES:
+
+Centro de desarrolladores de Make: https://developers.make.com
+
+Documentacion de aplicaciones personalizadas: https://developers.make.com/custom-apps-documentation
+
+Guias practicas oficiales: https://www.make.com/en/how-to-guides
+
+Integraciones disponibles: https://www.make.com/en/integrations
+
+Esta validacion confirma que los conceptos y procedimientos descritos en el tutorial son tecnicamente precisos y estan respaldados por la documentacion oficial de Make.com.
+
+
+MAKEcom_How To Automate Anything
+https://youtu.be/hinLebdX8aM?si=gr3GlI6TGVSngG5B
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END

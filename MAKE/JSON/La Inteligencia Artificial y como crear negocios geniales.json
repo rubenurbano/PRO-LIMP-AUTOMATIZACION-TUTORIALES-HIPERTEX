@@ -1,0 +1,101 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "La Inteligencia Artificial y como crear negocios geniales\nWEB ORIGINAL:",
+      "contenido": "La Inteligencia Artificial y como crear negocios geniales:\nWeb Original:\nLa Inteligencia Artificial y como crear negocios geniales:\nINVESTIGACION FUENTES WEB\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Que es la IA y por que es importante ahora",
+      "contenido": "Que es la IA y por que es importante ahora:\nLa Inteligencia Artificial es como un cerebro digital que ayuda a las empresas. Ya no es solo una moda o algo del futuro, sino que se esta convirtiendo en una parte fundamental de como se construyen y operan los negocios. Antes, la IA era algo que solo se experimentaba, pero ahora muchas empresas la estan usando para tareas diarias, incluso alrededor del 89% de las pequenas empresas la usan para tareas cotidianas. El mercado de la IA esta creciendo muchisimo, con una valoracion esperada de 1.8 billones de dolares para el ano 2030. La IA ayuda a las empresas a hacer cuatro cosas muy importantes: Automatizar procesos, que significa hacer que tareas repetitivas se realicen solas. Mejorar decisiones, usando datos para predecir que pasara o que conviene hacer, lo que se conoce como analitica predictiva. Personalizacion, adaptando las interacciones y ofertas para cada cliente, como los chatbots o las sugerencias de productos. Y Creacion de contenido, generando textos e imagenes de forma automatica."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Los bloques de construccion de la IA",
+      "contenido": "Los bloques de construccion de la IA:\nPara poder construir un negocio de IA, es importante entender las tecnologias que usa. Los Agentes de IA son sistemas autonomos, es decir, que trabajan solos, impulsados por algoritmos que realizan tareas especificas, como si fueran asistentes digitales. Estan disenados para aprender y adaptarse a su entorno. Un Agente de IA tiene componentes clave: El Modelo de Lenguaje Grande, que es el cerebro del agente, son algoritmos que entienden y generan lenguaje humano, como el que usa ChatGPT. La Memoria, que permite al agente recordar informacion relevante y aprender de sus experiencias pasadas, usando bases de datos vectoriales especiales para retener el contexto. El Agente de Ejecucion, que es el modulo que coordina las tareas, decide que acciones tomar y en que orden. Y las Herramientas Adicionales, que son recursos extra, como motores de busqueda o sistemas de analisis, que amplian las capacidades del agente para hacer tareas mas complejas."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Cinco categorias de herramientas de IA",
+      "contenido": "Cinco categorias de herramientas de IA:\nHay cinco categorias de herramientas de IA que los emprendedores pueden usar. Primero, los Grandes Modelos de Lenguaje para crear chatbots y asistentes. Segundo, Vision Artificial, que son modelos para analizar imagenes y videos. Tercero, Voz y Audio, herramientas para transcribir, analizar y crear voz. Cuarto, Plataformas de AutoML, soluciones que permiten crear modelos de aprendizaje automatico sin necesitar ser un experto en programacion. Y quinto, Bases de datos vectoriales, que son esenciales para que el texto generado por IA sea rapido, preciso y contextual."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Los dos caminos de los negocios de IA Horizontal y Vertical",
+      "contenido": "Los dos caminos de los negocios de IA Horizontal y Vertical:\nLos negocios de IA se dividen en dos tipos principales. La IA Horizontal ofrece soluciones generales que sirven para muchos tipos de negocios o problemas a la vez, por ejemplo, ChatGPT es horizontal. La IA Vertical son soluciones de IA disenadas y entrenadas especificamente para un solo sector o industria, como el sector legal, la salud o la agricultura. La IA Vertical es el futuro de la inversion y es genial porque esta altamente adaptada, se enfoca en los flujos de trabajo y regulaciones unicas de esa industria. Ofrece mayor retorno de inversion, dando mejores resultados para problemas muy especificos. Usa datos especificos, se entrena con datos unicos de ese dominio para ser super precisa. Ejemplos de IA Vertical son herramientas que automatizan notas clinicas para medicos, o IA que optimiza la gestion de inventario en tiendas minoristas."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Descubrimiento de Farmacos Acelerado por IA",
+      "contenido": "Descubrimiento de Farmacos Acelerado por IA:\nEsta es una de las cinco ideas de negocio de IA mas importantes porque resuelve problemas caros y dificiles. El problema tradicional es que desarrollar un nuevo medicamento cuesta entre 10 y 15 anos y mas de 2.6 mil millones de dolares, con muchas tasas de fracaso. La solucion de IA transforma este proceso ayudando a anticipar el comportamiento molecular antes de las pruebas de laboratorio, elegir compuestos candidatos de grandes bibliotecas quimicas, y reducir el tiempo de desarrollo de decadas a solo anos. Empresas como Insilico Medicine usan algoritmos de aprendizaje profundo para esto."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Agentes de IA Verticales y Hiperautomatizacion",
+      "contenido": "Agentes de IA Verticales y Hiperautomatizacion:\nLa Hiperautomatizacion es una estrategia que combina muchas tecnologias avanzadas, como IA, aprendizaje automatico y Automatizacion Robotica de Procesos, para automatizar la mayor cantidad posible de procesos de negocio. Los Agentes de IA Verticales se enfocan en tareas especificas de nicho. El impacto es grande porque los agentes de IA pueden acelerar la finalizacion de tareas hasta en un 126%, especialmente en areas como programacion y analisis de datos. Esto libera a los empleados para tareas estrategicas y creativas."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Optimizacion de la Cadena de Suministro",
+      "contenido": "Optimizacion de la Cadena de Suministro:\nLa IA ayuda a las empresas a ser mas resistentes y a prevenir perdidas por fallos logisticos. Hay casos de uso con gran retorno de inversion. La Prevision de la demanda permite que la IA prediga con mucha precision cuanto inventario se necesitara, reduciendo los errores de prevision en un 18%. IKEA usa esto integrando ventas pasadas y factores locales. El Mantenimiento Predictivo, usando datos de sensores, la IA predice si una maquina fallara antes de que suceda, permitiendo reparaciones planeadas y reduciendo el tiempo de inactividad. Esto es vital en fabricacion o energia. La Gestion de Riesgos permite que la IA monitoree proveedores y simule interrupciones, permitiendo respuestas 25% mas rapidas a problemas."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Personalizacion Predictiva y Precios Dinamicos",
+      "contenido": "Personalizacion Predictiva y Precios Dinamicos:\nLa Personalizacion con IA funciona como un asistente personal, analizando el historial de navegacion, compras e interacciones para construir un perfil detallado de cada cliente. Luego ofrece recomendaciones de productos muy relevantes. Los Precios Dinamicos permiten que la IA ajuste los precios en tiempo real segun la demanda, la competencia, el inventario y el comportamiento del cliente. Esto maximiza los ingresos. Es muy usado por aerolineas, hoteles y tiendas online. La Automatizacion en CRM ayuda a los sistemas de gestion de clientes a calificar automaticamente a los clientes potenciales con modelos predictivos y a enviar seguimientos personalizados."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Mercados de Datos de Entrenamiento de IA",
+      "contenido": "Mercados de Datos de Entrenamiento de IA:\nLos modelos de IA son tan buenos como los datos con los que se entrenan. Si los datos son de baja calidad o estan sesgados, el resultado sera malo. La oportunidad consiste en crear plataformas que recopilen, organicen y vendan conjuntos de datos de alta calidad y eticamente conformes para industrias especificas. Este mercado esta creciendo muy rapido, con una tasa anual proyectada superior al 16.8%. Los datos de texto, audio e imagen y video son los mas demandados."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Mas ideas de negocios de IA para inspirarte",
+      "contenido": "Mas ideas de negocios de IA para inspirarte:\nPuedes desarrollar un Agente de IA personalizado como servicio, creando asistentes digitales para roles especificos, como un gestor de proyectos o un asistente de ventas. Herramientas automatizadas de investigacion y analisis, usando IA para leer y resumir informes largos en el derecho, la consultoria o las finanzas. Estudio de medios sinteticos, creando servicios o plataformas que generen voces sinteticas, avatares o videos explicativos, utiles para marketing o capacitacion. Plataformas de tutoria o aprendizaje con IA, creando sistemas que se adapten en tiempo real al nivel y objetivos del usuario. Herramientas de reclutamiento impulsadas por IA, usando IA para escanear curriculos, optimizar descripciones de puestos o detectar sesgos en la contratacion. Copilotos creativos para roles especificos, como asistentes de IA que ayuden en el trabajo creativo o analitico, como una herramienta para disenadores de interiores o guionistas. IA para la ciberseguridad, creando herramientas que supervisen transacciones, identifiquen patrones sospechosos para prevenir el fraude, o simulen ciberataques para probar defensas. Diseno web y desarrollo de aplicaciones basados en IA, ofreciendo herramientas que permitan crear sitios web o aplicaciones sin necesidad de escribir codigo. Y Generacion de contenido automatizado, usando herramientas con IA generativa como GPT-4 para producir articulos, descripciones o publicaciones para redes sociales."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Empieza con una prueba y valida tu idea",
+      "contenido": "Empieza con una prueba y valida tu idea:\nAntes de invertir mucho, confirma que existe una necesidad o demanda real. Busca un problema real o un punto debil que puedas resolver para una audiencia especifica. Evalua la viabilidad de tu idea, incluyendo los costos, la tecnologia que necesitas y si es posible expandirla."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Concentrate en un nicho de mercado especifico",
+      "contenido": "Concentrate en un nicho de mercado especifico:\nEs mas facil tener exito si te enfocas en un sector o un problema muy concreto, la IA Vertical, en lugar de intentar hacer una herramienta para todos. Busca brechas en industrias que ya conoces."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "Consigue los conocimientos adecuados",
+      "contenido": "Consigue los conocimientos adecuados:\nSi no eres un experto en IA, colabora con personas que si lo sean, como cofundadores, asesores o autonomos con conocimientos tecnicos, para evitar errores costosos."
+    },
+    {
+      "itemID": "014",
+      "menu_item": "Entiende la tecnologia que usaras",
+      "contenido": "Entiende la tecnologia que usaras:\nNo necesitas entrenar un modelo desde cero, puedes aprovechar modelos de codigo abierto, APIs de terceros o plataformas gestionadas para que sea mas rapido y rentable. Asegurate de que las herramientas que elijas se integren con los sistemas existentes de tus futuros clientes."
+    },
+    {
+      "itemID": "015",
+      "menu_item": "Mide el exito y el Retorno de Inversion",
+      "contenido": "Mide el exito y el Retorno de Inversion:\nEstablece indicadores clave de rendimiento claros para saber si tu IA esta funcionando. Por ejemplo, aumentaron las ventas, se redujeron los errores o se ahorro tiempo a la empresa. Empieza con proyectos piloto que sepas que daran resultados visibles en menos de un ano, como la optimizacion de inventario o la prevision de la demanda."
+    },
+    {
+      "itemID": "016",
+      "menu_item": "Cuida la etica el riesgo y los datos",
+      "contenido": "Cuida la etica el riesgo y los datos:\nEn cuanto a etica y riesgo, tienes que conocer las leyes y los marcos eticos para tu producto y sector. Sobre la privacidad de datos, los clientes deben saber que sus datos estan seguros y protegidos. Respecto al sesgo algoritmico, asegurate de que tu IA no produzca resultados injustos o discriminatorios. Para esto, debes entrenar los modelos con conjuntos de datos diversos y representativos y revisar los resultados constantemente. En diferenciacion, si usas modelos de IA comunes, haz que tu producto sea especial ofreciendo una mejor experiencia de usuario o integraciones mas estrechas con herramientas de la industria."
+    },
+    {
+      "itemID": "017",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\nPara validar la informacion tecnica sobre Inteligencia Artificial y negocios, voy a buscar fuentes oficiales relacionadas con el tema.\n\n\nLa Inteligencia Artificial y como crear negocios geniales\nINVESTIGACION FUENTES WEB\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+
+    {
+      "itemID": "018",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Videos%20TUTORIALES/La%20Inteligencia%20Artificial%20y%20como%20crear%20negocios%20geniales.jpeg]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

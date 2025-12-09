@@ -1,0 +1,200 @@
+##itemID:000
+##menu-item BEGIN
+How to Make an Android App Using AI
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+How to Make an Android App Using AI:
+Web Original:
+How to Make an Android App Using AI:
+https://youtu.be/7YieHcRLFmg?si=4lYo1HJJ7WwN2Zfr
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción y plan de trabajo
+##menu-item END
+##Contenido BEGIN
+Introducción y plan de trabajo:
+En este tutorial aprenderás el proceso completo para construir una aplicación de Android de principio a fin para tu móvil. El autor ha creado varias aplicaciones por su cuenta y las usa diariamente, demostrando que son fáciles y exactas.
+
+El plan de trabajo se divide en tres pasos principales para llevar el concepto a la realidad:
+
+Paso 1: Tener una idea para la aplicación y crearla usando Google AI Studio.[1][2][3] Esta herramienta da los archivos principales pero no un enlace para compartir.
+
+Paso 2: Convertir esos archivos principales en un enlace web activo en internet para que se pueda compartir (desplegar la aplicación).
+
+Paso 3: Convertir ese enlace web en un archivo de aplicación móvil llamado APK e instalarlo en el teléfono.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Paso 1: Configuración en Google AI Studio
+##menu-item END
+##Contenido BEGIN
+Paso 1: Configuración en Google AI Studio:
+Para comenzar, abre Google AI Studio.[1][2][3][4][5][6][7][8][9][10][11][12] Esta herramienta ha sido actualizada a la versión 2.0, es 100% gratis y está lista para el modelo Gemini 3.
+
+Una vez dentro, mira el menú de la izquierda y haz clic en la sección Build (Construir). Aquí puedes crear aplicaciones y sitios web escribiendo instrucciones simples.
+
+En la interfaz, haz clic en Models (Modelos). Por defecto estará seleccionado Gemini 2.5 Pro, pero puedes cambiar a Gemini 2.5 Flash para tareas más rápidas. Debajo encontrarás la sección System instruction (Instrucción del sistema) para escribir reglas especiales. Puedes elegir plantillas como React y Angular, usar el micrófono para hablar en lugar de escribir, y subir archivos (imágenes, PDF, diseños) en la ventana de chat para que la IA los siga.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Creación de la aplicación de Finanzas
+##menu-item END
+##Contenido BEGIN
+Creación de la aplicación de Finanzas:
+Vamos a crear una aplicación para rastrear gastos mensuales. Escribe la siguiente instrucción en Google AI Studio:
+
+"Crea una aplicación para rastrear mis gastos mensuales. El usuario debe poder agregar gastos e ingresos, ver un resumen de ahorros, obtener un gráfico circular para el análisis y también recibir consejos para mejorar los ahorros".
+
+Haz clic en Built (Construir).[4][13] Google AI Studio leerá tu instrucción, planeará la lógica y generará código limpio y simple automáticamente. Si no sabes programar, puedes hablar con AI Studio como si fuera un amigo para pedir cambios y el código se actualizará al instante.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Prueba y vista previa de la aplicación
+##menu-item END
+##Contenido BEGIN
+Prueba y vista previa de la aplicación:
+Una vez que la aplicación esté lista, puedes probarla inmediatamente:
+
+Agrega $10,000 como ingreso de salario.
+
+Agrega gastos como $3,000 para comida, $2,000 para viajes y $1,000 para alquiler.
+
+La aplicación mostrará el resumen de ahorros, un gráfico circular de los gastos y una sección de consejos.
+
+Para ver cómo quedará el diseño, usa el modo de vista previa de dispositivo. Con un solo clic podrás ver cómo se ve tu aplicación en un móvil, una computadora portátil y una tableta antes de hacerla pública.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 2: Desplegar con Google Cloud
+##menu-item END
+##Contenido BEGIN
+Paso 2: Desplegar con Google Cloud:
+Este es el método más fácil y seguro para hacer pública tu aplicación (Método A).
+
+Haz clic en la opción Deploy app (Desplegar aplicación).[1][13]
+
+Elige un proyecto de Cloud existente o crea uno nuevo (por ejemplo, llamado 'finance tracker').
+
+Necesitas activar la facturación en tu proyecto para seguir.[13] Google Cloud no te cobra automáticamente; solo te cobrarán si decides pasar a un plan de pago completo. Completa los pasos para activar el uso gratuito con tu cuenta de Google.
+
+Vuelve a Google Studio, actualiza y haz clic en Deploy app.
+
+Google Cloud Run construirá la aplicación y te entregará un enlace público.[1] Tu clave secreta de AI Studio no quedará expuesta.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 2 Alternativo: Truco con Netlify
+##menu-item END
+##Contenido BEGIN
+Paso 2 Alternativo: Truco con Netlify:
+Si prefieres usar Netlify (Método B), debes usar un truco secreto para evitar que la pantalla salga en blanco.
+
+En Google AI Studio, escribe esta instrucción especial: "Para desplegar esta aplicación en Netlify, haz que sea amigable con el entorno de Netlify". La IA ajustará el código.
+
+Haz clic en Download app (Descargar aplicación) para obtener un archivo zip y descomprímelo.
+
+Ve a la página web de Netlify, regístrate y selecciona "add new project" (agregar nuevo proyecto) y luego "deploy manually" (desplegar manualmente).
+
+Arrastra la carpeta descomprimida que descargaste.
+
+Haz clic en deploy y espera unos segundos para recibir tu enlace público.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Paso 3: Convertir enlace a APK
+##menu-item END
+##Contenido BEGIN
+Paso 3: Convertir enlace a APK:
+Con el enlace público (de Google Cloud o Netlify), vamos a crear el archivo para el móvil.
+
+Busca en Google "web to APK converter" y elige una herramienta (en el video se usa 'web to APK').
+
+Pega el enlace de tu aplicación.[1][13][14]
+
+Dale un nombre a la aplicación y sube un ícono (o deja que elija uno automático).
+
+Haz clic en "make app" (crear aplicación).[15]
+
+Descarga la carpeta generada y descomprímela.
+
+Encontrarás dos archivos: el archivo APK y el archivo AAB.[5][6][9][15]
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Instalación en el móvil
+##menu-item END
+##Contenido BEGIN
+Instalación en el móvil:
+El archivo APK (Android Package Kit) es el que necesitas para instalar la aplicación directamente en tu teléfono.[5][6] El archivo AAB es solo para publicar en Google Play Store y no sirve para instalación directa.
+
+Transfiere el archivo APK a tu móvil (usando WhatsApp, Google Drive, etc.).
+
+En tu móvil, toca el archivo APK.[15]
+
+Presiona instalar y espera unos segundos.[13]
+
+La aplicación quedará instalada y funcionará perfectamente. Así puedes probar tus ideas o juegos simples directamente en tu dispositivo sin escribir código complejo.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Resumen de puntos técnicos validados:
+
+Despliegue directo desde Google AI Studio a Cloud Run:
+Google ha integrado la funcionalidad para desplegar aplicaciones generadas en AI Studio directamente a Google Cloud Run con un solo clic.[1][16] Esto crea un contenedor y una URL pública automáticamente.
+Fuente: Documentación de Google Cloud - "Deploy Gemma 3 to Cloud Run with Google AI Studio" y Blog de Google Cloud "AI Studio to Cloud Run".
+
+Despliegue manual en Netlify ("Drag and Drop"):
+Netlify soporta oficialmente la función "Netlify Drop", que permite arrastrar una carpeta con archivos estáticos (HTML/JS/CSS) al navegador para desplegar un sitio web instantáneamente sin usar Git.
+Fuente: Documentación de Netlify - "Deploy static site manually" y "Netlify Drop".
+
+Diferencia entre archivos APK y AAB:
+Se confirma que el APK (Android Package Kit) es el formato ejecutable para instalar apps directamente en dispositivos Android.[5][6] El AAB (Android App Bundle) es el formato de publicación para Google Play, que optimiza la entrega pero no se instala directamente por el usuario final.[5][17]
+Fuente: Android Developers - "About Android App Bundles" y Guías técnicas de diferencias APK vs AAB.
+
+Conversión de Web a APK (WebView):
+Existen múltiples herramientas y métodos (como "Web to APK" o el uso de Android WebView) que empaquetan una URL web dentro de una aplicación Android nativa, permitiendo que un sitio web funcione como una app instalada.
+Fuente: Documentación de Android Developers sobre WebView y herramientas de terceros como Appilix/AppsGeyser.
+
+Sources
+help
+google.com
+google.dev
+google.dev
+juliangoldie.co.uk
+mit.edu
+dev.to
+kdnuggets.com
+dev.to
+theroyalcoding.com
+winsomemarketing.com
+medium.com
+medium.com
+youtube.com
+netlify.com
+appilix.com
+google.dev
+naukri.com
+Google Search Suggestions
+Display of Search Suggestions is required when using Grounding with Google Search. Learn more
+difference between APK and AAB Android
+deploy static site manually to Netlify drag and drop
+Google AI Studio deploy to Google Cloud Run documentation
+Google AI Studio interface Build section features
+convert web link to APK tool mechanism
+##Contenido END

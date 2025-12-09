@@ -1,0 +1,352 @@
+{
+  "fecha": "2025-12-01",
+  "version": "1.0",
+  "oportunidades": [
+    {
+      "id": "opp_20251201_001",
+      "ranking": 1,
+      "titulo": "Ask HN: Who is hiring? (December 2025)",
+      "descripcion_problema": "Ask HN: Who is hiring? (December 2025)\n\nPlease state the location and include REMOTE for remote work, REMOTE (US)\nor similar if the country is restricted, and ONSITE when remote work is <i>not</i> an option.<p>Please only post if you personally are part of the hiring company—no\nrecruiting firms or job boards. One post per company. If it isn&#x27;t a household name,\nexplain what your company does.<p>Please only post if you are actively filling a position and are committed\nto responding to applicants.<p>Commenters: please don&#x27;t reply to job posts to complain about\nsomething. It&#x27;s off topic here.<p>Readers: please only email if you are personally interested in the job.<p>Searchers: try <a href=\"https:&#x2F;&#x2F;dheerajck.github.io&#x2F;hnwhoishiring&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;dheerajck.github.io&#x2F;hnwhoishiring&#x2F;</a>,\n<a href=\"http:&#x2F;&#x2F;nchelluri.github.io&#x2F;hnjobs&#x2F;\" rel=\"nofollow\">http:&#x2F;&#x2F;nchelluri.github.io&#x2F;hnjobs&#x2F;</a>, <a href=\"https:&#x2F;&#x2F;hnresumetojobs.com\" rel=\"nofollow\">https:&#x2F;&#x2F;hnresumetojobs.com</a>,\n<a href=\"https:&#x2F;&#x2F;hnhired.fly.dev\" rel=\"nofollow\">https:&#x2F;&#x2F;hnhired.fly.dev</a>, <a href=\"https:&#x2F;&#x2F;kennytilton.github.io&#x2F;whoishiring&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;kennytilton.github.io&#x2F;whoishiring&#x2F;</a>,\n<a href=\"https:&#x2F;&#x2F;hnjobs.emilburzo.com\" rel=\"nofollow\">https:&#x2F;&#x2F;hnjobs.emilburzo.com</a>, or this (unofficial) Chrome extension:\n<a href=\"https:&#x2F;&#x2F;chromewebstore.google.com&#x2F;detail&#x2F;hn-hiring-pro&#x2F;mpfaljjblphnlloddaplgicpkinikjlp\" rel=\"nofollow\">https:&#x2F;&#x2F;chromewebstore.google.com&#x2F;detail&#x2F;hn-hiring-pro&#x2F;mpfal...</a>.<p>Don&#x27;t miss this other fine thread: <i>Who wants to be hired?</i> <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46108940\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46108940</a>",
+      "sector": "Unknown",
+      "tipo_solucion": "Unknown",
+      "propuesta_app": {
+        "name": "Unknown",
+        "description": "Analysis failed",
+        "key_features": [],
+        "pricing_model": "Unknown",
+        "mvp_estimate": "Unknown"
+      },
+      "usuarios_ideales": {
+        "profile": "Unknown",
+        "market_size": "Unknown",
+        "buying_capacity": "Medium"
+      },
+      "beneficio_economico": {},
+      "puntuacion": {
+        "total": 5.52,
+        "desglose": {
+          "pain": 5.0,
+          "willingness_to_pay": 5.0,
+          "technical_feasibility": 5.0,
+          "ai_synergy": 5.0,
+          "frequency": 6.5,
+          "competition": 6.5
+        }
+      },
+      "tags": [],
+      "fecha_creacion": "2025-12-01T17:22:25.194093+00:00"
+    },
+    {
+      "id": "opp_20251201_002",
+      "ranking": 2,
+      "titulo": "Boring Laser Eyes Simulator: Add laser beams to your eyes with your webcam",
+      "descripcion_problema": "Boring Laser Eyes Simulator: Add laser beams to your eyes with your webcam\n\nhttps:&#x2F;&#x2F;winterx.github.io&#x2F;laser-eyes-simulator&#x2F;<p>Needed a break from my main project, so I threw together this Laser Eyes Simulator. It&#x27;s a silly little thing that adds laser beams to your eyes using your webcam. Downloadable images. Hope you enjoy!<p>Gemini 3 Prompt: \n- Use the computer&#x27;s front-facing camera\n- Use `mediapipe` lib to capture facial landmarks\n- Use `threejs`  to apply a LASER EYE effect to the face captured by the camera based on the real-time 3D landmark information provided by `mediapipe`",
+      "sector": "Unknown",
+      "tipo_solucion": "Unknown",
+      "propuesta_app": {
+        "name": "Unknown",
+        "description": "Analysis failed",
+        "key_features": [],
+        "pricing_model": "Unknown",
+        "mvp_estimate": "Unknown"
+      },
+      "usuarios_ideales": {
+        "profile": "Unknown",
+        "market_size": "Unknown",
+        "buying_capacity": "Medium"
+      },
+      "beneficio_economico": {},
+      "puntuacion": {
+        "total": 5.52,
+        "desglose": {
+          "pain": 5.0,
+          "willingness_to_pay": 5.0,
+          "technical_feasibility": 5.0,
+          "ai_synergy": 5.0,
+          "frequency": 6.5,
+          "competition": 6.5
+        }
+      },
+      "tags": [],
+      "fecha_creacion": "2025-12-01T17:22:25.194093+00:00"
+    },
+    {
+      "id": "opp_20251201_003",
+      "ranking": 3,
+      "titulo": "Ask HN: Quality of recent gens of Dell/Lenovo laptops worse than 10 years ago?",
+      "descripcion_problema": "Ask HN: Quality of recent gens of Dell/Lenovo laptops worse than 10 years ago?\n\nI have been purchasing used&#x2F;new Lenovo&#x2F;Dell laptops for the last 7 years, and I have noticed that the build quality of recent models is concerning.<p>Lenovo: Ex-company gave me a NEW Carbon X1 around 2019, and the battery only lasted for less than a year (!). On the other side, I bought a used 2017 470S from the same company, added more RAM, didn&#x27;t touch anything including the SSD, and I&#x27;m still using it in daily coding. I did buy a new battery last month so technically the old batteries lasted for about 7-8 years.<p>Dell: I bought 3 laptops + 1 desktop from Dell Refurbished (So the quality should be consistent). 2 laptops + 1 desktop are older models, and 1 is Precision 5550 (2021) that I bought last December. Everything works fine, except for the 5550, which has issues with battery (dropped from 31% to 4% in a few seconds) and (more deadly) charging port (doesn&#x27;t charge from time to time). Even if I bought it new in 2021, I would be surprised that it only lasted for a bit over 4 years.<p>The other issue is that 5550 uses USB-C ports. I blame on myself not checking it closely before the purchase. I really hate those ports. Why is everyone copying from Mac?<p>What&#x27;s my option? I can&#x27;t really justify the 2,000+ CAD price point for a new laptop, especially if it lasts less than 5 years. I&#x27;d prefer a &quot;low-end&quot; workstation with 32GB memory, but because of the price point I can only afford a 16GB non-workstation one. I don&#x27;t do gaming any more but I still prefer a good integrated video card. I can&#x27;t afford Framework and other Linux laptops because they are expensive and usually don&#x27;t operate in Canada so delivery is expensive too.<p>I did buy a used Macbook Pro M1 16GB (2021) from my current company last month. I haven&#x27;t used it but I&#x27;m confident that the hardware is good. The problem is I don&#x27;t really like the software, so I figured I still need a Linux box.<p>Did you find any sweet spot?",
+      "sector": "Unknown",
+      "tipo_solucion": "Unknown",
+      "propuesta_app": {
+        "name": "Unknown",
+        "description": "Analysis failed",
+        "key_features": [],
+        "pricing_model": "Unknown",
+        "mvp_estimate": "Unknown"
+      },
+      "usuarios_ideales": {
+        "profile": "Unknown",
+        "market_size": "Unknown",
+        "buying_capacity": "Medium"
+      },
+      "beneficio_economico": {},
+      "puntuacion": {
+        "total": 5.52,
+        "desglose": {
+          "pain": 5.0,
+          "willingness_to_pay": 5.0,
+          "technical_feasibility": 5.0,
+          "ai_synergy": 5.0,
+          "frequency": 6.5,
+          "competition": 6.5
+        }
+      },
+      "tags": [],
+      "fecha_creacion": "2025-12-01T17:22:25.194093+00:00"
+    },
+    {
+      "id": "opp_20251201_004",
+      "ranking": 4,
+      "titulo": "Tell HN: It's now impossible to disable all AI features in Firefox 145 (latest)",
+      "descripcion_problema": "Tell HN: It's now impossible to disable all AI features in Firefox 145 (latest)\n\nThere is a long list of about:config settings that allow users disable most of the recently introduced AI chatbot features in Firefox but unfortunately not all:<p><i>AI Context Menu is still displayed if browser.ml.chat.enabled is set to false</i>:<p>https:&#x2F;&#x2F;bugzilla.mozilla.org&#x2F;show_bug.cgi?id=1994785<p><i>&quot;Ask an AI Chatbot&quot; context menu is not hidden, even if Machie Learning is disabled</i>:<p>https:&#x2F;&#x2F;bugzilla.mozilla.org&#x2F;show_bug.cgi?id=1995119<p>Mozilla has pretty much ignored this issue for an entire month.",
+      "sector": "Unknown",
+      "tipo_solucion": "Unknown",
+      "propuesta_app": {
+        "name": "Unknown",
+        "description": "Analysis failed",
+        "key_features": [],
+        "pricing_model": "Unknown",
+        "mvp_estimate": "Unknown"
+      },
+      "usuarios_ideales": {
+        "profile": "Unknown",
+        "market_size": "Unknown",
+        "buying_capacity": "Medium"
+      },
+      "beneficio_economico": {},
+      "puntuacion": {
+        "total": 5.52,
+        "desglose": {
+          "pain": 5.0,
+          "willingness_to_pay": 5.0,
+          "technical_feasibility": 5.0,
+          "ai_synergy": 5.0,
+          "frequency": 6.5,
+          "competition": 6.5
+        }
+      },
+      "tags": [],
+      "fecha_creacion": "2025-12-01T17:22:25.194093+00:00"
+    },
+    {
+      "id": "opp_20251201_005",
+      "ranking": 5,
+      "titulo": "Tell HN: Regrets. Think carefully about how you spend your time",
+      "descripcion_problema": "Tell HN: Regrets. Think carefully about how you spend your time\n\nI&#x27;m writing this 38 hours before I go into a surgery on Monday that I may not survive, and while I am told I have a better than 50&#x2F;50 chance of making it to this time next year, I still feel, though I am too young (early 50s) to deal with these things, that I have wasted too much time. I&#x27;d like to impart some lessons.<p>1. A small number of accomplishments really mean something, but you often won&#x27;t know which ones. I started three companies and two were successes, and even though they comprised more than two decades of my life, I feel like I remember a grand total of six important hours between them. Meanwhile, I still remember the shed I built for my father in the first summer after college. Whatever seems unimportant, you will care about the most.<p>2. The thing you do today, you will probably do tomorrow. I&#x27;ve wasted a lot of time, but most people I know have wasted lots of time, and it&#x27;s because of the tendency to make an exception of the present day, which either excuses laziness or pathological busyness, which is a form of the same thing. &quot;I&#x27;ll do it tomorrow.&quot; But tomorrow it will be today. It&#x27;s always today.<p>3. Ethics matter. I don&#x27;t believe there&#x27;s any life after this one, but I find myself ruminating on what I&#x27;ve done. In 2015, I had a lot of interaction with a startup incubator you know well, and ended up sitting in the discussions and planning around banning and erasing a young programmer we considered a threat to our financial interests, due to his concerns about authoritarianism in technology. In retrospect, he was harmless, but an example had to be made. The decision was made to ban him here, try to get him fired though I don&#x27;t know if we succeeded, and attack him with sockpuppets on Reddit, and it seems to have worked because you don&#x27;t hear his name much.<p>Ten years later, I&#x27;m still stuck thinking about this. Am I the kind of person who does shitty things? I was. Am I still? How would I even know?<p>I don&#x27;t believe that faith is an out, or that you can apologize or donate your way out of past behaviors. You will always be the person who has done what you have done.<p>4. Be kind to animals. There are few joys like having a dog. I always refused when my ex-wife wanted one, and she got one after we separated. For her, it was probably an upgrade.<p>5. I developed a knack for founding companies, but I never learned how to build communities. They aren&#x27;t the same thing. You might have three hundred people at your company and you truly feel like they are your village, but they&#x27;re not. Circumstances will change, and people will move, and in five years, most of them will not remember your name.<p>That&#x27;s probably enough for now. My mind goes between periods of racing and long spells of languid acceptance. All humans end up in the place where I am, and I hope you reach it with fewer regrets than I have.",
+      "sector": "Unknown",
+      "tipo_solucion": "Unknown",
+      "propuesta_app": {
+        "name": "Unknown",
+        "description": "Analysis failed",
+        "key_features": [],
+        "pricing_model": "Unknown",
+        "mvp_estimate": "Unknown"
+      },
+      "usuarios_ideales": {
+        "profile": "Unknown",
+        "market_size": "Unknown",
+        "buying_capacity": "Medium"
+      },
+      "beneficio_economico": {},
+      "puntuacion": {
+        "total": 5.52,
+        "desglose": {
+          "pain": 5.0,
+          "willingness_to_pay": 5.0,
+          "technical_feasibility": 5.0,
+          "ai_synergy": 5.0,
+          "frequency": 6.5,
+          "competition": 6.5
+        }
+      },
+      "tags": [],
+      "fecha_creacion": "2025-12-01T17:22:25.194093+00:00"
+    },
+    {
+      "id": "opp_20251201_006",
+      "ranking": 6,
+      "titulo": "Ask HN: Hearing aid wearers, what's hot?",
+      "descripcion_problema": "Ask HN: Hearing aid wearers, what's hot?\n\nOne of my Phonak Audeo 90’s (RIC) died the other day after 5 years and I’m shopping for new. What’s your go to hearing aid currently if you’ve upgraded recently or have been thinking of doing so?<p>Moderate loss, have worn them for many years, enjoy listening to music and nature, but also need help in meetings and noisy environments.<p>Not worried about cost and wanting to get one more good deal out of work insurance before I retire.",
+      "sector": "Unknown",
+      "tipo_solucion": "Unknown",
+      "propuesta_app": {
+        "name": "Unknown",
+        "description": "Analysis failed",
+        "key_features": [],
+        "pricing_model": "Unknown",
+        "mvp_estimate": "Unknown"
+      },
+      "usuarios_ideales": {
+        "profile": "Unknown",
+        "market_size": "Unknown",
+        "buying_capacity": "Medium"
+      },
+      "beneficio_economico": {},
+      "puntuacion": {
+        "total": 5.52,
+        "desglose": {
+          "pain": 5.0,
+          "willingness_to_pay": 5.0,
+          "technical_feasibility": 5.0,
+          "ai_synergy": 5.0,
+          "frequency": 6.5,
+          "competition": 6.5
+        }
+      },
+      "tags": [],
+      "fecha_creacion": "2025-12-01T17:22:25.194093+00:00"
+    },
+    {
+      "id": "opp_20251201_007",
+      "ranking": 7,
+      "titulo": "I changed my address, and TransferWise in two days will empty my account",
+      "descripcion_problema": "I changed my address, and TransferWise in two days will empty my account\n\nI have a UK one-man company, through which I work as an IT contractor.<p>Recently, I changed the address.<p>TransferWise then KYCed, and requires;<p>1. A bank statement.<p>2. A utility bill.<p>There are no other bank accounts, and it&#x27;s a one-man company; there&#x27;s no rental, no phone bill, no water bill - there is a server bill, for the server the company web-site is on, and this TransferWise have refused.<p>To date, TransferWise stated in their communications that if I could not prove the address, the account would become emit-only; I could not pay money in.<p>I have just received a message from TransferWise that <i>in two days, all funds in the account will be refunded</i>.<p>This is wholly different to what was said before, and I&#x27;m not clear about what it means : refunded?  to whom?  me?  to those who paid in the funds?<p>This message from TransferWise has come Friday evening.  It seems to me if I now move funds out of the account to other bank accounts, this will not occur over the weekend, and so not until Monday morning.<p>The deadline issued by TransferWise expires Sunday evening and I have no idea what then will happen.<p>As it is, I have a personal TransferWise account and transfers to there are immediate, so fortunately I have an emergency escape route.<p>I note that the address I had on file for the last some years also could not be proved, for exactly the same reasons.<p>I will now write to TransferWise customer support.  I know from experience this is futile - there was an earlier occasion, some years ago, when the account was almost closed, because document upload on the TransferWise site was for me at least broken - but I will do so anyway.  I will update the thread here with events.",
+      "sector": "Unknown",
+      "tipo_solucion": "Unknown",
+      "propuesta_app": {
+        "name": "Unknown",
+        "description": "Analysis failed",
+        "key_features": [],
+        "pricing_model": "Unknown",
+        "mvp_estimate": "Unknown"
+      },
+      "usuarios_ideales": {
+        "profile": "Unknown",
+        "market_size": "Unknown",
+        "buying_capacity": "Medium"
+      },
+      "beneficio_economico": {},
+      "puntuacion": {
+        "total": 5.52,
+        "desglose": {
+          "pain": 5.0,
+          "willingness_to_pay": 5.0,
+          "technical_feasibility": 5.0,
+          "ai_synergy": 5.0,
+          "frequency": 6.5,
+          "competition": 6.5
+        }
+      },
+      "tags": [],
+      "fecha_creacion": "2025-12-01T17:22:25.194093+00:00"
+    },
+    {
+      "id": "opp_20251201_008",
+      "ranking": 8,
+      "titulo": "Ask HN: Which cloud provider do you like best and why?",
+      "descripcion_problema": "Ask HN: Which cloud provider do you like best and why?\n\nWhich ones have you tried? Which one do you find is the best and for what purposes? What tools and features make it better than the alternatives?",
+      "sector": "Unknown",
+      "tipo_solucion": "Unknown",
+      "propuesta_app": {
+        "name": "Unknown",
+        "description": "Analysis failed",
+        "key_features": [],
+        "pricing_model": "Unknown",
+        "mvp_estimate": "Unknown"
+      },
+      "usuarios_ideales": {
+        "profile": "Unknown",
+        "market_size": "Unknown",
+        "buying_capacity": "Medium"
+      },
+      "beneficio_economico": {},
+      "puntuacion": {
+        "total": 5.52,
+        "desglose": {
+          "pain": 5.0,
+          "willingness_to_pay": 5.0,
+          "technical_feasibility": 5.0,
+          "ai_synergy": 5.0,
+          "frequency": 6.5,
+          "competition": 6.5
+        }
+      },
+      "tags": [],
+      "fecha_creacion": "2025-12-01T17:22:25.194093+00:00"
+    },
+    {
+      "id": "opp_20251201_009",
+      "ranking": 9,
+      "titulo": "Ask HN: Good resources to learn financial systems engineering?",
+      "descripcion_problema": "Ask HN: Good resources to learn financial systems engineering?\n\nI work mainly in energy market communications and systems that facilitate energy trading, balancing and such. Currently most parties there take minutes to process messages and I think there could be a lot to learn from financial systems engineering. Any good resources you can recommend?",
+      "sector": "Unknown",
+      "tipo_solucion": "Unknown",
+      "propuesta_app": {
+        "name": "Unknown",
+        "description": "Analysis failed",
+        "key_features": [],
+        "pricing_model": "Unknown",
+        "mvp_estimate": "Unknown"
+      },
+      "usuarios_ideales": {
+        "profile": "Unknown",
+        "market_size": "Unknown",
+        "buying_capacity": "Medium"
+      },
+      "beneficio_economico": {},
+      "puntuacion": {
+        "total": 5.52,
+        "desglose": {
+          "pain": 5.0,
+          "willingness_to_pay": 5.0,
+          "technical_feasibility": 5.0,
+          "ai_synergy": 5.0,
+          "frequency": 6.5,
+          "competition": 6.5
+        }
+      },
+      "tags": [],
+      "fecha_creacion": "2025-12-01T17:22:25.194093+00:00"
+    },
+    {
+      "id": "opp_20251201_010",
+      "ranking": 10,
+      "titulo": "Ask HN: Scheduling stateful nodes when MMAP makes memory accounting a lie",
+      "descripcion_problema": "Ask HN: Scheduling stateful nodes when MMAP makes memory accounting a lie\n\nWe’re hitting a classic distributed systems wall and I’m looking for war stories or &quot;least worst&quot; practices.<p>The Context: We maintain a distributed stateful engine (think search&#x2F;analytics). The architecture is standard: a Control Plane (Coordinator) assigns data segments to Worker Nodes. The workload involves heavy use of mmap and lazy loading for large datasets.<p>The Incident: We had a cascading failure where the Coordinator got stuck in a loop, DDOS-ing a specific node.<p>The Signal: Coordinator sees Node A has significantly fewer rows (logical count) than the cluster average. It flags Node A as &quot;underutilized.&quot;<p>The Action: Coordinator attempts to rebalance&#x2F;load new segments onto Node A.<p>The Reality: Node A is actually sitting at 197GB RAM usage (near OOM). The data on it happens to be extremely wide (fat rows, huge blobs), so its logical row count is low, but physical footprint is massive.<p>The Loop: Node A rejects the load (or times out). The Coordinator ignores the backpressure, sees the low row count again, and retries immediately.<p>The Core Problem: We are trying to write a &quot;God Equation&quot; for our load balancer. We started with row_count, which failed. We looked at disk usage, but that doesn&#x27;t correlate with RAM because of lazy loading.<p>Now we are staring at mmap. Because the OS manages the page cache, the application-level RSS is noisy and doesn&#x27;t strictly reflect &quot;required&quot; memory vs &quot;reclaimable&quot; cache.<p>The Question: Attempting to enumerate every resource variable (CPU, IOPS, RSS, Disk, logical count) into a single scoring function feels like an NP-hard trap.<p>How do you handle placement in systems where memory usage is opaque&#x2F;dynamic?<p>Dumb Coordinator, Smart Nodes: Should we just let the Coordinator blind-fire based on disk space, and rely 100% on the Node to return hard 429 Too Many Requests based on local pressure?<p>Cost Estimation: Do we try to build a synthetic &quot;cost model&quot; per segment (e.g., predicted memory footprint) and schedule based on credits, ignoring actual OS metrics?<p>Control Plane Decoupling: Separate storage balancing (disk) from query balancing (mem)?<p>Feels like we are reinventing the wheel. References to papers or similar architecture post-mortems appreciated.",
+      "sector": "Unknown",
+      "tipo_solucion": "Unknown",
+      "propuesta_app": {
+        "name": "Unknown",
+        "description": "Analysis failed",
+        "key_features": [],
+        "pricing_model": "Unknown",
+        "mvp_estimate": "Unknown"
+      },
+      "usuarios_ideales": {
+        "profile": "Unknown",
+        "market_size": "Unknown",
+        "buying_capacity": "Medium"
+      },
+      "beneficio_economico": {},
+      "puntuacion": {
+        "total": 5.52,
+        "desglose": {
+          "pain": 5.0,
+          "willingness_to_pay": 5.0,
+          "technical_feasibility": 5.0,
+          "ai_synergy": 5.0,
+          "frequency": 6.5,
+          "competition": 6.5
+        }
+      },
+      "tags": [],
+      "fecha_creacion": "2025-12-01T17:22:25.194093+00:00"
+    }
+  ],
+  "metadata": {
+    "fuentes_consultadas": 2,
+    "total_problemas_analizados": 11,
+    "tiempo_ejecucion_minutos": 0.2,
+    "modelo_usado": "gemini-1.5-pro"
+  }
+}

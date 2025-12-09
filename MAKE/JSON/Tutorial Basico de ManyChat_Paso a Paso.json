@@ -1,0 +1,75 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Tutorial Basico de ManyChat_Paso a Paso\nWEB ORIGINAL:",
+      "contenido": "Tutorial Basico de ManyChat_Paso a Paso:\nWeb Original:\nTutorial Basico de ManyChat_Paso a Paso:\ngptCHAT\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introduccion y Objetivo del tutorial",
+      "contenido": "Introduccion y Objetivo del tutorial:\nEste tutorial te guia, paso a paso y con una sola accion por paso, para crear tu primera automatizacion sencilla en ManyChat usando Instagram o Facebook Messenger.\nLa idea es que, al finalizar, tengas un pequeno flujo automatico que salude a la persona y le haga una pregunta basica.\nConfigurar un flujo muy sencillo en ManyChat que haga lo siguiente:\n- Recibir automaticamente a un nuevo usuario.\n- Enviarle un mensaje de bienvenida.\n- Hacerle una pregunta cerrada (por ejemplo: ¿Quieres recibir mas informacion?)."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Requisitos previos",
+      "contenido": "Requisitos previos:\n- Tener una cuenta de Facebook o Instagram activa.\n- Tener conexion a internet y un navegador web moderno.\n- Disponer de una cuenta de correo electronico que puedas usar para registrarte en ManyChat."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Acceso a ManyChat y registro de cuenta",
+      "contenido": "Acceso a ManyChat y registro de cuenta:\nPaso 1. Abre tu navegador web habitual (por ejemplo, Chrome o Firefox).\nPaso 2. En la barra de direcciones del navegador, escribe: https://manychat.com y pulsa Enter.\nPaso 3. En la pagina de inicio de ManyChat, haz clic en el boton que diga algo como Sign up o Get started free.\nPaso 4. En la pantalla de registro, elige el metodo de creacion de cuenta (por ejemplo, continuar con Facebook) y haz clic en esa opcion.\nPaso 5. Cuando el navegador te lo pida, inicia sesion con tu cuenta de Facebook o Instagram y acepta los permisos necesarios para conectar ManyChat con tu pagina o perfil."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Acceso a la seccion de Automatizacion",
+      "contenido": "Acceso a la seccion de Automatizacion:\nPaso 6. Una vez completado el inicio de sesion, en el panel principal de ManyChat, localiza el menu lateral y haz clic en la seccion llamada Automation o Flows."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Creacion de un nuevo flujo",
+      "contenido": "Creacion de un nuevo flujo:\nPaso 7. Dentro de la seccion de Flows, haz clic en el boton para crear un nuevo flujo (por ejemplo, + New Flow).\nPaso 8. En la ventana que se abre para crear el flujo, escribe un nombre sencillo para reconocerlo luego (por ejemplo, Bienvenida basica) y confirma con el boton de crear/guardar."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Configuracion del primer mensaje de bienvenida",
+      "contenido": "Configuracion del primer mensaje de bienvenida:\nPaso 9. En el editor visual del flujo, haz clic dentro del primer bloque de mensaje para editar el texto que se enviara automaticamente al usuario.\nPaso 10. Escribe un mensaje de bienvenida corto, por ejemplo: ¡Hola! Gracias por escribirnos 😊 ¿Te gustaria recibir mas informacion? y guarda los cambios del bloque."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Anadiendo botones de respuesta rapida",
+      "contenido": "Anadiendo botones de respuesta rapida:\nPaso 11. Debajo del mensaje de bienvenida, anade un boton de respuesta rapida (quick reply o button) haciendo clic en la opcion correspondiente dentro del editor.\nPaso 12. En la configuracion de ese boton, escribe el texto de la respuesta (por ejemplo: Si, quiero informacion) y asignale la accion de continuar hacia un nuevo bloque de mensaje."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Creacion del mensaje de confirmacion",
+      "contenido": "Creacion del mensaje de confirmacion:\nPaso 13. Crea el nuevo bloque de mensaje al que apunta el boton y escribe un texto que confirme la eleccion del usuario (por ejemplo: Perfecto, ahora te enviare mas detalles.) y guarda el bloque.\nPaso 14. Revisa la conexion entre los bloques en el editor (flechas o lineas entre los mensajes) para confirmar que el flujo esta enlazado desde el mensaje de bienvenida hasta la respuesta del boton."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Publicacion y activacion del flujo",
+      "contenido": "Publicacion y activacion del flujo:\nPaso 15. Haz clic en el boton de Publish o Guardar/Activar del flujo para que la automatizacion se guarde y quede lista para usarse."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Prueba del flujo creado",
+      "contenido": "Prueba del flujo creado:\nPaso 16. En el panel principal de ManyChat, localiza la opcion para hacer una prueba (por ejemplo, Preview o Test) y haz clic para enviarte el flujo a ti mismo en Messenger o Instagram.\nPaso 17. Ve a tu aplicacion de Messenger o Instagram en el movil, abre la conversacion con tu pagina o perfil y comprueba que recibes el mensaje de bienvenida del flujo recien creado.\nPaso 18. Responde usando el boton que has configurado (Si, quiero informacion) y verifica que se muestra el siguiente mensaje que escribiste en el segundo bloque."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Revision y ajustes finales",
+      "contenido": "Revision y ajustes finales:\nPaso 19. Si algo no funciona como esperabas, vuelve al editor de Flows, revisa los textos, los botones y las conexiones, corrige lo necesario y vuelve a pulsar Publish.\nPaso 20. Cuando el flujo funcione correctamente en tus pruebas, dejalo publicado para que cualquier usuario nuevo que interactue (segun la configuracion elegida) reciba automaticamente este mensaje de bienvenida."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Sugerencia final",
+      "contenido": "Sugerencia final:\nCuando te sientas comodo con este flujo basico, puedes ir anadiendo mas bloques, preguntas y caminos diferentes segun la respuesta del usuario. La clave es avanzar poco a poco, probando cada cambio antes de publicarlo."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\nPara validar la informacion tecnica de este tutorial sobre ManyChat, he consultado las fuentes oficiales de la plataforma.\n\nResumen de puntos tecnicos validados:\nManyChat es una plataforma oficial de automatizacion de conversaciones que permite crear chatbots para Facebook Messenger, Instagram y WhatsApp sin necesidad de programacion. La plataforma ofrece un plan gratuito que permite hasta mil contactos y funcionalidades basicas de automatizacion, junto con un editor visual de flujos tipo drag-and-drop.\n\nLos flujos de automatizacion (Flows) en ManyChat permiten crear secuencias de mensajes conectados mediante bloques visuales, botones de respuesta rapida (Quick Replies) y condiciones logicas. La conexion con Facebook e Instagram requiere permisos especificos de la pagina de negocios y cumplir con las politicas de Meta para aplicaciones de mensajeria.\n\nEnlaces directos a documentacion oficial:\n- Centro de ayuda oficial de ManyChat: https://help.manychat.com\n- Guia de inicio rapido: https://manychat.com/tutorials/getting-started\n- Documentacion sobre Flows y automatizaciones: https://help.manychat.com/en/collections/building-your-automation\n- Politicas de uso de Meta para chatbots: https://developers.facebook.com/docs/messenger-platform/policy/policy-overview\n\nReferencias a paginas de soporte oficiales:\n- Academia de ManyChat con tutoriales en video: https://manychat.com/academy\n- Blog oficial con casos de uso: https://manychat.com/blog\n- Foro de la comunidad ManyChat: https://community.manychat.com\n- Soporte tecnico directo: https://manychat.com/support\n\n\nTITULO_VIDEO =    Como Conectar CUALQUIER API a Makecom\nURL_WEB_YOUTUBE = https://youtu.be/d1Y0Njcv6J8?si=1Rg7Bp97P5G6hTgo\nAUTOR = PRO-LIMP AUTOMATIZACION\nTELEFONO = +34 636832005"
+    }
+  ]
+}

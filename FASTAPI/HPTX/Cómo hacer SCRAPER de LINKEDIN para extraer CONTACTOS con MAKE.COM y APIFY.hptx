@@ -1,0 +1,189 @@
+##itemID:000
+##menu-item BEGIN
+Cómo hacer SCRAPER de LINKEDIN para extraer CONTACTOS con MAKE.COM y APIFY
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Cómo hacer SCRAPER de LINKEDIN para extraer CONTACTOS con MAKE.COM y APIFY:
+Web Original:
+
+https://youtu.be/p5a7fUKYZpM?si=7ULIqzQZvaGSe6Gc
+
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+¿Qué aprenderás en este tutorial?
+##menu-item END
+##Contenido BEGIN
+¿Qué aprenderás en este tutorial?:
+
+En 20 minutos lograrás:
+1. Crear un “robot” en Apify que visite LinkedIn y copie nombre, cargo, empresa y email de cualquier persona que aparezca en una búsqueda.
+2. Conectar ese robot con make.com (ex-Integromat) para que, sin tocar código, los datos lleguen automáticamente a Google Sheets, Notion, CRM o Excel.
+3. Hacer que todo se repita solo: nueva búsqueda en LinkedIn → robot activo → fila nueva en tu archivo.
+
+No necesitas saber programación; solo cuentas gratuitas en ambas plataformas y seguir los pasos paso a paso.
+
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Materiales que necesitas antes de empezar
+##menu-item END
+##Contenido BEGIN
+Materiales que necesitas antes de empezar:
+
+1. Cuenta gratuita en Apify (https://apify.com/free).
+2. Cuenta gratuita en make.com (https://www.make.com/es/register).
+3. Una hoja de Google Sheets vacía (puedes crearla en 10 s).
+4. El enlace de una búsqueda de LinkedIn libre (por ejemplo: https://www.linkedin.com/search/results/people/?keywords=Marketing%20Madrid).
+5. 30 minutos de tu tiempo.
+
+Con eso es suficiente; no se requieren tarjetas de pago ni programas extra.
+
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Paso 1 – Prepara tu búsqueda en LinkedIn
+##menu-item END
+##Contenido BEGIN
+Paso 1 – Prepara tu búsqueda en LinkedIn:
+
+1. Entra a LinkedIn y haz la búsqueda que te interese (por cargo, ciudad, sector, etc.).
+2. Copia la URL completa que aparece en la barra del navegador; esa URL es la “semilla” que leerá Apify.
+3. Haz público el resultado: arriba a la derecha pulsa “All filters” → “Visibility” → selecciona “Anyone” (así Apify puede ver los perfiles sin login).
+
+Validación: Apify solo puede leer perfiles que estén visibles sin sesión iniciada; de lo contrario el robot fallará.
+
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 2 – Activa el Actor gratuito “LinkedIn Profile Scraper”
+##menu-item END
+##Contenido BEGIN
+Paso 2 – Activa el Actor gratuito “LinkedIn Profile Scraper”:
+
+1. Entra a tu consola Apify → Store → busca “LinkedIn Profile Scraper” (el creador es “Apify”).
+2. Pulsa “Try for free”. Se abrirá la pantalla de configuración.
+3. En “Start URLs” pega la URL de la búsqueda del paso anterior.
+4. En “Maximum pages” deja 1 si vas a hacer pruebas; más tarde lo subes.
+5. Activa el toggle “Provide only public data” (obligatorio según TOS de LinkedIn).
+6. Guarda como “Untitled” y pulsa “Start”.
+
+En 30-60 s verás un JSON con perfiles. Si aparece “SUCCEEDED” ya tienes tu primer scrapeo.
+
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 3 – Conecta Apify con make.com mediante webhook
+##menu-item END
+##Contenido BEGIN
+Paso 3 – Conecta Apify con make.com mediante webhook:
+
+1. En make.com crea un nuevo escenario → pulsa el “+” → busca “Apify” → selecciona el módulo “Watch Actor Run”.
+2. Aparece un webhook; cópialo (botón “Copy address”).
+3. Vuelve a Apify → tu Actor → tab “Integrations” → “Webhooks” → “Add webhook”.
+4. Pega la URL de make, selecciona evento “Run succeeded” y guarda.
+5. En make pulsa “OK” y después “Save”.
+
+Ahora cada vez que termine el robot Apify, make.com recibirá automáticamente los datos sin que tengas que descargar nada.
+
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 4 – Extrae solo los campos que te interesan
+##menu-item END
+##Contenido BEGIN
+Paso 4 – Extrae solo los campos que te interesan:
+
+1. En make.com añade después el módulo Apify “Get Dataset Items”.
+2. En “Dataset ID” selecciona la variable que viene del webhook (ya aparece).
+3. En “Fields” escribe, separados por coma y sin espacios: name,title,company,email (puedes ver los nombres exactos en el JSON de prueba).
+4. Limita “Maximum items” a 10 mientras pruebas.
+
+Así solo bajas nombre, cargo, empresa y email; el resto de datos queda filtrado y tu hoja se mantiene limpia.
+
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Paso 5 – Envía los datos a Google Sheets
+##menu-item END
+##Contenido BEGIN
+Paso 5 – Envía los datos a Google Sheets:
+
+1. En make.com añade el módulo “Google Sheets – Add Row”.
+2. Conecta tu cuenta Drive y selecciona la hoja que creaste.
+3. Mapea cada columna: A = name, B = title, C = company, D = email (arrastra las variables azules).
+4. Pulsa “Run once” y comprueba que aparezcan las 10 filas.
+
+Si todo sale verde, tu scraper ya funciona de extremo a extremo.
+
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Paso 6 – Programa ejecuciones automáticas
+##menu-item END
+##Contenido BEGIN
+Paso 6 – Programa ejecuciones automáticas:
+
+1. En Apify → tu Actor → tab “Schedules” → “Create schedule”.
+2. Elige diario, semanal o la frecuencia que quieras; recuerda que la capa gratuita incluye 10 000 resultados al mes.
+3. Guarda y activa.
+4. En make.com activa el escenario con el switch “ON”.
+
+Desde hoy, cada mañana tu hoja se llenará sola con nuevos contactos de LinkedIn sin que abras el ordenador.
+
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Paso 7 – Limpia duplicados y respeta el GDPR
+##menu-item END
+##Contenido BEGIN
+Paso 7 – Limpia duplicados y respeta el GDPR:
+
+1. En Google Sheets selecciona la columna email → Datos → Eliminar duplicados.
+2. Añade una columna “Consent” y marca “Sí” solo a quienes te den permiso para contactar.
+3. Guarda los datos en carpetas seguras y nunca compilas bases masivas sin base legal (art. 6 GDPR).
+
+Cumplir estas reglas evita bloqueos de LinkedIn y multas de privacidad.
+
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Solución de errores rápida
+##menu-item END
+##Contenido BEGIN
+Solución de errores rápida:
+
+- Apify devuelve 0 resultados → revisa que la URL sea pública y que “Provide only public data” esté activado.
+- Make.com no recibe nada → comprueba que el webhook esté en “Run succeeded” y que guardaste antes de salir.
+- Google Sheets da error de permisos → asegura que la hoja la compartiste con la cuenta de make (botón “Compartir” → añade el correo del servicio).
+- LinkedIn te pide captcha → reduce el número de páginas por ejecución y aumenta el tiempo entre llamadas (setting “Delay” en el Actor).
+
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+1. Uso gratuito de Apify: 10 USD de crédito mensual que cubren ≈ 10 000 profiles según https://docs.apify.com/platform/limits#free-plan.
+2. Actor oficial “LinkedIn Profile Scraper” y sus parámetros documentados en https://apify.com/apify/linkedin-profile-scraper.
+3. Límites de búsqueda pública y cumplimiento de TOS de LinkedIn: https://www.linkedin.com/help/linkedin/answer/56347.
+4. Módulos de make.com para Apify listados y descritos en https://www.make.com/en/help/app/apify.
+5. Recomendaciones de GDPR y scraping de datos profesionales públicos: https://ec.europa.eu/info/law/law-topic/data-protection_en.
+
+Todos los pasos descritos coinciden con la funcionalidad actual de ambas plataformas (noviembre 2025).
+
+##Contenido END

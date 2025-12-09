@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Cargador Universal HIPERTEX (.hptx / .json)</title>
+<style>
+  :root{--bg:#0f172a;--panel:#111827;--fg:#e5e7eb;--muted:#94a3b8;--accent:#38bdf8}
+  html,body{height:100%;margin:0;background:#0b1220;color:var(--fg);font:15px/1.5 system-ui,Segoe UI,Roboto}
+  header{display:flex;gap:.75rem;align-items:center;padding:.75rem 1rem;background:var(--panel);position:sticky;top:0;z-index:10}
+  header h1{font-size:16px;margin:0;color:var(--muted);font-weight:600}
+  .uploader{margin-left:auto}
+  #wrap{display:grid;grid-template-columns:280px 1fr;height:calc(100% - 56px)}
+  aside{border-right:1px solid #1f2937;background:#0e1628;overflow:auto}
+  main{overflow:auto}
+  .sidebar{padding:1rem}
+  .sidebar h2{font-size:14px;margin:.25rem 0 1rem;color:var(--accent)}
+  .nav{display:flex;flex-direction:column;gap:.25rem}
+  .nav a{color:var(--fg);text-decoration:none;padding:.5rem .6rem;border-radius:.5rem}
+  .nav a:hover{background:#0b2236}
+  .card{margin:1rem;padding:1rem;border:1px solid #1f2937;border-radius:10px;background:#0e1628}
+  .title{font-size:20px;margin:0 0 .5rem}
+  pre{white-space:pre-wrap;word-break:break-word;background:#0b1220;border:1px solid #1f2937;border-radius:8px;padding:1rem;overflow:auto}
+  .hint{color:var(--muted);font-size:13px;margin-top:1rem}
+  input[type=file]{color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <h1>HIPERTEX — Cargador Universal</h1>
+  <div class="uploader">
+    <input id="file" type="file" accept=".hptx,.txt,.json"/>
+  </div>
+</header>
+
+<div id="wrap">
+  <aside>
+    <div class="sidebar">
+      <h2>Menú</h2>
+      <div id="menu" class="nav"></div>
+      <div class="hint">• Acepta .hptx/.txt o .json<br/>• El contenido se conserva 1:1.</div>
+    </div>
+  </aside>
+  <main id="content"></main>
+</div>
+
+<script>
+const $menu = document.getElementById('menu');
+const $content = document.getElementById('content');
+const $file = document.getElementById('file');
+
+// --- Parsers ---
+const META_RE = /##HIPERTEX-META BEGIN([\s\S]*?)##HIPERTEX-META END/m;
+const ITEM_RE = /^##itemID:(.+)$/gm;
+const MENU_RE = /##menu-item BEGIN([\s\S]*?)##menu-item END/gm;
+const CONT_RE = /##Contenido BEGIN([\s\S]*?)##Contenido END/gm;
+
+function parseHPTX(src){
+  // normalizar saltos y borrar BOM si viniera
+  src = String(src).replace(/^\uFEFF/,'').replace(/\r\n?/g,'\n');
+
+  // quitar meta (no usada en render por ahora)
+  const metaMatch = src.match(META_RE);
+  if (metaMatch) {
+    src = src.slice(0, metaMatch.index) + src.slice(metaMatch.index + metaMatch[0].length);
+  }
+
+  const items = [];
+  const matches = [...src.matchAll(ITEM_RE)];
+  for (let i=0; i<matches.length; i++){
+    const start = matches[i].index;
+    const end = (i+1<matches.length) ? matches[i+1].index : src.length;
+    const idRaw = matches[i][1].trim();
+    const block = src.slice(start, end);
+
+    const menuM = MENU_RE.exec(block); // ojo: /g — usamos solo el 1º
+    let title = null;
+    if (menuM) title = trimEdges(menuM[1]);
+
+    MENU_RE.lastIndex = 0; // reset por seguridad
+    const conts = [...block.matchAll(CONT_RE)].map(m=>trimEdges(m[1]));
+    const contenido = conts.length ? conts.join('\n') : "";
+
+    items.push({
+      itemID_raw: idRaw,
+      itemID: sanitizeId(idRaw),
+      menu_item: title,
+      contenido
+    });
+  }
+  return { meta:{}, items };
+}
+
+function trimEdges(s){ return String(s).replace(/^\n|\n$/g,''); }
+function sanitizeId(s){ return String(s).trim().replace(/[^\w\-]+/g,'_'); }
+function slug(s){ return String(s||'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,'-').replace(/^-+|-+$/g,''); }
+
+// --- Render ---
+function render(data){
+  const items = (data.items||[]).map((it,i)=>({
+    id: it.itemID || it.itemID_raw || String(i+1).padStart(2,'0'),
+    title: it.menu_item || null,
+    body: it.contenido || ""
+  }));
+
+  // Menú
+  $menu.innerHTML = "";
+  items.filter(x=>x.title).forEach(x=>{
+    const a = document.createElement('a');
+    a.textContent = x.title;
+    a.href = "#item-"+slug(x.id);
+    $menu.appendChild(a);
+  });
+
+  // Contenido
+  $content.innerHTML = "";
+  items.forEach(x=>{
+    const card = document.createElement('section');
+    card.className = "card";
+    card.id = "item-"+slug(x.id);
+
+    const h = document.createElement('h3');
+    h.className = "title";
+    h.textContent = x.title || "Sección"; // 🔒 sin itemID visible
+
+    const pre = document.createElement('pre');
+    pre.textContent = x.body || "";
+
+    card.appendChild(h);
+    card.appendChild(pre);
+    $content.appendChild(card);
+  });
+}
+
+// --- Loader ---
+$file.addEventListener('change', async e=>{
+  const f = e.target.files[0];
+  if (!f) return;
+  const name = f.name.toLowerCase();
+  const text = await f.text();
+
+  try{
+    if (name.endsWith('.json')) {
+      const data = JSON.parse(text);
+      if (!data || !Array.isArray(data.items)) throw new Error("JSON no tiene 'items'.");
+      render(data);
+    } else if (name.endsWith('.hptx') || name.endsWith('.txt')) {
+      const data = parseHPTX(text);
+      render(data);
+    } else {
+      alert("Formato no soportado. Usa .hptx, .txt o .json");
+    }
+  } catch(err){
+    console.error(err);
+    alert("No se pudo cargar el archivo: " + err.message);
+  }
+});
+</script>
+</body>
+</html>

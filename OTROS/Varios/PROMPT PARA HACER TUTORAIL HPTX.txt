@@ -1,0 +1,49 @@
+Escribe un tutorial completo con el siguiente título y estructura, respetando EXACTAMENTE los tags y el formato que se indica.
+
+##itemID: 000
+##Contenido BEGIN
+How To Connect Make.com to Google Drive (FULL 2025 Step-by-Step Guide):
+
+https://youtu.be/AiUT9cOCmVU?si=JYVPWTmOAQdpo8AT
+##Contenido END
+
+### REGLAS OBLIGATORIAS:
+
+1. **Lenguaje:** Explicación clara, simple y directa, comprensible para cualquier usuario sin conocimientos técnicos.  
+2. **Validación:** Cada paso debe estar validado con la **documentación técnica oficial disponible en las fuentes**.  
+
+3. **Estructura:** Mantén SIEMPRE la estructura modular con los tags que siguen este modelo:
+
+##itemID:000
+##menu-item BEGIN
+[Título o descripción del paso]
+##menu-item END
+##Contenido BEGIN
+[Título o descripción del paso]:
+
+[Desarrollo detallado del paso]
+##Contenido END
+
+4. **Título principal del documento:**  
+   Debe conservarse exactamente como se muestra a continuación:
+
+##itemID:000
+##menu-item BEGIN
+How To Connect Make.com to Google Drive (FULL 2025 Step-by-Step Guide)
+(WEB ORIGINAL):
+##menu-item END
+##Contenido BEGIN
+Web Original:
+
+https://youtu.be/AiUT9cOCmVU?si=JYVPWTmOAQdpo8AT
+
+##Contenido END
+
+5. **Sección final obligatoria:**  
+   Agrega una sección titulada **"VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES"** al final del documento, con un resumen de los puntos validados y enlaces directos a las fuentes oficiales.
+6. **itemID comienza en 000 siempre 
+7. **Entre ##Contenido END y 
+##itemID:  tiene que haber siempre una línea en blanco para mejor legibilidad.
+
+### SALIDA ESPERADA:
+Texto final del tutorial **en español**, formateado con los tags indicados, listo para ser procesado automáticamente sin pérdida de estructura.

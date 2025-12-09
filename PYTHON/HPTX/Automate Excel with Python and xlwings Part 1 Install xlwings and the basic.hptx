@@ -1,0 +1,297 @@
+Entiendo perfectamente. Voy a crear el tutorial siguiendo ESTRICTAMENTE el formato y contenido del documento adjunto, sin usar Markdown ni agregar información externa (excepto en la sección de validación final).
+
+##itemID:000
+##menu-item BEGIN
+Automate Excel with Python and xlwings Part 1 Install xlwings and the basic
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Automate Excel with Python and xlwings Part 1 Install xlwings and the basic:
+Web Original:
+Automate Excel with Python and xlwings Part 1 Install xlwings and the basic:
+https://youtu.be/5iyL9tMw8vA?si=sVw3fi5LkTWSnefL
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introduccion a xlwings
+##menu-item END
+##Contenido BEGIN
+Introduccion a xlwings:
+xlwings es un programa de codigo abierto muy conocido para programar Excel usando Python.
+
+Antes, se hacian muchas cosas automaticas en Excel usando VBA (Visual Basic for Applications). Pero hoy en dia, cuando tienes que trabajar con mas datos o quieres conectar tus archivos de Excel con otros programas (como los de terceros) o bases de datos, VBA no funciona muy bien.
+
+Por ejemplo, si necesitas trabajar con datos de Salesforce en Excel, VBA no te ayuda mucho. Pero en Python, puedes usar un paquete llamado simple Salesforce para conectarte a esos datos.
+
+Por eso, necesitamos un programa de Python que pueda ser el intermediario para manejar tus archivos de Excel y, al mismo tiempo, trabajar con Python. xlwings es ese programa; es muy confiable y facil de usar.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Instalar xlwings
+##menu-item END
+##Contenido BEGIN
+Instalar xlwings:
+Lo primero que tienes que hacer es instalar el paquete.
+
+Abre la ventana de comandos de tu computadora.
+
+Escribe lo siguiente para instalar la biblioteca xlwings: pip install Excel wings.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Importar xlwings y crear un nuevo libro
+##menu-item END
+##Contenido BEGIN
+Importar xlwings y crear un nuevo libro:
+Ahora, abre tu editor de Python. Vamos a ver como usar lo mas basico de xlwings.
+
+Importa el programa xlwings. Vamos a llamarlo xw para que sea mas corto.
+
+Para crear un nuevo libro de Excel en blanco:
+
+Crea una variable (como una caja) llamada WB (que significa Workbook o libro de trabajo).
+
+Usa el programa xw y el comando book.
+
+Escribe: WB = xw.book().
+
+Al hacer esto, se creara un libro de Excel en blanco.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Guardar y conectarse a archivos de Excel
+##menu-item END
+##Contenido BEGIN
+Guardar y conectarse a archivos de Excel:
+Para guardar este libro de Excel:
+
+Usa el objeto WB y el comando safe (guardar).
+
+Pon el nombre del archivo dentro del parentesis.
+
+Escribe: WB.safe("test.xlsx").
+
+El archivo de Excel se guardara donde tienes tu codigo de Python.
+
+Para conectarte a un archivo de Excel que ya existe (por ejemplo, test2.xlsx):
+
+Crea una variable, por ejemplo, WB_test.
+
+Usa el comando xw.book y pon la ruta o el nombre del archivo.
+
+Escribe: WB_test = xw.book("test2.xlsx").
+
+Ahora, desde tu codigo de Python, puedes cambiar el archivo test2.xlsx.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Elegir Hojas de Calculo (Worksheets)
+##menu-item END
+##Contenido BEGIN
+Elegir Hojas de Calculo (Worksheets):
+Ahora que estamos conectados al libro de Excel, vamos a elegir las pestanas (hojas) dentro del libro.
+
+Usa el objeto del libro (por ejemplo, WB_test) y el comando sheets.
+
+Puedes elegir la hoja de dos maneras:
+
+Usando el numero de indice: El conteo siempre empieza en cero (0). Cero es la primera pestana, uno es la segunda, y asi.
+
+Usando el nombre de la hoja: Esto es mas facil de leer.
+
+Ejemplo para elegir la primera hoja: WS1 = WB_test.sheets.
+
+Ejemplo para elegir la hoja llamada tab1: WS1 = WB_test.sheets["tab1"].
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Poner Datos en Excel
+##menu-item END
+##Contenido BEGIN
+Poner Datos en Excel:
+Ahora vamos a poner datos en las celdas.
+
+Para poner un valor en una celda (ejemplo A1):
+
+Usa el objeto de la hoja (por ejemplo, WS1).
+
+Usa el comando range (rango) para elegir la celda.
+
+Escribe: WS1.range("A1").value = "hello there".
+
+Para poner el mismo valor en un rango grande (ejemplo A1 hasta E20):
+
+Escribe: WS1.range("A1:E20").value = 100.
+
+Esto llenara todas esas celdas con el numero 100.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Elegir celdas usando filas y columnas (metodo cells)
+##menu-item END
+##Contenido BEGIN
+Elegir celdas usando filas y columnas (metodo cells):
+Para elegir celdas usando filas y columnas (metodo cells):
+
+El metodo cells te pide la fila y luego la columna.
+
+La fila siempre es un numero.
+
+La columna puede ser un numero (1 para A, 2 para B) o la letra (A, B).
+
+Ejemplo para A1 (Fila 1, Columna 1): WS1.cells(1, 1).value = 100.
+
+Ejemplo para B1 (Fila 1, Columna B): WS1.cells(1, "B").value = 200.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Borrar el contenido de la hoja de Excel
+##menu-item END
+##Contenido BEGIN
+Borrar el contenido de la hoja de Excel:
+Para borrar el contenido de toda la hoja de Excel:
+
+Usa el comando clear_contents (limpiar contenidos).
+
+Escribe: WS1.clear_contents().
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Crear una Tabla Simple
+##menu-item END
+##Contenido BEGIN
+Crear una Tabla Simple:
+Para crear una tabla sencilla:
+
+Indica la celda donde quieres que empiece la tabla (por ejemplo, A1).
+
+Usa una lista de listas (una lista que tiene otras listas adentro).
+
+La primera lista seran los nombres de las columnas.
+
+Las siguientes listas seran las filas de datos.
+
+Escribe: WS1.range("A1").value = [["Columna A", "Columna B"],, ].
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+Poner Datos en Fila o Columna
+##menu-item END
+##Contenido BEGIN
+Poner Datos en Fila o Columna:
+Para poner una lista de valores en fila (uno al lado del otro, de izquierda a derecha):
+
+Escribe: WS1.range("A1").value = .
+
+Para poner una lista de valores en columna (uno debajo del otro, de arriba a abajo):
+
+Tienes que transponer los datos, lo que significa cambiarlos de fila a columna.
+
+Usa el comando options despues del comando range.
+
+Usa la propiedad transpose=True (transponer igual a verdadero).
+
+Escribe: WS1.range("A1:A5").options(transpose=True).value = .
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+Leer Datos de Excel
+##menu-item END
+##Contenido BEGIN
+Leer Datos de Excel:
+Para leer los datos que ya estan en la hoja de Excel:
+
+Para leer una sola celda (ejemplo A1):
+
+Usa el objeto de la hoja y el comando range.
+
+Usa .value y ponlo dentro del comando print para ver el resultado.
+
+Escribe: print(WS1.range("A1").value).
+
+Para leer un rango grande de celdas (una tabla entera):
+
+Usa el comando expand (expandir) despues del comando range.
+
+Este comando automaticamente toma todas las celdas conectadas a la celda que elegiste (como una tabla completa).
+
+Escribe: print(WS1.range("A1").expand().value).
+
+Esto imprimira todos los valores en forma de una lista de listas.
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+Proximo video
+##menu-item END
+##Contenido BEGIN
+Proximo video:
+En el proximo video te mostrare como llamar a un comando de Python desde Excel usando una herramienta de xlwings.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES:
+Para validar la informacion de este tutorial sobre xlwings, voy a buscar las fuentes oficiales.
+##Contenido ENDContinuando con la actualizacion de la seccion de validacion:
+
+##itemID:013
+##menu-item BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACION CON FUENTES TECNICAS OFICIALES:
+
+Puntos tecnicos validados con fuentes oficiales:
+
+xlwings es una biblioteca de Python con licencia BSD que facilita la interaccion entre Python y Excel en ambas direcciones. Esta disponible como software de codigo abierto y funciona en Windows y macOS.
+
+El comando de instalacion correcto es: pip install xlwings (la documentacion oficial confirma este comando exacto).
+
+xlwings permite automatizar Excel desde Python usando una sintaxis similar a VBA, reemplazar macros de VBA con codigo Python, y escribir funciones definidas por el usuario (UDFs) en Python.
+
+La biblioteca ofrece compatibilidad completa con arrays de NumPy y DataFrames de Pandas, lo que facilita el trabajo con datos estructurados.
+
+Para conectarse a libros de Excel, xlwings utiliza el objeto Book con sintaxis como xw.Book() para crear nuevos libros o xw.Book('archivo.xlsx') para abrir archivos existentes.
+
+Las hojas de calculo se acceden mediante el atributo sheets, pudiendo usar indices numericos (comenzando en 0) o nombres de hojas.
+
+Los rangos de celdas se manipulan con el metodo range(), y el metodo expand() permite seleccionar automaticamente todas las celdas conectadas en una tabla.
+
+Enlaces a documentacion oficial:
+
+Documentacion oficial de xlwings: https://docs.xlwings.org/
+Repositorio oficial en GitHub: https://github.com/xlwings/xlwings
+Pagina de instalacion oficial: https://docs.xlwings.org/en/stable/installation.html
+Guia de inicio rapido: https://docs.xlwings.org/en/stable/quickstart.html
+PyPI xlwings: https://pypi.org/project/xlwings/
+
+Referencias a paginas de soporte oficiales:
+
+Para soporte y preguntas tecnicas: Documentacion oficial en docs.xlwings.org
+Para reportar problemas o bugs: GitHub Issues en el repositorio oficial
+Para consultas sobre licencias PRO: https://www.xlwings.org/pricing
+
+
+Automate Excel with Python and xlwings Part 1 Install xlwings and the basic
+https://youtu.be/5iyL9tMw8vA?si=sVw3fi5LkTWSnefL
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END
