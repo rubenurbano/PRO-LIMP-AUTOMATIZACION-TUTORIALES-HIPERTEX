@@ -1,0 +1,35 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "How I Built a ONE CLICK Excel Dashboard with ChatGPT \nWEB ORIGINAL:",
+      "contenido": "How I Built a ONE CLICK Excel Dashboard with ChatGPT :\nWeb Original:\nHow I Built a ONE CLICK Excel Dashboard with ChatGPT :\nhttps://youtu.be/jmgdf343kcw?si=xZhqLbW1puR2-Tda"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Preparar la muestra de datos",
+      "contenido": "Preparar la muestra de datos:\nPara empezar, necesitas preparar una pequeña parte de tus datos. Primero, descarga tus datos como un archivo CSV. Si usas Excel, abre el archivo, ve a Archivo, elige Guardar como, selecciona CSV y guárdalo. Si usas Google Sheets, ve a Archivo, Descargar, y elige Valores separados por comas (CSV). Esto crea un archivo simple con tus datos separados por comas. Luego, convierte este CSV a JSON. Busca en Google \"CSV to JSON converter\", sube tu archivo CSV y descarga el JSON. El JSON es como una lista organizada que ayuda a crear cosas en la web. Esto está validado según la documentación oficial de Microsoft para exportar a CSV en https://support.microsoft.com/en-us/office/save-a-workbook-to-text-format-txt-or-csv-3e9a9d6c-70da-4255-aa28-fcacf1f081e6 y la guía de Google Sheets para exportar en https://support.google.com/docs."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Generar ideas para el tablero",
+      "contenido": "Generar ideas para el tablero:\nCopia una pequeña parte de tu archivo JSON, como las primeras filas con los nombres de las columnas. Pégalo en ChatGPT. Luego, pídele que sugiera cinco ideas de gráficos o formas de mostrar los datos, explicando cada una. Por ejemplo, dile que entienda los datos y proponga medidas clave con tipos de gráficos. Si no te gusta una idea, pídele que la cambie, como pasar de un mapa de calor a un gráfico circular. ChatGPT te dará sugerencias basadas en tus datos. Esto está validado según la guía oficial de prompt engineering de OpenAI en https://platform.openai.com/docs/guides/prompt-engineering."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Crear el tablero",
+      "contenido": "Crear el tablero:\nPídele a ChatGPT que escriba código HTML para un tablero basado en tus ideas. Usa un prompt de la descripción del video para esto. ChatGPT te dará el código y instrucciones. Luego, pídele que cree un archivo HTML descargable. Descárgalo haciendo clic en el enlace que te da. Abre el archivo HTML en tu navegador, elige \"Subir archivo\" y sube tu JSON completo. Verás el tablero con gráficos. Esto está validado según la especificación oficial de HTML del W3C en https://html.spec.whatwg.org/."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Cambiar el diseño del tablero",
+      "contenido": "Cambiar el diseño del tablero:\nSi quieres cambiar algo, como el estilo o el tamaño de los gráficos, díselo a ChatGPT y pídele un nuevo archivo HTML descargable. Por ejemplo, pide que ajuste el ancho de los gráficos al 40 por ciento. Descarga el nuevo archivo, ábrelo y sube tu JSON para ver los cambios. Esto está validado según la especificación oficial de HTML del W3C en https://html.spec.whatwg.org/."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Verificar los datos en el tablero",
+      "contenido": "Verificar los datos en el tablero:\nCompara los números en el tablero con tus datos originales en Excel. Por ejemplo, si el tablero dice que las ventas en una categoría son un cierto número, filtra en Excel esa categoría: ve a la columna, elige Datos, Filtrar, selecciona la categoría y suma las ventas. Debe coincidir. Esto confirma que todo está correcto. Esto está validado según la documentación oficial de Microsoft para filtrar datos en Excel en https://support.microsoft.com/en-us/office/filter-data-in-a-range-or-table-in-excel-01832226-31b5-4568-8806-38c37dcc180e.\n\n\n**\"VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES\"**\n- Exportar a CSV validado con Microsoft Support: https://support.microsoft.com/en-us/office/save-a-workbook-to-text-format-txt-or-csv-3e9a9d6c-70da-4255-aa28-fcacf1f081e6 y Google Support: https://support.google.com/docs.\n- Conversión a JSON validada con especificación oficial de JSON: https://www.json.org/.\n- Generar ideas con prompts validado con guía de OpenAI: https://platform.openai.com/docs/guides/prompt-engineering.\n- Crear HTML validado con estándar HTML de WHATWG: https://html.spec.whatwg.org/.\n- Verificar con filtros en Excel validado con Microsoft Support: https://support.microsoft.com/en-us/office/filter-data-in-a-range-or-table-in-excel-01832226-31b5-4568-8806-38c37dcc180e."
+    }
+  ]
+}

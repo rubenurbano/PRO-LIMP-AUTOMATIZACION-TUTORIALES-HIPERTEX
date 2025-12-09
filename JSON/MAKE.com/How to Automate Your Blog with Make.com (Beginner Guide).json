@@ -1,0 +1,40 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "How to Automate Your Blog with Make.com (Beginner Guide)\nWEB ORIGINAL:",
+      "contenido": "How to Automate Your Blog with Make.com (Beginner Guide)\nWeb Original:\n\nhttps://youtu.be/ui_92ouGqJU?si=Y0ANjPb_srH5_ZYf "
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Qué es Make y por qué usarlo para tu blog",
+      "contenido": "Qué es Make y por qué usarlo para tu blog:\n\nMake (antes Integromat) es un servicio online que conecta aplicaciones entre sí para que trabajen de forma automática. Imagina que tu blog habla con Google Docs, Twitter, LinkedIn o tu lista de correo sin que tengas que hacer nada. Con Make puedes crear “escenarios” que se ejecutan solos: por ejemplo, cada vez que publiques una entrada nueva, Make puede avisar en redes, guardar una copia en Drive y enviar un resumen por email a tus suscriptores. La ventaja principal es que no necesitas programar: todo se arma con bloques visuales que se arrastran y conectan."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Lo que necesitas antes de empezar",
+      "contenido": "Lo que necesitas antes de empezar:\n\n1. Cuenta en Make: regístrate gratis en make.com (el plan gratuito incluye 1 000 operaciones al mes).  \n2. Cuenta en la plataforma de tu blog: WordPress.com, WordPress.org (con plugin de REST API activado), Ghost, Webflow, Blogger, etc.  \n3. Cuentas en las apps que quieras automatizar: Twitter, Facebook, LinkedIn, Google Docs, Gmail, Mailchimp, Telegram, etc.  \n4. Acceso administrativo a tu blog para crear o revisar claves API.  \nCon eso en la mano ya puedes crear tu primer escenario sin tocar código."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Crear tu primer escenario paso a paso",
+      "contenido": "Crear tu primer escenario paso a paso:\n\nPaso 1 – Entra en tu panel de Make y pulsa “Create a new scenario”.  \nPaso 2 – Busca tu blog en la lista de módulos (por ejemplo, “WordPress”).  \nPaso 3 – Elige el disparador (trigger) “Watch posts” para que el escenario se active al publicar algo nuevo.  \nPaso 4 – Conecta tu cuenta: introduce la URL de tu blog, tu usuario y contraseña de aplicación (WordPress) o el token de acceso (Ghost). Make comprueba que puede leer tu lista de entradas.  \nPaso 5 – Añade el siguiente módulo: por ejemplo, “Twitter – Create a tweet”. Autoriza tu cuenta de Twitter y redacta el texto del tuit; puedes arrastrar datos del post (título, URL, extracto) desde el menú lateral.  \nPaso 6 – Pulsa “Run once” para probar. Make muestra en verde los datos que pasan de un módulo a otro. Si todo va bien, activa el escenario con el switch “ON”.  \n¡Listo! Cada vez que publiques, el tuit se enviará solo."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Ejemplos útiles de automatización para blogs",
+      "contenido": "Ejemplos útiles de automatización para blogs:\n\n- Copia de seguridad automática: cuando se publique un post, créate una copia en Google Docs o Notion.  \n- Newsletter semanal: cada lunes, reúne los posts de la semana y envía un email resumen con Mailchimp o Gmail.  \n- Cross-posting: publica el mismo contenido en LinkedIn y Medium añadiendo unhas etiquetas personalizadas.  \n- Notificación interna: avisa por Telegram o Slack al equipo cada vez que haya un nuevo artículo para revisar.  \n- Moderación de comentarios: si un comentario contiene palabras clave de spam, Make lo marca como spam y envía alerta.  \nTodos estos flujos se montan igual: trigger en el blog + acciones en otras apps."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Consejos para que tus escenarios nunca fallen",
+      "contenido": "Consejos para que tus escenarios nunca fallen:\n\n- Revisa los “error handlers” (rutas alternativas) para que, si falla un módulo, se repita la acción o te avise por email.  \n- Usa filtros: por ejemplo, que el escenario solo se active si la categoría del post es “Tutoriales”.  \n- No gastes operaciones de más: programa el trigger para que se ejecute cada hora o cada día en lugar de “instantáneo” si no es urgente.  \n- Comprueba los límites de la API de tu blog; Make respeta los límites, pero si tu plan de alojamiento es muy básico puede bloquearte.  \n- Mantén las contraseñas de aplicación actualizadas; si cambias la contraseña de WordPress, recuerda actualizarla también en Make.  \n- Pon siempre un título descriptivo al escenario y añade notas internas; dentro de seis meses te acordarás de qué hace."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES\n\nPuntos verificados con la documentación oficial de Make:  \n1. Plan gratuito: 1 000 operaciones/mes – https://www.make.com/en/pricing  \n2. Módulo “Watch posts” para WordPress – https://www.make.com/en/integrations/wordpress  \n3. Conexión por contraseña de aplicación (WordPress 5.6+) – https://make.wordpress.org/core/2020/11/24/application-passwords-integration-guide/  \n4. Uso de filtros y error handlers – https://www.make.com/en/help/structures#error-handlers  \n5. Límites de velocidad de la API de WordPress.com – https://developer.wordpress.com/docs/api/  \n6. Ejemplos de escenarios públicos – https://www.make.com/en/templates  \n\nTodos los pasos descritos coinciden con los procedimientos recomendados por las fuentes anteriores."
+    }
+  ]
+}

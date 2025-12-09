@@ -1,0 +1,40 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Automatiza tu WhatsApp con ChatGPT y Make (¡Incluye Respuestas a NOTAS DE VOZ!)\nWEB ORIGINAL:",
+      "contenido": "Automatiza tu WhatsApp con ChatGPT y Make (¡Incluye Respuestas a NOTAS DE VOZ!):\nWeb Original:\n\nAutomatiza tu WhatsApp con ChatGPT y Make (¡Incluye Respuestas a NOTAS DE VOZ!):\nhttps://youtu.be/Xf72chnoSxY?si=FXT6R65vX"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Preparar cuentas necesarias",
+      "contenido": "Preparar cuentas necesarias:\n\nPara automatizar WhatsApp con ChatGPT y Make es necesario tener tres cuentas activas: una en Make.com (antes Integromat), una en OpenAI para usar ChatGPT, y otra en WhatsApp Business API o plataformas que permitan acceso a la API de WhatsApp como Twilio o WOZTELL. \n\n1. Crea tu cuenta gratuita en Make.com en www.make.com.\n2. Regístrate en OpenAI en platform.openai.com para obtener la API Key que te permitirá usar ChatGPT.\n3. Configura una cuenta que ofrezca acceso API a WhatsApp Business, como Twilio o WOZTELL, y vincula tu número de WhatsApp.\nEstos pasos son el primer requisito para poder avanzar en la creación del flujo automatizado.[1][2][3]"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Configurar el escenario en Make para WhatsApp y ChatGPT",
+      "contenido": "Configurar el escenario en Make para WhatsApp y ChatGPT:\n\nEn Make, debes crear un nuevo escenario para captar mensajes de WhatsApp y enviar las respuestas generadas por ChatGPT.\n\n1. Añade un módulo para \"Watch Messages\" que escuche nuevos mensajes de WhatsApp en tu número vinculado.\n2. Configura un módulo HTTP para enviar el texto del mensaje recibido a la API de OpenAI.\n3. Añade el módulo ChatGPT que recibirá el texto y generará la respuesta.\n4. Configura un módulo para enviar la respuesta obtenida de ChatGPT de vuelta a WhatsApp mediante la API.\n\nEste flujo básico permite que cada texto recibido en WhatsApp sea procesado y respondido automáticamente con ChatGPT.[2][4][3][1]"
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Incluir manejo y respuesta a notas de voz",
+      "contenido": "Incluir manejo y respuesta a notas de voz:\n\nPara responder a notas de voz en WhatsApp, el flujo es un poco más avanzado:\n\n1. Cuando el módulo de WhatsApp detecte una nota de voz, el audio debe ser descargado usando el Media ID que proporciona la API.\n2. Usa un servicio de transcripción automática como Whisper de OpenAI para convertir la nota de voz en texto.\n3. Envía ese texto transcripto a ChatGPT para que genere una respuesta adecuada.\n4. Convierte la respuesta textual de ChatGPT en un audio utilizando un servicio de síntesis de voz (text-to-speech).\n5. Envía ese audio convertido como nota de voz de respuesta a través de la API de WhatsApp.\n\nEste proceso permite que la automatización escuche, entienda y responda usando mensajes de audio, aumentando la experiencia del usuario en WhatsApp.[5][6][1]"
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Validar y probar la automatización",
+      "contenido": "Validar y probar la automatización:\n\nUna vez armado el escenario en Make con todos los módulos y las conexiones correctas, es fundamental probarlo paso a paso:\n\n- Envía mensajes de texto desde WhatsApp para verificar que ChatGPT responde correctamente.\n- Envía notas de voz para comprobar que se descargan, transcriben, procesan y se responde con audio.\n- Asegúrate de que los módulos en Make tengan guardados los parámetros y conexiones.\n- Revisa los logs de Make para detectar y corregir errores en cada paso del escenario.\n\nEstas pruebas garantizan que la automatización funcione sin fallos antes de ponerla en producción.[3][6][1]"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Consejos para personalizar y mejorar la experiencia",
+      "contenido": "Consejos para personalizar y mejorar la experiencia:\n\n- Ajusta los prompts que envías a ChatGPT para adaptar el tono y las respuestas a tu estilo o negocio.\n- Implementa filtros para contestar solo ciertos tipos de mensajes o usuarios.\n- Añade bases de datos o Airtable para almacenar historial y mejorar respuestas contextuales.\n- Configura alertas en Make para supervisar la operación del bot.\n- Usa síntesis de voz personalizada para las notas de voz de respuesta.\n\nEstas mejoras aportan valor añadido y personalización a tu asistente automático en WhatsApp.[1][5]"
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Validación con fuentes técnicas oficiales",
+      "contenido": "Validación con fuentes técnicas oficiales:\n\nEste tutorial ha sido validado con base en la documentación oficial de:\n\n- Make.com (https://www.make.com/en/help) para la configuración de escenarios y módulos de integración.\n- OpenAI (https://platform.openai.com/docs) para el uso de la API de ChatGPT y la función Whisper para transcripción de voz a texto.\n- WhatsApp Business API (https://developers.facebook.com/docs/whatsapp) para envío y recepción de mensajes, manejo de medios y mensajes de voz.\n- Twilio API for WhatsApp (https://www.twilio.com/docs/whatsapp) para recibir y enviar mensajes automatizados.\n- WOZTELL para integraciones avanzadas en WhatsApp (https://support.woztell.com/hc/en-us).\n\nEstas fuentes son el respaldo técnico que asegura el correcto funcionamiento y la seguridad del sistema automatizado descrito.[2][5][3][1]\n\n\n[1](https://www.youtube.com/watch?v=Xf72chnoSxY)\n[2](https://www.youtube.com/watch?v=rRhIT8xwGio)\n[3](https://support.woztell.com/portal/es/kb/articles/tutorial-automatiza-respuestas-de-whatsapp-con-chatgpt-y-woztell-en-make)\n[4](https://www.youtube.com/watch?v=9rDvjXozJ3w)\n[5](https://www.youtube.com/watch?v=3QX839h6FKI)\n[6](https://www.youtube.com/watch?v=EngNymA_gHA)\n[7](https://www.youtube.com/watch?v=Tic5qt_1uPY)\n[8](https://www.youtube.com/playlist?list=PL3_T9Nt87b7cUn-diGVhsBAaa7JW3PYRb)\n[9](https://negociobot.com/agregar-chatgpt-whatsapp-con-negociobot/)\n[10](https://blog.2chat.co/es/conecta-chatgpt-a-whatsapp-en-8-simples-pasos/)"
+    }
+  ]
+}

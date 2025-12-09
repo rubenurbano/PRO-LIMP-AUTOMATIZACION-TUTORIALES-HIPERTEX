@@ -1,0 +1,65 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "[TITULO_VIDEO]\nWEB ORIGINAL:",
+      "contenido": "[TITULO_VIDEO]:\nCómo mandar emails desde ChatGPT\n\nWeb Original:\n[TITULO_VIDEO]:\nhttps://youtu.be/RJH_J3wb4ds?si=UEOYhnClloVzz14C"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción y Superpoderes",
+      "contenido": "Introducción y Superpoderes:\nEn esta clase aprenderás a dar superpoderes a ChatGPT para que pueda enviar correos electrónicos directamente desde el chat. Esto significa que no tendrás que salir de la conversación para realizar el envío.\n\nSe utilizará una herramienta llamada Make para crear una automatización sencilla.[1] Imagina que le das a ChatGPT una lista de ventas y le pides un informe. Al terminar, ChatGPT te confirmará que ha enviado el informe por correo electrónico automáticamente, sin que tú tengas que hacerlo manualmente."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Cómo funciona: HTML y JSON",
+      "contenido": "Cómo funciona: HTML y JSON:\nEl correo electrónico que redacte ChatGPT debe estar en formato HTML para que sea visualmente correcto. Si se envía como texto plano, todo el contenido se verá junto y será difícil de leer.\n\nEl secreto para lograr esto es usar un GPT personalizado configurado con un esquema JSON.\n\nUn JSON es una lista organizada que permite a las computadoras entenderse entre sí. Es como un cuaderno donde anotas variables y valores (por ejemplo: Nombre: Juan, Edad: 10) dentro de unas llaves. Este paquete de datos sirve para enviar información, como el nombre, el correo, el asunto y el cuerpo del mensaje, desde ChatGPT hacia otra aplicación (en este caso, Make).\n\nLa Inteligencia Artificial no envía el email por sí misma; solo recoge la información y la envía en un paquete JSON al escenario de Make, que es quien ejecuta el envío."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Requisitos previos",
+      "contenido": "Requisitos previos:\nPara realizar esta automatización necesitas tres cosas:\n\nChatGPT Plus: Debes pagar la suscripción de 20 dólares al mes para poder crear GPTs personalizados sin límite.\n\nUna cuenta gratuita en Make: Permite crear hasta dos automatizaciones (escenarios) y ofrece 1000 operaciones al mes. Enviar un email consume dos operaciones, por lo que puedes enviar unos 500 correos gratis al mes.\n\nUna cuenta de correo de Gmail o Outlook.[1]"
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Nota importante sobre la cuenta de correo",
+      "contenido": "Nota importante sobre la cuenta de correo:\nSe utilizará el módulo de Outlook en Make.[1][2][3] Usar Gmail directamente es complicado porque requiere crear una aplicación especial en Google y renovar permisos constantemente.\n\nEl truco consiste en registrarse o iniciar sesión en Outlook (servicio de Microsoft) utilizando tu cuenta de Gmail. De esta manera, el correo parecerá enviado desde tu Gmail y las respuestas llegarán a tu bandeja de entrada de Gmail, evitando los trámites complejos de Google."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Paso 1: Crear la función (Esquema JSON)",
+      "contenido": "Paso 1: Crear la función (Esquema JSON):\nDebes ir al GPT de ayuda proporcionado por el instructor y pedirle que cree una función para enviar correos electrónicos.[2] Especifica que necesitas tres campos obligatorios: email, asunto y cuerpo del mensaje. El GPT te entregará un esquema JSON listo para usar.[4][5]"
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Paso 2: Crear el escenario en Make",
+      "contenido": "Paso 2: Crear el escenario en Make:\nDirígete a make.com y selecciona Create a New Scenario (Crear un nuevo escenario).[6][7][8]\n\nEl primer módulo será un Webhook.[6][7][8] Busca y selecciona custom webhook.[6][7][8][9][10] Dale un nombre, por ejemplo \"enviar emails desde chat gpt\". Make generará un enlace especial que servirá para conectar ChatGPT con Make.\n\nEl segundo módulo será Outlook.[2] Busca y selecciona create and send a message (crear y enviar un mensaje).[2] Conecta tu cuenta de Microsoft/Outlook usando tu cuenta de Gmail. Verás que este módulo pide tres datos obligatorios (en negrita): asunto, cuerpo y destinatario. Guarda el escenario."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Paso 3: Crear el GPT personalizado",
+      "contenido": "Paso 3: Crear el GPT personalizado:\nVe a tu perfil de ChatGPT, selecciona Mis GPTs y haz clic en Crear un GPT. Asignale un nombre y una descripción.\n\nEn las instrucciones, dile que actúe como un experto redactando emails. Indícale que, antes de enviar nada, debe asegurarse de tener el correo de destino. Luego, dile que use la acción \"Enviar correo\" para mandar el asunto y el cuerpo.\n\nEn la sección Funciones o Acciones, haz clic en Crear nueva acción.[11] Pega el esquema JSON que obtuviste en el Paso 1.\n\nPaso Crucial: En la configuración de la función, busca el campo de URL y pega el enlace especial que te dio el Webhook de Make en el Paso 2. Guarda el GPT seleccionando la opción Solo yo para probarlo."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Paso 4: Probar y configurar el escenario",
+      "contenido": "Paso 4: Probar y configurar el escenario:\nEn tu nuevo GPT, pide que redacte y envíe un email a una dirección de prueba. Cuando el GPT pida confirmación, no aceptes todavía.\n\nVe a Make, haz clic derecho en el módulo Webhook y elige Run this module only (Ejecutar solo este módulo). Regresa a ChatGPT y confirma la acción. Make recibirá el paquete JSON con los datos.[4]\n\nAhora abre el módulo de Outlook en Make. Verás las variables recibidas del Webhook. Arrastra (mapea) el Asunto del Webhook al campo Asunto de Outlook, y haz lo mismo con el Cuerpo y el Email. Guarda el escenario."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Paso 5: Activar y corrección de formato",
+      "contenido": "Paso 5: Activar y corrección de formato:\nActiva el escenario en Make para que funcione automáticamente.[6][12] Pide a ChatGPT que envíe el correo de nuevo.\n\nSi el correo llega sin saltos de línea (todo junto), significa que falta formato HTML. Para solucionarlo, dile al GPT en sus instrucciones que convierta el email a formato HTML para facilitar la lectura con saltos de línea. Así el correo llegará organizado y con negritas."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Posibilidades ilimitadas",
+      "contenido": "Posibilidades ilimitadas:\nEste sistema permite ir más allá del envío individual.[1][3][4][6][7][9][10][12][13] Puedes conectar la automatización para enviar newsletters masivas, analizar hojas de cálculo y enviar informes de ventas a departamentos específicos, o conectar ChatGPT a un CRM para actualizar clientes.\n\nTambién podrías usarlo como un diario personal o entrenador que te envíe resúmenes de tus conversaciones a una hoja de cálculo. El sistema funciona como piezas de Lego (Make y ChatGPT) unidas por el pegamento (JSON), permitiendo crear cualquier función extra que imagines."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nLa información del tutorial ha sido validada con la documentación oficial de OpenAI y Make (anteriormente Integromat).\n\nResumen de puntos técnicos validados:\n\nAcciones en GPTs (OpenAI):\nLas \"GPT Actions\" permiten a los GPTs personalizados conectarse con aplicaciones externas mediante llamadas API RESTful. Se configuran utilizando una especificación OpenAPI (esquema JSON/YAML) que define los endpoints y parámetros.\nFuente: https://platform.openai.com/docs/actions\n\nWebhooks en Make:\nEl módulo \"Custom Webhook\" en Make genera una URL única que actúa como disparador instantáneo (Trigger).[7][10] Este módulo recibe datos en formato JSON a través de una solicitud HTTP POST, lo cual coincide con el método descrito para recibir datos desde ChatGPT.\nFuente: https://www.make.com/en/help/tools/webhooks\n\nMódulo de Outlook en Make:\nMake dispone de la integración \"Microsoft 365 Email (Outlook)\".[1][3] La acción específica \"Create and send a message\" permite enviar correos electrónicos autenticándose con una cuenta de Microsoft.\nFuente: https://www.make.com/en/help/apps/communication/microsoft-365-email-outlook\n\nCreación de esquemas:\nEl uso de un \"Actions GPT\" o asistente para generar el esquema OpenAPI es una práctica estándar recomendada por OpenAI para facilitar la configuración de las acciones sin necesidad de escribir el código JSON manualmente desde cero.\n\n\nSources\nhelp\nmake.com\nmake.com\nmake.com\nyoutube.com\nopenai.com\njoshthompson.co.uk\nmedium.com\nhelpscoutdocs.com\nmake.com\nmake.com\nmedium.com\nmake.com\nmicrosoft.com\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\nOpenAI GPTs authentication actions\nMake.com custom webhook documentation\nOpenAI GPTs actions documentation schema\nMake.com Microsoft Outlook module create and send a message documentation"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Master Webhooks in MAKEcom\nWEB ORIGINAL:",
+      "contenido": "Master Webhooks in MAKEcom:\nWeb Original:\nMaster Webhooks in MAKEcom:\nhttps://youtu.be/xxv1w0SqlwQ?si=Y-jtFXOFn9F0mfRz\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Que son los Webhooks y por que son importantes",
+      "contenido": "Que son los Webhooks y por que son importantes:\nUn webhook es una herramienta o nodo que viene integrado en plataformas de automatizacion no-code (sin codigo) como Make.com. Este tutorial esta disenado para personas que no son programadores y que utilizan este tipo de plataformas.\n\nLa caracteristica principal del webhook es que funciona como un disparador instantaneo. Esto significa que, a diferencia de otras herramientas que se activan cada cierto tiempo, el webhook se dispara de inmediato cuando recibe datos.\n\nDentro de Make.com, hay varios nodos con funciones similares: Mail Hook (se activa al recibir un correo electronico), Web Hook (se activa al recibir datos) y Web Hook Response (para enviar una respuesta despues de recibir datos)."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Empezar un nuevo escenario",
+      "contenido": "Empezar un nuevo escenario:\nSiempre se debe iniciar un nuevo escenario. Se recomienda nombrar el escenario (por ejemplo, \"web hooks\") para que sea mas facil de rastrear y organizar mas tarde."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Crear y nombrar el Web Hook",
+      "contenido": "Crear y nombrar el Web Hook:\nSe selecciona el modulo de Web Hook y se crea uno nuevo. Es necesario ponerle un nombre (por ejemplo, \"web hook one\") y guardarlo.\n\nAl guardar, Make.com proporciona la URL principal del web hook, la cual debe ser copiada, ya que es el enlace que usaras para activarlo."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Activar el escenario para que escuche",
+      "contenido": "Activar el escenario para que escuche:\nUna vez creado, el escenario debe ser activado para que este escuchando (listening). Cuando el escenario esta activo, esta esperando una senal para ser disparado instantaneamente."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Entender la estructura de la URL",
+      "contenido": "Entender la estructura de la URL:\nCuando llamas a la URL del web hook (por ejemplo, pegandola en un navegador), el sistema te indicara que fue aceptada. Si solo usas la URL principal, los datos recibidos estaran vacios."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Regla fundamental para pasar variables",
+      "contenido": "Regla fundamental para pasar variables:\nPara enviar datos (variables) a traves de la URL, debes seguir una regla estricta: Despues de la URL principal, siempre debes escribir un signo de interrogacion (?). Este signo indica el inicio de tus variables."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Como definir una variable en la URL",
+      "contenido": "Como definir una variable en la URL:\nDespues del signo de interrogacion, se escribe el nombre de la variable (por ejemplo, username). Luego se anade un signo igual (=). Finalmente, se escribe el valor de esa variable (por ejemplo, James).\n\nLa estructura seria: URL base ? nombre de variable = valor."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Anadir multiples variables a la URL",
+      "contenido": "Anadir multiples variables a la URL:\nPara enviar mas de una variable (como un nombre y un correo electronico), se utiliza el signo ampersand (&) para separarlas.\n\nEjemplo: URL base ? username = Mike & email = mike@gmail.com."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Configurar Web Hook Response",
+      "contenido": "Configurar Web Hook Response:\nPara que el web hook no solo reciba datos sino que tambien envie un mensaje de vuelta, se anade el modulo Web Hook Response al escenario."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Crear respuesta estatica",
+      "contenido": "Crear respuesta estatica:\nSi el estado de la llamada es bueno (Status 200), puedes definir un mensaje especifico (el \"body\") que se enviara a la persona que activo el web hook. Por ejemplo, el mensaje podria ser \"James dice hola\"."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Crear respuestas dinamicas",
+      "contenido": "Crear respuestas dinamicas:\nUna de las ventajas es que la respuesta puede ser dinamica. Puedes usar la variable que recibiste a traves de la URL para personalizar el mensaje de respuesta.\n\nPor ejemplo, si el usuario envio la variable username=Mike, la respuesta podria cambiar automaticamente a \"Mike dice hola\"."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Poder y velocidad de los Webhooks",
+      "contenido": "Poder y velocidad de los Webhooks:\nLos webhooks son considerados robustos, poderosos y funcionan siempre de forma instantanea."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "Usos en integracion",
+      "contenido": "Usos en integracion:\nLa URL unica generada por Make.com puede ser usada en muchos lugares para conectar sistemas:\n\nSe puede integrar en sitios de WordPress.\nSe puede usar en formularios.\nSe puede vincular a un boton, de manera que al presionarlo, se active el web hook.\nEs util en herramientas de desarrollo de aplicaciones moviles (apps) como Thunkable o Bubble."
+    },
+    {
+      "itemID": "014",
+      "menu_item": "Make.com como Backend",
+      "contenido": "Make.com como Backend:\nAl usar webhooks, puedes configurar Make.com para que funcione como la parte tras bambalinas (el backend), realizando todo el procesamiento.\n\nLos sitios web, formularios o apps (el frontend) son lo que ve el cliente, y simplemente envian la senal al web hook para que Make.com haga todo el trabajo pesado."
+    },
+    {
+      "itemID": "015",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:Los puntos tecnicos presentados en el tutorial han sido validados con fuentes oficiales de Make.com:\n\nDefinicion y funcionamiento de webhooks\nLos webhooks permiten enviar datos a Make.com mediante HTTPS y funcionan como disparadores instantaneos que ejecutan escenarios inmediatamente despues de que la URL del webhook recibe una solicitud, a diferencia de los disparadores programados que consultan periodicamente nuevos datos.\n\nTipos de webhooks en Make.com\nMake.com soporta webhooks especificos de aplicaciones (tambien llamados disparadores instantaneos) que escuchan datos de una aplicacion especifica, y webhooks personalizados que permiten crear una URL a la cual enviar cualquier dato.\n\nCreacion y configuracion\nLa documentacion oficial confirma el proceso de creacion: para crear un webhook personalizado se debe usar la aplicacion Webhooks de Make, y el webhook genera una URL unica que puede ser llamada desde una aplicacion externa o servicio.\n\nProcesamiento instantaneo\nPor defecto, cuando Make.com recibe datos en un webhook, el escenario se ejecuta inmediatamente, y los escenarios con webhooks instantaneos son procesados en paralelo.\n\nModulo Webhook Response\nEl modulo Webhook Response se usa normalmente para enviar una respuesta de vuelta al servicio que activo el webhook, confirmando la recepcion o proporcionando informacion adicional, con respuestas predeterminadas de codigo de estado HTTP 200 (Aceptado) cuando la llamada es exitosa.\n\nEnlaces a documentacion oficial:\n\nDocumentacion oficial de Webhooks en Make.com: https://www.make.com/en/help/tools/webhooks\nDocumentacion de la aplicacion Webhooks: https://apps.make.com/gateway\nArticulo oficial sobre que son los webhooks: https://www.make.com/en/blog/what-are-webhooks\n\nFuentes de soporte adicionales:\n\nGuia de Joshua Thompson sobre webhooks para principiantes: https://joshthompson.co.uk/automations/beginners-guide-to-webhooks-make-com/\nTutorial en Medium por Hideyuki Shibata: https://hideyuki-shibata.medium.com/complete-guide-to-webhook-in-make-formerly-integromat-bd3eb18c9b67\n\nToda la informacion tecnica presentada en el tutorial esta validada por la documentacion oficial de Make.com y coincide con las practicas recomendadas por la plataforma.\n\n\nTITULO_VIDEO = Como Conectar CUALQUIER API a Makecom\nURL_WEB_YOUTUBE = https://youtu.be/d1Y0Njcv6J8?si=1Rg7Bp97P5G6hTgo\nAUTOR = PRO-LIMP AUTOMATIZACION\nTELEFONO = +34 636832005"
+    },
+    {
+  "itemID": "016",
+  "menu_item": "Escucha la explicación completa en audio",
+  "contenido": "Escucha la explicación completa en audio:\n\nhttps://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Videos%20TUTORIALES/Master%20Webhooks%20in%20MAKEcom.m4a"
+}
+  ]
+}

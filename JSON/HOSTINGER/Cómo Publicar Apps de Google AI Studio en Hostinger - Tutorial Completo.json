@@ -1,0 +1,75 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": null,
+      "contenido": "\"Cómo Publicar Apps de Google AI Studio en Hostinger - Tutorial Completo\n\nhttps://youtu.be/5to-rNEIz1o?si=HpbIgG6oS8r_QT37\""
+    },
+    {
+      "itemID": "001",
+      "menu_item": "WEB ORIGINAL:",
+      "contenido": "Web Original:\n\nhttps://youtu.be/5to-rNEIz1o?si=HpbIgG6oS8r_QT37"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "### Paso 1: Definición del Proyecto y Contexto de Despliegue\n\nContexto: ¿Por qué usar Hostinger para proyectos de Google AI Studio?",
+      "contenido": "El objetivo de este tutorial es pasar un proyecto generado en Google AI Studio (que generalmente usa tecnologías como React) a un plan de alojamiento compartido de Hostinger, como el plan Business.\n\n**Es importante entender las limitaciones:** Los planes de Hostinger, al estar optimizados principalmente para WordPress o para tecnología PHP, requieren que el despliegue de una aplicación React sea **más manual** que en plataformas diseñadas para estas tecnologías.\n\n**Razones para elegir Hostinger (si ya tiene un plan):**\n\n*   **Organización:** Permite manejar todos sus proyectos (sitios web, aplicaciones, sitios de clientes) en un solo lugar, lo cual evita que se vuelva \"súper inmanejable\".\n*   **Costos Fijos:** El pago es fijo y relativamente económico (puede ser menos de $4 mensuales), lo que permite tener un \"montón de sitios web\" y aplicaciones, en contraste con otras plataformas donde los costos pueden descontrolarse rápidamente si se superan los límites de la capa gratuita en varios proyectos.\n*   **Capacidad:** Un plan como el Business puede albergar potencialmente hasta 50 sitios web."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "### Paso 2: Creación y Preparación de la Aplicación en Google AI Studio\n\nGeneración y descarga de la aplicación base",
+      "contenido": "1.  **Generar la Aplicación:** Diríjase a ai.google.com/studio. En la sección *build*, pegue el *prompt* (la instrucción que le da a la IA) para generar la aplicación. Asegúrese de que el *prompt* especifique las funcionalidades necesarias, como habilitar Google Search y activar el *thinking mode*.\n2.  **Descargar el Código Fuente:** Una vez generada la aplicación (como un planificador de viajes o un portafolio web), haga clic en **Download app**.\n3.  **Descomprimir:** Cambie el nombre del archivo si lo desea, y luego descomprímalo inmediatamente. La carpeta resultante contiene todos los archivos de su proyecto."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Instalación de Node.js y uso de comandos para el 'Build' estático\n### Paso 3: Instalación de Node.js y Compilación Local",
+      "contenido": "Necesitará Node.js para preparar la aplicación para el despliegue estático.\n\n1.  **Instalar Node.js:** Vaya a nodejs.org y descargue el instalador para su sistema operativo (como el *Windows Installer*). Ejecute el archivo y siga los pasos de instalación (siguiente, siguiente, siguiente).\n2.  **Abrir la Terminal:** Abra el símbolo del sistema (cmd) o el terminal en su computadora.\n3.  **Navegar a la Carpeta:** Copie la ruta de la carpeta del proyecto que descargó en el paso anterior. En el terminal, escriba `CD` (espacio), pegue la ruta copiada y presione **Enter**.\n4.  **Instalar Dependencias:** Ejecute el comando para instalar los archivos necesarios del proyecto:\n    `npm install`\n5.  **Compilar el Sitio Estático:** Este comando realizará un *build* (compilación) de su proyecto, convirtiéndolo en un sitio web estático:\n    `npm run build`\n    Al finalizar, verá que se ha creado una carpeta nueva llamada `dist`. Aquí es donde se encuentra el sitio estático que subiremos a Hostinger."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "### Paso 4: Configuración del Dominio Temporal en Hostinger\n\nPreparación del hPanel y la carpeta pública",
+      "contenido": "Si ya tiene Hostinger, inicie sesión en su panel HPanel.\n\n1.  **Añadir un Sitio Web:** Vaya a la sección \"Sitios web\" y seleccione **Añadir sitio web**.\n2.  **Seleccionar Opciones:** Elija \"Sitio web PHP HTML personalizado\".\n3.  **Dominio Temporal:** Haga clic en **Usar dominio temporal**.\n4.  **Acceso a Archivos:** Dentro del panel de administración del nuevo sitio, haga clic en **Administrador de archivos**.\n5.  **Limpiar la Carpeta Pública:** Navegue a la carpeta `public_html`. Si hay archivos (como la página de error 403), bórrelos para dejar la carpeta lista para su proyecto."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "### Paso 5: Despliegue Estático Inicial\n\nSubida de la compilación inicial a Hostinger",
+      "contenido": "1.  **Localizar la Compilación:** Vuelva a la carpeta de su proyecto en su computadora y abra la carpeta `dist` que se creó al compilar.\n2.  **Copiar Archivos:** Copie todo el contenido de la carpeta `dist`.\n3.  **Subir a Hostinger:** En el Administrador de archivos de Hostinger, dentro de `public_html`, pegue o suba todos los archivos que copió.\n4.  **Verificar:** Vaya al enlace de su dominio temporal y recargue la página. Su aplicación estática ya debería estar publicada y cargando en Hostinger."
+    },
+    {
+      "itemID": "606",
+      "menu_item": "### Paso 6: El Desafío de Seguridad de la API Key\n\nIdentificación del problema de seguridad y funcionamiento",
+      "contenido": "Una vez publicado, si intenta usar una funcionalidad que requiere la Inteligencia Artificial (por ejemplo, \"generar ideas\"), la aplicación **fallará**. Esto ocurre porque el entorno de Hostinger no tiene la clave de API (API Key) activa, a diferencia de cuando estaba funcionando dentro de Google AI Studio.\n\nSi usted simplemente introduce la API Key en el código JavaScript del proyecto, esta quedará **expuesta** en los archivos públicos (como el archivo JS generado). Esta exposición permite que cualquiera pueda ver y robar su clave."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "### Paso 7: Implementación de la Solución de Pasarela Segura\n\nCreación de un endpoint PHP para proteger la clave",
+      "contenido": "Para evitar la exposición de la API Key en el código del navegador, se utilizará una \"solución creativa\" o \"hack\". Como Hostinger es un *hosting* PHP, se creará un archivo PHP que actuará como **pasarela** o *endpoint*.\n\nLa llamada a la API de Gemini se hará desde el archivo JavaScript de la aplicación hacia este nuevo archivo PHP. La API Key se almacenará en el archivo PHP, garantizando que quede **protegida** porque el código se ejecuta del lado del servidor. El código del lado del servidor no es visible para el usuario final en el HTML o JavaScript."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "### Paso 8: Modificación del Código de la Aplicación con Ayuda de IA\n\nUso de un prompt de IA para adaptar el código JavaScript",
+      "contenido": "Debido a que el archivo `Gemini Service.ts` original llama directamente a la API de Gemini, hay que modificarlo para que apunte al *endpoint* PHP que vamos a crear.\n\n1.  **Acceder al Prompt Guía:** Use un *prompt* genérico (preestablecido) para facilitar la conversión.\n2.  **Definir el Dominio:** Copie la dirección de su dominio temporal de Hostinger y péguela en el espacio del *prompt* donde se indica el dominio.\n3.  **Obtener el Código Original:** Vaya a la carpeta local de su proyecto, busque `services`, y abra el archivo `GeminiService.ts`. Copie todo el código que contiene.\n4.  **Insertar y Ejecutar:** Pegue el código del archivo `GeminiService.ts` en la sección designada del *prompt*.\n5.  **Generar Código Modificado:** Envíe el *prompt* a una IA (como Gemini/JS Park, Claude o ChatGPT). El objetivo es que la IA convierta ese código a una versión que llame al futuro *endpoint* PHP."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "### Paso 9: Creación del Archivo de Pasarela PHP y Obtención de la API Key\n\nConfiguración de la API Key y creación del script Gemini-Api.php",
+      "contenido": "Necesita obtener la clave de acceso oficial de Google AI Studio.\n\n1.  **Obtener la API Key:**\n    *   Vaya a AI Studio y luego a **Get API key**.\n    *   Haga clic en **Crear clave de API**.\n    *   Seleccione o cree un proyecto.\n    *   Nombre la clave (ej: *tutorial Google hostinger*) y haga clic en crear. Copie la clave que aparece.\n2.  **Preparar el Código PHP:** Tome el código PHP proporcionado en el documento guía.\n3.  **Insertar la Clave:** Reemplace el texto \"tu API Key\" dentro del código PHP con la clave que acaba de copiar de AI Studio.\n4.  **Crear Archivo en Hostinger:** Vuelva al Administrador de archivos de Hostinger. Cree un **nuevo archivo** en la carpeta `public_html` llamado `Gemini-Api.php`.\n5.  **Guardar:** Pegue todo el código PHP modificado (que ahora contiene su API Key protegida) dentro de este archivo y guárdelo."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "### Paso 10: Despliegue Final y Puesta en Funcionamiento\n\nActualización del código local, recompilación y verificación final",
+      "contenido": "1.  **Reemplazar Código Local:** Copie el código modificado que generó la IA en el Paso 8. Vuelva a su archivo local `GeminiService.ts`, borre el contenido original y pegue el código nuevo. Guarde los cambios.\n2.  **Recompilar la Aplicación:** Vuelva a su terminal (cmd) y use la tecla \"hacia arriba\" para repetir el último comando de *build*:\n    `npm run build`\n    Esto actualizará los archivos en la carpeta `dist` con la nueva lógica que apunta al PHP.\n3.  **Actualizar en Hostinger:** Copie el contenido actualizado de la carpeta `dist` y úselo para **reemplazar** los archivos existentes en la carpeta `public_html` de Hostinger.\n4.  **Prueba Final:** Recargue su dominio temporal y pruebe la funcionalidad de la IA (ej: \"viajes a Argentina\"). Si el proceso se realizó correctamente, la aplicación debería procesar la solicitud y mostrar el resultado."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "### Paso 11: Solución de Problemas (Debugging)\n\nConsejos para resolver errores",
+      "contenido": "Si la aplicación falla (explota), puede usar la IA para ayudarle a diagnosticar y corregir el problema.\n\n1.  **Revisar la Consola:** Vaya a las herramientas de desarrolladores de su navegador (F12) y acceda a la **Consola**. Si hay un error grande o complicado, cópielo.\n2.  **Consultar a la IA:** Pegue el error en la IA que usó (Gemini, Claude, etc.) y explíquele el contexto del proyecto (que está publicando una aplicación de AI Studio en un *endpoint* PHP).\n3.  **Proveer el Código (Si es necesario):** La IA podría solicitarle el código del archivo `Gemini-Api.php` para poder completar o complementar lo que falte. La IA ya tiene el contexto de lo que está tratando de hacer (gracias al *prompt* inicial), por lo que puede guiarlo para corregir el error."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "La implementación descrita utiliza recursos y herramientas desarrolladas por Google AI, específicamente Gemini AI Studio, para el desarrollo de la aplicación.\n\n**Puntos validados con las fuentes técnicas de Google AI:**\n\n*   **Uso de Gemini AI como Herramienta de Desarrollo:** Gemini AI (un *chatbot* LLM de Google) es una herramienta valiosa que asiste en la creación de sitios web, la generación de código (incluidos fragmentos de JavaScript, HTML y CSS) y la depuración. Esto respalda el uso de una IA para modificar el código fuente de la aplicación (`GeminiService.ts`) en el Paso 8.\n*   **Obtención de la API Key:** La clave de API es un componente necesario para acceder a los servicios de Gemini, y se gestiona directamente desde la interfaz de Google AI Studio.\n*   **Función del Servidor (PHP):** La estrategia de usar código del lado del servidor (PHP) es viable para proteger secretos de entorno, ya que este código se ejecuta en el servidor (como Hostinger) y evita la exposición de credenciales sensibles en el lado del cliente (JavaScript).\n\n**Fuentes Oficiales Citadas (Conceptos de Google AI/Gemini):**\n*   **Gemini AI y Generación de Código:**\n*   **Creación de Aplicaciones en AI Studio:**\n*   **Obtención de la API Key:**\n*   **Desarrollo Asistido por IA (General):**"
+    }
+  ]
+}

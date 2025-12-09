@@ -1,0 +1,90 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Best way to build a Lovable App ft MAKEcom no-code\nWEB ORIGINAL:",
+      "contenido": "Best way to build a Lovable App ft MAKEcom no-code:\nWeb Original:\nBest way to build a Lovable App ft MAKEcom no-code:\nhttps://youtu.be/LGPZmW-PSdo?si=P60Pnga53t9JlR6g\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introduccion y problema principal",
+      "contenido": "Introduccion y problema principal:\nHola, mi nombre es Subh.\n\nHacer una aplicacion que funcione bien en Lovable solo escribiendo ordenes puede ser dificil. Puedes quedarte atascado escribiendo muchas ordenes solo para arreglar problemas.\n\nEn este video, te mostrare la mejor manera de hacer una aplicacion en Lovable usando una herramienta que no necesita codigo, llamada Make.com. Usaremos la menor cantidad de ordenes escritas posible.\n\nVoy a construir una aplicacion completa para que veas como funciona, asi que sigueme."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Entender que es una aplicacion sin codigo",
+      "contenido": "Entender que es una aplicacion sin codigo:\nEstamos en la pantalla de la computadora. Vamos a construir una aplicacion que es realmente sin codigo. Una aplicacion realmente sin codigo es una que se puede manejar facilmente.\n\nSi usamos una herramienta como Make en la parte de atras (el back end), es facil ver como se mueve la informacion. Esto hace que sea facil arreglar los errores y cambiar la aplicacion sin escribir muchas ordenes. Esto tambien nos permite ver la parte de atras del sistema.\n\nSi haces la aplicacion solo en Lovable y no sabes de codigo, es muy dificil encontrar y arreglar los errores en el codigo."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Conectar Lovable y Make.com usando webhooks",
+      "contenido": "Conectar Lovable y Make.com usando webhooks:\nNuestro plan es que Lovable haga la parte que ves (el frente o front end) y Make.com haga la parte que controla todo (la parte de atras o back end).\n\nLa forma en que se conectan es usando un webhook.\n\nUn webhook es un enlace o direccion especial que le das a Lovable. Cualquier informacion que pongas en la aplicacion (el frente) se envia a traves de ese enlace a Make. Esto hace que el proceso en Make comience.\n\nDespues de que Make procesa la informacion, enviamos de vuelta una respuesta de webhook. Asi funciona un webhook de manera sencilla."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Beneficios de este metodo",
+      "contenido": "Beneficios de este metodo:\nSi eres un desarrollador de automatizacion, puedes crear la parte visual en Lovable y usar Make para la parte de control.\n\nPuedes hacer una interfaz personalizada para un cliente y controlar lo que ingresan y ver los resultados. Esto te ayuda a ahorrar dinero y te permite hacer algo muy personalizado para tu trabajo.\n\nTambien puedes usar la misma configuracion muchas veces y venderla a diferentes clientes. Esto hace que la experiencia para el cliente sea mejor, ya que se siente como un producto de verdad."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "La idea de la aplicacion",
+      "contenido": "La idea de la aplicacion:\nLa aplicacion que construiremos sera un generador y editor de imagenes de marketing.\n\nPreviamente, ya habia hecho una configuracion donde un formulario recibia una imagen y una descripcion del producto, y luego se creaba una imagen de marketing. Vamos a usar esa configuracion.\n\nEse formulario anterior tenia campos para: el titulo del producto, subir una imagen, estilos de diseno (una lista), el tamano (relacion de aspecto) y una descripcion del producto."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "La funcion de edicion",
+      "contenido": "La funcion de edicion:\nLa segunda parte de esta aplicacion sera una funcion de edicion.\n\nSi quieres hacer cambios a la imagen de marketing generada, vamos a poder dibujar una mascara sobre ella. La parte visual de la aplicacion nos permitira dibujar esa mascara.\n\nEnviaremos la mascara y una orden escrita para decirle a la Inteligencia Artificial (IA) que debe agregar o cambiar en la parte que cubrimos con la mascara."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Configurar el sistema de Make para el generador",
+      "contenido": "Configurar el sistema de Make para el generador:\nVoy a modificar el sistema anterior.\n\nQuito algunas cosas que no necesitamos y agrego nuestro webhook. Este webhook estara conectado al frente de nuestra aplicacion y recibira toda la informacion.\n\nLa imagen generada se enviara de vuelta como respuesta del webhook.\n\nAccion 1: Crea un webhook de Make y guardale un nombre\n\nAccion 2: Configura el webhook para que envie de vuelta los datos de la imagen generada\n\nDesde la aplicacion, enviamos toda la informacion del formulario. Esa informacion viaja a traves del webhook hasta el sistema de Make. Make descarga la imagen, genera la orden (prompt) para la IA, la IA crea la imagen, y luego la enviamos de vuelta con el webhook."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Crear el sistema de edicion en Make",
+      "contenido": "Crear el sistema de edicion en Make:\nPara la funcion de edicion, voy a copiar el sistema anterior. Necesitamos otro webhook para la funcion de edicion que tambien enviara la mascara."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Crear la aplicacion con Lovable escribiendo la orden",
+      "contenido": "Crear la aplicacion con Lovable escribiendo la orden:\nVamos a Lovable y escribimos la orden para crear la aplicacion. La orden que usamos es muy sencilla.\n\nLa orden dice: Crea una aplicacion para generar y editar imagenes de marketing. La aplicacion tendra dos partes:\n\nGenerador de Imagenes: Tendra un formulario con campos como titulo, subir imagen, estilos de diseno (una lista desplegable) y tamano. Cuando el usuario envie el formulario, la informacion se envia a la direccion del webhook. La parte de atras (Make) recibe esto y envia de vuelta una imagen PNG, que la aplicacion debe mostrar.\n\nEditor: El editor permite al usuario cambiar la imagen generada. Los usuarios hacen clic en editar, pintan una mascara sobre la imagen y escriben una orden de edicion. El codigo de la aplicacion envia la imagen original, la mascara y la orden al segundo webhook.\n\nLa mascara es una imagen extra. Las areas que son completamente transparentes indican el lugar que debe ser editado. La mascara debe tener un formato especifico (PNG valido en bytes sin procesar) y ser menor de 4 MB.\n\nAccion 3: Envia la orden a Lovable"
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Revisar la aplicacion creada y configurar el webhook del generador",
+      "contenido": "Revisar la aplicacion creada y configurar el webhook del generador:\nLovable construye la aplicacion y la llama Image Muse Toolkit. La aplicacion se ve lista y tiene un campo para poner la direccion del webhook.\n\nAccion 4: Copia la direccion del webhook del generador en Make.com\n\nAccion 5: Pega la direccion en el campo de la aplicacion de Lovable\n\nAccion 6: Guarda y ejecuta el sistema del generador en Make.com"
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Probar el generador y mapear los campos",
+      "contenido": "Probar el generador y mapear los campos:\nSubimos una imagen y llenamos el formulario para probar.\n\nAccion 7: Presiona Generar\n\nEl webhook recibe la informacion correctamente.\n\nTenemos que arreglar los campos en el sistema de Make. Tenemos que conectar la informacion de entrada (como el titulo del producto, el estilo de diseno, la informacion de la imagen) para que vaya a los lugares correctos.\n\nAccion 8: Sube una imagen limpia y presiona Generar\n\nMake recibe la informacion, genera la orden escrita para la IA. La IA crea la imagen y la envia de vuelta a la aplicacion."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Configurar el sistema de edicion en Make",
+      "contenido": "Configurar el sistema de edicion en Make:\nAccion 9: Haz clic en Editar en la aplicacion de Lovable\n\nLa herramienta de pincel para crear la mascara funciona.\n\nAccion 10: Crea un nuevo sistema en Make llamado Creative Editor\n\nAccion 11: Importa la configuracion anterior al nuevo sistema\n\nAccion 12: Agrega un nuevo webhook al sistema Creative Editor\n\nAccion 13: Copia la direccion del nuevo webhook"
+    },
+    {
+      "itemID": "013",
+      "menu_item": "Probar el editor y arreglar errores con la mascara",
+      "contenido": "Probar el editor y arreglar errores con la mascara:\nAl probar la funcion de mascara y edicion, la informacion que recibimos en Make no tiene el formato correcto. La documentacion dice que las areas a editar deben ser completamente transparentes, pero la mascara que envia la aplicacion se ve blanca.\n\nAccion 14: Escribe una nueva orden en Lovable para pedir que cuando pintemos la mascara, las areas transparentes indiquen el area de edicion."
+    },
+    {
+      "itemID": "014",
+      "menu_item": "Prueba exitosa del editor",
+      "contenido": "Prueba exitosa del editor:\nDespues de escribir varias ordenes, el problema con el formato de la mascara se arregla. Subh dice que hacer una aplicacion completa solo con ordenes es muy dificil porque hay que escribir muchas veces para arreglar los errores. Por eso, usar el enfoque sin codigo es el mejor.\n\nGeneramos una nueva imagen de prueba.\n\nAccion 15: Dibuja la mascara sobre la nueva imagen en la aplicacion\n\nAccion 16: Pega la direccion del webhook de edicion en la aplicacion\n\nAccion 17: Escribe la orden de edicion: Anadir elementos botanicos y rodajas de citricos\n\nAhora, la parte que pintamos es transparente, lo que significa que el sistema funcionara.\n\nAccion 18: Presiona Aplicar Edicion"
+    },
+    {
+      "itemID": "015",
+      "menu_item": "Resultado final y conclusion",
+      "contenido": "Resultado final y conclusion:\nEl sistema funciona y recibimos la nueva imagen con los cambios solicitados (los elementos botanicos y las rodajas de citricos).\n\nConstruir una aplicacion en Lovable solo escribiendo ordenes es realmente dificil. Por eso, usar un sistema de automatizacion como Make.com, Zapier o n8n para la parte de atras es la mejor manera.\n\nSubh sugiere a Lovable dar mas creditos gratis, porque arreglar los errores consume los creditos rapidamente. Menciona que otras herramientas como Replit Agent funcionan mejor para construir aplicaciones completas."
+    },
+    {
+      "itemID": "016",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\nPara validar la informacion tecnica de este tutorial, he buscado las fuentes oficiales relacionadas:\n\nLovable es una plataforma de desarrollo de aplicaciones con IA que permite crear interfaces de usuario mediante prompts. La documentacion oficial confirma que Lovable se especializa en la generacion de frontends y puede integrarse con servicios externos mediante webhooks y APIs.\n\nMake.com es una plataforma de automatizacion no-code que permite conectar aplicaciones y servicios mediante flujos visuales. La documentacion oficial de Make confirma el uso de webhooks como metodo principal de integracion, permitiendo recibir datos desde aplicaciones externas y enviar respuestas procesadas.\n\nLos webhooks son un metodo estandar en desarrollo web para comunicacion entre sistemas. Un webhook es una URL que recibe peticiones HTTP POST con datos, procesa la informacion y puede devolver una respuesta. Este patron es ampliamente documentado en las guias de integracion de Make.\n\nLa metodologia presentada en el tutorial de separar frontend (Lovable) y backend (Make) es una arquitectura valida que permite a usuarios sin conocimientos de programacion crear aplicaciones funcionales manteniendo la logica de negocio en un sistema visual y facil de modificar.\n\nEnlaces a documentacion oficial:\n- Lovable: https://lovable.dev\n- Make.com: https://www.make.com/en/help/getting-started\n- Documentacion de Webhooks en Make: https://www.make.com/en/help/tools/webhooks\n\nEsta arquitectura es especialmente util para desarrolladores de automatizacion que desean crear interfaces personalizadas sin profundizar en codigo de frontend, manteniendo toda la logica de procesamiento en herramientas visuales de automatizacion.\n\n\n[TITULO_VIDEO] =    Best way to build a Lovable App ft MAKEcom no-code\n[URL_WEB_YOUTUBE] = https://youtu.be/LGPZmW-PSdo?si=P60Pnga53t9JlR6g\n[AUTOR] = PRO-LIMP AUTOMATIZACION\n[TELEFONO] = +34 636832005"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "How to Use JSON in Make_Parser_Aggregator\nWEB ORIGINAL:",
+      "contenido": "How to Use JSON in Make_Parser_Aggregator:\nWeb Original:\nHow to Use JSON in Make_Parser_Aggregator:\nhttps://youtu.be/p1RwauicNfI?si=r9533TtbRrgv3Avm"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción a JSON",
+      "contenido": "Introducción a JSON:\nJSON significa \"Notación de Objetos JavaScript\" y es una forma organizada de escribir datos como texto para que las computadoras puedan entenderlos, similar a una lista de la compra muy ordenada.[1][2][3]\n\nEstructura de JSON:\n\nSe organiza en \"propiedades\" (pares clave-valor) separadas por comas.[3]\n\nLa primera parte es el \"nombre\" (o clave), que funciona como el título de una columna en una base de datos (ejemplo: \"nombre\", \"edad\").[2][3]\n\nLa segunda parte es el \"valor\", que es el dato real (ejemplo: \"John\", \"30\").[3]\n\nEjemplo: nombre: John, age: 30, car: null."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Módulo Agregador a JSON: Propósito y Entradas",
+      "contenido": "Módulo Agregador a JSON: Propósito y Entradas:\nEl propósito del módulo \"Aggregate to JSON\" es convertir muchas líneas de datos separadas (conocidas como \"paquetes\" o \"bundles\") en un solo paquete grande.[2][3][4] Este paquete contiene una lista de todos esos datos en formato JSON. Es muy útil para enviar mucha información de golpe, como a una Inteligencia Artificial.[3]\n\nEntradas necesarias:\n\nMódulo Fuente: Es el paso anterior que entrega los múltiples paquetes de datos (como resultados de una tabla, Excel o base de datos).[3] Por ejemplo, 3 líneas de base de datos generan 3 paquetes.[3]\n\nEstructura de Datos: Debes definir cómo se verán los datos en el JSON final (por ejemplo, definir que \"nombre\" es texto y \"descripción\" es texto).[3]"
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Módulo Agregador a JSON: Salida y Caso de Uso",
+      "contenido": "Módulo Agregador a JSON: Salida y Caso de Uso:\nSalida:\nEl módulo produce un único paquete de datos que contiene un \"array\" (una lista) de JSONs. Cada JSON dentro de esta lista corresponde a un paquete de datos original.\n\nCaso de Uso Importante:\nPermite crear una base de conocimientos completa para una Inteligencia Artificial.[3] Por ejemplo, puedes enviarle una base de datos de muchos títulos antiguos de una sola vez para que la IA se inspire y cree uno nuevo, en lugar de darle los títulos uno por uno.[3]"
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Módulo Analizador de JSON: Propósito y Entradas",
+      "contenido": "Módulo Analizador de JSON: Propósito y Entradas:\nEl módulo \"Parse JSON\" es la inversa del Agregador. Su propósito es tomar una sola cadena de texto JSON (una lista) y dividirla de nuevo en múltiples paquetes de datos separados. Esto es necesario para poder usar cada dato individualmente en pasos posteriores de la automatización.[3]\n\nEntradas necesarias:\n\nCadena JSON (JSON String): Usualmente es la lista JSON que se obtuvo del módulo \"Aggregate to JSON\".[3]\n\nEstructura de Datos: Se utiliza la misma estructura para definir cómo deben verse los paquetes de salida.[2][3]"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Módulo Analizador de JSON: Salida y Caso de Uso",
+      "contenido": "Módulo Analizador de JSON: Salida y Caso de Uso:\nSalida:\nGenera múltiples paquetes de datos, uno por cada elemento que existía en la lista JSON original.\n\nCaso de Uso Importante:\nSi tienes una gran cadena JSON, el sistema la ve como una única fila de texto largo y no puede acceder a valores individuales (como N2, D2, N3).[3] El Analizador de JSON separa el texto en variables individuales que sí se pueden utilizar en el resto de la automatización.[2][3]"
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Módulo Crear JSON",
+      "contenido": "Módulo Crear JSON:\nEl propósito del módulo \"Create JSON\" es convertir cada paquete de datos individual en una única cadena JSON.[2][3]\n\nDiferencia con el Agregador:\nMientras que el Agregador toma muchos paquetes y crea una lista grande, \"Crear JSON\" toma cada paquete uno por uno y lo convierte a un solo JSON, realizando tantas operaciones como paquetes haya.[2][3]\n\nEntradas:\n\nUno o muchos paquetes de datos de entrada.[2][3]\n\nEstructura de datos del JSON que se quiere crear.[2][3][4][5]\n\nSalida:\nUna o muchas cadenas JSON (texto).[1][2][3][6]"
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Módulo Convertir JSON a XML",
+      "contenido": "Módulo Convertir JSON a XML:\nEl módulo \"Convert JSON to XML\" simplemente convierte una cadena de texto JSON en XML, que es otro formato de datos estructurados.[1][2][3][4]\n\nUso:\nEs un conversor clásico que generalmente no se utiliza a menos que se necesiten casos de uso muy específicos.[2][3]"
+    },
+    {
+      "itemID": "008",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nPara validar la información de este tutorial, se han consultado las fuentes oficiales de Make (anteriormente Integromat) sobre el manejo de JSON.\n\nResumen de puntos técnicos validados:\n\nAggregate to JSON: La documentación confirma que este módulo agrega múltiples paquetes en una sola cadena JSON, requiriendo una estructura de datos definida.[2][3]\n\nParse JSON: Se confirma que procesa una cadena JSON y la convierte en paquetes de datos (bundles) estructurados, permitiendo mapear los elementos en módulos siguientes.\n\nCreate JSON: Validadas su función de transformar datos nativos en una cadena JSON basada en una estructura de datos.\n\nJSON to XML: Confirmada la existencia del transformador para convertir formatos de datos.\n\nEnlaces a documentación oficial y soporte:\n\nDocumentación principal de la App JSON en Make: https://www.make.com/en/help/app/json[[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGttbRO_7xuU8oj-J34fsF6Y1FaHQ3XhzbBgg4oZMuXnD8YuS-Lak1UITTKEjXXwzHJFOlkfYGTHpNgDsF0nQW5aUTRd4tb3-UjFcnY7ChCrZhEVJ6kJLhdGWkB4wOU2XxiuG1TBB0%3D)][[5](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQECrUoFMll_Kq3gCsIfZLg2L9epTw9rqJt5uNKoM5CmGZyrXSmA1ZOHce_ZJYJlhYCvOxZbHMVa70b9HbrKIcVYkxgsRURt1No7J0tNybxg8MA09-A18j1CWc3lFuVacRqLiE1FxK_ekSgqyQqMoPKtuHG_O4-5_g4u7mzJ3iJhsxE%3D)]\n\nExplicación del módulo Parse JSON: https://www.make.com/en/help/tools/json#parse-json[[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGttbRO_7xuU8oj-J34fsF6Y1FaHQ3XhzbBgg4oZMuXnD8YuS-Lak1UITTKEjXXwzHJFOlkfYGTHpNgDsF0nQW5aUTRd4tb3-UjFcnY7ChCrZhEVJ6kJLhdGWkB4wOU2XxiuG1TBB0%3D)]\n\nExplicación del módulo Aggregate to JSON: https://www.make.com/en/help/tools/json#aggregate-to-json[[3](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGttbRO_7xuU8oj-J34fsF6Y1FaHQ3XhzbBgg4oZMuXnD8YuS-Lak1UITTKEjXXwzHJFOlkfYGTHpNgDsF0nQW5aUTRd4tb3-UjFcnY7ChCrZhEVJ6kJLhdGWkB4wOU2XxiuG1TBB0%3D)][[4](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGaiTsUsgGDc6NFy12-T8OlUlaYCaNP0hK-TkA0fevoWIGW8Rm9cgBC557C45VCFHgsWzI1RfyM6_nODhD7LkEZYjHcIjeF63nPXCESoZbpx_BWTn65)][[6](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGV8jb80Rc2DeoKQiFN2fQETABkURpbBV0uHECRsF4Iw47zP98VMqqQGM5v4AQie8Tl82b3zZqeQ7OVXxCj5iGUioNlcUJhZERl7F1YEPGfSB0QMDuJjjMYz1XfTRAXXkBhz6vM)]\n\nTransformación de datos (XML/JSON): https://www.make.com/en/help/tools/json#transforming-data-records-to-json\n\n\nSources\nhelp\naminefajry.com\nyoutube.com\nyoutube.com\nmake.com\nmake.com\nmake.com\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\nMake.com documentation JSON modules Aggregate to JSON Parse JSON\nMake.com official help JSON parser aggregator create JSON"
+    },
+
+    {
+      "itemID": "009",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN: https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/How%20to%20Use%20JSON%20in%20Make_Parser_Aggregator.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

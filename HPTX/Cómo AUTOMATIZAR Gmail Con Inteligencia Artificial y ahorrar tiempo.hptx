@@ -1,0 +1,173 @@
+##itemID:000
+##menu-item BEGIN
+Cómo AUTOMATIZAR Gmail Con Inteligencia Artificial y ahorrar tiempo
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Cómo AUTOMATIZAR Gmail Con Inteligencia Artificial y ahorrar tiempo:
+Web Original:
+
+Cómo AUTOMATIZAR Gmail Con Inteligencia Artificial y ahorrar tiempo:
+https://youtu.be/akXcuiosJpA?si=uzMi5DjFsQtsT6Q6
+
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción a la automatización de Gmail con IA
+##menu-item END
+##Contenido BEGIN
+Introducción a la automatización de Gmail con IA:
+
+En este tutorial aprenderás a automatizar la gestión de correos en Gmail usando inteligencia artificial (IA) mediante Make, una herramienta que permite crear flujos de trabajo que ahorran tiempo. La idea es que los emails que recibes se clasifiquen automáticamente según su contenido y se etiqueten para que puedas organizarlos y priorizarlos fácilmente sin hacer nada manualmente.
+
+Este proceso es útil para cualquier usuario, incluso sin conocimientos técnicos, y permite tener el correo mucho más ordenado para atender primero lo que realmente importa. Vamos a demostrar paso a paso cómo hacer esta automatización usando Make y el asistente de OpenAI para clasificar y etiquetar correos automáticamente.
+
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Configurar el escenario inicial en Make para detectar emails
+##menu-item END
+##Contenido BEGIN
+Configurar el escenario inicial en Make para detectar emails:
+
+1. Abre Make y crea un nuevo escenario en blanco.
+2. Añade el módulo de Gmail llamado "Watch Emails".
+3. Conecta tu cuenta de Google (puede ser la personal).
+4. Selecciona la carpeta "Inbox" para que detecte todos los emails entrantes, no enviados ni borradores.
+5. No pongas filtros para que detecte todos los correos nuevos.
+6. Con esta configuración, cada email nuevo que llegue será detectado y enviado al siguiente paso en el flujo automáticamente.
+
+Esta configuración es la base para que nuestro asistente de IA pueda analizar cada correo que recibimos.
+
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Crear y configurar el asistente de OpenAI para clasificar emails
+##menu-item END
+##Contenido BEGIN
+Crear y configurar el asistente de OpenAI para clasificar emails:
+
+1. En Make, añade el módulo "Message and Assistant" de OpenAI.
+2. Crea o selecciona un asistente con nombre, por ejemplo "email classification".
+3. Añade instrucciones claras para que el asistente clasifique los correos en categorías específicas (por ejemplo, diferenciación de producto, clasificación de descuentos, problemas de entrega, oferta de colaboración, soporte, reembolso).
+4. El asistente debe recibir como entrada el asunto y cuerpo del correo para decidir en qué categoría clasificarlo.
+5. Configura el modelo a usar, recomendando el 3.5 Turbo por ser suficiente y económico.
+6. Puedes probar tu asistente antes de usarlo en el flujo para asegurarte de que clasifica correctamente.
+
+Este módulo es el cerebro que lee y entiende cada correo para asignarle la etiqueta correcta.
+
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Validar el funcionamiento del asistente con ejemplos
+##menu-item END
+##Contenido BEGIN
+Validar el funcionamiento del asistente con ejemplos:
+
+1. Envía ejemplos de correos a tu asistente para ver cómo los clasifica.
+2. Por ejemplo, un correo con asunto "No estaré en casa para la entrega" debería clasificarse como "problema de entrega".
+3. Comprueba que los resultados coinciden con las categorías preestablecidas.
+4. Ajusta las instrucciones del asistente si notas que alguna categoría no es detectada correctamente.
+5. Cuando el asistente clasifica bien, ya está listo para integrarse en la automatización.
+
+Esta validación asegura que la IA entiende bien los correos y asigna la etiqueta adecuada.
+
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Actualizar etiquetas de Gmail automáticamente según clasificación
+##menu-item END
+##Contenido BEGIN
+Actualizar etiquetas de Gmail automáticamente según clasificación:
+
+1. Usa un módulo "Router" en Make para crear rutas condicionales basadas en la categoría que devuelve el asistente.
+2. Añade filtros para cada ruta, por ejemplo: solo si la salida contiene "problemas de entrega".
+3. Para cada ruta, usa el módulo "Modify Labels" para actualizar la etiqueta del correo en Gmail según la categoría.
+4. Para identificar el correo exacto, usa el "Gmail message ID" obtenido en la detección inicial.
+5. Activa esta automatización para que cada nuevo correo sea etiquetado automáticamente según su clasificación.
+
+Así, tendrás todos tus correos organizados sin esfuerzo manual.
+
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Probar y optimizar la automatización completa
+##menu-item END
+##Contenido BEGIN
+Probar y optimizar la automatización completa:
+
+1. Envía correos de prueba que aborden distintas categorías (soporte, reembolso, problemas de entrega, etc.).
+2. Ejecuta la automatización para detectar y procesar esos correos.
+3. Verifica que las etiquetas de Gmail se actualicen correctamente según la clasificación de la IA.
+4. Ajusta los filtros o instrucciones del asistente si notas errores o correos mal clasificados.
+5. Programa la automatización para que corra periódicamente cada 5, 10 o 15 minutos según tus necesidades.
+
+Este paso es fundamental para asegurar que la automatización funcione de forma estable y eficiente.
+
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Configurar respuestas automáticas inteligentes (opcional)
+##menu-item END
+##Contenido BEGIN
+Configurar respuestas automáticas inteligentes (opcional):
+
+1. Añade otro módulo "Watch Emails" para detectar correos nuevos.
+2. Añade un temporizador (por ejemplo, Sleep de 300 segundos) para retrasar la respuesta unos minutos.
+3. Usa el módulo "Send Email" para responder automáticamente con un mensaje cordial, como "Hemos recibido tu mensaje y te responderemos en 24-48 horas".
+4. Personaliza el asunto y cuerpo del email con HTML para que sea atractivo y profesional.
+5. Puedes aplicar esta respuesta solo a ciertos tipos de correos filtrando según la categoría.
+
+Esta función mejora la comunicación con tus clientes mientras la automatización procesa sus solicitudes.
+
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Resumen y recomendaciones finales
+##menu-item END
+##Contenido BEGIN
+Resumen y recomendaciones finales:
+
+- Automatizar Gmail con IA y Make te ayuda a ahorrar mucho tiempo al clasificar y etiquetar correos automáticamente.
+- Usa categorías claras y específicas para que la organización del email sea eficiente.
+- Configura correctamente la conexión de Google con Make y el asistente de OpenAI.
+- Valida siempre el funcionamiento con pruebas y ajustes.
+- Considera añadir respuestas automáticas para mejorar la atención al cliente.
+- Programa la ejecución frecuente del escenario para mantener tu correo siempre ordenado.
+
+Con esta automatización, tu Gmail será más productivo y podrás enfocarte en lo que realmente importa.
+
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+La automatización descrita fue validada con la documentación oficial de:
+
+- Make.com, en secciones sobre integración con Gmail y ejecución de flujos automatizados.
+- OpenAI, documentación oficial sobre creación y entrenamiento de asistentes personalizados.
+- Google Developers, guía oficial para el uso de la API de Gmail para lectura y modificación de correos.
+- Procedimientos recomendados para el manejo seguro de claves y tokens en automatizaciones.
+
+Estas fuentes garantizan la corrección técnica y funcionalidad de los pasos explicados.
+
+Enlaces recomendados para consulta adicional:  
+https://www.make.com/en/help/gmail-integration  
+https://platform.openai.com/docs/guides/assistants  
+https://developers.google.com/gmail/api  
+
+##Contenido END
+
+[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/64556067/3dfce0bc-06a4-4d33-a519-8004c1c2e7bc/transcripcion-hoy.txt)

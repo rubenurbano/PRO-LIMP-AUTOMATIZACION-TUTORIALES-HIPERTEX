@@ -1,0 +1,45 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": null,
+      "contenido": "Cómo Scrapear Cualquier Web en Make)\n\nhttps://youtu.be/v3mJ6-2cnNM?si=ldqQbPjZdb4Rsanz"
+    },
+    {
+      "itemID": "000-2",
+      "menu_item": "WEB ORIGINAL:",
+      "contenido": "Web Original:\n\nhttps://youtu.be/v3mJ6-2cnNM?si=ldqQbPjZdb4Rsanz"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción al Web Scraping en Make",
+      "contenido": "Introducción al Web Scraping en Make:\n\nEl web scraping (o \"raspado web\") es una técnica para extraer información de páginas web de forma automática. Con Make, puedes construir flujos de trabajo visuales que realicen esta tarea sin necesidad de escribir ni una línea de código.\n\nEste tutorial te guiará a través de un proceso simple y claro, dividido en tres pasos principales:\n\nObtener el código de la web: El primer paso es capturar el código fuente (HTML) de la página que quieres analizar.\n\nExtraer los datos que necesitas: Una vez que tienes el código, aprenderás a identificar y extraer piezas específicas de información, como títulos, precios o enlaces.\n\nProcesar los datos extraídos: Si la página contiene una lista de elementos (por ejemplo, varios productos), verás cómo manejar cada uno de ellos de forma individual."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Paso 1: Obtener el Código HTML con el Módulo HTTP",
+      "contenido": "Paso 1: Obtener el Código HTML con el Módulo HTTP:\n\nTodo scraping comienza por obtener el contenido de la página web. En Make, esto se hace con el módulo HTTP.\n\nCrear un nuevo escenario: Inicia sesión en tu cuenta de Make y haz clic en \"Create a new scenario\".\n\nAñadir el módulo HTTP: Haz clic en el botón \"+\" y busca \"HTTP\". Selecciónalo de la lista de módulos.\n\nSeleccionar la acción \"Make a request\": Esta es la opción que nos permite actuar como un navegador para solicitar la información de una página web.[1][2]\n\nConfigurar la petición:\n\nURL: Pega la dirección completa de la página que quieres scrapear.\n\nMethod: Mantén el método GET, ya que su función es solicitar y recibir datos.\n\nParse response: Es muy importante que desactives esta opción (poner en \"No\"). Queremos recibir el código HTML como texto plano, sin que Make intente interpretarlo todavía.\n\nEjecutar para probar: Haz clic derecho sobre el módulo y selecciona \"Run this module only\". Si todo ha ido bien, verás el código HTML completo de la página en la sección de salida (\"Output\") bajo el campo \"Data\"."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Paso 2: Identificar los Datos a Extraer Usando el Navegador",
+      "contenido": "Paso 2: Identificar los Datos a Extraer Usando el Navegador:\n\nAntes de poder extraer los datos, necesitas saber cómo localizarlos dentro del código HTML. Para ello, usarás las herramientas de desarrollador de tu navegador.\n\nAbre la página web: Navega hasta la página que contiene la información que quieres extraer.\n\nInspeccionar el elemento: Haz clic derecho sobre el dato que te interesa (por ejemplo, el título de un producto) y selecciona \"Inspeccionar\" en el menú contextual. Esto abrirá una ventana con el código HTML de la página.\n\nEncontrar los selectores CSS: El código correspondiente al elemento que has seleccionado aparecerá resaltado. Fíjate en la etiqueta HTML (como <h2>, <p>, <a>) y en sus atributos, especialmente class o id. Esta combinación es lo que se conoce como \"selector CSS\" y nos sirve para identificar un dato de forma única.[3][4][5]\n\nPor ejemplo, si el nombre de un producto está dentro de una etiqueta <h2> y tiene la clase product-title, su selector CSS sería h2.product-title. Anota los selectores de todos los datos que quieras extraer."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Paso 3: Extraer la Información con el \"Text Parser\" y Regex",
+      "contenido": "Paso 3: Extraer la Información con el \"Text Parser\" y Regex:\n\nCon el HTML en nuestro poder y los selectores identificados, es hora de extraer los datos. Usaremos el módulo Text parser junto con expresiones regulares (Regex), un método muy potente para encontrar patrones en texto.[6][7]\n\nAñadir el módulo \"Text parser\": Después del módulo HTTP, añade el módulo \"Text parser\".\n\nSeleccionar la acción \"Match pattern\": Esta opción busca y extrae fragmentos de texto que coincidan con un patrón que le definamos.[6][8]\n\nConfigurar el \"Match pattern\":\n\nPattern (Patrón): Aquí se escribe la expresión regular (Regex). Una expresión regular es una secuencia de caracteres que define un patrón de búsqueda.[9][10] Por ejemplo, para extraer el texto dentro de una etiqueta <h1>, el patrón sería <h1>(.*?)</h1>. El fragmento (.*?) le dice a Make que capture todo lo que se encuentre entre las dos etiquetas.\n\nText: Conecta aquí el campo Data que obtuvimos del módulo HTTP.\n\nGlobal match: Activa esta opción si esperas encontrar varios elementos que coincidan con tu patrón en la misma página (por ejemplo, los nombres de todos los productos de una lista).\n\nMultiline: Activa también esta opción, ya que el código HTML está estructurado en múltiples líneas.\n\nEjecutar para probar: Al ejecutar el escenario, el \"Text parser\" debería devolver uno o varios paquetes de datos (\"bundles\"), cada uno conteniendo la información extraída.\n\nNota: Las expresiones regulares pueden parecer complejas. Herramientas online como regex101.com son muy útiles para probar y ajustar tus patrones antes de usarlos en Make."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Paso 4: Procesar Múltiples Resultados con el \"Iterator\"",
+      "contenido": "Paso 4: Procesar Múltiples Resultados con el \"Iterator\":\n\nSi has extraído una lista de elementos (por ejemplo, diez títulos de productos), el módulo \"Text parser\" habrá generado un \"array\" (una lista) de resultados. Para procesar cada uno de estos elementos de forma individual, necesitas el módulo Iterator.\n\nAñadir el módulo \"Iterator\": Busca en \"Flow Control\" el módulo \"Iterator\" y añádelo después del \"Text parser\".\n\nConfigurar el Iterator:\n\nArray: En este campo, mapea el array de resultados que generó el \"Text parser\". Lo identificarás porque su nombre termina con corchetes [].\n\nEl Iterator es un módulo especial que recibe una lista y ejecuta los siguientes módulos del escenario una vez por cada elemento de esa lista.[11][12][13] Por ejemplo, si tenías 10 resultados, los módulos que coloques después del Iterator se ejecutarán 10 veces.\n\nEsto te permite realizar acciones con cada dato extraído, como guardarlo en una nueva fila de Google Sheets o enviarlo a otra aplicación. Simplemente, mapea el campo Value que sale del Iterator en el módulo siguiente."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\nEste tutorial se basa en las funcionalidades documentadas de Make y en estándares web reconocidos. A continuación, se detallan los puntos validados y sus fuentes oficiales.\n\nMódulo HTTP \"Make a request\": La extracción del contenido de una página web se realiza mediante una petición GET. Esta es la función principal del módulo HTTP de Make, tal como se documenta en su centro de ayuda oficial.\n\nFuente: Documentación oficial de Make sobre el módulo HTTP.[2][14]\n\nIdentificación de Datos (Selectores CSS): La localización de elementos dentro de un documento HTML se basa en la sintaxis de Selectores CSS. Esta es una tecnología web estándar.\n\nFuente: MDN Web Docs por Mozilla, la referencia principal para estándares web.[3][4][15]\n\nMódulo Text Parser \"Match Pattern\": La extracción de datos específicos del HTML se realiza buscando patrones mediante expresiones regulares (Regex). El funcionamiento de este módulo está descrito en la documentación de Make.[6][7]\n\nFuente: Centro de ayuda de Make sobre el \"Text parser\".[6]\n\nFuente: Guía de referencia sobre Expresiones Regulares en MDN Web Docs.[9][10]\n\nMódulo Iterator: Para procesar múltiples resultados (arrays) de forma individual, se utiliza el módulo \"Iterator\" de Flow Control. Su propósito es dividir un array en múltiples bundles para su procesamiento secuencial.\n\nFuente: Documentación oficial de Make sobre módulos de \"Flow control\".[12][13]"
+    }
+  ]
+}

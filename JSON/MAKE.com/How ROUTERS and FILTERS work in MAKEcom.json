@@ -1,0 +1,77 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "How ROUTERS and FILTERS work in MAKEcom\nWEB ORIGINAL:",
+      "contenido": "How ROUTERS and FILTERS work in MAKEcom:\nWeb Original:\nHow ROUTERS and FILTERS work in MAKEcom:\nhttps://youtu.be/l5yyPB-xjR4?si=4ZYoHa4jlu0zXnQK"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción: ¿Qué son Routers y Filters?",
+      "contenido": "Introducción: ¿Qué son Routers y Filters?:\nEste tutorial explica paso a paso cómo usar Routers (Enrutadores) y Filters (Filtros) en la plataforma Make.com.[1][2][3][4][5][6][7][8] Estas herramientas automatizan el envío de información a diferentes destinos según condiciones específicas.[2][3][7][9][10]\n\nImagina este proceso como clasificar correo en una oficina:\n\nEl enrutador desvía el correo a diferentes mesas.\n\nLos filtros son las reglas que deciden a qué mesa exacta va cada carta."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Paso 1: Configuración del Escenario y Formulario",
+      "contenido": "Paso 1: Configuración del Escenario y Formulario:\nEl objetivo es recibir datos de un Google Form y enviarlos a dos hojas de Google Sheets distintas: una para clientes de USA y otra para Francia.\n\nConfigura un módulo de Google Forms para recibir los datos.[7]\n\nEl formulario debe tener un menú desplegable para que el usuario seleccione su país (USA o Francia).[7]\n\nPara establecer la conexión, obtén el ID del formulario desde la sección de detalles del cliente del formulario. Copia y pega este ID en la configuración del módulo de Google Forms en Make.com.\n\nEjecuta el escenario una vez para probar la conexión y verificar que recibes un 'bundle' (paquete de datos)."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Paso 2: Agregar el Router (Enrutador)",
+      "contenido": "Paso 2: Agregar el Router (Enrutador):\nEl router permite ramificar el flujo de trabajo para enviar datos a destinos separados.[1][2][4][5][6][7]\n\nElige una forma de añadirlo:\na. Ve a la sección 'tool' (herramientas), haz clic en 'flow control' y selecciona 'router'.\nb.[2][7] O haz clic derecho en la cadena de enlace entre módulos y elige 'add a router'.[5][7][11]\n\nConecta el router al módulo de Google Forms para que reciba los datos."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Paso 3: Conectar las Hojas de Google (USA y Francia)",
+      "contenido": "Paso 3: Conectar las Hojas de Google (USA y Francia):\nDebes agregar dos módulos de Google Sheets al router.[7]\n\nConfiguración del primer módulo (USA):\n\nHaz clic en el router y selecciona Google Sheets.\n\nElige la acción 'Add a row' (Agregar una fila).\n\nConfigura tu conexión de Gmail.\n\nEn 'Select file', elige 'select by path', selecciona tu Drive y el archivo de la hoja de cálculo.\n\nEspecifica la pestaña (Sheet name). Para este módulo, el nombre es 'client's USA'.[7]\n\nVerifica que Make.com detecte los encabezados (nombre, email, teléfono, etc.)."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Paso 4: Mapear Valores para la Hoja USA",
+      "contenido": "Paso 4: Mapear Valores para la Hoja USA:\nEl mapeo indica dónde colocar cada dato del formulario en la hoja de cálculo.\n\nEn la configuración del módulo de Google Sheets (USA), busca la información en las respuestas del formulario.\n\nPara el campo 'Name': Ve a 'answers', luego 'text answers' y toma el 'value'.[7]\n\nRepite esto para 'Email' y 'Company size'.\n\nEn el campo 'Source', puedes escribir 'form'.\n\nHaz clic en 'okay'.[1][2][3][7][12]"
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Paso 5: Conectar y Mapear la Hoja Francia",
+      "contenido": "Paso 5: Conectar y Mapear la Hoja Francia:\n\nAgrega un segundo módulo de Google Sheets al router siguiendo los mismos pasos de conexión.\n\nEspecifica el nombre de la pestaña correcto: 'client France'.[7]\n\nMapea los valores (Nombre, Email, etc.) exactamente igual que en la hoja de USA.\n\nHaz clic en 'okay'.[1][2][3][7][12]"
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Paso 6: Agregar los Filters (Filtros)",
+      "contenido": "Paso 6: Agregar los Filters (Filtros):\nLos filtros restringen el flujo para que solo pasen ciertos datos.[2][3][6][7][9][10][12] Se colocan en los caminos entre el router y las hojas.\n\nPara añadir un filtro:\n\nHaz clic izquierdo en el enlace que va del router a la hoja de Google Sheets.\n\nO haz clic derecho en la cadena y selecciona 'setup a filter'.[3][7][9]"
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Pasos 7 y 8: Configurar Filtros para USA y Francia",
+      "contenido": "Pasos 7 y 8: Configurar Filtros para USA y Francia:\nConfiguración del Filtro USA:\n\nEtiqueta (Label): 'USA'.[9]\n\nCondición: Busca el campo 'Country' en los datos del formulario y toma su 'value'.[7][9]\n\nOperador: En 'text operators', elige 'equal to'.[9]\n\nValor: Escribe 'USA'.[9]\n\nHaz clic en 'okay'.[1][2][3][7][12]\n\nConfiguración del Filtro Francia:\nRepite el proceso en el camino hacia la hoja de Francia.[7]\n\nEtiqueta: 'France'.[7]\n\nCondición: Campo 'Country'.[7][9]\n\nOperador: 'equal to'.\n\nValor: Escribe 'France'.[7]\n\nHaz clic en 'okay'.[1][2][3][7][12]"
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Paso 9: Prueba del Escenario",
+      "contenido": "Paso 9: Prueba del Escenario:\n\nEnvía una respuesta de prueba en el formulario seleccionando país USA.\n\nEjecuta el escenario. El paquete de datos debe aparecer solo en el módulo de Google Sheets de USA y en la pestaña 'client's USA'.\n\nEnvía una segunda respuesta seleccionando Francia.[7]\n\nEjecuta el escenario. El paquete de datos debe aparecer solo en el módulo de Francia y en la pestaña 'client France'."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Pasos 10 y 11: Filtros Compuestos (Regla AND)",
+      "contenido": "Pasos 10 y 11: Filtros Compuestos (Regla AND):\nPuedes hacer filtros más estrictos agregando más condiciones.\n\nConfiguración:\n\nVe al filtro USA.[9]\n\nSelecciona 'Add end rule' (Agregar regla Y).\n\nNueva Condición: Campo 'Company size'.\n\nOperador: 'equal to'.[9]\n\nValor: 'large'.\n\nAhora el dato solo pasará si el país es USA Y el tamaño de la compañía es grande.\n\nPrueba:\n\nEnvía una respuesta con USA y tamaño 'small'. El dato no pasará el filtro.\n\nEnvía una respuesta con USA y tamaño 'large'. El dato sí pasará y llenará la hoja.[3][7]"
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\nLa información presentada en este tutorial ha sido validada con la documentación oficial de Make (anteriormente Integromat) y recursos técnicos de soporte.\n\nPuntos técnicos validados:\n\nRouters (Enrutadores): La documentación confirma que un Router permite dividir el flujo del escenario en múltiples rutas para procesar datos de manera diferente en cada camino.[4][5] Se puede agregar desde la sección de herramientas de control de flujo o mediante clic derecho en una conexión.[7][11]\n\nFiltros (Filters): Se confirma que los filtros funcionan como \"guardianes\" que permiten o restringen el paso de paquetes de datos (bundles) entre módulos basándose en condiciones específicas.[6][7][9][10]\n\nOperadores: El uso del operador de texto \"Equal to\" (Igual a) es el método estándar para comparar cadenas de texto exactas, tal como se describe en el tutorial.\n\nMapeo (Mapping): El proceso de arrastrar y soltar elementos desde el panel de salida de un módulo anterior al panel de configuración del módulo actual es el funcionamiento central de Make.\n\nEnlaces a documentación oficial:\n\nAyuda de Make - Router: Explica cómo dividir el flujo y añadir rutas.\nURL: https://www.make.com/en/help/tools/router[[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQGFDaYVzGpNsk2C7vaPVoFeEOPYtos5l7s9S6CqFxUWCD1LTymwxkpGgrHzqHGBDATWZ2hbzwL_4s-euQCzRx4qHMhS7zhlu-5OovUGCUDlb29S3SlTXTUjE8osEIc7H3UIOMJYidA%3D)]\n\nAyuda de Make - Filtering: Detalla cómo configurar filtros, operadores y lógica (AND/OR).\nURL: https://www.make.com/en/help/scenarios/filtering\n\nAyuda de Make - Mapping: Guía sobre cómo mapear datos entre módulos.\nURL: https://www.make.com/en/help/mapping/mapping\n\nSources\nhelp\naminefajry.com\nyoutube.com\nyoutube.com\nautomatewithmax.com\nmake.com\nmake.com\nyoutube.com\nmake.com\nmake.com\nmake.com\nmake.com\naminefajry.com\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\nMake.com filtering data between modules\nMake.com help routers flow control\nMake.com documentation routers filters"
+    },
+
+    {
+      "itemID": "012",
+      "menu_item": "MAPA MENTAL:",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/How%20ROUTERS%20and%20FILTERS%20work%20in%20MAKEcom.MAPA.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    },
+
+    {
+      "itemID": "013",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/How%20ROUTERS%20and%20FILTERS%20work%20in%20MAKEcom.jpeg]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

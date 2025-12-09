@@ -1,0 +1,90 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": null,
+      "contenido": "Tutorial paso a paso Chatbot de Telegram con Memoria. Registra conversaciones\n[URL_WEB_YOUTUBE]"
+    },
+    {
+      "itemID": "000-2",
+      "menu_item": "Tutorial paso a paso Chatbot de Telegram con Memoria. Registra conversaciones \nWEB ORIGINAL:",
+      "contenido": "Tutorial paso a paso Chatbot de Telegram con Memoria. Registra conversaciones :\nWeb Original:\nTutorial paso a paso Chatbot de Telegram con Memoria. Registra conversaciones :\nhttps://youtu.be/JDaSCUiHLuk?si=MUAtlxvu42DMURkt"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Elegir la plataforma y las herramientas que vamos a usar",
+      "contenido": "Elegir la plataforma y las herramientas que vamos a usar:\nVamos a usar dos cosas principales: una página llamada Make.com (antes se llamaba Integromat) que es como un juego de conectar bloques para que las cosas pasen automáticamente, y Telegram porque es súper fácil crear robots allí. También usaremos la inteligencia artificial de Google Gemini para que el bot sea listo y Google Sheets para que guarde lo que hablamos (así tiene memoria)."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Crear el bot en Telegram con BotFather y obtener el token",
+      "contenido": "Crear el bot en Telegram con BotFather y obtener el token:\nAbre Telegram, busca @BotFather (es un bot oficial de Telegram). Escribe /newbot, ponle un nombre bonito (por ejemplo MiBotConMemoria) y luego un nombre de usuario que termine obligatoriamente en Bot (ejemplo: mibotconmemoria_bot). BotFather te dará una clave larga que se llama Token. Copia esa clave, la vas a necesitar enseguida."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Crear un escenario nuevo en Make y conectar Telegram",
+      "contenido": "Crear un escenario nuevo en Make y conectar Telegram:\nEntra a make.com, crea un Scenario nuevo. Pon el primer módulo: Telegram > Watch updates. Cuando te pida el Token, pega la clave que te dio BotFather. Make creará automáticamente el Webhook (es como una dirección secreta para que Telegram le avise cuando alguien hable con tu bot)."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Probar que todo funciona enviando /start al bot",
+      "contenido": "Probar que todo funciona enviando /start al bot:\nActiva el escenario en Make (botón Run once o ponlo en ON). Abre Telegram, busca tu bot por el nombre que le pusiste y pulsa Start. En Make verás que llega el mensaje. ¡Ya está conectado!"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Añadir la inteligencia artificial Google Gemini",
+      "contenido": "Añadir la inteligencia artificial Google Gemini:\nAñade un nuevo módulo después del de Telegram: Google AI > Gemini > Create a completion. Elige el modelo Gemini 1.5 Flash porque es muy rápido y gratis para pruebas."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Explicarle al bot quién es (mensaje de sistema)",
+      "contenido": "Explicarle al bot quién es (mensaje de sistema):\nEn Gemini pon un mensaje con rol “System” y escribe algo como: Eres un asistente muy amable que ayuda con lo que sea. Responde siempre en español y sé simpático. Aquí puedes poner también precios, horarios o cualquier información fija que quieras que el bot sepa siempre."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Pasarle lo que escribió el usuario y enviar la respuesta",
+      "contenido": "Pasarle lo que escribió el usuario y enviar la respuesta:\nAñade otro mensaje en Gemini con rol “User” y pon ahí el texto que llegó de Telegram (Message → Text). Luego añade un módulo Telegram > Send a text message or a reply, pon el Chat ID (Message → Chat → ID) y en texto pon la respuesta que dio Gemini. Ya tienes un bot básico que contesta."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Crear una hoja de Google Sheets para guardar la memoria",
+      "contenido": "Crear una hoja de Google Sheets para guardar la memoria:\nAbre Google Sheets y crea una hoja nueva. Pon estas columnas en la primera fila: ID_usuario, Nombre, Apellido, Mensaje_usuario, Mensaje_bot, Fecha_Hora."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Guardar el mensaje del usuario antes de contestar",
+      "contenido": "Guardar el mensaje del usuario antes de contestar:\nDespués del módulo Telegram, añade Google Sheets > Add a row. Conecta tu hoja y pon:\n- ID_usuario: Message → From → ID\n- Nombre: Message → From → First name\n- Apellido: Message → From → Last name\n- Mensaje_usuario: Message → Text\n- Fecha_Hora: ahora (usa la función now)\nDeja la columna Mensaje_bot vacía por ahora."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Buscar todo lo que ese usuario ha hablado antes",
+      "contenido": "Buscar todo lo que ese usuario ha hablado antes:\nAñade otro módulo Google Sheets > Search rows. En la condición pon que ID_usuario sea igual al ID del usuario actual. Así trae todas las filas de esa persona."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Juntar toda la conversación en un solo texto",
+      "contenido": "Juntar toda la conversación en un solo texto:\nAñade Tools > Text aggregator. Fuente: el Search rows anterior. Separador: salto de línea. Y en el texto pon algo como: Usuario: {{Mensaje_usuario}} Bot: {{Mensaje_bot}} (así queda todo ordenadito para que Gemini lo entienda)."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Mandarle a Gemini toda la conversación pasada + el mensaje nuevo",
+      "contenido": "Mandarle a Gemini toda la conversación pasada + el mensaje nuevo:\nEn el módulo Gemini borra el mensaje simple de “User” que tenías. Ahora pon el texto grande que salió del Text aggregator. Así Gemini recuerda todo lo que se ha hablado."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "Guardar la respuesta del bot en la hoja",
+      "contenido": "Guardar la respuesta del bot en la hoja:\nAñade Google Sheets > Update a row. Selecciona la fila que creó el Add a row del principio (Make te da el Row number). Y en la columna Mensaje_bot pon la respuesta que dio Gemini."
+    },
+    {
+      "itemID": "014",
+      "menu_item": "Evitar que procese el mensaje /start",
+      "contenido": "Evitar que procese el mensaje /start:\nEntre el módulo Telegram y todo lo demás pon un Router con un Filter. Condición: Message → Text does not contain “/start” (así el primer /start no entra en la inteligencia artificial y no gasta créditos)."
+    },
+    {
+      "itemID": "015",
+      "menu_item": "Orden final de los módulos",
+      "contenido": "Orden final de los módulos:\nTelegram Watch updates → Filter (descarta /start) → Google Sheets Add row → Google Sheets Search rows → Text aggregator → Gemini → Google Sheets Update row → Telegram Send message\n¡Con esto ya tienes un bot que recuerda todo y puede hablar con muchas personas a la vez sin mezclar conversaciones!\n\n\nVALIDACIÓN CON FUENTES TÉCNICAS OFICIALES\n- Creación de bots en Telegram y uso de BotFather: https://core.telegram.org/bots\n- Documentación oficial de la API de bots de Telegram: https://core.telegram.org/bots/api\n- Webhooks en Make.com para Telegram: https://www.make.com/en/help/app/telegram-bot\n- Módulo Google Gemini en Make: https://www.make.com/en/help/app/google-ai-studio-gemini\n- Funciones de Google Sheets en Make: https://www.make.com/en/help/app/google-sheets\n- Text Aggregator en Make: https://www.make.com/en/help/tools/text-aggregator\n\nTodos los pasos siguen exactamente las capacidades actuales (noviembre 2025) de estas plataformas oficiales."
+    }
+  ]
+}

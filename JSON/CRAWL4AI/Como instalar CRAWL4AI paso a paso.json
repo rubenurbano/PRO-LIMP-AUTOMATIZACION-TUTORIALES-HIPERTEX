@@ -1,0 +1,55 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Como instalar CRAWL4AI paso a paso\nWEB ORIGINAL:",
+      "contenido": "Como instalar CRAWL4AI paso a paso:\nWeb Original:\nComo instalar CRAWL4AI paso a paso:\nchatGPT\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción e Instalación de Python",
+      "contenido": "Introducción e Instalación de Python:\nEste tutorial te guiará para instalar CRAWL4AI, una herramienta para extraer información de sitios web.[1][2][3][4][5][6][7][8][9][10] Vamos a hacerlo juntos, paso por paso.\n\nParte 1: Instalar Python\n\nPaso 1: Abre tu navegador web (Chrome, Firefox o el que uses).\n\nPaso 2: Escribe en la barra de direcciones: python.org y presiona Enter.\n\nPaso 3: Haz clic en el botón grande que dice Downloads (Descargas) en la parte superior.\n\nPaso 4: Haz clic en el botón amarillo que dice Download Python (la versión más reciente).\n\nPaso 5: Espera a que termine de descargarse el archivo (verás el progreso en la parte inferior de tu navegador).\n\nPaso 6: Haz clic en el archivo que descargaste para abrirlo.\n\nPaso 7: Marca la casilla que dice Add Python to PATH (es MUY importante, está en la parte inferior de la ventana).\n\nPaso 8: Haz clic en el botón Install Now (Instalar ahora).\n\nPaso 9: Espera a que termine la instalación (puede tardar unos minutos).\n\nPaso 10: Haz clic en Close (Cerrar) cuando aparezca el mensaje de que la instalación fue exitosa."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Verificar instalación de Python",
+      "contenido": "Verificar instalación de Python:\nParte 2: Verificar que Python se instaló correctamente\n\nPaso 11: Presiona la tecla de Windows en tu teclado (o Command+Espacio si usas Mac).\n\nPaso 12: Escribe cmd si usas Windows o terminal si usas Mac.\n\nPaso 13: Presiona Enter para abrir la ventana negra (se llama Terminal o Símbolo del sistema).\n\nPaso 14: Escribe exactamente esto: python --version y presiona Enter.\n\nPaso 15: Verifica que aparezca algo como Python 3.12 o similar (significa que funcionó)."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Instalación de pipx",
+      "contenido": "Instalación de pipx:\nParte 3: Instalar pipx\n\nPaso 16: En la misma ventana negra, escribe: python -m pip install --user pipx y presiona Enter.\n\nPaso 17: Espera a que termine de instalarse (verás muchas líneas de texto pasando).\n\nPaso 18: Cuando termine y vuelva a aparecer el cursor parpadeante, escribe: python -m pipx ensurepath y presiona Enter.\n\nPaso 19: Lee el mensaje que aparece (dirá que pipx está listo para usar).\n\nPaso 20: Cierra la ventana negra haciendo clic en la X de la esquina."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Reiniciar y verificar pipx",
+      "contenido": "Reiniciar y verificar pipx:\nParte 4: Reiniciar para que los cambios funcionen\n\nPaso 21: Presiona la tecla de Windows nuevamente (o Command+Espacio en Mac).\n\nPaso 22: Escribe cmd o terminal otra vez.\n\nPaso 23: Presiona Enter para abrir una nueva ventana negra.\n\nPaso 24: Escribe: pipx --version y presiona Enter.\n\nPaso 25: Verifica que aparezca un número de versión (como 1.4.3 o similar)."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Instalar Playwright",
+      "contenido": "Instalar Playwright:\nParte 5: Instalar Playwright (necesario para CRAWL4AI)\n\nPaso 26: En la ventana negra, escribe: python -m pip install playwright y presiona Enter.\n\nPaso 27: Espera a que termine de instalarse.\n\nPaso 28: Escribe: playwright install y presiona Enter.\n\nPaso 29: Espera a que descargue los navegadores (puede tardar varios minutos, es normal)."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Instalar CRAWL4AI",
+      "contenido": "Instalar CRAWL4AI:\nParte 6: Instalar CRAWL4AI\n\nPaso 30: Escribe en la ventana negra: pipx install crawl4ai y presiona Enter.\n\nPaso 31: Espera a que termine la instalación (verás líneas de texto moviéndose).\n\nPaso 32: Cuando termine, escribe: crawl4ai-setup y presiona Enter.\n\nPaso 33: Espera a que complete la configuración inicial."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Verificación final y conclusión",
+      "contenido": "Verificación final y conclusión:\nParte 7: Verificar que todo funciona\n\nPaso 34: Escribe: crawl4ai --version y presiona Enter.\n\nPaso 35: Si ves un número de versión, ¡todo está listo! Has terminado con éxito.\n\n¡Felicitaciones! Ahora tienes CRAWL4AI instalado y listo para usar. Para usarlo, solo necesitas abrir la ventana negra (Terminal) y escribir comandos que empiecen con crawl4ai."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Solución de Problemas",
+      "contenido": "Solución de Problemas:\n¿Algo no funcionó?\n\nSi en algún paso ves un mensaje de error en rojo, intenta estos pasos de solución:\n\nSolución 1: Cierra la ventana negra y ábrela de nuevo, luego reintenta el paso que falló.\n\nSolución 2: Reinicia tu computadora completamente y vuelve a intentar desde el paso que falló.\n\nSolución 3: Pídele ayuda a un adulto para revisar el mensaje de error específico."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nPara esta sección, se han consultado fuentes técnicas oficiales relacionadas con Crawl4AI y las herramientas de Python mencionadas en el tutorial.\n\nResumen de puntos técnicos validados:\n\nRequisitos de entorno: Se confirma que Crawl4AI es una biblioteca basada en Python, por lo que la instalación previa de Python (versión 3.x) es un requisito fundamental.\n\nMétodo de instalación: Aunque la documentación estándar suele referirse a pip, el uso de pipx (descrito en el tutorial) es una práctica validada y recomendada para instalar herramientas de línea de comandos de Python en entornos aislados, evitando conflictos de dependencias.\n\nDependencias: La herramienta depende de Playwright para la automatización de navegadores. El comando playwright install es necesario para descargar los binarios del navegador (Chromium, Firefox, WebKit) que Crawl4AI utiliza para navegar.\n\nComando de configuración: Existe el script crawl4ai-setup (o crawl4ai-doctor en versiones recientes) que ayuda a verificar y finalizar la configuración del entorno, incluyendo la gestión de Playwright si no se ha hecho manualmente.\n\nRepositorio Oficial: El proyecto es de código abierto y está alojado en GitHub bajo el usuario \"unclecode/crawl4ai\".\n\nEnlaces a documentación oficial consultada:\n\nRepositorio oficial en GitHub: https://github.com/unclecode/crawl4ai\n\nPágina del proyecto en PyPI: https://pypi.org/project/crawl4ai/\n\nDocumentación oficial de Playwright (dependencia clave): https://playwright.dev/python/docs/intro\n\n\ncrawl4ai.com -> https://crawl4ai.com\n\nag2.ai -> https://ag2.ai\n\ndev.to -> https://dev.to\n\nrevanthquicklearn.com -> https://revanthquicklearn.com\n\ncrawl4ai.com -> https://crawl4ai.com\n\npiwheels.org -> https://www.piwheels.org\n\npypi.org -> https://pypi.org\n\ngithub.com -> https://github.com\n\ndicloak.com -> https://dicloak.com\n\ndocs.codes -> https://docs.codes[[1](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQHrKwoD3wLpOpWcFO3mGYJNjckS7PmfIkVEjmY4ISGFbPOYt1Hme5i5eZrw0l2qojPfHJ9QjWiAJPKnw2fUa4EMhpOVdL-ZXJlOwX2Ej20%3D)]\n\n\nComo instalar CRAWL4AI paso a paso\nchatGPT\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "GOOGLE SHEETS-MAKE.COM-CHATGPT-AUTOMATION TUTORIAL\nWEB ORIGINAL:",
+      "contenido": "GOOGLE SHEETS-MAKE.COM-CHATGPT-AUTOMATION TUTORIAL:\nWeb Original:\nGOOGLE SHEETS-MAKE.COM-CHATGPT-AUTOMATION TUTORIAL:\nhttps://youtu.be/EJWyHI6_OY8?si=89VE9ZqVegXggOg6"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción y objetivo del tutorial",
+      "contenido": "Introducción y objetivo del tutorial:\nEste video te enseñará a usar tres herramientas (Google Sheets, Make.com y ChatGPT) para hacer un trabajo automático. El objetivo es que, si alguien escribe algo en tu hoja de cálculo, un robot (Make.com + ChatGPT) lo lea y decida si esa persona es un vendedor o un comprador, y lo escriba automáticamente."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Requisitos previos",
+      "contenido": "Requisitos previos:\nNecesitas una hoja de Google Sheets con al menos tres columnas: Descripción (el mensaje, por ejemplo, \"Estoy vendiendo una casa\"), ¿Tiene número de teléfono? y Vendedor o Comprador."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Regla fundamental de la automatización",
+      "contenido": "Regla fundamental de la automatización:\nSolo queremos que el robot piense si hay un número de teléfono en la descripción; si no lo hay, el robot debe ignorar esa fila."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Crear el escenario en Make.com",
+      "contenido": "Crear el escenario en Make.com:\nVe a make.com y crea un nuevo \"escenario\". Este será el cerebro del proceso."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Configurar el módulo de Google Sheets (El Lector)",
+      "contenido": "Configurar el módulo de Google Sheets (El Lector):\nAñade un nuevo módulo y busca Google Sheets. Elige la acción \"Observar nuevas filas\" (watch for new rows). Esto significa que Make.com estará atento a cualquier cosa nueva que escribas en la hoja. Si aún no tienes una conexión, crea una nueva conexión con Google Sheets. Busca el archivo de Google Sheets que estás usando dentro de \"Mi unidad\" (my drive). Indica el nombre de la hoja, que suele ser \"sheet1\". Haz clic en OK para completar la configuración. Puedes hacer \"Ejecutar una vez\" (run once) para asegurarte de que Make.com reconozca las columnas y las filas existentes (Descripción, ¿Tiene número de teléfono?, etc.)."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Añadir el módulo de OpenAI (ChatGPT)",
+      "contenido": "Añadir el módulo de OpenAI (ChatGPT):\nAñade un nuevo módulo después del módulo de Google Sheets. Busca y selecciona \"OpenAI\". Como acción, elige \"Crear una finalización de chat\" (create a completion o create a chat completion). Este será el analista inteligente."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Configurar la conexión de API con OpenAI",
+      "contenido": "Configurar la conexión de API con OpenAI:\nNecesitas una llave para conectar Make.com con ChatGPT. Ve a platform.openai.com/account/APIKeys. Crea una nueva clave API, ponle un nombre y cópiala. En Make.com, usa esa clave para crear una nueva conexión con OpenAI. No es necesario completar el ID de organización (organization ID)."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Seleccionar el modelo de IA",
+      "contenido": "Seleccionar el modelo de IA:\nSe recomienda usar GPT 3.5 turbo zero six one three, ya que es uno de los modelos más nuevos y baratos. Si tienes mucho texto para analizar, podrías usar el modelo 16k0613. Si necesitas una potencia mayor, usarías GPT-4, aunque probablemente no sea necesario para esta tarea."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Configurar los mensajes para ChatGPT",
+      "contenido": "Configurar los mensajes para ChatGPT:\nDebes añadir dos mensajes que son las instrucciones que le das a la IA. El primero es el Rol System (Instrucción General): Este mensaje le dice a ChatGPT lo que tiene que hacer. El contenido debe ser muy específico para que la respuesta sea simple y útil. Escribe: \"Verificar si el mensaje está escrito por un comprador o un vendedor. Responder con solo una palabra: comprador o vendedor\". Esto es crucial para que la respuesta pueda ser escrita directamente en tu hoja de cálculo, sin frases largas como \"Parece que es un comprador\". El segundo es el Rol User (El Dato a Analizar): Este mensaje le da a ChatGPT la descripción de la fila de Google Sheets. Como contenido, selecciona el campo de \"descripción\" de tu hoja de cálculo."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Aplicar el filtro (El Guardián)",
+      "contenido": "Aplicar el filtro (El Guardián):\nQueremos que la IA solo trabaje si la columna \"¿Tiene número de teléfono?\" dice \"Sí\". Para configurar el filtro, haz clic en la línea que conecta el módulo de Google Sheets y el módulo de OpenAI. Configura un filtro. Puedes nombrar el filtro, por ejemplo, \"Filtro de número de teléfono\". Como condición, elige el campo \"¿Tiene número de teléfono?\" (has phone number) y asegúrate de que sea igual (equals to) a la palabra \"Sí\" (yes). Ahora, si la fila no tiene un número de teléfono, el proceso se detendrá en este punto."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Añadir el módulo de actualización de Google Sheets (El Escritor)",
+      "contenido": "Añadir el módulo de actualización de Google Sheets (El Escritor):\nAñade un tercer módulo después de OpenAI. Busca Google Sheets y elige la acción \"Actualizar una fila\" (update a row)."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Configurar la actualización de la hoja",
+      "contenido": "Configurar la actualización de la hoja:\nElige el mismo archivo y el nombre de la hoja. Para el número de fila, esto es muy importante: para saber qué fila actualizar, usa el \"número de fila\" (row number) que obtuviste del primer módulo de Google Sheets. Selecciona la columna \"Vendedor o Comprador\" (seller or buyer) como la columna a llenar. Como contenido a escribir, aquí va la respuesta de ChatGPT. Busca la respuesta dentro de la estructura de OpenAI: \"choices\", luego \"messages\", y luego \"content\"."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "Prueba de éxito",
+      "contenido": "Prueba de éxito:\nAñade una fila en Google Sheets que diga \"Estoy comprando una propiedad en Nueva York\" y marca la columna \"¿Tiene número de teléfono?\" como \"Sí\". Al ejecutar el escenario, el filtro se pasará, ChatGPT responderá \"comprador\" y la columna se actualizará."
+    },
+    {
+      "itemID": "014",
+      "menu_item": "Prueba de fallo en el filtro",
+      "contenido": "Prueba de fallo en el filtro:\nAñade una fila con una descripción de venta, pero marca la columna \"¿Tiene número de teléfono?\" como \"No\". Al ejecutar, el proceso se detendrá en el filtro y no se enviará a ChatGPT, por lo que la columna \"Vendedor o Comprador\" quedará vacía."
+    },
+    {
+      "itemID": "015",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\nResumen de validación técnica:\n\nLos conceptos y procedimientos descritos en este tutorial están respaldados por la documentación oficial de las tres plataformas principales:\n\nMake.com y Google Sheets:\nLa integración entre Make.com y Google Sheets está completamente documentada y soportada oficialmente. Make.com ofrece módulos específicos para Google Sheets que incluyen la función \"Watch Rows\" (Observar nuevas filas) mencionada en el tutorial, así como funciones para actualizar filas específicas. La plataforma permite crear conexiones con Google Sheets mediante autenticación estándar de Google.\n\nOpenAI API:\nLa API de OpenAI proporciona el endpoint de Chat Completions que permite crear respuestas de chat utilizando modelos como GPT-3.5 Turbo y GPT-4. El sistema de roles (system, user, assistant) descrito en el tutorial está documentado oficialmente y es la forma estándar de estructurar las peticiones a la API.\n\nMake.com y OpenAI:\nMake.com tiene integración oficial con OpenAI que permite utilizar los modelos de ChatGPT directamente desde sus escenarios. La plataforma soporta la creación de chat completions y permite configurar mensajes con roles específicos tal como se describe en el tutorial.\n\nFiltros en Make.com:\nLa funcionalidad de filtros entre módulos es una característica nativa de Make.com que permite controlar el flujo de datos según condiciones específicas, validando así el enfoque descrito en el tutorial.\n\nEnlaces a documentación oficial:\n\nMake.com - Integración con Google Sheets:\nhttps://www.make.com/en/integrations/google-sheets\nhttps://www.make.com/en/help/app/google-sheets\nhttps://www.make.com/en/help/tutorials/using-google-sheets-with-make\n\nOpenAI - Chat Completions API:\nhttps://platform.openai.com/docs/guides/chat-completions\nhttps://platform.openai.com/docs/api-reference/chat\nhttps://platform.openai.com/account/api-keys\n\nMake.com - Integración con OpenAI:\nhttps://www.make.com/en/integrations/openai-gpt-3\nhttps://apps.make.com/openai-gpt-3\nhttps://apps.make.com/openai-modules\n\nPáginas de soporte:\nhttps://www.make.com/en/help (Centro de ayuda general de Make.com)\nhttps://platform.openai.com/docs (Documentación completa de OpenAI)\n\nNota importante sobre costos:\nPara utilizar la API de OpenAI es necesario tener créditos en la cuenta de OpenAI. Los costos varían según el modelo utilizado y la cantidad de tokens procesados tanto en la entrada (prompt) como en la salida (completion)."
+    },
+
+    {
+      "itemID": "016",
+      "menu_item": "Infografía visual del proceso",
+      "contenido": "[IMAGEN: https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/GOOGLE%20SHEETS-MAKE%20.COM-CHATGPT-AUTOMATION%20TUTORIAL0001]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    },
+
+    {
+      "itemID": "017",
+      "menu_item": "Infografía visual del proceso",
+      "contenido": "[IMAGEN: https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/GOOGLE%20SHEETS-MAKE.COM-CHATGPT-AUTOMATION%20TUTORIAL0000.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

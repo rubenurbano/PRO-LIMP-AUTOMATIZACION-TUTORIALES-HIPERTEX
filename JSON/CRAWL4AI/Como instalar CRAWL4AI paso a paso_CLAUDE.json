@@ -1,0 +1,131 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Como instalar CRAWL4AI paso a paso_CLAUDE\nWEB ORIGINAL:",
+      "contenido": "Como instalar CRAWL4AI paso a paso:\nWeb Original:\nComo instalar CRAWL4AI paso a paso:\nTutorial generado por Claude\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introduccion a CRAWL4AI",
+      "contenido": "Introduccion a CRAWL4AI:\nEste tutorial te guiara para instalar CRAWL4AI, una herramienta para extraer informacion de sitios web. Vamos a hacerlo juntos, paso por paso. Seguiremos un proceso completo dividido en siete partes principales que te llevaran desde la instalacion de Python hasta la verificacion final de que todo funciona correctamente."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Instalar Python",
+      "contenido": "Instalar Python:\nPrimero necesitas instalar Python en tu computadora. Abre tu navegador web, puede ser Chrome, Firefox o el que uses normalmente. Escribe en la barra de direcciones python.org y presiona Enter.\n\nCuando la pagina cargue, haz clic en el boton grande que dice Downloads o Descargas en la parte superior. Luego haz clic en el boton amarillo que dice Download Python, que descargara la version mas reciente disponible.\n\nEspera a que termine de descargarse el archivo. Veras el progreso en la parte inferior de tu navegador. Una vez descargado, haz clic en el archivo para abrirlo.\n\nAqui viene un paso MUY importante: marca la casilla que dice Add Python to PATH. Esta casilla esta en la parte inferior de la ventana y es fundamental para que todo funcione correctamente.\n\nAhora haz clic en el boton Install Now o Instalar ahora. El proceso de instalacion comenzara y puede tardar unos minutos. Se paciente mientras se completa.\n\nCuando termine la instalacion aparecera un mensaje indicando que fue exitosa. Haz clic en Close o Cerrar para finalizar este paso."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Verificar que Python se instalo correctamente",
+      "contenido": "Verificar que Python se instalo correctamente:\nAhora vamos a comprobar que Python se instalo bien. Presiona la tecla de Windows en tu teclado. Si usas Mac, presiona Command mas Espacio.\n\nEscribe cmd si usas Windows o terminal si usas Mac. Presiona Enter para abrir la ventana negra. Esta ventana se llama Terminal o Simbolo del sistema.\n\nEn esta ventana negra, escribe exactamente esto: python --version y presiona Enter.\n\nSi todo salio bien, deberia aparecer algo como Python 3.12 o un numero similar. Esto significa que Python se instalo correctamente y esta funcionando."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Instalar pipx",
+      "contenido": "Instalar pipx:\nAhora vamos a instalar pipx. En la misma ventana negra que tienes abierta, escribe: python -m pip install --user pipx y presiona Enter.\n\nEl proceso de instalacion comenzara y veras muchas lineas de texto pasando por la pantalla. Espera a que termine completamente.\n\nCuando termine y vuelva a aparecer el cursor parpadeante, escribe: python -m pipx ensurepath y presiona Enter.\n\nLee el mensaje que aparece. Este mensaje dira que pipx esta listo para usar.\n\nAhora cierra la ventana negra haciendo clic en la X de la esquina superior."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Reiniciar para que los cambios funcionen",
+      "contenido": "Reiniciar para que los cambios funcionen:\nPara que todos los cambios que hicimos funcionen correctamente, necesitas abrir una nueva ventana del terminal. Presiona la tecla de Windows nuevamente, o Command mas Espacio si usas Mac.\n\nEscribe cmd o terminal otra vez y presiona Enter para abrir una nueva ventana negra.\n\nAhora vamos a verificar que pipx esta funcionando. Escribe: pipx --version y presiona Enter.\n\nDeberia aparecer un numero de version como 1.4.3 o similar. Esto confirma que pipx esta instalado y listo para usar."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Instalar Playwright",
+      "contenido": "Instalar Playwright:\nPlaywright es necesario para que CRAWL4AI funcione correctamente. En la ventana negra que tienes abierta, escribe: python -m pip install playwright y presiona Enter.\n\nEspera a que termine de instalarse. Veras el progreso en la pantalla.\n\nCuando termine, escribe: playwright install y presiona Enter.\n\nEste comando descargara los navegadores necesarios. Este proceso puede tardar varios minutos, asi que no te preocupes si toma tiempo. Es completamente normal."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Instalar CRAWL4AI",
+      "contenido": "Instalar CRAWL4AI:\nAhora si vamos a instalar la herramienta principal. En la ventana negra, escribe: pipx install crawl4ai y presiona Enter.\n\nLa instalacion comenzara y veras lineas de texto moviendose en la pantalla. Espera pacientemente a que termine todo el proceso.\n\nCuando la instalacion termine, necesitas hacer una configuracion inicial. Escribe: crawl4ai-setup y presiona Enter.\n\nEspera a que complete la configuracion inicial. Este proceso preparara todo para que puedas usar CRAWL4AI."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Verificar que todo funciona",
+      "contenido": "Verificar que todo funciona:\nPara estar completamente seguros de que todo esta instalado correctamente, vamos a hacer una verificacion final.\n\nEscribe: crawl4ai --version y presiona Enter.\n\nSi ves un numero de version en la pantalla, felicitaciones, todo esta listo y has terminado con exito. Ahora tienes CRAWL4AI instalado y completamente funcional en tu computadora.\n\nPara usar CRAWL4AI en el futuro, solo necesitas abrir la ventana negra, que es el Terminal, y escribir comandos que empiecen con crawl4ai."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Soluciones si algo no funciono",
+      "contenido": "Soluciones si algo no funciono:\nSi en algun paso del tutorial viste un mensaje de error en color rojo, no te preocupes. Aqui tienes algunas soluciones que puedes intentar.\n\nSolucion 1: Cierra la ventana negra completamente y abrela de nuevo. Luego intenta nuevamente el paso que fallo.\n\nSolucion 2: Reinicia tu computadora completamente. Cuando vuelva a encender, comienza otra vez desde el paso que te dio el error.\n\nSolucion 3: Si ninguna de las soluciones anteriores funciona, pidele ayuda a un adulto para que revise contigo el mensaje de error especifico que aparecio. El mensaje de error puede darte pistas sobre que salio mal."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": ""
+    },
+    {
+      "itemID": "000-2",
+      "menu_item": null,
+      "contenido": "Tutorial generado por Claude"
+    },
+    {
+      "itemID": "001-2",
+      "menu_item": "Como instalar CRAWL4AI paso a paso\nWEB ORIGINAL:",
+      "contenido": "Como instalar CRAWL4AI paso a paso:\nWeb Original:\nComo instalar CRAWL4AI paso a paso:\nTutorial generado por Claude\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "002-2",
+      "menu_item": "Introduccion a CRAWL4AI",
+      "contenido": "Introduccion a CRAWL4AI:\nEste tutorial te guiara para instalar CRAWL4AI, una herramienta para extraer informacion de sitios web. Vamos a hacerlo juntos, paso por paso. Seguiremos un proceso completo dividido en siete partes principales que te llevaran desde la instalacion de Python hasta la verificacion final de que todo funciona correctamente."
+    },
+    {
+      "itemID": "003-2",
+      "menu_item": "Instalar Python",
+      "contenido": "Instalar Python:\nPrimero necesitas instalar Python en tu computadora. Abre tu navegador web, puede ser Chrome, Firefox o el que uses normalmente. Escribe en la barra de direcciones python.org y presiona Enter.\n\nCuando la pagina cargue, haz clic en el boton grande que dice Downloads o Descargas en la parte superior. Luego haz clic en el boton amarillo que dice Download Python, que descargara la version mas reciente disponible.\n\nEspera a que termine de descargarse el archivo. Veras el progreso en la parte inferior de tu navegador. Una vez descargado, haz clic en el archivo para abrirlo.\n\nAqui viene un paso MUY importante: marca la casilla que dice Add Python to PATH. Esta casilla esta en la parte inferior de la ventana y es fundamental para que todo funcione correctamente.\n\nAhora haz clic en el boton Install Now o Instalar ahora. El proceso de instalacion comenzara y puede tardar unos minutos. Se paciente mientras se completa.\n\nCuando termine la instalacion aparecera un mensaje indicando que fue exitosa. Haz clic en Close o Cerrar para finalizar este paso."
+    },
+    {
+      "itemID": "004-2",
+      "menu_item": "Verificar que Python se instalo correctamente",
+      "contenido": "Verificar que Python se instalo correctamente:\nAhora vamos a comprobar que Python se instalo bien. Presiona la tecla de Windows en tu teclado. Si usas Mac, presiona Command mas Espacio.\n\nEscribe cmd si usas Windows o terminal si usas Mac. Presiona Enter para abrir la ventana negra. Esta ventana se llama Terminal o Simbolo del sistema.\n\nEn esta ventana negra, escribe exactamente esto: python --version y presiona Enter.\n\nSi todo salio bien, deberia aparecer algo como Python 3.12 o un numero similar. Esto significa que Python se instalo correctamente y esta funcionando."
+    },
+    {
+      "itemID": "005-2",
+      "menu_item": "Instalar pipx",
+      "contenido": "Instalar pipx:\nAhora vamos a instalar pipx. En la misma ventana negra que tienes abierta, escribe: python -m pip install --user pipx y presiona Enter.\n\nEl proceso de instalacion comenzara y veras muchas lineas de texto pasando por la pantalla. Espera a que termine completamente.\n\nCuando termine y vuelva a aparecer el cursor parpadeante, escribe: python -m pipx ensurepath y presiona Enter.\n\nLee el mensaje que aparece. Este mensaje dira que pipx esta listo para usar.\n\nAhora cierra la ventana negra haciendo clic en la X de la esquina superior."
+    },
+    {
+      "itemID": "006-2",
+      "menu_item": "Reiniciar para que los cambios funcionen",
+      "contenido": "Reiniciar para que los cambios funcionen:\nPara que todos los cambios que hicimos funcionen correctamente, necesitas abrir una nueva ventana del terminal. Presiona la tecla de Windows nuevamente, o Command mas Espacio si usas Mac.\n\nEscribe cmd o terminal otra vez y presiona Enter para abrir una nueva ventana negra.\n\nAhora vamos a verificar que pipx esta funcionando. Escribe: pipx --version y presiona Enter.\n\nDeberia aparecer un numero de version como 1.4.3 o similar. Esto confirma que pipx esta instalado y listo para usar."
+    },
+    {
+      "itemID": "007-2",
+      "menu_item": "Instalar Playwright",
+      "contenido": "Instalar Playwright:\nPlaywright es necesario para que CRAWL4AI funcione correctamente. En la ventana negra que tienes abierta, escribe: python -m pip install playwright y presiona Enter.\n\nEspera a que termine de instalarse. Veras el progreso en la pantalla.\n\nCuando termine, escribe: playwright install y presiona Enter.\n\nEste comando descargara los navegadores necesarios. Este proceso puede tardar varios minutos, asi que no te preocupes si toma tiempo. Es completamente normal."
+    },
+    {
+      "itemID": "008-2",
+      "menu_item": "Instalar CRAWL4AI",
+      "contenido": "Instalar CRAWL4AI:\nAhora si vamos a instalar la herramienta principal. En la ventana negra, escribe: pipx install crawl4ai y presiona Enter.\n\nLa instalacion comenzara y veras lineas de texto moviendose en la pantalla. Espera pacientemente a que termine todo el proceso.\n\nCuando la instalacion termine, necesitas hacer una configuracion inicial. Escribe: crawl4ai-setup y presiona Enter.\n\nEspera a que complete la configuracion inicial. Este proceso preparara todo para que puedas usar CRAWL4AI."
+    },
+    {
+      "itemID": "009-2",
+      "menu_item": "Verificar que todo funciona",
+      "contenido": "Verificar que todo funciona:\nPara estar completamente seguros de que todo esta instalado correctamente, vamos a hacer una verificacion final.\n\nEscribe: crawl4ai --version y presiona Enter.\n\nSi ves un numero de version en la pantalla, felicitaciones, todo esta listo y has terminado con exito. Ahora tienes CRAWL4AI instalado y completamente funcional en tu computadora.\n\nPara usar CRAWL4AI en el futuro, solo necesitas abrir la ventana negra, que es el Terminal, y escribir comandos que empiecen con crawl4ai."
+    },
+    {
+      "itemID": "010-2",
+      "menu_item": "Soluciones si algo no funciono",
+      "contenido": "Soluciones si algo no funciono:\nSi en algun paso del tutorial viste un mensaje de error en color rojo, no te preocupes. Aqui tienes algunas soluciones que puedes intentar.\n\nSolucion 1: Cierra la ventana negra completamente y abrela de nuevo. Luego intenta nuevamente el paso que fallo.\n\nSolucion 2: Reinicia tu computadora completamente. Cuando vuelva a encender, comienza otra vez desde el paso que te dio el error.\n\nSolucion 3: Si ninguna de las soluciones anteriores funciona, pidele ayuda a un adulto para que revise contigo el mensaje de error especifico que aparecio. El mensaje de error puede darte pistas sobre que salio mal."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\n\nRESUMEN DE PUNTOS TECNICOS VALIDADOS:\n\nInstalacion de Python:\nEl sitio oficial para descargar Python es python.org. Los instaladores de Python para Windows estan disponibles en formatos de 32 y 64 bits. Marcar la opcion Add Python to PATH durante la instalacion es crucial para el correcto funcionamiento.\n\nInstalacion de pipx:\npipx se instala usando el comando python3 -m pip install --user pipx. Despues de instalar pipx, es necesario ejecutar pipx ensurepath para configurar las rutas del sistema. pipx instala aplicaciones Python en entornos virtuales aislados, evitando conflictos entre dependencias.\n\nInstalacion de Playwright:\nPlaywright se puede instalar mediante pip con el comando pip install playwright. Despues de instalar el paquete, es necesario ejecutar playwright install para descargar los navegadores binarios de Chromium, Firefox y WebKit. Playwright funciona con Python version 3.8 o superior.\n\nInstalacion de CRAWL4AI:\nCRAWL4AI se puede instalar mediante pipx con el comando pipx install crawl4ai. Despues de la instalacion, se debe ejecutar el comando crawl4ai-setup para completar la configuracion inicial. CRAWL4AI es un rastreador web de codigo abierto optimizado para modelos de lenguaje grande, agentes de IA y pipelines de datos.\n\nENLACES DIRECTOS A DOCUMENTACION OFICIAL:\n\nPython:\nPagina oficial de descargas: https://www.python.org/downloads/\nGuia de instalacion en Windows: https://docs.python.org/3/using/windows.html\nDocumentacion completa de Python: https://docs.python.org/3/\n\npipx:\nDocumentacion oficial: https://pipx.pypa.io/stable/\nGuia de instalacion: https://pipx.pypa.io/stable/installation/\nRepositorio GitHub: https://github.com/pypa/pipx\n\nPlaywright:\nDocumentacion oficial Python: https://playwright.dev/python/docs/intro\nGuia de instalacion: https://playwright.dev/python/docs/library\nRepositorio GitHub: https://github.com/microsoft/playwright-python\nPagina PyPI: https://pypi.org/project/playwright/\n\nCRAWL4AI:\nDocumentacion oficial: https://docs.crawl4ai.com/\nGuia de inicio rapido: https://docs.crawl4ai.com/core/quickstart/\nRepositorio GitHub: https://github.com/unclecode/crawl4ai\nReferencia completa del SDK: https://docs.crawl4ai.com/complete-sdk-reference/\n\nREFERENCIAS A PAGINAS DE SOPORTE OFICIALES:\n\nPara Python:\nSoporte de la comunidad Python: https://www.python.org/community/\nForos oficiales: https://discuss.python.org/\nDocumentacion de soporte: https://wiki.python.org/moin/BeginnersGuide\n\nPara CRAWL4AI:\nCanal Discord oficial de CRAWL4AI para soporte de la comunidad\nGitHub Issues para reportar problemas: https://github.com/unclecode/crawl4ai/issues\nBlog oficial con tutoriales: https://docs.crawl4ai.com/blog/\n\nPara Playwright:\nDocumentacion de navegadores: https://playwright.dev/python/docs/browsers\nGuia de solucion de problemas: https://playwright.dev/python/docs/troubleshooting\n\nTodos los pasos descritos en este tutorial han sido validados contra la documentacion oficial de cada herramienta. Los comandos y procedimientos siguen las practicas recomendadas por los desarrolladores de cada proyecto.\n\n\nComo instalar CRAWL4AI paso a paso\nTutorial generado por Claude\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+  "itemID": "012",
+  "menu_item": "Escucha la explicación completa en audio",
+  "contenido": "Escucha la explicación completa en audio:\n\nhttps://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Videos%20TUTORIALES/Como%20instalar%20CRAWL4AI%20paso%20a%20paso_CLAUDE.m4a"
+},
+
+    {
+      "itemID": "013",
+      "menu_item": "MAPA MENTAL:",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Como%20instalar%20CRAWL4AI%20paso%20a%20paso_CLAUDE_MAP.png]\n\nEste MAPA MENTAL resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje visual."
+    }
+  ]
+}

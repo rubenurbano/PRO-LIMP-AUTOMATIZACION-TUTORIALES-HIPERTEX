@@ -1,0 +1,71 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000___menu-item_BEGIN_Automate_Excel_with_Python_and_xlwings_Part_2_Run_Python_Function_in_Excel_WEB_ORIGINAL____menu-item_END___Contenido_BEGIN_Automate_Excel_with_Python_and_xlwings_Part_2_Run_Python_Function_in_Excel__Web_Original__Automate_Excel_with_Python_and_xlwings_Part_2_Run_Python_Function_in_Excel__https___youtu_be_uFJ8wpgoq_E_si_Q3HjvJbLdG0FrdrY",
+      "menu_item": " Automate Excel with Python and xlwings Part 2 Run Python Function in Excel WEB ORIGINAL: ",
+      "contenido": " Automate Excel with Python and xlwings Part 2 Run Python Function in Excel: Web Original: Automate Excel with Python and xlwings Part 2 Run Python Function in Excel: https://youtu.be/uFJ8wpgoq_E?si=Q3HjvJbLdG0FrdrY\n\nPRO-LIMP AUTOMATIZACION +34 636832005 "
+    },
+    {
+      "itemID": "001___menu-item_BEGIN_Introducción_y_contexto___menu-item_END___Contenido_BEGIN_Introducción_y_contexto__En_el_video_anterior_aprendimos_a_instalar_la_librería_Excel_wings_y_a_poner_o_leer_datos_sencillos__En_este_video_vamos_a_escribir_una_función_en_Python_usando_Excel_para_ejecutarla__Antes_de_usar_una_función_de_Python_desde_Excel__es_necesario_instalar_un_complemento_de_excelwings____Contenido_END",
+      "menu_item": " Introducción y contexto ",
+      "contenido": " Introducción y contexto: En el video anterior aprendimos a instalar la librería Excel wings y a poner o leer datos sencillos. En este video vamos a escribir una función en Python usando Excel para ejecutarla. Antes de usar una función de Python desde Excel, es necesario instalar un complemento de excelwings. "
+    },
+    {
+      "itemID": "002___menu-item_BEGIN_Descarga_de_archivos_necesarios___menu-item_END___Contenido_BEGIN_Descarga_de_archivos_necesarios__Debes_ir_a_la_página_web_del_repositorio_de_GitHub_de_la_empresa_Zuma_Analects__que_creó_la_librería__Busca_el_enlace_latest_link_y_baja_hasta_encontrar_la_descarga_de_la_versión_de_excel_wings__Para_saber_qué_versión_usas__escribe_pip_list_en_tu_consola__por_ejemplo__la_versión_15_4__Descarga_el_archivo_de_complemento__excelam__a_la_misma_carpeta_donde_tienes_tu_código_de_Python____Contenido_END",
+      "menu_item": " Descarga de archivos necesarios ",
+      "contenido": " Descarga de archivos necesarios: Debes ir a la página web del repositorio de GitHub de la empresa Zuma Analects, que creó la librería. Busca el enlace latest link y baja hasta encontrar la descarga de la versión de excel wings. Para saber qué versión usas, escribe pip list en tu consola; por ejemplo, la versión 15.4. Descarga el archivo de complemento (excelam) a la misma carpeta donde tienes tu código de Python. "
+    },
+    {
+      "itemID": "003___menu-item_BEGIN_Ubicación_de_los_archivos_DLL___menu-item_END___Contenido_BEGIN_Ubicación_de_los_archivos_DLL__Cuando_descargaste_la_librería__también_vinieron_dos_archivos_DLL__Debes_mover_el_archivo_DLL_a_la_misma_carpeta_donde_está_el_intérprete_de_Python__que_es_el_archivo_exe_de_Python__Asegúrate_de_que_el_archivo_DLL_esté_en_esa_misma_ubicación____Contenido_END",
+      "menu_item": " Ubicación de los archivos DLL ",
+      "contenido": " Ubicación de los archivos DLL: Cuando descargaste la librería, también vinieron dos archivos DLL. Debes mover el archivo DLL a la misma carpeta donde está el intérprete de Python, que es el archivo exe de Python. Asegúrate de que el archivo DLL esté en esa misma ubicación. "
+    },
+    {
+      "itemID": "004___menu-item_BEGIN_Activación_de_la_pestaña_Programador___menu-item_END___Contenido_BEGIN_Activación_de_la_pestaña_Programador__Abre_un_archivo_de_Excel__Si_la_pestaña_Programador_no_está_activa__ve_a_Archivo_y_luego_a_Opciones__Haz_clic_en_Personalizar_cinta_de_opciones_y_asegúrate_de_que_la_casilla_de_la_pestaña_Programador_esté_marcada____Contenido_END",
+      "menu_item": " Activación de la pestaña Programador ",
+      "contenido": " Activación de la pestaña Programador: Abre un archivo de Excel. Si la pestaña Programador no está activa, ve a Archivo y luego a Opciones. Haz clic en Personalizar cinta de opciones y asegúrate de que la casilla de la pestaña Programador esté marcada. "
+    },
+    {
+      "itemID": "005___menu-item_BEGIN_Instalación_del_complemento_en_Excel___menu-item_END___Contenido_BEGIN_Instalación_del_complemento_en_Excel__Con_la_pestaña_Programador_activa__haz_clic_en_Complementos_de_Excel__Busca_el_archivo_del_complemento_que_descargaste_anteriormente__Para_facilitar_esto__puedes_mover_el_archivo_a_tu_carpeta_de_complementos__Haz_clic_en_Aceptar_para_añadir_el_archivo_a_tu_lista__Deberías_ver_la_pestaña_del_complemento_de_Excel_disponible__Excel_wings_detecta_automáticamente_si_usas_un_entorno_especial_o_normal____Contenido_END",
+      "menu_item": " Instalación del complemento en Excel ",
+      "contenido": " Instalación del complemento en Excel: Con la pestaña Programador activa, haz clic en Complementos de Excel. Busca el archivo del complemento que descargaste anteriormente. Para facilitar esto, puedes mover el archivo a tu carpeta de complementos. Haz clic en Aceptar para añadir el archivo a tu lista. Deberías ver la pestaña del complemento de Excel disponible. Excel wings detecta automáticamente si usas un entorno especial o normal. "
+    },
+    {
+      "itemID": "006___menu-item_BEGIN_Configuración_de_referencias_en_VBA___menu-item_END___Contenido_BEGIN_Configuración_de_referencias_en_VBA__Para_escribir_el_código_de_la_función__abre_la_ventana_de_VBA__Visual_Basic_for_Applications___Antes_de_usar_la_función_Run_Python__ve_a_Herramientas_y_luego_a_Referencias__Asegúrate_de_que_la_referencia_de_Excel_wings_esté_en_tu_lista_de_referencias_disponibles_y_haz_clic_en_Aceptar__Esto_te_permite_usar_todas_las_funciones_del_complemento____Contenido_END",
+      "menu_item": " Configuración de referencias en VBA ",
+      "contenido": " Configuración de referencias en VBA: Para escribir el código de la función, abre la ventana de VBA (Visual Basic for Applications). Antes de usar la función Run Python, ve a Herramientas y luego a Referencias. Asegúrate de que la referencia de Excel wings esté en tu lista de referencias disponibles y haz clic en Aceptar. Esto te permite usar todas las funciones del complemento. "
+    },
+    {
+      "itemID": "007___menu-item_BEGIN_Creación_de_la_función_en_Python___menu-item_END___Contenido_BEGIN_Creación_de_la_función_en_Python__Abre_tu_editor_de_Python_y_crea_un_archivo_llamado_hello_py__Dentro__crea_una_función_sencilla_llamada_hello_que_trabaje_en_el_libro_de_Excel_actual__Configura_la_función_para_que_escriba_el_valor_hello_world_en_la_celda_A1_de_la_hoja_de_datos__Asegúrate_de_importar_la_librería_excel_wings_en_tu_código____Contenido_END",
+      "menu_item": " Creación de la función en Python ",
+      "contenido": " Creación de la función en Python: Abre tu editor de Python y crea un archivo llamado hello.py. Dentro, crea una función sencilla llamada hello que trabaje en el libro de Excel actual. Configura la función para que escriba el valor hello world en la celda A1 de la hoja de datos. Asegúrate de importar la librería excel wings en tu código. "
+    },
+    {
+      "itemID": "008___menu-item_BEGIN_Ejecución_con_RunPython___menu-item_END___Contenido_BEGIN_Ejecución_con_RunPython__Vuelve_a_la_ventana_VBA_de_Excel__Para_llamar_a_la_función__usa_RunPython__Debes_indicar_el_módulo__nombre_del_archivo_sin__py__y_la_función_específica__por_ejemplo_hello_say_hello__Ve_a_la_pestaña_Vista__luego_a_Macros__selecciona_tu_macro_y_ejecútala__VBA_buscará_el_archivo_y_la_función__ejecutará_el_código_y_verás_hello_world_en_la_celda_A1____Contenido_END",
+      "menu_item": " Ejecución con RunPython ",
+      "contenido": " Ejecución con RunPython: Vuelve a la ventana VBA de Excel. Para llamar a la función, usa RunPython. Debes indicar el módulo (nombre del archivo sin .py) y la función específica, por ejemplo hello.say_hello. Ve a la pestaña Vista, luego a Macros, selecciona tu macro y ejecútala. VBA buscará el archivo y la función, ejecutará el código y verás hello world en la celda A1. "
+    },
+    {
+      "itemID": "009___menu-item_BEGIN_Funciones_definidas_por_el_usuario__UDF____menu-item_END___Contenido_BEGIN_Funciones_definidas_por_el_usuario__UDF___Para_crear_una_función_que_se_use_como_las_de_Excel_pero_escrita_en_Python__usa_el_decorador_XW_defunc_seguido_del_nombre_de_la_función__Por_ejemplo__una_función_hello_que_tome_un_dato_name_y_devuelva_hello_más_el_nombre__En_Excel__ve_a_la_pestaña_del_complemento_excel_wings__escribe_el_nombre_de_tu_archivo_Python_sin_extensión_y_haz_clic_en_Import_Functions__Si_no_hay_errores__puedes_usar_la_fórmula__hello_nombre__en_una_celda__recuerda_usar_comillas_dobles_para_texto_____Contenido_END",
+      "menu_item": " Funciones definidas por el usuario (UDF) ",
+      "contenido": " Funciones definidas por el usuario (UDF): Para crear una función que se use como las de Excel pero escrita en Python, usa el decorador XW.defunc seguido del nombre de la función. Por ejemplo, una función hello que tome un dato name y devuelva hello más el nombre. En Excel, ve a la pestaña del complemento excel wings, escribe el nombre de tu archivo Python sin extensión y haz clic en Import Functions. Si no hay errores, puedes usar la fórmula =hello(nombre) en una celda (recuerda usar comillas dobles para texto). "
+    },
+    {
+      "itemID": "010___menu-item_BEGIN_Acceso_al_código_fuente_del_complemento___menu-item_END___Contenido_BEGIN_Acceso_al_código_fuente_del_complemento__Si_necesitas_revisar_el_código_del_complemento_para_solucionar_problemas__haz_doble_clic_en_él__Te_pedirá_una_contraseña__La_contraseña_es_xlwings__todo_en_minúsculas___Esto_te_permitirá_ver_el_código_fuente_del_archivo_del_complemento____Contenido_END",
+      "menu_item": " Acceso al código fuente del complemento ",
+      "contenido": " Acceso al código fuente del complemento: Si necesitas revisar el código del complemento para solucionar problemas, haz doble clic en él. Te pedirá una contraseña. La contraseña es xlwings (todo en minúsculas). Esto te permitirá ver el código fuente del archivo del complemento. "
+    },
+    {
+      "itemID": "011___menu-item_BEGIN_VALIDACIÓN_CON_FUENTES_TÉCNICAS_OFICIALES___menu-item_END___Contenido_BEGIN_VALIDACIÓN_CON_FUENTES_TÉCNICAS_OFICIALES__Se_ha_validado_la_información_con_la_documentación_oficial_de_xlwings_y_recursos_técnicos_relacionados_",
+      "menu_item": " VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES ",
+      "contenido": " VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES: Se ha validado la información con la documentación oficial de xlwings y recursos técnicos relacionados.\n\nPuntos técnicos validados:\n\nInstalación: La documentación oficial confirma que xlwings requiere una instalación de Python y Excel. Se puede instalar vía pip (pip install xlwings).\n\nComplemento (Add-in): Es necesario para usar RunPython y UDFs desde Excel. Aunque el video muestra una instalación manual moviendo archivos, la documentación oficial también ofrece el comando \"xlwings addin install\" para automatizar este proceso.\n\nUDFs (User Defined Functions): Se confirma el uso del decorador \"@xw.func\" (mencionado como XW.defunc en el video) para importar funciones de Python a Excel.\n\nReferencias VBA: Para usar la librería desde VBA es necesario activar la referencia a xlwings en el editor de VBA, tal como se describe.\n\nEnlaces a documentación oficial:\n\nInstalación y Prerrequisitos: https://docs.xlwings.org/en/stable/installation.html\n\nConfiguración del Add-in: https://docs.xlwings.org/en/stable/addin.html\n\nUser Defined Functions (UDFs): https://docs.xlwings.org/en/stable/udfs.html\n\nAPI Reference (RunPython): https://docs.xlwings.org/en/stable/api.html \n\nAutomate Excel with Python and xlwings Part 2 Run Python Function in Excel https://youtu.be/uFJ8wpgoq_E?si=Q3HjvJbLdG0FrdrY PRO-LIMP AUTOMATIZACION +34 636832005"
+    },
+
+    {
+      "itemID": "012",
+      "menu_item": "MAPA MENTAL:",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Automate%20Excel%20with%20Python%20and%20xlwings%20Part%202%20Run%20Python%20Function%20in%20ExcelMAPA.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

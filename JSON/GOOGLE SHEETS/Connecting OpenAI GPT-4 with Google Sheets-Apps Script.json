@@ -1,0 +1,81 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Connecting OpenAI GPT-4 with Google Sheets-Apps Script\nWEB ORIGINAL:",
+      "contenido": "Connecting OpenAI GPT-4 with Google Sheets-Apps Script:\nWeb Original:\nConnecting OpenAI GPT-4 with Google Sheets-Apps Script:\nhttps://youtu.be/k3aLUErDgOM?si=Qq4A4w1rKRdRhlAv"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introduccion y objetivo del tutorial",
+      "contenido": "Introduccion y objetivo del tutorial:\nEste es un resumen de como puedes usar la inteligencia artificial de OpenAI (como ChatGPT o GPT-4) directamente como una formula dentro de Google Sheets, igual que harias con cualquier funcion de Excel. Lo genial es que crearemos nuestra propia conexion sin usar complementos ni extensiones externas."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Requisitos iniciales para comenzar",
+      "contenido": "Requisitos iniciales para comenzar:\nNecesitas una cuenta de OpenAI para poder conseguir tu clave de API (API key). Esta clave es como una contraseña secreta que le da permiso a Google Sheets para hablar con OpenAI."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Acceso a Google Apps Script",
+      "contenido": "Acceso a Google Apps Script:\nGoogle Apps Script es el lugar donde escribiremos el codigo para crear nuestra formula personalizada. Para acceder, abre Google Sheets, haz clic en el menu \"Extensiones\" y luego haz clic en \"Apps Script\". Esto abrira el editor de codigo (el archivo principal se llama code.gs)."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Creacion de la funcion personalizada",
+      "contenido": "Creacion de la funcion personalizada:\nAqui definimos el nombre de nuestra nueva formula que usaremos en la hoja. Crea una nueva funcion y llamala GPT. Esta funcion debe aceptar una variable, que llamaremos \"input\" (entrada). Este \"input\" es lo que el usuario escribira en la celda cuando use la formula."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Configuracion de variables secretas y URL",
+      "contenido": "Configuracion de variables secretas y URL:\nDentro de tu codigo, necesitas dos variables importantes y constantes. La primera es la Clave API: Esta variable debe contener tu clave API real de OpenAI. Es crucial que uses tu clave real, no un marcador de posicion, o el codigo fallara. La segunda es la URL Base: Esta es la direccion de internet a la que le pediremos el trabajo a OpenAI: https API openai V1 chat completion."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Definicion de encabezados (Headers)",
+      "contenido": "Definicion de encabezados (Headers):\nLos encabezados son necesarios para la seguridad y para informar a OpenAI como debe interpretar la informacion que le enviamos. Solo necesitas dos elementos clave. El primero es el Tipo de Contenido (Content-Type): Debe ser \"application/json\" para indicar que estamos enviando datos en formato JSON. El segundo es Autorizacion: Debes incluir \"Bearer\" seguido de tu clave API. Esto verifica que eres tu quien hace la solicitud."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Definicion de opciones de solicitud",
+      "contenido": "Definicion de opciones de solicitud:\nDeclara una variable de \"opciones\" (options) para la solicitud. El Metodo debe establecerse como \"get\". Ademas, establece \"mute HTTP exceptions\" a \"true\" para las Excepciones HTTP. Esto evita que el script se detenga completamente si hay algun error de conexion a internet."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Creacion del paquete de datos (Payload JSON)",
+      "contenido": "Creacion del paquete de datos (Payload JSON):\nEste paquete es el mensaje real que le envias a GPT, especificando que modelo usar y cual es tu pregunta. Debes usar json.stringify para convertir tu mensaje en formato JSON.\n\nPrimero, define el Modelo: Especifica que version de GPT quieres usar. Puedes usar GPT 3.5 turbo, o cambiarlo a gpt4, o cualquier otro modelo disponible.\n\nSegundo, define los Mensajes. Aqui defines los roles y el contenido. El Mensaje del Sistema (System Message) es opcional. Se usa para darle una \"personalidad\" o instrucciones a GPT (por ejemplo, \"Eres un troll de internet muy sarcastico\"). Si lo dejas en blanco, GPT sera mas educado y util. El Mensaje del Usuario (User Message): El contenido debe ser la variable \"input\" que definimos anteriormente. Esto toma el texto que el usuario escribio en la celda de Google Sheets.\n\nTercero, define la Temperatura (Randomness): Este valor controla que tan creativo o aleatorio sera GPT. El rango es de 0 a 1. El valor 0.0 es menos creativo (util para tareas logicas en Sheets). El valor 1.0 da respuestas mas creativas y aleatorias. El valor 0.5 es un valor intermedio."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Ejecucion de la solicitud y obtencion de la respuesta",
+      "contenido": "Ejecucion de la solicitud y obtencion de la respuesta:\nPara el envio, usa la funcion url fetch (URL Fetch Fetch) junto con la URL base y las opciones que definiste para interactuar finalmente con OpenAI. La respuesta se almacena en una variable llamada \"response\".\n\nLa primera vez que ejecutes el codigo, se te pedira que revises y otorgues los permisos necesarios para que el script pueda conectarse a servicios externos."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Devolucion del resultado",
+      "contenido": "Devolucion del resultado:\nLa respuesta que llega de OpenAI es muy detallada. Solo necesitas extraer el texto principal que GPT genero. Para obtener solo el texto de la respuesta y devolverlo a la celda de Sheets, debes usar la siguiente estructura: return response choices cero message dot content."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Uso en Google Sheets",
+      "contenido": "Uso en Google Sheets:\nUna vez que guardes el script, puedes ir a cualquier celda y usar tu nueva formula, por ejemplo: =GPT(\"Cual es el significado de la vida?\").\n\nPara uso practico, puedes usar la formula para limpiar datos inconsistentes, por ejemplo, extrayendo solo nombres o titulos de trabajo de una lista de textos desordenados.\n\nCombinando instrucciones, puedes concatenar (unir con el simbolo &) el texto de una celda con una instruccion clara para GPT (por ejemplo: =GPT(A1 & \" Dame un salario estimado SOLO EL NUMERO EN DOLARES\").\n\nPara control de la respuesta: A veces, si escribes las instrucciones en mayusculas y repites lo que quieres, fuerzas a GPT a darte un formato de respuesta mas especifico, como obtener solo un numero de salario."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Otros usos posibles",
+      "contenido": "Otros usos posibles:\nAunque el tutorial se centra en Google Sheets, una vez que tienes esta funcion GPT, puede ser utilizada para otros propositos similares en otros productos de Google como Google Slides o Google Docs."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\n\nResumen de puntos tecnicos validados:\n\n1. Google Apps Script - UrlFetchApp:\nLa documentacion oficial de Google confirma que UrlFetchApp es el servicio correcto para realizar solicitudes HTTP y HTTPS desde Apps Script. El metodo UrlFetchApp.fetch requiere dos parametros: la URL y un objeto de opciones que puede incluir method, headers, payload y muteHttpExceptions. La opcion muteHttpExceptions configurada como true evita que el script falle completamente ante errores HTTP, permitiendo manejar las respuestas de error de forma controlada.\n\n2. OpenAI API - Autenticacion:\nLa API de OpenAI requiere autenticacion mediante una clave API (API Key) que debe incluirse en el encabezado Authorization usando el esquema Bearer. El formato correcto es: \"Authorization: Bearer YOUR_API_KEY\". Las claves API se generan en la pagina de API keys de la plataforma OpenAI y deben mantenerse seguras.\n\n3. OpenAI API - Endpoint de Chat Completions:\nEl endpoint correcto para las solicitudes de chat completions es: https://api.openai.com/v1/chat/completions. Este endpoint acepta solicitudes POST con un payload JSON que debe incluir como minimo el parametro model (ejemplo: gpt-3.5-turbo o gpt-4) y messages (un array de objetos con role y content).\n\n4. Parametro Temperature:\nLa documentacion oficial confirma que el parametro temperature controla la aleatoriedad de las respuestas. Los valores van de 0 a 2, donde valores cercanos a 0 generan respuestas mas deterministicas y valores mas altos generan respuestas mas creativas y variadas.\n\n5. Formato de Respuesta:\nLa respuesta de OpenAI es un objeto JSON que contiene un array choices. Para obtener el texto generado, se accede a: response.choices[0].message.content\n\nEnlaces directos a documentacion oficial:\n\nGoogle Apps Script - UrlFetchApp:\nhttps://developers.google.com/apps-script/reference/url-fetch/url-fetch-app\nhttps://developers.google.com/apps-script/reference/url-fetch\n\nOpenAI API - Autenticacion:\nhttps://platform.openai.com/docs/api-reference/authentication\nhttps://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key\n\nOpenAI API - Chat Completions:\nhttps://platform.openai.com/docs/guides/chat-completions\nhttps://platform.openai.com/docs/api-reference/completions\n\nPagina de claves API de OpenAI:\nhttps://platform.openai.com/api-keys\n\nReferencias adicionales:\nPara mas informacion sobre buenas practicas de seguridad con claves API, consulta la guia oficial de OpenAI sobre seguridad de API Keys. Para detalles sobre los limites de uso y cuotas, revisa la documentacion de rate limits en la plataforma OpenAI."
+    },
+
+    {
+      "itemID": "014",
+      "menu_item": "Infografía visual del proceso",
+      "contenido": "[IMAGEN: https://i.imgur.com/o7KTe5u.jpeg]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

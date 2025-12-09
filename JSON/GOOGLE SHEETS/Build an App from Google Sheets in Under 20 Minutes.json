@@ -1,0 +1,72 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "[TITULO_VIDEO]\nWEB ORIGINAL:",
+      "contenido": "[TITULO_VIDEO]:\nBuild an App from Google Sheets in Under 20 Minutes\nWeb Original:\nhttps://youtu.be/N-TWORCyT5M?si=Y49cJuvU_Wsdk5kx"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción: De Hoja de Cálculo a Aplicación",
+      "contenido": "Introducción: De Hoja de Cálculo a Aplicación:\nEste tutorial explica cómo transformar una hoja de Google Sheets en una aplicación funcional en menos de 20 minutos, sin necesidad de saber programar.\n\nMuchas personas ya tienen listas de clientes o tareas en hojas de cálculo, pero estas no son la herramienta más fácil para gestionar el trabajo diario de un equipo. Convertir esa información en una aplicación personalizada hace que el trabajo sea mucho más intuitivo y eficiente."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Preparación de los Datos y Estrategia con IA",
+      "contenido": "Preparación de los Datos y Estrategia con IA:\nPara empezar, necesitas una fuente de datos.[1][2][3][4][5][6] En este caso, usamos una hoja de Google que actúa como un CRM (gestor de relaciones con clientes), con información sobre clientes, contactos y registros de seguimiento.\n\nEl método más rápido para construir la aplicación es usar herramientas de Inteligencia Artificial (IA) como Zite o Lovable, que funcionan escribiendo un comando o \"prompt\".\n\nConsejo clave para ahorrar tiempo:\nEn lugar de escribir un comando simple por tu cuenta, exporta tus datos de Google Sheets como un archivo CSV. Luego, sube ese archivo a ChatGPT y pídele que redacte el \"prompt\" perfecto para Zite basado en tus datos reales. Revisa este comando antes de usarlo para asegurar que pide exactamente lo que necesitas."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Construyendo con Zite: El Prompt y la Conexión",
+      "contenido": "Construyendo con Zite: El Prompt y la Conexión:\nPara crear la aplicación en Zite, debes introducir un prompt muy detallado.[1][4][7][8] Por ejemplo: \"Constrúyeme una aplicación interna de gestión de clientes impulsada por esta hoja de Google\".\n\nDebes especificar qué quieres ver, como una lista de clientes con filtros y que, al hacer clic en uno, se muestren sus contactos y seguimientos relacionados mediante el ID del cliente.\n\nZite te pedirá conectar tu hoja de Google directamente. Esta herramienta tiene conexión nativa con Google Sheets, AirTable, Notion y otras plataformas, lo que facilita el proceso."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Funcionalidades de la Aplicación en Zite",
+      "contenido": "Funcionalidades de la Aplicación en Zite:\nUna vez conectada la hoja, Zite sincroniza las filas y celdas con la aplicación. La aplicación resultante incluye:\n\nEstadísticas: Muestra datos clave como el total de clientes o ingresos anuales.\n\nInteractividad: Permite filtrar datos por propietario de la cuenta o industria, evitando tener que hacer hojas separadas para cada empleado.\n\nVistas personalizadas: Puedes tener pestañas como \"Renovaciones\" o \"Clientes en riesgo\".\n\nPermisos de usuario: Puedes configurar la aplicación para que cada persona solo vea los clientes que tiene asignados. Por ejemplo, Alex solo verá sus cuentas y no las de sus compañeros."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Edición, Compartir y Sincronización en Zite",
+      "contenido": "Edición, Compartir y Sincronización en Zite:\nSi necesitas modificar la aplicación, tienes dos opciones: pedirle un cambio general a la IA mediante un nuevo texto, o usar el ícono de edición para ajustes manuales y detallados en el diseño.[6]\n\nPara compartir la aplicación, Zite genera una dirección web (URL) única. También permite usar tu propio dominio o incrustar la app en un sitio web.\n\nUn punto muy importante es la sincronización bidireccional: cualquier registro nuevo o cambio que hagas dentro de la aplicación se actualizará automáticamente en tu hoja de Google original."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Limitaciones de Lovable y Otros Constructores",
+      "contenido": "Limitaciones de Lovable y Otros Constructores:\nOtra herramienta llamada Lovable también usa prompts, pero tiene limitaciones. Requiere conectar una base de datos llamada Superbase, ya que no conecta directo con Google Sheets.\n\nAdemás, cuando Lovable crea la aplicación, suele usar datos de ejemplo falsos en lugar de tus datos reales. Esto obliga a conectar los datos manualmente después, haciendo el proceso más lento en comparación con Zite."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Construyendo con Softer: Plantillas y Seguridad",
+      "contenido": "Construyendo con Softer: Plantillas y Seguridad:\nSofter es diferente a Zite. Funciona más como un constructor de plantillas donde arrastras y sueltas elementos. Tiene una opción de IA, pero está limitada a 200 caracteres, sirviendo solo para generar una estructura básica.\n\nSofter ofrece \"barandales\" o guías de seguridad que evitan que el diseño se vuelva caótico, algo que a veces pasa con la IA pura.\n\nPara conectar los datos en Softer, seleccionas Google Sheets como fuente, eliges el documento y la hoja específica (por ejemplo, 'clients'). Permite crear páginas separadas, como formularios de ventas o portales de incorporación, y ofrece una experiencia personalizada para los usuarios que inician sesión."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Comparativa: ¿Cuándo usar Zite y cuándo Softer?",
+      "contenido": "Comparativa: ¿Cuándo usar Zite y cuándo Softer?:\nLa elección depende del uso que le darás a la aplicación:\n\nUsa Zite si:\nNecesitas rapidez, prototipos o herramientas para uso interno en equipos pequeños.\nLimitación: Zite no es una plataforma empresarial robusta. Tiene poca transparencia sobre el almacenamiento de datos, carece de registros de auditoría y sus funciones de seguridad son limitadas.\n\nUsa Softer si:\nVas a crear una herramienta que usarán tus clientes (externos) o si manejas datos sensibles.[2]\nVentaja: Softer está diseñado para portales de clientes.[2][4][8] Permite proteger el acceso con contraseñas, crear tableros basados en roles y cumple con normas de seguridad más maduras."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Conclusión del Tutorial",
+      "contenido": "Conclusión del Tutorial:\nEl uso de constructores como Zite o Softer te permite crear múltiples aplicaciones personalizadas (CRM, gestión de proyectos, etc.) sin pagar costosas herramientas especializadas.[9]\n\nAunque Zite es la opción más rápida para comenzar, Softer es la recomendación más segura para aplicaciones que manejan información delicada o que serán utilizadas por personas fuera de tu empresa."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\nTras realizar una búsqueda de las herramientas mencionadas en el documento, se validan los siguientes puntos técnicos:\n\nZite (AI App Builder):\nExiste una plataforma llamada Zite (a veces asociada a la empresa Fillout o como herramienta independiente de IA) que se especializa en la creación de aplicaciones internas mediante \"prompts\" de lenguaje natural. Se confirma su capacidad para generar interfaces sobre bases de datos como Airtable y Google Sheets rápidamente, aunque su enfoque es más hacia herramientas internas y prototipado rápido que hacia portales de clientes complejos.\n\nSoftr (Integración con Google Sheets):\nLa documentación oficial de Softr confirma que es una plataforma \"no-code\" robusta especializada en portales de clientes y herramientas internas.\n\nValidación de seguridad: Softr destaca por sus características de \"Client Portals\", permisos granulares y seguridad de datos, confirmando la recomendación del texto de usarlo para datos sensibles o usuarios externos.\n\nConexión: Softr se conecta nativamente a Google Sheets y Airtable sin necesidad de intermediarios complejos para la lectura de datos.\n\nLovable y Supabase (Mencionado como \"Superbase\"):\nLa herramienta Lovable.dev es un constructor de aplicaciones web asistido por IA.[10]\n\nCorrección técnica: El texto original menciona \"Superbase\". La búsqueda confirma que se refiere a \"Supabase\", una alternativa de código abierto a Firebase.[10] Lovable tiene una integración estrecha con Supabase para el manejo de bases de datos y autenticación, lo que valida la mención de que requiere una base de datos más técnica que una simple hoja de cálculo directa en algunos flujos.\n\nFuentes de referencia consultadas:\n\nDocumentación de Softr sobre Google Sheets: softr.io/integrations/google-sheets\n\nLovable.dev y su integración con bases de datos.[5][6][7][10]\n\nVideos y tutoriales recientes sobre \"Build apps from Google Sheets\" que comparan estas herramientas específicas.\n\n\nSources\nhelp\nyoutube.com\nyoutube.com\nyoutube.com\nyoutube.com\nlovable.dev\nsoftr.io\nlovable.dev\nzite.com\nyoutube.com\nmedium.com\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\nLovable.dev Supabase integration\nSoftr Google Sheets integration documentation\nZite AI app builder documentation\n\"Build an App from Google Sheets in Under 20 Minutes\" video tools Zite Softr"
+    },
+
+    {
+      "itemID": "011",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN: https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Build%20an%20App%20from%20Google%20Sheets%20in%20Under%2020%20Minutes.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    },
+
+    {
+      "itemID": "012",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN: https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Build%20an%20App%20from%20Google%20Sheets%20in%20Under%2020%20Minutes0000.jpeg]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

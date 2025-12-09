@@ -1,0 +1,86 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Automate Excel with Python and xlwings Part 1 Install xlwings and the basic\nWEB ORIGINAL:",
+      "contenido": "Automate Excel with Python and xlwings Part 1 Install xlwings and the basic:\nWeb Original:\nAutomate Excel with Python and xlwings Part 1 Install xlwings and the basic:\nhttps://youtu.be/5iyL9tMw8vA?si=sVw3fi5LkTWSnefL\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introduccion a xlwings",
+      "contenido": "Introduccion a xlwings:\nxlwings es un programa de codigo abierto muy conocido para programar Excel usando Python.\n\nAntes, se hacian muchas cosas automaticas en Excel usando VBA (Visual Basic for Applications). Pero hoy en dia, cuando tienes que trabajar con mas datos o quieres conectar tus archivos de Excel con otros programas (como los de terceros) o bases de datos, VBA no funciona muy bien.\n\nPor ejemplo, si necesitas trabajar con datos de Salesforce en Excel, VBA no te ayuda mucho. Pero en Python, puedes usar un paquete llamado simple Salesforce para conectarte a esos datos.\n\nPor eso, necesitamos un programa de Python que pueda ser el intermediario para manejar tus archivos de Excel y, al mismo tiempo, trabajar con Python. xlwings es ese programa; es muy confiable y facil de usar."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Instalar xlwings",
+      "contenido": "Instalar xlwings:\nLo primero que tienes que hacer es instalar el paquete.\n\nAbre la ventana de comandos de tu computadora.\n\nEscribe lo siguiente para instalar la biblioteca xlwings: pip install Excel wings."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Importar xlwings y crear un nuevo libro",
+      "contenido": "Importar xlwings y crear un nuevo libro:\nAhora, abre tu editor de Python. Vamos a ver como usar lo mas basico de xlwings.\n\nImporta el programa xlwings. Vamos a llamarlo xw para que sea mas corto.\n\nPara crear un nuevo libro de Excel en blanco:\n\nCrea una variable (como una caja) llamada WB (que significa Workbook o libro de trabajo).\n\nUsa el programa xw y el comando book.\n\nEscribe: WB = xw.book().\n\nAl hacer esto, se creara un libro de Excel en blanco."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Guardar y conectarse a archivos de Excel",
+      "contenido": "Guardar y conectarse a archivos de Excel:\nPara guardar este libro de Excel:\n\nUsa el objeto WB y el comando safe (guardar).\n\nPon el nombre del archivo dentro del parentesis.\n\nEscribe: WB.safe(\"test.xlsx\").\n\nEl archivo de Excel se guardara donde tienes tu codigo de Python.\n\nPara conectarte a un archivo de Excel que ya existe (por ejemplo, test2.xlsx):\n\nCrea una variable, por ejemplo, WB_test.\n\nUsa el comando xw.book y pon la ruta o el nombre del archivo.\n\nEscribe: WB_test = xw.book(\"test2.xlsx\").\n\nAhora, desde tu codigo de Python, puedes cambiar el archivo test2.xlsx."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Elegir Hojas de Calculo (Worksheets)",
+      "contenido": "Elegir Hojas de Calculo (Worksheets):\nAhora que estamos conectados al libro de Excel, vamos a elegir las pestanas (hojas) dentro del libro.\n\nUsa el objeto del libro (por ejemplo, WB_test) y el comando sheets.\n\nPuedes elegir la hoja de dos maneras:\n\nUsando el numero de indice: El conteo siempre empieza en cero (0). Cero es la primera pestana, uno es la segunda, y asi.\n\nUsando el nombre de la hoja: Esto es mas facil de leer.\n\nEjemplo para elegir la primera hoja: WS1 = WB_test.sheets.\n\nEjemplo para elegir la hoja llamada tab1: WS1 = WB_test.sheets[\"tab1\"]."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Poner Datos en Excel",
+      "contenido": "Poner Datos en Excel:\nAhora vamos a poner datos en las celdas.\n\nPara poner un valor en una celda (ejemplo A1):\n\nUsa el objeto de la hoja (por ejemplo, WS1).\n\nUsa el comando range (rango) para elegir la celda.\n\nEscribe: WS1.range(\"A1\").value = \"hello there\".\n\nPara poner el mismo valor en un rango grande (ejemplo A1 hasta E20):\n\nEscribe: WS1.range(\"A1:E20\").value = 100.\n\nEsto llenara todas esas celdas con el numero 100."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Elegir celdas usando filas y columnas (metodo cells)",
+      "contenido": "Elegir celdas usando filas y columnas (metodo cells):\nPara elegir celdas usando filas y columnas (metodo cells):\n\nEl metodo cells te pide la fila y luego la columna.\n\nLa fila siempre es un numero.\n\nLa columna puede ser un numero (1 para A, 2 para B) o la letra (A, B).\n\nEjemplo para A1 (Fila 1, Columna 1): WS1.cells(1, 1).value = 100.\n\nEjemplo para B1 (Fila 1, Columna B): WS1.cells(1, \"B\").value = 200."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Borrar el contenido de la hoja de Excel",
+      "contenido": "Borrar el contenido de la hoja de Excel:\nPara borrar el contenido de toda la hoja de Excel:\n\nUsa el comando clear_contents (limpiar contenidos).\n\nEscribe: WS1.clear_contents()."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Crear una Tabla Simple",
+      "contenido": "Crear una Tabla Simple:\nPara crear una tabla sencilla:\n\nIndica la celda donde quieres que empiece la tabla (por ejemplo, A1).\n\nUsa una lista de listas (una lista que tiene otras listas adentro).\n\nLa primera lista seran los nombres de las columnas.\n\nLas siguientes listas seran las filas de datos.\n\nEscribe: WS1.range(\"A1\").value = [[\"Columna A\", \"Columna B\"],, ]."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Poner Datos en Fila o Columna",
+      "contenido": "Poner Datos en Fila o Columna:\nPara poner una lista de valores en fila (uno al lado del otro, de izquierda a derecha):\n\nEscribe: WS1.range(\"A1\").value = .\n\nPara poner una lista de valores en columna (uno debajo del otro, de arriba a abajo):\n\nTienes que transponer los datos, lo que significa cambiarlos de fila a columna.\n\nUsa el comando options despues del comando range.\n\nUsa la propiedad transpose=True (transponer igual a verdadero).\n\nEscribe: WS1.range(\"A1:A5\").options(transpose=True).value = ."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Leer Datos de Excel",
+      "contenido": "Leer Datos de Excel:\nPara leer los datos que ya estan en la hoja de Excel:\n\nPara leer una sola celda (ejemplo A1):\n\nUsa el objeto de la hoja y el comando range.\n\nUsa .value y ponlo dentro del comando print para ver el resultado.\n\nEscribe: print(WS1.range(\"A1\").value).\n\nPara leer un rango grande de celdas (una tabla entera):\n\nUsa el comando expand (expandir) despues del comando range.\n\nEste comando automaticamente toma todas las celdas conectadas a la celda que elegiste (como una tabla completa).\n\nEscribe: print(WS1.range(\"A1\").expand().value).\n\nEsto imprimira todos los valores en forma de una lista de listas."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Proximo video",
+      "contenido": "Proximo video:\nEn el proximo video te mostrare como llamar a un comando de Python desde Excel usando una herramienta de xlwings."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\nPara validar la informacion de este tutorial sobre xlwings, voy a buscar las fuentes oficiales."
+    },
+    {
+      "itemID": "013-2",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\n\nPuntos tecnicos validados con fuentes oficiales:\n\nxlwings es una biblioteca de Python con licencia BSD que facilita la interaccion entre Python y Excel en ambas direcciones. Esta disponible como software de codigo abierto y funciona en Windows y macOS.\n\nEl comando de instalacion correcto es: pip install xlwings (la documentacion oficial confirma este comando exacto).\n\nxlwings permite automatizar Excel desde Python usando una sintaxis similar a VBA, reemplazar macros de VBA con codigo Python, y escribir funciones definidas por el usuario (UDFs) en Python.\n\nLa biblioteca ofrece compatibilidad completa con arrays de NumPy y DataFrames de Pandas, lo que facilita el trabajo con datos estructurados.\n\nPara conectarse a libros de Excel, xlwings utiliza el objeto Book con sintaxis como xw.Book() para crear nuevos libros o xw.Book('archivo.xlsx') para abrir archivos existentes.\n\nLas hojas de calculo se acceden mediante el atributo sheets, pudiendo usar indices numericos (comenzando en 0) o nombres de hojas.\n\nLos rangos de celdas se manipulan con el metodo range(), y el metodo expand() permite seleccionar automaticamente todas las celdas conectadas en una tabla.\n\nEnlaces a documentacion oficial:\n\nDocumentacion oficial de xlwings: https://docs.xlwings.org/\nRepositorio oficial en GitHub: https://github.com/xlwings/xlwings\nPagina de instalacion oficial: https://docs.xlwings.org/en/stable/installation.html\nGuia de inicio rapido: https://docs.xlwings.org/en/stable/quickstart.html\nPyPI xlwings: https://pypi.org/project/xlwings/\n\nReferencias a paginas de soporte oficiales:\n\nPara soporte y preguntas tecnicas: Documentacion oficial en docs.xlwings.org\nPara reportar problemas o bugs: GitHub Issues en el repositorio oficial\nPara consultas sobre licencias PRO: https://www.xlwings.org/pricing\n\n\nAutomate Excel with Python and xlwings Part 1 Install xlwings and the basic\nhttps://youtu.be/5iyL9tMw8vA?si=sVw3fi5LkTWSnefL\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+
+    {
+      "itemID": "014",
+      "menu_item": "MAPA MENTAL:",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Automate%20Excel%20with%20Python%20and%20xlwings%20Part%201%20Install%20xlwings%20and%20the%20basicMAPA.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

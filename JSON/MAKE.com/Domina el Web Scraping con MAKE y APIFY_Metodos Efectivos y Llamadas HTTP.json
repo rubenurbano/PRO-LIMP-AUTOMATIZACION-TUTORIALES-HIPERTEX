@@ -1,0 +1,100 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Domina el Web Scraping con MAKE y APIFY_Metodos Efectivos y Llamadas HTTP\nWEB ORIGINAL:",
+      "contenido": "Domina el Web Scraping con MAKE y APIFY_Metodos Efectivos y Llamadas HTTP:\nWeb Original:\nDomina el Web Scraping con MAKE y APIFY_Metodos Efectivos y Llamadas HTTP:\nhttps://youtu.be/58IPBrTsYJA?si=gL52_LzJYMHzWWIZ\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introduccion al Web Scraping",
+      "contenido": "Introduccion al Web Scraping:\nEl scrapping es una forma de obtener datos de internet. Aunque estuvo mal visto, no es ilegal si se utiliza bien y es una herramienta de marketing muy poderosa.\n\nHay varios metodos para hacer scrapping. Los mas sencillos son hacer llamadas HTTP para conseguir archivos HTML y trabajar con ellos. Otro metodo es usar plataformas preparadas como Outscrapper. Outscrapper ayuda a buscar cosas especificas en la web, como contactos, correos electronicos, resenas de Amazon o Google, o comentarios de YouTube. Estas plataformas dedicadas suelen ser de pago, aunque algunas son economicas."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Que es Apify y por que es importante",
+      "contenido": "Que es Apify y por que es importante:\nLa plataforma mas importante para el scraping es Apify. Apify es donde los usuarios crean sus propios programas especiales, llamados agentes de scrapping o actores, para buscar informacion detallada en paginas web. Apify tiene documentacion, recursos, y una academia para aprender.\n\nApify tiene una opcion para trabajar de forma gratuita. Cada mes te regalan 5 dolares para usar la herramienta."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Registro en Apify y exploracion de actores",
+      "contenido": "Registro en Apify y exploracion de actores:\nRegistrate en Apify. Ve a la pagina principal, registrate o inicia sesion.\n\nExplora los actores. Apify tiene mas de 2000 buscadores o agentes de scrapping construidos por desarrolladores. Aunque la mayoria cuestan dinero (una cuota mensual mas el pago por uso), nosotros buscaremos herramientas gratuitas creadas por los desarrolladores para pagar solo el uso a Apify."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Seleccion y configuracion del actor en Apify",
+      "contenido": "Seleccion y configuracion del actor en Apify:\nElige un actor. Usaremos el actor Google Search Result Scrapper para hacer busquedas en Google. Lo usaremos para buscar, por ejemplo, despachos de abogados, obtener sus sitios web, y despues encontrar su telefono y correo para enviar emails.\n\nCrea una tarea en Apify. Ve a la tienda de Apify y busca el actor Google Search Scrapper.\n\nDefine la busqueda. En la configuracion del actor, define el termino de busqueda, por ejemplo, despacho abogados Barcelona. Tambien define cuantos resultados quieres, por ejemplo, 20.\n\nConsigue el codigo JSON. Busca la parte llamada JSON para obtener el codigo de entrada que el actor necesita para trabajar. Copialo.\n\nCrea la tarea en Apify. Dale a crear una tarea (no a empezar, porque queremos que Make la controle). Nombra la tarea, por ejemplo, busqueda en Google."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Preparacion de Google Sheets",
+      "contenido": "Preparacion de Google Sheets:\nPrepara tu hoja de calculo. Necesitas una hoja de Google Sheets para decirle al programa que buscar y donde guardar los resultados.\n\nDefine las hojas. Crea dos hojas:\nUna hoja llamada Palabras de busqueda. Aqui pondras la palabra que quieres buscar.\nUna hoja llamada Resultados. Aqui pondras las columnas para guardar la informacion que encuentres: nombre, web, descripcion, correo y telefono."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Estructura de trabajo con Make",
+      "contenido": "Estructura de trabajo con Make:\nPara trabajar con Apify, casi siempre necesitas dos escenarios distintos en Make: uno para iniciar la busqueda y otro para escuchar cuando la busqueda termina y recuperar los datos."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Escenario 1: Configuracion inicial y conexion con Google Sheets",
+      "contenido": "Escenario 1: Configuracion inicial y conexion con Google Sheets:\nAnade Google Sheets. Anade un modulo de Google Sheets. Elige la accion Watch New Rows (Observar nuevas filas). Esto hara que Make escuche si anades una nueva palabra en tu hoja de calculo.\n\nConfigura la escucha. Elige el archivo, la hoja palabras de busqueda y pon un limite de 1 para trabajar solo con una palabra a la vez."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Escenario 1: Conexion y configuracion del modulo Apify",
+      "contenido": "Escenario 1: Conexion y configuracion del modulo Apify:\nAnade el modulo de Apify. El siguiente modulo es de Apify y debe ser la accion Run Actor (Hacer correr un actor).\n\nConecta Apify. Tienes que crear una conexion. Apify te pedira el API Token. Lo encuentras en Apify, en Settings e Integrations. Copialo y pegalo en Make para aceptar la conexion.\n\nSelecciona el actor. Elige el actor Apify Google Search Scrapper.\n\nPega el JSON. En el apartado Input JSON pega el codigo JSON que copiaste anteriormente. IMPORTANTE: No hagas Control V normal. Debes hacer clic derecho y seleccionar Pegar como texto sin formato para que el JSON no se rompa.\n\nReemplaza la palabra de busqueda. Dentro del JSON, en la parte de la busqueda, borra el texto de ejemplo y pon la variable palabras que viene de tu modulo de Google Sheets. Asi, el actor buscara la palabra que acabas de escribir en tu hoja de calculo.\n\nDale OK. Recuerda, al ejecutar esto, el resultado no son los datos, sino solo la confirmacion de que el actor ha empezado a trabajar."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Escenario 2: Configuracion del trigger para escuchar el actor",
+      "contenido": "Escenario 2: Configuracion del trigger para escuchar el actor:\nEste escenario debe estar siempre escuchando.\n\nEmpieza escuchando. Anade un modulo de Apify y elige uno de los triggers (disparadores). Selecciona Watch Actor (Observar actor).\n\nConfigura el actor a observar. Elige el mismo actor que usamos antes: Apify Google Search Scrapper."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Escenario 2: Recuperacion y procesamiento de datos",
+      "contenido": "Escenario 2: Recuperacion y procesamiento de datos:\nRecupera los datos. El siguiente modulo debe ser Apify - Get Data Set Items. Esto recupera la informacion que el actor ha encontrado.\n\nElige la fuente de datos. En este modulo, selecciona el Default Dataset (Conjunto de datos por defecto) que aparece en el modulo de Apify anterior (Watch Actor).\n\nDivide los resultados. Los resultados vienen como un array (una lista grande de resultados). Para procesarlos uno por uno, necesitas un Iterador.\n\nAnade el Iterador. Anade un modulo de Flow Control llamado Iterador. Le indicas que trabaje con el array de Organic Results (Resultados organicos) que vienen del modulo anterior."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Escenario 2: Guardado de resultados iniciales",
+      "contenido": "Escenario 2: Guardado de resultados iniciales:\nGuarda los resultados iniciales. Anade un modulo de Google Sheets con la accion Add Row (Anadir fila).\n\nMapea los campos. Elige la hoja resultados y coloca los datos que te da el iterador en sus columnas: el titulo en Nombre, la URL en Web y la descripcion en Descripcion. Deja el correo y el telefono vacios por ahora."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Obtencion del codigo HTML de las paginas web",
+      "contenido": "Obtencion del codigo HTML de las paginas web:\nConsigue el HTML. Despues del modulo de Google Sheets (Add Row), anade un modulo de HTTP - Get a File. Este modulo va a la URL de la pagina web (que obtuviste del iterador) y trae todo su codigo HTML.\n\nConvierte el HTML. El codigo HTML es texto muy complicado. Anade un modulo de Text Parser - HTML to Text. Conectale el fichero HTML para que lo convierta en texto limpio."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "Uso de Inteligencia Artificial para extraer correo y telefono",
+      "contenido": "Uso de Inteligencia Artificial para extraer correo y telefono:\nLlama a la Inteligencia Artificial. Con el texto limpio, puedes usar un modelo de lenguaje (como un asistente de IA). Anade un modulo de OpenAI - Create a Completion.\n\nElige un modelo de IA. Usa un modelo potente como el GPT-4o Omni, porque el texto de la pagina web puede ser muy largo.\n\nDale instrucciones. Define al asistente de IA (el mensaje del sistema):\nSu trabajo es buscar telefonos y correos en el texto HTML.\nDebe devolver los datos en formato JSON con las etiquetas correo y telefono.\nReglas importantes: Solo debe dar un numero de telefono, no varios. Si el telefono tiene un signo mas (+) debe cambiarlo por doble cero (00) (por ejemplo, +34 es 0034).\nSi no encuentra un dato real, debe devolver un cero.\n\nEnvia el texto. Envia al asistente el texto limpio que obtuviste anteriormente (el mensaje del usuario).\n\nAsegura el formato. En las opciones avanzadas, elige que el tipo de respuesta sea un JSON object."
+    },
+    {
+      "itemID": "014",
+      "menu_item": "Procesamiento del JSON y actualizacion final",
+      "contenido": "Procesamiento del JSON y actualizacion final:\nLee el JSON. La respuesta de la IA es texto JSON. Necesitas un modulo de JSON - Parse JSON. Conectale el resultado de la IA para que convierta el texto JSON en variables que puedas usar.\n\nActualiza la fila. Por ultimo, anade un modulo de Google Sheets con la accion Update a Row (Actualizar una fila).\n\nCompleta los datos en la hoja. Selecciona el archivo y la hoja resultados.\nEl numero de fila (Row Number) debe ser el que obtuviste en el primer modulo de Google Sheets (Watch New Rows).\nMapea el valor de correo (que viene del modulo JSON) a la columna Correo.\nMapea el valor de telefono (que viene del modulo JSON) a la columna Telefono.\n\nUna vez hecho esto, el escenario esta listo. Al correr el proceso, obtendra los resultados, los guardara con los datos iniciales y luego usara la IA para anadir el correo y el telefono a la misma fila."
+    },
+    {
+      "itemID": "015",
+      "menu_item": "Utilidades adicionales y expansiones posibles",
+      "contenido": "Utilidades adicionales y expansiones posibles:\nUna vez que tienes el correo y el telefono, puedes seguir complicando el escenario. Podrias hacer que el programa cree un correo personalizado para enviar a cada persona y guardarlo en la hoja. O podrias alimentar una plataforma de correo masivo como Mailchimp directamente.\n\nApify es super potente. Puedes buscar informacion en comentarios de Instagram, blogs, foros o YouTube. Siempre hay opciones gratuitas respecto al desarrollador.\n\nEste ejemplo se hizo con dos escenarios porque a veces los planes gratuitos te limitan a dos escenarios activos. Si quisieras buscar otros datos, como las redes sociales de esas empresas, tendrias que anadir un tercer escenario que este escuchando a un nuevo actor de Apify, y asi sucesivamente. Los escenarios se pueden conectar en cascada."
+    },
+    {
+      "itemID": "016",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\nVoy a buscar las fuentes oficiales para validar la información técnica del tutorial."
+    },
+    {
+      "itemID": "016-2",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\n\nEste tutorial ha sido validado con las siguientes fuentes oficiales:\n\nAPIFY - Plataforma de Web Scraping:\n\nApify es una plataforma completa para desarrollar, ejecutar y compartir herramientas de web scraping y automatizacion en la nube. La plataforma funciona con Actors, una forma de empaquetar codigo para facilitar su comparticion, integracion y desarrollo.\n\nDocumentacion oficial de Apify: https://docs.apify.com/\n\nLa API de Apify esta organizada siguiendo principios RESTful HTTP. Los usuarios deben autenticar las solicitudes mediante un token API que se encuentra en la pagina de Integraciones en Apify Console.\n\nINTEGRACION APIFY Y MAKE:\n\nMake permite crear escenarios donde se pueden integrar varios servicios para automatizar y centralizar trabajos. Apify tiene su propio modulo en Make que permite ejecutar Actors, recibir notificaciones sobre el estado de las ejecuciones y obtener resultados directamente en los escenarios de Make.\n\nDocumentacion oficial Make-Apify: https://docs.apify.com/platform/integrations/make\n\nMake impone un tiempo limite para ejecuciones sincronicas que varia segun el plan del usuario. Si un Actor tarda mas que el tiempo limite, se debe usar el metodo asincrono con un modulo trigger.\n\nGOOGLE SEARCH SCRAPER EN APIFY:\n\nGoogle Search Results Scraper extrae datos de las paginas de resultados de busqueda de Google, incluyendo resultados organicos y pagados, resenas, precios y la seccion People Also Ask.\n\nActor oficial de Google Search: https://apify.com/apify/google-search-scraper\n\nEl scraper usa un modelo de precios por evento, donde los usuarios no pagan por el uso de la plataforma Apify sino un precio fijo por eventos especificos. En el plan gratuito, los usuarios reciben 5 dolares de credito que permiten scrapear mas de 1000 resultados de Google Search.\n\nMODELO GPT-4o DE OPENAI:\n\nGPT-4o acepta como entrada cualquier combinacion de texto, audio, imagen y video, y genera cualquier combinacion de texto, audio e imagen como salida. GPT-4o iguala el rendimiento de GPT-4 Turbo en texto en ingles y codigo, con mejoras significativas en texto en idiomas distintos al ingles, siendo ademas mucho mas rapido y un 50 por ciento mas economico en la API.\n\nDocumentacion oficial OpenAI: https://platform.openai.com/docs/models/gpt-4o\n\nGPT-4o tiene un costo de 2.50 dolares por millon de tokens de entrada y 10 dolares por millon de tokens de salida. GPT-4o soporta una ventana de contexto de hasta 128000 tokens.\n\nCONCLUSIONES DE LA VALIDACION:\n\nTodos los conceptos y procedimientos descritos en este tutorial han sido verificados con las documentaciones oficiales de Apify, Make y OpenAI. Las funcionalidades mencionadas, como la conexion entre Make y Apify mediante API tokens, la ejecucion de Actors, la recuperacion de datos mediante datasets, y el uso de modelos de lenguaje para extraccion de informacion, estan completamente soportadas por las plataformas oficiales.\n\nLos usuarios pueden consultar estas fuentes oficiales para obtener informacion actualizada sobre cambios en las APIs, nuevas funcionalidades o actualizaciones en los modelos y servicios.\n\n\n[TITULO_VIDEO] = Como Conectar CUALQUIER API a Makecom\n[URL_WEB_YOUTUBE] = https://youtu.be/d1Y0Njcv6J8?si=1Rg7Bp97P5G6hTgo\n[AUTOR] = PRO-LIMP AUTOMATIZACION\n[TELEFONO] = +34 636832005"
+    },
+    {
+  "itemID": "017",
+  "menu_item": "Escucha la explicación completa en audio",
+  "contenido": "Escucha la explicación completa en audio:\n\nhttps://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Videos%20TUTORIALES/Domina%20el%20Web%20Scraping%20con%20MAKE%20y%20APIFY_Metodos%20Efectivos%20y%20Llamadas%20HTTP.m4a"
+}
+  ]
+}

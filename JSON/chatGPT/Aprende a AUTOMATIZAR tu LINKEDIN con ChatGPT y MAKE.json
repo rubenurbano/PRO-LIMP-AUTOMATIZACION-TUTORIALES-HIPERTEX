@@ -1,0 +1,45 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "WEB ORIGINAL:",
+      "contenido": "Aprende a AUTOMATIZAR tu LINKEDIN con ChatGPT y MAKE\n(Web Original)\n\n[https://youtu.be/6OFYdrVBm3c?si=u-0WwiyP98K0EtBc](https://youtu.be/6OFYdrVBm3c?si=u-0WwiyP98K0EtBc)"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción a la automatización en LinkedIn",
+      "contenido": "Introducción a la automatización en LinkedIn:\n\nEn este tutorial aprenderás a crear un sistema automatizado para gestionar tu cuenta de LinkedIn y posicionarte como un experto en inteligencia artificial y automatizaciones. La automatización permitirá que un asistente lea noticias sobre un tema clave que tú elijas, genere publicaciones en LinkedIn mediante ChatGPT y cree imágenes asociadas para acompañar esas publicaciones. Todo esto se realizará con Make.com, una plataforma para crear flujos de trabajo sin necesidad de programación avanzada."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Crear un escenario nuevo en Make.com",
+      "contenido": "Crear un escenario nuevo en Make.com:\n\n1. Accede a tu cuenta de Make.com (puedes usar la versión gratuita).\n2. Crea un nuevo escenario y ponle un nombre identificativo, por ejemplo, \"LinkedIn Automation\".\n3. Añade el módulo \"Watch RSS Feed Items\" para que el escenario escuche noticias nuevas en un feed RSS con palabras clave relevantes para tu sector.\n4. Obtén una fuente RSS personalizada desde Google Alerts configurando las palabras clave de interés para tu nicho profesional (por ejemplo, \"inteligencia artificial\" o \"ChatGPT\").\n5. Configura la alerta en Google Alerts para que envíe los resultados a un feed RSS que Make pueda leer. Así, cada vez que haya una noticia nueva, Make la detectará automáticamente."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Configurar la integración con ChatGPT en Make.com",
+      "contenido": "Configurar la integración con ChatGPT en Make.com:\n\n1. Añade el módulo de OpenAI en Make para crear una \"Completion\" (generación de texto) usando ChatGPT.\n2. Configura las credenciales de tu cuenta OpenAI desde Make.\n3. Configura un prompt personalizado donde indiques que ChatGPT debe crear una publicación para LinkedIn basada en la noticia extraída del RSS.\n4. En el prompt, especifica que la publicación debe tener tres párrafos: resumen breve de la noticia, explicación de cómo el tema puede ayudar en el nicho profesional que elegiste, y una llamada a la acción para contactar contigo o tu empresa.\n5. Usa variables dinámicas de Make para pasar el título y descripción de la noticia al prompt de ChatGPT, de modo que cada post sea relevante y preciso."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Generar imágenes con DALL·E para LinkedIn",
+      "contenido": "Generar imágenes con DALL·E para LinkedIn:\n\n1. Añade el módulo generador de imágenes de OpenAI (DALL·E) en Make.\n2. Utiliza el texto generado por ChatGPT para que DALL·E cree una imagen realista y de alta calidad relacionada con el contenido del post.\n3. Configura la imagen con un formato apaisado (relación 16:9) ideal para miniaturas y publicaciones en redes sociales.\n4. Esto hará que tus publicaciones no solo tengan textos atractivos sino también imágenes visualmente impactantes."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Publicar automáticamente en LinkedIn",
+      "contenido": "Publicar automáticamente en LinkedIn:\n\n1. Añade el módulo de LinkedIn para crear una publicación de imagen con texto.\n2. Como LinkedIn no permite subir imágenes directamente desde muchos generadores, primero sube la imagen generada a un almacenamiento web accesible (puedes usar un módulo HTTP de Make para eso).\n3. En el módulo de LinkedIn, configura la publicación para que use el texto generado por ChatGPT y la imagen subida desde internet.\n4. Ejecuta pruebas seleccionando manualmente alguna noticia para validar que el post se genera correctamente y se publica en tu perfil.\n5. Programa la frecuencia para que el flujo se ejecute automáticamente (por ejemplo, una vez a la semana a primera hora)."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Consejos para una automatización eficaz y responsable",
+      "contenido": "Consejos para una automatización eficaz y responsable:\n\n- Enfócate en un único nicho profesional para especializar tus publicaciones y evitar saturar a audiencias diversas.\n- Configura prompts específicos para que las publicaciones reflejen tu voz y reputación profesional.\n- Mantén una frecuencia adecuada para no saturar tu perfil, por ejemplo, una publicación semanal.\n- Revisa periódicamente las publicaciones automáticas para ajustar los mensajes y asegurar que la información es precisa y valiosa.\n- Agrega hashtags y llamadas a la acción para maximizar el impacto y la interacción de las publicaciones."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\n- La creación y configuración de escenarios en Make está documentada oficialmente en la plataforma Make.com, que explica cómo usar módulos RSS y HTTP para integraciones externas.\n- La API de OpenAI para crear completions y generar imágenes con DALL·E es descrita en la documentación oficial de OpenAI (openai.com), incluyendo el formato de prompts y parámetros para obtener respuestas creativas.\n- La integración con LinkedIn a través de API y módulos personalizados está apoyada por la documentación oficial de LinkedIn para desarrolladores, que indica cómo publicar contenidos y subir imágenes mediante URLs públicas.\n- Google Alerts para crear feeds RSS personalizados para monitoreo de noticias es una funcionalidad oficial de Google, que permite la configuración personalizada para recibir alertas basadas en palabras clave.\n\nLinks oficiales:\n\n- Make.com: https://www.make.com/en/help\n- OpenAI API: https://platform.openai.com/docs/api-reference\n- LinkedIn API: https://learn.microsoft.com/en-us/linkedin/\n- Google Alerts: https://support.google.com/alerts\n\nEstos puntos aseguran que cada paso del tutorial está en línea con las capacidades y recomendaciones oficiales de las plataformas utilizadas."
+    }
+  ]
+}

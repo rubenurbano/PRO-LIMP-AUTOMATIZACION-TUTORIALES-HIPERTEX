@@ -1,0 +1,122 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "10 BEAUTIFUL Passing Chords Every Pianist Needs To Know\nWEB ORIGINAL:",
+      "contenido": "10 BEAUTIFUL Passing Chords Every Pianist Needs To Know:\nWeb Original:\n\n10 BEAUTIFUL Passing Chords Every Pianist Needs To Know:\nhttps://youtu.be/nCzpDIzwnw4?si=8PG4nUsywrRcvjeS"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción a los Acordes de Paso: ¿Qué Son y Para Qué Sirven?",
+      "contenido": "Los acordes de paso son un recurso armónico fundamental en la música, utilizados para conectar dos acordes principales de una progresión de manera fluida y elegante. En esencia, son acordes intermedios que no tienen una función armónica dominante o tónica por sí mismos dentro de la progresión principal, sino que actúan como puentes, creando movimiento y añadiendo color o tensión momentánea que luego resuelve de forma satisfactoria en el siguiente acorde.\n\nEl propósito principal de un acorde de paso es embellecer una progresión de acordes simple. Transforman una secuencia básica (por ejemplo, C - F - G - C) en algo más sofisticado y expresivo. Al introducir estos acordes transitorios, se puede enriquecer la melodía, añadir profundidad armónica y mantener el interés del oyente, evitando que la música suene monótona. No solo sirven para conectar, sino también para crear momentos de anticipación y resolución, guiando al oído hacia el siguiente punto armónico clave.\n\nPara el pianista, dominar los acordes de paso abre un abanico enorme de posibilidades para improvisar, arreglar canciones y componer. Permiten tomar una progresión de acordes sencilla y elevarla, dándole un toque más jazzy, clásico o contemporáneo, según el tipo de acorde de paso elegido. No se trata de complicar la música, sino de enriquecerla de manera inteligente y musical."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Principios Fundamentales para Crear Acordes de Paso",
+      "contenido": "Crear acordes de paso implica entender cómo se relacionan los acordes entre sí y cómo el movimiento melódico de las voces puede sugerir nuevas armonías. La clave está en pensar en el camino que queremos recorrer armónicamente y qué acordes transitorios pueden hacer ese viaje más interesante. No hay una única forma de hacerlo, pero existen principios y tipos de acordes de paso que son particularmente efectivos y comunes.\n\nUno de los principios más importantes es el movimiento cromático. Muchos acordes de paso funcionan introduciendo una o más notas que se mueven por semitonos (medio tono) hacia una nota del acorde objetivo. Este movimiento sutil pero potente crea una tensión que anhela resolver en el acorde diatónico principal, generando una sensación de progresión y continuidad. Entender esto es crucial, ya que permite identificar oportunidades para insertar estos acordes casi en cualquier progresión.\n\nOtro principio fundamental es el uso de acordes de dominante secundarios y acordes disminuidos. Estos son como las herramientas multiusos de los acordes de paso, capaces de dirigir la armonía hacia casi cualquier acorde diatónico. Los errores comunes incluyen intentar forzar un acorde de paso donde no encaja naturalmente, o abusar de ellos, lo que puede sobrecargar la armonía. La mejor práctica es siempre escuchar y dejar que la música guíe la elección, buscando siempre la fluidez y la belleza."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Acordes de Paso Diatónicos y Aproximaciones Cromáticas",
+      "contenido": "Los acordes de paso diatónicos simples son quizás los más intuitivos, ya que utilizan acordes que ya pertenecen a la tonalidad para conectar dos acordes principales. Por ejemplo, en Do Mayor (C Major), si vas de un acorde de C a un acorde de F, podrías pasar por el acorde de Em como un puente, creando un movimiento I - iii - IV. Estos acordes funcionan porque mantienen la coherencia tonal, aunque su función sea puramente conectora.\n\nLas aproximaciones cromáticas son una forma más avanzada y emotiva de crear acordes de paso. Consisten en insertar un acorde que contiene notas ajenas a la escala diatónica, pero que se resuelven cromáticamente (por semitono) en el siguiente acorde de la progresión. El efecto es una tensión sutil y una resolución satisfactoria que el oído percibe como natural y fluida. Este tipo de acorde de paso añade un color distintivo y una sensación de dirección muy fuerte.\n\nAquí te explicamos cómo aplicarlos con ejemplos prácticos:\n\n1.  **Acorde Disminuido Cromático Ascendente:** Si vas de C a Dm, puedes insertar un C#dim7. El C# de este acorde resuelve por semitono ascendente a D, la tónica de Dm.
+    2.  **Acorde Disminuido Cromático Descendente:** Para ir de C a Bm, puedes usar un Bdim7. El B de este acorde ya está en Bm, pero el acorde crea una sensación de descenso que se resuelve.
+    3.  **Acorde de paso diatónico simple:** En la progresión C - G - Am, podrías insertar un Dm entre G y Am. Aunque Dm no resuelve directamente en Am, es un acorde diatónico que puede servir de puente si se siente natural en el contexto melódico. Es más común verlo como parte de una progresión II-V-I.
+    4.  **Acorde Mayor/menor con movimiento cromático:** Para ir de C a F, podrías usar un Dm7 (el II menor). Pero si queremos añadir un acorde de paso cromático, podríamos pensar en un Ebdim7 entre Dm7 y F, o incluso un E7alt antes de F (que actúa como V7/IV). La idea es que la tensión generada se disipe con la resolución en el acorde objetivo."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "El Poder de los Acordes Disminuidos como Enlace Mágico",
+      "contenido": "Los acordes disminuidos son una de las herramientas más versátiles y "mágicas" para crear acordes de paso. Su naturaleza simétrica y su sonoridad tensa los hacen ideales para generar movimiento y anticipación. Un acorde disminuido completo (dim7) se construye con una serie de terceras menores, lo que significa que cada inversión del acorde suena igual que un nuevo acorde disminuido, simplemente con una tónica diferente. Esto les da una flexibilidad increíble para resolver en múltiples direcciones.\n\nPrincipalmente, los acordes disminuidos funcionan como dominantes secundarios sin fundamental o como extensiones de dominantes. Un uso muy común es el acorde disminuido que precede por semitono ascendente o descendente al acorde objetivo. Por ejemplo, si estamos en C mayor y queremos ir a un acorde de D menor (Dm), podemos insertar un C#dim7. Las notas de C#dim7 (C#-E-G-Bb) crean una fuerte atracción hacia Dm (D-F-A), donde el C# se resuelve en D, el E en F, el G se mantiene y el Bb puede resolver en A. Este movimiento por semitono es lo que le da su poder.\n\nAquí tienes cómo utilizarlos de manera efectiva:\n\n1.  **Acorde Disminuido que precede por semitono ascendente al objetivo:**
+        *   **De C a Dm:** Inserta un **C#dim7** entre C y Dm. (C - C#dim7 - Dm)
+        *   **De G a Am:** Inserta un **G#dim7** entre G y Am. (G - G#dim7 - Am)
+    2.  **Acorde Disminuido que precede al II grado de la progresión:**
+        *   En una progresión I - VI - II - V - I (C - Am - Dm - G - C), puedes insertar un **C#dim7** antes de Dm, o un **F#dim7** antes de G (V de C).
+    3.  **Acorde Disminuido como conexión entre acordes diatónicos:**
+        *   Si vas de un acorde a otro por grado conjunto (ej. de C a Em), un acorde disminuido puede funcionar. Por ejemplo, C - **D#dim7** - Em. El D# crea una tensión que se relaja en Em.
+    La clave es que la tensión del acorde disminuido siempre encuentre una resolución lógica y melódica en el siguiente acorde."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Acordes de Dominante Secundarios y sus Resoluciones",
+      "contenido": "Los acordes de dominante secundarios son potentes herramientas para crear acordes de paso, ya que su función es dirigir la armonía hacia un acorde diatónico específico, tratándolo momentáneamente como si fuera una tónica. Un acorde de dominante secundario es el acorde de V7 de cualquier grado diatónico que no sea la tónica principal. Por ejemplo, en Do Mayor, si el acorde de C es la tónica, el acorde de Dm es el II grado. El V7 de Dm sería A7 (La Séptima), y este A7 se convierte en un dominante secundario que resuelve en Dm.\n\nLa forma de construirlos es sencilla: identificas el acorde al que quieres "dirigir" (el acorde objetivo). Luego, construyes un acorde de séptima de dominante un tritono (tres tonos enteros) por encima de la fundamental de ese acorde objetivo, o lo que es lo mismo, cinco grados por encima. Por ejemplo, para un acorde objetivo de Em (III grado en C Mayor), el dominante secundario sería B7 (Si Séptima). Este B7 crea una fuerte atracción hacia Em, haciendo que la progresión suene más interesante y dirigida.\n\nAquí te mostramos cómo aplicarlos en progresiones comunes:\n\n1.  **V7/II:** Usar el dominante del segundo grado. En C Mayor, el segundo grado es Dm. Su dominante es A7.
+        *   Progresión: C - **A7** - Dm - G - C. (A7 resuelve en Dm).
+    2.  **V7/III:** Usar el dominante del tercer grado. En C Mayor, el tercer grado es Em. Su dominante es B7.
+        *   Progresión: C - F - **B7** - Em - Am. (B7 resuelve en Em).
+    3.  **V7/IV:** Usar el dominante del cuarto grado. En C Mayor, el cuarto grado es F. Su dominante es C7.
+        *   Progresión: C - **C7** - F - G - C. (C7 resuelve en F).
+    4.  **V7/V:** Usar el dominante del quinto grado. En C Mayor, el quinto grado es G. Su dominante es D7.
+        *   Progresión: C - F - **D7** - G - C. (D7 resuelve en G).
+    5.  **V7/VI:** Usar el dominante del sexto grado. En C Mayor, el sexto grado es Am. Su dominante es E7.
+        *   Progresión: C - G - **E7** - Am - Dm - G - C. (E7 resuelve en Am).\n\nEstos acordes añaden una capa de sofisticación, haciendo que las progresiones suenen menos predecibles y más dinámicas, siempre con una fuerte sensación de dirección hacia el acorde de resolución."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Sustituciones de Tritono y Acordes de Paso Descendentes",
+      "contenido": "La sustitución de tritono es un concepto avanzado en la armonía que se utiliza para reemplazar un acorde de séptima de dominante por otro acorde de séptima de dominante cuya fundamental se encuentra a un tritono de distancia (tres tonos enteros) de la fundamental del acorde original. Lo fascinante es que ambos acordes (el original y su sustituto de tritono) comparten las mismas notas de tritono, que son las que le dan la cualidad de dominante y la tensión resolutiva.\n\nPara el contexto de los acordes de paso, una sustitución de tritono es increíblemente útil porque permite crear un movimiento de bajo cromático descendente muy suave y elegante. Por ejemplo, en Do Mayor, si tenemos un G7 (dominante de C), su sustituto de tritono es Db7. Ambos acordes (G7: G-B-D-F y Db7: Db-F-Ab-Cb[B]) comparten las notas F y B (que es Cb), las que definen la tensión del dominante. Cuando Db7 resuelve en C, el bajo se mueve por semitono (Db a C), lo cual es muy agradable al oído.\n\nAquí te explicamos cómo aplicarla para crear acordes de paso descendentes:\n\n1.  **Identifica el acorde de dominante principal:** Supongamos que tu progresión es C - G7 - C. El G7 es el dominante que resuelve en C.
+    2.  **Encuentra su sustituto de tritono:** Para G7, cuenta un tritono ascendente o descendente. De G a Db hay un tritono. Entonces, Db7 es el sustituto.
+    3.  **Inserta el sustituto de tritono como acorde de paso:** En lugar de ir directamente de C a G7, o incluso en lugar del propio G7, puedes usar el Db7.
+        *   **Ejemplo:** C - **Db7** - C. Aquí, el Db7 actúa como un dominante que resuelve en C, pero con un bajo que desciende cromáticamente (Db a C).
+    4.  **Añade un acorde de paso adicional para más fluidez:** A veces, se puede usar antes del acorde de dominante secundario o del sustituto de tritono. Por ejemplo, en una progresión que va de C a F, en lugar de usar C7 (dominante de F), puedes usar Gb7 como sustituto de tritono de C7, para luego resolver en F.
+        *   **Ejemplo:** C - **Gb7** - F. Aquí, Gb7 es la sustitución de tritono de C7 (V7/IV). El bajo desciende cromáticamente de G (implícito en la idea de V7/IV) a Gb, y luego a F.
+
+    La sustitución de tritono es poderosa porque genera una sonoridad 'jazzística' y un movimiento de bajo muy interesante que conduce el oído de manera sutil pero efectiva."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Acordes de Paso a Través de la Anticipación (Approach Chords)",
+      "contenido": "Los 'approach chords' o acordes de anticipación son acordes de paso que se utilizan para "apuntalar" o "dirigir" la tensión hacia un acorde objetivo, a menudo precediéndolo por un semitono o un tono completo. No son dominantes secundarios ni disminuidos en el sentido tradicional, sino que su función es puramente ornamental y de conducción melódica, creando una expectativa que se resuelve directamente en el acorde deseado. Son una técnica común para añadir sofisticación a las progresiones armónicas, especialmente en géneros como el jazz.\n\nLa idea detrás de los acordes de anticipación es crear un movimiento melódico suave en las voces interiores o en el bajo que prepare al oyente para el siguiente acorde. A menudo, estos acordes son muy breves, casi como un 'toque' antes de la resolución. Pueden ser mayores, menores, dominantes o disminuidos, siempre y cuando su función sea la de "llevar" al siguiente acorde de manera fluida y con una sensación de resolución inevitable. Piensa en ellos como pequeñas paradas en el camino hacia tu destino final.\n\nAquí te mostramos cómo integrarlos en tus progresiones:\n\n1.  **Acorde de anticipación diatónico:** Puedes usar un acorde diatónico que esté un paso por encima o por debajo del acorde objetivo.
+        *   **Ejemplo:** Si vas de C a F, puedes usar un Em7 brevemente antes de F. (C - Em7 - F). El Em7 es diatónico y prepara la llegada de F.
+    2.  **Acorde de anticipación cromático (descendente):** Es muy común usar un acorde mayor o menor un semitono por encima del acorde objetivo, resolviendo hacia abajo.
+        *   **Ejemplo:** Para resolver a un acorde de Cm, puedes usar un Dbm (o un Dbmaj7, Db7) como acorde de paso. (C - Dbm - Cm). El Db desciende a C.
+    3.  **Acorde de anticipación cromático (ascendente):** Menos común pero efectivo, un acorde un semitono por debajo que resuelve hacia arriba.
+        *   **Ejemplo:** Para ir a Dm, puedes usar un C#m (o C#dim7 como vimos antes). (C - C#m - Dm). El C# sube a D.
+    4.  **Uso de un acorde dominante con fundamental ajena a la tonalidad:** Un acorde de dominante que no es secundario, sino que se usa para 'teñir' la llegada al siguiente.
+        *   **Ejemplo:** Para ir de C a Am, puedes insertar un F#m7b5. (C - F#m7b5 - Am). El F#m7b5 es el VIm7b5 del VI, que conduce melódicamente a Am.
+
+    La clave de los 'approach chords' es la brevedad y la intención de dirigir el oído. Son toques sutiles que añaden una capa de complejidad y belleza a la armonía."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Integrando Acordes de Paso en Progresiones Comunes",
+      "contenido": "Ahora que hemos explorado los diferentes tipos de acordes de paso, es crucial entender cómo integrarlos en progresiones de acordes comunes de manera efectiva. La habilidad no reside solo en conocer los acordes, sino en saber cuándo y dónde aplicarlos para que suenen naturales y enriquezcan la música, en lugar de forzarla o sobrecargarla. La experimentación y la escucha activa son tus mejores aliados en este proceso.\n\nPara empezar, identifica los puntos de tu progresión donde el cambio de un acorde a otro podría beneficiarse de un movimiento más suave o de una tensión añadida. Los momentos ideales suelen ser entre dos acordes diatónicos que están a una distancia de segunda o tercera, o cuando se repite un mismo acorde y se busca variarlo. Un buen punto de partida es una progresión I-VI-II-V (C-Am-Dm-G en Do Mayor), ya que ofrece múltiples oportunidades para insertar acordes de paso.\n\nAquí tienes algunos pasos y ejemplos prácticos para integrar estos acordes:\n\n1.  **Analiza la progresión base:** Elige una progresión sencilla, por ejemplo, **C - Am - Dm - G - C**.\n2.  **Identifica los "saltos" armónicos:**
+    *   Entre C y Am (I a VI): Podrías usar un **E7** (V7/VI) como acorde de paso.
+    *   Entre Am y Dm (VI a II): Podrías usar un **A7** (V7/II) o un **G#dim7** (cromático ascendente a Am, o incluso un C#dim7 que luego resuelve a Dm).
+    *   Entre Dm y G (II a V): Podrías usar un **Ebdim7** (cromático ascendente a Em, o un sustituto de tritono de A7 si pensamos en el V7/II). O bien, un **Db7** (sustituto de tritono de G7, el V7 de C).
+    *   Entre G y C (V a I): Podrías usar un **Db7** (sustituto de tritono de G7) antes del C.
+3.  **Experimenta con diferentes tipos de acordes de paso en cada punto:**
+    *   **Ejemplo 1 (Dominante Secundario):** **C - E7 - Am - A7 - Dm - D7 - G - G7 - C**. (Aquí D7 es V7/V, y G7 es el dominante principal).
+    *   **Ejemplo 2 (Disminuido Cromático):** **C - C#dim7 - Dm - Ebdim7 - Em - F - F#dim7 - G - G#dim7 - Am...** (Esto es una exageración, pero muestra el potencial). Es más común usar uno o dos estratégicamente.
+    *   **Ejemplo 3 (Sustitución de Tritono):** **C - Am - Dm - Db7 - C**. (Db7 sustituye a G7, creando un bajo cromático Db a C).
+    *   **Ejemplo 4 (Combinado):** **C - E7 - Am - C#dim7 - Dm - D7 - G - Db7 - C**.
+
+    **Buenas Prácticas:**
+    *   **Menos es más:** No satures la progresión con demasiados acordes de paso. Un par bien elegidos son más efectivos que muchos.
+    *   **Escucha tu intuición:** Si suena bien y fluye, es una buena opción.
+    *   **Mantén el bajo claro:** A menudo, el bajo es clave para que un acorde de paso suene lógico.
+    *   **Considera la melodía:** Los acordes de paso deben complementar la melodía, no chocar con ella.
+    *   **Practica lentamente:** Interioriza cómo suena cada acorde de paso y su resolución."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Errores Comunes y Mejores Prácticas al Usar Acordes de Paso",
+      "contenido": "Al integrar acordes de paso en tu música, es fácil caer en ciertos errores que pueden restar fluidez y naturalidad a tus progresiones. Reconocer estos errores te ayudará a evitarlos y a utilizar estos recursos armónicos de manera más efectiva, logrando un sonido pulcro y profesional. La clave está en la sutileza y en la comprensión profunda de cómo cada acorde afecta el flujo general de la pieza.\n\nUno de los errores más frecuentes es la **sobrecarga armónica**. Utilizar demasiados acordes de paso, o insertarlos en cada transición, puede hacer que la música suene confusa, recargada y difícil de seguir. El propósito de un acorde de paso es embellecer y conectar, no dominar la armonía. Otro error es **elegir acordes de paso que no resuelven de forma convincente**. Si un acorde de paso crea una tensión que no se disipa lógicamente en el siguiente acorde principal, el oído del oyente se sentirá insatisfecho o el pasaje sonará forzado. Finalmente, **ignorar el contexto melódico** es un error común; un acorde de paso puede sonar bien en teoría, pero si choca con la melodía, creará una disonancia indeseada.\n\nPara maximizar el impacto y la belleza de tus acordes de paso, sigue estas mejores prácticas:\n\n1.  **La simplicidad es clave:** Empieza con progresiones básicas y añade uno o dos acordes de paso a la vez. Escucha cómo cada adición afecta la sensación general. Un solo acorde de paso bien colocado puede tener un impacto significativo.
+2.  **Prioriza el movimiento de voces:** Presta atención a cómo las voces individuales (especialmente la voz del bajo y las voces superiores) se mueven de un acorde a otro. Los acordes de paso suelen funcionar mejor cuando hay un movimiento cromático o diatónico suave en al menos una de las voces que conecta los acordes principales.
+3.  **Prueba y experimenta:** No te limites a las reglas. Una vez que entiendas los principios, siéntete libre de experimentar con diferentes tipos de acordes de paso. Grábate y escucha críticamente. A veces, un acorde "incorrecto" según la teoría puede sonar fantásticamente bien en un contexto particular.
+4.  **Escucha activa:** Desarrolla tu oído para percibir cuándo un acorde de paso suena natural y cuándo no. Identifica el color y la tensión que aporta cada acorde y si se resuelve satisfactoriamente. Escuchar mucha música y analizar cómo otros compositores usan acordes de paso es una excelente forma de aprender.
+5.  **Contexto es fundamental:** Considera el estilo y el estado de ánimo de la pieza. Un acorde de paso que funciona bien en jazz podría no ser apropiado para una balada clásica, y viceversa. Ajusta tu elección a la estética general de tu música."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "Hemos explorado cómo los acordes de paso, ya sean diatónicos, cromáticos disminuidos, dominantes secundarios o sustituciones de tritono, son herramientas esenciales para enriquecer y embellecer las progresiones armónicas. La clave para su aplicación exitosa radica en la comprensión de su función conectora, la creación de tensión y resolución, y un uso consciente que priorice la fluidez y la musicalidad.\n\n**Puntos clave:**\n*   **Acordes de Paso:** Conectan dos acordes principales, añadiendo movimiento y color sin alterar la progresión fundamental.\n*   **Movimiento Cromático:** Un principio básico donde las notas se mueven por semitonos hacia el acorde objetivo.\n*   **Acordes Disminuidos:** Extremadamente versátiles, capaces de resolver por semitono ascendente o descendente.\n*   **Dominantes Secundarios:** Crean una fuerte atracción hacia un acorde diatónico tratándolo momentáneamente como tónica.\n*   **Sustituciones de Tritono:** Permiten reemplazar dominantes por otros con fundamental a un tritono, creando un elegante movimiento de bajo cromático.\n*   **Acordes de Anticipación (Approach Chords):** Aportan pequeños toques de tensión que dirigen el oído hacia el siguiente acorde.\n*   **Mejores Prácticas:** La moderación, la escucha activa, la atención al movimiento de voces y el respeto por el contexto musical son cruciales para un uso efectivo.\n\n**Enlaces a documentación oficial y fuentes técnicas fiables:**\n*   **Teoría Musical de Robert Gauldin - 'Harmonic Practice in Tonal Music'**: Un texto académico muy respetado que aborda en profundidad la armonía, incluyendo las funciones de acordes de paso. Aunque no está en línea, es un referente.
+*   **Open Music Theory:** Un recurso online gratuito y completo de teoría musical de universidades, que incluye secciones sobre acordes de paso y armonía cromática.
+    *   Enlace: [https://openmusictheory.com/](https://openmusictheory.com/) (Secciones como 'Chromatic Harmony' o 'Dominant Function')
+*   **Jazz Theory Book - Mark Levine:** Aunque centrado en jazz, es una fuente excelente para entender la aplicación práctica de dominantes secundarios, sustituciones de tritono y otros acordes de paso con un enfoque moderno. (Libro, no online).
+*   **Ricci Adams - Music Theory Net:** Ofrece lecciones interactivas y claras sobre armonía, incluyendo secciones sobre acordes de dominante secundarios y disminuidos.
+    *   Enlace: [https://www.musictheory.net/lessons](https://www.musictheory.net/lessons) (Buscar en la sección de Harmony)
+*   **Wikipedia - Passing Chord:** Para una visión general y enlaces a conceptos relacionados.
+    *   Enlace: [https://en.wikipedia.org/wiki/Passing_chord](https://en.wikipedia.org/wiki/Passing_chord) (En inglés, pero útil para referencias)"
+    }
+  ]
+}

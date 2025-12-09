@@ -1,0 +1,55 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "MAKE x SUPABASE IS HERE!!!\nWEB ORIGINAL:",
+      "contenido": "MAKE x SUPABASE IS HERE!!!\nWeb Original:\n\n[TITULO_VIDEO]:\nhttps://youtu.be/Divs4STKg2g?si=duWSEotoPaZhqqpl"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Crear un nuevo escenario en Make.com",
+      "contenido": "Crear un nuevo escenario en Make.com:\n\nAccede a tu cuenta de Make.com y haz clic en “Crear escenario”. Esto te permitirá definir una nueva automatización que conectará Make.com con Supabase.[1]"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Configurar un Webhook personalizado",
+      "contenido": "Configurar un Webhook personalizado:\n\nDentro del escenario, selecciona la opción “Webhooks” y elige “Custom Webhook”. Dale un nombre descriptivo, como “Mi Webhook Supabase”. Si necesitas configurar encabezados o formato JSON, utiliza la opción de “Advanced settings”.[1]"
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Copiar la URL del Webhook",
+      "contenido": "Copiar la URL del Webhook:\n\nUna vez creado el Webhook, copia la URL generada. Esta URL será el punto de entrada para recibir datos desde otras aplicaciones o herramientas, como Postman.[1]"
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Agregar el módulo Supabase en Make.com",
+      "contenido": "Agregar el módulo Supabase en Make.com:\n\nEn el escenario, añade un nuevo módulo y busca “Supabase”. Selecciona la acción que necesitas, como “Insertar registro” o “Seleccionar registros”. Antes de continuar, deberás crear una conexión con tu instancia de Supabase.[1]"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Conectar Make.com con Supabase",
+      "contenido": "Conectar Make.com con Supabase:\n\nEn la configuración del módulo Supabase, introduce tu “Project ID” y tu “API Key”. Estos datos los encuentras en la sección de “Project Settings” y “Data API” de tu panel de Supabase."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Seleccionar la tabla en Supabase",
+      "contenido": "Seleccionar la tabla en Supabase:\n\nActualiza la lista de tablas en el módulo Supabase y selecciona la tabla que deseas usar. Make.com detectará automáticamente la estructura de la tabla y te permitirá mapear los campos que llegan desde el Webhook.[1]"
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Configurar políticas de acceso en Supabase",
+      "contenido": "Configurar políticas de acceso en Supabase:\n\nEn Supabase, ve a la sección de “Policies” y crea una política para “SELECT” y otra para “INSERT”. Para pruebas, puedes permitir acceso a cualquier rol, pero en producción debes restringir los permisos según tus necesidades de seguridad."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Probar la conexión y ejecutar el escenario",
+      "contenido": "Probar la conexión y ejecutar el escenario:\n\nHaz clic en “Run Once” para probar el escenario. Si todo está bien configurado, recibirás una respuesta HTTP 200 y podrás ver los nuevos registros en tu tabla de Supabase.[1]"
+    },
+    {
+      "itemID": "009",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\n- La documentación oficial de Make.com para Webhooks y módulos: https://www.make.com/en/help/webhooks[1]\n- La documentación oficial de Supabase para API y políticas de acceso: https://supabase.com/docs/guides/api\n- Guía oficial de integración Make.com + Supabase: https://supabase.com/docs/guides/integrations/make\n\nTodos los pasos descritos han sido validados con la documentación oficial de ambas plataformas."
+    }
+  ]
+}

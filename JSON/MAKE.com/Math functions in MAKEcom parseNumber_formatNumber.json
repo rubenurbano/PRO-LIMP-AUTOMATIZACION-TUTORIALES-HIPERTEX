@@ -1,0 +1,50 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Math functions in MAKEcom parseNumber_formatNumber\nWEB ORIGINAL:",
+      "contenido": "Math functions in MAKEcom parseNumber_formatNumber:\nWeb Original:\nMath functions in MAKEcom parseNumber_formatNumber:\nhttps://youtu.be/sIIdrJgkZFI?si=zgtNCLivX5Qc1uc\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción a las funciones de números",
+      "contenido": "Introducción a las funciones de números:\nEn Make.com, existen funciones específicas diseñadas para cambiar el tipo de dato entre texto y número.[1][2][3][4][5] Estas herramientas son muy importantes porque, en ocasiones, los programas o servicios que conectas requieren que un dato sea exactamente un número real y no simplemente un texto que parece un número.\n\nLas dos funciones principales para realizar estas tareas son parseNumber y formatNumber."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Diferencia entre Parsear y Formatear",
+      "contenido": "Diferencia entre Parsear y Formatear:\nExisten dos conceptos fundamentales que definen el funcionamiento de estas herramientas:\n\nPARSEAR (función parseNumber): Esta acción significa convertir un texto en una estructura específica; en este contexto, se trata de convertir texto en un número. Esta función siempre te devolverá un número como resultado.\n\nFORMATEAR (función formatNumber): Esta acción significa convertir un número real en un texto con un formato específico decidido por ti, como por ejemplo definir la cantidad de decimales. Esta función siempre te devolverá un texto como resultado."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Función parseNumber: Convertir texto a número",
+      "contenido": "Función parseNumber: Convertir texto a número:\nEl objetivo de parseNumber es transformar un número que está guardado como texto para que el sistema lo reconozca como un número matemático real.\n\nLos números guardados como texto suelen identificarse porque aparecen entre comillas, como \"0.50\". Al aplicar esta conversión, un efecto inmediato es que los ceros a la izquierda (ceros iniciales) desaparecen."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Paso a paso para usar parseNumber",
+      "contenido": "Paso a paso para usar parseNumber:\nPara utilizar esta función correctamente, sigue estos pasos:\n\nPaso 1: Identifica la expresión o el texto que necesitas convertir.\n\nPaso 2: Aplica la función parseNumber.\n\nPaso 3: Configura los argumentos necesarios. El primer argumento es el texto que contiene el número. El segundo argumento es el separador decimal que utiliza ese texto original. Si el texto usa una coma para los decimales, debes indicarlo aquí explícitamente.\n\nPaso 4: Confía en la función. parseNumber es muy sólida y capaz de extraer el número correctamente incluso si el texto original contiene caracteres extraños o palabras mezcladas, como en el caso de \"IVA 1,234.56\"."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Función formatNumber: Convertir número a texto",
+      "contenido": "Función formatNumber: Convertir número a texto:\nLa función formatNumber realiza la operación inversa: toma un número real y lo convierte en un texto con una apariencia controlada.\n\nEsto es especialmente útil cuando necesitas mostrar números en formatos específicos, como el formato europeo que utiliza puntos para los miles y comas para los decimales. Es una función un poco más compleja porque ofrece más opciones de configuración."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Paso a paso para usar formatNumber",
+      "contenido": "Paso a paso para usar formatNumber:\nPara formatear un número, sigue este procedimiento:\n\nPaso 1: Asegúrate de que el dato de entrada sea un número real. Puede venir de una variable numérica o ser el resultado de una fórmula.\n\nPaso 2: Aplica la función formatNumber.\n\nPaso 3: Configura los cuatro argumentos que requiere la función, respetando el siguiente orden:\na. El Número de entrada: La expresión numérica a formatear.\nb. Puntos Decimales: La cantidad exacta de decimales que deseas en el resultado. El número se redondeará automáticamente si es necesario.\nc. Separador Decimal: El carácter que usará el texto final para separar la parte entera de los decimales (ej. una coma).\nd. Separador de Miles: El carácter que usará el texto final para separar los miles."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Opciones avanzadas de formato",
+      "contenido": "Opciones avanzadas de formato:\nLa función formatNumber permite gran flexibilidad en el resultado final:\n\nSi no deseas que aparezca ningún separador de miles, puedes utilizar una cadena de texto vacía (comillas vacías) en el argumento correspondiente.\n\nAdemás, es posible utilizar casi cualquier carácter como separador, no estando limitado solo a puntos o comas. Recuerda siempre que el resultado final de esta operación será un dato de tipo texto con el formato exacto que hayas definido."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nSe ha verificado la información del tutorial contrastándola con la documentación oficial de Make (anteriormente Integromat) y recursos de soporte técnico.\n\nPuntos técnicos validados:\n\nFunción parseNumber: Se confirma que convierte una cadena (string) en un número. Requiere dos argumentos: la cadena a convertir y el separador decimal.\n\nFunción formatNumber: Se confirma que convierte un número en una cadena (string) con formato. Requiere cuatro argumentos en el orden descrito: número, cantidad de decimales, separador decimal y separador de miles.\n\nTipos de datos: Se valida que parseNumber devuelve un tipo de dato \"Number\" y formatNumber devuelve un tipo de dato \"Text\" (String).\n\nFuente oficial de documentación:\nCentro de ayuda de Make - Funciones matemáticas (Math functions):\nhttps://www.make.com/en/help/functions/math-functions\n\nEsta documentación corrobora la sintaxis y el comportamiento de los argumentos parseNumber(number; decimal separator) y formatNumber(number; decimalPoints; decimalSeparator; thousandsSeparator) descritos en el tutorial.\n\n\nMath functions in MAKEcom parseNumber_formatNumber\nhttps://youtu.be/sIIdrJgkZFI?si=zgtNCLivX5Qc1uc\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    }
+  ]
+}

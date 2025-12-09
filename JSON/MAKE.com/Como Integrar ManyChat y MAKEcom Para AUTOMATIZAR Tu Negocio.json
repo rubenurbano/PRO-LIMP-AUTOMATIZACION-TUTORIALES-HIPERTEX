@@ -1,0 +1,95 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Como Integrar ManyChat y MAKEcom Para AUTOMATIZAR Tu Negocio\nWEB ORIGINAL:",
+      "contenido": "Como Integrar ManyChat y MAKEcom Para AUTOMATIZAR Tu Negocio:\nWeb Original:\nComo Integrar ManyChat y MAKEcom Para AUTOMATIZAR Tu Negocio:\nhttps://youtu.be/UkyvW7iTyT4?si=FprwKJFImIumFVDb\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introduccion a la integracion de ManyChat y Make.com",
+      "contenido": "Introduccion a la integracion de ManyChat y Make.com:\nCombinar las herramientas ManyChat y Make.com es fundamental si quieres que tu proyecto o negocio haga tareas automaticamente y de forma organizada. En este tutorial veremos como conectar estas dos herramientas de la forma correcta. Primero las conectaremos y luego veremos tres maneras diferentes de usarlas, todas funcionan muy bien. Tambien recibiras algunos consejos para que todo funcione perfectamente."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Configurar la Clave de API en ManyChat",
+      "contenido": "Configurar la Clave de API en ManyChat:\nPara comenzar la conexion entre las dos herramientas, primero debes trabajar en ManyChat. Ve a ManyChat.com y crea una cuenta si no tienes una. Una vez dentro, ve a Configuracion. Busca la seccion que dice Api. Genera la Clave de Api, que es un codigo especial. Copia este codigo porque lo necesitaras en el siguiente paso."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Crear la conexion en Make.com",
+      "contenido": "Crear la conexion en Make.com:\nAhora ve a Make.com y crea una cuenta. Una vez dentro, ve a la seccion de Escenarios. Crea un nuevo escenario. Anade un nuevo modulo y busca ManyChat. Selecciona cualquier modulo o herramienta de ManyChat que te ofrezcan. Haz clic en Add y luego en Crear una nueva conexion. Ponle un nombre, por ejemplo prueba. Pega el codigo que copiaste de ManyChat, que se llama Access token. Dale a Guardar."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Configurar el webhook en Make",
+      "contenido": "Configurar el webhook en Make:\nSi elegiste la opcion que espera informacion de ManyChat, como Watch incoming Data, eso se llama un webhook. Es como si Make estuviera esperando una llamada de ManyChat. Ponle un nombre y guardalo. Para enlazar definitivamente las herramientas, vuelve a ManyChat y crea una Accion. Ahora veras que aparece el modulo de Make. En el modulo de Make, busca el nombre del webhook que acabas de crear en Make. Con esto ya tienes las herramientas conectadas, pero ahora necesitamos ver como usarlas de verdad, porque solo enlazadas no sirven de mucho."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Entender los roles de ManyChat y Make",
+      "contenido": "Entender los roles de ManyChat y Make:\nPara usar las herramientas correctamente, debes entender que hacen. ManyChat es la parte que los usuarios ven, lo que se llama el frontend. Sirve para mostrar mensajes en plataformas como Instagram, WhatsApp o Facebook. Make es donde ocurre toda la magia, donde procesamos la informacion y hacemos calculos."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Opcion 1 - Configurar el escenario inicial en ManyChat",
+      "contenido": "Opcion 1 - Configurar el escenario inicial en ManyChat:\nEn esta primera opcion, saltaremos de ManyChat a Make y luego Make nos pedira que volvamos a ManyChat para terminar. En ManyChat, crea un nuevo escenario. Pidele algo al usuario, por ejemplo que escriba algo como conectar m con m. Cuando el usuario conteste, guarda su respuesta en una variable, que es como una caja donde guardas datos, por ejemplo llamada conectar make. En el paso siguiente, crea una accion para mandar esa respuesta a Make. Dentro de la accion, busca el modulo de Make.com y elige el webhook que creaste al principio."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Opcion 1 - Procesar la informacion en Make",
+      "contenido": "Opcion 1 - Procesar la informacion en Make:\nEn Make, despues de recibir la informacion, puedes hacer lo que quieras con ella. Por ejemplo, vamos a guardar el ID del usuario, que es el numero de identificacion de esa persona, en otra variable."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Opcion 1 - El error a evitar y la solucion correcta",
+      "contenido": "Opcion 1 - El error a evitar y la solucion correcta:\nCuando Make termine de procesar, si quieres mandar un mensaje de vuelta al usuario a traves de ManyChat, no uses las opciones que dicen Send text o Send messages. Esto es porque estas opciones a menudo fallan. Ademas, dependen de una ventana de tiempo de 4 horas que ManyChat tiene, especialmente en WhatsApp. Si se cierra la ventana, los mensajes cuestan dinero. La solucion correcta es que en lugar de mandar texto, Make debe usar la opcion Send a Flow, que significa Enviar un Flujo. Un Flow es otro escenario de mensajes que ya esta creado en ManyChat. Copia la identificacion, que se llama ID, de ese nuevo Flow de ManyChat. En Make, usa Send a Flow, selecciona el subscriber id para saber a que usuario enviarlo y pega la ID del nuevo Flow de ManyChat."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Opcion 1 - Configurar el segundo Flow en ManyChat",
+      "contenido": "Opcion 1 - Configurar el segundo Flow en ManyChat:\nEste segundo Flow se activara y recibira la informacion procesada por Make. Ahora puedes guardar esa informacion que Make te envio en una variable de ManyChat. Luego le muestras al usuario el mensaje final, por ejemplo mostrando el ID que Make calculo. El resultado de esta opcion es que estaras saltando constantemente entre archivos de ManyChat y archivos de Make."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Opcion 2 - Configurar Solicitud Externa en ManyChat",
+      "contenido": "Opcion 2 - Configurar Solicitud Externa en ManyChat:\nEsta segunda forma ayuda a que todo el proceso ocurra de manera mas ordenada en un solo archivo de ManyChat. Usaremos las herramientas mas avanzadas de Make. Make es muy util porque hace trabajos de programacion dificiles de forma sencilla, como conectar con otras aplicaciones y transformar datos. En ManyChat, en lugar de usar la accion directa de Make, vamos a usar una Solicitud Externa, que es como enviar una peticion por internet y tambien se llama solicitud HTTP. Esta solicitud necesita un enlace que se llama URL. El tipo de solicitud sera POST porque le vamos a mandar informacion a Make."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Opcion 2 - Configurar webhook personalizado en Make",
+      "contenido": "Opcion 2 - Configurar webhook personalizado en Make:\nEn Make, en lugar de empezar con el modulo de ManyChat, empieza con el modulo de Webhooks. Selecciona Custom Webhook. Dale un nombre y guardalo. Copia la URL que te da Make."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Opcion 2 - Completar configuracion de Solicitud Externa",
+      "contenido": "Opcion 2 - Completar configuracion de Solicitud Externa:\nVuelve a ManyChat y pega la URL que copiaste de Make en la Solicitud Externa. En la seccion Cuerpo, que en ingles se llama Body, debes indicar que informacion vas a enviar. Elige Full contact Data para enviar todos los datos del usuario a Make. La parte de Mapeo de respuesta, que en ingles es Response Mapping, sirve para que cuando Make termine su trabajo y te devuelva datos, ManyChat sepa donde guardarlos."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "Opcion 2 - Procesar y responder desde Make",
+      "contenido": "Opcion 2 - Procesar y responder desde Make:\nUna vez que el webhook de Make recibe los datos, se procesan, como guardar el ID del usuario. Para enviar la respuesta de vuelta a ManyChat sin tener que iniciar un nuevo Flow como en la Opcion 1, usaremos el modulo Response. Asegurate de que el estado sea 200, que significa que todo salio bien. En el cuerpo de la respuesta, enviaremos un JSON, que es un formato sencillo para organizar datos, por ejemplo una variable llamada mensaje con su valor."
+    },
+    {
+      "itemID": "014",
+      "menu_item": "Opcion 2 - Recibir respuesta en ManyChat",
+      "contenido": "Opcion 2 - Recibir respuesta en ManyChat:\nComo ya configuraste el Mapeo de respuesta, ManyChat recibe el JSON y guarda el valor que Make te devolvio, el mensaje o dato procesado, en la variable de ManyChat que elegiste. De esta forma el proceso termina en el mismo archivo de ManyChat."
+    },
+    {
+      "itemID": "015",
+      "menu_item": "Consejo final para evitar errores",
+      "contenido": "Consejo final para evitar errores:\nNo uses las opciones de Enviar Texto o Enviar Mensajes directamente desde Make, ya que pueden detener el flujo o fallar. Las dos opciones que se explicaron, usar Send a Flow o usar Solicitud Externa con Webhook, son las mejores para que tus automatizaciones sigan funcionando correctamente."
+    },
+    {
+      "itemID": "016",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\nVoy a buscar las fuentes oficiales para validar la informacion tecnica sobre ManyChat y Make.com."
+    },
+    {
+      "itemID": "016-2",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\n\nLa informacion presentada en este tutorial ha sido validada con las fuentes oficiales de ManyChat y Make.com. A continuacion se incluyen los puntos tecnicos verificados y sus referencias oficiales:\n\nConfiguracion de API en ManyChat:\nLa documentacion oficial de ManyChat confirma que para conectar ManyChat con Make se requiere una cuenta ManyChat Pro. El proceso consiste en acceder a Settings, luego a API, y generar un token mediante el boton Generate your token. Este token es necesario para establecer la conexion. La documentacion oficial se encuentra en https://help.manychat.com/hc/en-us/articles/14959510331420-How-to-generate-a-token-for-the-Manychat-API-and-where-to-get-parameters y en la pagina de documentacion de Make sobre ManyChat en https://apps.make.com/manychat\n\nWebhooks en Make.com:\nLos webhooks permiten enviar datos a Make mediante HTTPS y crear una URL que puede ser llamada desde una aplicacion externa o desde otro escenario de Make. Los webhooks actuan como triggers instantaneos, ejecutando el escenario inmediatamente despues de que la URL del webhook reciba una solicitud. La documentacion oficial sobre webhooks esta disponible en https://help.make.com/webhooks y https://www.make.com/en/blog/what-are-webhooks\n\nModulo HTTP en Make:\nEl modulo HTTP de Make permite realizar solicitudes HTTPS a URLs especificadas, incluyendo solicitudes POST para enviar informacion. Este modulo es fundamental para crear solicitudes externas personalizadas. La documentacion oficial se encuentra en https://apps.make.com/http y https://www.make.com/en/help/tools/http\n\nModulo Response en Make:\nEl modulo Response permite que Make devuelva datos directamente a ManyChat sin necesidad de iniciar un nuevo Flow. Este modulo debe configurarse con un estado 200 para indicar que la operacion fue exitosa. La respuesta puede enviarse en formato JSON.\n\nUso de Send a Flow:\nLa opcion Send a Flow en Make permite enviar al usuario a otro flujo de ManyChat sin usar las opciones Send Text o Send Messages. Esto evita problemas con la ventana de tiempo de ManyChat, especialmente en WhatsApp, donde despues de 4 horas los mensajes pueden tener costos adicionales.\n\nAPI de ManyChat:\nLa API publica de ManyChat permite cambiar el estado de los contactos en cualquier momento y enviarles mensajes desde fuera de ManyChat. La documentacion completa de la API esta disponible en https://api.manychat.com/swagger y en https://help.manychat.com/hc/en-us/articles/14281252007580-Dev-Tools-Basics\n\nLimitaciones de Rate Limit:\nSegun la documentacion oficial, la API de ManyChat tiene un limite de 10 solicitudes por segundo para los endpoints de suscriptores. Exceder este limite genera un error 429.\n\nRecursos adicionales oficiales:\nMake.com Developer Hub para webhooks: https://developers.make.com/custom-apps-documentation/app-structure/webhooks\nGuia de Make sobre conexion de herramientas mediante HTTP: https://www.optimeister.com/en/blog/connect-any-tool-with-make-coms-http-module\n\nToda la informacion tecnica presentada en este tutorial esta respaldada por documentacion oficial y sigue las mejores practicas recomendadas por ambas plataformas.\n\n\nTITULO_VIDEO    =    Como Conectar CUALQUIER API a Makecom\nURL_WEB_YOUTUBE = https://youtu.be/d1Y0Njcv6J8?si=1Rg7Bp97P5G6hTgo\nAUTOR           = PRO-LIMP AUTOMATIZACION\nTELEFONO        = +34 636832005"
+    }
+  ]
+}
