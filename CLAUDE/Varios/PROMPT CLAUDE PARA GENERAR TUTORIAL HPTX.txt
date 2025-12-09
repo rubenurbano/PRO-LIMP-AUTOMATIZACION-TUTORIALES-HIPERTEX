@@ -1,7 +1,7 @@
 Escribe un tutorial paso a paso completo con el siguiente título y estructura, usando ÚNICAMENTE toda la información contenida en el documento adjunto, sin agregar conocimiento externo y no te olvides de escribir la seccion de preguntas y respuestas:
 
-[TITULO_VIDEO] =    Anthropic Released A New Way To Vibe Code
-[URL_WEB_YOUTUBE] = https://youtu.be/XWp4k9K6oK8?si=4RvTXb8JlF_yp-Dr
+[TITULO_VIDEO] =    Así funcionan los NUEVOS MCP en Claude
+[URL_WEB_YOUTUBE] = https://www.youtube.com/watch?v=O-ptFSdZXrs
 [AUTOR] = PRO-LIMP AUTOMATIZACION
 [TELEFONO] = +34 636832005
 

@@ -1,0 +1,267 @@
+##itemID:000
+##menu-item BEGIN
+Asi funcionan los NUEVOS MCP en Claude
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Así funcionan los NUEVOS MCP en Claude:
+Web Original:
+Así funcionan los NUEVOS MCP en Claude:
+https://www.youtube.com/watch?v=O-ptFSdZXrs
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END
+
+##itemID:001
+##menu-item BEGIN
+Introducción y demostración práctica
+##menu-item END
+##Contenido BEGIN
+Introducción y demostración práctica:
+Hoy vas a ver el siguiente paso evolutivo de la inteligencia artificial. En este video te enseñaré cómo controlar mi ordenador desde la consola de Claude utilizando lenguaje natural y un MCP (Model Context Protocol).
+
+Para demostrártelo, voy a pedirle lo siguiente a Claude:
+"Crea una carpeta llamada 'página web' en mi escritorio y dentro de esa carpeta crea un archivo HTML que contenga una página web para informar a mis seguidores del lanzamiento de salvajes.club. El diseño debe ser moderno, minimalista y muy dark".
+
+Al enviar esta petición, verás que:
+
+Claude empieza a trabajar y pide permisos.[1][2]
+
+Le damos a permitir y confirma que tiene acceso al escritorio.
+
+Crea la carpeta en el escritorio automáticamente.
+
+Crea el archivo index.html dentro de esa carpeta.
+
+El resultado es una página web con un diseño bastante bueno, creada y guardada en mi propio ordenador sin que yo haya tenido que tocar los archivos manualmente. Esto es solo un ejemplo de lo que se puede hacer con este nuevo protocolo.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Qué es un MCP y su potencial
+##menu-item END
+##Contenido BEGIN
+Qué es un MCP y su potencial:
+Un MCP (Model Context Protocol) es un nuevo protocolo que funciona como conexión entre una herramienta de Inteligencia Artificial y otra herramienta externa.[2][3][4][5][6][7][8][9][10] Aunque llevan tiempo trabajando en esto, ahora es cuando empezarás a escucharlo más porque grandes compañías como OpenAI y Anthropic lo están adoptando.
+
+Para que lo entiendas mejor:
+
+Es un conector que da "superpoderes" a la IA.[2][7]
+
+Permite pedirle cosas como crear documentos, leerlos, ordenar tu PC o controlar tu escritorio usando prompts.
+
+Ya hay ejemplos de grandes empresas sacando sus propios MCPs, como Google, GitHub, el navegador Brave, Google Maps, Stripe y Spotify.
+
+También existen sitios como mcp.so LINK= https://mcp.so/ donde usuarios particulares suben sus propios MCPs.
+
+Un ejemplo claro es el MCP de ElevenLabs. Si añadimos su código y API a Claude, podríamos pedirle que nos cree un podcast directamente desde la consola, igual que hemos creado la página web en el ejemplo anterior.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Paso 1: Instalar Claude Desktop
+##menu-item END
+##Contenido BEGIN
+Paso 1: Instalar Claude Desktop:
+Lo primero que necesitas para usar un MCP es tener la aplicación de escritorio de Claude instalada, ya que vamos a trabajar sobre ella.[2][3][5][7][11][12][13]
+
+Ve a Google y busca "MCP Antropic".
+
+Entra en el enlace que dice "Model Protocol MCP".[14]
+
+Busca la opción para instalar el MCP en la aplicación de escritorio ("Claude for Desktop").
+
+Descarga la aplicación para tu sistema operativo (Windows o Mac) desde el enlace oficial.[13]
+
+Instala el archivo siguiendo los pasos típicos (siguiente, siguiente, instalar).
+
+Una vez instalada, abre Claude. Verás un panel de control normal, pero todavía no tendrás el icono de las herramientas MCP activado. Eso es lo que vamos a configurar ahora.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Paso 2: Acceder a la configuración de desarrollador
+##menu-item END
+##Contenido BEGIN
+Paso 2: Acceder a la configuración de desarrollador:
+Para añadir el MCP, necesitamos editar un archivo de configuración dentro de Claude.[2][3][5][7][11][12][13][15] Sigue esta secuencia exacta:
+
+Abre la aplicación de Claude en tu escritorio.[1][2][3][5][11][12][13][14]
+
+Ve al menú (el icono de la hamburguesa o archivo).
+
+Entra en "Configuración" (Settings).[2][3][5][12]
+
+Busca y entra en el "Modo desarrollador".[3][13]
+
+Pulsa en el botón "Editar configuración".[2][11][12][13]
+
+Al hacer esto, se abrirá una carpeta en tu PC con un fichero de configuración.[7][11][13] Puedes abrir este archivo usando cualquier editor de texto, aunque yo recomiendo usar Visual Studio Code si lo tienes, ya que es más cómodo.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Paso 3: Añadir el código del MCP
+##menu-item END
+##Contenido BEGIN
+Paso 3: Añadir el código del MCP:
+Cuando abras el archivo de configuración, probablemente estará vacío.[13] Ahora debemos pegarle el código que conecta Claude con el servidor MCP (en este caso, el "File System" para controlar el ordenador).
+
+Vuelve a la guía de usuario en la web donde descargamos Claude (la documentación de MCP).
+
+Busca la sección de "File System MCP Server".
+
+Copia el código que aparece allí para tu sistema operativo (Windows o Mac).
+
+Pega ese código dentro de tu archivo de configuración en Visual Studio Code.
+
+Importante: En el código verás unas rutas a las que Claude tendrá acceso.[1][11] Borra la ruta por defecto y pon la ruta de tu escritorio (o la carpeta que quieras que controle) para darle permisos.
+
+Guarda el archivo con los cambios.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Paso 4: Reiniciar Claude para aplicar cambios
+##menu-item END
+##Contenido BEGIN
+Paso 4: Reiniciar Claude para aplicar cambios:
+Una vez guardado el archivo, es obligatorio reiniciar Claude para que reconozca el nuevo MCP. No basta con cerrar la ventana con la X.
+
+Ve al menú de Claude (icono de hamburguesa).
+
+Selecciona "Archivo" > "Salir" (Exit) para cerrar la aplicación completamente.
+
+Vuelve a abrir la aplicación de Claude.
+
+Si todo ha ido bien, ahora verás un nuevo icono que parece un enchufe o conector. Si haces clic en él, te mostrará las herramientas disponibles del "File System MCP", como crear directorios, listar archivos, editar, mover y leer archivos.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Solución de errores (Instalar Node.js)
+##menu-item END
+##Contenido BEGIN
+Solución de errores (Instalar Node.js):
+Si al reiniciar te aparece un aviso de error en la aplicación (una notificación roja o naranja), es probable que te falte un componente necesario para ejecutar este MCP concreto.
+
+En este caso, el MCP de File System necesita tener instalado Node.js.[7][12]
+
+Si tienes error, revisa que la ruta en el archivo de configuración sea correcta.
+
+Si la ruta está bien, ve a la web oficial de Node.js (el enlace suele estar en el propio tutorial de instalación del MCP).
+
+Descarga e instala Node.js (es un proceso sencillo de siguiente, siguiente, siguiente).
+
+Una vez instalado, reinicia Claude de nuevo. Cuando veas el icono del conector sin errores, ya está listo para usarse.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Cómo utilizar el MCP (Ejemplo de uso)
+##menu-item END
+##Contenido BEGIN
+Cómo utilizar el MCP (Ejemplo de uso):
+Ahora que ya está instalado, puedes pedirle cosas a Claude usando lenguaje natural. Vamos a hacer una prueba creando un archivo de agradecimiento.
+
+Prompt de ejemplo:
+"Crea un artículo en mi escritorio dentro de la carpeta 'página web' (la que creamos antes) con un texto dando las gracias a los salvajes por ver el video".
+
+Proceso:
+
+Claude te dirá qué va a hacer y te pedirá permiso.
+
+Dale a "Permitir".[2]
+
+Claude comprobará si la carpeta existe (en el video deduce solo que la carpeta se llama "página" y no "página web" si hubo un error previo, demostrando inteligencia).
+
+Creará el archivo (por ejemplo, "agradecimientos.txt").
+
+Al revisar tu carpeta en el ordenador, verás que el archivo se ha creado mágicamente con el texto que le pediste.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+Preguntas y Respuestas
+##menu-item END
+##Contenido BEGIN
+Preguntas y Respuestas:
+🟢 Conceptos Básicos y Potencial
+P: ¿Qué es exactamente un MCP?
+R: Un MCP (Model Context Protocol) es un nuevo protocolo que actúa como conexión entre una herramienta de Inteligencia Artificial (como Claude) y otra herramienta externa. Permite darle "superpoderes" a la IA para que pueda realizar acciones reales, como controlar tu ordenador, crear documentos o gestionar archivos, en lugar de solo generar texto.
+P: ¿Qué grandes empresas están adoptando los MCP?
+R: Según el video, compañías como Anthropic (Claude), OpenAI, Google, GitHub, el navegador Brave, Google Maps, Stripe y Spotify ya están sacando sus propios servidores MCP.
+P: ¿Para qué sirve el servidor "File System MCP" que se muestra en el video?
+R: Sirve para controlar el ordenador mediante prompts desde la consola de Claude. Permite crear directorios, listar archivos, leer documentos, editarlos, moverlos y ordenar el PC si está desordenado.
+P: ¿Existen otros ejemplos de uso además de controlar archivos?
+R: Sí, se menciona el ejemplo de ElevenLabs. Si conectas su MCP a Claude mediante la API, podrías pedirle a la IA que cree un podcast directamente desde la consola de chat. También se menciona el potencial futuro de editar imágenes en Photoshop o crear videos en Premiere usando este sistema.
+🟢 Demostración Práctica del Video
+P: ¿Qué tarea realiza Claude en la demostración inicial del video?
+R: Claude crea una carpeta llamada "página web" en el escritorio del usuario y, dentro de ella, genera un archivo index.html. Este archivo contiene una página web funcional con un diseño "moderno, minimalista y dark" para anunciar el lanzamiento de salvajes.club.
+P: ¿La IA hace esto automáticamente o pide permiso?
+R: La IA pide permisos antes de actuar. Primero solicita permiso para acceder al escritorio y luego para crear los archivos. Una vez que el usuario le da a "Permitir", la IA ejecuta la acción.
+🟢 Instalación y Configuración Paso a Paso
+P: ¿Qué programa necesito instalar primero?
+R: Necesitas descargar e instalar la aplicación de escritorio de Claude (Claude for Desktop) para Windows o Mac.
+P: ¿Dónde consigo el código para instalar el MCP?
+R: Debes buscar "MCP Anthropic" en Google, acceder al enlace oficial de "Model Protocol MCP", ir a la sección de instalación para escritorio y buscar el código correspondiente al servidor que quieras instalar (en el video usan el File System MCP Server).
+P: ¿Cómo añado el MCP a Claude?
+R:
+Abres Claude Desktop.
+Vas al Menú (hamburguesa) > Archivo > Configuración.
+Entras en "Modo Desarrollador" y pulsas "Editar configuración".
+Se abrirá un archivo de configuración (preferiblemente usar Visual Studio Code para editarlo).
+Pegas el código del MCP que copiaste de la guía oficial dentro de ese archivo.
+P: ¿Hay que configurar alguna ruta específica?
+R: Sí. En el código que pegas, debes especificar la ruta de tu ordenador a la que quieres darle acceso a Claude (por ejemplo, la ruta de tu Escritorio).
+P: ¿Qué debo hacer después de guardar el archivo de configuración?
+R: Debes reiniciar Claude completamente. Esto significa ir a Archivo > Salir (no solo cerrar la ventana con la X) y volver a abrir la aplicación para que tome los cambios.
+🟢 Solución de Problemas
+P: ¿Qué hago si al reiniciar Claude me aparece un error o una notificación roja?
+R: Es muy probable que necesites instalar una herramienta adicional. En el caso del MCP de File System, el video explica que es necesario tener instalado Node.js.
+P: ¿Cómo instalo Node.js?
+R: En la misma guía del MCP suele haber un enlace. Debes ir a la web oficial de Node.js, descargarlo e instalarlo (siguiente, siguiente, siguiente). Una vez instalado, reinicia Claude nuevamente y debería aparecer el icono del conector funcionando correctamente.
+🟢 Reflexión y Futuro
+P: ¿Qué debate plantea el autor sobre los MCP frente a los Agentes IA?
+R: El autor plantea la duda de cuál es mejor. Personalmente, opina que ahora mismo prefiere los MCP (emoji del engranaje) porque pueden llegar a ser más fáciles de usar para un usuario promedio si se integran bien.
+P: ¿Dónde puedo aprender más sobre estos temas según el video?
+R: El autor recomienda unirse a la lista de espera de salvajes.club para aprender a utilizar la inteligencia artificial de forma avanzada.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Para validar la información de este tutorial, se han consultado las fuentes oficiales del proyecto Model Context Protocol (MCP) y la documentación de Anthropic.
+
+Resumen de puntos técnicos validados:
+
+Definición de MCP: El "Model Context Protocol" es efectivamente un estándar abierto introducido por Anthropic para conectar asistentes de IA con sistemas de datos externos (repositorios de contenido, herramientas de negocio, entornos de desarrollo local).[13][14]
+
+Instalación en Claude Desktop: Se confirma que Claude Desktop soporta conexiones a servidores MCP locales editando el archivo de configuración claude_desktop_config.json.[2][5][7][11][13][16]
+
+Servidor File System: Existe un servidor de referencia oficial llamado filesystem que permite a Claude leer y escribir archivos en el ordenador del usuario, tal como se describe en el tutorial.
+
+Requisitos: El uso de servidores MCP basados en TypeScript/JavaScript requiere la instalación de Node.js y npm, validando la sección de solución de errores del tutorial.
+
+Enlaces a documentación oficial:
+
+Web Oficial del Proyecto MCP: https://modelcontextprotocol.io/introduction
+
+Documentación de Anthropic sobre MCP: https://docs.anthropic.com/en/docs/agents-and-tools/mcp
+
+Repositorio de Servidores MCP (incluyendo File System): https://github.com/modelcontextprotocol/servers
+
+Guía rápida para Claude Desktop: https://modelcontextprotocol.io/quickstart/user[[2](https://www.google.com/url?sa=E&q=https%3A%2F%2Fvertexaisearch.cloud.google.com%2Fgrounding-api-redirect%2FAUZIYQFBJDI9uR4Bz7wGtls7neVJPBWweTJswdfrj4yB-1fTwsWnY8W_S6mewIcvwDTs4hmQaSL6tBudFn8S7BK1_JWD4HbOIqfJQkRg92KwpPCiC-_XJPYRUHwpSwsIHSVRnFg8msOl77YFn3OMTzFcnR2N9hg_0aQCYZZPpe9ILVrw3XzzJxNk-jyv3PFpwgc0BLDbuf3IwGWc4QowQaJ2Qk7SbFelP-MXWZDGvEDo02O7sC8XXWwg)]
+
+
+
+TITULO_VIDEO
+URL_WEB_YOUTUBE
+AUTOR
+TELEFONO
+##Contenido END
