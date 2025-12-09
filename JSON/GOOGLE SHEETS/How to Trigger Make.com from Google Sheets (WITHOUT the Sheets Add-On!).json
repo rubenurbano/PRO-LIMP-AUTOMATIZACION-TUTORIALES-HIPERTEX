@@ -1,0 +1,35 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "VIDEO DE YOUTUBE:",
+      "contenido": "VIDEO DE YOUTUBE:\n(Referencia visual del tutorial)\nHow to Trigger Make.com from Google Sheets (WITHOUT the Sheets Add-On!)\nhttps://youtu.be/iQF2U3pKPIM?si=0yqLPl0S8jKxMX5a"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Paso 1: Crear un Escenario y un Webhook Personalizado en Make.com",
+      "contenido": "El primer paso es configurar el punto de entrada que Make.com usará para escuchar las instrucciones que provienen de Google Sheets.\n\n1.  Vaya a Make.com y cree un **Nuevo Escenario**.\n2.  Como primer módulo, seleccione la aplicación **Webhook**.\n3.  Elija la opción **Custom Webhook** (Webhook Personalizado).\n4.  Haga clic en **Add** (Agregar), asigne un nombre a su webhook y luego haga clic en **Save** (Guardar).\n5.  **Copie la Dirección** que Make.com le proporciona. Esta URL es su punto de activación único.\n6.  Deje el escenario en Make.com abierto y listo para ser ejecutado."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Paso 2: Construir el Enlace de Activación (HYPERLINK) en Google Sheets",
+      "contenido": "En su hoja de cálculo de Google, usará una fórmula especial, `HYPERLINK`, para convertir la URL del Webhook en un enlace en el que se puede hacer clic.\n\n**Apps Script/Google Validation Concepto:** Google Apps Script es una plataforma basada en JavaScript que permite automatizar tareas e interactuar programáticamente con productos de Google, como Google Sheets. Aunque no escribiremos un *script* completo en este momento, la capacidad de la hoja de cálculo para manejar llamadas de red a través de fórmulas como `HYPERLINK` se basa en la funcionalidad del entorno Google Workspace.\n\nSupongamos que su Webhook copiado del Paso 1 es `[URL_WEBHOOK]`. En una celda vacía de su Google Sheet, use la siguiente fórmula:\n\n```\n=HYPERLINK(\"[URL_WEBHOOK]\", \"Trigger Make.com\")\n```\n\n*   **`[URL_WEBHOOK]`**: La dirección que copió de Make.com.\n*   **`\"Trigger Make.com\"`**: La etiqueta de texto que se mostrará en la celda.\n\nAl presionar Enter, esta celda se convertirá en un botón de activación.\n\n**Acción:** Haga clic en la celda con la fórmula y luego haga clic en el botón de **Guardar** en Make.com. Si hace clic en el enlace de la hoja, debería ver que Make.com ha recibido la señal (indicando que ha \"golpeado el webhook\" / \"hit the web hook\")."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Paso 3: Pasar Datos Específicos Usando Parámetros de Consulta",
+      "contenido": "Para que la automatización sea útil, Make.com necesita saber *qué* fila o registro específico debe procesar. Hacemos esto adjuntando datos de la fila de Google Sheets a la URL del webhook como **Parámetros de Consulta (Query Parameters)**.\n\n**Apps Script/Google Validation Concepto:** El manejo de datos en una solicitud HTTP externa se realiza mediante URL que contienen parámetros clave-valor (Query Parameters). Apps Script soporta el manejo de estos parámetros mediante la función de servicio `doGet(e)`, donde el objeto de evento `e` contiene los `e.parameter` (parámetros) enviados en la URL.\n\nModifique la fórmula de la celda para incluir los datos. Usaremos el carácter `?` para iniciar los parámetros y `&` para separarlos.\n\n**Ejemplo de fórmula (suponiendo que la ID única está en la celda A2 y el email en B2):**\n\n1.  Comience con la URL base y agregue `?` para iniciar los parámetros.\n2.  Defina el primer parámetro: `ID=` y use `&` para concatenar el valor de la celda.\n3.  Agregue un segundo parámetro: `&Email=` seguido del valor de la celda.\n\n```\n=HYPERLINK(\"[URL_WEBHOOK]\" & \"?ID=\" & A2 & \"&Email=\" & B2, \"Trigger Make.com Row: \" & A2)\n```\n\n**Desglose de la Fórmula:**\n*   `\"[URL_WEBHOOK]\"`: La parte fija de la URL.\n*   `\"?\"`: Marca el inicio de los parámetros de consulta.\n*   `\"ID=\" & A2`: Asigna el valor de la celda `A2` (la ID de la fila) a la clave `ID`.\n*   `\"&Email=\" & B2`: Agrega otro parámetro, `Email`, con el valor de la celda `B2`.\n\n**Acción:** Arrastre esta fórmula hacia abajo para aplicarla a todas sus filas. Ejecute el escenario Make.com una vez (`Run Once`) y luego haga clic en uno de los nuevos enlaces en Google Sheets. Verifique que Make.com haya capturado la `ID` y el `Email` en la estructura del Webhook."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Paso 4: Configurar Make.com para Buscar la Fila Completa (Opcional)",
+      "contenido": "Si solo ha pasado la ID o el Email (como en el Paso 3), a menudo necesitará obtener toda la información de la fila de Google Sheets.\n\n1.  En Make.com, añada un módulo de **Google Sheets** después del Webhook.\n2.  Seleccione la acción **Search Rows** (Buscar Filas).\n3.  Conecte su cuenta de Google y seleccione su **Spreadsheet** (Hoja de cálculo) y el **Sheet** (pestaña, ej: `Sheet1`).\n4.  En la configuración, establezca el **Filter** (Filtro) utilizando la ID que recibió del Webhook. Por ejemplo, si pasó la clave `ID`, filtre por `ID` igual al valor que llega desde el Webhook.\n5.  **Importante:** Limite el resultado a **1** para asegurarse de que solo se procese la fila correcta.\n\nUna vez configurado, Make.com recibirá el ID del Webhook, buscará la fila correspondiente en su Google Sheet y podrá usar todos los datos de esa fila para las acciones posteriores (actualizar la fila, enviar un email, o activar un sistema externo)."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Paso 5: Alternativa de Implementación de Apps Script",
+      "contenido": "Aunque el método del `HYPERLINK` es una solución simple \"sin el complemento\", para automatizaciones más sofisticadas (por ejemplo, disparar un escenario basado en la actualización de una celda de lista desplegable, en lugar de un clic manual), se puede utilizar **Google Apps Script** directamente.\n\nApps Script, que es la plataforma de JavaScript basada en la nube, permite escribir código para realizar tareas de manera programática. En este caso, el script utilizaría el servicio `UrlFetchApp` para enviar una solicitud HTTP al Webhook de Make.com.\n\n**Funcionalidad clave:**\n*   **UrlFetchApp:** Este servicio de utilidad permite que un script acceda a recursos en Internet mediante solicitudes HTTP (como GET/POST).\n*   **Activadores (Triggers):** Las automatizaciones en Apps Script pueden activarse mediante acciones del usuario, menús personalizados o una programación basada en el tiempo.\n\nUn script personalizado de Apps Script proporcionaría una integración más robusta que el simple clic en un enlace de fórmula."
+    }
+  ]
+}

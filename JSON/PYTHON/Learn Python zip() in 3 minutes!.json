@@ -1,0 +1,45 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Learn Python zip() in 3 minutes! \nWEB ORIGINAL:",
+      "contenido": "Learn Python zip() in 3 minutes! :\nWeb Original:\n\nLearn Python zip() in 3 minutes! :\nhttps://youtu.be/5WK3j2erJW4?si=UBKM8zzk8PMRaINJ"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "¿Qué es la función zip() en Python?",
+      "contenido": "¿Qué es la función zip() en Python?:\n\nLa función zip() en Python permite combinar dos o más listas (o cualquier iterable, como tuplas o conjuntos) en un solo iterador de tuplas. Cada tupla contiene un elemento de cada iterable emparejado por su posición. Es útil para trabajar con múltiples colecciones de datos al mismo tiempo de manera sencilla y ordenada."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Ejemplo práctico básico usando zip()",
+      "contenido": "Ejemplo práctico básico usando zip():\n\nImagina que tienes una lista de nombres y otra de edades. Con zip() puedes unirlas para relacionar cada nombre con su edad sin preocuparte por los índices.\n\n```python\nnombres = [\"Spongebob\", \"Patrick\", \"Squidward\"]\nedades = [30, 35, 50]\ncombinado = zip(nombres, edades)\nfor nombre, edad in combinado:\n    print(f\"{nombre} tiene {edad} años\")\n```\n\nEsto imprime:\n```\nSpongebob tiene 30 años\nPatrick tiene 35 años\nSquidward tiene 50 años\n```"
+    },
+    {
+      "itemID": "003",
+      "menu_item": "¿Por qué usar zip()? Ventajas clave",
+      "contenido": "¿Por qué usar zip()? Ventajas clave:\n\n- Facilita la gestión de múltiples listas o colecciones, evitando errores por manejo de índices manuales.\n- Permite recorrer varias listas al mismo tiempo, emparejando correctamente los elementos según su posición.\n- Es más legible y eficiente que usar un bucle con range() y los índices."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Unir más de dos listas con zip()",
+      "contenido": "Unir más de dos listas con zip():\n\nPuedes combinar tantas listas como necesites. Por ejemplo, agregando una lista de trabajos a los nombres y edades previos:\n\n```python\nnombres = [\"Spongebob\", \"Patrick\", \"Squidward\"]\nedades = [30, 35, 50]\ntrabajos = [\"Cocinero\", \"Desempleado\", \"Cajero\"]\ncombinado = zip(nombres, edades, trabajos)\nfor nombre, edad, trabajo in combinado:\n    print(f\"{nombre} es un/a {trabajo} de {edad} años\")\n```\n\nEsto imprime:\n```\nSpongebob es un/a Cocinero de 30 años\nPatrick es un/a Desempleado de 35 años\nSquidward es un/a Cajero de 50 años\n```"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Convertir el resultado de zip() a otros tipos",
+      "contenido": "Convertir el resultado de zip() a otros tipos:\n\nEl resultado de zip() es un objeto especial (un iterador), pero se puede convertir fácilmente en lista, tupla, conjunto o incluso diccionario:\n\n```python\n# Como lista de tuplas\nlista_zip = list(zip(nombres, edades))\nprint(lista_zip)  # [('Spongebob', 30), ('Patrick', 35), ('Squidward', 50)]\n\n# Como conjunto de tuplas\nset_zip = set(zip(nombres, edades))\nprint(set_zip)\n\n# Como tupla de tuplas\ntupla_zip = tuple(zip(nombres, edades))\nprint(tupla_zip)\n\n# Como diccionario (usando 2 listas)\ndic_zip = dict(zip(nombres, edades))\nprint(dic_zip)  # {'Spongebob': 30, 'Patrick': 35, 'Squidward': 50}\n```"
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Notas importantes y buen uso de zip()",
+      "contenido": "Notas importantes y buen uso de zip():\n\n- zip() termina cuando la lista más corta se queda sin elementos; los elementos extra de las demás listas se ignoran.\n- Es ideal para trabajo con listas de la misma longitud.\n- El objeto devuelto por zip() se puede usar una vez; si lo conviertes (por ejemplo, a lista), consúmelo antes de intentar iterar de nuevo."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\n- La explicación de cómo zip() combina elementos de varios iterables y cómo se comporta respecto a la longitud de las listas está validada en la documentación oficial de Python:  \nhttps://docs.python.org/3/library/functions.html#zip\n- Los ejemplos de conversión a lista, tupla, set y diccionario se encuentran documentados aquí:  \nhttps://docs.python.org/3/library/functions.html#zip  \nhttps://docs.python.org/3/library/stdtypes.html#dict  \n- La advertencia sobre la longitud de los iterables y el final anticipado también está especificada en la documentación oficial:  \nhttps://docs.python.org/3/library/functions.html#zip"
+    }
+  ]
+}

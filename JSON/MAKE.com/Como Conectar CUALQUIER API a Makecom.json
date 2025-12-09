@@ -1,0 +1,72 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "[TITULO_VIDEO]\nWEB ORIGINAL:",
+      "contenido": "[TITULO_VIDEO]:\nComo Conectar CUALQUIER API a Makecom\n\nWeb Original:\nhttps://youtu.be/d1Y0Njcv6J8?si=1Rg7Bp97P5G6hTgo\n\n[AUTOR]\nPRO-LIMP AUTOMATIZACION\n\n[TELEFONO]\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción: Desmitificando las APIs y la metáfora del restaurante",
+      "contenido": "Introducción: Desmitificando las APIs y la metáfora del restaurante:\nMuchas personas sienten miedo al escuchar el término API (Interfaces de Programación de Aplicaciones) porque creen erróneamente que se necesita saber mucha programación.[1][2] Esto no es cierto.\n\nPara entender qué es una API, imagina que vas a un restaurante de comida rápida, como el McDonald's. Tú, como cliente, le pides a un empleado una hamburguesa específica, por ejemplo, una Mac Chicken con patatas finas y una Coca-Cola, utilizando tu lenguaje natural. El empleado anota este pedido y lo envía a la cocina. La cocina sigue una serie de pasos (recoger ingredientes, ensamblar) y finalmente el empleado te devuelve tu pedido listo.[2]"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Diferencia principal: El concepto del McApi",
+      "contenido": "Diferencia principal: El concepto del McApi:\nLas APIs funcionan de manera similar al restaurante, pero con una diferencia clave: son \"tontas\" y no entienden el lenguaje natural.\n\nSi existiera un \"McApi\", para pedir algo tendrías que darle la información punto por punto y de manera muy exacta.[2][3] No puedes hablarle normalmente; debes indicarle las variables exactas que componen tu solicitud. Por ejemplo:\n\nNombre de la hamburguesa: Kevin Bacon\n\nPunto de la carne: poco hecho\n\nAcompañamiento: patatas finas\n\nLa API toma esta información estructurada, la procesa (la cocina o página web) y te devuelve la información o resultado que deseas."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Elemento Fundamental 1: La Contraseña (API Key)",
+      "contenido": "Elemento Fundamental 1: La Contraseña (API Key):\nPara hacer un pedido en un restaurante necesitas pagar, usualmente con una tarjeta de crédito. En el mundo web, este permiso de acceso se llama API Key (clave de API).\n\nEs básicamente una contraseña que le dice al sistema: \"Oye, tú tienes los permisos para usar esta API\". Dependiendo de la documentación, esta API Key se coloca a veces como un Parámetro, pero más comúnmente se ubica en los Headers (encabezados)."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Elementos Fundamentales 2 y 3: El URL y el Endpoint",
+      "contenido": "Elementos Fundamentales 2 y 3: El URL y el Endpoint:\nPara hacer una solicitud siempre necesitas saber a dónde ir y qué pedir:\n\nEl URL (La dirección): Es la dirección web base a la que estás accediendo, por ejemplo: http://realtime-amazon-data.rapidapi.com.\n\nEl Endpoint (La función): Son las funciones específicas o tipos de búsquedas que puedes realizar dentro de esa API. Son equivalentes a los distintos platos que ofrece un restaurante. El Endpoint se añade al final del URL, después de una barra. Por ejemplo, se añadiría /Search para buscar productos."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Elemento Fundamental 4: El Método (GET y POST)",
+      "contenido": "Elemento Fundamental 4: El Método (GET y POST):\nEl método define la acción que quieres realizar en esa página web. Es crucial usar el correcto para evitar errores de conexión. Los principales son:\n\nMétodo GET: Se utiliza para conseguir u obtener información.\nMétodo POST: Se utiliza para enviar información a la página web. También se puede usar para conseguir información de vuelta después de haber enviado datos."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Elementos Fundamentales 5 y 6: Parámetros y Headers",
+      "contenido": "Elementos Fundamentales 5 y 6: Parámetros y Headers:\nLos Parámetros (Los ingredientes): Es la lista de información que la API necesita para procesar tu solicitud.\n\nParámetros Necesarios (Required): Son obligatorios, debes ponerlos sí o sí (ejemplo: qué producto quieres buscar).\n\nParámetros Opcionales: Permiten filtrar más la búsqueda (ejemplo: precio máximo, número de página, país).\n\nHeaders (Encabezados): Sirven para colocar la API Key o contraseñas que confirman tus permisos para acceder a la información, funcionando de manera similar a la tarjeta de crédito en el ejemplo del restaurante."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Conexión en Make.com: Módulos nativos vs. Módulo HTTP",
+      "contenido": "Conexión en Make.com: Módulos nativos vs. Módulo HTTP:\nMake.com tiene módulos específicos (burbujas) para aplicaciones conocidas como Gmail o Google Sheets. Estos módulos hacen la llamada a la API por ti y te muestran la información de forma \"bonita\".\n\nSin embargo, cuando una aplicación no tiene burbuja en Make, o si las funciones predefinidas de Make no son suficientes (porque a veces no incluyen todas las funciones reales de la API), se debe usar el módulo HTTP.\n\nPara conectar cualquier API manualmente en Make:\n\nSelecciona el módulo HTTP.\n\nElige la acción \"Make a Request\" (Hacer una Solicitud).\n\nRellena el URL, confirma el Método (GET o POST) y añade los Headers (API Key) si la documentación lo exige."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Forma 1 de añadir parámetros: Directamente en el URL",
+      "contenido": "Forma 1 de añadir parámetros: Directamente en el URL:\nEsta forma se usa comúnmente con el método GET (ejemplo RapidAPI/Amazon Data).\n\nPasos:\n\nRellena el URL hasta el Endpoint.\n\nAñade el primer parámetro usando un signo de interrogación ?.\n\nEscribe el nombre del parámetro, un signo de igual =, y el valor a buscar. Ejemplo: ?query=phone.\n\nPara añadir parámetros extra u opcionales, usa el símbolo & (and) seguido del nuevo parámetro. Ejemplo: &country=Spain.\n\nConfiguración Extra: Marca siempre la opción \"Parse Response\". Esto asegura que la información que devuelve la API no salga desordenada, sino estructurada en variables legibles y utilizables."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Forma 2 de añadir parámetros: Formato JSON",
+      "contenido": "Forma 2 de añadir parámetros: Formato JSON:\nEste método se usa para métodos POST o cuando la documentación de la API pide el tipo de contenido \"Application JSON\".\n\nPasos en el módulo HTTP > Request:\n\nSelecciona el Método POST.\n\nEn Body Type (Tipo de Cuerpo), selecciona \"Raw\".\n\nEn Content Type (Tipo de Contenido), selecciona \"JSON Application JSON\".\n\nEstructura JSON:\nLos parámetros (y a veces la API Key si se permite) se escriben en el cuerpo de la solicitud (Body). El formato JSON es llave-valor y es fundamental poner comillas en los valores para que funcione.\n\nNota: Aunque los parámetros sean opcionales, debes poner al menos uno (como un nombre o dominio) para que la búsqueda devuelva información. Este método es útil para enriquecer datos, buscando información adicional de una persona que ya tienes en otra base de datos."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Resumen del proceso",
+      "contenido": "Resumen del proceso:\nAunque la documentación de cada API es diferente, el formato y la forma de conectar siempre siguen el mismo patrón:\n\nEstablecer el URL.\n\nDefinir el Método.\n\nPasar la información exacta mediante Parámetros y API Key/Headers."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nSe ha verificado la información del tutorial contrastándola con la documentación oficial de Make (anteriormente Integromat) y guías técnicas sobre arquitectura REST.\n\nPuntos técnicos validados:\n\nMódulo HTTP en Make:\nLa documentación oficial de Make confirma que el módulo \"HTTP\" y su acción \"Make a request\" son la herramienta universal para conectar con servicios que no tienen una integración nativa (app). Permite configurar URL, Headers, y Body manualmente.\nFuente: Centro de ayuda de Make - HTTP Module Documentation (https://www.make.com/en/help/tools/http)\n\nMétodos HTTP (GET vs POST):\nSe valida que el método GET se utiliza estándarmente para recuperar datos de un servidor (retrieve resource), mientras que POST se utiliza para enviar entidades a un recurso específico, lo que coincide con la explicación del tutorial.\nFuente: Mozilla Developer Network (MDN) - HTTP Request Methods (https://developer.mozilla.org/es/docs/Web/HTTP/Methods)\n\nEstructura de Parámetros y JSON:\n\nQuery Strings: Se confirma que los parámetros en la URL comienzan con ? y se separan con &.\n\nJSON Body: Se confirma que para envíos de datos complejos (especialmente en POST), se utiliza el header Content-Type: application/json y el cuerpo debe seguir la sintaxis de objetos JSON (pares clave-valor entre comillas dobles).\nFuente: JSON.org - Introducing JSON (https://www.json.org/)\n\nAutenticación y Headers:\nLa documentación técnica valida que las API Keys son un método estándar de autenticación y frecuentemente se transmiten a través de los encabezados (Headers) de la solicitud HTTP para asegurar el acceso.\nFuente: RapidAPI - API Authentication (https://docs.rapidapi.com/docs/keys)\n\n\n[TITULO_VIDEO] = Como Conectar CUALQUIER API a Makecom\n[URL_WEB_YOUTUBE] = https://youtu.be/d1Y0Njcv6J8?si=1Rg7Bp97P5G6hTgo\n[AUTOR] = PRO-LIMP AUTOMATIZACION\n[TELEFONO] = +34 636832005"
+    },
+    {
+  "itemID": "012",
+  "menu_item": "Escucha la explicación completa en audio",
+  "contenido": "Escucha la explicación completa en audio:\n\nhttps://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Videos%20TUTORIALES/Conecta_cualquier_API_con_Make_sin_programar.m4a"
+}
+  ]
+}
+
+

@@ -1,0 +1,76 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "[TITULO_VIDEO]\nWEB ORIGINAL:",
+      "contenido": "[TITULO_VIDEO]:\nBuild a WhatsApp AI Agent in Just 30 Minutes_Make Tutorial\n\nWeb Original:\nhttps://youtu.be/tyArTiEXIVs?si=GVM0QOHlVfykcDUn"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción y Concepto del Agente",
+      "contenido": "Introducción y Concepto del Agente:\nEste tutorial explica cómo crear un asistente virtual para WhatsApp diseñado para gestionar propiedades tipo Airbnb. El agente funciona como un conserje virtual capaz de responder preguntas sencillas, hacer recomendaciones sobre la zona y manejar emergencias.\n\nEl sistema se construye sobre la plataforma Make.com y utiliza varias herramientas conectadas entre sí:\n\nWhatsApp: Para comunicarse con el huésped.\n\nAnthropic (Claude): Es la inteligencia artificial que actúa como el cerebro, tomando decisiones y redactando mensajes.\n\nPerplexity: Una herramienta para investigar información actual en internet.\n\nCorreo electrónico: Para enviar alertas al administrador.\n\nEl cerebro del agente funciona mediante un módulo de enrutamiento. Cuando llega un mensaje, la IA analiza el texto y decide por cuál de los tres caminos debe enviarlo: Ayuda de Propiedad, Área Local o Soporte de Problemas."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Configuración Inicial en Meta (Facebook)",
+      "contenido": "Configuración Inicial en Meta (Facebook):\nPara que el sistema funcione, primero necesitas configurar una aplicación en Meta, ya que WhatsApp es propiedad de Facebook.\n\nVe al sitio web developer.facebook.com.[1]\n\nCrea una cuenta si no tienes una y luego crea una nueva aplicación (app).[2]\n\nAl elegir el tipo de aplicación, selecciona el caso de uso business (negocio).[2]\n\nEl sistema te pedirá un portafolio de negocios.[3][4] Si no tienes uno, debes crearlo en business.facebook.com antes de continuar.\n\nUna vez creada la aplicación, busca la sección WhatsApp, selecciona setup (configuración) y luego ve a API setup."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Obtención del Token de Acceso Permanente",
+      "contenido": "Obtención del Token de Acceso Permanente:\nPara conectar WhatsApp con Make.com sin que la conexión se corte, necesitas un Token de Acceso Permanente y el ID de la cuenta.[5]\n\nCopia el ID de la Cuenta de Negocios de WhatsApp que aparece en la configuración de la API.\n\nPara el token, ve a la Business Suite de Meta y busca la sección System users (Usuarios del Sistema).[1][2][4]\n\nCrea un nuevo usuario del sistema y asígnale el rol de administrador (admin).[1][2][4]\n\nAsigna la aplicación que creaste anteriormente a este nuevo usuario, asegurándote de darle full control (control total).\n\nGenera el token seleccionando los permisos de WhatsApp necesarios.[1][2][4] Este es el código secreto que usarás en el siguiente paso."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Conexión con Make.com y Webhook",
+      "contenido": "Conexión con Make.com y Webhook:\nAhora debes unir WhatsApp con la plataforma de automatización Make.com.[3][4][6]\n\nEn Make.com, crea un nuevo escenario.[7]\n\nAgrega el módulo llamado WhatsApp business cloud y elige la opción watch events (vigilar eventos) para detectar cuando entran mensajes.\n\nCrea la conexión ingresando el ID de la Cuenta de Negocios y el Token de Acceso Permanente que obtuviste en los pasos anteriores.\n\nMake.com te dará una dirección web llamada URL del webhook. Cópiala.\n\nRegresa a la configuración de WhatsApp en developer.facebook.com y ve a la sección Configuration.\n\nPega la URL de Make.com allí. Te pedirá un Verify Token (una contraseña propia, puede ser algo simple como test token).\n\nHaz clic en verificar y guardar.[8]\n\nFinalmente, suscríbete al evento messages para recibir los mensajes de los usuarios."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Filtro de Seguridad Inicial",
+      "contenido": "Filtro de Seguridad Inicial:\nEs muy importante poner un filtro justo después del módulo de WhatsApp en Make.com.\n\nEl objetivo de este filtro es asegurar que el sistema solo funcione cuando recibe un mensaje de texto real. Debes configurar el filtro para que verifique si el evento recibido tiene un body (cuerpo de texto). Esto evita que el sistema se active por error con otros eventos, como cuando alguien solo lee un mensaje pero no escribe nada."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "El Cerebro: Módulo de Clasificación",
+      "contenido": "El Cerebro: Módulo de Clasificación:\nDespués de recibir el mensaje, el sistema debe decidir qué hacer. Para esto se usa un módulo de inteligencia artificial Anthropic (Claude).[9][10][11]\n\nAgrega el módulo de Anthropic.[8][9][10][11]\n\nEn las instrucciones (prompt), dile a la IA que actúe como un clasificador.\n\nPídele que analice el mensaje del huésped y elija una de estas tres opciones, devolviendo solo el número:\n\nOpción 1: Preguntas sobre la propiedad (ej. clave Wi-Fi).\n\nOpción 2: Preguntas sobre el área local (ej. restaurantes).\n\nOpción 3: Problemas o soporte (ej. emergencias).\n\nConfigura filtros a la salida de este módulo para que, si la respuesta es 1, vaya por el camino 1; si es 2, por el camino 2; y si es 3, por el camino 3."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Flujo 1: Ayuda de la Propiedad",
+      "contenido": "Flujo 1: Ayuda de la Propiedad:\nEste camino se activa si la pregunta es simple, como pedir la clave del Wi-Fi o las reglas de la casa.\n\nAgrega un módulo de Claude para redactar la respuesta.\n\nEn las instrucciones, incluye toda la información de la casa (Wi-Fi, electrodomésticos, horarios de check-in/out).\n\nIndica a la IA que responda de forma breve y conversacional, sin usar saludos iniciales (como Hola), ya que es una charla continua.\n\nAgrega un módulo de WhatsApp send a message (enviar mensaje) para mandar la respuesta generada al número del huésped."
+    },
+    {
+      "itemID": "008",
+      "menu_item": null,
+      "contenido": "Flujo 2: Recomendaciones Locales:\nEste camino se usa cuando el huésped pide consejos sobre qué hacer o dónde comer.\n\nAgrega el módulo de Perplexity.[7][12][13] Esta herramienta buscará información en internet en tiempo real.\n\nConfigura Perplexity para que investigue sobre el área local basándose en la pregunta del huésped.\n\nLuego, agrega un módulo de Claude para que tome la información encontrada por Perplexity y redacte una respuesta amigable para el usuario.\n\nFinalmente, usa el módulo de WhatsApp para enviar esta recomendación al huésped."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Flujo 3: Clasificación de Problemas",
+      "contenido": "Flujo 3: Clasificación de Problemas:\nSi el mensaje es sobre un problema, hay que decidir si es urgente o no.\n\nAgrega un módulo de Claude para analizar la gravedad del problema.\n\nPídele que clasifique el mensaje solo como urgent (urgente) o non-urgent (no urgente).\n\nEjemplos no urgentes: Wi-Fi lento, dudas sobre el control de la TV.\n\nEjemplos urgentes: Sin agua caliente, fugas grandes, quedarse fuera de la casa."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Flujo 3: Acción (FAQ vs Emergencia)",
+      "contenido": "Flujo 3: Acción (FAQ vs Emergencia):\nDependiendo de la clasificación anterior, el sistema toma dos rutas:\n\nRuta No Urgente:\nUsa un módulo de Claude para responder con información preconfigurada (FAQ) sobre cómo solucionar problemas comunes y envía la respuesta por WhatsApp.\n\nRuta Urgente:\n\nUsa un módulo de Claude para redactar un resumen del problema en formato HTML. Debe incluir los detalles del cliente.\n\nAgrega un módulo de Correo Electrónico para enviar este resumen al administrador. El asunto debe ser urgent request.\n\nEnvía un mensaje de WhatsApp al huésped confirmando que ya se avisó al administrador y que se pondrán en contacto lo antes posible (ASAP)."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Pruebas del Sistema",
+      "contenido": "Pruebas del Sistema:\nUna vez que todo está conectado, debes probar cada camino enviando mensajes a tu número de prueba:\n\nPrueba el Flujo 1 preguntando por la contraseña del Wi-Fi. Deberías recibir la clave automáticamente.\n\nPrueba el Flujo 2 pidiendo una recomendación de restaurante. El sistema debe investigar y responder con opciones.\n\nPrueba el Flujo 3 reportando una emergencia grave, como una fuga de agua masiva. Deberías recibir una confirmación por WhatsApp y el administrador debería recibir un correo electrónico de alerta."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nLa información técnica del tutorial ha sido validada con la documentación oficial de Meta (Facebook), Make.com y Anthropic.\n\nCreación de Token Permanente:\nMeta confirma que para integraciones de servidor (como Make) se debe usar un \"Usuario del Sistema\" (System User) con rol de Administrador para generar un token de acceso permanente.[1][4] Los tokens temporales estándar caducan en 24 horas.\nFuente: Documentación de Meta para Desarrolladores - System Users.\n\nMódulo WhatsApp Business Cloud en Make:\nMake.com dispone oficialmente del módulo \"WhatsApp Business Cloud\". La conexión requiere el \"WhatsApp Business Account ID\" y el \"Permanent Access Token\", tal como se describe. El trigger correcto es \"Watch Events\".\nFuente: Documentación de Ayuda de Make - WhatsApp Business Cloud.[3][14]\n\nIntegración de IA (Anthropic y Perplexity):\nMake soporta módulos nativos para Anthropic (Claude) y Perplexity AI. Ambos requieren claves API (API Keys) generadas en sus respectivas plataformas para autenticar la conexión dentro del escenario.\nFuente: Documentación de Integraciones de Make (Anthropic Claude & Perplexity AI).\n\n\nSources\nhelp\nnoem.ai\nfacebook.com\nmake.com\nyoutube.com\nmake.com\nmake.com\nmake.com\nmake.com\nmake.com\nmake.com\nmake.com\nmake.com\nmake.com\nmake.com\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\nMeta Developers create system user for permanent token WhatsApp API\nMake.com WhatsApp Business Cloud module documentation\nAnthropic Claude Make.com integration documentation\nPerplexity AI Make.com module documentation"
+    },
+
+    {
+      "itemID": "013",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Build%20a%20WhatsApp%20AI%20Agent%20in%20Just%2030%20Minutes_Make%20Tutorial.jpeg]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Extract multiple values from an array of collections Make\nWEB ORIGINAL:",
+      "contenido": "Extract multiple values from an array of collections Make:\nWeb Original:\nExtract multiple values from an array of collections Make:\nhttps://youtu.be/p1RwauicNfI?si=r9533TtbYrgv3Avm"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Concepto Básico: La Caja Grande y las Cajas Pequeñas",
+      "contenido": "Concepto Básico: La Caja Grande y las Cajas Pequeñas:\nPara entender el proceso, imagina que tienes una gran caja, que representa el 'array' o lista principal.[1][2] Dentro de esta gran caja no hay objetos sueltos, sino muchas cajas más pequeñas y etiquetadas, conocidas como 'collections' o colecciones.\n\nCada una de estas cajas pequeñas contiene información útil, como una opinión que incluye sus puntos buenos y sus puntos malos. El objetivo es sacar todo el contenido de esas cajas pequeñas y colocarlo junto en una sola lista larga (un array plano). Esto se hace para que la información sea fácil de leer por un programa de inteligencia artificial, como ChatGPT."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "El Problema con la Función Aplanar Array",
+      "contenido": "El Problema con la Función Aplanar Array:\nEl intento inicial para resolver esto suele ser usar la función de \"Aplanar Array\" (flatten array).[1][3][4] Sin embargo, esta función generalmente funciona para listas simples y no cuando tienes \"colecciones\" (grupos de datos estructurados) dentro de tu lista principal.\n\nLa función 'flatten' está diseñada para funcionar con arrays, no con collections. Si intentas usarla en este caso, obtendrás el mismo resultado que tenías al principio: los datos seguirán agrupados dentro de sus colecciones.[2][5]\n\nNota sobre la fórmula: Aunque la sintaxis de 'flatten' puede mostrar una coma, en Make a veces se debe usar solo el campo, o un punto y coma si no se pone nada después. Aun así, en este caso específico de colecciones, no soluciona el problema."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Paso 1: Configuración del Mapeo de Variables",
+      "contenido": "Paso 1: Configuración del Mapeo de Variables:\nPrimero debes identificar la información clave que quieres sacar.[1][2][3][6][9][11][12] En este ejemplo, son los 'cons' (puntos malos) y los 'pros' (puntos buenos).\n\nPara extraerlos, usarás la función 'map'.[2][3][6][7][8][9][10][12] La sintaxis conceptual es indicar: \"Desde este array [el grande], necesito este dato escrito en texto\".\n\nEs crucial usar el \"nombre real\" o \"nombre crudo\" (raw name) del campo de datos (por ejemplo, escribir 'cons' o 'pros'), y no usar el nombre bonito o visual que muestra el programa."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Paso 2: Extracción de Datos Específicos",
+      "contenido": "Paso 2: Extracción de Datos Específicos:\nDebes configurar las variables para extraer cada tipo de dato por separado:\n\nExtracción de Cons: Configuras una variable que utilice la función 'map' para extraer todos los elementos identificados como 'cons'.\n\nExtracción de Pros: Repites el proceso configurando otra variable para extraer todos los elementos identificados como 'pros'.\n\nOpcionalmente se podrían añadir filtros, pero para este objetivo se extraen todos los datos sin filtrar."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Paso 3: Verificación de las Listas Separadas",
+      "contenido": "Paso 3: Verificación de las Listas Separadas:\nUna vez ejecutado el proceso de mapeo, el resultado serán varios arrays o listas separadas.[5][6][7][9][12] En el ejemplo del documento, se obtienen cuatro arrays distintos.\n\nAhora tendrás una lista que contiene solo todos los 'cons' en una fila, y otra lista separada que contiene solo todos los 'pros' en otra fila. Esto confirma que la extracción ha sido correcta antes de proceder a unirlos."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Paso 4: Fusión de Listas con Merge",
+      "contenido": "Paso 4: Fusión de Listas con Merge:\nPara obtener la lista final y plana, se utiliza la función \"Merge\" (Fusión).[1][3][5][6][9][11][12] Debes alimentar esta función con las listas separadas que acabas de crear en el paso anterior (Array 1, Array 2, etc.).\n\nEn el ejemplo mencionado, datos adicionales como 'company' no se incluyeron en la fusión, centrándose solo en los pros y cons extraídos."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Resultado Final",
+      "contenido": "Resultado Final:\nEl resultado del proceso es una sola lista grande (un array plano) que contiene todos los datos extraídos juntos.\n\nEl orden de los elementos en esta lista final no importa para el objetivo planteado, ya que las herramientas de inteligencia artificial (como ChatGPT) son capaces de entender qué información es un punto bueno ('pro') y cuál es un punto malo ('con'), así como cuántas veces se mencionó cada cosa, a pesar de que todos los datos estén ahora en una única lista plana."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nA continuación se validan los conceptos técnicos explicados en el tutorial mediante la documentación oficial de Make (anteriormente Integromat):\n\nFunción map():\n\nValidación: La documentación oficial confirma que map() se utiliza para crear un array primitivo compuesto por valores extraídos de un array complejo (array de colecciones). Confirma también la necesidad de usar el \"raw name\" (nombre crudo) de la variable clave.\n\nFuente: Make Help Center - Array Functions (map)\n\nFunción merge():\n\nValidación: Se confirma que merge() une dos o más arrays en uno solo. Esto valida el paso de unir las listas de 'pros' y 'cons' separadas en una lista final.\n\nFuente: Make Help Center - Array Functions (merge)\n\nLimitación de flatten():\n\nValidación: La función flatten() crea un nuevo array concatenando sub-elementos de arrays recursivamente hasta cierta profundidad.[3][4][10] La documentación indica que su uso principal es para estructuras de arrays anidados, validando por qué no extrae directamente propiedades específicas de objetos (colecciones) sin un mapeo previo.\n\nFuente: Make Help Center - Array Functions (flatten)\n\n\nSources\nhelp\nyoutube.com\nyoutube.com\nmake.com\nmake.com\nyoutube.com\nmake.com\nmake.com\nmake.com\njoshthompson.co.uk\nmake.com\nmake.com\nyoutube.com\nmake.com\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\nMake.com map function documentation extract array values\nMake.com merge function array documentation\nMake.com documentation flatten array function collections"
+    },
+
+    {
+      "itemID": "010",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN: https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Extract%20multiple%20values%20from%20an%20array%20of%20collections%20Make.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    },
+
+    {
+      "itemID": "011",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN: https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Extract%20multiple%20values%20from%20an%20array%20of%20collections%20Make0001.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

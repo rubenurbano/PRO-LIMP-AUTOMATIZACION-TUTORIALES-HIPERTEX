@@ -1,0 +1,55 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Crea tu sistema de QRs dinamicos con Google Sheets Apps Script y Github pages\nWEB ORIGINAL:",
+      "contenido": "Crea tu sistema de QRs dinamicos con Google Sheets Apps Script y Github pages:\nWeb Original:\nCrea tu sistema de QRs dinamicos con Google Sheets Apps Script y Github pages\nhttps://youtu.be/qp2EdwBLiI4?si=ofuQJbPqkiLsBI56"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción: QRs estáticos vs dinámicos",
+      "contenido": "Introducción: QRs estáticos vs dinámicos:\nLos códigos QR normales o estáticos te llevan a una dirección de internet que no puedes cambiar después de crearlo. Si ya imprimiste el código QR en objetos físicos y quieres cambiar la dirección a la que apunta, el código ya no sirve. Esto es un problema si cambias tu página web o lanzas una nueva promoción.\n\nPara solucionar esto, usamos códigos QR dinámicos. Un código QR dinámico no apunta directamente al contenido final, sino que permite cambiar el contenido al que lleva en cualquier momento. Así puedes mantener el mismo código QR ya distribuido y hacer que apunte a la información que te interese.\n\nVamos a crear este sistema usando herramientas gratuitas: Google Sheets y Github Pages. La solución tiene dos partes: una hoja de Google Sheets con los datos y un servicio web, y una página de Github Pages que hace la redirección."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Paso 1 y 2: Preparar la Hoja de Google Sheets",
+      "contenido": "Paso 1 y 2: Preparar la Hoja de Google Sheets:\nPrimero crea una nueva hoja de Google Sheets y ponle de nombre QRs.\n\nReserva una casilla superior para guardar la página base de Github (la rellenaremos más adelante). Crea tres columnas:\n\nClave\n\nCodigo QR[1][2]\n\nDestino\n\nPara generar el QR usamos el servicio de images charts punto com. En la columna del Código QR establecemos la lógica principal mediante una fórmula. Esta fórmula genera una imagen juntando la URL del servicio images charts con un tamaño de 250 por 250 y la URL a codificar.\n\nLa URL a codificar se crea juntando la dirección base de Github (que pondrás en la casilla superior) con la clave que pongas en la primera columna. La fórmula debe unir la clave poniendo interrogante k igual si la columna de Clave no está vacía. Aplica esta fórmula a todas las casillas de la columna."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Paso 3: Programar el servicio web (Primera parte)",
+      "contenido": "Paso 3: Programar el servicio web (Primera parte):\nAbre Apps Script desde tu hoja de cálculo.[3][4][5][6] Tenemos que crear una función llamada doGet que responderá a las llamadas del servicio web.[4]\n\nDentro de la función doGet, realiza las siguientes acciones:\n\nComprueba que en los parámetros de la llamada venga el parámetro k. Si no viene, devuelve una respuesta vacía.\n\nGuarda el valor del parámetro k.\n\nObtén los datos de la hoja de cálculo: guarda todas las claves de la columna A y las URLs de destino de la columna C (ambas desde la fila tres).\n\nBusca una coincidencia entre la clave que llegó en la URL y las claves de la columna.\n\nSi encuentras la clave, obtén la URL de la misma fila."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Paso 3: Registro de visitas y respuesta (Segunda parte)",
+      "contenido": "Paso 3: Registro de visitas y respuesta (Segunda parte):\nRenombra la hoja donde estás trabajando con el nombre config. Añade otra hoja nueva y ponle el nombre hits. En esta hoja hits guardaremos la información de las visitas.\n\nEn tu código de Apps Script:\n\nGuarda en la hoja hits la clave usada, la URL efectiva a la que enviamos al usuario y la fecha actual.\n\nDevuelve una salida de texto con la URL a la cual hay que redirigir.[7] Esta URL será usada por la página de Github.[8][9][10]\n\nSi no encuentras la clave, devuelve una cadena vacía para evitar errores."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Paso 4: Crear la página de Github",
+      "contenido": "Paso 4: Crear la página de Github:\nCrea un nuevo repositorio público en Github llamado qrs. Crea un nuevo archivo llamado index dot html y añade un código HTML vacío, eliminando lo que no necesites.\n\nEn este archivo:\n\nDeclara una constante para guardar la dirección base de nuestro servicio web (déjala vacía por ahora).\n\nAñade código para obtener la URL actual y buscar el valor del parámetro k (lo que sigue a interrogante k igual).\n\nSi tienes el valor de k, llama al servicio web añadiéndole la clave recibida.\n\nCuando recibas la respuesta del servicio web (que será la URL destino), redirige al usuario a esa URL si no está vacía.\n\nPuedes añadir una animación tipo loader (como las de loading punto io) para que se vea durante el proceso."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Paso 5: Publicar el servicio web",
+      "contenido": "Paso 5: Publicar el servicio web:\nVuelve a tu proyecto de Apps Script en Google Sheets.\n\nEjecuta el código y revisa los permisos.[5] Permite que la aplicación pueda ver, editar, crear y eliminar hojas de cálculo.\n\nHaz clic en implementar y luego en nueva implementación.[5][6][11]\n\nSelecciona el tipo de implementación: aplicación web.[5]\n\nPonle una descripción (ej. produccion).\n\nEn Ejecutar como selecciona tu cuenta.[6]\n\nEn Quién tiene acceso selecciona cualquier usuario.[5] Esto es fundamental para que cualquiera pueda escanear el QR.\n\nHaz clic en implementar y copia la dirección web que te da Google."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Paso 6: Conectar Github y Google Sheets",
+      "contenido": "Paso 6: Conectar Github y Google Sheets:\nVuelve a tu página de Github y edita el archivo index dot html. Pega la dirección del servicio web que acabas de copiar en la constante que dejaste vacía y guarda el cambio.\n\nPara publicar la página:\n\nVe a configuración (settings) y luego a páginas (pages).[8][9][12]\n\nActívalo y dile que se publique desde la rama principal (main).[8]\n\nGuarda y copia la dirección web de la página de Github que se muestra.\n\nFinalmente, vuelve a tu hoja de Google Sheets y pega esta dirección de Github en la casilla superior que reservaste al principio."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Paso 7: Usar y probar el QR Dinámico",
+      "contenido": "Paso 7: Usar y probar el QR Dinámico:\nPara crear tu primer QR dinámico:\n\nConsigue el enlace al documento que quieres mostrar (ej. un menú PDF público).\n\nPega ese enlace en la columna Destino.\n\nPon una clave corta en la columna Clave (ej. menu).\n\nVerás aparecer tu código QR.[1][13]\n\nEscanea el código con tu móvil para comprobar que carga el documento. Para probar la funcionalidad dinámica, consigue otro enlace diferente, pégalo en la columna Destino sustituyendo al anterior y escanea el mismo código QR. Verás que ahora carga el nuevo enlace.\n\nRevisa la hoja hits para ver el registro de las visitas. Puedes añadir más códigos dinámicos añadiendo más filas."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nHe validado los pasos técnicos descritos en el tutorial utilizando la documentación oficial de Google y Github. A continuación, el resumen de los puntos verificados:\n\nServicio de Contenidos en Apps Script (ContentService):\nEl uso de ContentService.createTextOutput() dentro de la función doGet() es el método oficial correcto para devolver contenido de texto plano (como una URL) desde una aplicación web de Google Apps Script, en lugar de devolver una interfaz HTML completa.[14][15]\nFuente: https://developers.google.com/apps-script/reference/content/content-service\n\nPermisos de Implementación de Web App:\nLa configuración de implementación \"Execute as: Me\" (Ejecutar como yo) y \"Who has access: Anyone\" (Quién tiene acceso: Cualquiera) es la configuración correcta para permitir que usuarios anónimos (como alguien que escanea un QR en la calle) ejecuten el script. Esto permite que el script acceda a la hoja de cálculo con los permisos del propietario sin requerir que el usuario final inicie sesión en Google.\nFuente: https://developers.google.com/apps-script/guides/web\n\nPublicación en Github Pages:\nEl procedimiento de activar Github Pages desde la configuración del repositorio (Settings > Pages) y seleccionar la rama main como fuente (Source) es el método estándar actual para desplegar sitios estáticos desde un repositorio.\nFuente: https://docs.github.com/es/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site\n\nGeneración de QRs mediante URL:\nEl uso de APIs de gráficos como Image-Charts o la antigua Google Charts API (deprecada pero funcional) pasando parámetros en la URL (como chl para los datos y chs para el tamaño) es una técnica técnica válida y estándar para generar imágenes de códigos QR dinámicamente en hojas de cálculo.\nFuente: https://documentation.image-charts.com/qr-codes/\n\n\nSources\nhelp\npostman.com\nstackoverflow.com\ngoogle.com\nstackoverflow.com\ngithub.com\nyoutube.com\ngoogle.com\nstorylane.io\ngithub.com\ngithub.io\ngoogle.com\ngithub.com\nquickchart.io\ntrevorfox.com\ngoogle.com\nquestetra.com\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\nGithub Pages publish from branch documentation\nGoogle Apps Script doGet ContentService createTextOutput documentation\nImage Charts QR code API documentation\nGoogle Apps Script deploy web app execute as me who has access anyone"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "CREAR UN ADD-IN DE EXCEL EN PYTHON CON XLWINGS\nWEB ORIGINAL:",
+      "contenido": "CREAR UN ADD-IN DE EXCEL EN PYTHON CON XLWINGS:\nWeb Original:\nCREAR UN ADD-IN DE EXCEL EN PYTHON CON XLWINGS:\nGenerado por chatGPT\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Preparar Python y xlwings en tu sistema",
+      "contenido": "Preparar Python y xlwings en tu sistema:\nPara comenzar, abre el Simbolo del sistema o PowerShell en Windows. Primero verifica que tienes Python instalado escribiendo y ejecutando python --version. Luego instala xlwings en tu Python actual escribiendo y ejecutando python -m pip install --upgrade xlwings. Despues instala el add-in oficial de xlwings en Excel escribiendo y ejecutando xlwings addin install. Una vez hecho esto, cierra todas las ventanas de Excel que tengas abiertas. Abre Excel de nuevo y verifica que aparecio una pestana llamada xlwings en la cinta."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Crear la estructura del add-in",
+      "contenido": "Crear la estructura del add-in:\nCierra Excel otra vez, no debe quedar abierto. Vuelve a la ventana de Simbolo del sistema o PowerShell. Crea una carpeta para tu proyecto, por ejemplo mkdir C:\\Users\\TU_USUARIO\\excel_addin_demo. Entra en la carpeta del proyecto con cd C:\\Users\\TU_USUARIO\\excel_addin_demo. Genera el proyecto de add-in con xlwings escribiendo xlwings quickstart mi_addin --addin --ribbon. Esto crea dentro de esta carpeta al menos mi_addin.py, mi_addin.xlam y una estructura basica de add-in con pestana MyAddin en Excel."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Abrir el add-in en Excel",
+      "contenido": "Abrir el add-in en Excel:\nEn el Explorador de archivos, entra en C:\\Users\\TU_USUARIO\\excel_addin_demo. Haz doble clic sobre mi_addin.xlam. Pulsa Habilitar contenido o Habilitar macros si Excel lo pide. Pulsa Ctrl+N o Libro en blanco para abrir un libro nuevo normal. Verifica que en la cinta de Excel aparece una pestana llamada MyAddin."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Configurar el interprete de Python del add-in - Parte 1",
+      "contenido": "Configurar el interprete de Python del add-in - Parte 1:\nSi ya usaste xlwings addin install y ese Python es el que quieres usar, puede que ya funcione sin tocar nada. Si no, sigue estos pasos. Con mi_addin.xlam abierto, pulsa Alt + F11 para abrir el Editor de VBA. En el panel izquierdo, haz clic en ThisWorkbook dentro del proyecto que se llama algo como VBAProject (mi_addin.xlam) o myaddin. En la ventana de Propiedades, si no se ve pulsa F4, busca la propiedad IsAddin. Cambia la propiedad IsAddin de True a False. Cierra el Editor de VBA con Alt + Q."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Configurar el interprete de Python del add-in - Parte 2",
+      "contenido": "Configurar el interprete de Python del add-in - Parte 2:\nVuelve a Excel y localiza la nueva hoja oculta que aparece con nombre _myaddin.conf. Renombra esa hoja a myaddin.conf. En la hoja myaddin.conf, localiza la celda que corresponde a Interpreter_Win. Escribe en Interpreter_Win la ruta completa a tu pythonw.exe, por ejemplo C:\\Users\\TU_USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\pythonw.exe. Guarda el archivo mi_addin.xlam desde Excel con Archivo > Guardar."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Configurar el interprete de Python del add-in - Parte 3",
+      "contenido": "Configurar el interprete de Python del add-in - Parte 3:\nVuelve a abrir el Editor de VBA con Alt + F11. Vuelve a seleccionar ThisWorkbook en el panel izquierdo. Cambia la propiedad IsAddin de False a True. Guarda de nuevo el proyecto desde el Editor de VBA con Archivo > Guardar mi_addin.xlam. Cierra el Editor de VBA con Alt + Q."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Escribir el codigo Python de tu add-in",
+      "contenido": "Escribir el codigo Python de tu add-in:\nAbre tu editor preferido, por ejemplo VS Code o Notepad++. Abre el archivo C:\\Users\\TU_USUARIO\\excel_addin_demo\\mi_addin.py. Borra el contenido de ejemplo si quieres y pega este codigo minimo:\n\nimport xlwings as xw\n\n@xw.sub\ndef escribir_mensaje():\n    wb = xw.Book.caller()\n    sht = wb.sheets[0]\n    sht[\"A1\"].value = \"Hola desde el add-in de Python\"\n\n@xw.func\ndef doble(n):\n    return n * 2\n\nEl decorador @xw.sub se usa para macros que se ejecutan desde botones de la cinta. El decorador @xw.func se usa para funciones UDF que puedes usar en celdas de Excel. Guarda el archivo mi_addin.py."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Importar las funciones Python en el add-in",
+      "contenido": "Importar las funciones Python en el add-in:\nVuelve a Excel con mi_addin.xlam cargado y un libro nuevo en blanco. Ve a la pestana MyAddin en la cinta de Excel. Busca el grupo User Defined Functions (UDFs) en la pestana MyAddin. En el cuadro UDF Modules escribe mi_addin sin .py, solo el nombre del modulo. Pulsa el boton Import Python UDFs en el mismo grupo de la cinta. Espera a que termine la importacion. Si hay errores, Excel mostrara un mensaje."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Probar el add-in como funcion UDF",
+      "contenido": "Probar el add-in como funcion UDF:\nEn la hoja de Excel en el libro normal, NO en mi_addin.xlam, haz clic en la celda A1. Escribe un numero, por ejemplo 5. En la celda B1 escribe la formula =doble(A1). Pulsa Enter para confirmar la formula. Verifica que en B1 aparece 10, lo que demuestra que Excel esta llamando a tu funcion Python doble."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Probar el add-in como macro desde la cinta",
+      "contenido": "Probar el add-in como macro desde la cinta:\nVe de nuevo a la pestana MyAddin. Pulsa el boton Run o el boton del ejemplo que venga en el ribbon, si esta enlazado a escribir_mensaje. Verifica que en la celda A1 de la hoja activa aparece Hola desde el add-in de Python."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Instalar el add-in para que se cargue siempre",
+      "contenido": "Instalar el add-in para que se cargue siempre:\nCierra Excel por completo, incluyendo mi_addin.xlam. Vuelve a la ventana de Simbolo del sistema o PowerShell. Entra de nuevo en la carpeta del proyecto con cd C:\\Users\\TU_USUARIO\\excel_addin_demo. Ejecuta el comando para instalar tu add-in personalizado: xlwings addin install --file mi_addin.xlam. Abre Excel normalmente y comprueba que Excel carga mi_addin.xlam al arrancar y que la pestana MyAddin esta disponible en todos los libros."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Uso diario del add-in",
+      "contenido": "Uso diario del add-in:\nAbre Excel normalmente, mi_addin.xlam se cargara solo. Crea o abre cualquier libro .xlsx de trabajo. Usa las formulas UDF, por ejemplo =doble(A1), como si fueran funciones nativas de Excel. Usa los botones del ribbon MyAddin para ejecutar macros Python, por ejemplo escribir_mensaje."
+    },
+    {
+      "itemID": "013",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\nPara validar la informacion de este tutorial, voy a buscar las fuentes oficiales de xlwings."
+    },
+    {
+      "itemID": "000-2",
+      "menu_item": "CREAR UN ADD-IN DE EXCEL EN PYTHON CON XLWINGS\nWEB ORIGINAL:",
+      "contenido": "CREAR UN ADD-IN DE EXCEL EN PYTHON CON XLWINGS:\nWeb Original:\nCREAR UN ADD-IN DE EXCEL EN PYTHON CON XLWINGS:\nGenerado por chatGPT\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001-2",
+      "menu_item": "Preparar Python y xlwings en tu sistema",
+      "contenido": "Preparar Python y xlwings en tu sistema:\nPara comenzar, abre el Simbolo del sistema o PowerShell en Windows. Primero verifica que tienes Python instalado escribiendo y ejecutando python --version. Luego instala xlwings en tu Python actual escribiendo y ejecutando python -m pip install --upgrade xlwings. Despues instala el add-in oficial de xlwings en Excel escribiendo y ejecutando xlwings addin install. Una vez hecho esto, cierra todas las ventanas de Excel que tengas abiertas. Abre Excel de nuevo y verifica que aparecio una pestana llamada xlwings en la cinta."
+    },
+    {
+      "itemID": "002-2",
+      "menu_item": "Crear la estructura del add-in",
+      "contenido": "Crear la estructura del add-in:\nCierra Excel otra vez, no debe quedar abierto. Vuelve a la ventana de Simbolo del sistema o PowerShell. Crea una carpeta para tu proyecto, por ejemplo mkdir C:\\Users\\TU_USUARIO\\excel_addin_demo. Entra en la carpeta del proyecto con cd C:\\Users\\TU_USUARIO\\excel_addin_demo. Genera el proyecto de add-in con xlwings escribiendo xlwings quickstart mi_addin --addin --ribbon. Esto crea dentro de esta carpeta al menos mi_addin.py, mi_addin.xlam y una estructura basica de add-in con pestana MyAddin en Excel."
+    },
+    {
+      "itemID": "003-2",
+      "menu_item": "Abrir el add-in en Excel",
+      "contenido": "Abrir el add-in en Excel:\nEn el Explorador de archivos, entra en C:\\Users\\TU_USUARIO\\excel_addin_demo. Haz doble clic sobre mi_addin.xlam. Pulsa Habilitar contenido o Habilitar macros si Excel lo pide. Pulsa Ctrl+N o Libro en blanco para abrir un libro nuevo normal. Verifica que en la cinta de Excel aparece una pestana llamada MyAddin."
+    },
+    {
+      "itemID": "004-2",
+      "menu_item": "Configurar el interprete de Python del add-in - Parte 1",
+      "contenido": "Configurar el interprete de Python del add-in - Parte 1:\nSi ya usaste xlwings addin install y ese Python es el que quieres usar, puede que ya funcione sin tocar nada. Si no, sigue estos pasos. Con mi_addin.xlam abierto, pulsa Alt + F11 para abrir el Editor de VBA. En el panel izquierdo, haz clic en ThisWorkbook dentro del proyecto que se llama algo como VBAProject (mi_addin.xlam) o myaddin. En la ventana de Propiedades, si no se ve pulsa F4, busca la propiedad IsAddin. Cambia la propiedad IsAddin de True a False. Cierra el Editor de VBA con Alt + Q."
+    },
+    {
+      "itemID": "005-2",
+      "menu_item": "Configurar el interprete de Python del add-in - Parte 2",
+      "contenido": "Configurar el interprete de Python del add-in - Parte 2:\nVuelve a Excel y localiza la nueva hoja oculta que aparece con nombre _myaddin.conf. Renombra esa hoja a myaddin.conf. En la hoja myaddin.conf, localiza la celda que corresponde a Interpreter_Win. Escribe en Interpreter_Win la ruta completa a tu pythonw.exe, por ejemplo C:\\Users\\TU_USUARIO\\AppData\\Local\\Programs\\Python\\Python313\\pythonw.exe. Guarda el archivo mi_addin.xlam desde Excel con Archivo > Guardar."
+    },
+    {
+      "itemID": "006-2",
+      "menu_item": "Configurar el interprete de Python del add-in - Parte 3",
+      "contenido": "Configurar el interprete de Python del add-in - Parte 3:\nVuelve a abrir el Editor de VBA con Alt + F11. Vuelve a seleccionar ThisWorkbook en el panel izquierdo. Cambia la propiedad IsAddin de False a True. Guarda de nuevo el proyecto desde el Editor de VBA con Archivo > Guardar mi_addin.xlam. Cierra el Editor de VBA con Alt + Q."
+    },
+    {
+      "itemID": "007-2",
+      "menu_item": "Escribir el codigo Python de tu add-in",
+      "contenido": "Escribir el codigo Python de tu add-in:\nAbre tu editor preferido, por ejemplo VS Code o Notepad++. Abre el archivo C:\\Users\\TU_USUARIO\\excel_addin_demo\\mi_addin.py. Borra el contenido de ejemplo si quieres y pega este codigo minimo:\n\nimport xlwings as xw\n\n@xw.sub\ndef escribir_mensaje():\n    wb = xw.Book.caller()\n    sht = wb.sheets[0]\n    sht[\"A1\"].value = \"Hola desde el add-in de Python\"\n\n@xw.func\ndef doble(n):\n    return n * 2\n\nEl decorador @xw.sub se usa para macros que se ejecutan desde botones de la cinta. El decorador @xw.func se usa para funciones UDF que puedes usar en celdas de Excel. Guarda el archivo mi_addin.py."
+    },
+    {
+      "itemID": "008-2",
+      "menu_item": "Importar las funciones Python en el add-in",
+      "contenido": "Importar las funciones Python en el add-in:\nVuelve a Excel con mi_addin.xlam cargado y un libro nuevo en blanco. Ve a la pestana MyAddin en la cinta de Excel. Busca el grupo User Defined Functions (UDFs) en la pestana MyAddin. En el cuadro UDF Modules escribe mi_addin sin .py, solo el nombre del modulo. Pulsa el boton Import Python UDFs en el mismo grupo de la cinta. Espera a que termine la importacion. Si hay errores, Excel mostrara un mensaje."
+    },
+    {
+      "itemID": "009-2",
+      "menu_item": "Probar el add-in como funcion UDF",
+      "contenido": "Probar el add-in como funcion UDF:\nEn la hoja de Excel en el libro normal, NO en mi_addin.xlam, haz clic en la celda A1. Escribe un numero, por ejemplo 5. En la celda B1 escribe la formula =doble(A1). Pulsa Enter para confirmar la formula. Verifica que en B1 aparece 10, lo que demuestra que Excel esta llamando a tu funcion Python doble."
+    },
+    {
+      "itemID": "010-2",
+      "menu_item": "Probar el add-in como macro desde la cinta",
+      "contenido": "Probar el add-in como macro desde la cinta:\nVe de nuevo a la pestana MyAddin. Pulsa el boton Run o el boton del ejemplo que venga en el ribbon, si esta enlazado a escribir_mensaje. Verifica que en la celda A1 de la hoja activa aparece Hola desde el add-in de Python."
+    },
+    {
+      "itemID": "011-2",
+      "menu_item": "Instalar el add-in para que se cargue siempre",
+      "contenido": "Instalar el add-in para que se cargue siempre:\nCierra Excel por completo, incluyendo mi_addin.xlam. Vuelve a la ventana de Simbolo del sistema o PowerShell. Entra de nuevo en la carpeta del proyecto con cd C:\\Users\\TU_USUARIO\\excel_addin_demo. Ejecuta el comando para instalar tu add-in personalizado: xlwings addin install --file mi_addin.xlam. Abre Excel normalmente y comprueba que Excel carga mi_addin.xlam al arrancar y que la pestana MyAddin esta disponible en todos los libros."
+    },
+    {
+      "itemID": "012-2",
+      "menu_item": "Uso diario del add-in",
+      "contenido": "Uso diario del add-in:\nAbre Excel normalmente, mi_addin.xlam se cargara solo. Crea o abre cualquier libro .xlsx de trabajo. Usa las formulas UDF, por ejemplo =doble(A1), como si fueran funciones nativas de Excel. Usa los botones del ribbon MyAddin para ejecutar macros Python, por ejemplo escribir_mensaje."
+    },
+    {
+      "itemID": "013-2",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\n\nLos pasos descritos en este tutorial estan validados con la documentacion oficial de xlwings. A continuacion se presentan los puntos tecnicos confirmados y las fuentes oficiales de referencia.\n\nPuntos tecnicos validados:\n\nxlwings es una biblioteca Python con licencia BSD que permite llamar a Python desde Excel e interactuar con Excel desde Python. Soporta macros, funciones definidas por usuario UDF y automatizacion con una sintaxis cercana a VBA.\n\nEl comando xlwings quickstart crea automaticamente un proyecto con un archivo de Excel y un archivo Python listos para usar. El comando quickstart crea una hoja de configuracion llamada _xlwings.conf que debe renombrarse quitando el guion bajo para activarla.\n\nPara crear un add-in personalizado con ribbon, se usa el comando quickstart con las banderas --addin y --ribbon, lo que genera una estructura basica con pestana personalizada en Excel. Para activar la configuracion del add-in, se debe cambiar la propiedad IsAddin a False temporalmente, renombrar la hoja _myaddin.conf a myaddin.conf, configurar el interprete Python en Interpreter_Win o Interpreter_Mac, y luego cambiar IsAddin de vuelta a True.\n\nEl decorador @xw.func se usa para crear funciones definidas por usuario UDF que se importan a Excel, mientras que el decorador @xw.sub se usa para crear macros que se pueden ejecutar desde botones. Para importar las funciones UDF en Excel, se usa el boton Import Python UDFs en la pestana del add-in, especificando el nombre del modulo Python sin la extension .py.\n\nEl comando xlwings addin install copia el add-in al directorio XLSTART de Excel, y puede usar la bandera --file para instalar un add-in personalizado especifico.\n\nFuentes oficiales de referencia:\n\nDocumentacion oficial de xlwings:\nhttps://docs.xlwings.org/\n\nDocumentacion sobre Custom Add-ins:\nhttps://docs.xlwings.org/en/stable/customaddin.html\n\nDocumentacion sobre User Defined Functions UDF:\nhttps://docs.xlwings.org/en/stable/udfs.html\n\nDocumentacion sobre Command Line Client:\nhttps://docs.xlwings.org/en/stable/command_line.html\n\nRepositorio oficial en GitHub:\nhttps://github.com/xlwings/xlwings\n\nPagina de PyPI del paquete xlwings:\nhttps://pypi.org/project/xlwings/\n\nSitio web oficial de xlwings:\nhttps://www.xlwings.org/\n\nEstas fuentes confirman que los procedimientos descritos en el tutorial son los metodos oficialmente recomendados para crear add-ins personalizados de Excel con Python usando xlwings.\n\n\nCREAR UN ADD-IN DE EXCEL EN PYTHON CON XLWINGS\nGenerado por chatGPT\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+
+    {
+      "itemID": "014",
+      "menu_item": "MAPA MENTAL:",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/CREAR%20UN%20ADD_IN%20DE%20EXCEL%20EN%20PYTHON%20CON%20XLWINGSMAPA.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

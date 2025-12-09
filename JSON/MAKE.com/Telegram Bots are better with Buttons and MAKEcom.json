@@ -1,0 +1,67 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Telegram Bots are better with Buttons and MAKEcom\nWEB ORIGINAL:",
+      "contenido": "Telegram Bots are better with Buttons and MAKEcom:\nWeb Original:\nTelegram Bots are better with Buttons and MAKEcom:\nhttps://youtu.be/IFoM81ZASfs?si=TqrO4RrrkpzUFhdB\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción: Por qué usar botones",
+      "contenido": "Introducción: Por qué usar botones:\nEl objetivo principal de este tutorial es mejorar los chatbots en plataformas como Telegram o Slack añadiendo interactividad mediante botones. Los botones hacen que sea mucho más fácil para las personas interactuar con el bot, ya que no tienen que escribir comandos complicados, logrando una experiencia más amigable.\n\nVamos a construir un \"bot de tareas\". El funcionamiento es sencillo: el usuario dice o escribe lo que necesita, el bot le ofrece un botón para confirmar la tarea, el usuario lo pulsa, el bot crea la tarea en tu sistema y finalmente actualiza el mensaje para confirmar que todo se ha hecho correctamente."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Configuración inicial en Make.com",
+      "contenido": "Configuración inicial en Make.com:\nPara crear este bot, utilizaremos un flujo de trabajo (escenario) en Make.com dividido en tres secciones o filas:\n\nLa fila superior se encarga de los mensajes de voz: recibe el audio y lo convierte a texto usando herramientas de inteligencia artificial.\n\nLa fila central se encarga de los mensajes de texto normal.\n\nLa fila inferior es especial y se encarga de manejar lo que sucede cuando se pulsa el botón.\n\nEs fundamental que, sin importar si el usuario envía voz o texto, el bot envíe una respuesta de vuelta con la transcripción (lo que entendió) para confirmar que la información es correcta antes de ofrecer el botón."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Cómo añadir el botón al mensaje",
+      "contenido": "Cómo añadir el botón al mensaje:\nPara que el bot muestre un botón junto con su respuesta, debes configurar el módulo de Telegram en Make.com. Dentro de la configuración avanzada de este módulo, busca la función llamada \"reply markup\" (marcado de respuesta).[1]\n\nEsta función es la que te permite definir los botones.[2][3] Al crear el botón, es obligatorio asignarle un valor llamado \"callback data\" (datos de devolución de llamada). Por ejemplo, puedes ponerle el valor \"create task\". Este dato es crucial porque es la información oculta que el botón enviará de vuelta a Make.com cuando el usuario lo presione, permitiendo al sistema saber qué acción ejecutar."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Cómo funciona la pulsación del botón",
+      "contenido": "Cómo funciona la pulsación del botón:\nCuando un usuario pulsa el botón en Telegram, Make.com lo recibe como una interacción nueva. Para que el escenario sepa que se trata de un botón y no de un mensaje normal, debe buscar la presencia de una \"callback query\" (consulta de devolución de llamada).[4]\n\nSi el escenario detecta que existe un \"callback query ID\", significa que se pulsó un botón y el flujo debe seguir por el camino inferior (la tercera fila que configuramos). Esta consulta contiene dos datos vitales: el mensaje original que el bot envió y el dato del botón que configuramos antes (por ejemplo, \"create task\")."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Guardar el contexto con Data Store",
+      "contenido": "Guardar el contexto con Data Store:\nCuando se pulsa el botón, el bot inicia una ejecución nueva y, por defecto, \"olvida\" lo que el usuario había escrito originalmente. Para solucionar esto, usamos el \"Data Store\" de Make.com, que actúa como una memoria o base de datos simple.[5]\n\nEn el Data Store guardamos cuatro cosas: el ID del chat, el ID del mensaje del bot, el ID del mensaje del usuario y el texto original del usuario.\n\nPara poder recuperar esta información después, creamos una clave única combinando el ID del chat y el ID del mensaje del bot (ejemplo: chatID//botMessageID). Cuando el usuario pulsa el botón, el bot usa esa misma combinación para buscar en la base de datos y recuperar el texto original (como \"necesito comprar pastel\") para procesar la tarea."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Mejorar la experiencia del usuario",
+      "contenido": "Mejorar la experiencia del usuario:\nPara evitar problemas, es importante que el usuario no pueda pulsar el mismo botón varias veces. La solución es hacer que el botón desaparezca una vez que se ha pulsado.\n\nEsto se logra utilizando la función de editar mensaje del módulo de Telegram. El bot modifica su propio mensaje anterior manteniendo el mismo texto, pero dejando vacía la configuración de \"reply markup\". Al hacer esto, el botón se borra visualmente del chat y el usuario ya no puede volver a hacer clic en él."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Procesar la tarea con Inteligencia Artificial",
+      "contenido": "Procesar la tarea con Inteligencia Artificial:\nUna vez que el bot ha recuperado el texto original del usuario desde el Data Store, utiliza inteligencia artificial (como el módulo Grok en modo JSON) para entender qué debe hacer.\n\nSe usa una técnica llamada \"few-shot prompt\", que consiste en darle a la IA un ejemplo de instrucciones para entrenarla. Le pedimos que analice el texto y extraiga un título para la tarea y una lista de elementos pendientes (to-do items). La IA debe entregar esta información en un formato estructurado (JSON) para que el sistema pueda leerlo sin errores."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Creación y confirmación de la tarea",
+      "contenido": "Creación y confirmación de la tarea:\nCon el título y el contenido listos, el bot envía la información a tu sistema de gestión de tareas favorito (como Notion, ClickUp u otros). Ten en cuenta que para asignar la tarea a una persona específica, podrías necesitar un paso extra para conectar el ID de usuario de Telegram con el ID de usuario de tu sistema de tareas.\n\nFinalmente, el bot actualiza el mensaje original una última vez. Ahora cambia el texto para incluir un enlace directo a la tarea recién creada. Para que el enlace se vea profesional y funcione bien, se utiliza sintaxis Markdown en la configuración del mensaje."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nHe realizado una búsqueda técnica para validar los conceptos explicados en el tutorial utilizando la documentación oficial de Telegram Bot API y Make.com.\n\nPuntos técnicos validados:\n\nBotones Interactivos (Inline Keyboards):\nLa documentación de Telegram confirma que los botones que realizan acciones dentro del mismo chat se llaman \"Inline Keyboard Buttons\". Estos botones utilizan el campo \"callback_data\" para enviar información oculta al bot sin que el usuario tenga que escribir nada.\nFuente: https://core.telegram.org/bots/api#inlinekeyboardbutton\n\nMecanismo de Respuesta (Callback Query):\nSe confirma que cuando se pulsa un botón inline, Telegram envía un objeto llamado \"CallbackQuery\". Este objeto contiene un \"id\" único, el objeto \"message\" original y el \"data\" (la información configurada en el botón), tal como se describe en el tutorial.\nFuente: https://core.telegram.org/bots/api#callbackquery\n\nMódulos de Make.com (Data Store y Telegram):\nMake.com posee módulos nativos para \"Data Store\" que permiten las acciones \"Get a record\" (Obtener registro) y \"Add/Replace a record\" (Añadir/Reemplazar registro) mediante el uso de claves (Keys), validando la estrategia de almacenamiento de contexto explicada. También valida el uso del módulo Telegram para \"Edit Message Text\" como método para eliminar botones.\nFuente: https://www.make.com/en/help/tools/data-store\nFuente: https://www.make.com/en/integrations/telegram-bot\n\n\nSources\nhelp\nmake.com\naiogram.dev\npython-telegram-bot.org\naiogram.dev\nyoutube.com\ngeeksforgeeks.org\nmedium.com\ngramio.dev\nreadthedocs.io\nGoogle Search Suggestions\nDisplay of Search Suggestions is required when using Grounding with Google Search. Learn more\nTelegram Bot API inline keyboard buttons\nTelegram Bot API callback query documentation\nMake.com Data Store module documentation\nMake.com Telegram module reply markup documentation"
+    },
+
+    {
+      "itemID": "010",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Telegram%20Bots%20are%20better%20with%20Buttons%20and%20MAKEcomINFO.jpeg]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    },
+
+    {
+      "itemID": "011",
+      "menu_item": "MAPA MENTAL:",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Telegram%20Bots%20are%20better%20with%20Buttons%20and%20MAKEcomMAPA.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

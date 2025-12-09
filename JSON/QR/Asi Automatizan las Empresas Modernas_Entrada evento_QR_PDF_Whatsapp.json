@@ -1,0 +1,77 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Asi Automatizan las Empresas Modernas_Entrada evento_QR_PDF_Whatsapp\nWEB ORIGINAL:",
+      "contenido": "Asi Automatizan las Empresas Modernas_Entrada evento_QR_PDF_Whatsapp:\nWeb Original:\nAsi Automatizan las Empresas Modernas_Entrada evento_QR_PDF_Whatsapp:\nhttps://youtu.be/uIUP-nIOXo4?si=E7aYwaEItOccV9J0\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "La oportunidad de la Inteligencia Artificial y la automatizacion",
+      "contenido": "La oportunidad de la Inteligencia Artificial y la automatizacion:\nLa oportunidad de hoy es usar la Inteligencia Artificial (IA) y la automatizacion de procesos. El presentador trabaja en el sector de los bancos, donde se celebra un evento muy conocido llamado Revolution Banking en Espana. En estos eventos, las empresas quieren ver las tecnologias nuevas y las tendencias del mercado.\n\nLas empresas modernas buscan reducir costos, simplificar tareas, automatizar procesos y hacer que la experiencia del cliente sea mejor, y lo quieren hacer rapido. El objetivo de este canal es ensenar a usar la IA y automatizar procesos para crear soluciones utiles."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "La IA y la Automatizacion Accesible para todos",
+      "contenido": "La IA y la Automatizacion Accesible para todos:\nUna empresa llamada Blip se dedica a la automatizacion de conversaciones para atender a los clientes usando plataformas como WhatsApp, Telegram y redes sociales. Esta empresa ha reunido mucho dinero de inversion, lo que demuestra que este mercado esta creciendo mucho y tiene muchas oportunidades.\n\nAntes, solo las grandes empresas podian usar la IA, porque se necesitaban equipos especializados e infraestructuras complejas. Pero hoy, gracias a herramientas sencillas (low code/no code) como N8N y el uso del internet (la nube), cualquier persona con un computador y creatividad puede acceder a esta tecnologia.\n\nActualmente, las empresas no preguntan si usar la IA, sino como y cuando. Quieren reducir costos y automatizar tareas en todas sus areas, como mercadeo, ventas y logistica. En el futuro, la IA estara completamente integrada en la mayoria de los procesos de las empresas. Usar la IA nos permite hacer mas con menos."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "El Ejemplo de Blip y los Tres Pasos de Automatizacion",
+      "contenido": "El Ejemplo de Blip y los Tres Pasos de Automatizacion:\nLa empresa Blip muestra en su pagina web que su solucion ayuda con la comunicacion, especialmente a traves de WhatsApp. Blip usa un sistema de chat (chatbot) que tiene botones interactivos. Muchas empresas reconocidas ya han adoptado las automatizaciones de WhatsApp con Blip.\n\nEl objetivo de este video es copiar una automatizacion que fue util en el evento Revolution Banking. Esta automatizacion se divide en tres tareas principales, llamadas flujos:\n\nFlujo 1 (Registro y Entrada): Recoger los datos de los asistentes, guardarlos, crear una entrada en un archivo PDF con un codigo QR unico para cada persona, y luego enviar esa entrada por correo electronico.\n\nFlujo 2 (Recordatorio de WhatsApp): Programar un mensaje de recordatorio para el dia del evento y enviarlo por WhatsApp a los asistentes usando botones interactivos.\n\nFlujo 3 (Agente de Ayuda): Crear un agente de IA que ayude a responder las dudas que los asistentes tengan sobre el evento."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Demostracion del Flujo 1: Registro y Entrada",
+      "contenido": "Demostracion del Flujo 1: Registro y Entrada:\nEl proceso empieza cuando un cliente llena un formulario de registro para reservar su cupo. Este formulario fue creado usando un codigo llamado HTML, con ayuda de ChatGPT.\n\nAl llenar el formulario, se inicia el Flujo 1. El asistente recibe un correo electronico personalizado con su nombre. Este correo incluye informacion del evento (fecha, lugar como el Santiago Bernabeu, y hora). Lo mas importante es que adjunta la entrada en formato PDF. La entrada tiene un codigo QR que es unico para cada persona, y al escanearlo, identifica al asistente."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Demostracion del Flujo 2: Recordatorio por WhatsApp",
+      "contenido": "Demostracion del Flujo 2: Recordatorio por WhatsApp:\nEl Flujo 2 se inicia el dia del evento. El sistema revisa la base de datos de personas registradas. A todos ellos, les envia un mensaje de WhatsApp con botones de interaccion. Este mensaje incluye una imagen y un texto recordatorio."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Demostracion del Flujo 3: Respuesta Inteligente",
+      "contenido": "Demostracion del Flujo 3: Respuesta Inteligente:\nEl Flujo 3 se activa cuando alguien responde en WhatsApp. El sistema tiene una forma de ver si la persona presiono un boton o simplemente escribio un mensaje de texto.\n\nSi se presiona un boton: El sistema actua. Por ejemplo, si se presiona como llegar, el sistema envia automaticamente la ubicacion del lugar (Santiago Bernabeu) y un mensaje de que los esperan. Si se presiona agenda o ruleta, hace otras acciones.\n\nSi se escribe un texto: El mensaje va a un agente de IA (que usa un modelo de OpenAI) para que responda la pregunta del asistente."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Como se Construye el Flujo 1 paso a paso",
+      "contenido": "Como se Construye el Flujo 1 paso a paso:\nEl Flujo 1 usa varios pasos (nodos) para funcionar:\n\nRecibir la Informacion: Se usa un sistema de recepcion llamado WebHook para obtener toda la informacion que la persona lleno en el formulario (nombre, apellido, correo, telefono).\n\nCrear ID Unico: Se genera un codigo de identificacion (ID) unico y aleatorio para cada participante.\n\nGuardar los Datos: La informacion se guarda en una hoja de calculo de Google (Google Sheet) llamada base de datos.\n\nGenerar el Codigo QR: Se llama a una direccion de internet (URL publica) que crea codigos QR. Este codigo QR esta asociado al ID unico de cada asistente.\n\nPreparar la Imagen para el PDF: El archivo del codigo QR se convierte en una cadena larga de letras y numeros (B64). Esto permite que la imagen del QR se pueda ver dentro del documento PDF.\n\nCrear el HTML: Se genera el codigo HTML (la estructura de la entrada) donde se inserta la cadena de letras y numeros (B64) del QR.\n\nConvertir a PDF: Se usa una herramienta llamada PDF coAPI que toma ese codigo HTML y lo transforma en un archivo PDF.\n\nDescargar y Enviar por Correo: Se descarga el PDF de internet. Finalmente, se usa un sistema de correo (Gmail) para enviar un mensaje personalizado (hecho en HTML con ayuda de ChatGPT) y se adjunta el archivo PDF de la entrada."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Como se Construye el Flujo 2: El Recordatorio por WhatsApp",
+      "contenido": "Como se Construye el Flujo 2: El Recordatorio por WhatsApp:\nEl Flujo 2 es mas corto y se configura para que se inicie a una hora especifica, por ejemplo, a las 8:00 de la manana de un dia.\n\nLeer la Base de Datos: El sistema lee la lista de todas las personas registradas en la hoja de calculo de Google.\n\nRepetir la Accion (Bucle): Se usa una funcion (loop over items) para que el siguiente paso (enviar mensaje) se repita para cada persona registrada en la lista.\n\nEnviar Mensaje con Botones: Como la herramienta N8N no tiene un paso directo para hacer botones, se usa una llamada a internet (HTTP request) y un codigo especial (JSON) para enviar el mensaje de WhatsApp que incluye los botones interactivos (como como llegar, agenda, ruleta)."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Como se Construye el Flujo 3: La Respuesta Inteligente",
+      "contenido": "Como se Construye el Flujo 3: La Respuesta Inteligente:\nEl Flujo 3 se inicia cuando el asistente responde al mensaje de WhatsApp.\n\nDecidir la Ruta (Switch): El sistema revisa si la respuesta fue un mensaje de texto o una interaccion con un boton (interactive).\n\nSi es Texto: La pregunta se envia a un agente de IA (usando OpenAI) que tiene instrucciones especificas sobre su trabajo (prompt) para responder.\n\nSi es Boton: Se usa otro switch para identificar cual boton fue presionado (Agenda, Como llegar, Ruleta).\n\nSi fue como llegar, el sistema envia la ubicacion del evento.\n\nSi fue agenda, el sistema envia un documento con la agenda.\n\nSi fue ruleta, el sistema envia un mensaje de texto invitando a participar en los premios.\n\nEsta automatizacion es un ejemplo practico y util para muchas empresas, y saber como crear este tipo de soluciones abre una ventana enorme de oportunidades."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Preguntas y Respuestas",
+      "contenido": "Preguntas y Respuestas:\n\n1. Que quieren lograr las empresas modernas usando la Inteligencia Artificial (IA)?\nLas empresas modernas quieren reducir costos, simplificar sus tareas, automatizar sus procesos y dar una mejor experiencia a sus clientes.\n\n2. Como se llama la empresa usada como inspiracion para esta automatizacion?\nSe llama Blip, y se especializa en automatizar conversaciones con clientes usando aplicaciones como WhatsApp.\n\n3. Que facilita que la tecnologia de IA y automatizacion sea accesible para todos hoy en dia?\nSe facilita gracias a herramientas sencillas (low code/no code) como N8N, las cuales permiten que cualquier persona con un computador pueda usarlas, a diferencia del pasado.\n\n4. Cuantas partes o flujos principales tiene la automatizacion del evento?\nTiene tres partes o flujos principales: el registro y envio de la entrada, el recordatorio por WhatsApp y el agente de IA para responder dudas.\n\n5. Que incluye la entrada del evento que se envia por correo electronico (Flujo 1)?\nLa entrada se envia en formato PDF e incluye el nombre del asistente, el numero de telefono y un codigo QR unico que sirve para su identificacion.\n\n6. Que se envia en el mensaje de recordatorio de WhatsApp (Flujo 2)?\nSe envia un mensaje de recordatorio con una imagen y, lo mas importante, incluye botones interactivos para que el asistente pueda cliquear.\n\n7. Como sabe el sistema de respuesta (Flujo 3) que hacer cuando el asistente responde por WhatsApp?\nEl sistema usa una funcion para saber si el asistente ha escrito un mensaje de texto o si ha presionado uno de los botones.\n\n8. Que pasa si el asistente escribe una pregunta de texto en WhatsApp?\nSi escribe un texto, la pregunta es enviada a un agente de IA que utiliza un modelo de OpenAI para responder.\n\n9. Que pasa si el asistente presiona el boton de como llegar en WhatsApp?\nSi presiona ese boton, el sistema envia automaticamente la ubicacion del evento, en este caso, el estadio Santiago Bernabeu.\n\n10. Como se logra que la imagen del codigo QR se vea dentro del documento PDF?\nEl codigo QR se convierte primero en un codigo largo de letras y numeros llamado B64, el cual luego se incorpora en el codigo HTML que forma la entrada en PDF."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACION CON FUENTES TECNICAS OFICIALES",
+      "contenido": "VALIDACION CON FUENTES TECNICAS OFICIALES:\n\nVoy a buscar informacion oficial sobre las herramientas y tecnologias mencionadas en este tutorial.\n\n\nAsi Automatizan las Empresas Modernas_Entrada evento_QR_PDF_Whatsapp\nhttps://youtu.be/uIUP-nIOXo4?si=E7aYwaEItOccV9J0\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+
+    {
+      "itemID": "012",
+      "menu_item": "MAPA MENTAL:",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Asi%20Automatizan%20las%20Empresas%20Modernas_Entrada%20evento_QR_PDF_WhatsappMAPA.png]\n\nEste MAPA MENTAL resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    },
+
+    {
+      "itemID": "013",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Asi%20Automatizan%20las%20Empresas%20Modernas_Entrada%20evento_QR_PDF_WhatsappINFO.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

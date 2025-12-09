@@ -1,0 +1,60 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "The LAZIEST Way To Start Making Money with AI BEFORE 2026\nWEB ORIGINAL:",
+      "contenido": "The LAZIEST Way To Start Making Money with AI BEFORE 2026:\nWeb Original:\nThe LAZIEST Way To Start Making Money with AI BEFORE 2026:\nhttps://youtu.be/l9ulY_Mnqgc?si=UscGlZVh7UFnNCH6\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción y resultados del negocio con IA",
+      "contenido": "Introducción y resultados del negocio con IA:\nEn los últimos 55 días, se inició un negocio nuevo con la ayuda de la inteligencia artificial (IA). Este negocio está generando actualmente 12,700 dolares al mes, lo que equivale a 150,000 dolares al año. La IA ayudó en cada paso del proceso, desde la creación del sitio web hasta la conexión con Stripe para recibir pagos y la creación de contenido para redes sociales. Aunque la IA no hizo todo sola y requirió órdenes específicas, facilitó enormemente la creación de la empresa."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Paso 1: Generación de la idea de negocio",
+      "contenido": "Paso 1: Generación de la idea de negocio:\nEl primer paso es tener una idea de negocio. Para esto, se debe usar una orden especifica para la IA. La orden debe decir: Quiero crear una aplicación o página web para personas que cueste entre 25 y 40 dolares al mes. Este rango de precio se considera justo para conseguir suscriptores.\n\nDebes pedirle a la IA ideas fáciles de hacer basadas en tus intereses personales. En el ejemplo, los intereses eran redes sociales, agentes de IA y finanzas personales. Es fundamental que las ideas de negocio busquen reemplazar un servicio que antes era muy costoso, ofreciendo una solución impulsada por IA a un precio mucho más bajo. La idea debe resolver un problema real que la gente quiera solucionar."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Paso 2: Validación de la idea con múltiples IAs",
+      "contenido": "Paso 2: Validación de la idea con múltiples IAs:\nUn error común es usar la orden solo en ChatGPT. Debes usar la misma orden en varios programas de IA diferentes, como GPT 5.1, Claude Sonic 5, Grock y Gemini 3 Pro. Para hacer esto eficientemente, se recomienda usar una herramienta como Abacus AI Chat LM que permite acceso a todos estos modelos.\n\nEl objetivo es obtener ideas muy distintas de cada programa. Es similar a pedir opiniones a muchas personas diferentes. En el caso del video, ChatGPT sugirió una agencia de contenido de redes sociales con IA, una idea que también gustó a Claude. Al ver que una idea se repite en varios programas, es una señal para elegirla.[1]"
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Paso 3: Creación de la orden técnica final",
+      "contenido": "Paso 3: Creación de la orden técnica final:\nUna vez elegida la idea (en el ejemplo, la opción uno), debes preguntar a ChatGPT, Claude y Grock lo siguiente: Quiero seguir con la opción uno. Por favor, dime qué orden debo poner en Deep Agent para crear la versión más simple de esto (un MVP) y empezar a recibir pagos con Stripe de inmediato.\n\nCada IA te dará una orden técnica. Luego, abre una ventana nueva con GPT 5.1 y dile: Te daré tres órdenes. Junta las mejores partes de las tres para hacer una orden final. Esto asegura que la instrucción que le des al constructor de aplicaciones tenga las mejores partes de todas las sugerencias."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Paso 4: Construcción de la aplicación con Deep Agent",
+      "contenido": "Paso 4: Construcción de la aplicación con Deep Agent:\nUsa la orden final generada en el paso anterior dentro de la herramienta Deep Agent de Abacus AI.[1] Deep Agent es capaz de construir aplicaciones, chatbots y flujos de trabajo.[2]\n\nPara la demostración, se construyó una aplicación para ayudar a las personas a crear un plan personalizado para pagar deudas por 10 dolares al mes. Deep Agent te hará preguntas para aclarar detalles, como el formato de archivos deseado o si ya tienes cuenta de Stripe. Tras responder, el programa comienza a construir la página web, el sistema de acceso, la calculadora, el panel de control y la base de datos. El programa actúa como un genio que construye todo el negocio en diferentes etapas (Fase 1, Fase 2, etc.)."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Paso 5: Configuración de pagos y gestión",
+      "contenido": "Paso 5: Configuración de pagos y gestión:\nPara cobrar, la aplicación se conecta con Stripe.[1] Debes proporcionar la llave secreta de tu cuenta de Stripe en la sección de secretos de la herramienta. Deep Agent te guiará si no sabes cómo hacerlo.\n\nLa aplicación terminada permite a los usuarios registrarse y probar funciones básicas gratis, como añadir una deuda y calcular intereses y ahorros. Para añadir más deudas o usar funciones avanzadas, el sistema pide al usuario que pague o mejore su cuenta.\n\nSi algo no funciona o quieres cambiar el diseño, simplemente díselo a Deep Agent en el chat (ejemplo: Oye, eso no funcionó, arréglalo o subiendo una foto de otro diseño). Existe un botón de High Effort (Alto Esfuerzo) que solo debe usarse si el programa se atasca, ya que consume más créditos."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Paso 6: Publicación y administración",
+      "contenido": "Paso 6: Publicación y administración:\nCuando la aplicación esté lista, puedes publicar la página web y conectarle tu propio nombre de dominio con la ayuda de la IA.[2][3][4]\n\nEn la sección Administrar, puedes ver y controlar todo el negocio desde un solo lugar. Esto incluye la base de datos con el registro de usuarios y sus datos, así como la gestión de claves secretas. Las herramientas Deep Agent y Chat LM necesarias para todo este proceso tienen un costo de 10 dolares al mes.[5]"
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Ideas de negocio recomendadas",
+      "contenido": "Ideas de negocio recomendadas:\n\nArreglar el crédito: Crear una aplicación con IA que ayude a las personas a mejorar su crédito y finanzas. Actualmente, la gente paga entre 300 y 1,000 dolares al mes por servicios humanos. Una IA puede hacerlo por mucho menos, resolviendo un problema doloroso que impide obtener préstamos.\n\nAplicaciones de salud para grupos pequeños: Apps especializadas como rastreadores de calorías por foto o seguimiento de medicinas GLP1. Debes enfocarte en problemas de salud grandes que la gente quiera eliminar. Copiar una idea existente que ya funciona pero venderla mejor reduce el riesgo.\n\nAplicaciones de fotos: Herramientas para crear fotos virales, perfiles profesionales o restaurar fotos antiguas. La gente está dispuesta a pagar entre 10 y 40 dolares al mes por soluciones de imagen fáciles de usar."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Preguntas y Respuestas",
+      "contenido": "Preguntas y Respuestas:\n\nQue es lo mas importante que se aprendio en el video?\nSe aprendio el proceso exacto, paso a paso, para usar la Inteligencia Artificial y crear un negocio rentable en 55 dias, ganando 12,700 dolares al mes.\n\nCual es el primer paso para empezar el negocio?\nEl primer paso es pensar en una idea de negocio que resuelva un problema que la gente realmente quiera solucionar y que antes haya sido un servicio muy costoso.\n\nComo se usa la IA para tener una idea?\nSe usa una orden (un prompt) para pedirle a la IA ideas de una aplicacion o pagina web que cueste entre 25 y 40 dolares al mes.\n\nPor que se debe usar la orden en varios programas de IA?\nSe debe usar la orden en programas como ChatGPT, Claude, Grock y Gemini, porque cada uno dara ideas distintas, y se necesitan muchas ideas buenas para empezar.\n\nComo se crea la aplicacion de negocio?\nSe usa una herramienta llamada Deep Agent (que es parte de Abacus AI) y se le da una orden final que junta las mejores partes de las ideas de todos los programas de IA. Deep Agent construye la pagina web, el sistema de pagos (Stripe), la calculadora y la base de datos.\n\nQue tipo de aplicacion se uso como ejemplo?\nSe uso como ejemplo una aplicacion que ayuda a las personas a crear un plan personalizado para pagar sus deudas por 10 dolares al mes.\n\nComo gana dinero la aplicacion de ejemplo?\nLa aplicacion permite que la gente la pruebe gratis, pero deben pagar o mejorar su cuenta si quieren usar mas funciones o anadir mas deudas.\n\nCuanto cuestan las herramientas de IA que se recomiendan (Deep Agent y Chat LM)?\nLas herramientas Deep Agent y Chat LM cuestan solo 10 dolares al mes, y se puede empezar a usarlas hoy mismo.[5]\n\nCuales son las tres ideas de negocio de IA que se recomiendan para empezar?\nLas tres ideas son:\nCrear una aplicacion de IA para arreglar el credito de las personas, un servicio por el que hoy pagan mucho dinero.\nCrear aplicaciones de salud especializadas (como para contar calorias o rastrear medicinas) que resuelvan un problema doloroso.\nCrear aplicaciones de fotos con IA (como para hacer fotos profesionales o restaurar fotos viejas), por las que la gente esta dispuesta a pagar."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nSe ha verificado la información técnica mencionada en el tutorial mediante búsqueda en la documentación oficial de Abacus.AI y recursos relacionados.\n\nPuntos técnicos validados:\n\nHerramienta Deep Agent: Confirmado que Abacus.AI ofrece una herramienta llamada Deep Agent capaz de crear aplicaciones completas (full-stack), sitios web y dashboards mediante instrucciones en lenguaje natural (prompts).[6]\n\nCosto: Se confirma que el plan básico de ChatLLM de Abacus.AI tiene un costo de 10 dólares al mes.[5][7][8][9][10] Este plan incluye acceso a modelos de lenguaje y acceso limitado o promocional a Deep Agent (el acceso ilimitado suele estar en el plan Pro de 20 dólares, pero el precio base de entrada es correcto según la documentación actual).\n\nIntegraciones: La documentación oficial confirma que Deep Agent puede integrar bases de datos, autenticación de usuarios y despliegue en dominios personalizados.\n\nModelos disponibles: La plataforma ChatLLM Teams de Abacus permite el acceso a múltiples modelos como GPT, Claude y Gemini bajo una misma suscripción, validando la estrategia de \"usar varios programas\" descrita en el tutorial.\n\nFuentes consultadas:\nSitio oficial de Abacus.AI (Sección ChatLLM y Deep Agent)\nDocumentación de ayuda de Abacus.AI Deep Agent\n\n\nThe LAZIEST Way To Start Making Money with AI BEFORE 2026\nhttps://youtu.be/l9ulY_Mnqgc?si=UscGlZVh7UFnNCH6\nPRO-LIMP AUTOMATIZACION\n+34 636832005\n\noutube.com https://www.youtube.com/watch?v=l9ulY_Mnqgc\nabacus.ai https://abacus.ai\nyoutube.com https://www.youtube.com\nabacus.ai https://abacus.ai\nytcopycat.com https://ytcopycat.com\ncoconote.app https://coconote.app\npages.dev https://pages.dev\nmedium.com https://medium.com/abacus-ai\nabacus.ai https://abacus.ai\npages.dev https://pages.dev\nmedium.com https://medium.com\nAbacus AI ChatLLM pricing models https://abacus.ai/chatllm\nAbacus.AI Deep Agent create application tutorial https://abacus.ai/deep-agent"
+    }
+  ]
+}

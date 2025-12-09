@@ -1,0 +1,50 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Introducción a Python: ¿Qué es y por qué usarlo?\nWEB ORIGINAL:",
+      "contenido": "Introducción a Python: ¿Qué es y por qué usarlo?:\n\nWeb Original:\n\nhttps://youtu.be/L-zhgNVVth0?si=1lKiAI5xAcUtYakO"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción a Python: ¿Qué es y por qué usarlo?",
+      "contenido": "Introducción a Python: ¿Qué es y por qué usarlo?:\n\nPython es un lenguaje de programación de alto nivel, conocido por su sintaxis clara y legible, lo que lo convierte en una excelente opción para principiantes. Se utiliza en una amplia variedad de aplicaciones, como desarrollo web, análisis de datos, inteligencia artificial y automatización de tareas. Su filosofía se centra en la legibilidad del código, utilizando sangrías en lugar de llaves o palabras clave para delimitar bloques de código."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Instalación y configuración del entorno",
+      "contenido": "Instalación y configuración del entorno:\n\nPara comenzar a programar en Python, primero debes instalarlo en tu ordenador. Puedes descargar la última versión desde el sitio web oficial de Python. El proceso de instalación es sencillo y guiado.\n\nUna vez instalado, tendrás acceso al intérprete de Python, que te permite ejecutar código línea por línea, y a herramientas como `pip`, un gestor de paquetes para instalar librerías adicionales. Para una experiencia de desarrollo más completa, se recomienda instalar un editor de código como Visual Studio Code, que ofrece funcionalidades como resaltado de sintaxis y depuración."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Tu primer \"Hola, Mundo\" con ayuda de la IA",
+      "contenido": "Tu primer \"Hola, Mundo\" con ayuda de la IA:\n\nEl \"Hola, Mundo\" es el primer programa que se suele escribir al aprender un nuevo lenguaje. En Python, es tan simple como usar la función `print()`.\n\nImagina que estás utilizando un asistente de IA en tu editor de código. Podrías simplemente escribir un comentario como `# Escribe un programa que imprima \"Hola, Mundo\"` y la IA generaría el código por ti:\n\n```python\n# Escribe un programa que imprima \"Hola, Mundo\"\nprint(\"Hola, Mundo\")\n```\nEste es un ejemplo básico de cómo las herramientas de IA pueden acelerar el proceso de aprendizaje y desarrollo."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Variables y Tipos de Datos Fundamentales",
+      "contenido": "Variables y Tipos de Datos Fundamentales:\n\nEn programación, las variables son contenedores para almacenar datos. En Python, no necesitas declarar el tipo de una variable; el intérprete lo infiere automáticamente.\n\nLos tipos de datos básicos incluyen:\n*   **Enteros (int):** Números sin decimales. Ejemplo: `edad = 25`.\n*   **Flotantes (float):** Números con decimales. Ejemplo: `precio = 19.99`.\n*   **Cadenas de texto (str):** Secuencias de caracteres. Ejemplo: `nombre = \"Ana\"`.\n*   **Booleanos (bool):** Representan verdadero o falso. Ejemplo: `es_estudiante = True`.\n\nLas herramientas de IA pueden ayudarte a entender estos conceptos generando ejemplos o explicando el tipo de dato de una variable específica."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Estructuras de Control: Tomando Decisiones",
+      "contenido": "Estructuras de Control: Tomando Decisiones:\n\nLas estructuras de control permiten que tu programa tome decisiones y ejecute diferentes bloques de código según se cumplan ciertas condiciones.\n\n*   **`if`, `elif`, `else`:** Se utilizan para ejecutar código basado en una o varias condiciones.\n\nUna IA podría ayudarte a generar una estructura condicional compleja. Por ejemplo, si le pides: `# Crea una estructura que verifique si un número es positivo, negativo o cero`, podría generar:\n\n```python\nnumero = 10\n\nif numero > 0:\n    print(\"El número es positivo\")\nelif numero < 0:\n    print(\"El número es negativo\")\nelse:\n    print(\"El número es cero\")\n```"
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Estructuras de Control: Repitiendo Tareas con Bucles",
+      "contenido": "Estructuras de Control: Repitiendo Tareas con Bucles:\n\nLos bucles se utilizan para ejecutar un bloque de código repetidamente.\n\n*   **Bucle `for`:** Itera sobre una secuencia (como una lista o una cadena de texto).\n*   **Bucle `while`:** Se ejecuta mientras una condición sea verdadera.\n\nSi necesitas, por ejemplo, recorrer una lista de nombres, una herramienta de IA puede generar el bucle `for` apropiado:\n\n```python\nnombres = [\"Ana\", \"Luis\", \"Marta\"]\nfor nombre in nombres:\n    print(nombre)\n```"
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Funciones: Organizando tu Código",
+      "contenido": "Funciones: Organizando tu Código:\n\nLas funciones son bloques de código reutilizables que realizan una tarea específica. Ayudan a organizar el código, hacerlo más legible y evitar la repetición. Se definen con la palabra clave `def`.\n\nUna práctica recomendada es documentar tus funciones para explicar qué hacen, qué parámetros reciben y qué devuelven. Las herramientas de IA son excelentes para generar esta documentación (conocida como *docstrings*) automáticamente.\n\n```python\ndef saludar(nombre):\n  \"\"\"\n  Esta función toma un nombre como argumento y devuelve un saludo.\n\n  Args:\n    nombre (str): El nombre de la persona a saludar.\n\n  Returns:\n    str: Un saludo personalizado.\n  \"\"\"\n  return f\"¡Hola, {nombre}!\"\n```"
+    },
+    {
+      "itemID": "008",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\nEl tutorial de Python:\nhttps://docs.python.org/es/3/tutorial/\n\nEste tutorial se ha elaborado siguiendo las directrices y la información contenida en la documentación oficial de Python y otras fuentes de referencia. A continuación, se detallan los puntos validados:\n\n*   **Conceptos básicos de Python:** La introducción al lenguaje, su filosofía y sus casos de uso se basan en la descripción general que se encuentra en el tutorial oficial de Python.\n*   **Instalación y entorno:** Las recomendaciones sobre la instalación y el uso de editores de código se alinean con las guías para principiantes proporcionadas por la comunidad de Python y empresas como Microsoft.\n*   **Variables y Tipos de Datos:** La explicación de variables y los tipos de datos fundamentales (enteros, flotantes, cadenas y booleanos) se corresponde con la documentación oficial sobre los tipos de datos incorporados en Python.\n*   **Estructuras de Control:** La descripción y los ejemplos de las sentencias `if`, `elif`, `else`, así como los bucles `for` y `while`, se basan en la documentación oficial de Python sobre herramientas de control de flujo.\n*   **Funciones:** La definición, el uso y la importancia de documentar funciones a través de *docstrings* están validados por la sección de la documentación oficial dedicada a la definición de funciones."
+    }
+  ]
+}

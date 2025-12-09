@@ -1,0 +1,60 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Consigue Leads Masivos en Minutos! Automatiza tu negocio con IA y make.com\nWEB ORIGINAL:",
+      "contenido": "Consigue Leads Masivos en Minutos! Automatiza tu negocio con IA y make.com:\nWeb Original:\n\nConsigue Leads Masivos en Minutos! Automatiza tu negocio con IA y make.com:\nhttps://youtu.be/DbKxCVoCpMI?si=S-EU83ci679-rJfu"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Qué encontrarás en este tutorial",
+      "contenido": "Qué encontrarás en este tutorial:\n\nEn 20 minutos aprenderás a conectar Inteligencia Artificial (IA) con make.com para captar cientos de leads cualificados sin tocar una línea de código.  \nVerás paso a paso cómo:  \n1. Crear un “robot” que extraiga diariamente perfiles de clientes potenciales de Google Maps.  \n2. Enviar esos datos a una hoja de cálculo y a un CRM gratuito.  \n3. Activar mensajes automáticos de WhatsApp o e-mail para cada nuevo lead.  \nTodo con cuentas gratuitas y siguiendo las reglas oficiales de cada plataforma."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Requisitos previos (todo gratis)",
+      "contenido": "Requisitos previos (todo gratis):\n\n- Cuenta de Google (para Drive, Sheets y Maps).  \n- Cuenta en make.com (plan gratuito de 1 000 operaciones/mes).  \n- Cuenta en OpenAI (crédito de prueba de 5 USD que cubre ≈ 500 000 leads analizados).  \n- CRM gratuito (HubSpot Free o Zoho Bigin).  \n- Número de WhatsApp Business verificado (opcional, solo si quieres enviar mensajes).  \n\nCon solo estas 4 cuentas ya puedes lanzar el sistema."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Paso 1 – Prepara tu hoja de captura",
+      "contenido": "Paso 1 – Prepara tu hoja de captura:\n\n1. Entra en Google Drive → Nueva → Hojas de cálculo.  \n2. Renómbrala “Leads Automatizados”.  \n3. Crea las columnas exactas:  \n   A. Fecha  \n   B. Nombre del negocio  \n   C. Teléfono  \n   D. Email  \n   E. Web  \n   F. Dirección  \n   G. Categoría  \n   H. Nota IA (resumen corto del negocio)  \n4. Comparte la hoja: haz clic en “Compartir” → “Cualquiera con el enlace” → Editor.  \n5. Copia el ID de la hoja (el largo número que aparece en la URL después de /spreadsheets/d/…).  \n\nEsta hoja será el “depósito” que reciba los leads cada día."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Paso 2 – Activa la API de Google Maps",
+      "contenido": "Paso 2 – Activa la API de Google Maps:\n\n1. Ve a [Google Cloud Console](https://console.cloud.google.com).  \n2. Crea un proyecto nuevo y llámalo “Leads Maps”.  \n3. En la barra lateral, busca “APIs y servicios” → “Biblioteca”.  \n4. Activa:  \n   - Places API (para extraer datos de negocios)  \n   - Maps JavaScript API (por compatibilidad)  \n5. Ve a “Credenciales” → “Crear credenciales” → “Clave de API”.  \n6. Copia la clave y guárdala; en make.com la pegarás en 30 segundos.  \n\nGoogle da 200 USD gratis al mes; con 1 000 búsquedas diarias no pagarás nada."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Paso 3 – Crea el escenario en make.com",
+      "contenido": "Paso 3 – Crea el escenario en make.com:\n\n1. Regístrate en [make.com](https://www.make.com) con tu cuenta de Google.  \n2. Pulsa “Create a new scenario”.  \n3. Busca y añade el módulo “Google Maps” → “Search for Places”.  \n4. En “Query” escribe la palabra clave de tu público (ej. “odontólogos barcelona”).  \n5. En “Location” pon la ciudad o coordenadas.  \n6. En “Radius” elige 5 000 m (5 km) o el radio que desees.  \n7. En “API Key” pega la clave del paso 2.  \n8. Añade un módulo “Iterator” para que recorra cada lugar encontrado.  \n9. Detrás del iterator añade “Google Sheets” → “Add Row” y selecciona la hoja del paso 1.  \n\nHaz clic en “Run once” y verás cómo aparecen los primeros 20 leads en tu Sheets."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Paso 4 – Enriquece los datos con IA",
+      "contenido": "Paso 4 – Enriquece los datos con IA:\n\n1. Dentro del mismo escenario, tras “Add Row”, inserta el módulo “OpenAI” → “Create a Completion”.  \n2. Conecta tu cuenta de OpenAI (da igual GPT-3.5 o GPT-4; el crédito gratis cubre ambas).  \n3. En “Prompt” escribe:  \n   “Resume en 12 palabras el giro del siguiente negocio y si podría necesitar servicios de marketing digital: {name} {types} {website}.”  \n4. Guarda la respuesta de la IA en la columna “Nota IA” de tu Sheets.  \n\nAsí sabrás en segundos si ese lead vale la pena antes de llamarle."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Paso 5 – Envía los leads a tu CRM gratuito",
+      "contenido": "Paso 5 – Envía los leads a tu CRM gratuito:\n\n1. En make.com añade el módulo “HubSpot CRM” → “Create Contact” (o Zoho si usas ese).  \n2. Conecta tu cuenta gratuita.  \n3. Mapea los campos: nombre, teléfono, email, dirección y la “Nota IA” como nota del contacto.  \n4. Activa la opción “Create company if it does not exist” para que HubSpot genere también la ficha de empresa.  \n\nAhora tus vendedores verán cada lead en su pipeline sin tener que tocar la hoja."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Paso 6 – Dispara WhatsApp/E-mail automático",
+      "contenido": "Paso 6 – Dispara WhatsApp/E-mail automático:\n\n1. Añade el módulo “WhatsApp Business Cloud API” → “Send Text Message”.  \n2. Autoriza tu número siguiendo la [guía oficial de Meta](https://developers.facebook.com/docs/whatsapp/cloud-api).  \n3. En “To” selecciona el teléfono del lead.  \n4. En “Message” escribe un texto breve:  \n   “Hola {name}, vimos que {Nota IA}. ¿Te gustaría una demo gratis de 15 min?”  \n5. Si prefieres email, usa el módulo “Gmail” → “Send Email” y personaliza el asunto.  \n\nConecta un “Filter” para que solo se active cuando la “Nota IA” contenga la palabra “marketing”. Así evitas spam."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Paso 8 – Mide y optimiza",
+      "contenido": "Paso 8 – Mide y optimiza:\n\n- Dentro de make.com ve a “History” y revisa cuántas operaciones consumes.  \n- En tu Sheets crea una pestaña “Dashboard” con un gráfico de “Leads por día”.  \n- En HubSpot revisa el porcentaje de leads que pasan a “Deal”.  \n- Ajusta el radio de búsqueda o la palabra clave si ves muchos negocios irrelevantes.  \n\nCon estos datos podrás duplicar o reducir el volumen sin pagar de más."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\n- Límites gratuitos Google Maps Places API: 200 USD mensuales ≈ 40 000 llamadas.  \n  Fuente: [https://developers.google.com/maps/documentation/places/web-service/usage-and-billing](https://developers.google.com/maps/documentation/places/web-service/usage-and-billing)  \n\n- Plan gratuito make.com: 1 000 operaciones y 100 MB cada mes.  \n  Fuente: [https://www.make.com/en/pricing](https://www.make.com/en/pricing)  \n\n- Crédito bienvenida OpenAI: 5 USD válidos para GPT-3.5 y GPT-4.  \n  Fuente: [https://platform.openai.com/docs/quickstart](https://platform.openai.com/docs/quickstart)  \n\n- WhatsApp Business Cloud API: primeras 1 000 conversaciones/mes gratis.  \n  Fuente: [https://developers.facebook.com/docs/whatsapp/pricing](https://developers.facebook.com/docs/whatsapp/pricing)  \n\n- HubSpot CRM Free: contactos, empresas y pipeline ilimitados.  \n  Fuente: [https://www.hubspot.com/products/crm/pricing](https://www.hubspot.com/products/crm/pricing)  \n\nTodos los pasos descritos cumplen los términos de uso actualizados de cada plataforma."
+    }
+  ]
+}

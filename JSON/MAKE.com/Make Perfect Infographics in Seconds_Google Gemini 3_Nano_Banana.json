@@ -1,0 +1,77 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Make Perfect Infographics in Seconds_Google Gemini 3_Nano_Banana\nWEB ORIGINAL:",
+      "contenido": "Make Perfect Infographics in Seconds_Google Gemini 3_Nano_Banana:\nWeb Original:\nMake Perfect Infographics in Seconds_Google Gemini 3_Nano_Banana:\nhttps://youtu.be/3IDl1Gxonxo?si=VNBiUAn1VMsPktxh"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción y Nano Banana",
+      "contenido": "Introducción y Nano Banana:\nUna infografía es una forma visual y resumida de mostrar información, parecida a un póster que explica cosas complicadas de manera simple.[1] Ahora puedes crear infografías perfectas usando Google Gemini con una sola instrucción.[2] Esto es posible gracias a una actualización llamada Nano Banana.[2][3][4][5][6][7]\n\nLa gran ventaja de Nano Banana es que puede manejar mucho texto sin cometer errores de escritura.[2] Esto asegura que el resultado final se vea limpio y no tenga fallos.[2]"
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Paso 1: Visita Google Gemini",
+      "contenido": "Paso 1: Visita Google Gemini:\nLo primero que debes hacer es abrir o visitar la herramienta de inteligencia artificial Google Gemini.[2][3][5][8][9][10][11]"
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Paso 2: Consigue los Datos",
+      "contenido": "Paso 2: Consigue los Datos:\nNecesitas tener la información que quieres poner en tu infografía. Tienes dos opciones para hacer esto:\n\nPuedes pegar tu propio texto o datos que ya tengas listos.[2]\n\nPuedes pedirle a Gemini que cree la información por ti.[2][6] Por ejemplo, puedes escribirle que cree una lista de 10 reglas de clase para un jardín de infancia."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Paso 3: Formula la Instrucción",
+      "contenido": "Paso 3: Formula la Instrucción:\nCuando tengas tu texto, debes decir a Gemini exactamente cómo quieres que sea la infografía usando una estructura clara.[8][11] En tu instrucción o prompt, debes definir cuatro cosas:\n\nEl tipo de elementos visuales que quieres.[2][3][4][7][8][11][12]\n\nQuién es tu audiencia, es decir, la gente que lo va a ver.\n\nLa relación de aspecto de la imagen, por ejemplo si la quieres cuadrada o vertical.\n\nLa información específica que quieres que aparezca.[2][8][12]"
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Paso 4: Envía la Instrucción",
+      "contenido": "Paso 4: Envía la Instrucción:\nDebes reemplazar los detalles de la estructura anterior con tu propia información. En el ejemplo del video sobre las reglas de clase, la instrucción fue: crea una infografía basada en la información anterior y acompáñala con elementos visuales relevantes apropiados para estudiantes de 9 a 16 años."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Paso 5: Activa Nano Banana",
+      "contenido": "Paso 5: Activa Nano Banana:\nEste paso es fundamental. Después de escribir tu instrucción, tienes que activar la opción llamada Nano Banana que aparece en la pantalla. Después, solo haz clic en el botón para que Gemini genere tu diseño."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Paso 6: Revisa el Resultado",
+      "contenido": "Paso 6: Revisa el Resultado:\nCuando Gemini termine, verás una infografía visualmente atractiva.[13] El texto será impecable y sin errores, y los dibujos o visuales combinarán bien con el tema que elegiste."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Usos Prácticos",
+      "contenido": "Usos Prácticos:\nEsta herramienta sirve para muchas cosas:\n\nLos profesores pueden hacer guías visuales paso a paso para explicar rutinas de clase.[2]\n\nLos investigadores pueden resumir documentos muy largos en gráficos para sus presentaciones.\n\nLos expertos en marketing pueden crear gráficos rápidos para comparar productos o explicar cómo funciona algo.[2]"
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Paso 7: Usa Otros Idiomas",
+      "contenido": "Paso 7: Usa Otros Idiomas:\nSi quieres tu infografía en otro idioma que no sea español, puedes hacerlo de dos formas:\nOpción A: Pegas el texto en el idioma extranjero (como griego) y le pides a Gemini que traduzca la infografía.\nOpción B: Usas la misma estructura de instrucción de antes y le pides directamente a Gemini que genere la infografía en el idioma que quieras.[2] El diseño seguirá siendo perfecto y limpio."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Paso 8: Descarga tu Creación",
+      "contenido": "Paso 8: Descarga tu Creación:\nCuando estés feliz con el resultado, puedes descargar la infografía haciendo clic en el botón de descarga que está ahí mismo. Así tendrás tu infografía lista para usar al instante."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nHe realizado una búsqueda técnica para validar los términos mencionados en el tutorial, específicamente sobre la actualización \"Nano Banana\" y sus capacidades de renderizado de texto en Gemini.\n\nResumen de puntos técnicos validados:\n\nIdentidad de Nano Banana: \"Nano Banana\" es el nombre en clave (codename) y apodo viral utilizado para el modelo de imagen \"Gemini 2.5 Flash Image\" y \"Gemini 3 Pro Image\".[5][7] Google ha reconocido este nombre en sus comunicaciones oficiales y notas de lanzamiento.[5]\n\nCapacidad de Texto: Se confirma que la característica principal de este modelo es el \"High-Fidelity text rendering\" (renderizado de texto de alta fidelidad), lo que valida la afirmación del documento sobre la creación de infografías sin errores tipográficos.\n\nDisponibilidad: La función se encuentra integrada dentro de Google Gemini y Google Workspace (Slides, Vids), permitiendo la generación de infografías a partir de prompts complejos.[1]\n\nFuentes consultadas y referencias oficiales:\n\nDocumentación de Google DeepMind sobre Gemini 3 y capacidades de imagen: https://deepmind.google/technologies/gemini/\n\nBlog de Google Developers sobre Gemini 2.5 Flash Image (Nano Banana): https://developers.googleblog.com/\n\nWikipedia: Entrada sobre \"Nano Banana\" (identificado como Gemini 2.5 Flash Image)."
+    },
+
+    {
+      "itemID": "012",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Make%20Perfect%20Infographics%20in%20Seconds_Google%20Gemini%203_Nano_Banana.jpeg]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    },
+
+    {
+      "itemID": "013",
+      "menu_item": "INFOGRAFIA VISUAL DEL PROCESO",
+      "contenido": "[IMAGEN:  https://uszjudwrckvbadfljkti.supabase.co/storage/v1/object/public/infografias/Make%20Perfect%20Infographics%20in%20Seconds_Google%20Gemini%203_Nano_Banana0001.png]\n\nEsta infografía resume visualmente los pasos principales del tutorial. Es una ayuda visual complementaria al tutorial, especialmente útil para personas que prefieren aprendizaje gráfico."
+    }
+  ]
+}

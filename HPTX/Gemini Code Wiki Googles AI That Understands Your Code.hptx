@@ -1,0 +1,224 @@
+##itemID:000
+##menu-item BEGIN
+Gemini Code Wiki Googles AI That Understands Your Code
+WEB ORIGINAL:
+##menu-item END
+##Contenido BEGIN
+Gemini Code Wiki Googles AI That Understands Your Code:
+Web Original:
+Gemini Code Wiki Googles AI That Understands Your Code:
+https://youtu.be/X7iwxc_MRAg?si=jxkaK9ibRYIjztJw
+
+PRO-LIMP AUTOMATIZACION
++34 636832005
+##Contenido END[1]
+
+##itemID:001
+##menu-item BEGIN
+Introducción a Code Wiki
+##menu-item END
+##Contenido BEGIN
+Introducción a Code Wiki:
+Google ha lanzado una herramienta de programación muy valiosa llamada Code Wiki.[2][3][4][5] Es una manera más rápida de entender tu código y te da una perspectiva completamente nueva sobre cómo se hace el desarrollo de programas. Code Wiki te entrega documentos generados por Gemini, una inteligencia artificial, que siempre están al día.[5]
+
+Esto es importante porque leer código que ya existe es una de las cosas más lentas y costosas en el mundo de la programación. Para solucionar ese problema, Google creó esta plataforma que mantiene un wiki, que es como una enciclopedia estructurada, y que se actualiza continuamente para tus archivos de código.[2][5] En resumen, es una forma nueva de entender proyectos de código grandes.
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+Cómo funciona la documentación automática
+##menu-item END
+##Contenido BEGIN
+Cómo funciona la documentación automática:
+Code Wiki puede crear documentos inmediatamente a partir de cualquier dirección web de GitHub, que es donde guardas tu código.[5] Al darle la dirección, Code Wiki crea un documento interactivo que te muestra cómo se ve tu código y hasta te permite chatear con Gemini para entender el archivo o el proyecto de forma más profunda. Esto funciona gracias a los modelos avanzados de Gemini.[6]
+
+La meta principal es que toda la información del código sea fácil de conseguir y útil para todos. Puedes compartir esta información y otros pueden ver el wiki que se creó. Esto te ayuda a ver información compleja del código fuente.[4] En lugar de depender de documentos viejos, obtienes documentos actualizados sobre tu proyecto.[4] Mantiene el conocimiento de tu proyecto al día, registrando incluso información que cambia cada minuto.
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+Beneficios y el asistente inteligente
+##menu-item END
+##Contenido BEGIN
+Beneficios y el asistente inteligente:
+Lo mejor de Code Wiki es que es automático y siempre está actualizado. La herramienta puede revisar todo tu código y genera los documentos de nuevo cada vez que haces un cambio.[4][5] Tus documentos cambian y crecen junto con tu código, no meses después.
+
+Además, es inteligente y sabe de qué estás hablando. El wiki completo y actualizado se convierte en la base de conocimiento para el chat que está integrado.[4] No estás hablando con un modelo de inteligencia artificial común, sino con un asistente configurado especialmente para tu proyecto. Piensa en él como tener un ingeniero que te asiste las 24 horas del día, los 7 días de la semana, ayudándote en cada parte de tu proyecto. El chat es accionable, responde con enlaces directos a archivos, funciones o definiciones importantes, permitiéndote leer y entender cambios en un solo lugar.[2][4]
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Cómo empezar a usar Code Wiki
+##menu-item END
+##Contenido BEGIN
+Cómo empezar a usar Code Wiki:
+Para empezar a usar Code Wiki, solo tienes que ir a su página web. El enlace se encuentra en la descripción del video y es completamente gratis. Sigue estos pasos:
+
+Dirígete al sitio web de Code Wiki.[1][4]
+
+Elige un proyecto que quieras subir.[7]
+
+Añade cualquier proyecto de GitHub.
+
+Copia la dirección web de un proyecto, como el proyecto de código abierto Gemini CLI.
+
+Pega esa dirección en Code Wiki y presiona enter.[5]
+
+Code Wiki encontrará ese proyecto, lo indexará y empezará a crear documentos para todos los archivos y partes del proyecto para ayudarte a entenderlo mejor.
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Video resumen y mapa del proyecto
+##menu-item END
+##Contenido BEGIN
+Video resumen y mapa del proyecto:
+Code Wiki puede generar un video que resume el proyecto. Este video habla sobre la arquitectura, las funciones principales y la automatización. En ese video se explica:
+
+El propósito y cómo está construido el proyecto.[8]
+
+La aplicación CLI o línea de comandos.[6][8][9][10]
+
+Cómo se organizan los agentes de IA.
+
+Cómo funciona la identificación y las conexiones externas.
+
+La creación y la automatización.[4]
+
+Todo el contenido y el video fueron desarrollados con Inteligencia Artificial.[4]
+
+Si bajas en la página, puedes ver un mapa que muestra cómo funciona todo el proyecto en general. Explica cómo el usuario puede usar el CLI y muestra el flujo desde la pantalla del usuario, cómo trabaja con agentes, la lógica, y cómo se conecta con la gestión del sistema y modelos de IA externos. Después del mapa, hay un análisis muy detallado donde puedes hacer clic en enlaces para ir a partes específicas, explicando cómo extender y personalizar el proyecto, desde el agente hasta su conexión con VS Code.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Cómo usar el chat de IA
+##menu-item END
+##Contenido BEGIN
+Cómo usar el chat de IA:
+Si solo quieres un resumen rápido, puedes usar el chat de IA siguiendo estos pasos:
+
+Haz una pregunta, por ejemplo: Cuéntame cómo puedo usar otros modelos de IA con Gemini CLI.
+
+El chat usará agentes de IA para darte la respuesta correcta.
+
+Te mostrará que al usar el comando /model, puedes seleccionar otros modelos, como Gemini 2.5 flash o Pro.
+
+El chat te mostrará otras maneras de usar diferentes modelos.
+
+Te dirige a la parte exacta de la documentación donde puedes hacer el cambio.
+
+Te da consejos sobre cómo lograrlo.
+
+Puedes empezar un chat nuevo con otra pregunta.
+
+También puedes compartir el resultado del chat con otras personas usando el enlace generado para ese proyecto.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+Usos avanzados e integración
+##menu-item END
+##Contenido BEGIN
+Usos avanzados e integración:
+Code Wiki sirve para entender tu propio código, pero la mejor forma de usarlo es aprender conceptos nuevos. Como los proyectos siempre cambian, puedes usar esta herramienta para mantenerte al día sobre conceptos nuevos en proyectos como go.
+
+Code Wiki también se puede usar de otras maneras, por ejemplo, como una extensión de Gemini CLI.[2] Así podrás obtener documentos actualizados directamente en la línea de comandos. Puedes usarlo con otros asistentes de código de IA, como client root code o kilo code, lo que ayuda a que tu asistente de IA use la documentación de Code Wiki de forma más efectiva.
+
+Antes de comenzar, se menciona que debes suscribirte al boletín de noticias de World of AI para recibir noticias semanales sobre IA gratis.
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+Preguntas y Respuestas
+##menu-item END
+##Contenido BEGIN
+Preguntas y Respuestas:
+¿Qué es Code Wiki?
+Code Wiki es una herramienta de programación de Google que te ayuda a entender mejor el código.[4][5] Crea documentos generados por una inteligencia artificial llamada Gemini.[5][6][8][11]
+
+¿Por qué es especial Code Wiki?
+Es especial porque mantiene la documentación de tu código estructurada y siempre actualizada de forma automática, incluso si el código cambia a cada momento.[4] Esto hace que sea más fácil leer códigos grandes, lo cual es difícil en la programación.
+
+¿Cómo accedo y cuánto cuesta?
+Puedes acceder a la página web de Code Wiki.[1][2][3][4][5] Es completamente gratis de usar.[6]
+
+¿Cómo le doy mi código a Code Wiki?
+Tienes que ir a la página web.[4] Puedes copiar la dirección web (URL) de un proyecto de GitHub y pegarla en Code Wiki.
+
+¿Qué hace Code Wiki con mi código?
+Code Wiki revisa el proyecto y empieza a crear documentos para todos los archivos.[4] También puede crear un mapa visual que explica cómo funciona todo el proyecto. A veces, incluso genera un video de resumen.
+
+¿Tiene un asistente de chat?
+Sí, tiene un chat inteligente.[4] El chat está configurado para conocer todos los detalles de tu proyecto, como si fuera un ingeniero a tu servicio todo el tiempo.
+
+¿Cómo me ayuda el chat?
+Puedes hacerle preguntas específicas sobre tu código. El chat te dará respuestas correctas y te mostrará enlaces directos a las partes exactas de tu código que necesitas ver.
+
+¿Cuál es un uso importante de Code Wiki?
+Además de entender tu propio código, es excelente para aprender cosas nuevas o para entender proyectos de código que están evolucionando rápidamente.
+
+¿Code Wiki funciona con otras herramientas?
+Sí, puede usarse como una extensión de herramientas como Gemini CLI y otros asistentes de código de IA para obtener documentos en tiempo real.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+Para esta sección, se ha realizado una búsqueda de fuentes técnicas para validar la información:
+
+Existencia de la herramienta: Se confirma que Google Code Wiki es una herramienta (actualmente en vista previa pública o "public preview") diseñada para convertir repositorios de GitHub en documentación interactiva y auto-actualizable.[5]
+Sitio web oficial mencionado en fuentes: https://codewiki.google
+
+Integración con Gemini CLI: Las fuentes oficiales y repositorios de GitHub (google-gemini/gemini-cli) confirman que Gemini CLI es un agente de IA de código abierto.[6][11] Existe una extensión de Gemini CLI para Code Wiki que permite su uso desde la terminal.
+
+Funcionalidades: La documentación oficial de soporte de Google Cloud y blogs de desarrolladores validan que estas herramientas utilizan modelos Gemini (como Gemini 1.5 o 2.5 Pro) para explicar código, generar diagramas y responder preguntas con contexto del repositorio.
+
+Referencias:
+
+Blog oficial de Google Developers sobre herramientas de IA.[4][5][6]
+
+Repositorio oficial en GitHub: google-gemini/gemini-cli[6][11]
+
+Documentación de Google Cloud sobre Gemini Code Assist (producto relacionado que comparte tecnología).[12]
+
+
+Herramienta Oficial:
+
+google.com: https://codewiki.google/ (Sitio oficial de la herramienta Code Wiki)[1]
+
+Documentación y Blogs Oficiales:
+
+blog.google: https://developers.googleblog.com/en/introducing-code-wiki-accelerating-your-code-understanding/ (Anuncio oficial)[1][2]
+
+codeassist.google: https://cloud.google.com/products/gemini/code-assist (Página del producto relacionado Gemini Code Assist)
+
+help: https://support.google.com/ (Soporte general, la ayuda específica de Code Wiki suele estar dentro de la herramienta)
+
+Repositorios de Código:
+
+github.com: https://github.com/google-gemini/gemini-cli (Extensión CLI mencionada)
+
+Videos y Tutoriales:
+
+youtube.com: https://youtu.be/X7iwxc_MRAg (Video del tutorial: "Gemini Code Wiki: Google's AI That Understands Your Code")
+
+youtube.com (Canal oficial): https://www.youtube.com/googledevelopers
+
+Comunidad y Noticias (Artículos sobre el lanzamiento):
+
+reddit.com: https://www.reddit.com/r/aicuriosity/ (Hilo: "Google Launches CodeWiki...")
+
+medium.com: https://medium.com/tag/google-gemini (Artículos etiquetados sobre Gemini/Code Wiki)
+
+itsfoss.com: https://itsfoss.com/ (Portal de noticias Open Source donde se suelen cubrir herramientas como esta)
+
+
+[TITULO_VIDEO]
+[URL_WEB_YOUTUBE]
+[AUTOR]
+[TELEFONO]
+##Contenido END

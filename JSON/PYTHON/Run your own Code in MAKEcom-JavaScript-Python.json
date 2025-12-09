@@ -1,0 +1,60 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Run your own Code in MAKEcom-JavaScript-Python\nWEB ORIGINAL:",
+      "contenido": "Run your own Code in MAKEcom-JavaScript-Python:\nWeb Original:\nRun your own Code in MAKEcom-JavaScript-Python:\nhttps://youtu.be/ehDHuJR0FYY?si=LESXbr6SfkvGN0g4\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Introducción: El Súper Poder de Make Code",
+      "contenido": "Introducción: El Súper Poder de Make Code:\nEl Make Code app es una nueva herramienta lanzada por Make que permite escribir y ejecutar código directamente en lenguajes como JavaScript y Python dentro de tus automatizaciones.[1][2][3][4][5] Esto es útil para darle a tus automatizaciones una lógica muy específica y personalizada. El código se ejecuta en un ambiente seguro llamado sandbox."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "¿Para Qué Sirve la Aplicación Make Code? (Usos Principales)",
+      "contenido": "¿Para Qué Sirve la Aplicación Make Code? (Usos Principales):\n\nTransformación de Datos: Permite transformar datos complejos usando lógica muy detallada que las funciones normales de Make no pueden manejar.\n\nUso de Bibliotecas: Puedes importar cualquier biblioteca, que son colecciones de código ya listo para realizar tareas avanzadas.\n\nFlujo de Datos: El código puede tomar información (inputs) de los módulos que están antes en tu automatización y los resultados generados por tu código se usan en los módulos siguientes.\n\nCódigo Dinámico: Existe la posibilidad de que una inteligencia artificial (como ChatGPT) genere código Python que luego se ejecuta dentro del módulo Make Code, lo que abre posibilidades nuevas y avanzadas.\n\nDesarrollo Avanzado: Permite la depuración en tiempo real y, para cuentas más grandes (Enterprise), el procesamiento a escala con librerías específicas."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Tutorial Paso a Paso: Ejecutando Código JavaScript - Configuración",
+      "contenido": "Tutorial Paso a Paso: Ejecutando Código JavaScript - Configuración:\n\nEn tu escenario de Make, añade el módulo Make Code.\n\nSelecciona JavaScript como el lenguaje de programación a usar.\n\nDefine de dónde viene el código: puede ser escrito directamente en el editor o venir por mapeo (generado por un módulo anterior)."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Sintaxis para Manejar Datos en JavaScript",
+      "contenido": "Sintaxis para Manejar Datos en JavaScript:\n\nVariables de Entrada: Para que el código reciba datos de un módulo anterior, se usa una sintaxis específica con corchetes { }.\nEjemplo: Si necesitas el año y el mes de entrada, debes escribir { año, mes } = input. Esto toma los datos que vienen del objeto input.\n\nVariables de Salida: Para que el resultado de tu código sea usado por los siguientes módulos de Make, el resultado se debe devolver usando la declaración return con corchetes { }.\nEjemplo: return { valor1, valor2, ... }."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Ejemplo Práctico en JavaScript (Cálculo de Días Laborables)",
+      "contenido": "Ejemplo Práctico en JavaScript (Cálculo de Días Laborables):\n\nEl código JavaScript puede usarse para calcular todos los días laborables de un mes específico (por ejemplo, Octubre de 2025), excluyendo sábados y domingos.\n\nEl código usa las variables de entrada año y mes.\n\nEl resultado es una lista de fechas, el total de días laborables, el primer día y el último día del período."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Solución a un Problema Común (Conversión de Tipo de Dato)",
+      "contenido": "Solución a un Problema Común (Conversión de Tipo de Dato):\n\nAl recibir variables de módulos anteriores, es posible que no se reconozcan como números (integers), aunque lo sean (por ejemplo, 2025 podría ser tomado como texto).\n\nSi el código necesita hacer cálculos, esto causará un error.\n\nSolución: Se debe convertir explícitamente la variable a un número dentro del código. Esto resuelve el problema y permite que el código funcione correctamente y de forma rápida."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Tutorial Paso a Paso: Ejecutando Código Python - Diferencia de Sintaxis",
+      "contenido": "Tutorial Paso a Paso: Ejecutando Código Python - Diferencia de Sintaxis:\n\nEl proceso general (seleccionar el lenguaje y usar el editor) es el mismo.\n\nLa principal diferencia es cómo se accede a las variables de entrada que vienen de los módulos anteriores.\n\nSintaxis Python: En lugar de usar corchetes, se debe usar la función get del objeto input.\nEjemplo: Para obtener la variable de entrada llamada 'tema', se usa input.get('tema').\n\nLa forma de devolver resultados (return) es idéntica a JavaScript."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Ejemplo Básico de Python",
+      "contenido": "Ejemplo Básico de Python:\n\nSe puede usar un código sencillo, como un generador de consejos aleatorios basado en el tema de entrada, para demostrar que se reciben las variables correctamente.\n\nSi la entrada es 'programming', el código devuelve un consejo de programación."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Consideraciones de Rendimiento",
+      "contenido": "Consideraciones de Rendimiento:\n\nEl tiempo de ejecución del código JavaScript optimizado es rápido (menos de 300 milisegundos), aunque la llamada y carga del módulo puede añadir un poco de retraso.\n\nLa función de ejecutar código es una herramienta poderosa para ejecutar lógica que no se puede resolver con las herramientas estándar de Make."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\n\nTras revisar la documentación oficial de Make (Make Code App Documentation), se validan los siguientes puntos técnicos mencionados en el tutorial:\n\nDisponibilidad y Entorno: La aplicación \"Make Code\" es efectivamente un módulo nativo (actualmente en Beta abierta para planes de pago) que permite ejecutar JavaScript y Python en un entorno \"sandbox\" totalmente aislado y seguro, sin necesidad de servidores externos.\n\nSintaxis de Entrada (Inputs):\n\nJavaScript: Se confirma el acceso a través del objeto input.\n\nPython: Se valida el uso de métodos como input.get('variable') para recuperar datos mapeados desde módulos anteriores.\n\nBibliotecas:\n\nEl módulo incluye bibliotecas estándar preinstaladas. Para JavaScript: moment, lodash. Para Python: pendulum, toolz, requests.\n\nLas cuentas Enterprise tienen la capacidad de importar bibliotecas personalizadas adicionales.\n\nLímites de Ejecución:\n\nEl tiempo de ejecución estándar es de hasta 30 segundos (con 1 CPU y 512 MB RAM).\n\nPara cuentas Enterprise, el tiempo se extiende hasta 300 segundos (con 2 CPUs y 1024 MB RAM).\n\nEnlaces a Documentación Oficial:\n\nMake Code App Documentation: https://apps.make.com/code\n\nMake Code Module Details: https://apps.make.com/code#gtXc_"
+    }
+  ]
+}

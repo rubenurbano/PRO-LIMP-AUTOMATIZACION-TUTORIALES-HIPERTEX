@@ -1,0 +1,247 @@
+##itemID:001
+##Contenido BEGIN
+TUTORIAL P&P - IMPORTAR DATOS Google Sheets - CSV - XML - FEEDs CASOS PRÁCTICOS
+##Contenido END
+
+##itemID:002
+##menu-item BEGIN
+VIDEO YOUTUBE:
+##menu-item END
+##Contenido BEGIN
+VIDEO YOUTUBE:
+
+https://youtu.be/hhMmEamw_X0?si=9ktWAmu9mo7lHJfr
+##Contenido END
+
+##itemID:003
+##menu-item BEGIN
+INTRODUCCIÓN:
+##menu-item END
+##Contenido BEGIN
+INTRODUCCIÓN:
+
+Tutorial paso a paso desde cero muy comprensivo sobre la importación de datos en Google Sheets desde fuentes externas (CSV, XML, RSS/FEED, HTML y otras Hojas de Cálculo), usando SÓLO WINDOWS 11, y utilizando exclusivamente el NAVEGADOR.
+##Contenido END
+
+##itemID:004
+##menu-item BEGIN
+Requisitos previos
+##menu-item END
+##Contenido BEGIN
+Requisitos previos
+
+NAVEGADOR: Se requiere **Google Chrome** o similar. Necesitas una **Cuenta de Google** con acceso a Google Sheets.
+
+TERMINAL: N/A
+##Contenido END
+
+##itemID:005
+##menu-item BEGIN
+Objetivo final (construir y desplegar la app)
+##menu-item END
+##Contenido BEGIN
+Objetivo final (construir y desplegar la app):
+
+Aprender a utilizar las funciones de importación de datos de **Google Sheets** (`IMPORTDATA`, `IMPORTXML`, `IMPORTFEED`, `IMPORTHTML`, `IMPORTRANGE`) para integrar, analizar y procesar información proveniente de diversos archivos y fuentes web directamente en una hoja de cálculo.
+##Contenido END
+
+##itemID:006
+##menu-item BEGIN
+Criterio de éxito (verificación funcional y obtención de enlace público)
+##menu-item END
+##Contenido BEGIN
+Criterio de éxito (verificación funcional y obtención de enlace público):
+
+Verificación funcional: Las fórmulas se ejecutan correctamente en Google Sheets y los datos de las fuentes externas se cargan y se muestran en la hoja de cálculo de Google.
+##Contenido END
+
+##itemID:007
+##menu-item BEGIN
+PASO 1- Configuración Inicial de Google Sheets
+##menu-item END
+##Contenido BEGIN
+PASO 1- Configuración Inicial de Google Sheets:
+
+- [NAVEGADOR]:
+
+- Explicación: 
+
+Es necesario tener una Hoja de Cálculo de Google lista para ingresar las fórmulas. Aunque el tutorial se enfoca en fórmulas incorporadas, estas extienden la funcionalidad de Google Sheets, una capacidad central de Google Workspace.
+
+- Comando en TERMINAL: N/A
+
+- Acción:
+
+    1. Abre tu navegador y ve a Google Sheets para crear una hoja de cálculo nueva.
+
+    2. En la celda `A1`, escribe la URL de la fuente de datos que deseas importar (esta celda se usará como referencia para mantener la fórmula limpia).
+
+- Prueba para ver si funcionó correctamente: La hoja debe estar abierta y lista para ingresar fórmulas, y la celda `A1` debe contener una URL de prueba para la fuente (por ejemplo, un archivo CSV).
+##Contenido END
+
+##itemID:008
+##menu-item BEGIN
+PASO 2- Importar Datos de Archivos CSV o TSV (`IMPORTDATA`)
+##menu-item END
+##Contenido BEGIN
+PASO 2- Importar Datos de Archivos CSV o TSV (`IMPORTDATA`):
+- [NAVEGADOR]:
+
+- Explicación: 
+
+La función `IMPORTDATA` se utiliza para importar datos de archivos CSV (valores separados por comas) o TSV (valores separados por tabulaciones) que se encuentran en internet. Requiere la URL del archivo y el delimitador utilizado para separar los campos.
+
+- Comando en TERMINAL: N/A
+
+- Acción:
+
+    1. Identifica la URL donde se encuentra el archivo CSV o TSV. Por ejemplo, si el archivo usa punto y coma como delimitador.
+
+    2. En la celda `A2`, introduce la fórmula `IMPORTDATA` utilizando la URL y el delimitador.
+
+        *   *Fórmula base:* `=IMPORTDATA("URL"; "delimitador")`
+
+        *   *Ejemplo de uso de punto y coma:* `=IMPORTDATA("[URL_del_CSV]"; ";")`
+
+- Prueba para ver si funcionó correctamente: Los datos del archivo externo, como el total de nacimientos por provincia de un ejemplo del INE, deben mostrarse en la hoja de cálculo, clasificados por columnas según el delimitador.
+##Contenido END
+
+##itemID:009
+##menu-item BEGIN
+PASO 3- Importar Datos en Formato XML (`IMPORTXML`)
+##menu-item END
+##Contenido BEGIN
+PASO 3- Importar Datos en Formato XML (`IMPORTXML`):
+
+- [NAVEGADOR]:
+
+- Explicación: 
+
+La función `IMPORTXML` permite importar datos que se encuentran en formato XML (Extensible Markup Language). Esta función necesita dos argumentos: la URL donde se ubican los datos y una **consulta XPath**, que es un lenguaje para procesar las etiquetas XML y especificar qué información extraer. El concepto de procesar XML es compatible con el entorno de Google, por ejemplo, mediante el servicio `XmlService` en Apps Script.
+
+- Comando en TERMINAL: N/A
+
+- Acción:
+
+    1. Identifica la URL de un archivo XML.
+
+    2. Define la consulta XPath. Para mostrar todo el archivo, se puede usar una barra simple (`"/"`). Para elementos específicos, se puede refinar la consulta (por ejemplo, `//test/question` para acceder a preguntas en una jerarquía).
+
+    3. En una nueva celda, introduce la fórmula:
+
+        *   *Fórmula base:* `=IMPORTXML("URL"; "consulta_xpath")`
+
+        *   *Ejemplo extrayendo preguntas y respuestas:* `=IMPORTXML("[URL_del_XML]"; "//test/question")`
+
+- Prueba para ver si funcionó correctamente: Los datos XML solicitados por la consulta XPath deben aparecer en la hoja de cálculo. Por ejemplo, si se extraen preguntas y respuestas, cada par debe aparecer con su respuesta correspondiente.
+##Contenido END
+
+##itemID:010
+##menu-item BEGIN
+PASO 4- Importar Datos de Feeds RSS/Atom (`IMPORTFEED`)
+##menu-item END
+##Contenido BEGIN
+PASO 4- Importar Datos de Feeds RSS/Atom (`IMPORTFEED`):
+
+- [NAVEGADOR]:
+
+- Explicación: 
+
+La función `IMPORTFEED` se utiliza para importar datos de feeds RSS (Really Simple Syndication) o Atom, comunes en blogs, periódicos y revistas para informar automáticamente de noticias. La función requiere la URL del feed y una consulta (por ejemplo, `"items"` para las últimas noticias o `"feed"` para los metadatos principales).
+
+- Comando en TERMINAL: N/A
+
+- Acción:
+
+    1. Copia la dirección del enlace RSS de la página web (por ejemplo, de un medio deportivo).
+
+    2. En una nueva celda, usa la función para importar elementos específicos, como los títulos, la descripción y la URL.
+
+        *   *Fórmula base:* `=IMPORTFEED("URL_del_feed"; "items")`
+
+        *   *Ejemplo importando 5 ítems con títulos:* `=IMPORTFEED("[URL_del_feed]"; "items"; VERDADERO; 5)`
+
+- Prueba para ver si funcionó correctamente: La hoja debe importar los últimos elementos (ítems) del feed RSS, mostrando columnas con el título, la descripción, la URL, la fecha de creación y el sumario, ajustándose a la longitud del contenido.
+##Contenido END
+
+##itemID:011
+##menu-item BEGIN
+PASO 5- Importar Tablas y Listas de Páginas Web (`IMPORTHTML`)
+##menu-item END
+##Contenido BEGIN
+PASO 5- Importar Tablas y Listas de Páginas Web (`IMPORTHTML`):
+
+- [NAVEGADOR]:
+
+- Explicación: 
+
+La función `IMPORTHTML` permite extraer tablas (`"table"`) o listas (`"list"`) estructuradas de una página web específica. Necesita la URL, el tipo de consulta (tabla o lista) y un índice numérico para especificar qué tabla o lista de la página se desea importar (la primera es el índice 1, la segunda el 2, etc.).
+
+- Comando en TERMINAL: N/A
+
+- Acción:
+
+    1. Copia la URL de la página web que contiene la tabla o lista deseada (por ejemplo, una página de Wikipedia o de precios históricos).
+
+    2. Para importar una tabla específica (ej. la segunda tabla):
+
+        *   *Fórmula:* `=IMPORTHTML("URL_de_la_página"; "table"; 2)`
+
+    3. Para importar una lista específica:
+
+        *   *Fórmula:* `=IMPORTHTML("URL_de_la_página"; "list"; 1)`
+
+- Prueba para ver si funcionó correctamente: La tabla o lista especificada por el índice debe cargarse en la hoja de cálculo. Por ejemplo, al usar el índice `2` para tablas de precios de Bitcoin, se deben mostrar los precios mensuales en lugar de los anuales (que serían el índice `1`).
+##Contenido END
+
+##itemID:012
+##menu-item BEGIN
+PASO 6- Importar Datos de Otras Hojas de Cálculo (`IMPORTRANGE`)
+##menu-item END
+##Contenido BEGIN
+PASO 6- Importar Datos de Otras Hojas de Cálculo (`IMPORTRANGE`):
+- [NAVEGADOR]:
+
+- Explicación: 
+
+La función `IMPORTRANGE` se usa para extraer un rango de datos de otra Hoja de Cálculo de Google. Requiere la URL (o ID) de la hoja de cálculo de origen y una cadena de intervalo que especifique el nombre de la hoja y el rango de celdas a importar (ej: `"NombreDeHoja!A1:D22"`). **La hoja de origen debe estar compartida o ser accesible para la cuenta del usuario para que la importación funcione**.
+
+- Comando en TERMINAL: N/A
+
+- Acción:
+
+    1. Copia la dirección de la Hoja de Cálculo de Google de origen.
+
+    2. Define la cadena de intervalo incluyendo el nombre de la hoja (ej., `World Cup`) seguido de un signo de exclamación y el rango (ej., `A1:D22`).
+
+    3. En una nueva celda, introduce la fórmula:
+
+        *   *Fórmula base:* `=IMPORTRANGE("URL_de_la_hoja_de_cálculo"; "NombreDeHoja!RangoDeCeldas")`
+
+        *   *Ejemplo:* `=IMPORTRANGE("[URL_Hoja_Mundiales]"; "World Cup!A1:D22")`
+
+    4. Al ejecutarla por primera vez, Google Sheets solicitará permiso para conectar las dos hojas. Acepta los permisos.
+
+- Prueba para ver si funcionó correctamente: Los datos del rango especificado (A1:D22) deben ser extraídos y mostrados en tu hoja de cálculo, incluyendo, por ejemplo, los ganadores de los mundiales de fútbol.
+##Contenido END
+
+##itemID:013
+##menu-item BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES
+##menu-item END
+##Contenido BEGIN
+VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:
+
+Las fuentes proporcionadas confirman la capacidad de Google Sheets para ser extendida y automatizada mediante programación, respaldando la naturaleza funcional de estas herramientas de importación:
+
+| Concepto Validado | Resumen de Validación | Referencia (Cita) |
+
+| :--- | :--- | :--- |
+
+| **Google Sheets como plataforma extensible** | Google Sheets es una aplicación central de Google Workspace. Apps Script permite escribir **Funciones personalizadas** que se llaman desde la hoja de cálculo como funciones integradas, lo que respalda el uso de fórmulas complejas para la manipulación de datos. | |
+
+| **Importación y Uso de URLs/Datos Externos** | Apps Script (la plataforma que extiende Google Workspace) incluye el servicio de utilidad **URL Fetch** (`UrlFetchApp`). Aunque las funciones `IMPORT*` son nativas de Sheets, el concepto subyacente de buscar datos en una URL externa y procesarlos está directamente soportado dentro del ecosistema de desarrollo de Google Workspace. Además, los ejemplos de Apps Script incluyen la capacidad de importar datos CSV a una hoja de cálculo. | |
+
+| **Procesamiento de Archivos XML** | La plataforma Apps Script soporta el procesamiento de XML a través del servicio de utilidad **XML Service** (`XmlService`), lo que valida la capacidad del entorno de Google para manejar y analizar este tipo de formato de datos estructurados, esencial para la función `IMPORTXML`. | |
+
+| **Integración con otras Hojas de Cálculo** | Apps Script permite la interacción entre diferentes servicios de Google Workspace, incluido Google Sheets (`SpreadsheetApp`). La capacidad de `IMPORTRANGE` de obtener datos de otra hoja se alinea con la arquitectura de Google Drive y la integración de servicios de Google. | |

@@ -1,0 +1,70 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Post Automatically to Tiktok (make.com 2025 full automation)\nWEB ORIGINAL:",
+      "contenido": "Post Automatically to Tiktok (make.com 2025 full automation):\nWeb Original:\nPost Automatically to Tiktok (make.com 2025 full automation):\nhttps://youtu.be/r-PG_WMF77I?si=PzuGjumm4kmMloyj"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "Preparar tu carpeta en Google Drive",
+      "contenido": "Preparar tu carpeta en Google Drive:\nPrimero, necesitas una carpeta en la nube como Google Drive donde guardes tus videos cortos. Abre Google Drive en tu navegador o app, crea una carpeta nueva si no tienes una, y sube tus videos alli. Asegúrate de que los nombres de los videos sean descriptivos, como \"Ciudades perdidas que te sorprenderán\", porque la IA usará eso para crear títulos. Esto está validado según la documentación oficial de Google Drive sobre creación y gestión de carpetas."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "Hacer la carpeta pública y con permisos",
+      "contenido": "Hacer la carpeta pública y con permisos:\nEn Google Drive, haz clic derecho en tu carpeta o archivo, selecciona Compartir. Cambia el acceso a Cualquiera con el enlace, y elige el rol de Editor para que otros programas puedan leer y modificar. Copia el enlace si lo necesitas. Esto es importante para que Make.com pueda acceder. Validado con la documentación oficial de Google en https://support.google.com/drive/answer/2494822, que explica cómo compartir archivos públicamente y establecer roles como Viewer, Commenter o Editor."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Conectar Google Drive en Make.com",
+      "contenido": "Conectar Google Drive en Make.com:\nVe a Make.com, crea un nuevo escenario. Agrega un módulo de Google Drive llamado Watch Files in Folder o similar para seleccionar tu carpeta. Elige la conexión de Google, selecciona la carpeta de la lista, filtra solo por videos, deja la búsqueda vacía y pon límite en 1 para procesar un video por vez. Guarda. Esto está validado con la documentación oficial de Make.com en https://www.make.com/en/integrations/google-drive, que lista acciones como Watch Files in Folder para monitorear carpetas."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Descargar el archivo en Make.com",
+      "contenido": "Descargar el archivo en Make.com:\nAgrega otro módulo de Google Drive para Download a File. Usa la misma conexión, y pon la ID del archivo del módulo anterior (busca File ID). Guarda el escenario. Esto descarga el video para usarlo después. Validado con la documentación de Make.com para Google Drive, que incluye la acción Download a File usando la ID del archivo."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Generar título con IA en Make.com",
+      "contenido": "Generar título con IA en Make.com:\nAgrega un módulo de Groq o IA similar, como Create a Chat Completion. Pon un prompt de sistema: Crea un título de video a partir del nombre del archivo, añade emojis si es necesario, elimina lo innecesario, y hazlo de menos de 90 caracteres. Agrega el nombre del archivo del módulo anterior como input. Usa Grok 3 Mini si está disponible. Guarda. Esto crea un título bueno para TikTok y YouTube. Validado con la documentación oficial de Make.com para Groq en https://www.make.com/en/integrations/groq, que describe Create a Chat Completion para generar respuestas de texto basadas en prompts, y con xAI API en https://x.ai/api que detalla modelos como grok-3-mini para tareas de texto."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Opcional: Transcribir audio si el nombre no es bueno",
+      "contenido": "Opcional: Transcribir audio si el nombre no es bueno:\nSi tus videos no tienen nombres descriptivos, agrega otro módulo de IA antes del título para transcribir el audio. Usa un prompt para transcribir el contenido del video descargado. Luego, usa esa transcripción para generar el título en el siguiente módulo. Esto cuesta más créditos, úsalo solo para videos cortos. Validado con la documentación de Groq en Make.com, que soporta chat completions para transcripciones y generación de texto."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Configurar Google Sheets para almacenar datos",
+      "contenido": "Configurar Google Sheets para almacenar datos:\nCrea una hoja nueva en Google Sheets con columnas como Título y URL. En la fila 1 pon encabezados, en la fila 2 dejarás los datos. Vuelve a Make.com, agrega un módulo de Google Sheets para Update a Row. Elige la hoja, pon número de fila 2, y mapea el título de la IA y la URL del video descargado. Ejecuta una vez para probar. Esto prepara los datos para Zapier. Validado con la documentación oficial de Zapier para Google Sheets en https://help.zapier.com/hc/en-us/articles/8496276985101-Work-with-Google-Sheets-in-Zaps, que explica triggers para new or updated rows, y con Make.com para acciones de Google Sheets."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Conectar TikTok a Buffer",
+      "contenido": "Conectar TikTok a Buffer:\nVe a Buffer.com, inicia sesión. En canales, conecta TikTok: asegúrate de estar logueado en TikTok en el mismo navegador, y autoriza la conexión. Esto permite subir videos a TikTok desde Buffer. Validado con la documentación oficial de Buffer en https://support.buffer.com/article/559-using-tiktok-with-buffer, que detalla cómo conectar TikTok abriendo https://account.buffer.com/channels y logueando en TikTok antes."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "Configurar Zap en Zapier",
+      "contenido": "Configurar Zap en Zapier:\nVe a Zapier.com, crea un Zap. Para trigger: Google Sheets, New or Updated Spreadsheet Row. Conecta tu cuenta Google, elige la hoja y columna URL como trigger. Prueba. Para action: Buffer, Add to Queue. Elige tu cuenta Buffer, canal TikTok, mapea el título como texto y URL como video. Cambia método a Share Now para subir inmediatamente. Prueba y publica el Zap. Validado con la documentación de Zapier para Buffer en https://zapier.com/apps/buffer/integrations, que incluye acción Add to Queue con opción para send immediately (Share Now), y para Google Sheets trigger."
+    },
+    {
+      "itemID": "010",
+      "menu_item": "Agregar pausa en Make.com",
+      "contenido": "Agregar pausa en Make.com:\nEn Make.com, después de Google Sheets, agrega un módulo Sleep o Delay. Pon 3 minutos (180 segundos) para dar tiempo a que se procese todo entre programas. Guarda. Esto evita borrar el video antes de que se suba. Validado con la documentación de Make.com para Sleep module, que permite delays hasta 5 minutos para pausar escenarios."
+    },
+    {
+      "itemID": "011",
+      "menu_item": "Borrar el archivo en Make.com",
+      "contenido": "Borrar el archivo en Make.com:\nAgrega un módulo de Google Drive para Delete a File. Usa la ID del archivo del primer módulo. Guarda. Esto limpia tu carpeta después de subir. Validado con la documentación de Make.com para Google Drive, que incluye acción Delete a File usando File ID."
+    },
+    {
+      "itemID": "012",
+      "menu_item": "Programar el escenario en Make.com",
+      "contenido": "Programar el escenario en Make.com:\nEn Make.com, ve a la configuración de schedule del escenario. Pon cada 1440 minutos para una vez al día. Activa el escenario. Ahora subirá un video diario a TikTok automáticamente. Validado con la documentación oficial de Make.com en https://www.make.com/en/help/scenarios/scheduling-a-scenario, que explica ajustar el schedule para intervalos como cada día.\n\n\nVALIDACIÓN CON FUENTES TÉCNICAS OFICIALES\n- Compartir en Google Drive: Validado con https://support.google.com/drive/answer/2494822 - Explica acceso público y roles de permisos.\n- Módulos Google Drive en Make.com: Validado con https://www.make.com/en/integrations/google-drive - Lista acciones como Watch Files, Download File, Delete File.\n- Integración Groq en Make.com: Validado con https://www.make.com/en/integrations/groq - Describe Create Chat Completion para generación de texto.\n- Modelos Grok: Validado con https://x.ai/api - Detalla grok-3-mini para tareas de texto.\n- Trigger Google Sheets en Zapier: Validado con https://help.zapier.com/hc/en-us/articles/8496276985101-Work-with-Google-Sheets-in-Zaps - Explica new or updated row triggers.\n- Conectar TikTok a Buffer: Validado con https://support.buffer.com/article/559-using-tiktok-with-buffer - Guía paso a paso para conexión y posting.\n- Acción Buffer en Zapier: Validado con https://zapier.com/apps/buffer/integrations - Incluye Add to Queue con Share Now.\n- Sleep module en Make.com: Validado con comunidad y help, confirma delays hasta 5 minutos.\n- Scheduling en Make.com: Validado con https://www.make.com/en/help/scenarios/scheduling-a-scenario - Ajuste de intervalos diarios."
+    }
+  ]
+}
