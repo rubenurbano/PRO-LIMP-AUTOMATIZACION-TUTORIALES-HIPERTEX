@@ -1,0 +1,55 @@
+{
+  "meta": {},
+  "items": [
+    {
+      "itemID": "000",
+      "menu_item": "Anthropic Released A New Way To Vibe Code\nWEB ORIGINAL:",
+      "contenido": "Anthropic Released A New Way To Vibe Code:\nWeb Original:\nAnthropic Released A New Way To Vibe Code:\nhttps://youtu.be/XWp4k9K6oK8?si=4RvTXb8JlF_yp-Dr\n\nPRO-LIMP AUTOMATIZACION\n+34 636832005"
+    },
+    {
+      "itemID": "001",
+      "menu_item": "El problema principal de la IA al programar",
+      "contenido": "El problema principal de la IA al programar:\nEl principal obstáculo de los programas de inteligencia artificial que escriben código es que tienen una memoria limitada. Esta limitación hace que la IA olvide lo que ha hecho anteriormente.[1]\n\nCuando se le pide a una IA como Claude que realice una tarea de programación muy extensa, intenta resumir la información muchas veces y termina olvidando la tarea principal. Esto provoca que no sea efectiva para trabajos largos. Además, a veces la IA afirma haber terminado una función sin haberla probado, asumiendo que está completa aunque no funcione correctamente."
+    },
+    {
+      "itemID": "002",
+      "menu_item": "La solución de dos agentes",
+      "contenido": "La solución de dos agentes:\nAnthropic ha lanzado una solución basada en la forma de trabajar de los equipos de ingeniería reales. Identificaron que los problemas ocurren porque la IA intenta hacer demasiado a la vez, agotando su memoria y perdiendo el contexto, y porque marca funciones como completas sin probarlas lo suficiente.\n\nLa solución consiste en utilizar dos ayudantes de IA que colaboran entre sí:\n\nUn agente de inicialización que prepara el trabajo.[2][3]\n\nUn agente de codificación que escribe el código."
+    },
+    {
+      "itemID": "003",
+      "menu_item": "Preparación del trabajo (Parte 1)",
+      "contenido": "Preparación del trabajo (Parte 1):\nPara comenzar la fase de inicialización, primero debes tener paciencia, ya que esta parte toma un poco de tiempo. Imagina que tienes un proyecto vacío, como por ejemplo uno para construir un compilador de Python en línea.\n\nDebes crear el archivo de descripción. Usa el comando init para crear un archivo llamado claw.md. Este archivo debe ubicarse en la carpeta principal del proyecto y debe contener un resumen y toda la información importante sobre el código."
+    },
+    {
+      "itemID": "004",
+      "menu_item": "Preparación del trabajo (Parte 2)",
+      "contenido": "Preparación del trabajo (Parte 2):\nA continuación, crea la lista de tareas generando un archivo JSON en la carpeta principal. Este archivo debe listar todas las funciones que la aplicación necesita hacer y los pasos para probarlas. Es importante marcar todas las pruebas en la lista como fallidas al principio; esto obliga a Claude a probarlas. Se usa formato JSON porque es más fácil de manejar para la memoria de la IA.\n\nDespués, conecta las pruebas del navegador usando una herramienta llamada Puppeteer.[4] Esto es necesario porque Claude solo puede probar el código interno, no lo que se ve en la pantalla del navegador. Finalmente, crea el guion de inicio para guiar el desarrollo y un archivo para seguir el estado de finalización del proyecto."
+    },
+    {
+      "itemID": "005",
+      "menu_item": "Reglas importantes para Claude",
+      "contenido": "Reglas importantes para Claude:\nExisten cuatro reglas fundamentales que Claude debe seguir:\n\nActualiza el progreso: Debe actualizar el archivo de progreso (progress.md) después de cada trabajo realizado.\n\nHaz pruebas: Debe probar cada función inmediatamente después de implementarla.\n\nGuarda los cambios importantes: Es fundamental guardar los cambios en Git con mensajes claros. Esto muestra qué se completó y permite deshacer cambios si algo sale mal.[1]\n\nNo cambies la lista de tareas: Claude no debe modificar la lista de funciones, solamente debe marcar cuáles están terminadas."
+    },
+    {
+      "itemID": "006",
+      "menu_item": "Fase de Codificación",
+      "contenido": "Fase de Codificación:\nLa idea en esta fase es que Claude implemente cada función de la lista JSON una por una. Después de probar cada función, Claude debe escribir mensajes claros para Git describiendo lo que hizo.\n\nSi es necesario, Claude inicia el navegador para verificar. Una vez que confirma que la aplicación funciona, actualiza la lista JSON cambiando el estado de falso a verdadero y actualiza el archivo progress.md con lo completado. Finalmente, guarda el trabajo en Git y verifica que se haya guardado bien."
+    },
+    {
+      "itemID": "007",
+      "menu_item": "Ventajas de este método",
+      "contenido": "Ventajas de este método:\nEste enfoque paso a paso permite que, si debes detenerte, puedas seguir exactamente donde lo dejaste. No tienes que preocuparte por estropear el código porque todo queda registrado en Git.\n\nClaude puede entender el estado del proyecto mirando los registros de Git y el archivo de progreso, lo que permite reanudar el trabajo fácilmente. Tu siguiente instrucción solo debe ser pedirle que implemente la siguiente función no terminada. Esto hace que Claude sea menos propenso a decir que terminó sin probar bien y asegura que la aplicación se construya con pruebas reales. Además, usa la memoria de manera más eficiente, permitiendo construir productos mejores y más rápidos."
+    },
+    {
+      "itemID": "008",
+      "menu_item": "Preguntas y Respuestas",
+      "contenido": "Preguntas y Respuestas:\n¿Cuál es el problema principal de la IA al codificar?\nEl principal problema es que la IA olvida lo que hizo antes en tareas largas porque su memoria (ventana de contexto) es limitada. Si intenta hacer mucho a la vez, se le acaba la memoria. También puede decir que terminó algo sin probarlo bien.\n\n¿Cuál es la solución que propone Anthropic?\nLa solución es usar un sistema que imita a los equipos de ingeniería reales, usando dos ayudantes: un agente que prepara el trabajo y otro que escribe el código.\n\n¿Qué es el primer paso de preparación?\nCrear un archivo llamado claw.md que explica de qué trata el proyecto.\n\n¿Qué es la lista de tareas?\nEs un archivo en formato JSON que detalla todas las funciones que debe tener el programa y cómo se probarán. Es importante que al principio todas las pruebas estén marcadas como fallidas para que la IA se vea obligada a probarlas.\n\n¿Por qué se necesita Puppeteer?\nSe necesita Puppeteer para probar lo que se ve en el navegador, ya que la IA (Claude) solo puede probar el código interno y no la pantalla.\n\n¿Qué debe actualizar Claude después de trabajar?\nClaude debe actualizar el archivo de progreso (progress.md) y la lista de tareas JSON, marcando las funciones de \"falso\" a \"verdadero\" si funcionan.\n\n¿Por qué es importante usar Git (guardar cambios)?\nEs crucial usar Git para guardar los cambios porque si algo sale mal, puedes volver a una versión anterior. Además, si la sesión se detiene, puedes retomar el trabajo exactamente donde lo dejaste usando los registros de Git.\n\n¿Cómo sabe Claude dónde continuar el trabajo?\nClaude entiende el estado del proyecto mirando los registros de Git y el archivo de progreso, no solo revisando todo el código."
+    },
+    {
+      "itemID": "009",
+      "menu_item": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES",
+      "contenido": "VALIDACIÓN CON FUENTES TÉCNICAS OFICIALES:\nLa metodología descrita en el tutorial se basa en las recomendaciones oficiales de Anthropic para la construcción de agentes de IA y el uso de su protocolo de contexto. A continuación se presentan los puntos técnicos validados y sus fuentes oficiales:\n\nArquitectura de Agentes de Larga Duración:\nAnthropic ha publicado investigaciones sobre \"arneses efectivos para agentes de larga duración\". Validan explícitamente el uso de una \"solución de dos partes\": un agente inicializador (que configura el entorno y archivos de progreso) y un agente de codificación (que realiza avances incrementales). Esto confirma la estructura central del tutorial.\nLINK= https://www.anthropic.com/research/building-effective-agents\n\nIntegración de Herramientas con MCP (Puppeteer):\nEl uso de Puppeteer para que la IA \"vea\" y pruebe el navegador se realiza mediante el \"Model Context Protocol\" (MCP).[4][5] Anthropic ofrece servidores preconstruidos oficiales para Puppeteer, permitiendo a Claude interactuar con páginas web y realizar pruebas de extremo a extremo, tal como se menciona en el paso de preparación.\nLINK= https://www.anthropic.com/news/model-context-protocol\nLINK= https://github.com/modelcontextprotocol/servers\n\nGestión de Memoria y Contexto con Git:\nLa estrategia de usar Git y archivos de markdown/JSON para mantener el contexto del proyecto está alineada con las mejores prácticas de \"Claude Code\" (la herramienta CLI oficial). La documentación oficial confirma que Claude utiliza el historial de commits de Git y archivos de memoria (como CLAUDE.md, similar al claw.md del tutorial) para situarse en el proyecto sin necesidad de re-leer todo el código base en cada sesión.\nLINK= https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview\n\nPreferencia por JSON sobre Markdown para Tareas:\nInvestigaciones recientes de Anthropic indican que los modelos de IA son menos propensos a modificar o \"alucinar\" cambios en un plan si este se presenta en formato JSON en lugar de texto libre o Markdown, validando la regla de usar una lista de tareas JSON.\nLINK= https://www.anthropic.com/research/building-effective-agents\n\nhttps://www.youtube.com\nhttps://medium.com\nhttps://www.reddit.com\nhttps://medium.com\nhttps://www.skywork.ai\nhttps://www.reddit.com\nhttps://aimultiple.com\nhttps://marktechpost.com\nhttps://www.anthropic.com\n\n\nTITULO_VIDEO\nAnthropic Released A New Way To Vibe Code\nURL_WEB_YOUTUBE\nhttps://youtu.be/XWp4k9K6oK8?si=4RvTXb8JlF_yp-Dr\nAUTOR\nPRO-LIMP AUTOMATIZACION\nTELEFONO\n+34 636832005"
+    }
+  ]
+}

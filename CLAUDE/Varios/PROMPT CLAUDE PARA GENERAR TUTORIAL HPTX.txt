@@ -1,7 +1,7 @@
 Escribe un tutorial paso a paso completo con el siguiente título y estructura, usando ÚNICAMENTE toda la información contenida en el documento adjunto, sin agregar conocimiento externo y no te olvides de escribir la seccion de preguntas y respuestas:
 
-[TITULO_VIDEO] =    How Create Viral AI Avatars for FREE to Get MILLIONS of Views
-[URL_WEB_YOUTUBE] = https://youtu.be/T4Hdyx7yyb8?si=XcAs8zvLnpz8FLgA
+[TITULO_VIDEO] =    Anthropic Released A New Way To Vibe Code
+[URL_WEB_YOUTUBE] = https://youtu.be/XWp4k9K6oK8?si=4RvTXb8JlF_yp-Dr
 [AUTOR] = PRO-LIMP AUTOMATIZACION
 [TELEFONO] = +34 636832005
 
